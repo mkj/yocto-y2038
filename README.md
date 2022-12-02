@@ -5,7 +5,8 @@ gcc and clang are able to flag truncated conversions for 64-bit `time_t` with
 build, however, gives a pretty clean list of code that needs attention.
 
 Yocto makes it fairly easy to apply flags to all packages. 
-See [conf/local.conf](conf/local.conf).
+See [conf/local.conf](conf/local.conf). Some packages set `-Werror` by default,
+so [workspace](workspace) workarounds are used from `devtool modify`.
 
 
 ## Building
