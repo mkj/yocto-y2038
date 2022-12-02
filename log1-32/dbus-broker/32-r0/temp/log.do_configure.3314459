@@ -1,0 +1,227 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-core/expat/expat_2.5.0.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/systemd/systemd-systemctl-native.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/systemd/systemd_251.4.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/qemu/qemu-native_7.1.0.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/meson/meson_0.63.3.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/ninja/ninja_1.11.1.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pkgconfig/pkgconfig_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/python/python3_3.11.0.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-extended/xz/xz_5.2.7.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: []
+NOTE: Skipping as already exists in sysroot: ['expat', 'glibc', 'systemd-systemctl-native', 'systemd', 'gcc-cross-arm', 'gcc-runtime', 'qemu-native', 'quilt-native', 'meson-native', 'ninja-native', 'patch-native', 'pkgconfig-native', 'pseudo-native', 'python3-native', 'xz-native', 'zlib-native', 'glib-2.0-native', 'python3-setuptools-native', 'python3-picobuild-native', 'python3-installer-native', 'python3-wheel-native', 'libgcc', 'linux-libc-headers', 'gdbm-native', 'libnsl2-native', 'sqlite3-native', 'libtool-native', 'readline-native', 'libffi-native', 'bzip2-native', 'libtirpc-native', 'openssl-native', 'ncurses-native', 'util-linux-libuuid-native', 're2c-native', 'gettext-minimal-native', 'texinfo-dummy-native', 'mpfr-native', 'gmp-native', 'binutils-cross-arm', 'flex-native', 'libmpc-native', 'gnu-config-native', 'zstd-native', 'shadow-sysroot', 'util-linux', 'libpam', 'libcap', 'opkg-utils', 'shadow-native', 'base-files', 'shadow', 'libseccomp', 'bash-completion', 'zstd', 'base-passwd', 'attr-native', 'gettext-native', 'util-linux-native', 'libpcre-native', 'python3-flit-core-native', 'perl-native', 'm4-native', 'ncurses', 'libxcrypt', 'zlib', 'libcap-ng', 'util-linux-libuuid', 'cracklib', 'flex', 'libcap-ng-native', 'libpcre2-native', 'unzip-native', 'make-native']
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing shell function do_configure
+NOTE: Executing meson -Dselinux=false -Daudit=false -Dwerror=false -Db_lto=true ...
+The Meson build system
+Version: 0.63.3
+Source dir: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus-broker/32-r0/dbus-broker-32
+Build dir: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus-broker/32-r0/build
+Build type: cross build
+Project name: dbus-broker
+Project version: 32
+C compiler for the host machine: arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus-broker/32-r0/recipe-sysroot (gcc 12.2.0 "arm-openbmc-linux-gnueabi-gcc (GCC) 12.2.0")
+C linker for the host machine: arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus-broker/32-r0/recipe-sysroot ld.bfd 2.39.0.20220819
+C compiler for the build machine: gcc (gcc 12.2.0 "gcc (Ubuntu 12.2.0-3ubuntu1) 12.2.0")
+C linker for the build machine: gcc ld.bfd 2.39
+Build machine cpu family: x86_64
+Build machine cpu: x86_64
+Host machine cpu family: arm
+Host machine cpu: arm
+Target machine cpu family: arm
+Target machine cpu: arm
+Found pkg-config: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus-broker/32-r0/recipe-sysroot-native/usr/bin/pkg-config (0.29.2)
+Found CMake: NO
+Run-time dependency libcdvar-1 found: NO (tried pkgconfig and cmake)
+Looking for a fallback subproject for the dependency libcdvar-1
+
+Executing subproject libcdvar-1 
+
+libcdvar-1| Project name: c-dvar
+libcdvar-1| Project version: 1.0.0
+libcdvar-1| C compiler for the host machine: arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus-broker/32-r0/recipe-sysroot (gcc 12.2.0 "arm-openbmc-linux-gnueabi-gcc (GCC) 12.2.0")
+libcdvar-1| C linker for the host machine: arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus-broker/32-r0/recipe-sysroot ld.bfd 2.39.0.20220819
+libcdvar-1| C compiler for the build machine: gcc (gcc 12.2.0 "gcc (Ubuntu 12.2.0-3ubuntu1) 12.2.0")
+libcdvar-1| C linker for the build machine: gcc ld.bfd 2.39
+libcdvar-1| Run-time dependency libcstdaux-1 found: NO (tried pkgconfig and cmake)
+libcdvar-1| Looking for a fallback subproject for the dependency libcstdaux-1
+
+Executing subproject libcdvar-1:libcstdaux-1
+
+libcstdaux-1| Project name: c-stdaux
+libcstdaux-1| Project version: 1.2.0
+libcstdaux-1| C compiler for the host machine: arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus-broker/32-r0/recipe-sysroot (gcc 12.2.0 "arm-openbmc-linux-gnueabi-gcc (GCC) 12.2.0")
+libcstdaux-1| C linker for the host machine: arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus-broker/32-r0/recipe-sysroot ld.bfd 2.39.0.20220819
+libcstdaux-1| C compiler for the build machine: gcc (gcc 12.2.0 "gcc (Ubuntu 12.2.0-3ubuntu1) 12.2.0")
+libcstdaux-1| C linker for the build machine: gcc ld.bfd 2.39
+libcstdaux-1| Compiler for C supports arguments -D_GNU_SOURCE: YES
+libcstdaux-1| Compiler for C supports arguments -Wno-gnu-alignof-expression: NO
+libcstdaux-1| Compiler for C supports arguments -Wno-maybe-uninitialized: YES
+libcstdaux-1| Compiler for C supports arguments -Wno-unknown-warning-option: NO
+libcstdaux-1| Compiler for C supports arguments -Wno-unused-parameter: YES
+libcstdaux-1| Compiler for C supports arguments -Wno-error=type-limits: YES
+libcstdaux-1| Compiler for C supports arguments -Wno-error=missing-field-initializers: YES
+libcstdaux-1| Compiler for C supports arguments -Wdate-time: YES
+libcstdaux-1| Compiler for C supports arguments -Wdeclaration-after-statement: YES
+libcstdaux-1| Compiler for C supports arguments -Wlogical-op: YES
+libcstdaux-1| Compiler for C supports arguments -Wmissing-include-dirs: YES
+libcstdaux-1| Compiler for C supports arguments -Wmissing-noreturn: YES
+libcstdaux-1| Compiler for C supports arguments -Wnested-externs: YES
+libcstdaux-1| Compiler for C supports arguments -Wredundant-decls: YES
+libcstdaux-1| Compiler for C supports arguments -Wshadow: YES
+libcstdaux-1| Compiler for C supports arguments -Wstrict-aliasing=3: YES
+libcstdaux-1| Compiler for C supports arguments -Wsuggest-attribute=noreturn: YES
+libcstdaux-1| Compiler for C supports arguments -Wundef: YES
+libcstdaux-1| Compiler for C supports arguments -Wwrite-strings: YES
+libcstdaux-1| Compiler for C supports link arguments -Wl,--version-script=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus-broker/32-r0/dbus-broker-32/subprojects/libcstdaux-1/src/libcstdaux.sym: YES
+libcstdaux-1| Build targets in project: 2
+libcstdaux-1| Subproject libcstdaux-1 finished.
+
+libcdvar-1| Dependency libcstdaux-1 found: YES 1.2.0 (overridden)
+libcdvar-1| Run-time dependency libcutf8-1 found: NO (tried pkgconfig and cmake)
+libcdvar-1| Looking for a fallback subproject for the dependency libcutf8-1
+
+Executing subproject libcdvar-1:libcutf8-1
+
+libcutf8-1| Project name: c-utf8
+libcutf8-1| Project version: 1.0.0
+libcutf8-1| C compiler for the host machine: arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus-broker/32-r0/recipe-sysroot (gcc 12.2.0 "arm-openbmc-linux-gnueabi-gcc (GCC) 12.2.0")
+libcutf8-1| C linker for the host machine: arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus-broker/32-r0/recipe-sysroot ld.bfd 2.39.0.20220819
+libcutf8-1| C compiler for the build machine: gcc (gcc 12.2.0 "gcc (Ubuntu 12.2.0-3ubuntu1) 12.2.0")
+libcutf8-1| C linker for the build machine: gcc ld.bfd 2.39
+libcutf8-1| Dependency libcstdaux-1 found: YES 1.2.0 (overridden)
+libcutf8-1| Build targets in project: 8
+libcutf8-1| Subproject libcutf8-1 finished.
+
+libcdvar-1| Dependency libcutf8-1 found: YES 1.0.0 (overridden)
+libcdvar-1| Run-time dependency libdbus-typenum found: NO (tried pkgconfig and cmake)
+libcdvar-1| Build targets in project: 14
+libcdvar-1| Subproject libcdvar-1 finished.
+
+Dependency libcdvar-1 found: YES 1.0.0 (overridden)
+Run-time dependency libcini-1 found: NO (tried pkgconfig and cmake)
+Looking for a fallback subproject for the dependency libcini-1
+
+Executing subproject libcini-1 
+
+libcini-1| Project name: c-ini
+libcini-1| Project version: 1.0.0
+libcini-1| C compiler for the host machine: arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus-broker/32-r0/recipe-sysroot (gcc 12.2.0 "arm-openbmc-linux-gnueabi-gcc (GCC) 12.2.0")
+libcini-1| C linker for the host machine: arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus-broker/32-r0/recipe-sysroot ld.bfd 2.39.0.20220819
+libcini-1| C compiler for the build machine: gcc (gcc 12.2.0 "gcc (Ubuntu 12.2.0-3ubuntu1) 12.2.0")
+libcini-1| C linker for the build machine: gcc ld.bfd 2.39
+libcini-1| Run-time dependency libclist-3 found: NO (tried pkgconfig and cmake)
+libcini-1| Looking for a fallback subproject for the dependency libclist-3
+
+Executing subproject libcini-1:libclist-3
+
+libclist-3| Project name: c-list
+libclist-3| Project version: 3.1.0
+libclist-3| C compiler for the host machine: arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus-broker/32-r0/recipe-sysroot (gcc 12.2.0 "arm-openbmc-linux-gnueabi-gcc (GCC) 12.2.0")
+libclist-3| C linker for the host machine: arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus-broker/32-r0/recipe-sysroot ld.bfd 2.39.0.20220819
+libclist-3| C compiler for the build machine: gcc (gcc 12.2.0 "gcc (Ubuntu 12.2.0-3ubuntu1) 12.2.0")
+libclist-3| C linker for the build machine: gcc ld.bfd 2.39
+libclist-3| Compiler for C supports arguments -D_GNU_SOURCE: YES (cached)
+libclist-3| Compiler for C supports arguments -Wno-gnu-alignof-expression: NO (cached)
+libclist-3| Compiler for C supports arguments -Wno-maybe-uninitialized: YES (cached)
+libclist-3| Compiler for C supports arguments -Wno-unknown-warning-option: NO (cached)
+libclist-3| Compiler for C supports arguments -Wno-unused-parameter: YES (cached)
+libclist-3| Compiler for C supports arguments -Wno-error=type-limits: YES (cached)
+libclist-3| Compiler for C supports arguments -Wno-error=missing-field-initializers: YES (cached)
+libclist-3| Compiler for C supports arguments -Wdate-time: YES (cached)
+libclist-3| Compiler for C supports arguments -Wdeclaration-after-statement: YES (cached)
+libclist-3| Compiler for C supports arguments -Wlogical-op: YES (cached)
+libclist-3| Compiler for C supports arguments -Wmissing-include-dirs: YES (cached)
+libclist-3| Compiler for C supports arguments -Wmissing-noreturn: YES (cached)
+libclist-3| Compiler for C supports arguments -Wnested-externs: YES (cached)
+libclist-3| Compiler for C supports arguments -Wredundant-decls: YES (cached)
+libclist-3| Compiler for C supports arguments -Wshadow: YES (cached)
+libclist-3| Compiler for C supports arguments -Wstrict-aliasing=3: YES (cached)
+libclist-3| Compiler for C supports arguments -Wsuggest-attribute=noreturn: YES (cached)
+libclist-3| Compiler for C supports arguments -Wundef: YES (cached)
+libclist-3| Compiler for C supports arguments -Wwrite-strings: YES (cached)
+libclist-3| Build targets in project: 17
+libclist-3| Subproject libclist-3 finished.
+
+libcini-1| Dependency libclist-3 found: YES 3.1.0 (overridden)
+libcini-1| Run-time dependency libcrbtree-3 found: NO (tried pkgconfig and cmake)
+libcini-1| Looking for a fallback subproject for the dependency libcrbtree-3
+
+Executing subproject libcini-1:libcrbtree-3
+
+libcrbtree-3| Project name: c-rbtree
+libcrbtree-3| Project version: 3.1.0
+libcrbtree-3| C compiler for the host machine: arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus-broker/32-r0/recipe-sysroot (gcc 12.2.0 "arm-openbmc-linux-gnueabi-gcc (GCC) 12.2.0")
+libcrbtree-3| C linker for the host machine: arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus-broker/32-r0/recipe-sysroot ld.bfd 2.39.0.20220819
+libcrbtree-3| C compiler for the build machine: gcc (gcc 12.2.0 "gcc (Ubuntu 12.2.0-3ubuntu1) 12.2.0")
+libcrbtree-3| C linker for the build machine: gcc ld.bfd 2.39
+libcrbtree-3| Dependency libcstdaux-1 found: YES 1.2.0 (overridden)
+libcrbtree-3| Build targets in project: 23
+libcrbtree-3| Subproject libcrbtree-3 finished.
+
+libcini-1| Dependency libcrbtree-3 found: YES 3.1.0 (overridden)
+libcini-1| Dependency libcstdaux-1 found: YES 1.2.0 (overridden)
+libcini-1| Dependency libcutf8-1 found: YES 1.0.0 (overridden)
+libcini-1| Build targets in project: 28
+libcini-1| Subproject libcini-1 finished.
+
+Dependency libcini-1 found: YES 1.0.0 (overridden)
+Dependency libclist-3 found: YES 3.1.0 (overridden)
+Dependency libcrbtree-3 found: YES 3.1.0 (overridden)
+Run-time dependency libcshquote-1 found: NO (tried pkgconfig and cmake)
+Looking for a fallback subproject for the dependency libcshquote-1
+
+Executing subproject libcshquote-1 
+
+libcshquote-1| Project name: c-shquote
+libcshquote-1| Project version: 1.0.0
+libcshquote-1| C compiler for the host machine: arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus-broker/32-r0/recipe-sysroot (gcc 12.2.0 "arm-openbmc-linux-gnueabi-gcc (GCC) 12.2.0")
+libcshquote-1| C linker for the host machine: arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus-broker/32-r0/recipe-sysroot ld.bfd 2.39.0.20220819
+libcshquote-1| C compiler for the build machine: gcc (gcc 12.2.0 "gcc (Ubuntu 12.2.0-3ubuntu1) 12.2.0")
+libcshquote-1| C linker for the build machine: gcc ld.bfd 2.39
+libcshquote-1| Dependency libcstdaux-1 found: YES 1.2.0 (overridden)
+libcshquote-1| Build targets in project: 33
+libcshquote-1| Subproject libcshquote-1 finished.
+
+Dependency libcshquote-1 found: YES 1.0.0 (overridden)
+Dependency libcstdaux-1 found: YES 1.2.0 (overridden)
+Library m found: YES
+Run-time dependency threads found: YES
+Run-time dependency expat found: YES 2.5.0
+Run-time dependency libsystemd found: YES 251
+Run-time dependency systemd found: YES 251
+Configuring dbus-broker.service using configuration
+Configuring dbus-broker.service using configuration
+Build targets in project: 65
+
+dbus-broker 32
+
+  Subprojects
+    libcdvar-1    : YES
+    libcini-1     : YES
+    libclist-3    : YES
+    libcrbtree-3  : YES
+    libcshquote-1 : YES
+    libcstdaux-1  : YES
+    libcutf8-1    : YES
+
+  User defined options
+    Cross files   : /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus-broker/32-r0/meson.cross
+    Native files  : /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus-broker/32-r0/meson.native
+    bindir        : bin
+    buildtype     : plain
+    datadir       : share
+    includedir    : include
+    infodir       : share/info
+    libdir        : lib
+    libexecdir    : libexec
+    localstatedir : /var
+    mandir        : share/man
+    prefix        : /usr
+    sbindir       : sbin
+    sharedstatedir: /com
+    sysconfdir    : /etc
+    werror        : false
+    wrap_mode     : nodownload
+    b_lto         : true
+    audit         : false
+    selinux       : false
+
+Found ninja-1.11.1 at /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus-broker/32-r0/recipe-sysroot-native/usr/bin/ninja
+DEBUG: Shell function do_configure finished
+DEBUG: Executing python function do_qa_configure
+DEBUG: Python function do_qa_configure finished
+DEBUG: Executing python function meson_do_qa_configure
+DEBUG: Python function meson_do_qa_configure finished

@@ -1,0 +1,41 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/binutils/binutils-cross_2.39.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/opkg-utils/opkg-utils_0.5.0.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/perl/perl_5.36.0.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: []
+NOTE: Skipping as already exists in sysroot: ['glibc', 'binutils-cross-arm', 'gcc-cross-arm', 'gcc-runtime', 'opkg-utils', 'quilt-native', 'patch-native', 'perl-native', 'pseudo-native', 'flex-native', 'texinfo-dummy-native', 'zlib-native', 'gnu-config-native', 'make-native', 'gdbm-native', 'attr-native', 'libtool-native', 'linux-libc-headers', 'libgcc', 'zstd-native', 'libmpc-native', 'xz-native', 'gmp-native', 'mpfr-native', 'm4-native', 'gettext-minimal-native']
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function sstate_task_prefunc
+DEBUG: Python function sstate_task_prefunc finished
+DEBUG: Executing python function do_populate_sysroot
+DEBUG: Executing shell function sysroot_stage_all
+0 blocks
+0 blocks
+0 blocks
+DEBUG: Shell function sysroot_stage_all finished
+DEBUG: Executing python function sysroot_strip
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/sysroot-destdir/usr/lib/libcrypto.so.3']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/sysroot-destdir/usr/lib/libssl.so.3']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/sysroot-destdir/usr/lib/ossl-modules/legacy.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/sysroot-destdir/usr/lib/engines-3/loader_attic.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/sysroot-destdir/usr/lib/engines-3/capi.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/sysroot-destdir/usr/lib/engines-3/afalg.so']
+DEBUG: Python function sysroot_strip finished
+DEBUG: Python function do_populate_sysroot finished
+DEBUG: Executing python function do_qa_sysroot
+NOTE: QA checking do_populate_sysroot
+DEBUG: Python function do_qa_sysroot finished
+DEBUG: Executing python function sstate_task_postfunc
+NOTE: Using umask 0o002 (not 22) for sstate packaging
+DEBUG: Preparing tree /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/sysroot-destdir for packaging at /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/sstate-build-populate_sysroot/sysroot-destdir
+DEBUG: Executing python function target_add_sysroot_deps
+DEBUG: Python function target_add_sysroot_deps finished
+DEBUG: Executing python function sstate_hardcode_path
+NOTE: Removing hardcoded paths from sstate package: 'find /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/sstate-build-populate_sysroot/ \( -name "*.la" -o -name "*-config" -o -name "*_config" -o -name "postinst-*" \) -type f | xargs grep -l -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/recipe-sysroot' -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/recipe-sysroot-native' -e '/home/matt/tmp/build/obmc-y2038/tmp/hosttools' | tee /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/sstate-build-populate_sysroot/fixmepath | xargs --no-run-if-empty sed -i -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/recipe-sysroot-native:FIXMESTAGINGDIRHOST:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/recipe-sysroot:FIXMESTAGINGDIRTARGET:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:FIXME_HOSTTOOLS_DIR:g''
+DEBUG: Python function sstate_hardcode_path finished
+DEBUG: Executing python function sstate_report_unihash
+DEBUG: Python function sstate_report_unihash finished
+DEBUG: Executing shell function sstate_create_package
+DEBUG: Shell function sstate_create_package finished
+DEBUG: Executing python function sstate_hardcode_path_unpack
+DEBUG: Python function sstate_hardcode_path_unpack finished
+DEBUG: Staging files from /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/sysroot-destdir to /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/openssl
+DEBUG: Python function sstate_task_postfunc finished

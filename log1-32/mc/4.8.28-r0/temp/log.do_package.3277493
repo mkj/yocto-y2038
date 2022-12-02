@@ -1,0 +1,343 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0_2.72.3.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses_6.3+20220423.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux_2.38.1.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-cross_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-native_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-core/gettext/gettext_0.21.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/autoconf/autoconf_2.71.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/automake/automake_1.16.5.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/dwarfsrcfiles/dwarfsrcfiles.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/file/file_5.43.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pkgconfig/pkgconfig_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/rpm/rpm_4.18.0.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: ['dwarfsrcfiles-native', 'rpm-native', 'libgcrypt-native', 'lua-native', 'elfutils-native', 'sqlite3-native', 'python3-native', 'popt-native', 'libgpg-error-native', 'libcap-native', 'readline-native', 'libnsl2-native', 'gdbm-native', 'libtirpc-native', 'libffi-native', 'ncurses-native', 'util-linux-libuuid-native', 'openssl-native', 'perl-native', 'make-native']
+NOTE: Skipping as already exists in sysroot: ['glib-2.0', 'glibc', 'ncurses', 'util-linux', 'gcc-cross-arm', 'gcc-runtime', 'libtool-cross', 'libtool-native', 'quilt-native', 'gettext-native', 'autoconf-native', 'automake-native', 'file-native', 'patch-native', 'pkgconfig-native', 'pseudo-native', 'texinfo-dummy-native', 'binutils-cross-arm', 'bzip2-native', 'zlib-native', 'xz-native', 'gettext-minimal-native', 'zstd-native', 'libgcc', 'linux-libc-headers', 'gnu-config-native', 'm4-native', 'opkg-utils', 'libxcrypt', 'zlib', 'bash-completion', 'util-linux-libuuid', 'libcap-ng', 'libpam', 'attr-native', 'libffi', 'libpcre', 'mpfr-native', 'libmpc-native', 'flex-native', 'gmp-native', 'cracklib', 'flex', 'bzip2']
+DEBUG: sed -e 's:^[^/]*/:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/recipe-sysroot-native/:g' /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/rpm-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/libgcrypt-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/lua-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/elfutils-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/python3-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/libgpg-error-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/ncurses-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/openssl-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/perl-native/fixmepath | xargs sed -i -e 's:FIXMESTAGINGDIRTARGET:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/recipe-sysroot:g; s:FIXMESTAGINGDIRHOST:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/recipe-sysroot-native:g' -e 's:FIXME_PSEUDO_SYSROOT:/home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/pseudo-native:g' -e 's:FIXME_HOSTTOOLS_DIR:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:g' -e 's:FIXME_PKGDATA_DIR:/home/matt/tmp/build/obmc-y2038/tmp/pkgdata/evb-ast2600:g' -e 's:FIXME_PSEUDO_LOCALSTATEDIR:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/pseudo/:g' -e 's:FIXME_LOGFIFO:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/temp/fifo.3277493:g'
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function sstate_task_prefunc
+DEBUG: Python function sstate_task_prefunc finished
+DEBUG: Executing python function do_package
+DEBUG: Executing python function package_convert_pr_autoinc
+DEBUG: Python function package_convert_pr_autoinc finished
+DEBUG: Executing python function package_prepare_pkgdata
+NOTE: Installed into pkgdata-sysroot: ['glib-2.0', 'gcc-runtime', 'util-linux', 'glibc', 'ncurses', 'libpcre', 'bash-completion', 'zlib', 'libffi', 'libgcc', 'libpam', 'util-linux-libuuid', 'opkg-utils', 'libcap-ng', 'libxcrypt', 'linux-libc-headers', 'bzip2', 'cracklib', 'flex']
+DEBUG: Python function package_prepare_pkgdata finished
+DEBUG: Executing python function perform_packagecopy
+DEBUG: Python function perform_packagecopy finished
+DEBUG: Executing python function split_and_strip_files
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/package/usr/libexec/mc/cons.saver']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/package/usr/bin/mc']
+DEBUG: Python function split_and_strip_files finished
+DEBUG: Executing python function fixup_perms
+DEBUG: Python function fixup_perms finished
+DEBUG: Executing python function package_do_split_locales
+DEBUG: Python function package_do_split_locales finished
+DEBUG: Executing python function populate_packages
+DEBUG: Python function populate_packages finished
+DEBUG: Executing python function package_fixsymlinks
+DEBUG: Python function package_fixsymlinks finished
+DEBUG: Executing python function package_name_hook
+DEBUG: Executing python function debian_package_name_hook
+DEBUG: LIBNAMES: pkg mc-staticdev libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg mc-src libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg mc-locale-zh-tw libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg mc-locale-zh-cn libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg mc-locale-wa libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg mc-locale-vi libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg mc-locale-uz libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg mc-locale-uk libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg mc-locale-tr libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg mc-locale-te libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg mc-locale-ta libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg mc-locale-szl libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg mc-locale-sv libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg mc-locale-sr libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg mc-locale-sl libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg mc-locale-sk libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg mc-locale-ru libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg mc-locale-ro libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg mc-locale-pt-br libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg mc-locale-pt libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg mc-locale-pl libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg mc-locale-nl-be libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg mc-locale-nl libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg mc-locale-nb libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg mc-locale-mn libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg mc-locale-lv libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg mc-locale-lt libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg mc-locale-kw libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg mc-locale-ko libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg mc-locale-kk libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg mc-locale-ka libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg mc-locale-ja libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg mc-locale-it libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg mc-locale-ie libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg mc-locale-id libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg mc-locale-ia libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg mc-locale-hu libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg mc-locale-hr libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg mc-locale-he libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg mc-locale-gl libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg mc-locale-ga libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg mc-locale-fr-ca libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg mc-locale-fr libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg mc-locale-fi libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg mc-locale-fa libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg mc-locale-eu libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg mc-locale-et libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg mc-locale-es libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg mc-locale-eo libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg mc-locale-en-gb libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg mc-locale-el libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg mc-locale-de-ch libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg mc-locale-de libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg mc-locale-da libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg mc-locale-cs libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg mc-locale-ca libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg mc-locale-br libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg mc-locale-bg libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg mc-locale-be libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg mc-locale-az libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg mc-locale-ar libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg mc-locale-af libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg mc-helpers-perl libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg mc-helpers libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg mc-fish libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg mc-doc libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg mc-dev libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg mc-dbg libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg mc libs 0 bins 1 sonames []
+DEBUG: Python function debian_package_name_hook finished
+DEBUG: Python function package_name_hook finished
+DEBUG: Executing python function package_do_filedeps
+DEBUG: Python function package_do_filedeps finished
+DEBUG: Executing python function package_do_shlibs
+DEBUG: Reading shlib providers in /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/pkgdata-sysroot/shlibs2
+DEBUG: calculating shlib provides for mc-src
+DEBUG: LIBNAMES: pkg mc-src sonames set()
+DEBUG: calculating shlib provides for mc-dbg
+DEBUG: LIBNAMES: pkg mc-dbg sonames set()
+DEBUG: calculating shlib provides for mc-helpers-perl
+DEBUG: LIBNAMES: pkg mc-helpers-perl sonames set()
+DEBUG: calculating shlib provides for mc-helpers
+DEBUG: LIBNAMES: pkg mc-helpers sonames set()
+DEBUG: calculating shlib provides for mc-fish
+DEBUG: LIBNAMES: pkg mc-fish sonames set()
+DEBUG: calculating shlib provides for mc-staticdev
+DEBUG: LIBNAMES: pkg mc-staticdev sonames set()
+DEBUG: calculating shlib provides for mc-dev
+DEBUG: LIBNAMES: pkg mc-dev sonames set()
+DEBUG: calculating shlib provides for mc-doc
+DEBUG: LIBNAMES: pkg mc-doc sonames set()
+DEBUG: calculating shlib provides for mc
+DEBUG: LIBNAMES: pkg mc sonames set()
+DEBUG: calculating shlib provides for mc-locale-af
+DEBUG: LIBNAMES: pkg mc-locale-af sonames set()
+DEBUG: calculating shlib provides for mc-locale-ar
+DEBUG: LIBNAMES: pkg mc-locale-ar sonames set()
+DEBUG: calculating shlib provides for mc-locale-az
+DEBUG: LIBNAMES: pkg mc-locale-az sonames set()
+DEBUG: calculating shlib provides for mc-locale-be
+DEBUG: LIBNAMES: pkg mc-locale-be sonames set()
+DEBUG: calculating shlib provides for mc-locale-bg
+DEBUG: LIBNAMES: pkg mc-locale-bg sonames set()
+DEBUG: calculating shlib provides for mc-locale-br
+DEBUG: LIBNAMES: pkg mc-locale-br sonames set()
+DEBUG: calculating shlib provides for mc-locale-ca
+DEBUG: LIBNAMES: pkg mc-locale-ca sonames set()
+DEBUG: calculating shlib provides for mc-locale-cs
+DEBUG: LIBNAMES: pkg mc-locale-cs sonames set()
+DEBUG: calculating shlib provides for mc-locale-da
+DEBUG: LIBNAMES: pkg mc-locale-da sonames set()
+DEBUG: calculating shlib provides for mc-locale-de
+DEBUG: LIBNAMES: pkg mc-locale-de sonames set()
+DEBUG: calculating shlib provides for mc-locale-de-ch
+DEBUG: LIBNAMES: pkg mc-locale-de-ch sonames set()
+DEBUG: calculating shlib provides for mc-locale-el
+DEBUG: LIBNAMES: pkg mc-locale-el sonames set()
+DEBUG: calculating shlib provides for mc-locale-en-gb
+DEBUG: LIBNAMES: pkg mc-locale-en-gb sonames set()
+DEBUG: calculating shlib provides for mc-locale-eo
+DEBUG: LIBNAMES: pkg mc-locale-eo sonames set()
+DEBUG: calculating shlib provides for mc-locale-es
+DEBUG: LIBNAMES: pkg mc-locale-es sonames set()
+DEBUG: calculating shlib provides for mc-locale-et
+DEBUG: LIBNAMES: pkg mc-locale-et sonames set()
+DEBUG: calculating shlib provides for mc-locale-eu
+DEBUG: LIBNAMES: pkg mc-locale-eu sonames set()
+DEBUG: calculating shlib provides for mc-locale-fa
+DEBUG: LIBNAMES: pkg mc-locale-fa sonames set()
+DEBUG: calculating shlib provides for mc-locale-fi
+DEBUG: LIBNAMES: pkg mc-locale-fi sonames set()
+DEBUG: calculating shlib provides for mc-locale-fr
+DEBUG: LIBNAMES: pkg mc-locale-fr sonames set()
+DEBUG: calculating shlib provides for mc-locale-fr-ca
+DEBUG: LIBNAMES: pkg mc-locale-fr-ca sonames set()
+DEBUG: calculating shlib provides for mc-locale-ga
+DEBUG: LIBNAMES: pkg mc-locale-ga sonames set()
+DEBUG: calculating shlib provides for mc-locale-gl
+DEBUG: LIBNAMES: pkg mc-locale-gl sonames set()
+DEBUG: calculating shlib provides for mc-locale-he
+DEBUG: LIBNAMES: pkg mc-locale-he sonames set()
+DEBUG: calculating shlib provides for mc-locale-hr
+DEBUG: LIBNAMES: pkg mc-locale-hr sonames set()
+DEBUG: calculating shlib provides for mc-locale-hu
+DEBUG: LIBNAMES: pkg mc-locale-hu sonames set()
+DEBUG: calculating shlib provides for mc-locale-ia
+DEBUG: LIBNAMES: pkg mc-locale-ia sonames set()
+DEBUG: calculating shlib provides for mc-locale-id
+DEBUG: LIBNAMES: pkg mc-locale-id sonames set()
+DEBUG: calculating shlib provides for mc-locale-ie
+DEBUG: LIBNAMES: pkg mc-locale-ie sonames set()
+DEBUG: calculating shlib provides for mc-locale-it
+DEBUG: LIBNAMES: pkg mc-locale-it sonames set()
+DEBUG: calculating shlib provides for mc-locale-ja
+DEBUG: LIBNAMES: pkg mc-locale-ja sonames set()
+DEBUG: calculating shlib provides for mc-locale-ka
+DEBUG: LIBNAMES: pkg mc-locale-ka sonames set()
+DEBUG: calculating shlib provides for mc-locale-kk
+DEBUG: LIBNAMES: pkg mc-locale-kk sonames set()
+DEBUG: calculating shlib provides for mc-locale-ko
+DEBUG: LIBNAMES: pkg mc-locale-ko sonames set()
+DEBUG: calculating shlib provides for mc-locale-kw
+DEBUG: LIBNAMES: pkg mc-locale-kw sonames set()
+DEBUG: calculating shlib provides for mc-locale-lt
+DEBUG: LIBNAMES: pkg mc-locale-lt sonames set()
+DEBUG: calculating shlib provides for mc-locale-lv
+DEBUG: LIBNAMES: pkg mc-locale-lv sonames set()
+DEBUG: calculating shlib provides for mc-locale-mn
+DEBUG: LIBNAMES: pkg mc-locale-mn sonames set()
+DEBUG: calculating shlib provides for mc-locale-nb
+DEBUG: LIBNAMES: pkg mc-locale-nb sonames set()
+DEBUG: calculating shlib provides for mc-locale-nl
+DEBUG: LIBNAMES: pkg mc-locale-nl sonames set()
+DEBUG: calculating shlib provides for mc-locale-nl-be
+DEBUG: LIBNAMES: pkg mc-locale-nl-be sonames set()
+DEBUG: calculating shlib provides for mc-locale-pl
+DEBUG: LIBNAMES: pkg mc-locale-pl sonames set()
+DEBUG: calculating shlib provides for mc-locale-pt
+DEBUG: LIBNAMES: pkg mc-locale-pt sonames set()
+DEBUG: calculating shlib provides for mc-locale-pt-br
+DEBUG: LIBNAMES: pkg mc-locale-pt-br sonames set()
+DEBUG: calculating shlib provides for mc-locale-ro
+DEBUG: LIBNAMES: pkg mc-locale-ro sonames set()
+DEBUG: calculating shlib provides for mc-locale-ru
+DEBUG: LIBNAMES: pkg mc-locale-ru sonames set()
+DEBUG: calculating shlib provides for mc-locale-sk
+DEBUG: LIBNAMES: pkg mc-locale-sk sonames set()
+DEBUG: calculating shlib provides for mc-locale-sl
+DEBUG: LIBNAMES: pkg mc-locale-sl sonames set()
+DEBUG: calculating shlib provides for mc-locale-sr
+DEBUG: LIBNAMES: pkg mc-locale-sr sonames set()
+DEBUG: calculating shlib provides for mc-locale-sv
+DEBUG: LIBNAMES: pkg mc-locale-sv sonames set()
+DEBUG: calculating shlib provides for mc-locale-szl
+DEBUG: LIBNAMES: pkg mc-locale-szl sonames set()
+DEBUG: calculating shlib provides for mc-locale-ta
+DEBUG: LIBNAMES: pkg mc-locale-ta sonames set()
+DEBUG: calculating shlib provides for mc-locale-te
+DEBUG: LIBNAMES: pkg mc-locale-te sonames set()
+DEBUG: calculating shlib provides for mc-locale-tr
+DEBUG: LIBNAMES: pkg mc-locale-tr sonames set()
+DEBUG: calculating shlib provides for mc-locale-uk
+DEBUG: LIBNAMES: pkg mc-locale-uk sonames set()
+DEBUG: calculating shlib provides for mc-locale-uz
+DEBUG: LIBNAMES: pkg mc-locale-uz sonames set()
+DEBUG: calculating shlib provides for mc-locale-vi
+DEBUG: LIBNAMES: pkg mc-locale-vi sonames set()
+DEBUG: calculating shlib provides for mc-locale-wa
+DEBUG: LIBNAMES: pkg mc-locale-wa sonames set()
+DEBUG: calculating shlib provides for mc-locale-zh-cn
+DEBUG: LIBNAMES: pkg mc-locale-zh-cn sonames set()
+DEBUG: calculating shlib provides for mc-locale-zh-tw
+DEBUG: LIBNAMES: pkg mc-locale-zh-tw sonames set()
+DEBUG: calculating shlib requirements for mc-src
+DEBUG: calculating shlib requirements for mc-dbg
+DEBUG: calculating shlib requirements for mc-helpers-perl
+DEBUG: calculating shlib requirements for mc-helpers
+DEBUG: calculating shlib requirements for mc-fish
+DEBUG: calculating shlib requirements for mc-staticdev
+DEBUG: calculating shlib requirements for mc-dev
+DEBUG: calculating shlib requirements for mc-doc
+DEBUG: calculating shlib requirements for mc
+DEBUG: mc: Dependency libglib-2.0.so.0 requires package glib-2.0 (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/packages-split/mc/usr/bin/mc)
+DEBUG: mc: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/packages-split/mc/usr/libexec/mc/cons.saver)
+DEBUG: mc: Dependency libtinfo.so.5 requires package ncurses-libtinfo (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/packages-split/mc/usr/bin/mc)
+DEBUG: mc: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/packages-split/mc/usr/libexec/mc/cons.saver)
+DEBUG: mc: Dependency libncursesw.so.5 requires package ncurses-libncursesw (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/packages-split/mc/usr/bin/mc)
+DEBUG: mc: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/packages-split/mc/usr/bin/mc)
+DEBUG: mc: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/packages-split/mc/usr/bin/mc)
+DEBUG: calculating shlib requirements for mc-locale-af
+DEBUG: calculating shlib requirements for mc-locale-ar
+DEBUG: calculating shlib requirements for mc-locale-az
+DEBUG: calculating shlib requirements for mc-locale-be
+DEBUG: calculating shlib requirements for mc-locale-bg
+DEBUG: calculating shlib requirements for mc-locale-br
+DEBUG: calculating shlib requirements for mc-locale-ca
+DEBUG: calculating shlib requirements for mc-locale-cs
+DEBUG: calculating shlib requirements for mc-locale-da
+DEBUG: calculating shlib requirements for mc-locale-de
+DEBUG: calculating shlib requirements for mc-locale-de-ch
+DEBUG: calculating shlib requirements for mc-locale-el
+DEBUG: calculating shlib requirements for mc-locale-en-gb
+DEBUG: calculating shlib requirements for mc-locale-eo
+DEBUG: calculating shlib requirements for mc-locale-es
+DEBUG: calculating shlib requirements for mc-locale-et
+DEBUG: calculating shlib requirements for mc-locale-eu
+DEBUG: calculating shlib requirements for mc-locale-fa
+DEBUG: calculating shlib requirements for mc-locale-fi
+DEBUG: calculating shlib requirements for mc-locale-fr
+DEBUG: calculating shlib requirements for mc-locale-fr-ca
+DEBUG: calculating shlib requirements for mc-locale-ga
+DEBUG: calculating shlib requirements for mc-locale-gl
+DEBUG: calculating shlib requirements for mc-locale-he
+DEBUG: calculating shlib requirements for mc-locale-hr
+DEBUG: calculating shlib requirements for mc-locale-hu
+DEBUG: calculating shlib requirements for mc-locale-ia
+DEBUG: calculating shlib requirements for mc-locale-id
+DEBUG: calculating shlib requirements for mc-locale-ie
+DEBUG: calculating shlib requirements for mc-locale-it
+DEBUG: calculating shlib requirements for mc-locale-ja
+DEBUG: calculating shlib requirements for mc-locale-ka
+DEBUG: calculating shlib requirements for mc-locale-kk
+DEBUG: calculating shlib requirements for mc-locale-ko
+DEBUG: calculating shlib requirements for mc-locale-kw
+DEBUG: calculating shlib requirements for mc-locale-lt
+DEBUG: calculating shlib requirements for mc-locale-lv
+DEBUG: calculating shlib requirements for mc-locale-mn
+DEBUG: calculating shlib requirements for mc-locale-nb
+DEBUG: calculating shlib requirements for mc-locale-nl
+DEBUG: calculating shlib requirements for mc-locale-nl-be
+DEBUG: calculating shlib requirements for mc-locale-pl
+DEBUG: calculating shlib requirements for mc-locale-pt
+DEBUG: calculating shlib requirements for mc-locale-pt-br
+DEBUG: calculating shlib requirements for mc-locale-ro
+DEBUG: calculating shlib requirements for mc-locale-ru
+DEBUG: calculating shlib requirements for mc-locale-sk
+DEBUG: calculating shlib requirements for mc-locale-sl
+DEBUG: calculating shlib requirements for mc-locale-sr
+DEBUG: calculating shlib requirements for mc-locale-sv
+DEBUG: calculating shlib requirements for mc-locale-szl
+DEBUG: calculating shlib requirements for mc-locale-ta
+DEBUG: calculating shlib requirements for mc-locale-te
+DEBUG: calculating shlib requirements for mc-locale-tr
+DEBUG: calculating shlib requirements for mc-locale-uk
+DEBUG: calculating shlib requirements for mc-locale-uz
+DEBUG: calculating shlib requirements for mc-locale-vi
+DEBUG: calculating shlib requirements for mc-locale-wa
+DEBUG: calculating shlib requirements for mc-locale-zh-cn
+DEBUG: calculating shlib requirements for mc-locale-zh-tw
+DEBUG: Python function package_do_shlibs finished
+DEBUG: Executing python function package_do_pkgconfig
+DEBUG: Python function package_do_pkgconfig finished
+DEBUG: Executing python function read_shlibdeps
+DEBUG: Python function read_shlibdeps finished
+DEBUG: Executing python function package_depchains
+DEBUG: Python function package_depchains finished
+DEBUG: Executing python function emit_pkgdata
+DEBUG: Python function emit_pkgdata finished
+DEBUG: Python function do_package finished
+DEBUG: Executing python function sstate_task_postfunc
+NOTE: Using umask 0o002 (not 22) for sstate packaging
+DEBUG: Executing python function target_add_sysroot_deps
+DEBUG: Python function target_add_sysroot_deps finished
+DEBUG: Executing python function sstate_hardcode_path
+NOTE: Removing hardcoded paths from sstate package: 'find /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/sstate-build-package/ \( -name "*.la" -o -name "*-config" -o -name "*_config" -o -name "postinst-*" \) -type f | xargs grep -l -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/recipe-sysroot' -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/recipe-sysroot-native' -e '/home/matt/tmp/build/obmc-y2038/tmp/hosttools' | tee /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/sstate-build-package/fixmepath | xargs --no-run-if-empty sed -i -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/recipe-sysroot-native:FIXMESTAGINGDIRHOST:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/recipe-sysroot:FIXMESTAGINGDIRTARGET:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:FIXME_HOSTTOOLS_DIR:g''
+DEBUG: Python function sstate_hardcode_path finished
+DEBUG: Executing python function sstate_report_unihash
+DEBUG: Python function sstate_report_unihash finished
+DEBUG: Executing shell function sstate_create_package
+DEBUG: Shell function sstate_create_package finished
+DEBUG: Executing python function sstate_hardcode_path_unpack
+DEBUG: Python function sstate_hardcode_path_unpack finished
+DEBUG: Python function sstate_task_postfunc finished

@@ -1,0 +1,41 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-cross_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-native_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/autoconf/autoconf_2.71.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/automake/automake_1.16.5.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pkgconfig/pkgconfig_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-extended/gperf/gperf_3.1.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: []
+NOTE: Skipping as already exists in sysroot: ['glibc', 'gcc-cross-arm', 'gcc-runtime', 'libtool-cross', 'libtool-native', 'quilt-native', 'autoconf-native', 'automake-native', 'patch-native', 'pkgconfig-native', 'pseudo-native', 'gperf-native', 'texinfo-dummy-native', 'binutils-cross-arm', 'libgcc', 'linux-libc-headers', 'gnu-config-native', 'm4-native', 'attr-native', 'mpfr-native', 'libmpc-native', 'xz-native', 'flex-native', 'zstd-native', 'zlib-native', 'gmp-native', 'gettext-minimal-native']
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function autotools_aclocals
+DEBUG: SITE files ['endian-little', 'bit-32', 'arm-common', 'arm-32', 'common-linux', 'common-glibc', 'arm-linux', 'arm-linux-gnueabi', 'common']
+DEBUG: Python function autotools_aclocals finished
+DEBUG: Executing shell function do_install
+NOTE: make -j 1 DESTDIR=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libseccomp/2.5.4-r0/image install
+Making install in include
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libseccomp/2.5.4-r0/image/usr/include'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 seccomp.h seccomp-syscalls.h '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libseccomp/2.5.4-r0/image/usr/include'
+Making install in src
+Making install in .
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libseccomp/2.5.4-r0/image/usr/lib'
+ /bin/bash ../libtool   --mode=install /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c   libseccomp.la '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libseccomp/2.5.4-r0/image/usr/lib'
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c .libs/libseccomp.so.2.5.4 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libseccomp/2.5.4-r0/image/usr/lib/libseccomp.so.2.5.4
+libtool: install: (cd /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libseccomp/2.5.4-r0/image/usr/lib && { ln -s -f libseccomp.so.2.5.4 libseccomp.so.2 || { rm -f libseccomp.so.2 && ln -s libseccomp.so.2.5.4 libseccomp.so.2; }; })
+libtool: install: (cd /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libseccomp/2.5.4-r0/image/usr/lib && { ln -s -f libseccomp.so.2.5.4 libseccomp.so || { rm -f libseccomp.so && ln -s libseccomp.so.2.5.4 libseccomp.so; }; })
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c .libs/libseccomp.lai /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libseccomp/2.5.4-r0/image/usr/lib/libseccomp.la
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c .libs/libseccomp.a /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libseccomp/2.5.4-r0/image/usr/lib/libseccomp.a
+libtool: install: chmod 644 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libseccomp/2.5.4-r0/image/usr/lib/libseccomp.a
+libtool: install: arm-openbmc-linux-gnueabi-gcc-ranlib /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libseccomp/2.5.4-r0/image/usr/lib/libseccomp.a
+libtool: warning: remember to run 'libtool --finish /usr/lib'
+Making install in tools
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libseccomp/2.5.4-r0/image/usr/bin'
+  /bin/bash ../libtool   --mode=install /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c scmp_sys_resolver '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libseccomp/2.5.4-r0/image/usr/bin'
+libtool: warning: '../src/libseccomp.la' has not been installed in '/usr/lib'
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c .libs/scmp_sys_resolver /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libseccomp/2.5.4-r0/image/usr/bin/scmp_sys_resolver
+Making install in tests
+Making install in doc
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libseccomp/2.5.4-r0/image/usr/share/man/man1'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 man/man1/scmp_sys_resolver.1 '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libseccomp/2.5.4-r0/image/usr/share/man/man1'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libseccomp/2.5.4-r0/image/usr/share/man/man3'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 man/man3/seccomp_arch_add.3 man/man3/seccomp_arch_exist.3 man/man3/seccomp_arch_native.3 man/man3/seccomp_arch_remove.3 man/man3/seccomp_arch_resolve_name.3 man/man3/seccomp_attr_get.3 man/man3/seccomp_attr_set.3 man/man3/seccomp_export_bpf.3 man/man3/seccomp_export_pfc.3 man/man3/seccomp_init.3 man/man3/seccomp_load.3 man/man3/seccomp_merge.3 man/man3/seccomp_release.3 man/man3/seccomp_reset.3 man/man3/seccomp_rule_add.3 man/man3/seccomp_rule_add_array.3 man/man3/seccomp_rule_add_exact.3 man/man3/seccomp_rule_add_exact_array.3 man/man3/seccomp_notify_alloc.3 man/man3/seccomp_notify_fd.3 man/man3/seccomp_notify_free.3 man/man3/seccomp_notify_id_valid.3 man/man3/seccomp_notify_receive.3 man/man3/seccomp_notify_respond.3 man/man3/seccomp_syscall_priority.3 man/man3/seccomp_syscall_resolve_name.3 man/man3/seccomp_syscall_resolve_name_arch.3 man/man3/seccomp_syscall_resolve_name_rewrite.3 man/man3/seccomp_syscall_resolve_num_arch.3 man/man3/seccomp_version.3 man/man3/seccomp_api_get.3 man/man3/seccomp_api_set.3 '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libseccomp/2.5.4-r0/image/usr/share/man/man3'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libseccomp/2.5.4-r0/image/usr/lib/pkgconfig'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 libseccomp.pc '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libseccomp/2.5.4-r0/image/usr/lib/pkgconfig'
+DEBUG: Shell function do_install finished
+DEBUG: Executing shell function remove_libtool_la
+DEBUG: Shell function remove_libtool_la finished

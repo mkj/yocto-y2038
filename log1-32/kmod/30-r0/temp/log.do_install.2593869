@@ -1,0 +1,41 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/zlib/zlib_1.2.13.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-cross_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-native_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/opkg-utils/opkg-utils_0.5.0.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-extended/xz/xz_5.2.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-support/bash-completion/bash-completion_2.11.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/autoconf/autoconf_2.71.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/automake/automake_1.16.5.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pkgconfig/pkgconfig_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/python/python3_3.11.0.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-gnome/gtk-doc/gtk-doc_1.33.2.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: []
+NOTE: Skipping as already exists in sysroot: ['glibc', 'zlib', 'gcc-cross-arm', 'gcc-runtime', 'libtool-cross', 'libtool-native', 'opkg-utils', 'quilt-native', 'xz', 'bash-completion', 'autoconf-native', 'automake-native', 'patch-native', 'pkgconfig-native', 'pseudo-native', 'python3-native', 'gtk-doc-native', 'texinfo-dummy-native', 'binutils-cross-arm', 'libgcc', 'linux-libc-headers', 'gnu-config-native', 'm4-native', 'xz-native', 'attr-native', 'mpfr-native', 'libmpc-native', 'flex-native', 'zstd-native', 'zlib-native', 'gmp-native', 'bzip2-native', 'libnsl2-native', 'gdbm-native', 'sqlite3-native', 'libtirpc-native', 'libffi-native', 'ncurses-native', 'readline-native', 'util-linux-libuuid-native', 'openssl-native', 'gettext-minimal-native', 'perl-native', 'make-native']
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function autotools_aclocals
+DEBUG: SITE files ['endian-little', 'bit-32', 'arm-common', 'arm-32', 'common-linux', 'common-glibc', 'arm-linux', 'arm-linux-gnueabi', 'common']
+DEBUG: Python function autotools_aclocals finished
+DEBUG: Executing shell function do_install
+NOTE: make -j 1 DESTDIR=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/image install
+Making install in .
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/image/usr/lib'
+ /bin/bash ./libtool   --mode=install /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c   libkmod/libkmod.la '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/image/usr/lib'
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c libkmod/.libs/libkmod.so.2.4.0 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/image/usr/lib/libkmod.so.2.4.0
+libtool: install: (cd /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/image/usr/lib && { ln -s -f libkmod.so.2.4.0 libkmod.so.2 || { rm -f libkmod.so.2 && ln -s libkmod.so.2.4.0 libkmod.so.2; }; })
+libtool: install: (cd /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/image/usr/lib && { ln -s -f libkmod.so.2.4.0 libkmod.so || { rm -f libkmod.so && ln -s libkmod.so.2.4.0 libkmod.so; }; })
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c libkmod/.libs/libkmod.lai /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/image/usr/lib/libkmod.la
+libtool: warning: remember to run 'libtool --finish /usr/lib'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/image/bin'
+  /bin/bash ./libtool   --mode=install /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c tools/kmod '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/image/bin'
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c tools/kmod /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/image/bin/kmod
+make --no-print-directory install-exec-hook
+if test "/usr/lib" != "/usr/lib"; then \
+	/home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/image/usr/lib && \
+	so_img_name=$(readlink /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/image/usr/lib/libkmod.so) && \
+	so_img_rel_target_prefix=$(echo /usr/lib | sed 's,\(^/\|\)[^/][^/]*,..,g') && \
+	ln -sf $so_img_rel_target_prefix/usr/lib/$so_img_name /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/image/usr/lib/libkmod.so && \
+	mv /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/image/usr/lib/libkmod.so.* /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/image/usr/lib; \
+fi
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/image/usr/share/bash-completion/completions'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../git/shell-completion/bash/kmod '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/image/usr/share/bash-completion/completions'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/image/usr/include'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../git/libkmod/libkmod.h '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/image/usr/include'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/image/usr/lib/pkgconfig'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 libkmod/libkmod.pc '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/image/usr/lib/pkgconfig'
+Making install in libkmod/docs
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+DEBUG: Shell function do_install finished
+DEBUG: Executing shell function remove_libtool_la
+DEBUG: Shell function remove_libtool_la finished

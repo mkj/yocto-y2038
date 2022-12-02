@@ -1,0 +1,98 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: ['quilt-native', 'patch-native', 'libtool-native', 'attr-native', 'texinfo-dummy-native', 'gettext-minimal-native']
+NOTE: Skipping as already exists in sysroot: []
+DEBUG: sed -e 's:^[^/]*/:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/recipe-sysroot-native/:g' /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/quilt-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/libtool-native/fixmepath | xargs sed -i -e 's:FIXMESTAGINGDIRTARGET:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/recipe-sysroot:g; s:FIXMESTAGINGDIRHOST:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/recipe-sysroot-native:g' -e 's:FIXME_PSEUDO_SYSROOT:/home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/pseudo-native:g' -e 's:FIXME_HOSTTOOLS_DIR:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:g' -e 's:FIXME_PKGDATA_DIR:/home/matt/tmp/build/obmc-y2038/tmp/pkgdata/evb-ast2600:g' -e 's:FIXME_PSEUDO_LOCALSTATEDIR:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/pseudo/:g' -e 's:FIXME_LOGFIFO:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/temp/fifo.1793960:g'
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function do_patch
+DEBUG: Executing python function patch_do_patch
+DEBUG: Searching for inputrc in paths:
+    /home/matt/src/openbmc/meta/recipes-core/readline/readline-8.1.2/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/readline/readline/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/readline/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/readline/readline-8.1.2/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/readline/readline/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/readline/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/readline/readline-8.1.2/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/readline/readline/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/readline/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/readline/readline-8.1.2/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/readline/readline/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/readline/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/readline/readline-8.1.2/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/readline/readline/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/readline/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/readline/readline-8.1.2/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/readline/readline/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/readline/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/readline/readline-8.1.2/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/readline/readline/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/readline/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/readline/readline-8.1.2/arm
+    /home/matt/src/openbmc/meta/recipes-core/readline/readline/arm
+    /home/matt/src/openbmc/meta/recipes-core/readline/files/arm
+    /home/matt/src/openbmc/meta/recipes-core/readline/readline-8.1.2/
+    /home/matt/src/openbmc/meta/recipes-core/readline/readline/
+    /home/matt/src/openbmc/meta/recipes-core/readline/files/
+DEBUG: Searching for configure-fix.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-core/readline/readline-8.1.2/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/readline/readline/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/readline/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/readline/readline-8.1.2/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/readline/readline/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/readline/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/readline/readline-8.1.2/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/readline/readline/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/readline/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/readline/readline-8.1.2/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/readline/readline/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/readline/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/readline/readline-8.1.2/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/readline/readline/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/readline/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/readline/readline-8.1.2/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/readline/readline/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/readline/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/readline/readline-8.1.2/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/readline/readline/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/readline/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/readline/readline-8.1.2/arm
+    /home/matt/src/openbmc/meta/recipes-core/readline/readline/arm
+    /home/matt/src/openbmc/meta/recipes-core/readline/files/arm
+    /home/matt/src/openbmc/meta/recipes-core/readline/readline-8.1.2/
+    /home/matt/src/openbmc/meta/recipes-core/readline/readline/
+    /home/matt/src/openbmc/meta/recipes-core/readline/files/
+DEBUG: Searching for norpath.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-core/readline/readline-8.1.2/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/readline/readline/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/readline/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/readline/readline-8.1.2/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/readline/readline/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/readline/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/readline/readline-8.1.2/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/readline/readline/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/readline/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/readline/readline-8.1.2/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/readline/readline/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/readline/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/readline/readline-8.1.2/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/readline/readline/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/readline/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/readline/readline-8.1.2/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/readline/readline/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/readline/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/readline/readline-8.1.2/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/readline/readline/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/readline/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/readline/readline-8.1.2/arm
+    /home/matt/src/openbmc/meta/recipes-core/readline/readline/arm
+    /home/matt/src/openbmc/meta/recipes-core/readline/files/arm
+    /home/matt/src/openbmc/meta/recipes-core/readline/readline-8.1.2/
+    /home/matt/src/openbmc/meta/recipes-core/readline/readline/
+    /home/matt/src/openbmc/meta/recipes-core/readline/files/
+NOTE: Applying patch 'configure-fix.patch' (../../../src/openbmc/meta/recipes-core/readline/readline/configure-fix.patch)
+NOTE: Applying patch 'norpath.patch' (../../../src/openbmc/meta/recipes-core/readline/readline/norpath.patch)
+DEBUG: Python function patch_do_patch finished
+DEBUG: Python function do_patch finished
+DEBUG: Executing python function do_qa_patch
+DEBUG: Python function do_qa_patch finished

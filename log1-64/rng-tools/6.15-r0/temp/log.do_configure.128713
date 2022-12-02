@@ -1,0 +1,133 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-connectivity/openssl/openssl_3.0.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/sysfsutils/sysfsutils_2.1.0.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/systemd/systemd-systemctl-native.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-cross_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-native_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/autoconf/autoconf_2.71.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/automake/automake_1.16.5.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pkgconfig/pkgconfig_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: []
+NOTE: Skipping as already exists in sysroot: ['openssl', 'glibc', 'sysfsutils', 'systemd-systemctl-native', 'gcc-cross-arm', 'gcc-runtime', 'libtool-cross', 'libtool-native', 'quilt-native', 'autoconf-native', 'automake-native', 'patch-native', 'pkgconfig-native', 'pseudo-native', 'linux-libc-headers', 'zstd-native', 'texinfo-dummy-native', 'libmpc-native', 'binutils-cross-arm', 'flex-native', 'xz-native', 'zlib-native', 'gmp-native', 'gnu-config-native', 'mpfr-native', 'opkg-utils', 'libgcc', 'attr-native', 'm4-native', 'gettext-minimal-native']
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing shell function autotools_preconfigure
+DEBUG: Shell function autotools_preconfigure finished
+DEBUG: Executing python function autotools_aclocals
+DEBUG: SITE files ['endian-little', 'bit-32', 'arm-common', 'arm-32', 'common-linux', 'common-glibc', 'arm-linux', 'arm-linux-gnueabi', 'common']
+DEBUG: Python function autotools_aclocals finished
+DEBUG: Executing shell function do_configure
+automake (GNU automake) 1.16.5
+Copyright (C) 2021 Free Software Foundation, Inc.
+License GPLv2+: GNU GPL version 2 or later <https://gnu.org/licenses/gpl-2.0.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Written by Tom Tromey <tromey@redhat.com>
+       and Alexandre Duret-Lutz <adl@gnu.org>.
+AUTOV is 1.16
+NOTE: Executing ACLOCAL="aclocal --system-acdir=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot/usr/share/aclocal/ --automake-acdir=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot-native/usr/share/aclocal-1.16" autoreconf -Wcross --verbose --install --force --exclude=autopoint --exclude=gtkdocize -I /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/git/m4/ -I /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot-native/usr/share/aclocal/
+autoreconf: export WARNINGS=cross,no-obsolete
+autoreconf: Entering directory '.'
+autoreconf: configure.ac: not using Gettext
+autoreconf: running: aclocal --system-acdir=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot/usr/share/aclocal/ --automake-acdir=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot-native/usr/share/aclocal-1.16 -I /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/git/m4/ -I /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot-native/usr/share/aclocal/ --force 
+autoreconf: configure.ac: tracing
+autoreconf: configure.ac: not using Libtool
+autoreconf: configure.ac: not using Intltool
+autoreconf: configure.ac: not using Gtkdoc
+autoreconf: running: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot-native/usr/bin/autoconf --include=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/git/m4/ --include=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot-native/usr/share/aclocal/ --force
+autoreconf: running: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot-native/usr/bin/autoheader --include=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/git/m4/ --include=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot-native/usr/share/aclocal/ --force
+autoreconf: running: automake --add-missing --copy --force-missing
+configure.ac:67: installing './ar-lib'
+configure.ac:28: installing './compile'
+configure.ac:23: installing './config.guess'
+configure.ac:23: installing './config.sub'
+configure.ac:25: installing './install-sh'
+configure.ac:25: installing './missing'
+Makefile.am: installing './depcomp'
+parallel-tests: installing './test-driver'
+autoreconf: './config.sub' is updated
+autoreconf: './config.guess' is updated
+autoreconf: Leaving directory '.'
+NOTE: Running ../git/configure  --build=x86_64-linux 		  --host=arm-openbmc-linux-gnueabi 		  --target=arm-openbmc-linux-gnueabi 		  --prefix=/usr 		  --exec_prefix=/usr 		  --bindir=/usr/bin 		  --sbindir=/usr/sbin 		  --libexecdir=/usr/libexec 		  --datadir=/usr/share 		  --sysconfdir=/etc 		  --sharedstatedir=/com 		  --localstatedir=/var 		  --libdir=/usr/lib 		  --includedir=/usr/include 		  --oldincludedir=/usr/include 		  --infodir=/usr/share/info 		  --mandir=/usr/share/man 		  --disable-silent-rules 		  --disable-dependency-tracking 		  --with-libtool-sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot --without-rtlsdr --disable-static  --without-libargp --disable-jitterentropy --without-pkcs11 --without-nistbeacon 
+configure: WARNING: unrecognized options: --with-libtool-sysroot, --disable-static
+configure: loading site script /home/matt/src/openbmc/meta/site/endian-little
+configure: loading site script /home/matt/src/openbmc/meta/site/arm-common
+configure: loading site script /home/matt/src/openbmc/meta/site/arm-32
+configure: loading site script /home/matt/src/openbmc/meta/site/common-linux
+configure: loading site script /home/matt/src/openbmc/meta/site/common-glibc
+configure: loading site script /home/matt/src/openbmc/meta/site/arm-linux
+configure: loading site script /home/matt/src/openbmc/meta/site/common
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... arm-openbmc-linux-gnueabi
+checking target system type... arm-openbmc-linux-gnueabi
+checking for a BSD-compatible install... /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c
+checking whether build environment is sane... yes
+checking for arm-openbmc-linux-gnueabi-strip... arm-openbmc-linux-gnueabi-strip
+checking for a race-free mkdir -p... /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether make supports the include directive... yes (GNU style)
+checking for arm-openbmc-linux-gnueabi-gcc... arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... yes
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot accepts -g... yes
+checking for arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot option to enable C11 features... none needed
+checking whether arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot understands -c and -o together... yes
+checking dependency style of arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot... none
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for wchar.h... yes
+checking for minix/config.h... no
+checking whether it is safe to define __EXTENSIONS__... yes
+checking whether _XOPEN_SOURCE should be defined... no
+checking whether to enable maintainer-specific portions of Makefiles... no
+checking dependency style of arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot... none
+checking for arm-openbmc-linux-gnueabi-gcc... (cached) arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot
+checking whether the compiler supports GNU C... (cached) yes
+checking whether arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot accepts -g... (cached) yes
+checking for arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot option to enable C11 features... (cached) none needed
+checking whether arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot understands -c and -o together... (cached) yes
+checking dependency style of arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot... (cached) none
+checking for arm-openbmc-linux-gnueabi-ranlib... arm-openbmc-linux-gnueabi-gcc-ranlib
+checking for arm-openbmc-linux-gnueabi-ar... arm-openbmc-linux-gnueabi-gcc-ar
+checking the archiver (arm-openbmc-linux-gnueabi-gcc-ar) interface... ar
+checking how to run the C preprocessor... arm-openbmc-linux-gnueabi-gcc -E --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security
+checking for grep that handles long lines and -e... /home/matt/tmp/build/obmc-y2038/tmp/hosttools/grep
+checking for egrep... /home/matt/tmp/build/obmc-y2038/tmp/hosttools/grep -E
+checking whether arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot needs -traditional... no
+checking for a sed that does not truncate output... (cached) sed
+checking whether arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot is Clang... no
+checking whether pthreads work with -pthread... yes
+checking for joinable pthread attribute... PTHREAD_CREATE_JOINABLE
+checking whether more special flags are required for pthreads... no
+checking for PTHREAD_PRIO_INHERIT... yes
+configure: Disabling JITTER entropy source
+checking for arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot options needed to detect all undeclared functions... none needed
+checking whether pthread_attr_setaffinity_np is declared... yes
+checking for arm-openbmc-linux-gnueabi-pkg-config... no
+checking for pkg-config... /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot-native/usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... configure: WARNING: using cross tools not prefixed with host triplet
+yes
+checking for openssl... yes
+checking dependency style of arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot... (cached) none
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating contrib/Makefile
+config.status: creating tests/Makefile
+config.status: creating rngd.8
+config.status: creating rngtest.1
+config.status: creating rng-tools-config.h
+config.status: executing depfiles commands
+configure: WARNING: unrecognized options: --with-libtool-sysroot, --disable-static
+DEBUG: Shell function do_configure finished
+DEBUG: Executing python function do_qa_configure
+NOTE: Checking autotools environment for common misconfiguration
+NOTE: Checking configure output for unrecognised options
+DEBUG: Python function do_qa_configure finished
+DEBUG: Executing shell function autotools_postconfigure
+DEBUG: Shell function autotools_postconfigure finished

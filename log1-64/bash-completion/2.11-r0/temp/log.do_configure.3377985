@@ -1,0 +1,69 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-cross_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-native_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/autoconf/autoconf_2.71.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/automake/automake_1.16.5.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-extended/xz/xz_5.2.7.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: []
+NOTE: Skipping as already exists in sysroot: ['glibc', 'gcc-cross-arm', 'gcc-runtime', 'libtool-cross', 'libtool-native', 'quilt-native', 'autoconf-native', 'automake-native', 'patch-native', 'pseudo-native', 'xz-native', 'texinfo-dummy-native', 'attr-native', 'm4-native', 'gnu-config-native', 'zstd-native', 'flex-native', 'binutils-cross-arm', 'zlib-native', 'linux-libc-headers', 'gmp-native', 'mpfr-native', 'libmpc-native', 'gettext-minimal-native', 'libgcc']
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing shell function autotools_preconfigure
+DEBUG: Shell function autotools_preconfigure finished
+DEBUG: Executing python function autotools_aclocals
+DEBUG: SITE files ['endian-little', 'bit-32', 'arm-common', 'arm-32', 'common-linux', 'common-glibc', 'arm-linux', 'arm-linux-gnueabi', 'common']
+DEBUG: Python function autotools_aclocals finished
+DEBUG: Executing shell function do_configure
+automake (GNU automake) 1.16.5
+Copyright (C) 2021 Free Software Foundation, Inc.
+License GPLv2+: GNU GPL version 2 or later <https://gnu.org/licenses/gpl-2.0.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Written by Tom Tromey <tromey@redhat.com>
+       and Alexandre Duret-Lutz <adl@gnu.org>.
+AUTOV is 1.16
+NOTE: Executing ACLOCAL="aclocal --system-acdir=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/recipe-sysroot/usr/share/aclocal/ --automake-acdir=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/recipe-sysroot-native/usr/share/aclocal-1.16" autoreconf -Wcross --verbose --install --force --exclude=autopoint --exclude=gtkdocize -I /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/recipe-sysroot-native/usr/share/aclocal/
+autoreconf: export WARNINGS=cross,no-obsolete
+autoreconf: Entering directory '.'
+autoreconf: configure.ac: not using Gettext
+autoreconf: running: aclocal --system-acdir=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/recipe-sysroot/usr/share/aclocal/ --automake-acdir=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/recipe-sysroot-native/usr/share/aclocal-1.16 -I /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/recipe-sysroot-native/usr/share/aclocal/ --force 
+autoreconf: configure.ac: tracing
+autoreconf: configure.ac: not using Libtool
+autoreconf: configure.ac: not using Intltool
+autoreconf: configure.ac: not using Gtkdoc
+autoreconf: running: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/recipe-sysroot-native/usr/bin/autoconf --include=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/recipe-sysroot-native/usr/share/aclocal/ --force
+autoreconf: configure.ac: not using Autoheader
+autoreconf: running: automake --add-missing --copy --force-missing
+autoreconf: Leaving directory '.'
+NOTE: Running ../bash-completion-2.11/configure  --build=x86_64-linux 		  --host=arm-openbmc-linux-gnueabi 		  --target=arm-openbmc-linux-gnueabi 		  --prefix=/usr 		  --exec_prefix=/usr 		  --bindir=/usr/bin 		  --sbindir=/usr/sbin 		  --libexecdir=/usr/libexec 		  --datadir=/usr/share 		  --sysconfdir=/etc 		  --sharedstatedir=/com 		  --localstatedir=/var 		  --libdir=/usr/lib 		  --includedir=/usr/include 		  --oldincludedir=/usr/include 		  --infodir=/usr/share/info 		  --mandir=/usr/share/man 		  --disable-silent-rules 		  --disable-dependency-tracking 		  --with-libtool-sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/recipe-sysroot  --disable-static  
+configure: WARNING: unrecognized options: --disable-dependency-tracking, --with-libtool-sysroot, --disable-static
+configure: loading site script /home/matt/src/openbmc/meta/site/endian-little
+configure: loading site script /home/matt/src/openbmc/meta/site/arm-common
+configure: loading site script /home/matt/src/openbmc/meta/site/arm-32
+configure: loading site script /home/matt/src/openbmc/meta/site/common-linux
+configure: loading site script /home/matt/src/openbmc/meta/site/common-glibc
+configure: loading site script /home/matt/src/openbmc/meta/site/arm-linux
+configure: loading site script /home/matt/src/openbmc/meta/site/common
+checking for a BSD-compatible install... /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c
+checking whether build environment is sane... yes
+checking for arm-openbmc-linux-gnueabi-strip... arm-openbmc-linux-gnueabi-strip
+checking for a race-free mkdir -p... /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether ln -s works... yes
+checking for a sed that does not truncate output... (cached) sed
+checking for pytest... no
+checking for pytest-3... no
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating completions/Makefile
+config.status: creating doc/Makefile
+config.status: creating helpers/Makefile
+config.status: creating test/Makefile
+config.status: creating test/t/Makefile
+config.status: creating test/t/unit/Makefile
+configure: WARNING: unrecognized options: --disable-dependency-tracking, --with-libtool-sysroot, --disable-static
+DEBUG: Shell function do_configure finished
+DEBUG: Executing python function do_qa_configure
+NOTE: Checking autotools environment for common misconfiguration
+NOTE: Checking configure output for unrecognised options
+DEBUG: Python function do_qa_configure finished
+DEBUG: Executing shell function autotools_postconfigure
+DEBUG: Shell function autotools_postconfigure finished

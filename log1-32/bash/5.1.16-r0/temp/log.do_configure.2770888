@@ -1,0 +1,579 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses_6.3+20220423.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-cross_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-native_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/opkg-utils/opkg-utils_0.5.0.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-extended/texinfo-dummy-native/texinfo-dummy-native.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-core/gettext/gettext_0.21.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/autoconf/autoconf_2.71.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/automake/automake_1.16.5.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/bison/bison_3.8.2.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: []
+NOTE: Skipping as already exists in sysroot: ['glibc', 'ncurses', 'gcc-cross-arm', 'gcc-runtime', 'libtool-cross', 'libtool-native', 'opkg-utils', 'quilt-native', 'texinfo-dummy-native', 'gettext-native', 'autoconf-native', 'automake-native', 'bison-native', 'patch-native', 'pseudo-native', 'gettext-minimal-native', 'libgcc', 'linux-libc-headers', 'zlib-native', 'mpfr-native', 'gmp-native', 'binutils-cross-arm', 'xz-native', 'flex-native', 'libmpc-native', 'gnu-config-native', 'zstd-native', 'm4-native', 'attr-native']
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing shell function autotools_preconfigure
+DEBUG: Shell function autotools_preconfigure finished
+DEBUG: Executing python function autotools_aclocals
+DEBUG: SITE files ['endian-little', 'bit-32', 'arm-common', 'arm-32', 'common-linux', 'common-glibc', 'arm-linux', 'arm-linux-gnueabi', 'common']
+DEBUG: Python function autotools_aclocals finished
+DEBUG: Executing shell function do_configure
+automake (GNU automake) 1.16.5
+Copyright (C) 2021 Free Software Foundation, Inc.
+License GPLv2+: GNU GPL version 2 or later <https://gnu.org/licenses/gpl-2.0.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Written by Tom Tromey <tromey@redhat.com>
+       and Alexandre Duret-Lutz <adl@gnu.org>.
+AUTOV is 1.16
+NOTE: Executing ACLOCAL="aclocal --system-acdir=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash/5.1.16-r0/recipe-sysroot/usr/share/aclocal/ --automake-acdir=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash/5.1.16-r0/recipe-sysroot-native/usr/share/aclocal-1.16" autoreconf -Wcross --verbose --install --force --exclude=autopoint --exclude=gtkdocize --exclude=autoheader -I /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash/5.1.16-r0/bash-5.1.16/m4/ -I /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash/5.1.16-r0/recipe-sysroot-native/usr/share/aclocal/
+autoreconf: export WARNINGS=cross,no-obsolete
+autoreconf: Entering directory '.'
+autoreconf: configure.ac: not using Gettext
+autoreconf: running: aclocal --system-acdir=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash/5.1.16-r0/recipe-sysroot/usr/share/aclocal/ --automake-acdir=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash/5.1.16-r0/recipe-sysroot-native/usr/share/aclocal-1.16 -I /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash/5.1.16-r0/bash-5.1.16/m4/ -I /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash/5.1.16-r0/recipe-sysroot-native/usr/share/aclocal/ --force 
+acinclude.m4:7: warning: underquoted definition of BASH_C_LONG_LONG
+acinclude.m4:7:   run info Automake 'Extending aclocal'
+acinclude.m4:7:   or see https://www.gnu.org/software/automake/manual/automake.html#Extending-aclocal
+ERROR: invalid first argument to AM_GNU_GETTEXT
+ERROR: Use of AM_GNU_GETTEXT without [external] argument is no longer supported.
+autoreconf: configure.ac: tracing
+ERROR: invalid first argument to AM_GNU_GETTEXT
+ERROR: Use of AM_GNU_GETTEXT without [external] argument is no longer supported.
+configure.ac: warning: AM_GNU_GETTEXT is used, but not AM_GNU_GETTEXT_VERSION or AM_GNU_GETTEXT_REQUIRE_VERSION
+autoreconf: configure.ac: not using Libtool
+autoreconf: configure.ac: not using Intltool
+autoreconf: configure.ac: not using Gtkdoc
+autoreconf: running: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash/5.1.16-r0/recipe-sysroot-native/usr/bin/autoconf --include=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash/5.1.16-r0/bash-5.1.16/m4/ --include=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash/5.1.16-r0/recipe-sysroot-native/usr/share/aclocal/ --force
+ERROR: invalid first argument to AM_GNU_GETTEXT
+ERROR: Use of AM_GNU_GETTEXT without [external] argument is no longer supported.
+configure.ac:426: warning: AC_LINK_IFELSE was called before AC_USE_SYSTEM_EXTENSIONS
+../autoconf-2.71/lib/autoconf/specific.m4:545: AC_MINIX is expanded from...
+configure.ac:426: the top level
+autoreconf: configure.ac: not using Automake
+autoreconf: './support/config.sub' is updated
+autoreconf: './support/config.guess' is updated
+autoreconf: './support/install-sh' is created
+autoreconf: Leaving directory '.'
+NOTE: Running ../bash-5.1.16/configure  --build=x86_64-linux 		  --host=arm-openbmc-linux-gnueabi 		  --target=arm-openbmc-linux-gnueabi 		  --prefix=/usr 		  --exec_prefix=/usr 		  --bindir=/usr/bin 		  --sbindir=/usr/sbin 		  --libexecdir=/usr/libexec 		  --datadir=/usr/share 		  --sysconfdir=/etc 		  --sharedstatedir=/com 		  --localstatedir=/var 		  --libdir=/usr/lib 		  --includedir=/usr/include 		  --oldincludedir=/usr/include 		  --infodir=/usr/share/info 		  --mandir=/usr/share/man 		  --disable-silent-rules 		  --disable-dependency-tracking 		  --with-libtool-sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash/5.1.16-r0/recipe-sysroot --enable-job-control --without-bash-malloc bash_cv_wexitstatus_offset=8 --disable-static  --enable-nls 
+configure: WARNING: unrecognized options: --disable-silent-rules, --disable-dependency-tracking, --with-libtool-sysroot, --disable-static
+configure: loading site script /home/matt/src/openbmc/meta/site/endian-little
+configure: loading site script /home/matt/src/openbmc/meta/site/arm-common
+configure: loading site script /home/matt/src/openbmc/meta/site/arm-32
+configure: loading site script /home/matt/src/openbmc/meta/site/common-linux
+configure: loading site script /home/matt/src/openbmc/meta/site/common-glibc
+configure: loading site script /home/matt/src/openbmc/meta/site/arm-linux
+configure: loading site script /home/matt/src/openbmc/meta/site/common
+configure: loading site script /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash/5.1.16-r0/recipe-sysroot/usr/share/arm-openbmc-linux-gnueabi_config_site.d/ncurses_config
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... arm-openbmc-linux-gnueabi
+
+Beginning configuration for bash-5.1-release for arm-openbmc-linux-gnueabi
+
+checking for arm-openbmc-linux-gnueabi-gcc... arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash/5.1.16-r0/recipe-sysroot
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... yes
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash/5.1.16-r0/recipe-sysroot accepts -g... yes
+checking for arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash/5.1.16-r0/recipe-sysroot option to enable C11 features... none needed
+checking for library containing strerror... none required
+checking for stdio.h... (cached) yes
+checking for stdlib.h... (cached) yes
+checking for string.h... (cached) yes
+checking for inttypes.h... (cached) yes
+checking for stdint.h... (cached) yes
+checking for strings.h... (cached) yes
+checking for sys/stat.h... (cached) yes
+checking for sys/types.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking for wchar.h... yes
+checking for minix/config.h... no
+checking for sys/param.h... yes
+checking for xlocale.h... no
+checking for sys/time.h... yes
+checking whether it is safe to define __EXTENSIONS__... yes
+checking whether _XOPEN_SOURCE should be defined... no
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... 64
+configure: cross-compiling for arm-openbmc-linux-gnueabi is not supported
+checking how to run the C preprocessor... arm-openbmc-linux-gnueabi-gcc -E --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash/5.1.16-r0/recipe-sysroot  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security
+checking for grep that handles long lines and -e... /home/matt/tmp/build/obmc-y2038/tmp/hosttools/grep
+checking for egrep... /home/matt/tmp/build/obmc-y2038/tmp/hosttools/grep -E
+checking whether arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash/5.1.16-r0/recipe-sysroot needs -traditional... no
+checking for a BSD-compatible install... /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c
+checking for arm-openbmc-linux-gnueabi-ar... arm-openbmc-linux-gnueabi-gcc-ar
+checking for arm-openbmc-linux-gnueabi-ranlib... arm-openbmc-linux-gnueabi-gcc-ranlib
+checking for bison... bison -y
+checking whether make sets $(MAKE)... yes
+checking for an ANSI C-conforming const... yes
+checking for inline... inline
+checking whether byte ordering is bigendian... (cached) no
+checking for preprocessor stringizing operator... yes
+checking for long double with more range or precision than double... no
+checking whether char is unsigned... yes
+checking for working volatile... yes
+checking for C/C++ restrict keyword... __restrict__
+checking for a race-free mkdir -p... /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p
+checking for a sed that does not truncate output... (cached) sed
+checking whether NLS is requested... yes
+checking for msgfmt... /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash/5.1.16-r0/recipe-sysroot-native/usr/bin/msgfmt
+checking for gmsgfmt... /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash/5.1.16-r0/recipe-sysroot-native/usr/bin/msgfmt
+checking for xgettext... /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash/5.1.16-r0/recipe-sysroot-native/usr/bin/xgettext
+checking for msgmerge... /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash/5.1.16-r0/recipe-sysroot-native/usr/bin/msgmerge
+checking whether we are using the GNU C Library 2 or newer... yes
+checking whether the -Werror option is usable... yes
+checking for simple visibility declarations... yes
+checking for size_t... yes
+checking for stdint.h... yes
+checking for working alloca.h... yes
+checking for alloca... yes
+checking for getpagesize... (cached) yes
+checking for symlink... yes
+checking for uselocale... yes
+checking for vprintf... yes
+checking for alarm... yes
+checking for fpurge... no
+checking for __fpurge... yes
+checking for snprintf... yes
+checking for vsnprintf... yes
+checking for working mmap... (cached) yes
+checking whether integer division by zero raises SIGFPE... guessing no
+checking for inttypes.h... yes
+checking for unsigned long long int... yes
+checking for inttypes.h... (cached) yes
+checking whether the inttypes.h PRIxNN macros are broken... no
+checking for ld... arm-openbmc-linux-gnueabi-ld --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash/5.1.16-r0/recipe-sysroot 
+checking if the linker (arm-openbmc-linux-gnueabi-ld --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash/5.1.16-r0/recipe-sysroot ) is GNU ld... yes
+checking for shared library run path origin... done
+checking 32-bit host C ABI... yes
+checking for ELF binary format... yes
+checking for the common suffixes of directories in the library search path... lib,lib32,lib
+checking whether imported symbols can be declared weak... guessing yes
+checking for pthread.h... yes
+checking for pthread_kill in -lpthread... yes
+checking for multithread API to use... posix
+checking for pthread_rwlock_t... yes
+checking whether pthread_rwlock_rdlock prefers a writer to a reader... guessing yes
+checking for arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash/5.1.16-r0/recipe-sysroot options needed to detect all undeclared functions... none needed
+checking for iconv... yes
+checking for working iconv... (cached) yes
+checking for iconv declaration... 
+         extern size_t iconv (iconv_t cd, char * *inbuf, size_t *inbytesleft, char * *outbuf, size_t *outbytesleft);
+checking for argz.h... yes
+checking for inttypes.h... (cached) yes
+checking for limits.h... yes
+checking for unistd.h... (cached) yes
+checking for sys/param.h... (cached) yes
+checking for getcwd... yes
+checking for getegid... yes
+checking for geteuid... yes
+checking for getgid... yes
+checking for getuid... yes
+checking for mempcpy... yes
+checking for munmap... yes
+checking for stpcpy... yes
+checking for strcasecmp... yes
+checking for strdup... yes
+checking for strtoul... yes
+checking for tsearch... yes
+checking for argz_count... yes
+checking for argz_stringify... yes
+checking for argz_next... yes
+checking for __fsetlocking... yes
+checking for localeconv... yes
+checking whether feof_unlocked is declared... yes
+checking whether fgets_unlocked is declared... yes
+checking for bison... bison
+checking version of bison... 3.8.2, ok
+checking for long long int... yes
+checking for wchar_t... yes
+checking for wint_t... yes
+checking whether wint_t is too small... no
+checking for intmax_t... yes
+checking whether printf() supports POSIX/XSI format strings... guessing yes
+checking whether we are using the GNU C Library >= 2.1 or uClibc... yes
+checking for stdint.h... (cached) yes
+checking for SIZE_MAX... yes
+checking for stdint.h... (cached) yes
+checking for working fcntl.h... (cached) yes
+checking whether uselocale works... guessing yes
+checking for fake locale system (OpenBSD)... guessing no
+checking for Solaris 11.4 locale system... no
+checking for getlocalename_l... no
+checking for CFPreferencesCopyAppValue... no
+checking for CFLocaleCopyCurrent... no
+checking for CFLocaleCopyPreferredLanguages... no
+checking for flexible array members... yes
+checking for Minix Amsterdam compiler... no
+checking for arm-openbmc-linux-gnueabi-ar... (cached) arm-openbmc-linux-gnueabi-gcc-ar
+checking for ptrdiff_t... yes
+checking for features.h... yes
+checking for stddef.h... yes
+checking for stdlib.h... (cached) yes
+checking for string.h... (cached) yes
+checking for asprintf... yes
+checking for fwprintf... yes
+checking for newlocale... yes
+checking for putenv... yes
+checking for setenv... yes
+checking for setlocale... yes
+checking for snprintf... (cached) yes
+checking for strnlen... yes
+checking for uselocale... (cached) yes
+checking for wcslen... yes
+checking for wcsnlen... yes
+checking for mbrtowc... yes
+checking for wcrtomb... yes
+checking whether _snprintf is declared... no
+checking whether _snwprintf is declared... no
+checking whether getc_unlocked is declared... yes
+checking for nl_langinfo and CODESET... yes
+checking for LC_MESSAGES... yes
+checking for CFPreferencesCopyAppValue... (cached) no
+checking for CFLocaleCopyCurrent... (cached) no
+checking for CFLocaleCopyPreferredLanguages... (cached) no
+checking whether included gettext is requested... no
+checking for GNU gettext in libc... yes
+checking whether to use NLS... yes
+checking where the gettext function comes from... libc
+checking for dirent.h that defines DIR... yes
+checking for library containing opendir... none required
+checking for sys/mkdev.h... no
+checking for sys/sysmacros.h... yes
+checking for inttypes.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking for stdlib.h... (cached) yes
+checking for stdarg.h... yes
+checking for varargs.h... no
+checking for limits.h... (cached) yes
+checking for string.h... (cached) yes
+checking for memory.h... yes
+checking for locale.h... yes
+checking for termcap.h... yes
+checking for termio.h... yes
+checking for termios.h... yes
+checking for dlfcn.h... yes
+checking for stdbool.h... yes
+checking for stddef.h... (cached) yes
+checking for stdint.h... (cached) yes
+checking for netdb.h... yes
+checking for pwd.h... yes
+checking for grp.h... yes
+checking for strings.h... (cached) yes
+checking for regex.h... yes
+checking for syslog.h... yes
+checking for ulimit.h... yes
+checking for sys/pte.h... no
+checking for sys/stream.h... no
+checking for sys/select.h... yes
+checking for sys/file.h... yes
+checking for sys/ioctl.h... yes
+checking for sys/mman.h... yes
+checking for sys/param.h... (cached) yes
+checking for sys/random.h... yes
+checking for sys/socket.h... yes
+checking for sys/stat.h... (cached) yes
+checking for sys/time.h... (cached) yes
+checking for sys/times.h... yes
+checking for sys/types.h... (cached) yes
+checking for sys/wait.h... yes
+checking for netinet/in.h... yes
+checking for arpa/inet.h... yes
+checking for sys/ptem.h... no
+checking for sys/resource.h... yes
+checking for working alloca.h... (cached) yes
+checking for alloca... (cached) checking for uid_t in sys/types.h... (cached) {ac_cv_type_uid_t=yes}
+checking for working chown... (cached) yes
+checking whether getpgrp requires zero arguments... (cached) yes
+(cached) checking for working strcoll... yes
+checking return type of signal handlers... void
+checking for __setostype... no
+checking for wait3... yes
+checking for mkfifo... yes
+checking for dup2... yes
+checking for eaccess... yes
+checking for fcntl... yes
+checking for getdtablesize... yes
+checking for getentropy... yes
+checking for getgroups... yes
+checking for gethostname... yes
+checking for getpagesize... (cached) yes
+checking for getpeername... yes
+checking for getrandom... yes
+checking for getrlimit... yes
+checking for getrusage... yes
+checking for gettimeofday... yes
+checking for kill... yes
+checking for killpg... yes
+checking for lstat... yes
+checking for pselect... yes
+checking for readlink... yes
+checking for select... yes
+checking for setdtablesize... no
+checking for setitimer... yes
+checking for tcgetpgrp... yes
+checking for uname... yes
+checking for ulimit... yes
+checking for waitpid... yes
+checking for rename... yes
+checking for bcopy... yes
+checking for bzero... yes
+checking for confstr... yes
+checking for faccessat... yes
+checking for fnmatch... yes
+checking for getaddrinfo... (cached) yes
+checking for gethostbyname... yes
+checking for getservbyname... yes
+checking for getservent... yes
+checking for inet_aton... yes
+checking for imaxdiv... yes
+checking for memmove... yes
+checking for pathconf... yes
+checking for putenv... (cached) yes
+checking for raise... yes
+checking for random... yes
+checking for regcomp... yes
+checking for regexec... yes
+checking for setenv... (cached) yes
+checking for setlinebuf... yes
+checking for setlocale... (cached) yes
+checking for setvbuf... yes
+checking for siginterrupt... yes
+checking for strchr... yes
+checking for sysconf... yes
+checking for syslog... yes
+checking for tcgetattr... yes
+checking for times... yes
+checking for ttyname... yes
+checking for tzset... yes
+checking for unsetenv... yes
+checking for vasprintf... yes
+checking for asprintf... (cached) yes
+checking for isascii... yes
+checking for isblank... yes
+checking for isgraph... yes
+checking for isprint... yes
+checking for isspace... yes
+checking for isxdigit... yes
+checking for getpwent... yes
+checking for getpwnam... yes
+checking for getpwuid... yes
+checking for mkstemp... yes
+checking for mkdtemp... yes
+checking for arc4random... yes
+checking for getcwd... (cached) yes
+checking for memset... yes
+checking for strcasecmp... (cached) yes
+checking for strcasestr... yes
+checking for strerror... (cached) yes
+checking for strftime... yes
+checking for strnlen... (cached) yes
+checking for strpbrk... yes
+checking for strstr... yes
+checking for strtod... (cached) yes
+checking for strtol... yes
+checking for strtoul... (cached) yes
+checking for strtoll... yes
+checking for strtoull... yes
+checking for strtoimax... yes
+checking for strtoumax... yes
+checking for dprintf... yes
+checking for strchrnul... yes
+checking for strdup... (cached) yes
+checking for libaudit.h... no
+checking whether AUDIT_USER_TTY is declared... yes
+checking whether confstr is declared... yes
+checking whether printf is declared... yes
+checking whether sbrk is declared... yes
+checking whether setregid is declared... yes
+checking whether strcpy is declared... yes
+checking whether strsignal is declared... yes
+checking for setresuid... (cached) yes
+checking for setresgid... yes
+checking whether strtold is declared... yes
+checking for broken strtold... no
+checking for egrep... (cached) /home/matt/tmp/build/obmc-y2038/tmp/hosttools/grep -E
+checking for declaration of strtoimax... yes
+checking for declaration of strtol... yes
+checking for declaration of strtoll... yes
+checking for declaration of strtoul... yes
+checking for declaration of strtoull... yes
+checking for declaration of strtoumax... yes
+checking for working mktime... no
+checking for argz.h... (cached) yes
+checking for errno.h... yes
+checking for fcntl.h... yes
+checking for malloc.h... yes
+checking for stdio_ext.h... yes
+checking for working mmap... (cached) yes
+checking for __argz_count... yes
+checking for __argz_next... yes
+checking for __argz_stringify... yes
+checking for dcgettext... yes
+checking for mempcpy... (cached) yes
+checking for munmap... (cached) yes
+checking for mremap... yes
+checking for stpcpy... (cached) yes
+checking for strcspn... yes
+checking for wctype.h... yes
+checking for wchar.h... (cached) yes
+checking for langinfo.h... yes
+checking for mbstr.h... no
+checking for mbrlen... yes
+checking for mbscasecmp... no
+checking for mbscmp... no
+checking for mbsnrtowcs... yes
+checking for mbsrtowcs... yes
+checking for mbschr... no
+checking for wcrtomb... (cached) yes
+checking for wcscoll... yes
+checking for wcsdup... yes
+checking for wcwidth... yes
+checking for wctype... yes
+checking for wcswidth... yes
+checking whether mbrtowc and mbstate_t are properly declared... (cached) yes
+checking for iswlower... yes
+checking for iswupper... yes
+checking for towlower... yes
+checking for towupper... yes
+checking for iswctype... yes
+checking for nl_langinfo and CODESET... yes
+checking for wchar_t in wchar.h... yes
+checking for wctype_t in wctype.h... yes
+checking for wint_t in wctype.h... yes
+checking for wcwidth broken with unicode combining characters... no
+checking for locale_charset... no
+checking size of wchar_t... (cached) 4
+checking for dlopen in -ldl... yes
+checking for dlopen... yes
+checking for dlclose... yes
+checking for dlsym... yes
+checking whether sys_siglist is declared... (cached) no
+checking type of array argument to getgroups... gid_t
+checking for off_t... yes
+checking for mode_t... yes
+checking for uid_t in sys/types.h... (cached) {ac_cv_type_uid_t=yes}
+checking for pid_t... yes
+checking for size_t... (cached) yes
+checking for uintptr_t... yes
+checking for ssize_t... yes
+checking for time_t... yes
+checking for long long... long long
+checking for unsigned long long... unsigned long long
+checking return type of signal handlers... (cached) void
+checking for sig_atomic_t in signal.h... yes
+checking size of char... (cached) 1
+checking size of short... (cached) 2
+checking size of int... (cached) 4
+checking size of long... (cached) 4
+checking size of char *... (cached) 4
+checking size of double... (cached) 8
+checking size of long long... (cached) 8
+checking for u_int... yes
+checking for u_long... yes
+checking for bits16_t... no
+checking for u_bits16_t... no
+checking for bits32_t... no
+checking for u_bits32_t... no
+checking for bits64_t... no
+checking for ptrdiff_t... (cached) yes
+checking whether stat file-mode macros are broken... no
+checking whether #! works in shell scripts... yes
+checking whether the ctype macros accept non-ascii characters... no
+checking if dup2 fails to clear the close-on-exec flag... (cached) no
+checking whether pgrps need synchronization... (cached) no
+checking for type of signal functions... configure: WARNING: cannot check ctype macros if cross compiling -- defaulting to no
+posix
+checking for sys_errlist and sys_nerr... yes
+checking for sys_siglist in system C library... (cached) no
+checking for _sys_siglist in signal.h or unistd.h... no
+checking for _sys_siglist in system C library... (cached) no
+checking whether signal handlers are of type void... yes
+checking for clock_t... yes
+checking for sigset_t... yes
+checking for sig_atomic_t... yes
+checking for quad_t... yes
+checking for intmax_t... yes
+checking for uintmax_t... yes
+checking for socklen_t... yes
+checking for size and type of struct rlimit fields... (cached) rlim_t
+checking size of intmax_t... 8
+checking for struct termios.c_line... yes
+checking for struct termio.c_line... yes
+checking for struct dirent.d_ino... yes
+checking for struct dirent.d_fileno... yes
+checking for struct dirent.d_namlen... no
+checking for struct winsize in sys/ioctl.h and termios.h... sys/ioctl.h
+checking for struct timeval in sys/time.h and time.h... yes
+checking for struct stat.st_blocks... yes
+checking whether struct tm is in sys/time.h or time.h... time.h
+checking for struct tm.tm_zone... yes
+checking for struct timezone in sys/time.h and time.h... yes
+checking for offset of exit status in return status from wait... (cached) 8
+checking for struct timespec in <time.h>... yes
+checking for struct stat.st_atim.tv_nsec... yes
+checking whether struct stat.st_atim is of type struct timespec... yes
+checking for sbrk... yes
+checking for working sbrk... configure: WARNING: cannot check working sbrk if cross-compiling
+yes
+checking for the existence of strsignal... yes
+checking if opendir() opens non-directories... (cached) no
+checking whether ulimit can substitute for getdtablesize... (cached) yes
+checking whether fpurge is declared... no
+checking to see if getenv can be redefined... (cached) yes
+checking if getcwd() will dynamically allocate memory with 0 size... (cached) yes
+checking for presence of POSIX-style sigsetjmp/siglongjmp... (cached) missing
+checking whether or not strcoll and strcmp differ... (cached) no
+checking for standard-conformant snprintf... configure: WARNING: cannot check standard snprintf if cross-compiling
+yes
+checking for standard-conformant vsnprintf... configure: WARNING: cannot check standard vsnprintf if cross-compiling
+yes
+checking for standard-conformant putenv declaration... yes
+checking for standard-conformant unsetenv declaration... yes
+checking for printf floating point output in hex notation... (cached) yes
+checking whether fnmatch can be used to check bracket equivalence classes... no
+checking if signal handlers must be reinstalled when invoked... (cached) no
+checking for presence of necessary job control definitions... (cached) present
+checking for presence of named pipes... configure: WARNING: cannot check fnmatch if cross compiling -- defaulting to no
+(cached) present
+checking whether termios.h defines TIOCGWINSZ... no
+checking whether sys/ioctl.h defines TIOCGWINSZ... yes
+checking for TIOCSTAT in sys/ioctl.h... no
+checking for FIONREAD in sys/ioctl.h... yes
+checking whether WCONTINUED flag to waitpid is unavailable or available but broken... no
+checking for speed_t in sys/types.h... configure: WARNING: cannot check WCONTINUED if cross compiling -- defaulting to no
+no
+checking whether getpw functions are declared in pwd.h... yes
+checking for unusable real-time signals due to large values... (cached) no
+checking for tgetent... no
+checking for tgetent in -ltermcap... yes
+checking which library has the termcap functions... using libtermcap
+checking whether /dev/fd is available... standard
+checking whether /dev/stdin stdout stderr are available... present
+checking for default mail directory... /var/mail
+checking shared object configuration for loadable builtins... supported
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating builtins/Makefile
+config.status: creating lib/readline/Makefile
+config.status: creating lib/glob/Makefile
+config.status: creating lib/intl/Makefile
+config.status: creating lib/malloc/Makefile
+config.status: creating lib/sh/Makefile
+config.status: creating lib/termcap/Makefile
+config.status: creating lib/tilde/Makefile
+config.status: creating doc/Makefile
+config.status: creating support/Makefile
+config.status: creating po/Makefile.in
+config.status: creating examples/loadables/Makefile
+config.status: creating examples/loadables/Makefile.inc
+config.status: creating examples/loadables/perl/Makefile
+config.status: creating support/bash.pc
+config.status: creating support/bashbug.sh
+config.status: creating config.h
+config.status: executing po-directories commands
+config.status: creating po/POTFILES
+config.status: creating po/Makefile
+config.status: executing default commands
+configure: WARNING: unrecognized options: --disable-silent-rules, --disable-dependency-tracking, --with-libtool-sysroot, --disable-static
+DEBUG: Shell function do_configure finished
+DEBUG: Executing python function do_qa_configure
+NOTE: Checking autotools environment for common misconfiguration
+NOTE: Checking configure output for unrecognised options
+DEBUG: Python function do_qa_configure finished
+DEBUG: Executing shell function autotools_postconfigure
+DEBUG: Shell function autotools_postconfigure finished

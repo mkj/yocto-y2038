@@ -1,0 +1,46 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['virtual:native:/home/matt/src/openbmc/meta/recipes-extended/xz/xz_5.2.7.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: ['xz-native', 'libtool-native', 'gettext-minimal-native', 'texinfo-dummy-native']
+NOTE: Skipping as already exists in sysroot: []
+DEBUG: sed -e 's:^[^/]*/:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iproute2/6.0.0-r0/recipe-sysroot-native/:g' /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/libtool-native/fixmepath | xargs sed -i -e 's:FIXMESTAGINGDIRTARGET:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iproute2/6.0.0-r0/recipe-sysroot:g; s:FIXMESTAGINGDIRHOST:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iproute2/6.0.0-r0/recipe-sysroot-native:g' -e 's:FIXME_PSEUDO_SYSROOT:/home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/pseudo-native:g' -e 's:FIXME_HOSTTOOLS_DIR:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:g' -e 's:FIXME_PKGDATA_DIR:/home/matt/tmp/build/obmc-y2038/tmp/pkgdata/evb-ast2600:g' -e 's:FIXME_PSEUDO_LOCALSTATEDIR:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iproute2/6.0.0-r0/pseudo/:g' -e 's:FIXME_LOGFIFO:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iproute2/6.0.0-r0/temp/fifo.784943:g'
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function do_unpack
+DEBUG: Executing python function base_do_unpack
+NOTE: Unpacking /home/matt/tmp/build/obmc-y2038/downloads/iproute2-6.0.0.tar.xz to /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iproute2/6.0.0-r0/
+DEBUG: Searching for 0001-libc-compat.h-add-musl-workaround.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-connectivity/iproute2/iproute2-6.0.0/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-connectivity/iproute2/iproute2/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-connectivity/iproute2/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-connectivity/iproute2/iproute2-6.0.0/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-connectivity/iproute2/iproute2/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-connectivity/iproute2/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-connectivity/iproute2/iproute2-6.0.0/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-connectivity/iproute2/iproute2/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-connectivity/iproute2/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-connectivity/iproute2/iproute2-6.0.0/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-connectivity/iproute2/iproute2/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-connectivity/iproute2/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-connectivity/iproute2/iproute2-6.0.0/aspeed
+    /home/matt/src/openbmc/meta/recipes-connectivity/iproute2/iproute2/aspeed
+    /home/matt/src/openbmc/meta/recipes-connectivity/iproute2/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-connectivity/iproute2/iproute2-6.0.0/armv7a
+    /home/matt/src/openbmc/meta/recipes-connectivity/iproute2/iproute2/armv7a
+    /home/matt/src/openbmc/meta/recipes-connectivity/iproute2/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-connectivity/iproute2/iproute2-6.0.0/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-connectivity/iproute2/iproute2/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-connectivity/iproute2/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-connectivity/iproute2/iproute2-6.0.0/arm
+    /home/matt/src/openbmc/meta/recipes-connectivity/iproute2/iproute2/arm
+    /home/matt/src/openbmc/meta/recipes-connectivity/iproute2/files/arm
+    /home/matt/src/openbmc/meta/recipes-connectivity/iproute2/iproute2-6.0.0/
+    /home/matt/src/openbmc/meta/recipes-connectivity/iproute2/iproute2/
+    /home/matt/src/openbmc/meta/recipes-connectivity/iproute2/files/
+NOTE: Unpacking /home/matt/src/openbmc/meta/recipes-connectivity/iproute2/iproute2/0001-libc-compat.h-add-musl-workaround.patch to /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iproute2/6.0.0-r0/
+DEBUG: Python function base_do_unpack finished
+DEBUG: Python function do_unpack finished
+DEBUG: Executing python function create_source_date_epoch_stamp
+DEBUG: Newest file found: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iproute2/6.0.0-r0/iproute2-6.0.0/Makefile
+DEBUG: SOURCE_DATE_EPOCH: 1664896635
+DEBUG: Python function create_source_date_epoch_stamp finished
+DEBUG: Executing python function do_qa_unpack
+DEBUG: Python function do_qa_unpack finished

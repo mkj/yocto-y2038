@@ -1,0 +1,607 @@
+DEBUG: Executing python function autotools_aclocals
+DEBUG: SITE files ['endian-little', 'bit-32', 'arm-common', 'arm-32', 'common-linux', 'common-glibc', 'arm-linux', 'arm-linux-gnueabi', 'common']
+DEBUG: Python function autotools_aclocals finished
+DEBUG: Executing shell function do_compile
+NOTE: make -j 1
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/recipe-sysroot -c -I.  -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/at-3.2.5=/usr/src/debug/at/3.2.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/at-3.2.5=/usr/src/debug/at/3.2.5-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/at-3.2.5=/usr/src/debug/at/3.2.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/at-3.2.5=/usr/src/debug/at/3.2.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/recipe-sysroot-native=   -Wconversion -Wno-error -DHAVE_CONFIG_H -DVERSION=\"3.2.5\" -DETCDIR=\"/etc\" -DLOADAVG_MX=0.8 -DDAEMON_USERNAME=\"root\" -DDAEMON_GROUPNAME=\"root\" -DLFILE=\"/var/spool/at/jobs/.SEQ\" -Wall at.c
+at.c: In function 'writefile':
+at.c:312:45: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  312 |         (void)snprintf(ppos, sizeof(atfile) - (ppos - atfile),
+      |                                             ^
+at.c:448:46: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  448 |             fwrite(*atenv, sizeof(char), eqp - *atenv, fp);
+      |                                          ~~~~^~~~~~~~
+at.c:480:55: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  480 |             fwrite(*atenv, sizeof(char), eqp - *atenv - 1, fp);
+      |                                          ~~~~~~~~~~~~~^~~
+at.c: In function 'get_job_list':
+at.c:802:41: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  802 |         joblist = (long *) mymalloc(len * sizeof(*joblist));
+      |                                         ^
+at.c: In function 'main':
+at.c:1050:21: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+ 1050 |             queue = toupper(queue);
+      |                     ^~~~~~~
+In file included from at.c:82:
+privs.h:70:31: warning: ignoring return value of 'setreuid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   70 |                               setreuid(effective_uid, real_uid); \
+      |                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+at.c:845:5: note: in expansion of macro 'RELINQUISH_PRIVS'
+  845 |     RELINQUISH_PRIVS
+      |     ^~~~~~~~~~~~~~~~
+privs.h:71:31: warning: ignoring return value of 'setregid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   71 |                               setregid(effective_gid, real_gid); \
+      |                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+at.c:845:5: note: in expansion of macro 'RELINQUISH_PRIVS'
+  845 |     RELINQUISH_PRIVS
+      |     ^~~~~~~~~~~~~~~~
+privs.h:93:25: warning: ignoring return value of 'setreuid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   93 |                         setreuid(real_uid, effective_uid); \
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+at.c:984:9: note: in expansion of macro 'REDUCE_PRIV'
+  984 |         REDUCE_PRIV(daemon_uid, daemon_gid)
+      |         ^~~~~~~~~~~
+privs.h:94:25: warning: ignoring return value of 'setregid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   94 |                         setregid(real_gid, effective_gid); \
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+at.c:984:9: note: in expansion of macro 'REDUCE_PRIV'
+  984 |         REDUCE_PRIV(daemon_uid, daemon_gid)
+      |         ^~~~~~~~~~~
+privs.h:97:25: warning: ignoring return value of 'setregid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   97 |                         setregid(effective_gid, real_gid); \
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+at.c:984:9: note: in expansion of macro 'REDUCE_PRIV'
+  984 |         REDUCE_PRIV(daemon_uid, daemon_gid)
+      |         ^~~~~~~~~~~
+privs.h:98:25: warning: ignoring return value of 'setreuid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   98 |                         setreuid(effective_uid, real_uid); \
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+at.c:984:9: note: in expansion of macro 'REDUCE_PRIV'
+  984 |         REDUCE_PRIV(daemon_uid, daemon_gid)
+      |         ^~~~~~~~~~~
+privs.h:93:25: warning: ignoring return value of 'setreuid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   93 |                         setreuid(real_uid, effective_uid); \
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+at.c:992:9: note: in expansion of macro 'REDUCE_PRIV'
+  992 |         REDUCE_PRIV(daemon_uid, daemon_gid)
+      |         ^~~~~~~~~~~
+privs.h:94:25: warning: ignoring return value of 'setregid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   94 |                         setregid(real_gid, effective_gid); \
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+at.c:992:9: note: in expansion of macro 'REDUCE_PRIV'
+  992 |         REDUCE_PRIV(daemon_uid, daemon_gid)
+      |         ^~~~~~~~~~~
+privs.h:97:25: warning: ignoring return value of 'setregid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   97 |                         setregid(effective_gid, real_gid); \
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+at.c:992:9: note: in expansion of macro 'REDUCE_PRIV'
+  992 |         REDUCE_PRIV(daemon_uid, daemon_gid)
+      |         ^~~~~~~~~~~
+privs.h:98:25: warning: ignoring return value of 'setreuid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   98 |                         setreuid(effective_uid, real_uid); \
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+at.c:992:9: note: in expansion of macro 'REDUCE_PRIV'
+  992 |         REDUCE_PRIV(daemon_uid, daemon_gid)
+      |         ^~~~~~~~~~~
+at.c: In function 'list_jobs':
+privs.h:84:21: warning: ignoring return value of 'setreuid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   84 |                     setreuid(real_uid, effective_uid); \
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+at.c:639:5: note: in expansion of macro 'PRIV_START'
+  639 |     PRIV_START
+      |     ^~~~~~~~~~
+privs.h:85:21: warning: ignoring return value of 'setregid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   85 |                     setregid(real_gid, effective_gid);
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+at.c:639:5: note: in expansion of macro 'PRIV_START'
+  639 |     PRIV_START
+      |     ^~~~~~~~~~
+privs.h:88:21: warning: ignoring return value of 'setregid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   88 |                     setregid(effective_gid, real_gid); \
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+at.c:682:5: note: in expansion of macro 'PRIV_END'
+  682 |     PRIV_END
+      |     ^~~~~~~~
+privs.h:89:21: warning: ignoring return value of 'setreuid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   89 |                     setreuid(effective_uid, real_uid); \
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+at.c:682:5: note: in expansion of macro 'PRIV_END'
+  682 |     PRIV_END
+      |     ^~~~~~~~
+at.c: In function 'process_jobs':
+privs.h:84:21: warning: ignoring return value of 'setreuid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   84 |                     setreuid(real_uid, effective_uid); \
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+at.c:702:5: note: in expansion of macro 'PRIV_START'
+  702 |     PRIV_START
+      |     ^~~~~~~~~~
+privs.h:85:21: warning: ignoring return value of 'setregid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   85 |                     setregid(real_gid, effective_gid);
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+at.c:702:5: note: in expansion of macro 'PRIV_START'
+  702 |     PRIV_START
+      |     ^~~~~~~~~~
+privs.h:88:21: warning: ignoring return value of 'setregid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   88 |                     setregid(effective_gid, real_gid); \
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+at.c:710:5: note: in expansion of macro 'PRIV_END'
+  710 |     PRIV_END
+      |     ^~~~~~~~
+privs.h:89:21: warning: ignoring return value of 'setreuid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   89 |                     setreuid(effective_uid, real_uid); \
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+at.c:710:5: note: in expansion of macro 'PRIV_END'
+  710 |     PRIV_END
+      |     ^~~~~~~~
+privs.h:84:21: warning: ignoring return value of 'setreuid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   84 |                     setreuid(real_uid, effective_uid); \
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+at.c:716:9: note: in expansion of macro 'PRIV_START'
+  716 |         PRIV_START
+      |         ^~~~~~~~~~
+privs.h:85:21: warning: ignoring return value of 'setregid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   85 |                     setregid(real_gid, effective_gid);
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+at.c:716:9: note: in expansion of macro 'PRIV_START'
+  716 |         PRIV_START
+      |         ^~~~~~~~~~
+privs.h:88:21: warning: ignoring return value of 'setregid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   88 |                     setregid(effective_gid, real_gid); \
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+at.c:719:9: note: in expansion of macro 'PRIV_END'
+  719 |         PRIV_END
+      |         ^~~~~~~~
+privs.h:89:21: warning: ignoring return value of 'setreuid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   89 |                     setreuid(effective_uid, real_uid); \
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+at.c:719:9: note: in expansion of macro 'PRIV_END'
+  719 |         PRIV_END
+      |         ^~~~~~~~
+at.c:736:21: warning: ignoring return value of 'setregid' declared with attribute 'warn_unused_result' [-Wunused-result]
+  736 |                     setregid(real_gid, effective_gid);
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+at.c:746:21: warning: ignoring return value of 'setregid' declared with attribute 'warn_unused_result' [-Wunused-result]
+  746 |                     setregid(effective_gid, real_gid);
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+at.c:756:25: warning: ignoring return value of 'setregid' declared with attribute 'warn_unused_result' [-Wunused-result]
+  756 |                         setregid(real_gid, effective_gid);
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+at.c:771:25: warning: ignoring return value of 'setregid' declared with attribute 'warn_unused_result' [-Wunused-result]
+  771 |                         setregid(effective_gid, real_gid);
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+at.c: In function 'writefile':
+privs.h:84:21: warning: ignoring return value of 'setreuid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   84 |                     setreuid(real_uid, effective_uid); \
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+at.c:287:5: note: in expansion of macro 'PRIV_START'
+  287 |     PRIV_START
+      |     ^~~~~~~~~~
+privs.h:85:21: warning: ignoring return value of 'setregid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   85 |                     setregid(real_gid, effective_gid);
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+at.c:287:5: note: in expansion of macro 'PRIV_START'
+  287 |     PRIV_START
+      |     ^~~~~~~~~~
+at.c:329:9: warning: ignoring return value of 'seteuid' declared with attribute 'warn_unused_result' [-Wunused-result]
+  329 |         seteuid(real_uid);
+      |         ^~~~~~~~~~~~~~~~~
+at.c:332:9: warning: ignoring return value of 'seteuid' declared with attribute 'warn_unused_result' [-Wunused-result]
+  332 |         seteuid(effective_uid);
+      |         ^~~~~~~~~~~~~~~~~~~~~~
+privs.h:88:21: warning: ignoring return value of 'setregid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   88 |                     setregid(effective_gid, real_gid); \
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+at.c:342:5: note: in expansion of macro 'PRIV_END'
+  342 |     PRIV_END
+      |     ^~~~~~~~
+privs.h:89:21: warning: ignoring return value of 'setreuid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   89 |                     setreuid(effective_uid, real_uid); \
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+at.c:342:5: note: in expansion of macro 'PRIV_END'
+  342 |     PRIV_END
+      |     ^~~~~~~~
+privs.h:93:25: warning: ignoring return value of 'setreuid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   93 |                         setreuid(real_uid, effective_uid); \
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+at.c:348:5: note: in expansion of macro 'REDUCE_PRIV'
+  348 |     REDUCE_PRIV(daemon_uid, daemon_gid)
+      |     ^~~~~~~~~~~
+privs.h:94:25: warning: ignoring return value of 'setregid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   94 |                         setregid(real_gid, effective_gid); \
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+at.c:348:5: note: in expansion of macro 'REDUCE_PRIV'
+  348 |     REDUCE_PRIV(daemon_uid, daemon_gid)
+      |     ^~~~~~~~~~~
+privs.h:97:25: warning: ignoring return value of 'setregid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   97 |                         setregid(effective_gid, real_gid); \
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+at.c:348:5: note: in expansion of macro 'REDUCE_PRIV'
+  348 |     REDUCE_PRIV(daemon_uid, daemon_gid)
+      |     ^~~~~~~~~~~
+privs.h:98:25: warning: ignoring return value of 'setreuid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   98 |                         setreuid(effective_uid, real_uid); \
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+at.c:348:5: note: in expansion of macro 'REDUCE_PRIV'
+  348 |     REDUCE_PRIV(daemon_uid, daemon_gid)
+      |     ^~~~~~~~~~~
+privs.h:84:21: warning: ignoring return value of 'setreuid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   84 |                     setreuid(real_uid, effective_uid); \
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+at.c:582:5: note: in expansion of macro 'PRIV_START'
+  582 |     PRIV_START
+      |     ^~~~~~~~~~
+privs.h:85:21: warning: ignoring return value of 'setregid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   85 |                     setregid(real_gid, effective_gid);
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+at.c:582:5: note: in expansion of macro 'PRIV_START'
+  582 |     PRIV_START
+      |     ^~~~~~~~~~
+privs.h:88:21: warning: ignoring return value of 'setregid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   88 |                     setregid(effective_gid, real_gid); \
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+at.c:585:5: note: in expansion of macro 'PRIV_END'
+  585 |     PRIV_END
+      |     ^~~~~~~~
+privs.h:89:21: warning: ignoring return value of 'setreuid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   89 |                     setreuid(effective_uid, real_uid); \
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+at.c:585:5: note: in expansion of macro 'PRIV_END'
+  585 |     PRIV_END
+      |     ^~~~~~~~
+at.c: In function 'sigc':
+at.c:164:9: warning: ignoring return value of 'setregid' declared with attribute 'warn_unused_result' [-Wunused-result]
+  164 |         setregid(real_gid, effective_gid);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+at.c:166:9: warning: ignoring return value of 'setregid' declared with attribute 'warn_unused_result' [-Wunused-result]
+  166 |         setregid(effective_gid, real_gid);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+at.c: In function 'nextjob':
+at.c:221:9: warning: ignoring return value of 'fscanf' declared with attribute 'warn_unused_result' [-Wunused-result]
+  221 |         fscanf(fid, "%5lx", &jobno);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/recipe-sysroot -c -I.  -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/at-3.2.5=/usr/src/debug/at/3.2.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/at-3.2.5=/usr/src/debug/at/3.2.5-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/at-3.2.5=/usr/src/debug/at/3.2.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/at-3.2.5=/usr/src/debug/at/3.2.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/recipe-sysroot-native=   -Wconversion -Wno-error -DHAVE_CONFIG_H -DVERSION=\"3.2.5\" -DETCDIR=\"/etc\" -DLOADAVG_MX=0.8 -DDAEMON_USERNAME=\"root\" -DDAEMON_GROUPNAME=\"root\" -DLFILE=\"/var/spool/at/jobs/.SEQ\" -Wall panic.c
+panic.c: In function 'panic':
+panic.c:60:9: warning: ignoring return value of 'setregid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   60 |         setregid(real_gid, effective_gid);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+panic.c:62:9: warning: ignoring return value of 'setregid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   62 |         setregid(effective_gid, real_gid);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+panic.c: In function 'perr':
+panic.c:82:9: warning: ignoring return value of 'setregid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   82 |         setregid(real_gid, effective_gid);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+panic.c:84:9: warning: ignoring return value of 'setregid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   84 |         setregid(effective_gid, real_gid);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/recipe-sysroot -c -I.  -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/at-3.2.5=/usr/src/debug/at/3.2.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/at-3.2.5=/usr/src/debug/at/3.2.5-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/at-3.2.5=/usr/src/debug/at/3.2.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/at-3.2.5=/usr/src/debug/at/3.2.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/recipe-sysroot-native=   -Wconversion -Wno-error -DHAVE_CONFIG_H -DVERSION=\"3.2.5\" -DETCDIR=\"/etc\" -DLOADAVG_MX=0.8 -DDAEMON_USERNAME=\"root\" -DDAEMON_GROUPNAME=\"root\" -DLFILE=\"/var/spool/at/jobs/.SEQ\" -Wall perm.c
+In file included from perm.c:41:
+perm.c: In function 'user_in_file':
+privs.h:84:21: warning: ignoring return value of 'setreuid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   84 |                     setreuid(real_uid, effective_uid); \
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+perm.c:76:3: note: in expansion of macro 'PRIV_START'
+   76 |   PRIV_START;
+      |   ^~~~~~~~~~
+privs.h:85:21: warning: ignoring return value of 'setregid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   85 |                     setregid(real_gid, effective_gid);
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+perm.c:76:3: note: in expansion of macro 'PRIV_START'
+   76 |   PRIV_START;
+      |   ^~~~~~~~~~
+privs.h:88:21: warning: ignoring return value of 'setregid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   88 |                     setregid(effective_gid, real_gid); \
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+perm.c:78:3: note: in expansion of macro 'PRIV_END'
+   78 |   PRIV_END;
+      |   ^~~~~~~~
+privs.h:89:21: warning: ignoring return value of 'setreuid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   89 |                     setreuid(effective_uid, real_uid); \
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+perm.c:78:3: note: in expansion of macro 'PRIV_END'
+   78 |   PRIV_END;
+      |   ^~~~~~~~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/recipe-sysroot -c -I.  -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/at-3.2.5=/usr/src/debug/at/3.2.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/at-3.2.5=/usr/src/debug/at/3.2.5-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/at-3.2.5=/usr/src/debug/at/3.2.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/at-3.2.5=/usr/src/debug/at/3.2.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/recipe-sysroot-native=   -Wconversion -Wno-error -DHAVE_CONFIG_H -DVERSION=\"3.2.5\" -DETCDIR=\"/etc\" -DLOADAVG_MX=0.8 -DDAEMON_USERNAME=\"root\" -DDAEMON_GROUPNAME=\"root\" -DLFILE=\"/var/spool/at/jobs/.SEQ\" -Wall posixtm.c
+bison -y -d parsetime.y
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/recipe-sysroot -c -I.  -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/at-3.2.5=/usr/src/debug/at/3.2.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/at-3.2.5=/usr/src/debug/at/3.2.5-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/at-3.2.5=/usr/src/debug/at/3.2.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/at-3.2.5=/usr/src/debug/at/3.2.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/recipe-sysroot-native=   -Wconversion -Wno-error -DHAVE_CONFIG_H -DVERSION=\"3.2.5\" -DETCDIR=\"/etc\" -DLOADAVG_MX=0.8 -DDAEMON_USERNAME=\"root\" -DDAEMON_GROUPNAME=\"root\" -DLFILE=\"/var/spool/at/jobs/.SEQ\" -Wall y.tab.c
+parsetime.y:13: warning: "__isleap" redefined
+   13 | #define __isleap(y) \
+      | 
+In file included from parsetime.y:2:
+/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/recipe-sysroot/usr/include/time.h:239: note: this is the location of the previous definition
+  239 | #define __isleap(year)  \
+      | 
+flex -i parsetime.l
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/recipe-sysroot -c -I.  -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/at-3.2.5=/usr/src/debug/at/3.2.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/at-3.2.5=/usr/src/debug/at/3.2.5-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/at-3.2.5=/usr/src/debug/at/3.2.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/at-3.2.5=/usr/src/debug/at/3.2.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/recipe-sysroot-native=   -Wconversion -Wno-error -DHAVE_CONFIG_H -DVERSION=\"3.2.5\" -DETCDIR=\"/etc\" -DLOADAVG_MX=0.8 -DDAEMON_USERNAME=\"root\" -DDAEMON_GROUPNAME=\"root\" -DLFILE=\"/var/spool/at/jobs/.SEQ\" -Wall lex.yy.c
+lex.yy.c:1550:16: warning: 'input' defined but not used [-Wunused-function]
+ 1550 | #else
+      |                ^    
+lex.yy.c:1507:17: warning: 'yyunput' defined but not used [-Wunused-function]
+ 1507 | 
+      |                 ^      
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/recipe-sysroot -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/at-3.2.5=/usr/src/debug/at/3.2.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/at-3.2.5=/usr/src/debug/at/3.2.5-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/at-3.2.5=/usr/src/debug/at/3.2.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/at-3.2.5=/usr/src/debug/at/3.2.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/recipe-sysroot-native=  -Wl,-z,relro,-z,now -o at at.o panic.o perm.o posixtm.o y.tab.o lex.yy.o  
+rm -f atq atrm
+ln -s -f at atq
+ln -s -f at atrm
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/recipe-sysroot -c -I.  -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/at-3.2.5=/usr/src/debug/at/3.2.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/at-3.2.5=/usr/src/debug/at/3.2.5-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/at-3.2.5=/usr/src/debug/at/3.2.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/at-3.2.5=/usr/src/debug/at/3.2.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/recipe-sysroot-native=   -Wconversion -Wno-error -DHAVE_CONFIG_H -DVERSION=\"3.2.5\" -DETCDIR=\"/etc\" -DLOADAVG_MX=0.8 -DDAEMON_USERNAME=\"root\" -DDAEMON_GROUPNAME=\"root\" -DLFILE=\"/var/spool/at/jobs/.SEQ\" -Wall atd.c
+atd.c: In function 'run_file':
+atd.c:311:36: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  311 |     if ((mailname = malloc(mailsize+1)) == NULL)
+      |                            ~~~~~~~~^~
+atd.c:440:29: warning: conversion to '__gid_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  440 |     if (fchown(fd_out, uid, ngid) == -1)
+      |                             ^~~~
+atd.c:510:24: warning: conversion to '__gid_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  510 |             if (setgid(ngid) < 0)
+      |                        ^~~~
+atd.c: In function 'run_loop':
+atd.c:754:26: warning: conversion to 'long unsigned int' from 'time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+  754 |         next_batch = now + batch_interval;
+      |                          ^
+atd.c:754:22: warning: conversion to 'time_t' {aka 'long int'} from 'long unsigned int' may change the sign of the result [-Wsign-conversion]
+  754 |         next_batch = now + batch_interval;
+      |                      ^~~
+atd.c:607:10: warning: variable 'batch_queue' set but not used [-Wunused-but-set-variable]
+  607 |     char batch_queue = '\0';
+      |          ^~~~~~~~~~~
+atd.c: In function 'atd_setalarm':
+atd.c:807:16: warning: conversion to 'unsigned int' from 'time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+  807 |     sleep(next - now);
+      |           ~~~~~^~~~~
+In file included from atd.c:79:
+atd.c: In function 'main':
+privs.h:79:31: warning: ignoring return value of 'setregid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   79 |                               setregid(effective_gid, real_gid); \
+      |                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+atd.c:867:5: note: in expansion of macro 'RELINQUISH_PRIVS_ROOT'
+  867 |     RELINQUISH_PRIVS_ROOT(daemon_uid, daemon_gid)
+      |     ^~~~~~~~~~~~~~~~~~~~~
+privs.h:80:31: warning: ignoring return value of 'setreuid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   80 |                               setreuid(effective_uid, real_uid); \
+      |                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+atd.c:867:5: note: in expansion of macro 'RELINQUISH_PRIVS_ROOT'
+  867 |     RELINQUISH_PRIVS_ROOT(daemon_uid, daemon_gid)
+      |     ^~~~~~~~~~~~~~~~~~~~~
+atd.c: In function 'run_file':
+privs.h:84:21: warning: ignoring return value of 'setreuid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   84 |                     setreuid(real_uid, effective_uid); \
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+atd.c:324:5: note: in expansion of macro 'PRIV_START'
+  324 |     PRIV_START
+      |     ^~~~~~~~~~
+privs.h:85:21: warning: ignoring return value of 'setregid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   85 |                     setregid(real_gid, effective_gid);
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+atd.c:324:5: note: in expansion of macro 'PRIV_START'
+  324 |     PRIV_START
+      |     ^~~~~~~~~~
+privs.h:88:21: warning: ignoring return value of 'setregid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   88 |                     setregid(effective_gid, real_gid); \
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+atd.c:326:5: note: in expansion of macro 'PRIV_END'
+  326 |     PRIV_END
+      |     ^~~~~~~~
+privs.h:89:21: warning: ignoring return value of 'setreuid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   89 |                     setreuid(effective_uid, real_uid); \
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+atd.c:326:5: note: in expansion of macro 'PRIV_END'
+  326 |     PRIV_END
+      |     ^~~~~~~~
+privs.h:84:21: warning: ignoring return value of 'setreuid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   84 |                     setreuid(real_uid, effective_uid); \
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+atd.c:357:5: note: in expansion of macro 'PRIV_START'
+  357 |     PRIV_START
+      |     ^~~~~~~~~~
+privs.h:85:21: warning: ignoring return value of 'setregid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   85 |                     setregid(real_gid, effective_gid);
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+atd.c:357:5: note: in expansion of macro 'PRIV_START'
+  357 |     PRIV_START
+      |     ^~~~~~~~~~
+privs.h:88:21: warning: ignoring return value of 'setregid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   88 |                     setregid(effective_gid, real_gid); \
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+atd.c:361:5: note: in expansion of macro 'PRIV_END'
+  361 |     PRIV_END
+      |     ^~~~~~~~
+privs.h:89:21: warning: ignoring return value of 'setreuid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   89 |                     setreuid(effective_uid, real_uid); \
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+atd.c:361:5: note: in expansion of macro 'PRIV_END'
+  361 |     PRIV_END
+      |     ^~~~~~~~
+privs.h:84:21: warning: ignoring return value of 'setreuid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   84 |                     setreuid(real_uid, effective_uid); \
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+atd.c:439:5: note: in expansion of macro 'PRIV_START'
+  439 |     PRIV_START
+      |     ^~~~~~~~~~
+privs.h:85:21: warning: ignoring return value of 'setregid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   85 |                     setregid(real_gid, effective_gid);
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+atd.c:439:5: note: in expansion of macro 'PRIV_START'
+  439 |     PRIV_START
+      |     ^~~~~~~~~~
+privs.h:88:21: warning: ignoring return value of 'setregid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   88 |                     setregid(effective_gid, real_gid); \
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+atd.c:443:5: note: in expansion of macro 'PRIV_END'
+  443 |     PRIV_END
+      |     ^~~~~~~~
+privs.h:89:21: warning: ignoring return value of 'setreuid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   89 |                     setreuid(effective_uid, real_uid); \
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+atd.c:443:5: note: in expansion of macro 'PRIV_END'
+  443 |     PRIV_END
+      |     ^~~~~~~~
+privs.h:84:21: warning: ignoring return value of 'setreuid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   84 |                     setreuid(real_uid, effective_uid); \
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+atd.c:454:5: note: in expansion of macro 'PRIV_START'
+  454 |     PRIV_START
+      |     ^~~~~~~~~~
+privs.h:85:21: warning: ignoring return value of 'setregid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   85 |                     setregid(real_gid, effective_gid);
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+atd.c:454:5: note: in expansion of macro 'PRIV_START'
+  454 |     PRIV_START
+      |     ^~~~~~~~~~
+privs.h:88:21: warning: ignoring return value of 'setregid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   88 |                     setregid(effective_gid, real_gid); \
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+atd.c:463:5: note: in expansion of macro 'PRIV_END'
+  463 |     PRIV_END
+      |     ^~~~~~~~
+privs.h:89:21: warning: ignoring return value of 'setreuid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   89 |                     setreuid(effective_uid, real_uid); \
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+atd.c:463:5: note: in expansion of macro 'PRIV_END'
+  463 |     PRIV_END
+      |     ^~~~~~~~
+privs.h:84:21: warning: ignoring return value of 'setreuid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   84 |                     setreuid(real_uid, effective_uid); \
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+atd.c:496:9: note: in expansion of macro 'PRIV_START'
+  496 |         PRIV_START
+      |         ^~~~~~~~~~
+privs.h:85:21: warning: ignoring return value of 'setregid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   85 |                     setregid(real_gid, effective_gid);
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+atd.c:496:9: note: in expansion of macro 'PRIV_START'
+  496 |         PRIV_START
+      |         ^~~~~~~~~~
+atd.c:498:13: warning: ignoring return value of 'nice' declared with attribute 'warn_unused_result' [-Wunused-result]
+  498 |             nice((tolower((int) queue) - 'a') * 2);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+atd.c:516:13: warning: ignoring return value of 'chdir' declared with attribute 'warn_unused_result' [-Wunused-result]
+  516 |             chdir("/");
+      |             ^~~~~~~~~~
+privs.h:88:21: warning: ignoring return value of 'setregid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   88 |                     setregid(effective_gid, real_gid); \
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+atd.c:521:9: note: in expansion of macro 'PRIV_END'
+  521 |         PRIV_END
+      |         ^~~~~~~~
+privs.h:89:21: warning: ignoring return value of 'setreuid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   89 |                     setreuid(effective_uid, real_uid); \
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+atd.c:521:9: note: in expansion of macro 'PRIV_END'
+  521 |         PRIV_END
+      |         ^~~~~~~~
+privs.h:84:21: warning: ignoring return value of 'setreuid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   84 |                     setreuid(real_uid, effective_uid); \
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+atd.c:534:5: note: in expansion of macro 'PRIV_START'
+  534 |     PRIV_START
+      |     ^~~~~~~~~~
+privs.h:85:21: warning: ignoring return value of 'setregid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   85 |                     setregid(real_gid, effective_gid);
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+atd.c:534:5: note: in expansion of macro 'PRIV_START'
+  534 |     PRIV_START
+      |     ^~~~~~~~~~
+privs.h:88:21: warning: ignoring return value of 'setregid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   88 |                     setregid(effective_gid, real_gid); \
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+atd.c:538:5: note: in expansion of macro 'PRIV_END'
+  538 |     PRIV_END
+      |     ^~~~~~~~
+privs.h:89:21: warning: ignoring return value of 'setreuid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   89 |                     setreuid(effective_uid, real_uid); \
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+atd.c:538:5: note: in expansion of macro 'PRIV_END'
+  538 |     PRIV_END
+      |     ^~~~~~~~
+atd.c:567:5: warning: ignoring return value of 'chdir' declared with attribute 'warn_unused_result' [-Wunused-result]
+  567 |     chdir(ATJOB_DIR);
+      |     ^~~~~~~~~~~~~~~~
+privs.h:84:21: warning: ignoring return value of 'setreuid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   84 |                     setreuid(real_uid, effective_uid); \
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+atd.c:573:9: note: in expansion of macro 'PRIV_START'
+  573 |         PRIV_START
+      |         ^~~~~~~~~~
+privs.h:85:21: warning: ignoring return value of 'setregid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   85 |                     setregid(real_gid, effective_gid);
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+atd.c:573:9: note: in expansion of macro 'PRIV_START'
+  573 |         PRIV_START
+      |         ^~~~~~~~~~
+atd.c:584:13: warning: ignoring return value of 'chdir' declared with attribute 'warn_unused_result' [-Wunused-result]
+  584 |             chdir ("/");
+      |             ^~~~~~~~~~~
+privs.h:88:21: warning: ignoring return value of 'setregid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   88 |                     setregid(effective_gid, real_gid); \
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+atd.c:593:9: note: in expansion of macro 'PRIV_END'
+  593 |         PRIV_END
+      |         ^~~~~~~~
+privs.h:89:21: warning: ignoring return value of 'setreuid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   89 |                     setreuid(effective_uid, real_uid); \
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+atd.c:593:9: note: in expansion of macro 'PRIV_END'
+  593 |         PRIV_END
+      |         ^~~~~~~~
+atd.c: In function 'run_loop':
+atd.c:738:17: warning: '__builtin_strncpy' output may be truncated copying 15 bytes from a string of length 255 [-Wstringop-truncation]
+  738 |                 strncpy(batch_name, dirent->d_name, sizeof(batch_name));
+      |                 ^
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/recipe-sysroot -c -I.  -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/at-3.2.5=/usr/src/debug/at/3.2.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/at-3.2.5=/usr/src/debug/at/3.2.5-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/at-3.2.5=/usr/src/debug/at/3.2.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/at-3.2.5=/usr/src/debug/at/3.2.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/recipe-sysroot-native=   -Wconversion -Wno-error -DHAVE_CONFIG_H -DVERSION=\"3.2.5\" -DETCDIR=\"/etc\" -DLOADAVG_MX=0.8 -DDAEMON_USERNAME=\"root\" -DDAEMON_GROUPNAME=\"root\" -DLFILE=\"/var/spool/at/jobs/.SEQ\" -Wall daemon.c
+daemon.c: In function 'daemon_setup':
+daemon.c:124:12: warning: variable 'old_umask' set but not used [-Wunused-but-set-variable]
+  124 |     mode_t old_umask;
+      |            ^~~~~~~~~
+In file included from daemon.c:49:
+privs.h:84:21: warning: ignoring return value of 'setreuid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   84 |                     setreuid(real_uid, effective_uid); \
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+daemon.c:157:5: note: in expansion of macro 'PRIV_START'
+  157 |     PRIV_START
+      |     ^~~~~~~~~~
+privs.h:85:21: warning: ignoring return value of 'setregid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   85 |                     setregid(real_gid, effective_gid);
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+daemon.c:157:5: note: in expansion of macro 'PRIV_START'
+  157 |     PRIV_START
+      |     ^~~~~~~~~~
+privs.h:88:21: warning: ignoring return value of 'setregid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   88 |                     setregid(effective_gid, real_gid); \
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+daemon.c:214:5: note: in expansion of macro 'PRIV_END'
+  214 |     PRIV_END
+      |     ^~~~~~~~
+privs.h:89:21: warning: ignoring return value of 'setreuid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   89 |                     setreuid(effective_uid, real_uid); \
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+daemon.c:214:5: note: in expansion of macro 'PRIV_END'
+  214 |     PRIV_END
+      |     ^~~~~~~~
+daemon.c: In function 'daemon_cleanup':
+privs.h:84:21: warning: ignoring return value of 'setreuid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   84 |                     setreuid(real_uid, effective_uid); \
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+daemon.c:224:5: note: in expansion of macro 'PRIV_START'
+  224 |     PRIV_START
+      |     ^~~~~~~~~~
+privs.h:85:21: warning: ignoring return value of 'setregid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   85 |                     setregid(real_gid, effective_gid);
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+daemon.c:224:5: note: in expansion of macro 'PRIV_START'
+  224 |     PRIV_START
+      |     ^~~~~~~~~~
+privs.h:88:21: warning: ignoring return value of 'setregid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   88 |                     setregid(effective_gid, real_gid); \
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+daemon.c:228:5: note: in expansion of macro 'PRIV_END'
+  228 |     PRIV_END
+      |     ^~~~~~~~
+privs.h:89:21: warning: ignoring return value of 'setreuid' declared with attribute 'warn_unused_result' [-Wunused-result]
+   89 |                     setreuid(effective_uid, real_uid); \
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+daemon.c:228:5: note: in expansion of macro 'PRIV_END'
+  228 |     PRIV_END
+      |     ^~~~~~~~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/recipe-sysroot -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/at-3.2.5=/usr/src/debug/at/3.2.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/at-3.2.5=/usr/src/debug/at/3.2.5-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/at-3.2.5=/usr/src/debug/at/3.2.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/at-3.2.5=/usr/src/debug/at/3.2.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/recipe-sysroot-native=  -Wl,-z,relro,-z,now -o atd atd.o daemon.o   -lpam 
+cat atd.service.in | sed -e 's![@]sbindir[@]!/usr/sbin!g' | sed -e 's![@]atjobdir[@]!/var/spool/at/jobs!g' > atd.service
+DEBUG: Shell function do_compile finished

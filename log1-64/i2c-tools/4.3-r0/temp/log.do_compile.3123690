@@ -1,0 +1,232 @@
+DEBUG: Executing shell function do_compile
+NOTE: make -j 1 bindir=/usr/bin sbindir=/usr/sbin incdir=/usr/include libdir=/usr/lib mandir=/usr/share/man EXTRA=eeprog
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/recipe-sysroot -fpic -D_REENTRANT   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/i2c-tools-4.3=/usr/src/debug/i2c-tools/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/i2c-tools-4.3=/usr/src/debug/i2c-tools/4.3-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/i2c-tools-4.3=/usr/src/debug/i2c-tools/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/i2c-tools-4.3=/usr/src/debug/i2c-tools/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/recipe-sysroot-native=   -Wconversion -Wno-error -Wall -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wundef -Wmissing-prototypes -Iinclude -c lib/smbus.c -o lib/smbus.o
+lib/smbus.c: In function 'i2c_smbus_access':
+lib/smbus.c:38:21: warning: conversion to '__u32' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+   38 |         args.size = size;
+      |                     ^~~~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/recipe-sysroot -shared -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/i2c-tools-4.3=/usr/src/debug/i2c-tools/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/i2c-tools-4.3=/usr/src/debug/i2c-tools/4.3-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/i2c-tools-4.3=/usr/src/debug/i2c-tools/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/i2c-tools-4.3=/usr/src/debug/i2c-tools/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/recipe-sysroot-native=  -Wl,-z,relro,-z,now -Wl,--version-script=lib/libi2c.map -Wl,-soname,libi2c.so.0 -o lib/libi2c.so.0.1.1 lib/smbus.o -lc
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/recipe-sysroot   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/i2c-tools-4.3=/usr/src/debug/i2c-tools/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/i2c-tools-4.3=/usr/src/debug/i2c-tools/4.3-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/i2c-tools-4.3=/usr/src/debug/i2c-tools/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/i2c-tools-4.3=/usr/src/debug/i2c-tools/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/recipe-sysroot-native=   -Wconversion -Wno-error -Wall -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wundef -Wmissing-prototypes -Iinclude -c lib/smbus.c -o lib/smbus.ao
+lib/smbus.c: In function 'i2c_smbus_access':
+lib/smbus.c:38:21: warning: conversion to '__u32' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+   38 |         args.size = size;
+      |                     ^~~~
+rm -f lib/libi2c.a
+arm-openbmc-linux-gnueabi-gcc-ar rcvs lib/libi2c.a lib/smbus.ao
+a - lib/smbus.ao
+rm -f lib/libi2c.so.0
+ln -sf libi2c.so.0.1.1 lib/libi2c.so.0
+rm -f lib/libi2c.so
+ln -sf libi2c.so.0.1.1 lib/libi2c.so
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/recipe-sysroot   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/i2c-tools-4.3=/usr/src/debug/i2c-tools/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/i2c-tools-4.3=/usr/src/debug/i2c-tools/4.3-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/i2c-tools-4.3=/usr/src/debug/i2c-tools/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/i2c-tools-4.3=/usr/src/debug/i2c-tools/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/recipe-sysroot-native=   -Wconversion -Wno-error -Wall -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wundef -Wmissing-prototypes -Iinclude -c tools/i2cdetect.c -o tools/i2cdetect.o
+tools/i2cdetect.c: In function 'print_functionality':
+tools/i2cdetect.c:172:31: warning: conversion to 'long unsigned int' from 'long int' may change the sign of the result [-Wsign-conversion]
+  172 |                        (funcs & all_func[i].value) ? "yes" : "no");
+      |                               ^
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/recipe-sysroot   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/i2c-tools-4.3=/usr/src/debug/i2c-tools/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/i2c-tools-4.3=/usr/src/debug/i2c-tools/4.3-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/i2c-tools-4.3=/usr/src/debug/i2c-tools/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/i2c-tools-4.3=/usr/src/debug/i2c-tools/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/recipe-sysroot-native=   -Wconversion -Wno-error -Wall -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wundef -Wmissing-prototypes -Iinclude -c tools/i2cbusses.c -o tools/i2cbusses.o
+tools/i2cbusses.c: In function 'rtrim':
+tools/i2cbusses.c:98:18: warning: conversion to 'int' from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+   98 |         for (i = strlen(s) - 1; i >= 0 && (s[i] == ' ' || s[i] == '\n'); i--)
+      |                  ^~~~~~
+tools/i2cbusses.c: In function 'more_adapters':
+tools/i2cbusses.c:122:54: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  122 |         new_adapters = realloc(adapters, (n + BUNCH) * sizeof(struct i2c_adap));
+      |                                                      ^
+tools/i2cbusses.c: In function 'gather_i2c_busses':
+tools/i2cbusses.c:183:58: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  183 |                         all = malloc(len_name + len_type + len_algo);
+      |                                      ~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+tools/i2cbusses.c:326:25: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  326 |         qsort(adapters, count, sizeof(struct i2c_adap), sort_i2c_busses);
+      |                         ^~~~~
+tools/i2cbusses.c: In function 'lookup_i2c_bus':
+tools/i2cbusses.c:384:16: warning: conversion to 'int' from 'long unsigned int' may change the sign of the result [-Wsign-conversion]
+  384 |         return i2cbus;
+      |                ^~~~~~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/recipe-sysroot -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/i2c-tools-4.3=/usr/src/debug/i2c-tools/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/i2c-tools-4.3=/usr/src/debug/i2c-tools/4.3-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/i2c-tools-4.3=/usr/src/debug/i2c-tools/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/i2c-tools-4.3=/usr/src/debug/i2c-tools/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/recipe-sysroot-native=  -Wl,-z,relro,-z,now -o tools/i2cdetect tools/i2cdetect.o tools/i2cbusses.o lib/libi2c.so -Llib -li2c
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/recipe-sysroot   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/i2c-tools-4.3=/usr/src/debug/i2c-tools/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/i2c-tools-4.3=/usr/src/debug/i2c-tools/4.3-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/i2c-tools-4.3=/usr/src/debug/i2c-tools/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/i2c-tools-4.3=/usr/src/debug/i2c-tools/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/recipe-sysroot-native=   -Wconversion -Wno-error -Wall -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wundef -Wmissing-prototypes -Iinclude -c tools/i2cdump.c -o tools/i2cdump.o
+tools/i2cdump.c: In function 'main':
+tools/i2cdump.c:334:31: warning: conversion from 'int' to '__u16' {aka 'short unsigned int'} may change value [-Wconversion]
+  334 |                 msg[0].addr = address;
+      |                               ^~~~~~~
+tools/i2cdump.c:356:54: warning: conversion from 'int' to '__u8' {aka 'unsigned char'} may change value [-Wconversion]
+  356 |                 res = i2c_smbus_read_byte_data(file, bankreg);
+      |                                                      ^~~~~~~
+tools/i2cdump.c:359:63: warning: conversion from 'int' to '__u8' {aka 'unsigned char'} may change value [-Wconversion]
+  359 |                         res = i2c_smbus_write_byte_data(file, bankreg,
+      |                                                               ^~~~~~~
+tools/i2cdump.c:360:38: warning: conversion from 'int' to '__u8' {aka 'unsigned char'} may change value [-Wconversion]
+  360 |                                 bank | (old_bank & 0xf0));
+      |                                 ~~~~~^~~~~~~~~~~~~~~~~~~
+tools/i2cdump.c:376:71: warning: conversion from 'int' to '__u8' {aka 'unsigned char'} may change value [-Wconversion]
+  376 |                                 res = i2c_smbus_read_block_data(file, bank,
+      |                                                                       ^~~~
+tools/i2cdump.c:385:49: warning: conversion from 'int' to '__u8' {aka 'unsigned char'} may change value [-Wconversion]
+  385 |                                                 res, 32, cblock + res);
+      |                                                 ^~~
+tools/i2cdump.c:402:58: warning: conversion from 'int' to '__u8' {aka 'unsigned char'} may change value [-Wconversion]
+  402 |                         res = i2c_smbus_write_byte(file, first);
+      |                                                          ^~~~~
+tools/i2cdump.c:435:75: warning: conversion from 'int' to '__u8' {aka 'unsigned char'} may change value [-Wconversion]
+  435 |                                           i2c_smbus_read_byte_data(file, i+j);
+      |                                                                          ~^~
+tools/i2cdump.c:438:73: warning: conversion from 'int' to '__u8' {aka 'unsigned char'} may change value [-Wconversion]
+  438 |                                                                        i+j);
+      |                                                                        ~^~
+tools/i2cdump.c:511:71: warning: conversion from 'int' to '__u8' {aka 'unsigned char'} may change value [-Wconversion]
+  511 |                                 res = i2c_smbus_read_word_data(file, i+j);
+      |                                                                      ~^~
+tools/i2cdump.c:521:49: warning: conversion from 'int' to '__u8' {aka 'unsigned char'} may change value [-Wconversion]
+  521 |                 i2c_smbus_write_byte_data(file, bankreg, old_bank);
+      |                                                 ^~~~~~~
+tools/i2cdump.c:521:58: warning: conversion from 'int' to '__u8' {aka 'unsigned char'} may change value [-Wconversion]
+  521 |                 i2c_smbus_write_byte_data(file, bankreg, old_bank);
+      |                                                          ^~~~~~~~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/recipe-sysroot   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/i2c-tools-4.3=/usr/src/debug/i2c-tools/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/i2c-tools-4.3=/usr/src/debug/i2c-tools/4.3-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/i2c-tools-4.3=/usr/src/debug/i2c-tools/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/i2c-tools-4.3=/usr/src/debug/i2c-tools/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/recipe-sysroot-native=   -Wconversion -Wno-error -Wall -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wundef -Wmissing-prototypes -Iinclude -c tools/util.c -o tools/util.o
+tools/util.c: In function 'user_ack':
+tools/util.c:53:24: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+   53 |                 s[0] = c;
+      |                        ^
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/recipe-sysroot -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/i2c-tools-4.3=/usr/src/debug/i2c-tools/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/i2c-tools-4.3=/usr/src/debug/i2c-tools/4.3-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/i2c-tools-4.3=/usr/src/debug/i2c-tools/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/i2c-tools-4.3=/usr/src/debug/i2c-tools/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/recipe-sysroot-native=  -Wl,-z,relro,-z,now -o tools/i2cdump tools/i2cdump.o tools/i2cbusses.o tools/util.o lib/libi2c.so -Llib -li2c
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/recipe-sysroot   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/i2c-tools-4.3=/usr/src/debug/i2c-tools/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/i2c-tools-4.3=/usr/src/debug/i2c-tools/4.3-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/i2c-tools-4.3=/usr/src/debug/i2c-tools/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/i2c-tools-4.3=/usr/src/debug/i2c-tools/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/recipe-sysroot-native=   -Wconversion -Wno-error -Wall -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wundef -Wmissing-prototypes -Iinclude -c tools/i2cset.c -o tools/i2cset.o
+tools/i2cset.c: In function 'main':
+tools/i2cset.c:296:38: warning: conversion from 'int' to 'unsigned char' may change value [-Wconversion]
+  296 |                         block[len] = value;
+      |                                      ^~~~~
+tools/i2cset.c:336:67: warning: conversion from 'int' to '__u8' {aka 'unsigned char'} may change value [-Wconversion]
+  336 |                         oldvalue = i2c_smbus_read_word_data(file, daddress);
+      |                                                                   ^~~~~~~~
+tools/i2cset.c:339:67: warning: conversion from 'int' to '__u8' {aka 'unsigned char'} may change value [-Wconversion]
+  339 |                         oldvalue = i2c_smbus_read_byte_data(file, daddress);
+      |                                                                   ^~~~~~~~
+tools/i2cset.c:374:50: warning: conversion from 'int' to '__u8' {aka 'unsigned char'} may change value [-Wconversion]
+  374 |                 res = i2c_smbus_write_byte(file, value);
+      |                                                  ^~~~~
+tools/i2cset.c:377:55: warning: conversion from 'int' to '__u8' {aka 'unsigned char'} may change value [-Wconversion]
+  377 |                 res = i2c_smbus_write_word_data(file, daddress, value);
+      |                                                       ^~~~~~~~
+tools/i2cset.c:377:65: warning: conversion from 'int' to '__u16' {aka 'short unsigned int'} may change value [-Wconversion]
+  377 |                 res = i2c_smbus_write_word_data(file, daddress, value);
+      |                                                                 ^~~~~
+tools/i2cset.c:380:56: warning: conversion from 'int' to '__u8' {aka 'unsigned char'} may change value [-Wconversion]
+  380 |                 res = i2c_smbus_write_block_data(file, daddress, len, block);
+      |                                                        ^~~~~~~~
+tools/i2cset.c:380:66: warning: conversion from 'int' to '__u8' {aka 'unsigned char'} may change value [-Wconversion]
+  380 |                 res = i2c_smbus_write_block_data(file, daddress, len, block);
+      |                                                                  ^~~
+tools/i2cset.c:383:60: warning: conversion from 'int' to '__u8' {aka 'unsigned char'} may change value [-Wconversion]
+  383 |                 res = i2c_smbus_write_i2c_block_data(file, daddress, len, block);
+      |                                                            ^~~~~~~~
+tools/i2cset.c:383:70: warning: conversion from 'int' to '__u8' {aka 'unsigned char'} may change value [-Wconversion]
+  383 |                 res = i2c_smbus_write_i2c_block_data(file, daddress, len, block);
+      |                                                                      ^~~
+tools/i2cset.c:386:55: warning: conversion from 'int' to '__u8' {aka 'unsigned char'} may change value [-Wconversion]
+  386 |                 res = i2c_smbus_write_byte_data(file, daddress, value);
+      |                                                       ^~~~~~~~
+tools/i2cset.c:386:65: warning: conversion from 'int' to '__u8' {aka 'unsigned char'} may change value [-Wconversion]
+  386 |                 res = i2c_smbus_write_byte_data(file, daddress, value);
+      |                                                                 ^~~~~
+tools/i2cset.c:414:54: warning: conversion from 'int' to '__u8' {aka 'unsigned char'} may change value [-Wconversion]
+  414 |                 res = i2c_smbus_read_word_data(file, daddress);
+      |                                                      ^~~~~~~~
+tools/i2cset.c:417:54: warning: conversion from 'int' to '__u8' {aka 'unsigned char'} may change value [-Wconversion]
+  417 |                 res = i2c_smbus_read_byte_data(file, daddress);
+      |                                                      ^~~~~~~~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/recipe-sysroot -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/i2c-tools-4.3=/usr/src/debug/i2c-tools/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/i2c-tools-4.3=/usr/src/debug/i2c-tools/4.3-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/i2c-tools-4.3=/usr/src/debug/i2c-tools/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/i2c-tools-4.3=/usr/src/debug/i2c-tools/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/recipe-sysroot-native=  -Wl,-z,relro,-z,now -o tools/i2cset tools/i2cset.o tools/i2cbusses.o tools/util.o lib/libi2c.so -Llib -li2c
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/recipe-sysroot   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/i2c-tools-4.3=/usr/src/debug/i2c-tools/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/i2c-tools-4.3=/usr/src/debug/i2c-tools/4.3-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/i2c-tools-4.3=/usr/src/debug/i2c-tools/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/i2c-tools-4.3=/usr/src/debug/i2c-tools/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/recipe-sysroot-native=   -Wconversion -Wno-error -Wall -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wundef -Wmissing-prototypes -Iinclude -c tools/i2cget.c -o tools/i2cget.o
+tools/i2cget.c: In function 'main':
+tools/i2cget.c:283:58: warning: conversion from 'int' to '__u8' {aka 'unsigned char'} may change value [-Wconversion]
+  283 |                         res = i2c_smbus_write_byte(file, daddress);
+      |                                                          ^~~~~~~~
+tools/i2cget.c:290:54: warning: conversion from 'int' to '__u8' {aka 'unsigned char'} may change value [-Wconversion]
+  290 |                 res = i2c_smbus_read_word_data(file, daddress);
+      |                                                      ^~~~~~~~
+tools/i2cget.c:293:55: warning: conversion from 'int' to '__u8' {aka 'unsigned char'} may change value [-Wconversion]
+  293 |                 res = i2c_smbus_read_block_data(file, daddress, block_data);
+      |                                                       ^~~~~~~~
+tools/i2cget.c:296:59: warning: conversion from 'int' to '__u8' {aka 'unsigned char'} may change value [-Wconversion]
+  296 |                 res = i2c_smbus_read_i2c_block_data(file, daddress, length, block_data);
+      |                                                           ^~~~~~~~
+tools/i2cget.c:296:69: warning: conversion from 'int' to '__u8' {aka 'unsigned char'} may change value [-Wconversion]
+  296 |                 res = i2c_smbus_read_i2c_block_data(file, daddress, length, block_data);
+      |                                                                     ^~~~~~
+tools/i2cget.c:299:54: warning: conversion from 'int' to '__u8' {aka 'unsigned char'} may change value [-Wconversion]
+  299 |                 res = i2c_smbus_read_byte_data(file, daddress);
+      |                                                      ^~~~~~~~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/recipe-sysroot -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/i2c-tools-4.3=/usr/src/debug/i2c-tools/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/i2c-tools-4.3=/usr/src/debug/i2c-tools/4.3-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/i2c-tools-4.3=/usr/src/debug/i2c-tools/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/i2c-tools-4.3=/usr/src/debug/i2c-tools/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/recipe-sysroot-native=  -Wl,-z,relro,-z,now -o tools/i2cget tools/i2cget.o tools/i2cbusses.o tools/util.o lib/libi2c.so -Llib -li2c
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/recipe-sysroot   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/i2c-tools-4.3=/usr/src/debug/i2c-tools/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/i2c-tools-4.3=/usr/src/debug/i2c-tools/4.3-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/i2c-tools-4.3=/usr/src/debug/i2c-tools/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/i2c-tools-4.3=/usr/src/debug/i2c-tools/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/recipe-sysroot-native=   -Wconversion -Wno-error -Wall -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wundef -Wmissing-prototypes -Iinclude -c tools/i2ctransfer.c -o tools/i2ctransfer.o
+tools/i2ctransfer.c: In function 'main':
+tools/i2ctransfer.c:246:44: warning: conversion from 'int' to '__u16' {aka 'short unsigned int'} may change value [-Wconversion]
+  246 |                         msgs[nmsgs].addr = address;
+      |                                            ^~~~~~~
+tools/i2ctransfer.c:248:43: warning: conversion from 'long unsigned int' to '__u16' {aka 'short unsigned int'} may change value [-Wconversion]
+  248 |                         msgs[nmsgs].len = len;
+      |                                           ^~~
+tools/i2ctransfer.c:277:32: warning: conversion from 'long unsigned int' to '__u8' {aka 'unsigned char'} may change value [-Wconversion]
+  277 |                         data = raw_data;
+      |                                ^~~~~~~~
+tools/i2ctransfer.c:322:44: warning: conversion to '__u32' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  322 |         if (yes || confirm(filename, msgs, nmsgs)) {
+      |                                            ^~~~~
+tools/i2ctransfer.c:326:30: warning: conversion to '__u32' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  326 |                 rdwr.nmsgs = nmsgs;
+      |                              ^~~~~
+tools/i2ctransfer.c:335:34: warning: conversion to '__u32' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  335 |                 print_msgs(msgs, nmsgs_sent, PRINT_READ_BUF | (verbose ? PRINT_HEADER | PRINT_WRITE_BUF : 0));
+      |                                  ^~~~~~~~~~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/recipe-sysroot -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/i2c-tools-4.3=/usr/src/debug/i2c-tools/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/i2c-tools-4.3=/usr/src/debug/i2c-tools/4.3-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/i2c-tools-4.3=/usr/src/debug/i2c-tools/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/i2c-tools-4.3=/usr/src/debug/i2c-tools/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/recipe-sysroot-native=  -Wl,-z,relro,-z,now -o tools/i2ctransfer tools/i2ctransfer.o tools/i2cbusses.o tools/util.o lib/libi2c.so -Llib -li2c
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/recipe-sysroot   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/i2c-tools-4.3=/usr/src/debug/i2c-tools/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/i2c-tools-4.3=/usr/src/debug/i2c-tools/4.3-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/i2c-tools-4.3=/usr/src/debug/i2c-tools/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/i2c-tools-4.3=/usr/src/debug/i2c-tools/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/recipe-sysroot-native=   -Wconversion -Wno-error -Wall -Iinclude -c eeprog/eeprog.c -o eeprog/eeprog.o
+eeprog/eeprog.c: In function 'parse_arg':
+eeprog/eeprog.c:92:18: warning: conversion to 'int' from 'long unsigned int' may change the sign of the result [-Wsign-conversion]
+   92 |         *paddr = strtoul(arg, &end, 0);
+      |                  ^~~~~~~
+eeprog/eeprog.c:94:26: warning: conversion to 'int' from 'long unsigned int' may change the sign of the result [-Wsign-conversion]
+   94 |                 *psize = strtoul(++end, 0, 0);
+      |                          ^~~~~~~
+eeprog/eeprog.c: In function 'read_from_eeprom':
+eeprog/eeprog.c:125:42: warning: conversion from 'int' to '__u16' {aka 'short unsigned int'} may change value [-Wconversion]
+  125 |         die_if((ch = eeprom_read_byte(e, addr)) < 0, "read error");
+      |                                          ^~~~
+eeprog/eeprog.c:77:40: note: in definition of macro 'die_if'
+   77 | #define die_if(a, msg) do { do_die_if( a , msg, __LINE__); } while(0);
+      |                                        ^
+eeprog/eeprog.c: In function 'write_to_eeprom':
+eeprog/eeprog.c:160:49: warning: conversion from 'int' to '__u16' {aka 'short unsigned int'} may change value [-Wconversion]
+  160 |                 die_if(eeprom_write_byte(e, addr++, c), "write error");
+      |                                             ~~~~^~
+eeprog/eeprog.c:77:40: note: in definition of macro 'die_if'
+   77 | #define die_if(a, msg) do { do_die_if( a , msg, __LINE__); } while(0);
+      |                                        ^
+eeprog/eeprog.c:160:53: warning: conversion from 'int' to '__u8' {aka 'unsigned char'} may change value [-Wconversion]
+  160 |                 die_if(eeprom_write_byte(e, addr++, c), "write error");
+      |                                                     ^
+eeprog/eeprog.c:77:40: note: in definition of macro 'die_if'
+   77 | #define die_if(a, msg) do { do_die_if( a , msg, __LINE__); } while(0);
+      |                                        ^
+eeprog/eeprog.c: In function 'main':
+eeprog/eeprog.c:241:20: warning: conversion to 'int' from 'long unsigned int' may change the sign of the result [-Wsign-conversion]
+  241 |         i2c_addr = strtoul(i2c_addr_s, 0, 0);
+      |                    ^~~~~~~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/recipe-sysroot   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/i2c-tools-4.3=/usr/src/debug/i2c-tools/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/i2c-tools-4.3=/usr/src/debug/i2c-tools/4.3-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/i2c-tools-4.3=/usr/src/debug/i2c-tools/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/i2c-tools-4.3=/usr/src/debug/i2c-tools/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/recipe-sysroot-native=   -Wconversion -Wno-error -Wall -Iinclude -c eeprog/24cXX.c -o eeprog/24cXX.o
+eeprog/24cXX.c: In function 'eeprom_read_byte':
+eeprog/24cXX.c:163:29: warning: conversion from 'int' to '__u8' {aka 'unsigned char'} may change value [-Wconversion]
+  163 |                 __u8 buf =  mem_addr & 0x0ff;
+      |                             ^~~~~~~~
+eeprog/24cXX.c:166:33: warning: conversion from 'int' to 'unsigned char' may change value [-Wconversion]
+  166 |                 __u8 buf[2] = { (mem_addr >> 8) & 0x0ff, mem_addr & 0x0ff };
+      |                                 ^
+eeprog/24cXX.c:166:58: warning: conversion from 'int' to 'unsigned char' may change value [-Wconversion]
+  166 |                 __u8 buf[2] = { (mem_addr >> 8) & 0x0ff, mem_addr & 0x0ff };
+      |                                                          ^~~~~~~~
+eeprog/24cXX.c: In function 'eeprom_write_byte':
+eeprog/24cXX.c:181:33: warning: conversion from 'int' to 'unsigned char' may change value [-Wconversion]
+  181 |                 __u8 buf[2] = { mem_addr & 0x00ff, data };
+      |                                 ^~~~~~~~
+eeprog/24cXX.c:185:27: warning: conversion from 'int' to 'unsigned char' may change value [-Wconversion]
+  185 |                         { (mem_addr >> 8) & 0x00ff, mem_addr & 0x00ff, data };
+      |                           ^
+eeprog/24cXX.c:185:53: warning: conversion from 'int' to 'unsigned char' may change value [-Wconversion]
+  185 |                         { (mem_addr >> 8) & 0x00ff, mem_addr & 0x00ff, data };
+      |                                                     ^~~~~~~~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/recipe-sysroot -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/i2c-tools-4.3=/usr/src/debug/i2c-tools/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/i2c-tools-4.3=/usr/src/debug/i2c-tools/4.3-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/i2c-tools-4.3=/usr/src/debug/i2c-tools/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/i2c-tools-4.3=/usr/src/debug/i2c-tools/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/recipe-sysroot-native=  -Wl,-z,relro,-z,now -o eeprog/eeprog eeprog/eeprog.o eeprog/24cXX.o lib/libi2c.so -Llib -li2c
+DEBUG: Shell function do_compile finished

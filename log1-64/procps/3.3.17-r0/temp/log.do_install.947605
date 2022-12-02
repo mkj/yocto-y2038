@@ -1,0 +1,159 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses_6.3+20220423.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/systemd/systemd_251.4.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-cross_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-native_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/opkg-utils/opkg-utils_0.5.0.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-core/gettext/gettext_0.21.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/autoconf/autoconf_2.71.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/automake/automake_1.16.5.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pkgconfig/pkgconfig_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: []
+NOTE: Skipping as already exists in sysroot: ['glibc', 'ncurses', 'systemd', 'gcc-cross-arm', 'gcc-runtime', 'libtool-cross', 'libtool-native', 'opkg-utils', 'quilt-native', 'gettext-native', 'autoconf-native', 'automake-native', 'patch-native', 'pkgconfig-native', 'pseudo-native', 'base-passwd', 'zstd', 'libpam', 'util-linux', 'libcap', 'bash-completion', 'shadow-native', 'shadow-sysroot', 'base-files', 'libseccomp', 'shadow', 'gnu-config-native', 'm4-native', 'texinfo-dummy-native', 'mpfr-native', 'gmp-native', 'zstd-native', 'xz-native', 'binutils-cross-arm', 'linux-libc-headers', 'libmpc-native', 'zlib-native', 'flex-native', 'attr-native', 'gettext-minimal-native', 'libgcc', 'flex', 'cracklib', 'libxcrypt', 'zlib', 'util-linux-libuuid', 'libcap-ng']
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function autotools_aclocals
+DEBUG: SITE files ['endian-little', 'bit-32', 'arm-common', 'arm-32', 'common-linux', 'common-glibc', 'arm-linux', 'arm-linux-gnueabi', 'common']
+DEBUG: Python function autotools_aclocals finished
+DEBUG: Executing shell function do_install
+NOTE: make -j 1 DESTDIR=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/image install
+make  install-recursive
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/build'
+Making install in include
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/build/include'
+make[3]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/build/include'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/build/include'
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/build/include'
+Making install in man-po
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/build/man-po'
+make[3]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/build/man-po'
+make[3]: Nothing to be done for 'install-exec-am'.
+for lang in de fr pl pt_BR sv uk zh_CN ; do \
+    files=""; \
+    for trans in free.1 pgrep.1 pkill.1 pmap.1 uptime.1 vmstat.8 w.1 procps.1 pwdx.1 tload.1 sysctl.8 sysctl.conf.5 ps.1; do \
+	if [ -f /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/build/man-po/$lang/$trans ]; then \
+	    files="$files /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/build/man-po/$lang/$trans"; \
+	elif [ -f ../../git/man-po/$lang/$trans ]; then \
+	    files="$files ../../git/man-po/$lang/$trans"; \
+	fi; \
+    done; \
+    make install-man \
+            mandir="/usr/share/man/$lang" \
+	    man_MANS="" \
+	    dist_man_MANS="$files"; \
+done
+make[4]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/build/man-po'
+make[4]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/build/man-po'
+make[4]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/build/man-po'
+make[4]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/build/man-po'
+make[4]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/build/man-po'
+make[4]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/build/man-po'
+make[4]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/build/man-po'
+make[4]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/build/man-po'
+make[4]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/build/man-po'
+make[4]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/build/man-po'
+make[4]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/build/man-po'
+make[4]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/build/man-po'
+make[4]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/build/man-po'
+make[4]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/build/man-po'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/image/usr/share/man/man1'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../../git/man-po/../free.1 ../../git/man-po/../pgrep.1 ../../git/man-po/../pkill.1 ../../git/man-po/../pmap.1 ../../git/man-po/../uptime.1 ../../git/man-po/../w.1 ../../git/man-po/../ps/procps.1 ../../git/man-po/../pwdx.1 ../../git/man-po/../tload.1 ../../git/man-po/../ps/ps.1 '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/image/usr/share/man/man1'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/image/usr/share/man/man5'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../../git/man-po/../sysctl.conf.5 '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/image/usr/share/man/man5'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/image/usr/share/man/man8'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../../git/man-po/../vmstat.8 ../../git/man-po/../sysctl.8 '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/image/usr/share/man/man8'
+make[3]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/build/man-po'
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/build/man-po'
+Making install in po
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/build/po'
+installing ../../git/po/de.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/image/usr/share/locale/de/LC_MESSAGES/procps-ng.mo
+installing ../../git/po/fr.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/image/usr/share/locale/fr/LC_MESSAGES/procps-ng.mo
+installing ../../git/po/pl.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/image/usr/share/locale/pl/LC_MESSAGES/procps-ng.mo
+installing ../../git/po/pt_BR.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/image/usr/share/locale/pt_BR/LC_MESSAGES/procps-ng.mo
+installing ../../git/po/sv.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/image/usr/share/locale/sv/LC_MESSAGES/procps-ng.mo
+installing ../../git/po/uk.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/image/usr/share/locale/uk/LC_MESSAGES/procps-ng.mo
+installing ../../git/po/vi.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/image/usr/share/locale/vi/LC_MESSAGES/procps-ng.mo
+installing ../../git/po/zh_CN.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/image/usr/share/locale/zh_CN/LC_MESSAGES/procps-ng.mo
+if test "procps-ng" = "gettext-tools"; then \
+  /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/image/usr/share/gettext/po; \
+  for file in Makefile.in.in remove-potcdate.sin    Makevars.template; do \
+    /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../../git/po/$file \
+		    /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/image/usr/share/gettext/po/$file; \
+  done; \
+  for file in Makevars; do \
+    rm -f /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/image/usr/share/gettext/po/$file; \
+  done; \
+else \
+  : ; \
+fi
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/build/po'
+Making install in testsuite
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/build/testsuite'
+make[3]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/build/testsuite'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/build/testsuite'
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/build/testsuite'
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/build'
+make[3]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/build'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/image/usr/lib'
+ /bin/bash ./libtool   --mode=install /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c   proc/libprocps.la '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/image/usr/lib'
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c proc/.libs/libprocps.so.8.0.3 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/image/usr/lib/libprocps.so.8.0.3
+libtool: install: (cd /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/image/usr/lib && { ln -s -f libprocps.so.8.0.3 libprocps.so.8 || { rm -f libprocps.so.8 && ln -s libprocps.so.8.0.3 libprocps.so.8; }; })
+libtool: install: (cd /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/image/usr/lib && { ln -s -f libprocps.so.8.0.3 libprocps.so || { rm -f libprocps.so && ln -s libprocps.so.8.0.3 libprocps.so; }; })
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c proc/.libs/libprocps.lai /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/image/usr/lib/libprocps.la
+libtool: warning: remember to run 'libtool --finish /usr/lib'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/image/usr/bin'
+  /bin/bash ./libtool   --mode=install /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c ps/pscommand '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/image/usr/bin/./ps'
+libtool: warning: './proc/libprocps.la' has not been installed in '/usr/lib'
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c ps/.libs/pscommand /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/image/usr/bin/./ps
+  /bin/bash ./libtool   --mode=install /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c free pgrep pkill pmap pwdx tload uptime vmstat w pwait pidof kill slabtop watch top/top skill snice '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/image/usr/bin'
+libtool: warning: './proc/libprocps.la' has not been installed in '/usr/lib'
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c .libs/free /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/image/usr/bin/free
+libtool: warning: './proc/libprocps.la' has not been installed in '/usr/lib'
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c .libs/pgrep /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/image/usr/bin/pgrep
+libtool: warning: './proc/libprocps.la' has not been installed in '/usr/lib'
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c .libs/pkill /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/image/usr/bin/pkill
+libtool: warning: './proc/libprocps.la' has not been installed in '/usr/lib'
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c .libs/pmap /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/image/usr/bin/pmap
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c pwdx /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/image/usr/bin/pwdx
+libtool: warning: './proc/libprocps.la' has not been installed in '/usr/lib'
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c .libs/tload /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/image/usr/bin/tload
+libtool: warning: './proc/libprocps.la' has not been installed in '/usr/lib'
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c .libs/uptime /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/image/usr/bin/uptime
+libtool: warning: './proc/libprocps.la' has not been installed in '/usr/lib'
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c .libs/vmstat /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/image/usr/bin/vmstat
+libtool: warning: './proc/libprocps.la' has not been installed in '/usr/lib'
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c .libs/w /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/image/usr/bin/w
+libtool: warning: './proc/libprocps.la' has not been installed in '/usr/lib'
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c .libs/pwait /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/image/usr/bin/pwait
+libtool: warning: './proc/libprocps.la' has not been installed in '/usr/lib'
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c .libs/pidof /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/image/usr/bin/pidof
+libtool: warning: './proc/libprocps.la' has not been installed in '/usr/lib'
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c .libs/kill /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/image/usr/bin/kill
+libtool: warning: './proc/libprocps.la' has not been installed in '/usr/lib'
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c .libs/slabtop /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/image/usr/bin/slabtop
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c watch /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/image/usr/bin/watch
+libtool: warning: './proc/libprocps.la' has not been installed in '/usr/lib'
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c top/.libs/top /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/image/usr/bin/top
+libtool: warning: './proc/libprocps.la' has not been installed in '/usr/lib'
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c .libs/skill /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/image/usr/bin/skill
+libtool: warning: './proc/libprocps.la' has not been installed in '/usr/lib'
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c .libs/snice /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/image/usr/bin/snice
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/image/usr/sbin'
+  /bin/bash ./libtool   --mode=install /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c sysctl '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/image/usr/sbin'
+libtool: warning: './proc/libprocps.la' has not been installed in '/usr/lib'
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c .libs/sysctl /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/image/usr/sbin/sysctl
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/image/usr/share/doc/procps-ng'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../git/Documentation/bugs.md ../git/Documentation/FAQ '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/image/usr/share/doc/procps-ng'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/image/usr/share/man/man1'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../git/free.1 ../git/pgrep.1 ../git/pkill.1 ../git/pmap.1 ../git/uptime.1 ../git/w.1 ../git/ps/procps.1 ../git/pwdx.1 ../git/tload.1 ../git/ps/ps.1 ../git/pwait.1 ../git/pidof.1 ../git/kill.1 ../git/watch.1 ../git/top/top.1 ../git/slabtop.1 ../git/skill.1 ../git/snice.1 '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/image/usr/share/man/man1'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/image/usr/share/man/man3'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../git/proc/openproc.3 ../git/proc/readproc.3 ../git/proc/readproctab.3 '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/image/usr/share/man/man3'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/image/usr/share/man/man5'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../git/sysctl.conf.5 '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/image/usr/share/man/man5'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/image/usr/share/man/man8'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../git/vmstat.8 ../git/sysctl.8 '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/image/usr/share/man/man8'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/image/usr/lib/pkgconfig'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 proc/libprocps.pc '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/image/usr/lib/pkgconfig'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/image/usr/include/proc/'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../git/proc/alloc.h ../git/proc/devname.h ../git/proc/escape.h ../git/proc/numa.h ../git/proc/procps.h ../git/proc/pwcache.h ../git/proc/readproc.h ../git/proc/sig.h ../git/proc/slab.h ../git/proc/sysinfo.h ../git/proc/version.h ../git/proc/wchan.h ../git/proc/whattime.h '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/image/usr/include/proc/'
+make[3]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/build'
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/build'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/build'
+DEBUG: Shell function do_install finished
+DEBUG: Executing shell function remove_libtool_la
+DEBUG: Shell function remove_libtool_la finished

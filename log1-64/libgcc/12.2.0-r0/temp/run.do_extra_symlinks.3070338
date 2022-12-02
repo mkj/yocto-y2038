@@ -1,0 +1,14 @@
+def do_extra_symlinks(d):
+    if bb.data.inherits_class('nativesdk', d):
+        return
+
+    targetsys = d.getVar('BASETARGET_SYS')
+
+    if targetsys != d.getVar('TARGET_SYS'):
+        dest = d.getVar('D') + d.getVar('libdir') + '/' + targetsys
+        src = d.getVar('TARGET_SYS')
+        if not os.path.lexists(dest) and os.path.lexists(d.getVar('D') + d.getVar('libdir')):
+            os.symlink(src, dest)
+
+do_extra_symlinks(d)
+

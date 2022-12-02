@@ -1,0 +1,56 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/systemd/systemd-systemctl-native.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/flex/flex_2.6.4.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-cross_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-native_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-extended/pam/libpam_1.3.1.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/autoconf/autoconf_2.71.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/automake/automake_1.16.5.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/bison/bison_3.8.2.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/flex/flex_2.6.4.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: []
+NOTE: Skipping as already exists in sysroot: ['glibc', 'systemd-systemctl-native', 'flex', 'gcc-cross-arm', 'gcc-runtime', 'libtool-cross', 'libtool-native', 'quilt-native', 'libpam', 'autoconf-native', 'automake-native', 'bison-native', 'flex-native', 'patch-native', 'pseudo-native', 'texinfo-dummy-native', 'binutils-cross-arm', 'libgcc', 'linux-libc-headers', 'gnu-config-native', 'm4-native', 'attr-native', 'gettext-minimal-native', 'xz-native', 'mpfr-native', 'libmpc-native', 'zstd-native', 'zlib-native', 'gmp-native', 'cracklib', 'libxcrypt', 'zlib']
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function autotools_aclocals
+DEBUG: SITE files ['endian-little', 'bit-32', 'arm-common', 'arm-32', 'common-linux', 'common-glibc', 'arm-linux', 'arm-linux-gnueabi', 'common']
+DEBUG: Python function autotools_aclocals finished
+DEBUG: Executing shell function do_install
+NOTE: make -j 1 -e IROOT=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/image install
+Makefile:25: IROOT is deprecated, you should use DESTDIR instead
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -g root -o root -m 755 -d /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/image/etc
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -g root -o root -m 755 -d /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/image/usr/bin
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -g root -o root -m 755 -d /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/image/usr/sbin
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -g root -o root -m 755 -d /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/image/usr/share/at
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -g root -o root -m 755 -d /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/image/usr/share/doc
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -g root -o root -m 755 -d /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/image/usr/share/doc/at
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -g root -o root -m 755 -d /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/image/var/spool/at/spool /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/image/var/spool/at/jobs
+chmod 1770 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/image/var/spool/at/spool /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/image/var/spool/at/jobs
+touch /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/image/var/spool/at/jobs/.SEQ
+chmod 600 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/image/var/spool/at/jobs/.SEQ
+chown root:root /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/image/var/spool/at/jobs/.SEQ
+test -f /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/image/etc/at.allow || test -f /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/image/etc/at.deny || /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -o root -g root -m 640 at.deny /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/image/etc/
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -g root -o root -m 6755 at /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/image/usr/bin
+ln -s -f at /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/image/usr/bin/atq
+ln -s -f at /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/image/usr/bin/atrm
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -g root -o root -m 755 batch /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/image/usr/bin
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -g root -o root -m 755 batch-job /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/image/usr/share/at
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -d -o root -g root -m 755 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/image/usr/share/man/man1
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -d -o root -g root -m 755 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/image/usr/share/man/man5
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -d -o root -g root -m 755 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/image/usr/share/man/man8
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -g root -o root -m 755 atd /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/image/usr/sbin
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -g root -o root -m 755 atrun /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/image/usr/sbin
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -g root -o root -m 644 at.1 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/image/usr/share/man/man1/
+cd /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/image/usr/share/man/man1 && ln -s -f at.1 atq.1 && ln -s -f at.1 batch.1 && ln -s -f at.1 atrm.1
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -g root -o root -m 644 atd.8 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/image/usr/share/man/man8/
+sed "s,\${exec_prefix},/usr,g" <atrun.8>tmpman
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -g root -o root -m 644 tmpman /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/image/usr/share/man/man8/atrun.8
+rm -f tmpman
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -g root -o root -m 644 at.allow.5 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/image/usr/share/man/man5/
+cd /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/image/usr/share/man/man5 && ln -s -f at.allow.5 at.deny.5
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -g root -o root -m 644 Problems Copyright README ChangeLog timespec /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/image/usr/share/doc/at
+rm -f /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/image/usr/share/man/cat1/at.1* /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/image/usr/share/man/cat1/batch.1* \
+	/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/image/usr/share/man/cat1/atq.1*
+rm -f /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/image/usr/share/man/cat1/atd.8*
+if test x"no" != xno; then \
+	/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -o root -g root -m 755 -d /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/imageno; \
+	/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -o root -g root -m 644 atd.service /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/imageno; \
+fi
+DEBUG: Shell function do_install finished
+DEBUG: Executing shell function remove_libtool_la
+DEBUG: Shell function remove_libtool_la finished
+DEBUG: Executing python function rm_sysvinit_initddir
+DEBUG: Python function rm_sysvinit_initddir finished
+DEBUG: Executing python function rm_systemd_unitdir
+DEBUG: Python function rm_systemd_unitdir finished

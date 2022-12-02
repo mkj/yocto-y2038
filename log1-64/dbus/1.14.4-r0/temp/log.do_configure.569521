@@ -1,0 +1,598 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-core/base-files/base-files_3.0.14.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/base-passwd/base-passwd_3.6.1.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/expat/expat_2.5.0.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0_2.72.3.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/systemd/systemd_251.4.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/autoconf-archive/autoconf-archive_2022.09.03.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-cross_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-native_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-extended/shadow/shadow-sysroot_4.6.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-extended/shadow/shadow_4.12.3.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-core/gettext/gettext_0.21.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/autoconf/autoconf_2.71.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/automake/automake_1.16.5.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pkgconfig/pkgconfig_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-extended/shadow/shadow_4.12.3.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-extended/xz/xz_5.2.7.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: []
+NOTE: Skipping as already exists in sysroot: ['base-files', 'base-passwd', 'expat', 'glib-2.0', 'glibc', 'systemd', 'autoconf-archive', 'gcc-cross-arm', 'gcc-runtime', 'libtool-cross', 'libtool-native', 'quilt-native', 'shadow-sysroot', 'shadow', 'gettext-native', 'autoconf-native', 'automake-native', 'patch-native', 'pkgconfig-native', 'pseudo-native', 'shadow-native', 'xz-native', 'opkg-utils', 'libxcrypt', 'libpam', 'util-linux', 'zstd', 'libcap', 'libseccomp', 'bash-completion', 'linux-libc-headers', 'texinfo-dummy-native', 'libgcc', 'gettext-minimal-native', 'zlib', 'libpcre', 'libffi', 'attr-native', 'binutils-cross-arm', 'm4-native', 'gnu-config-native', 'zstd-native', 'libmpc-native', 'flex-native', 'zlib-native', 'gmp-native', 'mpfr-native', 'cracklib', 'flex', 'ncurses', 'util-linux-libuuid', 'libcap-ng', 'bzip2']
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing shell function autotools_preconfigure
+DEBUG: Shell function autotools_preconfigure finished
+DEBUG: Executing python function autotools_aclocals
+DEBUG: SITE files ['endian-little', 'bit-32', 'arm-common', 'arm-32', 'common-linux', 'common-glibc', 'arm-linux', 'arm-linux-gnueabi', 'common']
+DEBUG: Python function autotools_aclocals finished
+DEBUG: Executing shell function do_configure
+automake (GNU automake) 1.16.5
+Copyright (C) 2021 Free Software Foundation, Inc.
+License GPLv2+: GNU GPL version 2 or later <https://gnu.org/licenses/gpl-2.0.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Written by Tom Tromey <tromey@redhat.com>
+       and Alexandre Duret-Lutz <adl@gnu.org>.
+AUTOV is 1.16
+NOTE: Executing ACLOCAL="aclocal --system-acdir=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/recipe-sysroot/usr/share/aclocal/ --automake-acdir=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/recipe-sysroot-native/usr/share/aclocal-1.16" autoreconf -Wcross --verbose --install --force --exclude=autopoint --exclude=gtkdocize -I /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/dbus-1.14.4/m4/ -I /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/recipe-sysroot-native/usr/share/aclocal/
+autoreconf: export WARNINGS=cross,no-obsolete
+autoreconf: Entering directory '.'
+autoreconf: configure.ac: not using Gettext
+autoreconf: running: aclocal --system-acdir=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/recipe-sysroot/usr/share/aclocal/ --automake-acdir=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/recipe-sysroot-native/usr/share/aclocal-1.16 -I /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/dbus-1.14.4/m4/ -I /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/recipe-sysroot-native/usr/share/aclocal/ --force -I m4 ${ACLOCAL_FLAGS}
+autoreconf: configure.ac: tracing
+autoreconf: running: libtoolize --copy --force
+libtoolize: putting auxiliary files in AC_CONFIG_AUX_DIR, 'build-aux'.
+libtoolize: copying file 'build-aux/ltmain.sh'
+libtoolize: putting macros in AC_CONFIG_MACRO_DIRS, 'm4'.
+libtoolize: copying file 'm4/libtool.m4'
+libtoolize: copying file 'm4/ltoptions.m4'
+libtoolize: copying file 'm4/ltsugar.m4'
+libtoolize: copying file 'm4/ltversion.m4'
+libtoolize: copying file 'm4/lt~obsolete.m4'
+autoreconf: configure.ac: not using Intltool
+autoreconf: configure.ac: not using Gtkdoc
+autoreconf: running: aclocal --system-acdir=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/recipe-sysroot/usr/share/aclocal/ --automake-acdir=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/recipe-sysroot-native/usr/share/aclocal-1.16 -I /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/dbus-1.14.4/m4/ -I /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/recipe-sysroot-native/usr/share/aclocal/ --force -I m4 ${ACLOCAL_FLAGS}
+autoreconf: running: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/recipe-sysroot-native/usr/bin/autoconf --include=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/dbus-1.14.4/m4/ --include=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/recipe-sysroot-native/usr/share/aclocal/ --force
+autoreconf: running: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/recipe-sysroot-native/usr/bin/autoheader --include=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/dbus-1.14.4/m4/ --include=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/recipe-sysroot-native/usr/share/aclocal/ --force
+autoreconf: running: automake --add-missing --copy --force-missing
+configure.ac:97: installing 'build-aux/compile'
+configure.ac:21: installing 'build-aux/missing'
+bus/Makefile.am: installing 'build-aux/depcomp'
+autoreconf: 'build-aux/config.sub' is updated
+autoreconf: 'build-aux/config.guess' is updated
+autoreconf: Leaving directory '.'
+NOTE: Running ../dbus-1.14.4/configure  --build=x86_64-linux 		  --host=arm-openbmc-linux-gnueabi 		  --target=arm-openbmc-linux-gnueabi 		  --prefix=/usr 		  --exec_prefix=/usr 		  --bindir=/usr/bin 		  --sbindir=/usr/sbin 		  --libexecdir=/usr/libexec 		  --datadir=/usr/share 		  --sysconfdir=/etc 		  --sharedstatedir=/com 		  --localstatedir=/var 		  --libdir=/usr/lib 		  --includedir=/usr/include 		  --oldincludedir=/usr/include 		  --infodir=/usr/share/info 		  --mandir=/usr/share/man 		  --disable-silent-rules 		  --disable-dependency-tracking 		  --with-libtool-sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/recipe-sysroot --disable-xml-docs                 --disable-doxygen-docs                 --enable-largefile                 --with-system-socket=/run/dbus/system_bus_socket                 --enable-tests                 --enable-checks                 --enable-asserts                 --runstatedir=/run                  --disable-static  --disable-libaudit --disable-selinux --enable-systemd --with-systemdsystemunitdir=/lib/systemd/system --enable-user-session --with-systemduserunitdir=/usr/lib/systemd/user --without-x --disable-x11-autolaunch --enable-nls --disable-installed-tests SYSTEMCTL=/bin/systemctl 
+configure: WARNING: unrecognized options: --enable-nls
+configure: loading site script /home/matt/src/openbmc/meta/site/endian-little
+configure: loading site script /home/matt/src/openbmc/meta/site/arm-common
+configure: loading site script /home/matt/src/openbmc/meta/site/arm-32
+configure: loading site script /home/matt/src/openbmc/meta/site/common-linux
+configure: loading site script /home/matt/src/openbmc/meta/site/common-glibc
+configure: loading site script /home/matt/src/openbmc/meta/site/arm-linux
+configure: loading site script /home/matt/src/openbmc/meta/site/common
+configure: loading site script /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/recipe-sysroot/usr/share/arm-openbmc-linux-gnueabi_config_site.d/ncurses_config
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... arm-openbmc-linux-gnueabi
+checking for a BSD-compatible install... /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c
+checking whether build environment is sane... yes
+checking for arm-openbmc-linux-gnueabi-strip... arm-openbmc-linux-gnueabi-strip
+checking for a race-free mkdir -p... /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether UID '1000' is supported by ustar format... yes
+checking whether GID '1000' is supported by ustar format... yes
+checking how to create a ustar tar archive... gnutar
+checking whether to enable maintainer-specific portions of Makefiles... yes
+checking whether make supports nested variables... (cached) yes
+checking whether to enable debugging... no
+checking for arm-openbmc-linux-gnueabi-gcc... arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/recipe-sysroot
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... yes
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/recipe-sysroot accepts -g... yes
+checking for arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/recipe-sysroot option to enable C11 features... none needed
+checking whether arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/recipe-sysroot understands -c and -o together... yes
+checking whether make supports the include directive... yes (GNU style)
+checking dependency style of arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/recipe-sysroot... none
+checking whether the compiler supports GNU C++... yes
+checking whether arm-openbmc-linux-gnueabi-g++  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/recipe-sysroot accepts -g... yes
+checking for arm-openbmc-linux-gnueabi-g++  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/recipe-sysroot option to enable C++11 features... none needed
+checking dependency style of arm-openbmc-linux-gnueabi-g++  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/recipe-sysroot... none
+checking for stdio.h... (cached) yes
+checking for stdlib.h... (cached) yes
+checking for string.h... (cached) yes
+checking for inttypes.h... (cached) yes
+checking for stdint.h... (cached) yes
+checking for strings.h... (cached) yes
+checking for sys/stat.h... (cached) yes
+checking for sys/types.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking for wchar.h... yes
+checking for minix/config.h... no
+checking for alloca.h... yes
+checking for byteswap.h... yes
+checking for crt_externs.h... no
+checking for dirent.h... yes
+checking for errno.h... yes
+checking for locale.h... yes
+checking for signal.h... yes
+checking for sys/prctl.h... yes
+checking for sys/random.h... yes
+checking for sys/resource.h... yes
+checking for sys/time.h... yes
+checking for ws2tcpip.h... no
+checking whether it is safe to define __EXTENSIONS__... yes
+checking whether _XOPEN_SOURCE should be defined... no
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... no
+checking for library containing strerror... none required
+checking for grep that handles long lines and -e... /home/matt/tmp/build/obmc-y2038/tmp/hosttools/grep
+checking for egrep... /home/matt/tmp/build/obmc-y2038/tmp/hosttools/grep -E
+checking for inline... inline
+checking how to print strings... printf
+checking for a sed that does not truncate output... (cached) sed
+checking for fgrep... /home/matt/tmp/build/obmc-y2038/tmp/hosttools/grep -F
+checking for ld used by arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/recipe-sysroot... arm-openbmc-linux-gnueabi-ld --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/recipe-sysroot 
+checking if the linker (arm-openbmc-linux-gnueabi-ld --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/recipe-sysroot ) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... arm-openbmc-linux-gnueabi-gcc-nm
+checking the name lister (arm-openbmc-linux-gnueabi-gcc-nm) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking how to convert x86_64-pc-linux-gnu file names to arm-openbmc-linux-gnueabi format... func_convert_file_noop
+checking how to convert x86_64-pc-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for arm-openbmc-linux-gnueabi-ld --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/recipe-sysroot  option to reload object files... -r
+checking for arm-openbmc-linux-gnueabi-file... no
+checking for file... file
+configure: WARNING: using cross tools not prefixed with host triplet
+checking for arm-openbmc-linux-gnueabi-objdump... arm-openbmc-linux-gnueabi-objdump
+checking how to recognize dependent libraries... pass_all
+checking for arm-openbmc-linux-gnueabi-dlltool... no
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for arm-openbmc-linux-gnueabi-ar... arm-openbmc-linux-gnueabi-gcc-ar
+checking for archiver @FILE support... @
+checking for arm-openbmc-linux-gnueabi-strip... (cached) arm-openbmc-linux-gnueabi-strip
+checking for arm-openbmc-linux-gnueabi-ranlib... arm-openbmc-linux-gnueabi-gcc-ranlib
+checking command to parse arm-openbmc-linux-gnueabi-gcc-nm output from arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/recipe-sysroot object... ok
+checking for sysroot... /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/recipe-sysroot
+checking for a working dd... /home/matt/tmp/build/obmc-y2038/tmp/hosttools/dd
+checking how to truncate binary pipes... /home/matt/tmp/build/obmc-y2038/tmp/hosttools/dd bs=4096 count=1
+checking for arm-openbmc-linux-gnueabi-mt... no
+checking for mt... no
+checking if : is a manifest tool... no
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/recipe-sysroot supports -fno-rtti -fno-exceptions... no
+checking for arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/recipe-sysroot option to produce PIC... -fPIC -DPIC
+checking if arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/recipe-sysroot PIC flag -fPIC -DPIC works... yes
+checking if arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/recipe-sysroot static flag -static works... yes
+checking if arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/recipe-sysroot supports -c -o file.o... yes
+checking if arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/recipe-sysroot supports -c -o file.o... (cached) yes
+checking whether the arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/recipe-sysroot linker (arm-openbmc-linux-gnueabi-ld --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/recipe-sysroot ) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... no
+checking how to run the C++ preprocessor... arm-openbmc-linux-gnueabi-g++  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/recipe-sysroot -E
+checking for ld used by arm-openbmc-linux-gnueabi-g++  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/recipe-sysroot... arm-openbmc-linux-gnueabi-ld --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/recipe-sysroot 
+checking if the linker (arm-openbmc-linux-gnueabi-ld --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/recipe-sysroot ) is GNU ld... yes
+checking whether the arm-openbmc-linux-gnueabi-g++  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/recipe-sysroot linker (arm-openbmc-linux-gnueabi-ld --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/recipe-sysroot ) supports shared libraries... yes
+checking for arm-openbmc-linux-gnueabi-g++  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/recipe-sysroot option to produce PIC... -fPIC -DPIC
+checking if arm-openbmc-linux-gnueabi-g++  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/recipe-sysroot PIC flag -fPIC -DPIC works... yes
+checking if arm-openbmc-linux-gnueabi-g++  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/recipe-sysroot static flag -static works... yes
+checking if arm-openbmc-linux-gnueabi-g++  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/recipe-sysroot supports -c -o file.o... yes
+checking if arm-openbmc-linux-gnueabi-g++  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/recipe-sysroot supports -c -o file.o... (cached) yes
+checking whether the arm-openbmc-linux-gnueabi-g++  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/recipe-sysroot linker (arm-openbmc-linux-gnueabi-ld --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/recipe-sysroot ) supports shared libraries... yes
+checking dynamic linker characteristics... (cached) GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking for arm-openbmc-linux-gnueabi-pkg-config... no
+checking for pkg-config... /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/recipe-sysroot-native/usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for gawk... (cached) gawk
+checking whether the -Werror option is usable... yes
+checking for simple visibility declarations... yes
+checking for arm-openbmc-linux-gnueabi-windres... no
+checking for windres... no
+configure: Full test coverage was requested with --enable-tests=yes
+configure: This requires GLib
+checking for GLIB... yes
+checking for GIO_UNIX... yes
+checking whether to build with code coverage support... no
+checking for accept4... yes
+checking for clearenv... yes
+checking for fpathconf... yes
+checking for getgrouplist... yes
+checking for getpeereid... no
+checking for getpeerucred... no
+checking for getrandom... yes
+checking for getresuid... yes
+checking for getrlimit... yes
+checking for inotify_init1... yes
+checking for issetugid... no
+checking for localeconv... yes
+checking for nanosleep... yes
+checking for pipe2... yes
+checking for poll... yes
+checking for prctl... yes
+checking for prlimit... yes
+checking for raise... yes
+checking for setenv... yes
+checking for setlocale... yes
+checking for setresuid... (cached) yes
+checking for setrlimit... yes
+checking for socketpair... yes
+checking for strtoll... yes
+checking for strtoull... yes
+checking for unsetenv... yes
+checking for usleep... yes
+checking for getpwnam_r... yes
+checking size of char... (cached) 1
+checking size of short... (cached) 2
+checking size of long... (cached) 4
+checking size of int... (cached) 4
+checking size of void *... (cached) 4
+checking size of long long... (cached) 8
+checking size of __int64... (cached) 0
+checking 64-bit integer type... long long
+checking 32-bit integer type... int
+checking 16-bit integer type... short
+checking whether byte ordering is bigendian... (cached) no
+checking for arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/recipe-sysroot options needed to detect all undeclared functions... none needed
+checking whether environ is declared... yes
+checking for an implementation of va_copy()... yes
+checking for an implementation of __va_copy()... yes
+checking whether arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/recipe-sysroot knows __sync_sub_and_fetch()... yes
+checking for library containing socket... none required
+checking for gethostbyname... yes
+checking for syslog.h... yes
+checking whether LOG_PERROR is declared... yes
+checking for dirfd... yes
+checking for execinfo.h... yes
+checking for library containing backtrace... none required
+checking whether socklen_t is defined... yes
+checking for sys/uio.h... yes
+checking for writev... yes
+checking whether MSG_NOSIGNAL is declared... yes
+checking for struct cmsgcred... no
+checking for struct unpcbid.unp_pid... no
+checking for EXPAT... yes
+checking for XML_SetHashSalt... yes
+checking for library containing pthread_cond_timedwait... none required
+checking for library containing pthread_mutexattr_init... none required
+checking for library containing pthread_mutexattr_settype... none required
+checking for library containing pthread_condattr_setclock... none required
+checking for library containing clock_getres... none required
+checking for CLOCK_MONOTONIC... found
+checking for APPARMOR... no
+checking for APPARMOR_2_10... no
+configure: WARNING: Sufficiently new AppArmor library not found
+checking for sys/inotify.h... yes
+checking for Linux epoll(4)... yes
+checking for sys/event.h... no
+checking for kqueue... no
+checking for launch.h... no
+checking for launchctl... no
+checking for SYSTEMD... yes
+checking for systemctl... /bin/systemctl
+checking for ADT API... no
+checking for SCM_RIGHTS... supported
+checking whether C compiler accepts -Werror=unknown-warning-option... no
+checking whether C compiler accepts -Wno-suggest-attribute=format... yes
+checking whether C compiler accepts -fno-strict-aliasing... yes
+checking whether C compiler accepts -Wnested-externs... yes
+checking whether C compiler accepts -Wmissing-prototypes... yes
+checking whether C compiler accepts -Wstrict-prototypes... yes
+checking whether C compiler accepts -Wdeclaration-after-statement... yes
+checking whether C compiler accepts -Wimplicit-function-declaration... yes
+checking whether C compiler accepts -Wold-style-definition... yes
+checking whether C compiler accepts -Wjump-misses-init... yes
+checking whether C compiler accepts -Wall... yes
+checking whether C compiler accepts -Wextra... yes
+checking whether C compiler accepts -Wundef... yes
+checking whether C compiler accepts -Wwrite-strings... yes
+checking whether C compiler accepts -Wpointer-arith... yes
+checking whether C compiler accepts -Wmissing-declarations... yes
+checking whether C compiler accepts -Wredundant-decls... yes
+checking whether C compiler accepts -Wno-unused-parameter... yes
+checking whether C compiler accepts -Wno-missing-field-initializers... yes
+checking whether C compiler accepts -Wformat=2... yes
+checking whether C compiler accepts -Wcast-align... yes
+checking whether C compiler accepts -Wformat-nonliteral... yes
+checking whether C compiler accepts -Wformat-security... yes
+checking whether C compiler accepts -Wsign-compare... yes
+checking whether C compiler accepts -Wstrict-aliasing... yes
+checking whether C compiler accepts -Wshadow... yes
+checking whether C compiler accepts -Winline... yes
+checking whether C compiler accepts -Wpacked... yes
+checking whether C compiler accepts -Wmissing-format-attribute... yes
+checking whether C compiler accepts -Wmissing-noreturn... yes
+checking whether C compiler accepts -Winit-self... yes
+checking whether C compiler accepts -Wredundant-decls... (cached) yes
+checking whether C compiler accepts -Wmissing-include-dirs... yes
+checking whether C compiler accepts -Wunused-but-set-variable... yes
+checking whether C compiler accepts -Warray-bounds... yes
+checking whether C compiler accepts -Wreturn-type... yes
+checking whether C compiler accepts -Wswitch-enum... yes
+checking whether C compiler accepts -Wswitch-default... yes
+checking whether C compiler accepts -Wduplicated-cond... yes
+checking whether C compiler accepts -Wduplicated-branches... yes
+checking whether C compiler accepts -Wlogical-op... yes
+checking whether C compiler accepts -Wrestrict... yes
+checking whether C compiler accepts -Wnull-dereference... yes
+checking whether C compiler accepts -Wdouble-promotion... yes
+checking whether C compiler accepts -Wno-error=unused-parameter... yes
+checking whether C compiler accepts -Wno-error=missing-field-initializers... yes
+checking whether C++ compiler accepts -Werror=unknown-warning-option... no
+checking whether C++ compiler accepts -Wno-suggest-attribute=format... yes
+checking whether C++ compiler accepts -fno-strict-aliasing... yes
+checking whether C++ compiler accepts -Wall... yes
+checking whether C++ compiler accepts -Wextra... yes
+checking whether C++ compiler accepts -Wundef... yes
+checking whether C++ compiler accepts -Wwrite-strings... yes
+checking whether C++ compiler accepts -Wpointer-arith... yes
+checking whether C++ compiler accepts -Wmissing-declarations... yes
+checking whether C++ compiler accepts -Wredundant-decls... yes
+checking whether C++ compiler accepts -Wno-unused-parameter... yes
+checking whether C++ compiler accepts -Wno-missing-field-initializers... yes
+checking whether C++ compiler accepts -Wformat=2... yes
+checking whether C++ compiler accepts -Wcast-align... yes
+checking whether C++ compiler accepts -Wformat-nonliteral... yes
+checking whether C++ compiler accepts -Wformat-security... yes
+checking whether C++ compiler accepts -Wsign-compare... yes
+checking whether C++ compiler accepts -Wstrict-aliasing... yes
+checking whether C++ compiler accepts -Wshadow... yes
+checking whether C++ compiler accepts -Winline... yes
+checking whether C++ compiler accepts -Wpacked... yes
+checking whether C++ compiler accepts -Wmissing-format-attribute... yes
+checking whether C++ compiler accepts -Wmissing-noreturn... yes
+checking whether C++ compiler accepts -Winit-self... yes
+checking whether C++ compiler accepts -Wredundant-decls... (cached) yes
+checking whether C++ compiler accepts -Wmissing-include-dirs... yes
+checking whether C++ compiler accepts -Wunused-but-set-variable... yes
+checking whether C++ compiler accepts -Warray-bounds... yes
+checking whether C++ compiler accepts -Wreturn-type... yes
+checking whether C++ compiler accepts -Wno-overloaded-virtual... yes
+checking whether C++ compiler accepts -Wswitch-enum... yes
+checking whether C++ compiler accepts -Wswitch-default... yes
+checking whether C++ compiler accepts -Wno-error=unused-parameter... yes
+checking whether C++ compiler accepts -Wno-error=missing-field-initializers... yes
+checking whether C++ compiler accepts -Wno-error=overloaded-virtual... yes
+checking whether C compiler accepts -Werror=unknown-warning-option... (cached) no
+checking whether the linker accepts -Wl,--as-needed... yes
+checking whether the linker accepts -Wl,--as-needed... yes
+checking whether the linker accepts -Wl,-z,relro... yes
+checking whether the linker accepts -Wl,-z,relro... yes
+checking whether the linker accepts -Wl,-z,now... yes
+checking whether the linker accepts -Wl,-z,now... yes
+checking whether the linker accepts -Wl,-z,noexecstack... yes
+checking whether the linker accepts -Wl,-z,noexecstack... yes
+checking whether the linker accepts -Wl,--no-as-needed... yes
+checking whether the linker accepts -Wl,--fatal-warnings... yes
+checking whether the linker accepts -Wl,-fatal_warnings... no
+checking whether the linker accepts -Wl,--no-as-needed... yes
+checking whether C compiler accepts -Werror=unknown-warning-option... (cached) no
+checking whether C compiler accepts -Wno-suggest-attribute=format... (cached) yes
+checking whether C compiler accepts -fno-strict-aliasing... (cached) yes
+checking whether C compiler accepts -fno-common... yes
+checking whether C compiler accepts -Wnested-externs... (cached) yes
+checking whether C compiler accepts -Wmissing-prototypes... (cached) yes
+checking whether C compiler accepts -Wstrict-prototypes... (cached) yes
+checking whether C compiler accepts -Wdeclaration-after-statement... (cached) yes
+checking whether C compiler accepts -Wimplicit-function-declaration... (cached) yes
+checking whether C compiler accepts -Wold-style-definition... (cached) yes
+checking whether C compiler accepts -Wjump-misses-init... (cached) yes
+checking whether C compiler accepts -Wall... (cached) yes
+checking whether C compiler accepts -Wextra... (cached) yes
+checking whether C compiler accepts -Wundef... (cached) yes
+checking whether C compiler accepts -Wwrite-strings... (cached) yes
+checking whether C compiler accepts -Wpointer-arith... (cached) yes
+checking whether C compiler accepts -Wmissing-declarations... (cached) yes
+checking whether C compiler accepts -Wredundant-decls... (cached) yes
+checking whether C compiler accepts -Wno-unused-parameter... (cached) yes
+checking whether C compiler accepts -Wno-missing-field-initializers... (cached) yes
+checking whether C compiler accepts -Wformat=2... (cached) yes
+checking whether C compiler accepts -Wcast-align... (cached) yes
+checking whether C compiler accepts -Wformat-nonliteral... (cached) yes
+checking whether C compiler accepts -Wformat-security... (cached) yes
+checking whether C compiler accepts -Wsign-compare... (cached) yes
+checking whether C compiler accepts -Wstrict-aliasing... (cached) yes
+checking whether C compiler accepts -Wshadow... (cached) yes
+checking whether C compiler accepts -Winline... (cached) yes
+checking whether C compiler accepts -Wpacked... (cached) yes
+checking whether C compiler accepts -Wmissing-format-attribute... (cached) yes
+checking whether C compiler accepts -Wmissing-noreturn... (cached) yes
+checking whether C compiler accepts -Winit-self... (cached) yes
+checking whether C compiler accepts -Wredundant-decls... (cached) yes
+checking whether C compiler accepts -Wmissing-include-dirs... (cached) yes
+checking whether C compiler accepts -Wunused-but-set-variable... (cached) yes
+checking whether C compiler accepts -Warray-bounds... (cached) yes
+checking whether C compiler accepts -Wreturn-type... (cached) yes
+checking whether C compiler accepts -Wswitch-enum... (cached) yes
+checking whether C compiler accepts -Wswitch-default... (cached) yes
+checking whether C compiler accepts -Wduplicated-cond... (cached) yes
+checking whether C compiler accepts -Wduplicated-branches... (cached) yes
+checking whether C compiler accepts -Wlogical-op... (cached) yes
+checking whether C compiler accepts -Wrestrict... (cached) yes
+checking whether C compiler accepts -Wnull-dereference... (cached) yes
+checking whether C compiler accepts -Wdouble-promotion... (cached) yes
+checking whether C compiler accepts -Wchar-subscripts... yes
+checking whether C compiler accepts -Wfloat-equal... yes
+checking whether C compiler accepts -Wpointer-sign... yes
+checking whether C compiler accepts -Wno-deprecated-declarations... yes
+checking whether C compiler accepts -Wno-missing-field-initializers... (cached) yes
+checking whether C compiler accepts -Wno-unused-parameter... (cached) yes
+checking whether C compiler accepts -Wno-error=unused-parameter... (cached) yes
+checking whether C compiler accepts -Wno-error=missing-field-initializers... (cached) yes
+checking whether C compiler accepts -Wno-error=deprecated-declarations... yes
+checking whether C++ compiler accepts -Werror=unknown-warning-option... (cached) no
+checking whether C++ compiler accepts -Wno-suggest-attribute=format... (cached) yes
+checking whether C++ compiler accepts -fno-strict-aliasing... (cached) yes
+checking whether C++ compiler accepts -Wall... (cached) yes
+checking whether C++ compiler accepts -Wextra... (cached) yes
+checking whether C++ compiler accepts -Wundef... (cached) yes
+checking whether C++ compiler accepts -Wwrite-strings... (cached) yes
+checking whether C++ compiler accepts -Wpointer-arith... (cached) yes
+checking whether C++ compiler accepts -Wmissing-declarations... (cached) yes
+checking whether C++ compiler accepts -Wredundant-decls... (cached) yes
+checking whether C++ compiler accepts -Wno-unused-parameter... (cached) yes
+checking whether C++ compiler accepts -Wno-missing-field-initializers... (cached) yes
+checking whether C++ compiler accepts -Wformat=2... (cached) yes
+checking whether C++ compiler accepts -Wcast-align... (cached) yes
+checking whether C++ compiler accepts -Wformat-nonliteral... (cached) yes
+checking whether C++ compiler accepts -Wformat-security... (cached) yes
+checking whether C++ compiler accepts -Wsign-compare... (cached) yes
+checking whether C++ compiler accepts -Wstrict-aliasing... (cached) yes
+checking whether C++ compiler accepts -Wshadow... (cached) yes
+checking whether C++ compiler accepts -Winline... (cached) yes
+checking whether C++ compiler accepts -Wpacked... (cached) yes
+checking whether C++ compiler accepts -Wmissing-format-attribute... (cached) yes
+checking whether C++ compiler accepts -Wmissing-noreturn... (cached) yes
+checking whether C++ compiler accepts -Winit-self... (cached) yes
+checking whether C++ compiler accepts -Wredundant-decls... (cached) yes
+checking whether C++ compiler accepts -Wmissing-include-dirs... (cached) yes
+checking whether C++ compiler accepts -Wunused-but-set-variable... (cached) yes
+checking whether C++ compiler accepts -Warray-bounds... (cached) yes
+checking whether C++ compiler accepts -Wreturn-type... (cached) yes
+checking whether C++ compiler accepts -Wno-overloaded-virtual... (cached) yes
+checking whether C++ compiler accepts -Wswitch-enum... (cached) yes
+checking whether C++ compiler accepts -Wswitch-default... (cached) yes
+checking whether C++ compiler accepts -Wchar-subscripts... yes
+checking whether C++ compiler accepts -Wfloat-equal... yes
+checking whether C++ compiler accepts -Wno-deprecated-declarations... yes
+checking whether C++ compiler accepts -Wno-missing-field-initializers... (cached) yes
+checking whether C++ compiler accepts -Wno-unused-parameter... (cached) yes
+checking whether C++ compiler accepts -Wno-error=unused-parameter... (cached) yes
+checking whether C++ compiler accepts -Wno-error=missing-field-initializers... (cached) yes
+checking whether C++ compiler accepts -Wno-error=overloaded-virtual... (cached) yes
+checking whether C++ compiler accepts -Wno-error=deprecated-declarations... yes
+checking whether C compiler accepts -Werror=unknown-warning-option... (cached) no
+checking whether the linker accepts -Wl,--as-needed... (cached) yes
+checking whether the linker accepts -Wl,--as-needed... (cached) yes
+checking whether the linker accepts -Wl,-z,relro... (cached) yes
+checking whether the linker accepts -Wl,-z,relro... (cached) yes
+checking whether the linker accepts -Wl,-z,now... (cached) yes
+checking whether the linker accepts -Wl,-z,now... (cached) yes
+checking whether the linker accepts -Wl,-z,noexecstack... (cached) yes
+checking whether the linker accepts -Wl,-z,noexecstack... (cached) yes
+checking whether the linker accepts -Wl,--no-as-needed... (cached) yes
+checking whether the linker accepts -Wl,--fatal-warnings... (cached) yes
+checking whether the linker accepts -Wl,-fatal_warnings... (cached) no
+checking whether the linker accepts -Wl,--no-as-needed... (cached) yes
+checking if LD -Wl,--version-script works... yes
+checking for doxygen... no
+checking whether to build Doxygen documentation... no
+checking for qhelpgenerator... no
+checking for qhelpgenerator-qt5... no
+checking whether to build Qt help documentation... no
+checking for xsltproc... no
+checking for ducktype... no
+checking for yelp-build... no
+checking whether to build Ducktype documentation... no
+checking for xmlto... no
+checking whether to build XML documentation... no
+checking for _NSGetEnviron... no
+configure: creating ./config.status
+config.status: creating Doxyfile
+config.status: creating dbus/Version
+config.status: creating dbus/versioninfo.rc
+config.status: creating dbus/dbus-arch-deps.h
+config.status: creating bus/system.conf
+config.status: creating bus/session.conf
+config.status: creating bus/legacy-config/system.conf
+config.status: creating bus/legacy-config/session.conf
+config.status: creating bus/example-system-enable-stats.conf
+config.status: creating bus/example-session-disable-stats.conf
+config.status: creating bus/org.freedesktop.dbus-session.plist
+config.status: creating bus/dbus.service
+config.status: creating bus/dbus.socket
+config.status: creating bus/systemd-user/dbus.service
+config.status: creating bus/systemd-user/dbus.socket
+config.status: creating bus/sysusers.d/dbus.conf
+config.status: creating bus/tmpfiles.d/dbus.conf
+config.status: creating Makefile
+config.status: creating dbus/Makefile
+config.status: creating bus/Makefile
+config.status: creating tools/Makefile
+config.status: creating test/Makefile
+config.status: creating test/name-test/Makefile
+config.status: creating doc/Makefile
+config.status: creating doc/dbus-cleanup-sockets.1.xml
+config.status: creating doc/dbus-daemon.1.xml
+config.status: creating doc/dbus-launch.1.xml
+config.status: creating doc/dbus-monitor.1.xml
+config.status: creating doc/dbus-run-session.1.xml
+config.status: creating doc/dbus-send.1.xml
+config.status: creating doc/dbus-test-tool.1.xml
+config.status: creating doc/dbus-update-activation-environment.1.xml
+config.status: creating doc/dbus-uuidgen.1.xml
+config.status: creating doc/index.html
+config.status: creating dbus-1.pc
+config.status: creating dbus-1-uninstalled.pc
+config.status: creating cmake/DBus1Config.cmake
+config.status: creating cmake/DBus1ConfigVersion.cmake
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+configure: WARNING: unrecognized options: --enable-nls
+
+                    D-Bus 1.14.4
+                  ==============
+
+	prefix:                   /usr
+	exec_prefix:              /usr
+        libdir:                   /usr/lib
+        libexecdir:               /usr/libexec
+        bindir:                   /usr/bin
+        sysconfdir:               /etc
+        localstatedir:            /var
+        runstatedir:              /run
+	datadir:                  /usr/share
+	source code location:	  ../dbus-1.14.4
+	compiler:		  arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/recipe-sysroot
+	cflags:		          -fno-strict-aliasing -fno-common -Wnested-externs -Wmissing-prototypes -Wstrict-prototypes -Wdeclaration-after-statement -Wimplicit-function-declaration -Wold-style-definition -Wjump-misses-init -Wall -Wextra -Wundef -Wwrite-strings -Wpointer-arith -Wmissing-declarations -Wredundant-decls -Wno-unused-parameter -Wno-missing-field-initializers -Wformat=2 -Wcast-align -Wformat-nonliteral -Wformat-security -Wsign-compare -Wstrict-aliasing -Wshadow -Winline -Wpacked -Wmissing-format-attribute -Wmissing-noreturn -Winit-self -Wmissing-include-dirs -Wunused-but-set-variable -Warray-bounds -Wreturn-type -Wswitch-enum -Wswitch-default -Wduplicated-cond -Wduplicated-branches -Wlogical-op -Wrestrict -Wnull-dereference -Wdouble-promotion -Wchar-subscripts -Wfloat-equal -Wpointer-sign -Wno-deprecated-declarations -Wno-error=unused-parameter -Wno-error=missing-field-initializers -Wno-error=deprecated-declarations   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/dbus-1.14.4=/usr/src/debug/dbus/1.14.4-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/dbus-1.14.4=/usr/src/debug/dbus/1.14.4-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/build=/usr/src/debug/dbus/1.14.4-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/build=/usr/src/debug/dbus/1.14.4-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/recipe-sysroot-native=   -Wconversion -Wno-error
+	cppflags:		    -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64
+	cxxflags:		  -fno-strict-aliasing -Wall -Wextra -Wundef -Wwrite-strings -Wpointer-arith -Wmissing-declarations -Wredundant-decls -Wno-unused-parameter -Wno-missing-field-initializers -Wformat=2 -Wcast-align -Wformat-nonliteral -Wformat-security -Wsign-compare -Wstrict-aliasing -Wshadow -Winline -Wpacked -Wmissing-format-attribute -Wmissing-noreturn -Winit-self -Wmissing-include-dirs -Wunused-but-set-variable -Warray-bounds -Wreturn-type -Wno-overloaded-virtual -Wswitch-enum -Wswitch-default -Wchar-subscripts -Wfloat-equal -Wno-deprecated-declarations -Wno-error=unused-parameter -Wno-error=missing-field-initializers -Wno-error=overloaded-virtual -Wno-error=deprecated-declarations   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/dbus-1.14.4=/usr/src/debug/dbus/1.14.4-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/dbus-1.14.4=/usr/src/debug/dbus/1.14.4-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/build=/usr/src/debug/dbus/1.14.4-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/build=/usr/src/debug/dbus/1.14.4-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/recipe-sysroot-native=   -Wconversion -Wno-error  -Wconversion -Wno-error -fvisibility-inlines-hidden
+	ldflags:		  -Wl,--no-as-needed -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/dbus-1.14.4=/usr/src/debug/dbus/1.14.4-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/dbus-1.14.4=/usr/src/debug/dbus/1.14.4-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/build=/usr/src/debug/dbus/1.14.4-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/build=/usr/src/debug/dbus/1.14.4-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dbus/1.14.4-r0/recipe-sysroot-native=  -Wl,-z,relro,-z,now
+	64-bit int:		  long long
+	32-bit int:		  int
+	16-bit int:		  short
+        Doxygen:                  no
+        xmlto:                    no
+        ducktype:                 no
+        yelp-build:               no
+
+        Rebuilding generated files: yes
+        gcc coverage profiling:   no
+        Building embedded tests:  yes
+        Building modular tests:   yes
+            - with GLib:          yes
+        Installing tests:         no
+        Building verbose mode:    no
+        Building assertions:      yes
+        Building checks:          yes
+        Building bus stats API:   yes
+        Building SELinux support: no
+        Building AppArmor support: no
+        Building inotify support: yes
+        Building kqueue support:  no
+        Building systemd support: yes
+        Traditional activation:   yes
+        Building X11 code:        no
+        Building Doxygen docs:    no
+        Building Qt help file:    no
+        Building Ducktype docs:   no
+        Building XML docs:        no
+        Building launchd support: no
+        System bus socket:        /run/dbus/system_bus_socket
+        System bus address:       unix:path=/run/dbus/system_bus_socket
+        System bus PID file:      /run/dbus/pid
+        Session bus listens on:   unix:tmpdir=/tmp
+        Session clients connect to: autolaunch:
+        pam_console auth dir:     (none)
+        Console owner file:       no
+        Console owner file path:  
+	System bus user:          messagebus
+	Session bus services dir: /usr/share/dbus-1/services
+        'make check' socket dir:  /tmp
+
+
+NOTE: building with unit tests increases the size of the installed library and renders it insecure.
+NOTE: building with assertions increases library size and decreases performance.
+DEBUG: Shell function do_configure finished
+DEBUG: Executing python function do_qa_configure
+NOTE: Checking autotools environment for common misconfiguration
+NOTE: Checking configure output for unrecognised options
+DEBUG: Python function do_qa_configure finished
+DEBUG: Executing shell function autotools_postconfigure
+DEBUG: Shell function autotools_postconfigure finished

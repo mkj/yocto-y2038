@@ -1,0 +1,6 @@
+def externalsrc_compile_prefunc(d):
+    # Make it obvious that this is happening, since forgetting about it could lead to much confusion
+    bb.plain('NOTE: %s: compiling from external source tree %s' % (d.getVar('PN'), d.getVar('EXTERNALSRC')))
+
+externalsrc_compile_prefunc(d)
+

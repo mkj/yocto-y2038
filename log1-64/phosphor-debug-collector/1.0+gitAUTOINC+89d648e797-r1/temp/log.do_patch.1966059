@@ -1,0 +1,124 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: ['quilt-native', 'patch-native', 'libtool-native', 'attr-native', 'texinfo-dummy-native', 'gettext-minimal-native']
+NOTE: Skipping as already exists in sysroot: []
+DEBUG: sed -e 's:^[^/]*/:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/phosphor-debug-collector/1.0+gitAUTOINC+89d648e797-r1/recipe-sysroot-native/:g' /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/quilt-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/libtool-native/fixmepath | xargs sed -i -e 's:FIXMESTAGINGDIRTARGET:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/phosphor-debug-collector/1.0+gitAUTOINC+89d648e797-r1/recipe-sysroot:g; s:FIXMESTAGINGDIRHOST:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/phosphor-debug-collector/1.0+gitAUTOINC+89d648e797-r1/recipe-sysroot-native:g' -e 's:FIXME_PSEUDO_SYSROOT:/home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/pseudo-native:g' -e 's:FIXME_HOSTTOOLS_DIR:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:g' -e 's:FIXME_PKGDATA_DIR:/home/matt/tmp/build/obmc-y2038/tmp/pkgdata/evb-ast2600:g' -e 's:FIXME_PSEUDO_LOCALSTATEDIR:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/phosphor-debug-collector/1.0+gitAUTOINC+89d648e797-r1/pseudo/:g' -e 's:FIXME_LOGFIFO:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/phosphor-debug-collector/1.0+gitAUTOINC+89d648e797-r1/temp/fifo.1966059:g'
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function do_patch
+DEBUG: Executing python function patch_do_patch
+DEBUG: Searching for coretemp.conf in paths:
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/phosphor-debug-collector-1.0+gitAUTOINC+89d648e797/openbmc-phosphor
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/phosphor-debug-collector/openbmc-phosphor
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/phosphor-debug-collector-1.0+gitAUTOINC+89d648e797/openbmc-phosphor
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/phosphor-debug-collector/openbmc-phosphor
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/phosphor-debug-collector-1.0+gitAUTOINC+89d648e797/evb-ast2600
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/phosphor-debug-collector/evb-ast2600
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/files/evb-ast2600
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/phosphor-debug-collector-1.0+gitAUTOINC+89d648e797/aspeed-g6
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/phosphor-debug-collector/aspeed-g6
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/files/aspeed-g6
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/phosphor-debug-collector-1.0+gitAUTOINC+89d648e797/aspeed
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/phosphor-debug-collector/aspeed
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/files/aspeed
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/phosphor-debug-collector-1.0+gitAUTOINC+89d648e797/armv7a
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/phosphor-debug-collector/armv7a
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/files/armv7a
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/phosphor-debug-collector-1.0+gitAUTOINC+89d648e797/phosphor-evb
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/phosphor-debug-collector/phosphor-evb
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/files/phosphor-evb
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/phosphor-debug-collector-1.0+gitAUTOINC+89d648e797/arm
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/phosphor-debug-collector/arm
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/files/arm
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/phosphor-debug-collector-1.0+gitAUTOINC+89d648e797/
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/phosphor-debug-collector/
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/files/
+DEBUG: Searching for obmc-dump-monitor.service in paths:
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/phosphor-debug-collector-1.0+gitAUTOINC+89d648e797/openbmc-phosphor
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/phosphor-debug-collector/openbmc-phosphor
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/phosphor-debug-collector-1.0+gitAUTOINC+89d648e797/openbmc-phosphor
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/phosphor-debug-collector/openbmc-phosphor
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/phosphor-debug-collector-1.0+gitAUTOINC+89d648e797/evb-ast2600
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/phosphor-debug-collector/evb-ast2600
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/files/evb-ast2600
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/phosphor-debug-collector-1.0+gitAUTOINC+89d648e797/aspeed-g6
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/phosphor-debug-collector/aspeed-g6
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/files/aspeed-g6
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/phosphor-debug-collector-1.0+gitAUTOINC+89d648e797/aspeed
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/phosphor-debug-collector/aspeed
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/files/aspeed
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/phosphor-debug-collector-1.0+gitAUTOINC+89d648e797/armv7a
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/phosphor-debug-collector/armv7a
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/files/armv7a
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/phosphor-debug-collector-1.0+gitAUTOINC+89d648e797/phosphor-evb
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/phosphor-debug-collector/phosphor-evb
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/files/phosphor-evb
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/phosphor-debug-collector-1.0+gitAUTOINC+89d648e797/arm
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/phosphor-debug-collector/arm
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/files/arm
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/phosphor-debug-collector-1.0+gitAUTOINC+89d648e797/
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/phosphor-debug-collector/
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/files/
+DEBUG: Searching for ramoops-monitor.service in paths:
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/phosphor-debug-collector-1.0+gitAUTOINC+89d648e797/openbmc-phosphor
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/phosphor-debug-collector/openbmc-phosphor
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/phosphor-debug-collector-1.0+gitAUTOINC+89d648e797/openbmc-phosphor
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/phosphor-debug-collector/openbmc-phosphor
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/phosphor-debug-collector-1.0+gitAUTOINC+89d648e797/evb-ast2600
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/phosphor-debug-collector/evb-ast2600
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/files/evb-ast2600
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/phosphor-debug-collector-1.0+gitAUTOINC+89d648e797/aspeed-g6
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/phosphor-debug-collector/aspeed-g6
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/files/aspeed-g6
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/phosphor-debug-collector-1.0+gitAUTOINC+89d648e797/aspeed
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/phosphor-debug-collector/aspeed
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/files/aspeed
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/phosphor-debug-collector-1.0+gitAUTOINC+89d648e797/armv7a
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/phosphor-debug-collector/armv7a
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/files/armv7a
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/phosphor-debug-collector-1.0+gitAUTOINC+89d648e797/phosphor-evb
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/phosphor-debug-collector/phosphor-evb
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/files/phosphor-evb
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/phosphor-debug-collector-1.0+gitAUTOINC+89d648e797/arm
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/phosphor-debug-collector/arm
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/files/arm
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/phosphor-debug-collector-1.0+gitAUTOINC+89d648e797/
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/phosphor-debug-collector/
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/files/
+DEBUG: Searching for xyz.openbmc_project.Dump.Manager.service in paths:
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/phosphor-debug-collector-1.0+gitAUTOINC+89d648e797/openbmc-phosphor
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/phosphor-debug-collector/openbmc-phosphor
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/phosphor-debug-collector-1.0+gitAUTOINC+89d648e797/openbmc-phosphor
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/phosphor-debug-collector/openbmc-phosphor
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/phosphor-debug-collector-1.0+gitAUTOINC+89d648e797/evb-ast2600
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/phosphor-debug-collector/evb-ast2600
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/files/evb-ast2600
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/phosphor-debug-collector-1.0+gitAUTOINC+89d648e797/aspeed-g6
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/phosphor-debug-collector/aspeed-g6
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/files/aspeed-g6
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/phosphor-debug-collector-1.0+gitAUTOINC+89d648e797/aspeed
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/phosphor-debug-collector/aspeed
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/files/aspeed
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/phosphor-debug-collector-1.0+gitAUTOINC+89d648e797/armv7a
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/phosphor-debug-collector/armv7a
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/files/armv7a
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/phosphor-debug-collector-1.0+gitAUTOINC+89d648e797/phosphor-evb
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/phosphor-debug-collector/phosphor-evb
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/files/phosphor-evb
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/phosphor-debug-collector-1.0+gitAUTOINC+89d648e797/arm
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/phosphor-debug-collector/arm
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/files/arm
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/phosphor-debug-collector-1.0+gitAUTOINC+89d648e797/
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/phosphor-debug-collector/
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/dump/files/
+DEBUG: Python function patch_do_patch finished
+DEBUG: Python function do_patch finished
+DEBUG: Executing python function do_qa_patch
+DEBUG: Python function do_qa_patch finished

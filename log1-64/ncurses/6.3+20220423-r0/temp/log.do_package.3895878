@@ -1,0 +1,64 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-cross_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-native_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/opkg-utils/opkg-utils_0.5.0.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses_6.3+20220423.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/autoconf/autoconf_2.71.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/automake/automake_1.16.5.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/dwarfsrcfiles/dwarfsrcfiles.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pkgconfig/pkgconfig_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/rpm/rpm_4.18.0.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: ['dwarfsrcfiles-native', 'rpm-native', 'popt-native', 'bzip2-native', 'file-native', 'python3-native', 'lua-native', 'sqlite3-native', 'libgcrypt-native', 'elfutils-native', 'readline-native', 'gdbm-native', 'libtirpc-native', 'openssl-native', 'libffi-native', 'util-linux-libuuid-native', 'libnsl2-native', 'libcap-native', 'libgpg-error-native', 'perl-native', 'make-native']
+NOTE: Skipping as already exists in sysroot: ['glibc', 'gcc-cross-arm', 'gcc-runtime', 'libtool-cross', 'libtool-native', 'opkg-utils', 'quilt-native', 'ncurses-native', 'autoconf-native', 'automake-native', 'patch-native', 'pkgconfig-native', 'pseudo-native', 'texinfo-dummy-native', 'zstd-native', 'xz-native', 'gettext-minimal-native', 'linux-libc-headers', 'libgcc', 'attr-native', 'binutils-cross-arm', 'libmpc-native', 'flex-native', 'zlib-native', 'gmp-native', 'gnu-config-native', 'mpfr-native', 'm4-native']
+DEBUG: sed -e 's:^[^/]*/:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ncurses/6.3+20220423-r0/recipe-sysroot-native/:g' /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/rpm-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/python3-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/lua-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/libgcrypt-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/elfutils-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/openssl-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/libgpg-error-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/perl-native/fixmepath | xargs sed -i -e 's:FIXMESTAGINGDIRTARGET:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ncurses/6.3+20220423-r0/recipe-sysroot:g; s:FIXMESTAGINGDIRHOST:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ncurses/6.3+20220423-r0/recipe-sysroot-native:g' -e 's:FIXME_PSEUDO_SYSROOT:/home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/pseudo-native:g' -e 's:FIXME_HOSTTOOLS_DIR:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:g' -e 's:FIXME_PKGDATA_DIR:/home/matt/tmp/build/obmc-y2038/tmp/pkgdata/evb-ast2600:g' -e 's:FIXME_PSEUDO_LOCALSTATEDIR:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ncurses/6.3+20220423-r0/pseudo/:g' -e 's:FIXME_LOGFIFO:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ncurses/6.3+20220423-r0/temp/fifo.3895878:g'
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function sstate_task_prefunc
+DEBUG: Python function sstate_task_prefunc finished
+DEBUG: Executing python function do_package
+DEBUG: Executing python function package_convert_pr_autoinc
+DEBUG: Python function package_convert_pr_autoinc finished
+DEBUG: Executing python function package_prepare_pkgdata
+NOTE: Installed into pkgdata-sysroot: ['glibc', 'gcc-runtime', 'opkg-utils', 'linux-libc-headers', 'libgcc']
+DEBUG: Python function package_prepare_pkgdata finished
+DEBUG: Executing python function perform_packagecopy
+DEBUG: Python function perform_packagecopy finished
+DEBUG: Executing python function apply_update_alternative_renames
+NOTE: ncurses: Rename /usr/bin/clear -> /usr/bin/clear.ncurses
+NOTE: ncurses: Rename (link) /usr/bin/reset -> /usr/bin/reset.ncurses
+NOTE: ncurses: Rename /usr/share/terminfo/s/st -> /usr/share/terminfo/s/st.ncurses
+NOTE: ncurses: Rename /usr/share/terminfo/s/st-256color -> /usr/share/terminfo/s/st-256color.ncurses
+DEBUG: Python function apply_update_alternative_renames finished
+DEBUG: Executing python function split_and_strip_files
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ncurses/6.3+20220423-r0/package/usr/lib/libticw.so.5.9']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ncurses/6.3+20220423-r0/package/usr/lib/libtic.so.5.9']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ncurses/6.3+20220423-r0/package/usr/lib/libpanelw.so.5.9']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ncurses/6.3+20220423-r0/package/usr/lib/libpanel.so.5.9']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ncurses/6.3+20220423-r0/package/usr/lib/libmenuw.so.5.9']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ncurses/6.3+20220423-r0/package/usr/lib/libmenu.so.5.9']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ncurses/6.3+20220423-r0/package/usr/lib/libformw.so.5.9']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ncurses/6.3+20220423-r0/package/usr/lib/libform.so.5.9']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ncurses/6.3+20220423-r0/package/usr/bin/tset']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ncurses/6.3+20220423-r0/package/usr/bin/tput']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ncurses/6.3+20220423-r0/package/usr/bin/toe']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ncurses/6.3+20220423-r0/package/usr/bin/tic']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ncurses/6.3+20220423-r0/package/usr/bin/tabs']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ncurses/6.3+20220423-r0/package/usr/bin/infocmp']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ncurses/6.3+20220423-r0/package/usr/bin/clear.ncurses']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ncurses/6.3+20220423-r0/package/lib/libtinfo.so.5.9']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ncurses/6.3+20220423-r0/package/lib/libncursesw.so.5.9']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ncurses/6.3+20220423-r0/package/lib/libncurses.so.5.9']
+DEBUG: Python function split_and_strip_files finished
+DEBUG: Executing python function fixup_perms
+DEBUG: Python function fixup_perms finished
+DEBUG: Executing python function populate_packages_updatealternatives
+NOTE: adding update-alternatives calls to postinst/prerm for ncurses-tools
+NOTE: 	update-alternatives --install /usr/bin/clear clear /usr/bin/clear.ncurses 100
+	update-alternatives --install /usr/bin/reset reset /usr/bin/reset.ncurses 100
+
+NOTE: 	update-alternatives --remove  clear /usr/bin/clear.ncurses
+	update-alternatives --remove  reset /usr/bin/reset.ncurses
+
+NOTE: adding update-alternatives calls to postinst/prerm for ncurses-terminfo
+NOTE: 	update-alternatives --install /usr/share/terminfo/s/st st /usr/share/terminfo/s/st.ncurses 100
+	update-alternatives --install /usr/share/terminfo/s/st-256color st-256color /usr/share/terminfo/s/st-256color.ncurses 100
+
+NOTE: 	update-alternatives --remove  st /usr/share/terminfo/s/st.ncurses
+	update-alternatives --remove  st-256color /usr/share/terminfo/s/st-256color.ncurses
+
+DEBUG: Python function populate_packages_updatealternatives finished
+DEBUG: Executing python function package_do_split_locales
+DEBUG: No locale files in this package
+DEBUG: Python function package_do_split_locales finished
+DEBUG: Executing python function populate_packages

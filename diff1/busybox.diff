@@ -1,0 +1,206 @@
+1701,1708c1701
+< In file included from include/libbb.h:13:
+< include/platform.h:217:23: warning: conversion to 'time_t' {aka 'long int'} from 'uint32_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+<   217 | # define SWAP_LE32(x) (x)
+<       |                       ^
+< archival/libarchive/decompress_gunzip.c:1201:25: note: in expansion of macro 'SWAP_LE32'
+<  1201 |         xstate->mtime = SWAP_LE32(header.formatted.mtime);
+<       |                         ^~~~~~~~~
+<   arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/busybox/1.35.0-r0/recipe-sysroot -Wp,-MD,archival/libarchive/.decompress_uncompress.o.d  -std=gnu99 -Iinclude -Ilibbb  -include include/autoconf.h -D_GNU_SOURCE -DNDEBUG -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -DBB_VER='"1.35.0"' -Wall -Wshadow -Wwrite-strings -Wundef -Wstrict-prototypes -Wunused -Wunused-parameter -Wunused-function -Wunused-value -Wmissing-prototypes -Wmissing-declarations -Wno-format-security -Wdeclaration-after-statement -Wold-style-definition -finline-limit=0 -fno-builtin-strlen -fomit-frame-pointer -ffunction-sections -fdata-sections -fno-guess-branch-probability -funsigned-char -static-libgcc -falign-functions=1 -falign-jumps=1 -falign-labels=1 -falign-loops=1 -fno-unwind-tables -fno-asynchronous-unwind-tables -fno-builtin-printf -Os -O2 -pipe -g -feliminate-unused-debug-types -Wconversion -Wno-error -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2  -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/busybox/1.35.0-r0/busybox-1.35.0=/usr/src/debug/busybox/1.35.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/busybox/1.35.0-r0/busybox-1.35.0=/usr/src/debug/busybox/1.35.0-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/busybox/1.35.0-r0/busybox-1.35.0=/usr/src/debug/busybox/1.35.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/busybox/1.35.0-r0/busybox-1.35.0=/usr/src/debug/busybox/1.35.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/busybox/1.35.0-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/busybox/1.35.0-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/busybox/1.35.0-r0/recipe-sysroot-native=   -Wconversion -Wno-error   -DKBUILD_BASENAME='"decompress_uncompress"'  -DKBUILD_MODNAME='"decompress_uncompress"' -c -o archival/libarchive/decompress_uncompress.o archival/libarchive/decompress_uncompress.c
+---
+>   arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/busybox/1.35.0-r0/recipe-sysroot -Wp,-MD,archival/libarchive/.decompress_uncompress.o.d  -std=gnu99 -Iinclude -Ilibbb  -include include/autoconf.h -D_GNU_SOURCE -DNDEBUG -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -DBB_VER='"1.35.0"' -Wall -Wshadow -Wwrite-strings -Wundef -Wstrict-prototypes -Wunused -Wunused-parameter -Wunused-function -Wunused-value -Wmissing-prototypes -Wmissing-declarations -Wno-format-security -Wdeclaration-after-statement -Wold-style-definition -finline-limit=0 -fno-builtin-strlen -fomit-frame-pointer -ffunction-sections -fdata-sections -fno-guess-branch-probability -funsigned-char -static-libgcc -falign-functions=1 -falign-jumps=1 -falign-labels=1 -falign-loops=1 -fno-unwind-tables -fno-asynchronous-unwind-tables -fno-builtin-printf -Os -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -Wconversion -Wno-error -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/busybox/1.35.0-r0/busybox-1.35.0=/usr/src/debug/busybox/1.35.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/busybox/1.35.0-r0/busybox-1.35.0=/usr/src/debug/busybox/1.35.0-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/busybox/1.35.0-r0/busybox-1.35.0=/usr/src/debug/busybox/1.35.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/busybox/1.35.0-r0/busybox-1.35.0=/usr/src/debug/busybox/1.35.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/busybox/1.35.0-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/busybox/1.35.0-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/busybox/1.35.0-r0/recipe-sysroot-native=   -Wconversion -Wno-error   -DKBUILD_BASENAME='"decompress_uncompress"'  -DKBUILD_MODNAME='"decompress_uncompress"' -c -o archival/libarchive/decompress_uncompress.o archival/libarchive/decompress_uncompress.c
+2042,2053d2034
+< networking/ping.c:450:11: warning: conversion to '__time_t' {aka 'long int'} from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+<   450 | #define G (*(struct globals*)bb_common_bufsiz1)
+<       |           ^
+< networking/ping.c:539:37: note: in expansion of macro 'G'
+<   539 |                 i.it_value.tv_sec = G.interval_us / 1000000;
+<       |                                     ^
+< networking/ping.c:450:11: warning: conversion to '__suseconds_t' {aka 'long int'} from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+<   450 | #define G (*(struct globals*)bb_common_bufsiz1)
+<       |           ^
+< networking/ping.c:540:38: note: in expansion of macro 'G'
+<   540 |                 i.it_value.tv_usec = G.interval_us % 1000000;
+<       |                                      ^
+2400,2403c2381
+< libbb/bb_do_delay.c:57:21: warning: conversion to '__time_t' {aka 'long int'} from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+<    57 |         ts.tv_sec = ms / 1000;
+<       |                     ^~
+< libbb/bb_do_delay.c:58:22: warning: conversion to '__syscall_slong_t' {aka 'long int'} from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+---
+> libbb/bb_do_delay.c:58:22: warning: conversion to 'long int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+2661c2639
+< libbb/duration.c:76:29: warning: conversion from 'duration_t' {aka 'double'} to '__time_t' {aka 'long int'} may change value [-Wfloat-conversion]
+---
+> libbb/duration.c:76:29: warning: conversion from 'duration_t' {aka 'double'} to '__time64_t' {aka 'long long int'} may change value [-Wfloat-conversion]
+2664c2642,2645
+< libbb/duration.c:77:30: warning: conversion from 'duration_t' {aka 'double'} to '__syscall_slong_t' {aka 'long int'} may change value [-Wfloat-conversion]
+---
+> libbb/duration.c:77:40: warning: conversion from '__time64_t' {aka 'long long int'} to 'duration_t' {aka 'double'} may change value [-Wconversion]
+>    77 |                 ts.tv_nsec = (duration - ts.tv_sec) * 1000000000;
+>       |                                        ^
+> libbb/duration.c:77:30: warning: conversion from 'duration_t' {aka 'double'} to 'long int' may change value [-Wfloat-conversion]
+3829,3831d3809
+< libbb/time.c:141:29: warning: conversion from 'long long int' to 'time_t' {aka 'long int'} may change value [-Wconversion]
+<   141 |                         t = bb_strtoll(date_str + 1, NULL, 10);
+<       |                             ^~~~~~~~~~
+3842c3820
+< libbb/time.c:315:26: warning: conversion to 'long long unsigned int' from '__time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> libbb/time.c:315:26: warning: conversion to 'long long unsigned int' from '__time64_t' {aka 'long long int'} may change the sign of the result [-Wsign-conversion]
+3845c3823
+< libbb/time.c:315:42: warning: conversion to 'long long unsigned int' from '__syscall_slong_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> libbb/time.c:315:42: warning: conversion to 'long long unsigned int' from 'long int' may change the sign of the result [-Wsign-conversion]
+3849c3827
+< libbb/time.c:321:26: warning: conversion to 'long long unsigned int' from '__time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> libbb/time.c:321:26: warning: conversion to 'long long unsigned int' from '__time64_t' {aka 'long long int'} may change the sign of the result [-Wsign-conversion]
+3856c3834
+< libbb/time.c:327:26: warning: conversion to 'long long unsigned int' from '__time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> libbb/time.c:327:26: warning: conversion to 'long long unsigned int' from '__time64_t' {aka 'long long int'} may change the sign of the result [-Wsign-conversion]
+3863c3841
+< libbb/time.c:333:18: warning: conversion to 'unsigned int' from '__time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> libbb/time.c:333:18: warning: conversion from '__time64_t' {aka 'long long int'} to 'unsigned int' may change value [-Wconversion]
+6802,6809c6780
+< In file included from include/libbb.h:13:
+< include/platform.h:217:23: warning: conversion to 'time_t' {aka 'long int'} from 'uint32_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+<   217 | # define SWAP_LE32(x) (x)
+<       |                       ^
+< archival/libarchive/decompress_gunzip.c:1201:25: note: in expansion of macro 'SWAP_LE32'
+<  1201 |         xstate->mtime = SWAP_LE32(header.formatted.mtime);
+<       |                         ^~~~~~~~~
+<   arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/busybox/1.35.0-r0/recipe-sysroot -Wp,-MD,archival/libarchive/.decompress_uncompress.o.d  -std=gnu99 -Iinclude -Ilibbb  -include include/autoconf.h -D_GNU_SOURCE -DNDEBUG -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -DBB_VER='"1.35.0"' -Wall -Wshadow -Wwrite-strings -Wundef -Wstrict-prototypes -Wunused -Wunused-parameter -Wunused-function -Wunused-value -Wmissing-prototypes -Wmissing-declarations -Wno-format-security -Wdeclaration-after-statement -Wold-style-definition -finline-limit=0 -fno-builtin-strlen -fomit-frame-pointer -ffunction-sections -fdata-sections -fno-guess-branch-probability -funsigned-char -static-libgcc -falign-functions=1 -falign-jumps=1 -falign-labels=1 -falign-loops=1 -fno-unwind-tables -fno-asynchronous-unwind-tables -fno-builtin-printf -Os -O2 -pipe -g -feliminate-unused-debug-types -Wconversion -Wno-error -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2  -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/busybox/1.35.0-r0/busybox-1.35.0=/usr/src/debug/busybox/1.35.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/busybox/1.35.0-r0/busybox-1.35.0=/usr/src/debug/busybox/1.35.0-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/busybox/1.35.0-r0/busybox-1.35.0=/usr/src/debug/busybox/1.35.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/busybox/1.35.0-r0/busybox-1.35.0=/usr/src/debug/busybox/1.35.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/busybox/1.35.0-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/busybox/1.35.0-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/busybox/1.35.0-r0/recipe-sysroot-native=   -Wconversion -Wno-error   -DKBUILD_BASENAME='"decompress_uncompress"'  -DKBUILD_MODNAME='"decompress_uncompress"' -c -o archival/libarchive/decompress_uncompress.o archival/libarchive/decompress_uncompress.c
+---
+>   arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/busybox/1.35.0-r0/recipe-sysroot -Wp,-MD,archival/libarchive/.decompress_uncompress.o.d  -std=gnu99 -Iinclude -Ilibbb  -include include/autoconf.h -D_GNU_SOURCE -DNDEBUG -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -DBB_VER='"1.35.0"' -Wall -Wshadow -Wwrite-strings -Wundef -Wstrict-prototypes -Wunused -Wunused-parameter -Wunused-function -Wunused-value -Wmissing-prototypes -Wmissing-declarations -Wno-format-security -Wdeclaration-after-statement -Wold-style-definition -finline-limit=0 -fno-builtin-strlen -fomit-frame-pointer -ffunction-sections -fdata-sections -fno-guess-branch-probability -funsigned-char -static-libgcc -falign-functions=1 -falign-jumps=1 -falign-labels=1 -falign-loops=1 -fno-unwind-tables -fno-asynchronous-unwind-tables -fno-builtin-printf -Os -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -Wconversion -Wno-error -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/busybox/1.35.0-r0/busybox-1.35.0=/usr/src/debug/busybox/1.35.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/busybox/1.35.0-r0/busybox-1.35.0=/usr/src/debug/busybox/1.35.0-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/busybox/1.35.0-r0/busybox-1.35.0=/usr/src/debug/busybox/1.35.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/busybox/1.35.0-r0/busybox-1.35.0=/usr/src/debug/busybox/1.35.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/busybox/1.35.0-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/busybox/1.35.0-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/busybox/1.35.0-r0/recipe-sysroot-native=   -Wconversion -Wno-error   -DKBUILD_BASENAME='"decompress_uncompress"'  -DKBUILD_MODNAME='"decompress_uncompress"' -c -o archival/libarchive/decompress_uncompress.o archival/libarchive/decompress_uncompress.c
+6930,6932d6900
+< archival/libarchive/get_header_cpio.c:63:30: warning: conversion to 'time_t' {aka 'long int'} from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+<    63 |         file_header->mtime = mtime;
+<       |                              ^~~~~
+7015c6983
+< archival/libarchive/get_header_tar.c:61:22: warning: conversion from 'long long unsigned int' to 'time_t' {aka 'long int'} may change value [-Wconversion]
+---
+> archival/libarchive/get_header_tar.c:61:22: warning: conversion to 'time_t' {aka 'long long int'} from 'long long unsigned int' may change the sign of the result [-Wsign-conversion]
+8725a8694,8697
+> editors/awk.c: In function 'do_mktime':
+> editors/awk.c:2564:16: warning: conversion from 'time_t' {aka 'long long int'} to 'int' may change value [-Wconversion]
+>  2564 |         return mktime(&then);
+>       |                ^~~~~~~~~~~~~
+8748c8720
+< editors/awk.c:2740:30: warning: conversion from 'double' to 'time_t' {aka 'long int'} may change value [-Wfloat-conversion]
+---
+> editors/awk.c:2740:30: warning: conversion from 'double' to 'time_t' {aka 'long long int'} may change value [-Wfloat-conversion]
+8772a8745,8747
+> editors/awk.c:3299:39: warning: conversion from 'time_t' {aka 'long long int'} to 'double' may change value [-Wconversion]
+>  3299 |                                 R_d = time(NULL);
+>       |                                       ^~~~
+9388,9408d9362
+< findutils/find.c: In function 'time_cmp':
+< findutils/find.c:701:21: warning: conversion to 'long unsigned int' from 'time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+<   701 |         N_from_user *= unit;
+<       |                     ^~
+< findutils/find.c:701:24: warning: conversion to 'time_t' {aka 'long int'} from 'long unsigned int' may change the sign of the result [-Wsign-conversion]
+<   701 |         N_from_user *= unit;
+<       |                        ^~~~
+< findutils/find.c:703:50: warning: conversion to 'long unsigned int' from 'time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+<   703 |         case '+': return file_age >= N_from_user + unit;
+<       |                                                  ^
+< findutils/find.c:706:76: warning: conversion to 'long unsigned int' from 'time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+<   706 |         default:  return file_age >= N_from_user && file_age < N_from_user + unit;
+<       |                                                                            ^
+< findutils/find.c: In function 'func_mtime':
+< findutils/find.c:719:27: warning: conversion to 'time_t' {aka 'long int'} from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+<   719 |                         ap->mtime_days, 24*60*60);
+<       |                         ~~^~~~~~~~~~~~
+< findutils/find.c: In function 'func_mmin':
+< findutils/find.c:730:27: warning: conversion to 'time_t' {aka 'long int'} from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+<   730 |                         ap->mmin_mins, 60);
+<       |                         ~~^~~~~~~~~~~
+10142c10096
+< miscutils/time.c:206:17: warning: conversion to 'unsigned int' from 'long int' may change the sign of the result [-Wsign-conversion]
+---
+> miscutils/time.c:206:17: warning: conversion from 'long long int' to 'unsigned int' may change value [-Wconversion]
+11002c10956
+< networking/libiproute/libnetlink.c:34:20: warning: conversion to 'uint32_t' {aka 'unsigned int'} from 'time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> networking/libiproute/libnetlink.c:34:20: warning: conversion from 'time_t' {aka 'long long int'} to 'uint32_t' {aka 'unsigned int'} may change value [-Wconversion]
+11509c11463
+< networking/udhcp/dhcpd.c:139:35: warning: conversion to 'leasetime_t' {aka 'unsigned int'} from 'time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> networking/udhcp/dhcpd.c:139:35: warning: conversion from 'time_t' {aka 'long long int'} to 'leasetime_t' {aka 'unsigned int'} may change value [-Wconversion]
+11516c11470
+< networking/udhcp/dhcpd.c:212:46: warning: conversion to 'long unsigned int' from 'time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> networking/udhcp/dhcpd.c:212:35: warning: conversion from 'time_t' {aka 'long long int'} to 'leasetime_t' {aka 'unsigned int'} may change value [-Wconversion]
+11518c11472
+<       |                                              ^
+---
+>       |                                   ^~~~
+11565c11519
+< networking/udhcp/dhcpd.c:1230:61: warning: conversion to 'long unsigned int' from 'time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> networking/udhcp/dhcpd.c:1230:50: warning: conversion from 'time_t' {aka 'long long int'} to 'leasetime_t' {aka 'unsigned int'} may change value [-Wconversion]
+11567,11568c11521,11522
+<       |                                                             ^
+< networking/udhcp/dhcpd.c:1248:50: warning: conversion to 'leasetime_t' {aka 'unsigned int'} from 'time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+>       |                                                  ^~~~
+> networking/udhcp/dhcpd.c:1248:50: warning: conversion from 'time_t' {aka 'long long int'} to 'leasetime_t' {aka 'unsigned int'} may change value [-Wconversion]
+11608,11611c11562
+< networking/udhcp/dumpleases.c:114:36: warning: conversion from 'int64_t' {aka 'long long int'} to 'time_t' {aka 'long int'} may change value [-Wconversion]
+<   114 |                         time_t t = expires_abs;
+<       |                                    ^~~~~~~~~~~
+<   arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/busybox/1.35.0-r0/recipe-sysroot -Wp,-MD,networking/udhcp/.packet.o.d  -std=gnu99 -Iinclude -Ilibbb  -include include/autoconf.h -D_GNU_SOURCE -DNDEBUG -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -DBB_VER='"1.35.0"' -Wall -Wshadow -Wwrite-strings -Wundef -Wstrict-prototypes -Wunused -Wunused-parameter -Wunused-function -Wunused-value -Wmissing-prototypes -Wmissing-declarations -Wno-format-security -Wdeclaration-after-statement -Wold-style-definition -finline-limit=0 -fno-builtin-strlen -fomit-frame-pointer -ffunction-sections -fdata-sections -fno-guess-branch-probability -funsigned-char -static-libgcc -falign-functions=1 -falign-jumps=1 -falign-labels=1 -falign-loops=1 -fno-unwind-tables -fno-asynchronous-unwind-tables -fno-builtin-printf -Os -O2 -pipe -g -feliminate-unused-debug-types -Wconversion -Wno-error -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2  -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/busybox/1.35.0-r0/busybox-1.35.0=/usr/src/debug/busybox/1.35.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/busybox/1.35.0-r0/busybox-1.35.0=/usr/src/debug/busybox/1.35.0-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/busybox/1.35.0-r0/busybox-1.35.0=/usr/src/debug/busybox/1.35.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/busybox/1.35.0-r0/busybox-1.35.0=/usr/src/debug/busybox/1.35.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/busybox/1.35.0-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/busybox/1.35.0-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/busybox/1.35.0-r0/recipe-sysroot-native=   -Wconversion -Wno-error   -DKBUILD_BASENAME='"packet"'  -DKBUILD_MODNAME='"packet"' -c -o networking/udhcp/packet.o networking/udhcp/packet.c
+---
+>   arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/busybox/1.35.0-r0/recipe-sysroot -Wp,-MD,networking/udhcp/.packet.o.d  -std=gnu99 -Iinclude -Ilibbb  -include include/autoconf.h -D_GNU_SOURCE -DNDEBUG -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -DBB_VER='"1.35.0"' -Wall -Wshadow -Wwrite-strings -Wundef -Wstrict-prototypes -Wunused -Wunused-parameter -Wunused-function -Wunused-value -Wmissing-prototypes -Wmissing-declarations -Wno-format-security -Wdeclaration-after-statement -Wold-style-definition -finline-limit=0 -fno-builtin-strlen -fomit-frame-pointer -ffunction-sections -fdata-sections -fno-guess-branch-probability -funsigned-char -static-libgcc -falign-functions=1 -falign-jumps=1 -falign-labels=1 -falign-loops=1 -fno-unwind-tables -fno-asynchronous-unwind-tables -fno-builtin-printf -Os -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -Wconversion -Wno-error -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/busybox/1.35.0-r0/busybox-1.35.0=/usr/src/debug/busybox/1.35.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/busybox/1.35.0-r0/busybox-1.35.0=/usr/src/debug/busybox/1.35.0-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/busybox/1.35.0-r0/busybox-1.35.0=/usr/src/debug/busybox/1.35.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/busybox/1.35.0-r0/busybox-1.35.0=/usr/src/debug/busybox/1.35.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/busybox/1.35.0-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/busybox/1.35.0-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/busybox/1.35.0-r0/recipe-sysroot-native=   -Wconversion -Wno-error   -DKBUILD_BASENAME='"packet"'  -DKBUILD_MODNAME='"packet"' -c -o networking/udhcp/packet.o networking/udhcp/packet.c
+11827,11832d11777
+< procps/ps.c:756:52: warning: conversion to 'long unsigned int' from 'time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+<   756 |                                 time_t start = now - elapsed;
+<       |                                                    ^
+< procps/ps.c:756:48: warning: conversion to 'time_t' {aka 'long int'} from 'long unsigned int' may change the sign of the result [-Wsign-conversion]
+<   756 |                                 time_t start = now - elapsed;
+<       |                                                ^~~
+13735,13738c13680
+< libbb/bb_do_delay.c:57:21: warning: conversion to '__time_t' {aka 'long int'} from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+<    57 |         ts.tv_sec = ms / 1000;
+<       |                     ^~
+< libbb/bb_do_delay.c:58:22: warning: conversion to '__syscall_slong_t' {aka 'long int'} from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+---
+> libbb/bb_do_delay.c:58:22: warning: conversion to 'long int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+13996c13938
+< libbb/duration.c:76:29: warning: conversion from 'duration_t' {aka 'double'} to '__time_t' {aka 'long int'} may change value [-Wfloat-conversion]
+---
+> libbb/duration.c:76:29: warning: conversion from 'duration_t' {aka 'double'} to '__time64_t' {aka 'long long int'} may change value [-Wfloat-conversion]
+13999c13941,13944
+< libbb/duration.c:77:30: warning: conversion from 'duration_t' {aka 'double'} to '__syscall_slong_t' {aka 'long int'} may change value [-Wfloat-conversion]
+---
+> libbb/duration.c:77:40: warning: conversion from '__time64_t' {aka 'long long int'} to 'duration_t' {aka 'double'} may change value [-Wconversion]
+>    77 |                 ts.tv_nsec = (duration - ts.tv_sec) * 1000000000;
+>       |                                        ^
+> libbb/duration.c:77:30: warning: conversion from 'duration_t' {aka 'double'} to 'long int' may change value [-Wfloat-conversion]
+15290,15292d15234
+< libbb/time.c:141:29: warning: conversion from 'long long int' to 'time_t' {aka 'long int'} may change value [-Wconversion]
+<   141 |                         t = bb_strtoll(date_str + 1, NULL, 10);
+<       |                             ^~~~~~~~~~
+15303c15245
+< libbb/time.c:315:26: warning: conversion to 'long long unsigned int' from '__time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> libbb/time.c:315:26: warning: conversion to 'long long unsigned int' from '__time64_t' {aka 'long long int'} may change the sign of the result [-Wsign-conversion]
+15306c15248
+< libbb/time.c:315:42: warning: conversion to 'long long unsigned int' from '__syscall_slong_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> libbb/time.c:315:42: warning: conversion to 'long long unsigned int' from 'long int' may change the sign of the result [-Wsign-conversion]
+15310c15252
+< libbb/time.c:321:26: warning: conversion to 'long long unsigned int' from '__time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> libbb/time.c:321:26: warning: conversion to 'long long unsigned int' from '__time64_t' {aka 'long long int'} may change the sign of the result [-Wsign-conversion]
+15317c15259
+< libbb/time.c:327:26: warning: conversion to 'long long unsigned int' from '__time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> libbb/time.c:327:26: warning: conversion to 'long long unsigned int' from '__time64_t' {aka 'long long int'} may change the sign of the result [-Wsign-conversion]
+15324c15266
+< libbb/time.c:333:18: warning: conversion to 'unsigned int' from '__time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> libbb/time.c:333:18: warning: conversion from '__time64_t' {aka 'long long int'} to 'unsigned int' may change value [-Wconversion]

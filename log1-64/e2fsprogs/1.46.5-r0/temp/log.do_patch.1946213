@@ -1,0 +1,156 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: ['quilt-native', 'patch-native', 'libtool-native', 'attr-native', 'texinfo-dummy-native', 'gettext-minimal-native']
+NOTE: Skipping as already exists in sysroot: []
+DEBUG: sed -e 's:^[^/]*/:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/recipe-sysroot-native/:g' /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/quilt-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/libtool-native/fixmepath | xargs sed -i -e 's:FIXMESTAGINGDIRTARGET:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/recipe-sysroot:g; s:FIXMESTAGINGDIRHOST:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/recipe-sysroot-native:g' -e 's:FIXME_PSEUDO_SYSROOT:/home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/pseudo-native:g' -e 's:FIXME_HOSTTOOLS_DIR:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:g' -e 's:FIXME_PKGDATA_DIR:/home/matt/tmp/build/obmc-y2038/tmp/pkgdata/evb-ast2600:g' -e 's:FIXME_PSEUDO_LOCALSTATEDIR:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/pseudo/:g' -e 's:FIXME_LOGFIFO:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/temp/fifo.1946213:g'
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function do_patch
+DEBUG: Executing python function patch_do_patch
+DEBUG: Searching for remove.ldconfig.call.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs-1.46.5/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs-1.46.5/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs-1.46.5/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs-1.46.5/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs-1.46.5/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs-1.46.5/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs-1.46.5/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs-1.46.5/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/files/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs-1.46.5/
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs/
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/files/
+DEBUG: Searching for run-ptest in paths:
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs-1.46.5/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs-1.46.5/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs-1.46.5/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs-1.46.5/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs-1.46.5/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs-1.46.5/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs-1.46.5/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs-1.46.5/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/files/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs-1.46.5/
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs/
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/files/
+DEBUG: Searching for ptest.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs-1.46.5/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs-1.46.5/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs-1.46.5/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs-1.46.5/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs-1.46.5/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs-1.46.5/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs-1.46.5/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs-1.46.5/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/files/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs-1.46.5/
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs/
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/files/
+DEBUG: Searching for mkdir_p.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs-1.46.5/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs-1.46.5/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs-1.46.5/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs-1.46.5/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs-1.46.5/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs-1.46.5/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs-1.46.5/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs-1.46.5/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/files/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs-1.46.5/
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs/
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/files/
+DEBUG: Searching for extents.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs-1.46.5/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs-1.46.5/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs-1.46.5/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs-1.46.5/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs-1.46.5/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs-1.46.5/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs-1.46.5/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs-1.46.5/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/files/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs-1.46.5/
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs/
+    /home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/files/
+NOTE: Applying patch 'remove.ldconfig.call.patch' (../../../src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs/remove.ldconfig.call.patch)
+NOTE: Applying patch 'ptest.patch' (../../../src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs/ptest.patch)
+NOTE: Applying patch 'mkdir_p.patch' (../../../src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs/mkdir_p.patch)
+NOTE: Applying patch 'extents.patch' (../../../src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs/extents.patch)
+DEBUG: Python function patch_do_patch finished
+DEBUG: Python function do_patch finished
+DEBUG: Executing python function do_qa_patch
+DEBUG: Python function do_qa_patch finished

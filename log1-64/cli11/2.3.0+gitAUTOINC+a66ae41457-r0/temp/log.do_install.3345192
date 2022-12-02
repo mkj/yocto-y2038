@@ -1,0 +1,37 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/cmake/cmake-native_3.24.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/ninja/ninja_1.11.1.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: []
+NOTE: Skipping as already exists in sysroot: ['glibc', 'cmake-native', 'gcc-cross-arm', 'gcc-runtime', 'quilt-native', 'ninja-native', 'patch-native', 'pseudo-native', 'linux-libc-headers', 'libgcc', 're2c-native', 'flex-native', 'texinfo-dummy-native', 'xz-native', 'libtool-native', 'zlib-native', 'zstd-native', 'binutils-cross-arm', 'mpfr-native', 'gnu-config-native', 'libmpc-native', 'gmp-native', 'curl-native', 'bzip2-native', 'ncurses-native', 'attr-native', 'm4-native', 'gettext-minimal-native', 'openssl-native', 'perl-native', 'make-native', 'gdbm-native']
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing shell function do_install
+NOTE: DESTDIR=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/cli11/2.3.0+gitAUTOINC+a66ae41457-r0/image VERBOSE=1 cmake --build /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/cli11/2.3.0+gitAUTOINC+a66ae41457-r0/build --target install --
+[0/1] cd /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/cli11/2.3.0+gitAUTOINC+a66ae41457-r0/build && /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/cli11/2.3.0+gitAUTOINC+a66ae41457-r0/recipe-sysroot-native/usr/bin/cmake -P cmake_install.cmake
+-- Install configuration: ""
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/cli11/2.3.0+gitAUTOINC+a66ae41457-r0/image/usr/include/CLI/App.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/cli11/2.3.0+gitAUTOINC+a66ae41457-r0/image/usr/include/CLI/CLI.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/cli11/2.3.0+gitAUTOINC+a66ae41457-r0/image/usr/include/CLI/Config.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/cli11/2.3.0+gitAUTOINC+a66ae41457-r0/image/usr/include/CLI/ConfigFwd.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/cli11/2.3.0+gitAUTOINC+a66ae41457-r0/image/usr/include/CLI/Error.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/cli11/2.3.0+gitAUTOINC+a66ae41457-r0/image/usr/include/CLI/Formatter.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/cli11/2.3.0+gitAUTOINC+a66ae41457-r0/image/usr/include/CLI/FormatterFwd.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/cli11/2.3.0+gitAUTOINC+a66ae41457-r0/image/usr/include/CLI/Macros.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/cli11/2.3.0+gitAUTOINC+a66ae41457-r0/image/usr/include/CLI/Option.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/cli11/2.3.0+gitAUTOINC+a66ae41457-r0/image/usr/include/CLI/Split.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/cli11/2.3.0+gitAUTOINC+a66ae41457-r0/image/usr/include/CLI/StringTools.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/cli11/2.3.0+gitAUTOINC+a66ae41457-r0/image/usr/include/CLI/Timer.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/cli11/2.3.0+gitAUTOINC+a66ae41457-r0/image/usr/include/CLI/TypeTools.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/cli11/2.3.0+gitAUTOINC+a66ae41457-r0/image/usr/include/CLI/Validators.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/cli11/2.3.0+gitAUTOINC+a66ae41457-r0/image/usr/include/CLI/Version.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/cli11/2.3.0+gitAUTOINC+a66ae41457-r0/image/usr/include/CLI/impl/App_inl.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/cli11/2.3.0+gitAUTOINC+a66ae41457-r0/image/usr/include/CLI/impl/Config_inl.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/cli11/2.3.0+gitAUTOINC+a66ae41457-r0/image/usr/include/CLI/impl/Formatter_inl.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/cli11/2.3.0+gitAUTOINC+a66ae41457-r0/image/usr/include/CLI/impl/Option_inl.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/cli11/2.3.0+gitAUTOINC+a66ae41457-r0/image/usr/include/CLI/impl/Split_inl.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/cli11/2.3.0+gitAUTOINC+a66ae41457-r0/image/usr/include/CLI/impl/StringTools_inl.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/cli11/2.3.0+gitAUTOINC+a66ae41457-r0/image/usr/include/CLI/impl/Validators_inl.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/cli11/2.3.0+gitAUTOINC+a66ae41457-r0/image/usr/share/cmake/CLI11/CLI11ConfigVersion.cmake
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/cli11/2.3.0+gitAUTOINC+a66ae41457-r0/image/usr/share/cmake/CLI11/CLI11Config.cmake
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/cli11/2.3.0+gitAUTOINC+a66ae41457-r0/image/usr/share/pkgconfig/CLI11.pc
+DEBUG: Shell function do_install finished
+DEBUG: Executing shell function remove_libtool_la
+DEBUG: Shell function remove_libtool_la finished

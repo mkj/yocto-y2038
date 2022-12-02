@@ -1,0 +1,54 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/readline/readline_8.1.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-cross_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-native_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/opkg-utils/opkg-utils_0.5.0.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-extended/texinfo-dummy-native/texinfo-dummy-native.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/autoconf/autoconf_2.71.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/automake/automake_1.16.5.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/flex/flex_2.6.4.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: []
+NOTE: Skipping as already exists in sysroot: ['glibc', 'readline', 'gcc-cross-arm', 'gcc-runtime', 'libtool-cross', 'libtool-native', 'opkg-utils', 'quilt-native', 'texinfo-dummy-native', 'autoconf-native', 'automake-native', 'flex-native', 'patch-native', 'pseudo-native', 'gnu-config-native', 'm4-native', 'mpfr-native', 'gmp-native', 'zstd-native', 'xz-native', 'binutils-cross-arm', 'linux-libc-headers', 'libmpc-native', 'zlib-native', 'attr-native', 'ncurses', 'gettext-minimal-native', 'libgcc']
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function autotools_aclocals
+DEBUG: SITE files ['endian-little', 'bit-32', 'arm-common', 'arm-32', 'common-linux', 'common-glibc', 'arm-linux', 'arm-linux-gnueabi', 'common']
+DEBUG: Python function autotools_aclocals finished
+DEBUG: Executing shell function do_install
+NOTE: make -j 1 DESTDIR=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bc/1.07.1-r0/image install
+Making install in lib
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bc/1.07.1-r0/build/lib'
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bc/1.07.1-r0/build/lib'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bc/1.07.1-r0/build/lib'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bc/1.07.1-r0/build/lib'
+Making install in bc
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bc/1.07.1-r0/build/bc'
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bc/1.07.1-r0/build/bc'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bc/1.07.1-r0/image/usr/bin'
+  /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c bc '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bc/1.07.1-r0/image/usr/bin'
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bc/1.07.1-r0/build/bc'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bc/1.07.1-r0/build/bc'
+Making install in dc
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bc/1.07.1-r0/build/dc'
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bc/1.07.1-r0/build/dc'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bc/1.07.1-r0/image/usr/bin'
+  /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c dc '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bc/1.07.1-r0/image/usr/bin'
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bc/1.07.1-r0/build/dc'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bc/1.07.1-r0/build/dc'
+Making install in doc
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bc/1.07.1-r0/build/doc'
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bc/1.07.1-r0/build/doc'
+make[2]: Nothing to be done for 'install-exec-am'.
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bc/1.07.1-r0/image/usr/share/info'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../../bc-1.07.1/doc/bc.info ../../bc-1.07.1/doc/dc.info '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bc/1.07.1-r0/image/usr/share/info'
+ install-info --info-dir='/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bc/1.07.1-r0/image/usr/share/info' '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bc/1.07.1-r0/image/usr/share/info/bc.info'
+ install-info --info-dir='/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bc/1.07.1-r0/image/usr/share/info' '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bc/1.07.1-r0/image/usr/share/info/dc.info'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bc/1.07.1-r0/image/usr/share/man/man1'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../../bc-1.07.1/doc/bc.1 ../../bc-1.07.1/doc/dc.1 '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bc/1.07.1-r0/image/usr/share/man/man1'
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bc/1.07.1-r0/build/doc'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bc/1.07.1-r0/build/doc'
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bc/1.07.1-r0/build'
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bc/1.07.1-r0/build'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bc/1.07.1-r0/build'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bc/1.07.1-r0/build'
+DEBUG: Shell function do_install finished
+DEBUG: Executing shell function remove_libtool_la
+DEBUG: Shell function remove_libtool_la finished

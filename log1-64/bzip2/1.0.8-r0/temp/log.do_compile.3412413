@@ -1,0 +1,1540 @@
+DEBUG: Executing python function autotools_aclocals
+DEBUG: SITE files ['endian-little', 'bit-32', 'arm-common', 'arm-32', 'common-linux', 'common-glibc', 'arm-linux', 'arm-linux-gnueabi', 'common']
+DEBUG: Python function autotools_aclocals finished
+DEBUG: Executing shell function do_compile
+NOTE: make -j 1
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot -DPACKAGE_NAME=\"bzip2\" -DPACKAGE_TARNAME=\"bzip2\" -DPACKAGE_VERSION=\"1.0.8\" -DPACKAGE_STRING=\"bzip2\ 1.0.8\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"bzip2\" -DVERSION=\"1.0.8\" -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_UNISTD_H=1 -DSTDC_HEADERS=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -I. -I../bzip2-1.0.8   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64  -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/bzip2-1.0.8=/usr/src/debug/bzip2/1.0.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/bzip2-1.0.8=/usr/src/debug/bzip2/1.0.8-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/build=/usr/src/debug/bzip2/1.0.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/build=/usr/src/debug/bzip2/1.0.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot-native=   -Wconversion -Wno-error -fPIC -fpic -Winline -fno-strength-reduce -D_FILE_OFFSET_BITS=64 -c -o bzip2.o ../bzip2-1.0.8/bzip2.c
+../bzip2-1.0.8/bzip2.c: In function 'uInt64_qrm10':
+../bzip2-1.0.8/bzip2.c:284:17: warning: conversion from 'UInt32' {aka 'unsigned int'} to 'UChar' {aka 'unsigned char'} may change value [-Wconversion]
+  284 |       n->b[i] = tmp / 10;
+      |                 ^~~
+../bzip2-1.0.8/bzip2.c:287:11: warning: conversion to 'Int32' {aka 'int'} from 'UInt32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  287 |    return rem;
+      |           ^~~
+../bzip2-1.0.8/bzip2.c: In function 'uInt64_toAscii':
+../bzip2-1.0.8/bzip2.c:303:19: warning: conversion from 'int' to 'UChar' {aka 'unsigned char'} may change value [-Wconversion]
+  303 |       buf[nBuf] = q + '0';
+      |                   ^
+../bzip2-1.0.8/bzip2.c: In function 'compressStream':
+../bzip2-1.0.8/bzip2.c:353:15: warning: conversion to 'Int32' {aka 'int'} from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  353 |       nIbuf = fread ( ibuf, sizeof(UChar), 5000, stream );
+      |               ^~~~~
+../bzip2-1.0.8/bzip2.c: In function 'uncompressStream':
+../bzip2-1.0.8/bzip2.c:465:43: warning: conversion to 'size_t' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  465 |             fwrite ( obuf, sizeof(UChar), nread, stream );
+      |                                           ^~~~~
+../bzip2-1.0.8/bzip2.c:509:18: warning: conversion to 'Int32' {aka 'int'} from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  509 |          nread = fread ( obuf, sizeof(UChar), 5000, zStream );
+      |                  ^~~~~
+../bzip2-1.0.8/bzip2.c:511:55: warning: conversion to 'size_t' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  511 |          if (nread > 0) fwrite ( obuf, sizeof(UChar), nread, stream );
+      |                                                       ^~~~~
+../bzip2-1.0.8/bzip2.c: In function 'countHardLinks':
+../bzip2-1.0.8/bzip2.c:1005:29: warning: conversion to 'Int32' {aka 'int'} from '__nlink_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+ 1005 |    return (statBuf.st_nlink - 1);
+      |           ~~~~~~~~~~~~~~~~~~^~~~
+../bzip2-1.0.8/bzip2.c: In function 'hasSuffix':
+../bzip2-1.0.8/bzip2.c:1112:15: warning: conversion to 'Int32' {aka 'int'} from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+ 1112 |    Int32 ns = strlen(s);
+      |               ^~~~~~
+../bzip2-1.0.8/bzip2.c:1113:15: warning: conversion to 'Int32' {aka 'int'} from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+ 1113 |    Int32 nx = strlen(suffix);
+      |               ^~~~~~
+../bzip2-1.0.8/bzip2.c: In function 'snocString':
+../bzip2-1.0.8/bzip2.c:1733:40: warning: conversion to 'Int32' {aka 'int'} from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+ 1733 |       tmp->name = (Char*) myMalloc ( 5 + strlen(name) );
+      |                                      ~~^~~~~~~~~~~~~~
+../bzip2-1.0.8/bzip2.c: In function 'applySavedFileAttrToOutputFile':
+../bzip2-1.0.8/bzip2.c:1073:11: warning: ignoring return value of 'fchown' declared with attribute 'warn_unused_result' [-Wunused-result]
+ 1073 |    (void) fchown ( fd, fileMetaInfo.st_uid, fileMetaInfo.st_gid );
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/bin/bash ./libtool  --tag=CC   --mode=compile arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot -DPACKAGE_NAME=\"bzip2\" -DPACKAGE_TARNAME=\"bzip2\" -DPACKAGE_VERSION=\"1.0.8\" -DPACKAGE_STRING=\"bzip2\ 1.0.8\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"bzip2\" -DVERSION=\"1.0.8\" -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_UNISTD_H=1 -DSTDC_HEADERS=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -I. -I../bzip2-1.0.8   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64  -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/bzip2-1.0.8=/usr/src/debug/bzip2/1.0.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/bzip2-1.0.8=/usr/src/debug/bzip2/1.0.8-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/build=/usr/src/debug/bzip2/1.0.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/build=/usr/src/debug/bzip2/1.0.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot-native=   -Wconversion -Wno-error -fPIC -fpic -Winline -fno-strength-reduce -D_FILE_OFFSET_BITS=64 -c -o blocksort.lo ../bzip2-1.0.8/blocksort.c
+libtool: compile:  arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot -DPACKAGE_NAME=\"bzip2\" -DPACKAGE_TARNAME=\"bzip2\" -DPACKAGE_VERSION=\"1.0.8\" "-DPACKAGE_STRING=\"bzip2 1.0.8\"" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"bzip2\" -DVERSION=\"1.0.8\" -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_UNISTD_H=1 -DSTDC_HEADERS=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -I. -I../bzip2-1.0.8 -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/bzip2-1.0.8=/usr/src/debug/bzip2/1.0.8-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/bzip2-1.0.8=/usr/src/debug/bzip2/1.0.8-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/build=/usr/src/debug/bzip2/1.0.8-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/build=/usr/src/debug/bzip2/1.0.8-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot-native= -Wconversion -Wno-error -fPIC -fpic -Winline -fno-strength-reduce -D_FILE_OFFSET_BITS=64 -c ../bzip2-1.0.8/blocksort.c  -fPIC -DPIC -o .libs/blocksort.o
+../bzip2-1.0.8/blocksort.c: In function 'fallbackSimpleSort':
+../bzip2-1.0.8/blocksort.c:44:16: warning: conversion to 'Int32' {aka 'int'} from 'UInt32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+   44 |          tmp = fmap[i];
+      |                ^~~~
+../bzip2-1.0.8/blocksort.c:48:22: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+   48 |          fmap[j-4] = tmp;
+      |                      ^~~
+../bzip2-1.0.8/blocksort.c:53:13: warning: conversion to 'Int32' {aka 'int'} from 'UInt32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+   53 |       tmp = fmap[i];
+      |             ^~~~
+../bzip2-1.0.8/blocksort.c:57:19: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+   57 |       fmap[j-1] = tmp;
+      |                   ^~~
+../bzip2-1.0.8/blocksort.c: In function 'fallbackQSort3':
+../bzip2-1.0.8/blocksort.c:140:22: warning: conversion to 'Int32' {aka 'int'} from 'UInt32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  140 |                fswap(fmap[unLo], fmap[ltLo]);
+      |                      ^~~~
+../bzip2-1.0.8/blocksort.c:64:20: note: in definition of macro 'fswap'
+   64 |    { Int32 zztmp = zz1; zz1 = zz2; zz2 = zztmp; }
+      |                    ^~~
+../bzip2-1.0.8/blocksort.c:64:42: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+   64 |    { Int32 zztmp = zz1; zz1 = zz2; zz2 = zztmp; }
+      |                                          ^~~~~
+../bzip2-1.0.8/blocksort.c:140:16: note: in expansion of macro 'fswap'
+  140 |                fswap(fmap[unLo], fmap[ltLo]);
+      |                ^~~~~
+../bzip2-1.0.8/blocksort.c:151:22: warning: conversion to 'Int32' {aka 'int'} from 'UInt32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  151 |                fswap(fmap[unHi], fmap[gtHi]);
+      |                      ^~~~
+../bzip2-1.0.8/blocksort.c:64:20: note: in definition of macro 'fswap'
+   64 |    { Int32 zztmp = zz1; zz1 = zz2; zz2 = zztmp; }
+      |                    ^~~
+../bzip2-1.0.8/blocksort.c:64:42: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+   64 |    { Int32 zztmp = zz1; zz1 = zz2; zz2 = zztmp; }
+      |                                          ^~~~~
+../bzip2-1.0.8/blocksort.c:151:16: note: in expansion of macro 'fswap'
+  151 |                fswap(fmap[unHi], fmap[gtHi]);
+      |                ^~~~~
+../bzip2-1.0.8/blocksort.c:159:16: warning: conversion to 'Int32' {aka 'int'} from 'UInt32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  159 |          fswap(fmap[unLo], fmap[unHi]); unLo++; unHi--;
+      |                ^~~~
+../bzip2-1.0.8/blocksort.c:64:20: note: in definition of macro 'fswap'
+   64 |    { Int32 zztmp = zz1; zz1 = zz2; zz2 = zztmp; }
+      |                    ^~~
+../bzip2-1.0.8/blocksort.c:64:42: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+   64 |    { Int32 zztmp = zz1; zz1 = zz2; zz2 = zztmp; }
+      |                                          ^~~~~
+../bzip2-1.0.8/blocksort.c:159:10: note: in expansion of macro 'fswap'
+  159 |          fswap(fmap[unLo], fmap[unHi]); unLo++; unHi--;
+      |          ^~~~~
+../bzip2-1.0.8/blocksort.c:72:13: warning: conversion to 'Int32' {aka 'int'} from 'UInt32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+   72 |       fswap(fmap[yyp1], fmap[yyp2]);  \
+      |             ^~~~
+../bzip2-1.0.8/blocksort.c:64:20: note: in definition of macro 'fswap'
+   64 |    { Int32 zztmp = zz1; zz1 = zz2; zz2 = zztmp; }
+      |                    ^~~
+../bzip2-1.0.8/blocksort.c:166:37: note: in expansion of macro 'fvswap'
+  166 |       n = fmin(ltLo-lo, unLo-ltLo); fvswap(lo, unLo-n, n);
+      |                                     ^~~~~~
+../bzip2-1.0.8/blocksort.c:64:42: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+   64 |    { Int32 zztmp = zz1; zz1 = zz2; zz2 = zztmp; }
+      |                                          ^~~~~
+../bzip2-1.0.8/blocksort.c:72:7: note: in expansion of macro 'fswap'
+   72 |       fswap(fmap[yyp1], fmap[yyp2]);  \
+      |       ^~~~~
+../bzip2-1.0.8/blocksort.c:166:37: note: in expansion of macro 'fvswap'
+  166 |       n = fmin(ltLo-lo, unLo-ltLo); fvswap(lo, unLo-n, n);
+      |                                     ^~~~~~
+../bzip2-1.0.8/blocksort.c:72:13: warning: conversion to 'Int32' {aka 'int'} from 'UInt32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+   72 |       fswap(fmap[yyp1], fmap[yyp2]);  \
+      |             ^~~~
+../bzip2-1.0.8/blocksort.c:64:20: note: in definition of macro 'fswap'
+   64 |    { Int32 zztmp = zz1; zz1 = zz2; zz2 = zztmp; }
+      |                    ^~~
+../bzip2-1.0.8/blocksort.c:167:37: note: in expansion of macro 'fvswap'
+  167 |       m = fmin(hi-gtHi, gtHi-unHi); fvswap(unLo, hi-m+1, m);
+      |                                     ^~~~~~
+../bzip2-1.0.8/blocksort.c:64:42: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+   64 |    { Int32 zztmp = zz1; zz1 = zz2; zz2 = zztmp; }
+      |                                          ^~~~~
+../bzip2-1.0.8/blocksort.c:72:7: note: in expansion of macro 'fswap'
+   72 |       fswap(fmap[yyp1], fmap[yyp2]);  \
+      |       ^~~~~
+../bzip2-1.0.8/blocksort.c:167:37: note: in expansion of macro 'fvswap'
+  167 |       m = fmin(hi-gtHi, gtHi-unHi); fvswap(unLo, hi-m+1, m);
+      |                                     ^~~~~~
+../bzip2-1.0.8/blocksort.c: In function 'fallbackSort':
+../bzip2-1.0.8/blocksort.c:240:17: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  240 |       fmap[k] = i;
+      |                 ^
+../bzip2-1.0.8/blocksort.c:269:22: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  269 |          k = fmap[i] - H; if (k < 0) k += nblock;
+      |                      ^
+../bzip2-1.0.8/blocksort.c:269:14: warning: conversion to 'Int32' {aka 'int'} from 'UInt32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  269 |          k = fmap[i] - H; if (k < 0) k += nblock;
+      |              ^~~~
+../bzip2-1.0.8/blocksort.c:270:22: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  270 |          eclass[k] = j;
+      |                      ^
+../bzip2-1.0.8/blocksort.c:302:22: warning: conversion to 'Int32' {aka 'int'} from 'UInt32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  302 |                cc1 = eclass[fmap[i]];
+      |                      ^~~~~~
+../bzip2-1.0.8/blocksort.c: In function 'mainGtU':
+../bzip2-1.0.8/blocksort.c:408:8: warning: conversion to 'Int32' {aka 'int'} from 'UInt32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  408 |    k = nblock + 8;
+      |        ^~~~~~
+../bzip2-1.0.8/blocksort.c: In function 'mainSimpleSort':
+../bzip2-1.0.8/blocksort.c:515:29: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  515 |                     ptr[j-h]+d, v+d, block, quadrant, nblock, budget
+      |                             ^
+../bzip2-1.0.8/blocksort.c:515:34: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  515 |                     ptr[j-h]+d, v+d, block, quadrant, nblock, budget
+      |                                  ^
+../bzip2-1.0.8/blocksort.c:515:55: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  515 |                     ptr[j-h]+d, v+d, block, quadrant, nblock, budget
+      |                                                       ^~~~~~
+../bzip2-1.0.8/blocksort.c:529:29: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  529 |                     ptr[j-h]+d, v+d, block, quadrant, nblock, budget
+      |                             ^
+../bzip2-1.0.8/blocksort.c:529:34: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  529 |                     ptr[j-h]+d, v+d, block, quadrant, nblock, budget
+      |                                  ^
+../bzip2-1.0.8/blocksort.c:529:55: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  529 |                     ptr[j-h]+d, v+d, block, quadrant, nblock, budget
+      |                                                       ^~~~~~
+../bzip2-1.0.8/blocksort.c:543:29: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  543 |                     ptr[j-h]+d, v+d, block, quadrant, nblock, budget
+      |                             ^
+../bzip2-1.0.8/blocksort.c:543:34: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  543 |                     ptr[j-h]+d, v+d, block, quadrant, nblock, budget
+      |                                  ^
+../bzip2-1.0.8/blocksort.c:543:55: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  543 |                     ptr[j-h]+d, v+d, block, quadrant, nblock, budget
+      |                                                       ^~~~~~
+../bzip2-1.0.8/blocksort.c: In function 'mainQSort3':
+../bzip2-1.0.8/blocksort.c:657:44: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  657 |             mmed3 ( block[ptr[ lo         ]+d],
+      |                                            ^
+../bzip2-1.0.8/blocksort.c:658:44: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  658 |                     block[ptr[ hi         ]+d],
+      |                                            ^
+../bzip2-1.0.8/blocksort.c:659:44: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  659 |                     block[ptr[ (lo+hi)>>1 ]+d] );
+      |                                            ^
+../bzip2-1.0.8/blocksort.c:667:40: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  667 |             n = ((Int32)block[ptr[unLo]+d]) - med;
+      |                                        ^
+../bzip2-1.0.8/blocksort.c:669:22: warning: conversion to 'Int32' {aka 'int'} from 'UInt32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  669 |                mswap(ptr[unLo], ptr[ltLo]);
+      |                      ^~~
+../bzip2-1.0.8/blocksort.c:568:20: note: in definition of macro 'mswap'
+  568 |    { Int32 zztmp = zz1; zz1 = zz2; zz2 = zztmp; }
+      |                    ^~~
+../bzip2-1.0.8/blocksort.c:568:42: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  568 |    { Int32 zztmp = zz1; zz1 = zz2; zz2 = zztmp; }
+      |                                          ^~~~~
+../bzip2-1.0.8/blocksort.c:669:16: note: in expansion of macro 'mswap'
+  669 |                mswap(ptr[unLo], ptr[ltLo]);
+      |                ^~~~~
+../bzip2-1.0.8/blocksort.c:677:40: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  677 |             n = ((Int32)block[ptr[unHi]+d]) - med;
+      |                                        ^
+../bzip2-1.0.8/blocksort.c:679:22: warning: conversion to 'Int32' {aka 'int'} from 'UInt32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  679 |                mswap(ptr[unHi], ptr[gtHi]);
+      |                      ^~~
+../bzip2-1.0.8/blocksort.c:568:20: note: in definition of macro 'mswap'
+  568 |    { Int32 zztmp = zz1; zz1 = zz2; zz2 = zztmp; }
+      |                    ^~~
+../bzip2-1.0.8/blocksort.c:568:42: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  568 |    { Int32 zztmp = zz1; zz1 = zz2; zz2 = zztmp; }
+      |                                          ^~~~~
+../bzip2-1.0.8/blocksort.c:679:16: note: in expansion of macro 'mswap'
+  679 |                mswap(ptr[unHi], ptr[gtHi]);
+      |                ^~~~~
+../bzip2-1.0.8/blocksort.c:686:16: warning: conversion to 'Int32' {aka 'int'} from 'UInt32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  686 |          mswap(ptr[unLo], ptr[unHi]); unLo++; unHi--;
+      |                ^~~
+../bzip2-1.0.8/blocksort.c:568:20: note: in definition of macro 'mswap'
+  568 |    { Int32 zztmp = zz1; zz1 = zz2; zz2 = zztmp; }
+      |                    ^~~
+../bzip2-1.0.8/blocksort.c:568:42: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  568 |    { Int32 zztmp = zz1; zz1 = zz2; zz2 = zztmp; }
+      |                                          ^~~~~
+../bzip2-1.0.8/blocksort.c:686:10: note: in expansion of macro 'mswap'
+  686 |          mswap(ptr[unLo], ptr[unHi]); unLo++; unHi--;
+      |          ^~~~~
+../bzip2-1.0.8/blocksort.c:576:13: warning: conversion to 'Int32' {aka 'int'} from 'UInt32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  576 |       mswap(ptr[yyp1], ptr[yyp2]);    \
+      |             ^~~
+../bzip2-1.0.8/blocksort.c:568:20: note: in definition of macro 'mswap'
+  568 |    { Int32 zztmp = zz1; zz1 = zz2; zz2 = zztmp; }
+      |                    ^~~
+../bzip2-1.0.8/blocksort.c:696:37: note: in expansion of macro 'mvswap'
+  696 |       n = mmin(ltLo-lo, unLo-ltLo); mvswap(lo, unLo-n, n);
+      |                                     ^~~~~~
+../bzip2-1.0.8/blocksort.c:568:42: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  568 |    { Int32 zztmp = zz1; zz1 = zz2; zz2 = zztmp; }
+      |                                          ^~~~~
+../bzip2-1.0.8/blocksort.c:576:7: note: in expansion of macro 'mswap'
+  576 |       mswap(ptr[yyp1], ptr[yyp2]);    \
+      |       ^~~~~
+../bzip2-1.0.8/blocksort.c:696:37: note: in expansion of macro 'mvswap'
+  696 |       n = mmin(ltLo-lo, unLo-ltLo); mvswap(lo, unLo-n, n);
+      |                                     ^~~~~~
+../bzip2-1.0.8/blocksort.c:576:13: warning: conversion to 'Int32' {aka 'int'} from 'UInt32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  576 |       mswap(ptr[yyp1], ptr[yyp2]);    \
+      |             ^~~
+../bzip2-1.0.8/blocksort.c:568:20: note: in definition of macro 'mswap'
+  568 |    { Int32 zztmp = zz1; zz1 = zz2; zz2 = zztmp; }
+      |                    ^~~
+../bzip2-1.0.8/blocksort.c:697:37: note: in expansion of macro 'mvswap'
+  697 |       m = mmin(hi-gtHi, gtHi-unHi); mvswap(unLo, hi-m+1, m);
+      |                                     ^~~~~~
+../bzip2-1.0.8/blocksort.c:568:42: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  568 |    { Int32 zztmp = zz1; zz1 = zz2; zz2 = zztmp; }
+      |                                          ^~~~~
+../bzip2-1.0.8/blocksort.c:576:7: note: in expansion of macro 'mswap'
+  576 |       mswap(ptr[yyp1], ptr[yyp2]);    \
+      |       ^~~~~
+../bzip2-1.0.8/blocksort.c:697:37: note: in expansion of macro 'mvswap'
+  697 |       m = mmin(hi-gtHi, gtHi-unHi); mvswap(unLo, hi-m+1, m);
+      |                                     ^~~~~~
+../bzip2-1.0.8/blocksort.c: In function 'mainSort':
+../bzip2-1.0.8/blocksort.c:809:11: warning: conversion to 'Int32' {aka 'int'} from 'UInt32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  809 |       j = ftab[s] -1;
+      |           ^~~~
+../bzip2-1.0.8/blocksort.c:810:17: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  810 |       ftab[s] = j;
+      |                 ^
+../bzip2-1.0.8/blocksort.c:811:16: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  811 |       ptr[j] = i;
+      |                ^
+../bzip2-1.0.8/blocksort.c:813:11: warning: conversion to 'Int32' {aka 'int'} from 'UInt32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  813 |       j = ftab[s] -1;
+      |           ^~~~
+../bzip2-1.0.8/blocksort.c:814:17: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  814 |       ftab[s] = j;
+      |                 ^
+../bzip2-1.0.8/blocksort.c:815:16: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  815 |       ptr[j] = i-1;
+      |                ^
+../bzip2-1.0.8/blocksort.c:817:11: warning: conversion to 'Int32' {aka 'int'} from 'UInt32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  817 |       j = ftab[s] -1;
+      |           ^~~~
+../bzip2-1.0.8/blocksort.c:818:17: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  818 |       ftab[s] = j;
+      |                 ^
+../bzip2-1.0.8/blocksort.c:819:16: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  819 |       ptr[j] = i-2;
+      |                ^
+../bzip2-1.0.8/blocksort.c:821:11: warning: conversion to 'Int32' {aka 'int'} from 'UInt32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  821 |       j = ftab[s] -1;
+      |           ^~~~
+../bzip2-1.0.8/blocksort.c:822:17: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  822 |       ftab[s] = j;
+      |                 ^
+../bzip2-1.0.8/blocksort.c:823:16: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  823 |       ptr[j] = i-3;
+      |                ^
+../bzip2-1.0.8/blocksort.c:827:11: warning: conversion to 'Int32' {aka 'int'} from 'UInt32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  827 |       j = ftab[s] -1;
+      |           ^~~~
+../bzip2-1.0.8/blocksort.c:828:17: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  828 |       ftab[s] = j;
+      |                 ^
+../bzip2-1.0.8/blocksort.c:829:16: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  829 |       ptr[j] = i;
+      |                ^
+../bzip2-1.0.8/blocksort.c:890:38: warning: unsigned conversion from 'int' to 'UInt32' {aka 'unsigned int'} changes value from '-2097153' to '4292870143' [-Wsign-conversion]
+  890 |                Int32 lo = ftab[sb]   & CLEARMASK;
+      |                                      ^
+../bzip2-1.0.8/blocksort.c:890:27: warning: conversion to 'Int32' {aka 'int'} from 'UInt32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  890 |                Int32 lo = ftab[sb]   & CLEARMASK;
+      |                           ^~~~
+../bzip2-1.0.8/blocksort.c:891:39: warning: unsigned conversion from 'int' to 'UInt32' {aka 'unsigned int'} changes value from '-2097153' to '4292870143' [-Wsign-conversion]
+  891 |                Int32 hi = (ftab[sb+1] & CLEARMASK) - 1;
+      |                                       ^
+../bzip2-1.0.8/blocksort.c:891:27: warning: conversion to 'Int32' {aka 'int'} from 'UInt32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  891 |                Int32 hi = (ftab[sb+1] & CLEARMASK) - 1;
+      |                           ^
+../bzip2-1.0.8/blocksort.c:920:53: warning: unsigned conversion from 'int' to 'UInt32' {aka 'unsigned int'} changes value from '-2097153' to '4292870143' [-Wsign-conversion]
+  920 |             copyStart[j] =  ftab[(j << 8) + ss]     & CLEARMASK;
+      |                                                     ^
+../bzip2-1.0.8/blocksort.c:920:29: warning: conversion to 'Int32' {aka 'int'} from 'UInt32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  920 |             copyStart[j] =  ftab[(j << 8) + ss]     & CLEARMASK;
+      |                             ^~~~
+../bzip2-1.0.8/blocksort.c:921:53: warning: unsigned conversion from 'int' to 'UInt32' {aka 'unsigned int'} changes value from '-2097153' to '4292870143' [-Wsign-conversion]
+  921 |             copyEnd  [j] = (ftab[(j << 8) + ss + 1] & CLEARMASK) - 1;
+      |                                                     ^
+../bzip2-1.0.8/blocksort.c:921:28: warning: conversion to 'Int32' {aka 'int'} from 'UInt32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  921 |             copyEnd  [j] = (ftab[(j << 8) + ss + 1] & CLEARMASK) - 1;
+      |                            ^
+../bzip2-1.0.8/blocksort.c:923:33: warning: unsigned conversion from 'int' to 'UInt32' {aka 'unsigned int'} changes value from '-2097153' to '4292870143' [-Wsign-conversion]
+  923 |          for (j = ftab[ss << 8] & CLEARMASK; j < copyStart[ss]; j++) {
+      |                                 ^
+../bzip2-1.0.8/blocksort.c:923:19: warning: conversion to 'Int32' {aka 'int'} from 'UInt32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  923 |          for (j = ftab[ss << 8] & CLEARMASK; j < copyStart[ss]; j++) {
+      |                   ^~~~
+../bzip2-1.0.8/blocksort.c:924:17: warning: conversion to 'Int32' {aka 'int'} from 'UInt32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  924 |             k = ptr[j]-1; if (k < 0) k += nblock;
+      |                 ^~~
+../bzip2-1.0.8/blocksort.c:927:41: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  927 |                ptr[ copyStart[c1]++ ] = k;
+      |                                         ^
+../bzip2-1.0.8/blocksort.c:929:38: warning: unsigned conversion from 'int' to 'UInt32' {aka 'unsigned int'} changes value from '-2097153' to '4292870143' [-Wsign-conversion]
+  929 |          for (j = (ftab[(ss+1) << 8] & CLEARMASK) - 1; j > copyEnd[ss]; j--) {
+      |                                      ^
+../bzip2-1.0.8/blocksort.c:929:19: warning: conversion to 'Int32' {aka 'int'} from 'UInt32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  929 |          for (j = (ftab[(ss+1) << 8] & CLEARMASK) - 1; j > copyEnd[ss]; j--) {
+      |                   ^
+../bzip2-1.0.8/blocksort.c:930:17: warning: conversion to 'Int32' {aka 'int'} from 'UInt32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  930 |             k = ptr[j]-1; if (k < 0) k += nblock;
+      |                 ^~~
+../bzip2-1.0.8/blocksort.c:933:39: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  933 |                ptr[ copyEnd[c1]-- ] = k;
+      |                                       ^
+../bzip2-1.0.8/blocksort.c:990:41: warning: unsigned conversion from 'int' to 'UInt32' {aka 'unsigned int'} changes value from '-2097153' to '4292870143' [-Wsign-conversion]
+  990 |          Int32 bbStart  = ftab[ss << 8] & CLEARMASK;
+      |                                         ^
+../bzip2-1.0.8/blocksort.c:990:27: warning: conversion to 'Int32' {aka 'int'} from 'UInt32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  990 |          Int32 bbStart  = ftab[ss << 8] & CLEARMASK;
+      |                           ^~~~
+../bzip2-1.0.8/blocksort.c:991:46: warning: unsigned conversion from 'int' to 'UInt32' {aka 'unsigned int'} changes value from '-2097153' to '4292870143' [-Wsign-conversion]
+  991 |          Int32 bbSize   = (ftab[(ss+1) << 8] & CLEARMASK) - bbStart;
+      |                                              ^
+../bzip2-1.0.8/blocksort.c:991:59: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  991 |          Int32 bbSize   = (ftab[(ss+1) << 8] & CLEARMASK) - bbStart;
+      |                                                           ^
+../bzip2-1.0.8/blocksort.c:991:27: warning: conversion to 'Int32' {aka 'int'} from 'UInt32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  991 |          Int32 bbSize   = (ftab[(ss+1) << 8] & CLEARMASK) - bbStart;
+      |                           ^
+../bzip2-1.0.8/blocksort.c:997:34: warning: conversion to 'Int32' {aka 'int'} from 'UInt32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  997 |             Int32 a2update     = ptr[bbStart + j];
+      |                                  ^~~
+In function 'mainSimpleSort',
+    inlined from 'mainQSort3' at ../bzip2-1.0.8/blocksort.c:651:10,
+    inlined from 'mainSort' at ../bzip2-1.0.8/blocksort.c:897:19:
+../bzip2-1.0.8/blocksort.c:347:6: warning: inlining failed in call to 'mainGtU': --param max-inline-insns-single limit reached [-Winline]
+  347 | Bool mainGtU ( UInt32  i1,
+      |      ^~~~~~~
+../bzip2-1.0.8/blocksort.c:514:18: note: called from here
+  514 |          while ( mainGtU (
+      |                  ^~~~~~~~~
+  515 |                     ptr[j-h]+d, v+d, block, quadrant, nblock, budget
+      |                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  516 |                  ) ) {
+      |                  ~
+../bzip2-1.0.8/blocksort.c:347:6: warning: inlining failed in call to 'mainGtU': --param max-inline-insns-single limit reached [-Winline]
+  347 | Bool mainGtU ( UInt32  i1,
+      |      ^~~~~~~
+../bzip2-1.0.8/blocksort.c:528:18: note: called from here
+  528 |          while ( mainGtU (
+      |                  ^~~~~~~~~
+  529 |                     ptr[j-h]+d, v+d, block, quadrant, nblock, budget
+      |                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  530 |                  ) ) {
+      |                  ~
+../bzip2-1.0.8/blocksort.c:347:6: warning: inlining failed in call to 'mainGtU': --param max-inline-insns-single limit reached [-Winline]
+  347 | Bool mainGtU ( UInt32  i1,
+      |      ^~~~~~~
+../bzip2-1.0.8/blocksort.c:542:18: note: called from here
+  542 |          while ( mainGtU (
+      |                  ^~~~~~~~~
+  543 |                     ptr[j-h]+d, v+d, block, quadrant, nblock, budget
+      |                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  544 |                  ) ) {
+      |                  ~
+/bin/bash ./libtool  --tag=CC   --mode=compile arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot -DPACKAGE_NAME=\"bzip2\" -DPACKAGE_TARNAME=\"bzip2\" -DPACKAGE_VERSION=\"1.0.8\" -DPACKAGE_STRING=\"bzip2\ 1.0.8\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"bzip2\" -DVERSION=\"1.0.8\" -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_UNISTD_H=1 -DSTDC_HEADERS=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -I. -I../bzip2-1.0.8   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64  -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/bzip2-1.0.8=/usr/src/debug/bzip2/1.0.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/bzip2-1.0.8=/usr/src/debug/bzip2/1.0.8-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/build=/usr/src/debug/bzip2/1.0.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/build=/usr/src/debug/bzip2/1.0.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot-native=   -Wconversion -Wno-error -fPIC -fpic -Winline -fno-strength-reduce -D_FILE_OFFSET_BITS=64 -c -o huffman.lo ../bzip2-1.0.8/huffman.c
+libtool: compile:  arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot -DPACKAGE_NAME=\"bzip2\" -DPACKAGE_TARNAME=\"bzip2\" -DPACKAGE_VERSION=\"1.0.8\" "-DPACKAGE_STRING=\"bzip2 1.0.8\"" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"bzip2\" -DVERSION=\"1.0.8\" -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_UNISTD_H=1 -DSTDC_HEADERS=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -I. -I../bzip2-1.0.8 -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/bzip2-1.0.8=/usr/src/debug/bzip2/1.0.8-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/bzip2-1.0.8=/usr/src/debug/bzip2/1.0.8-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/build=/usr/src/debug/bzip2/1.0.8-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/build=/usr/src/debug/bzip2/1.0.8-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot-native= -Wconversion -Wno-error -fPIC -fpic -Winline -fno-strength-reduce -D_FILE_OFFSET_BITS=64 -c ../bzip2-1.0.8/huffman.c  -fPIC -DPIC -o .libs/huffman.o
+../bzip2-1.0.8/huffman.c: In function 'BZ2_hbMakeCodeLengths':
+../bzip2-1.0.8/huffman.c:25:31: warning: conversion to 'unsigned int' from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+   25 | #define WEIGHTOF(zz0)  ((zz0) & 0xffffff00)
+      |                               ^
+../bzip2-1.0.8/huffman.c:30:5: note: in expansion of macro 'WEIGHTOF'
+   30 |    (WEIGHTOF(zw1)+WEIGHTOF(zw2)) |                    \
+      |     ^~~~~~~~
+../bzip2-1.0.8/huffman.c:105:27: note: in expansion of macro 'ADDWEIGHTS'
+  105 |          weight[nNodes] = ADDWEIGHTS(weight[n1], weight[n2]);
+      |                           ^~~~~~~~~~
+../bzip2-1.0.8/huffman.c:25:31: warning: conversion to 'unsigned int' from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+   25 | #define WEIGHTOF(zz0)  ((zz0) & 0xffffff00)
+      |                               ^
+../bzip2-1.0.8/huffman.c:30:19: note: in expansion of macro 'WEIGHTOF'
+   30 |    (WEIGHTOF(zw1)+WEIGHTOF(zw2)) |                    \
+      |                   ^~~~~~~~
+../bzip2-1.0.8/huffman.c:105:27: note: in expansion of macro 'ADDWEIGHTS'
+  105 |          weight[nNodes] = ADDWEIGHTS(weight[n1], weight[n2]);
+      |                           ^~~~~~~~~~
+../bzip2-1.0.8/huffman.c:30:34: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+   30 |    (WEIGHTOF(zw1)+WEIGHTOF(zw2)) |                    \
+      |                                  ^
+../bzip2-1.0.8/huffman.c:105:27: note: in expansion of macro 'ADDWEIGHTS'
+  105 |          weight[nNodes] = ADDWEIGHTS(weight[n1], weight[n2]);
+      |                           ^~~~~~~~~~
+../bzip2-1.0.8/huffman.c:30:4: warning: conversion to 'Int32' {aka 'int'} from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+   30 |    (WEIGHTOF(zw1)+WEIGHTOF(zw2)) |                    \
+      |    ^
+../bzip2-1.0.8/huffman.c:105:27: note: in expansion of macro 'ADDWEIGHTS'
+  105 |          weight[nNodes] = ADDWEIGHTS(weight[n1], weight[n2]);
+      |                           ^~~~~~~~~~
+../bzip2-1.0.8/huffman.c:119:21: warning: conversion from 'Int32' {aka 'int'} to 'UChar' {aka 'unsigned char'} may change value [-Wconversion]
+  119 |          len[i-1] = j;
+      |                     ^
+/bin/bash ./libtool  --tag=CC   --mode=compile arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot -DPACKAGE_NAME=\"bzip2\" -DPACKAGE_TARNAME=\"bzip2\" -DPACKAGE_VERSION=\"1.0.8\" -DPACKAGE_STRING=\"bzip2\ 1.0.8\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"bzip2\" -DVERSION=\"1.0.8\" -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_UNISTD_H=1 -DSTDC_HEADERS=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -I. -I../bzip2-1.0.8   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64  -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/bzip2-1.0.8=/usr/src/debug/bzip2/1.0.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/bzip2-1.0.8=/usr/src/debug/bzip2/1.0.8-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/build=/usr/src/debug/bzip2/1.0.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/build=/usr/src/debug/bzip2/1.0.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot-native=   -Wconversion -Wno-error -fPIC -fpic -Winline -fno-strength-reduce -D_FILE_OFFSET_BITS=64 -c -o crctable.lo ../bzip2-1.0.8/crctable.c
+libtool: compile:  arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot -DPACKAGE_NAME=\"bzip2\" -DPACKAGE_TARNAME=\"bzip2\" -DPACKAGE_VERSION=\"1.0.8\" "-DPACKAGE_STRING=\"bzip2 1.0.8\"" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"bzip2\" -DVERSION=\"1.0.8\" -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_UNISTD_H=1 -DSTDC_HEADERS=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -I. -I../bzip2-1.0.8 -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/bzip2-1.0.8=/usr/src/debug/bzip2/1.0.8-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/bzip2-1.0.8=/usr/src/debug/bzip2/1.0.8-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/build=/usr/src/debug/bzip2/1.0.8-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/build=/usr/src/debug/bzip2/1.0.8-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot-native= -Wconversion -Wno-error -fPIC -fpic -Winline -fno-strength-reduce -D_FILE_OFFSET_BITS=64 -c ../bzip2-1.0.8/crctable.c  -fPIC -DPIC -o .libs/crctable.o
+/bin/bash ./libtool  --tag=CC   --mode=compile arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot -DPACKAGE_NAME=\"bzip2\" -DPACKAGE_TARNAME=\"bzip2\" -DPACKAGE_VERSION=\"1.0.8\" -DPACKAGE_STRING=\"bzip2\ 1.0.8\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"bzip2\" -DVERSION=\"1.0.8\" -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_UNISTD_H=1 -DSTDC_HEADERS=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -I. -I../bzip2-1.0.8   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64  -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/bzip2-1.0.8=/usr/src/debug/bzip2/1.0.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/bzip2-1.0.8=/usr/src/debug/bzip2/1.0.8-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/build=/usr/src/debug/bzip2/1.0.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/build=/usr/src/debug/bzip2/1.0.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot-native=   -Wconversion -Wno-error -fPIC -fpic -Winline -fno-strength-reduce -D_FILE_OFFSET_BITS=64 -c -o randtable.lo ../bzip2-1.0.8/randtable.c
+libtool: compile:  arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot -DPACKAGE_NAME=\"bzip2\" -DPACKAGE_TARNAME=\"bzip2\" -DPACKAGE_VERSION=\"1.0.8\" "-DPACKAGE_STRING=\"bzip2 1.0.8\"" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"bzip2\" -DVERSION=\"1.0.8\" -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_UNISTD_H=1 -DSTDC_HEADERS=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -I. -I../bzip2-1.0.8 -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/bzip2-1.0.8=/usr/src/debug/bzip2/1.0.8-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/bzip2-1.0.8=/usr/src/debug/bzip2/1.0.8-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/build=/usr/src/debug/bzip2/1.0.8-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/build=/usr/src/debug/bzip2/1.0.8-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot-native= -Wconversion -Wno-error -fPIC -fpic -Winline -fno-strength-reduce -D_FILE_OFFSET_BITS=64 -c ../bzip2-1.0.8/randtable.c  -fPIC -DPIC -o .libs/randtable.o
+/bin/bash ./libtool  --tag=CC   --mode=compile arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot -DPACKAGE_NAME=\"bzip2\" -DPACKAGE_TARNAME=\"bzip2\" -DPACKAGE_VERSION=\"1.0.8\" -DPACKAGE_STRING=\"bzip2\ 1.0.8\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"bzip2\" -DVERSION=\"1.0.8\" -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_UNISTD_H=1 -DSTDC_HEADERS=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -I. -I../bzip2-1.0.8   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64  -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/bzip2-1.0.8=/usr/src/debug/bzip2/1.0.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/bzip2-1.0.8=/usr/src/debug/bzip2/1.0.8-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/build=/usr/src/debug/bzip2/1.0.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/build=/usr/src/debug/bzip2/1.0.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot-native=   -Wconversion -Wno-error -fPIC -fpic -Winline -fno-strength-reduce -D_FILE_OFFSET_BITS=64 -c -o compress.lo ../bzip2-1.0.8/compress.c
+libtool: compile:  arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot -DPACKAGE_NAME=\"bzip2\" -DPACKAGE_TARNAME=\"bzip2\" -DPACKAGE_VERSION=\"1.0.8\" "-DPACKAGE_STRING=\"bzip2 1.0.8\"" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"bzip2\" -DVERSION=\"1.0.8\" -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_UNISTD_H=1 -DSTDC_HEADERS=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -I. -I../bzip2-1.0.8 -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/bzip2-1.0.8=/usr/src/debug/bzip2/1.0.8-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/bzip2-1.0.8=/usr/src/debug/bzip2/1.0.8-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/build=/usr/src/debug/bzip2/1.0.8-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/build=/usr/src/debug/bzip2/1.0.8-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot-native= -Wconversion -Wno-error -fPIC -fpic -Winline -fno-strength-reduce -D_FILE_OFFSET_BITS=64 -c ../bzip2-1.0.8/compress.c  -fPIC -DPIC -o .libs/compress.o
+../bzip2-1.0.8/compress.c: In function 'makeMaps_e':
+../bzip2-1.0.8/compress.c:112:29: warning: conversion from 'Int32' {aka 'int'} to 'UChar' {aka 'unsigned char'} may change value [-Wconversion]
+  112 |          s->unseqToSeq[i] = s->nInUse;
+      |                             ^
+../bzip2-1.0.8/compress.c: In function 'generateMTFValues':
+../bzip2-1.0.8/compress.c:166:11: warning: conversion to 'Int32' {aka 'int'} from 'UInt32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  166 |       j = ptr[i]-1; if (j < 0) j += s->nblock;
+      |           ^~~
+../bzip2-1.0.8/compress.c:206:24: warning: conversion from 'int' to 'UInt16' {aka 'short unsigned int'} may change value [-Wconversion]
+  206 |             mtfv[wr] = j+1; wr++; s->mtfFreq[j+1]++;
+      |                        ^
+../bzip2-1.0.8/compress.c:228:15: warning: conversion from 'Int32' {aka 'int'} to 'UInt16' {aka 'short unsigned int'} may change value [-Wconversion]
+  228 |    mtfv[wr] = EOB; wr++; s->mtfFreq[EOB]++;
+      |               ^~~
+../bzip2-1.0.8/compress.c: In function 'sendMTFValues':
+../bzip2-1.0.8/compress.c:383:50: warning: conversion from 'UInt32' {aka 'unsigned int'} to 'UInt16' {aka 'short unsigned int'} may change value [-Wconversion]
+  383 |             cost[0] = cost01 & 0xffff; cost[1] = cost01 >> 16;
+      |                                                  ^~~~~~
+../bzip2-1.0.8/compress.c:384:50: warning: conversion from 'UInt32' {aka 'unsigned int'} to 'UInt16' {aka 'short unsigned int'} may change value [-Wconversion]
+  384 |             cost[2] = cost23 & 0xffff; cost[3] = cost23 >> 16;
+      |                                                  ^~~~~~
+../bzip2-1.0.8/compress.c:385:50: warning: conversion from 'UInt32' {aka 'unsigned int'} to 'UInt16' {aka 'short unsigned int'} may change value [-Wconversion]
+  385 |             cost[4] = cost45 & 0xffff; cost[5] = cost45 >> 16;
+      |                                                  ^~~~~~
+../bzip2-1.0.8/compress.c:404:36: warning: conversion from 'Int32' {aka 'int'} to 'UChar' {aka 'unsigned char'} may change value [-Wconversion]
+  404 |          s->selector[nSelectors] = bt;
+      |                                    ^~
+../bzip2-1.0.8/compress.c:464:46: warning: conversion from 'Int32' {aka 'int'} to 'UChar' {aka 'unsigned char'} may change value [-Wconversion]
+  464 |       for (i = 0; i < nGroups; i++) pos[i] = i;
+      |                                              ^
+../bzip2-1.0.8/compress.c:476:30: warning: conversion from 'Int32' {aka 'int'} to 'UChar' {aka 'unsigned char'} may change value [-Wconversion]
+  476 |          s->selectorMtf[i] = j;
+      |                              ^
+../bzip2-1.0.8/compress.c:519:16: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  519 |    bsW ( s, 3, nGroups );
+      |                ^~~~~~~
+../bzip2-1.0.8/compress.c:520:17: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  520 |    bsW ( s, 15, nSelectors );
+      |                 ^~~~~~~~~~
+../bzip2-1.0.8/compress.c:533:19: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  533 |       bsW ( s, 5, curr );
+      |                   ^~~~
+../bzip2-1.0.8/compress.c:566:39: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  566 |                      s_code_sel_selCtr[mtfv_i] )
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~~~
+../bzip2-1.0.8/compress.c:568:13: note: in expansion of macro 'BZ_ITAH'
+  568 |             BZ_ITAH(0);  BZ_ITAH(1);  BZ_ITAH(2);  BZ_ITAH(3);  BZ_ITAH(4);
+      |             ^~~~~~~
+../bzip2-1.0.8/compress.c:566:39: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  566 |                      s_code_sel_selCtr[mtfv_i] )
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~~~
+../bzip2-1.0.8/compress.c:568:26: note: in expansion of macro 'BZ_ITAH'
+  568 |             BZ_ITAH(0);  BZ_ITAH(1);  BZ_ITAH(2);  BZ_ITAH(3);  BZ_ITAH(4);
+      |                          ^~~~~~~
+../bzip2-1.0.8/compress.c:566:39: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  566 |                      s_code_sel_selCtr[mtfv_i] )
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~~~
+../bzip2-1.0.8/compress.c:568:39: note: in expansion of macro 'BZ_ITAH'
+  568 |             BZ_ITAH(0);  BZ_ITAH(1);  BZ_ITAH(2);  BZ_ITAH(3);  BZ_ITAH(4);
+      |                                       ^~~~~~~
+../bzip2-1.0.8/compress.c:566:39: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  566 |                      s_code_sel_selCtr[mtfv_i] )
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~~~
+../bzip2-1.0.8/compress.c:568:52: note: in expansion of macro 'BZ_ITAH'
+  568 |             BZ_ITAH(0);  BZ_ITAH(1);  BZ_ITAH(2);  BZ_ITAH(3);  BZ_ITAH(4);
+      |                                                    ^~~~~~~
+../bzip2-1.0.8/compress.c:566:39: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  566 |                      s_code_sel_selCtr[mtfv_i] )
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~~~
+../bzip2-1.0.8/compress.c:568:65: note: in expansion of macro 'BZ_ITAH'
+  568 |             BZ_ITAH(0);  BZ_ITAH(1);  BZ_ITAH(2);  BZ_ITAH(3);  BZ_ITAH(4);
+      |                                                                 ^~~~~~~
+../bzip2-1.0.8/compress.c:566:39: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  566 |                      s_code_sel_selCtr[mtfv_i] )
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~~~
+../bzip2-1.0.8/compress.c:569:13: note: in expansion of macro 'BZ_ITAH'
+  569 |             BZ_ITAH(5);  BZ_ITAH(6);  BZ_ITAH(7);  BZ_ITAH(8);  BZ_ITAH(9);
+      |             ^~~~~~~
+../bzip2-1.0.8/compress.c:566:39: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  566 |                      s_code_sel_selCtr[mtfv_i] )
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~~~
+../bzip2-1.0.8/compress.c:569:26: note: in expansion of macro 'BZ_ITAH'
+  569 |             BZ_ITAH(5);  BZ_ITAH(6);  BZ_ITAH(7);  BZ_ITAH(8);  BZ_ITAH(9);
+      |                          ^~~~~~~
+../bzip2-1.0.8/compress.c:566:39: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  566 |                      s_code_sel_selCtr[mtfv_i] )
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~~~
+../bzip2-1.0.8/compress.c:569:39: note: in expansion of macro 'BZ_ITAH'
+  569 |             BZ_ITAH(5);  BZ_ITAH(6);  BZ_ITAH(7);  BZ_ITAH(8);  BZ_ITAH(9);
+      |                                       ^~~~~~~
+../bzip2-1.0.8/compress.c:566:39: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  566 |                      s_code_sel_selCtr[mtfv_i] )
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~~~
+../bzip2-1.0.8/compress.c:569:52: note: in expansion of macro 'BZ_ITAH'
+  569 |             BZ_ITAH(5);  BZ_ITAH(6);  BZ_ITAH(7);  BZ_ITAH(8);  BZ_ITAH(9);
+      |                                                    ^~~~~~~
+../bzip2-1.0.8/compress.c:566:39: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  566 |                      s_code_sel_selCtr[mtfv_i] )
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~~~
+../bzip2-1.0.8/compress.c:569:65: note: in expansion of macro 'BZ_ITAH'
+  569 |             BZ_ITAH(5);  BZ_ITAH(6);  BZ_ITAH(7);  BZ_ITAH(8);  BZ_ITAH(9);
+      |                                                                 ^~~~~~~
+../bzip2-1.0.8/compress.c:566:39: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  566 |                      s_code_sel_selCtr[mtfv_i] )
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~~~
+../bzip2-1.0.8/compress.c:570:13: note: in expansion of macro 'BZ_ITAH'
+  570 |             BZ_ITAH(10); BZ_ITAH(11); BZ_ITAH(12); BZ_ITAH(13); BZ_ITAH(14);
+      |             ^~~~~~~
+../bzip2-1.0.8/compress.c:566:39: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  566 |                      s_code_sel_selCtr[mtfv_i] )
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~~~
+../bzip2-1.0.8/compress.c:570:26: note: in expansion of macro 'BZ_ITAH'
+  570 |             BZ_ITAH(10); BZ_ITAH(11); BZ_ITAH(12); BZ_ITAH(13); BZ_ITAH(14);
+      |                          ^~~~~~~
+../bzip2-1.0.8/compress.c:566:39: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  566 |                      s_code_sel_selCtr[mtfv_i] )
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~~~
+../bzip2-1.0.8/compress.c:570:39: note: in expansion of macro 'BZ_ITAH'
+  570 |             BZ_ITAH(10); BZ_ITAH(11); BZ_ITAH(12); BZ_ITAH(13); BZ_ITAH(14);
+      |                                       ^~~~~~~
+../bzip2-1.0.8/compress.c:566:39: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  566 |                      s_code_sel_selCtr[mtfv_i] )
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~~~
+../bzip2-1.0.8/compress.c:570:52: note: in expansion of macro 'BZ_ITAH'
+  570 |             BZ_ITAH(10); BZ_ITAH(11); BZ_ITAH(12); BZ_ITAH(13); BZ_ITAH(14);
+      |                                                    ^~~~~~~
+../bzip2-1.0.8/compress.c:566:39: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  566 |                      s_code_sel_selCtr[mtfv_i] )
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~~~
+../bzip2-1.0.8/compress.c:570:65: note: in expansion of macro 'BZ_ITAH'
+  570 |             BZ_ITAH(10); BZ_ITAH(11); BZ_ITAH(12); BZ_ITAH(13); BZ_ITAH(14);
+      |                                                                 ^~~~~~~
+../bzip2-1.0.8/compress.c:566:39: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  566 |                      s_code_sel_selCtr[mtfv_i] )
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~~~
+../bzip2-1.0.8/compress.c:571:13: note: in expansion of macro 'BZ_ITAH'
+  571 |             BZ_ITAH(15); BZ_ITAH(16); BZ_ITAH(17); BZ_ITAH(18); BZ_ITAH(19);
+      |             ^~~~~~~
+../bzip2-1.0.8/compress.c:566:39: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  566 |                      s_code_sel_selCtr[mtfv_i] )
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~~~
+../bzip2-1.0.8/compress.c:571:26: note: in expansion of macro 'BZ_ITAH'
+  571 |             BZ_ITAH(15); BZ_ITAH(16); BZ_ITAH(17); BZ_ITAH(18); BZ_ITAH(19);
+      |                          ^~~~~~~
+../bzip2-1.0.8/compress.c:566:39: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  566 |                      s_code_sel_selCtr[mtfv_i] )
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~~~
+../bzip2-1.0.8/compress.c:571:39: note: in expansion of macro 'BZ_ITAH'
+  571 |             BZ_ITAH(15); BZ_ITAH(16); BZ_ITAH(17); BZ_ITAH(18); BZ_ITAH(19);
+      |                                       ^~~~~~~
+../bzip2-1.0.8/compress.c:566:39: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  566 |                      s_code_sel_selCtr[mtfv_i] )
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~~~
+../bzip2-1.0.8/compress.c:571:52: note: in expansion of macro 'BZ_ITAH'
+  571 |             BZ_ITAH(15); BZ_ITAH(16); BZ_ITAH(17); BZ_ITAH(18); BZ_ITAH(19);
+      |                                                    ^~~~~~~
+../bzip2-1.0.8/compress.c:566:39: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  566 |                      s_code_sel_selCtr[mtfv_i] )
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~~~
+../bzip2-1.0.8/compress.c:571:65: note: in expansion of macro 'BZ_ITAH'
+  571 |             BZ_ITAH(15); BZ_ITAH(16); BZ_ITAH(17); BZ_ITAH(18); BZ_ITAH(19);
+      |                                                                 ^~~~~~~
+../bzip2-1.0.8/compress.c:566:39: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  566 |                      s_code_sel_selCtr[mtfv_i] )
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~~~
+../bzip2-1.0.8/compress.c:572:13: note: in expansion of macro 'BZ_ITAH'
+  572 |             BZ_ITAH(20); BZ_ITAH(21); BZ_ITAH(22); BZ_ITAH(23); BZ_ITAH(24);
+      |             ^~~~~~~
+../bzip2-1.0.8/compress.c:566:39: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  566 |                      s_code_sel_selCtr[mtfv_i] )
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~~~
+../bzip2-1.0.8/compress.c:572:26: note: in expansion of macro 'BZ_ITAH'
+  572 |             BZ_ITAH(20); BZ_ITAH(21); BZ_ITAH(22); BZ_ITAH(23); BZ_ITAH(24);
+      |                          ^~~~~~~
+../bzip2-1.0.8/compress.c:566:39: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  566 |                      s_code_sel_selCtr[mtfv_i] )
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~~~
+../bzip2-1.0.8/compress.c:572:39: note: in expansion of macro 'BZ_ITAH'
+  572 |             BZ_ITAH(20); BZ_ITAH(21); BZ_ITAH(22); BZ_ITAH(23); BZ_ITAH(24);
+      |                                       ^~~~~~~
+../bzip2-1.0.8/compress.c:566:39: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  566 |                      s_code_sel_selCtr[mtfv_i] )
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~~~
+../bzip2-1.0.8/compress.c:572:52: note: in expansion of macro 'BZ_ITAH'
+  572 |             BZ_ITAH(20); BZ_ITAH(21); BZ_ITAH(22); BZ_ITAH(23); BZ_ITAH(24);
+      |                                                    ^~~~~~~
+../bzip2-1.0.8/compress.c:566:39: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  566 |                      s_code_sel_selCtr[mtfv_i] )
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~~~
+../bzip2-1.0.8/compress.c:572:65: note: in expansion of macro 'BZ_ITAH'
+  572 |             BZ_ITAH(20); BZ_ITAH(21); BZ_ITAH(22); BZ_ITAH(23); BZ_ITAH(24);
+      |                                                                 ^~~~~~~
+../bzip2-1.0.8/compress.c:566:39: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  566 |                      s_code_sel_selCtr[mtfv_i] )
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~~~
+../bzip2-1.0.8/compress.c:573:13: note: in expansion of macro 'BZ_ITAH'
+  573 |             BZ_ITAH(25); BZ_ITAH(26); BZ_ITAH(27); BZ_ITAH(28); BZ_ITAH(29);
+      |             ^~~~~~~
+../bzip2-1.0.8/compress.c:566:39: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  566 |                      s_code_sel_selCtr[mtfv_i] )
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~~~
+../bzip2-1.0.8/compress.c:573:26: note: in expansion of macro 'BZ_ITAH'
+  573 |             BZ_ITAH(25); BZ_ITAH(26); BZ_ITAH(27); BZ_ITAH(28); BZ_ITAH(29);
+      |                          ^~~~~~~
+../bzip2-1.0.8/compress.c:566:39: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  566 |                      s_code_sel_selCtr[mtfv_i] )
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~~~
+../bzip2-1.0.8/compress.c:573:39: note: in expansion of macro 'BZ_ITAH'
+  573 |             BZ_ITAH(25); BZ_ITAH(26); BZ_ITAH(27); BZ_ITAH(28); BZ_ITAH(29);
+      |                                       ^~~~~~~
+../bzip2-1.0.8/compress.c:566:39: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  566 |                      s_code_sel_selCtr[mtfv_i] )
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~~~
+../bzip2-1.0.8/compress.c:573:52: note: in expansion of macro 'BZ_ITAH'
+  573 |             BZ_ITAH(25); BZ_ITAH(26); BZ_ITAH(27); BZ_ITAH(28); BZ_ITAH(29);
+      |                                                    ^~~~~~~
+../bzip2-1.0.8/compress.c:566:39: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  566 |                      s_code_sel_selCtr[mtfv_i] )
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~~~
+../bzip2-1.0.8/compress.c:573:65: note: in expansion of macro 'BZ_ITAH'
+  573 |             BZ_ITAH(25); BZ_ITAH(26); BZ_ITAH(27); BZ_ITAH(28); BZ_ITAH(29);
+      |                                                                 ^~~~~~~
+../bzip2-1.0.8/compress.c:566:39: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  566 |                      s_code_sel_selCtr[mtfv_i] )
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~~~
+../bzip2-1.0.8/compress.c:574:13: note: in expansion of macro 'BZ_ITAH'
+  574 |             BZ_ITAH(30); BZ_ITAH(31); BZ_ITAH(32); BZ_ITAH(33); BZ_ITAH(34);
+      |             ^~~~~~~
+../bzip2-1.0.8/compress.c:566:39: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  566 |                      s_code_sel_selCtr[mtfv_i] )
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~~~
+../bzip2-1.0.8/compress.c:574:26: note: in expansion of macro 'BZ_ITAH'
+  574 |             BZ_ITAH(30); BZ_ITAH(31); BZ_ITAH(32); BZ_ITAH(33); BZ_ITAH(34);
+      |                          ^~~~~~~
+../bzip2-1.0.8/compress.c:566:39: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  566 |                      s_code_sel_selCtr[mtfv_i] )
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~~~
+../bzip2-1.0.8/compress.c:574:39: note: in expansion of macro 'BZ_ITAH'
+  574 |             BZ_ITAH(30); BZ_ITAH(31); BZ_ITAH(32); BZ_ITAH(33); BZ_ITAH(34);
+      |                                       ^~~~~~~
+../bzip2-1.0.8/compress.c:566:39: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  566 |                      s_code_sel_selCtr[mtfv_i] )
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~~~
+../bzip2-1.0.8/compress.c:574:52: note: in expansion of macro 'BZ_ITAH'
+  574 |             BZ_ITAH(30); BZ_ITAH(31); BZ_ITAH(32); BZ_ITAH(33); BZ_ITAH(34);
+      |                                                    ^~~~~~~
+../bzip2-1.0.8/compress.c:566:39: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  566 |                      s_code_sel_selCtr[mtfv_i] )
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~~~
+../bzip2-1.0.8/compress.c:574:65: note: in expansion of macro 'BZ_ITAH'
+  574 |             BZ_ITAH(30); BZ_ITAH(31); BZ_ITAH(32); BZ_ITAH(33); BZ_ITAH(34);
+      |                                                                 ^~~~~~~
+../bzip2-1.0.8/compress.c:566:39: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  566 |                      s_code_sel_selCtr[mtfv_i] )
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~~~
+../bzip2-1.0.8/compress.c:575:13: note: in expansion of macro 'BZ_ITAH'
+  575 |             BZ_ITAH(35); BZ_ITAH(36); BZ_ITAH(37); BZ_ITAH(38); BZ_ITAH(39);
+      |             ^~~~~~~
+../bzip2-1.0.8/compress.c:566:39: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  566 |                      s_code_sel_selCtr[mtfv_i] )
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~~~
+../bzip2-1.0.8/compress.c:575:26: note: in expansion of macro 'BZ_ITAH'
+  575 |             BZ_ITAH(35); BZ_ITAH(36); BZ_ITAH(37); BZ_ITAH(38); BZ_ITAH(39);
+      |                          ^~~~~~~
+../bzip2-1.0.8/compress.c:566:39: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  566 |                      s_code_sel_selCtr[mtfv_i] )
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~~~
+../bzip2-1.0.8/compress.c:575:39: note: in expansion of macro 'BZ_ITAH'
+  575 |             BZ_ITAH(35); BZ_ITAH(36); BZ_ITAH(37); BZ_ITAH(38); BZ_ITAH(39);
+      |                                       ^~~~~~~
+../bzip2-1.0.8/compress.c:566:39: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  566 |                      s_code_sel_selCtr[mtfv_i] )
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~~~
+../bzip2-1.0.8/compress.c:575:52: note: in expansion of macro 'BZ_ITAH'
+  575 |             BZ_ITAH(35); BZ_ITAH(36); BZ_ITAH(37); BZ_ITAH(38); BZ_ITAH(39);
+      |                                                    ^~~~~~~
+../bzip2-1.0.8/compress.c:566:39: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  566 |                      s_code_sel_selCtr[mtfv_i] )
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~~~
+../bzip2-1.0.8/compress.c:575:65: note: in expansion of macro 'BZ_ITAH'
+  575 |             BZ_ITAH(35); BZ_ITAH(36); BZ_ITAH(37); BZ_ITAH(38); BZ_ITAH(39);
+      |                                                                 ^~~~~~~
+../bzip2-1.0.8/compress.c:566:39: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  566 |                      s_code_sel_selCtr[mtfv_i] )
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~~~
+../bzip2-1.0.8/compress.c:576:13: note: in expansion of macro 'BZ_ITAH'
+  576 |             BZ_ITAH(40); BZ_ITAH(41); BZ_ITAH(42); BZ_ITAH(43); BZ_ITAH(44);
+      |             ^~~~~~~
+../bzip2-1.0.8/compress.c:566:39: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  566 |                      s_code_sel_selCtr[mtfv_i] )
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~~~
+../bzip2-1.0.8/compress.c:576:26: note: in expansion of macro 'BZ_ITAH'
+  576 |             BZ_ITAH(40); BZ_ITAH(41); BZ_ITAH(42); BZ_ITAH(43); BZ_ITAH(44);
+      |                          ^~~~~~~
+../bzip2-1.0.8/compress.c:566:39: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  566 |                      s_code_sel_selCtr[mtfv_i] )
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~~~
+../bzip2-1.0.8/compress.c:576:39: note: in expansion of macro 'BZ_ITAH'
+  576 |             BZ_ITAH(40); BZ_ITAH(41); BZ_ITAH(42); BZ_ITAH(43); BZ_ITAH(44);
+      |                                       ^~~~~~~
+../bzip2-1.0.8/compress.c:566:39: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  566 |                      s_code_sel_selCtr[mtfv_i] )
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~~~
+../bzip2-1.0.8/compress.c:576:52: note: in expansion of macro 'BZ_ITAH'
+  576 |             BZ_ITAH(40); BZ_ITAH(41); BZ_ITAH(42); BZ_ITAH(43); BZ_ITAH(44);
+      |                                                    ^~~~~~~
+../bzip2-1.0.8/compress.c:566:39: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  566 |                      s_code_sel_selCtr[mtfv_i] )
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~~~
+../bzip2-1.0.8/compress.c:576:65: note: in expansion of macro 'BZ_ITAH'
+  576 |             BZ_ITAH(40); BZ_ITAH(41); BZ_ITAH(42); BZ_ITAH(43); BZ_ITAH(44);
+      |                                                                 ^~~~~~~
+../bzip2-1.0.8/compress.c:566:39: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  566 |                      s_code_sel_selCtr[mtfv_i] )
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~~~
+../bzip2-1.0.8/compress.c:577:13: note: in expansion of macro 'BZ_ITAH'
+  577 |             BZ_ITAH(45); BZ_ITAH(46); BZ_ITAH(47); BZ_ITAH(48); BZ_ITAH(49);
+      |             ^~~~~~~
+../bzip2-1.0.8/compress.c:566:39: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  566 |                      s_code_sel_selCtr[mtfv_i] )
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~~~
+../bzip2-1.0.8/compress.c:577:26: note: in expansion of macro 'BZ_ITAH'
+  577 |             BZ_ITAH(45); BZ_ITAH(46); BZ_ITAH(47); BZ_ITAH(48); BZ_ITAH(49);
+      |                          ^~~~~~~
+../bzip2-1.0.8/compress.c:566:39: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  566 |                      s_code_sel_selCtr[mtfv_i] )
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~~~
+../bzip2-1.0.8/compress.c:577:39: note: in expansion of macro 'BZ_ITAH'
+  577 |             BZ_ITAH(45); BZ_ITAH(46); BZ_ITAH(47); BZ_ITAH(48); BZ_ITAH(49);
+      |                                       ^~~~~~~
+../bzip2-1.0.8/compress.c:566:39: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  566 |                      s_code_sel_selCtr[mtfv_i] )
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~~~
+../bzip2-1.0.8/compress.c:577:52: note: in expansion of macro 'BZ_ITAH'
+  577 |             BZ_ITAH(45); BZ_ITAH(46); BZ_ITAH(47); BZ_ITAH(48); BZ_ITAH(49);
+      |                                                    ^~~~~~~
+../bzip2-1.0.8/compress.c:566:39: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  566 |                      s_code_sel_selCtr[mtfv_i] )
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~~~
+../bzip2-1.0.8/compress.c:577:65: note: in expansion of macro 'BZ_ITAH'
+  577 |             BZ_ITAH(45); BZ_ITAH(46); BZ_ITAH(47); BZ_ITAH(48); BZ_ITAH(49);
+      |                                                                 ^~~~~~~
+../bzip2-1.0.8/compress.c:586:49: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  586 |                   s->code [s->selector[selCtr]] [mtfv[i]] );
+      |                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~
+../bzip2-1.0.8/compress.c: In function 'BZ2_compressBlock':
+../bzip2-1.0.8/compress.c:650:21: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  650 |       bsW ( s, 24, s->origPtr );
+      |                    ~^~~~~~~~~
+/bin/bash ./libtool  --tag=CC   --mode=compile arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot -DPACKAGE_NAME=\"bzip2\" -DPACKAGE_TARNAME=\"bzip2\" -DPACKAGE_VERSION=\"1.0.8\" -DPACKAGE_STRING=\"bzip2\ 1.0.8\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"bzip2\" -DVERSION=\"1.0.8\" -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_UNISTD_H=1 -DSTDC_HEADERS=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -I. -I../bzip2-1.0.8   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64  -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/bzip2-1.0.8=/usr/src/debug/bzip2/1.0.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/bzip2-1.0.8=/usr/src/debug/bzip2/1.0.8-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/build=/usr/src/debug/bzip2/1.0.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/build=/usr/src/debug/bzip2/1.0.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot-native=   -Wconversion -Wno-error -fPIC -fpic -Winline -fno-strength-reduce -D_FILE_OFFSET_BITS=64 -c -o decompress.lo ../bzip2-1.0.8/decompress.c
+libtool: compile:  arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot -DPACKAGE_NAME=\"bzip2\" -DPACKAGE_TARNAME=\"bzip2\" -DPACKAGE_VERSION=\"1.0.8\" "-DPACKAGE_STRING=\"bzip2 1.0.8\"" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"bzip2\" -DVERSION=\"1.0.8\" -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_UNISTD_H=1 -DSTDC_HEADERS=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -I. -I../bzip2-1.0.8 -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/bzip2-1.0.8=/usr/src/debug/bzip2/1.0.8-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/bzip2-1.0.8=/usr/src/debug/bzip2/1.0.8-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/build=/usr/src/debug/bzip2/1.0.8-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/build=/usr/src/debug/bzip2/1.0.8-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot-native= -Wconversion -Wno-error -fPIC -fpic -Winline -fno-strength-reduce -D_FILE_OFFSET_BITS=64 -c ../bzip2-1.0.8/decompress.c  -fPIC -DPIC -o .libs/decompress.o
+../bzip2-1.0.8/decompress.c: In function 'makeMaps_d':
+../bzip2-1.0.8/decompress.c:33:37: warning: conversion from 'Int32' {aka 'int'} to 'UChar' {aka 'unsigned char'} may change value [-Wconversion]
+   33 |          s->seqToUnseq[s->nInUse] = i;
+      |                                     ^
+../bzip2-1.0.8/decompress.c: In function 'BZ2_decompress':
+../bzip2-1.0.8/decompress.c:51:16: warning: conversion from 'UInt32' {aka 'unsigned int'} to 'UChar' {aka 'unsigned char'} may change value [-Wconversion]
+   51 |          vvv = v;                                 \
+      |                ^
+../bzip2-1.0.8/decompress.c:68:4: note: in expansion of macro 'GET_BITS'
+   68 |    GET_BITS(lll,uuu,8)
+      |    ^~~~~~~~
+../bzip2-1.0.8/decompress.c:197:7: note: in expansion of macro 'GET_UCHAR'
+  197 |       GET_UCHAR(BZ_X_MAGIC_1, uc);
+      |       ^~~~~~~~~
+../bzip2-1.0.8/decompress.c:51:16: warning: conversion from 'UInt32' {aka 'unsigned int'} to 'UChar' {aka 'unsigned char'} may change value [-Wconversion]
+   51 |          vvv = v;                                 \
+      |                ^
+../bzip2-1.0.8/decompress.c:68:4: note: in expansion of macro 'GET_BITS'
+   68 |    GET_BITS(lll,uuu,8)
+      |    ^~~~~~~~
+../bzip2-1.0.8/decompress.c:200:7: note: in expansion of macro 'GET_UCHAR'
+  200 |       GET_UCHAR(BZ_X_MAGIC_2, uc);
+      |       ^~~~~~~~~
+../bzip2-1.0.8/decompress.c:51:16: warning: conversion from 'UInt32' {aka 'unsigned int'} to 'UChar' {aka 'unsigned char'} may change value [-Wconversion]
+   51 |          vvv = v;                                 \
+      |                ^
+../bzip2-1.0.8/decompress.c:68:4: note: in expansion of macro 'GET_BITS'
+   68 |    GET_BITS(lll,uuu,8)
+      |    ^~~~~~~~
+../bzip2-1.0.8/decompress.c:203:7: note: in expansion of macro 'GET_UCHAR'
+  203 |       GET_UCHAR(BZ_X_MAGIC_3, uc)
+      |       ^~~~~~~~~
+../bzip2-1.0.8/decompress.c:51:16: warning: conversion to 'Int32' {aka 'int'} from 'UInt32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+   51 |          vvv = v;                                 \
+      |                ^
+../bzip2-1.0.8/decompress.c:206:7: note: in expansion of macro 'GET_BITS'
+  206 |       GET_BITS(BZ_X_MAGIC_4, s->blockSize100k, 8)
+      |       ^~~~~~~~
+In file included from ../bzip2-1.0.8/decompress.c:22:
+../bzip2-1.0.8/decompress.c:212:55: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  212 |          s->ll16 = BZALLOC( s->blockSize100k * 100000 * sizeof(UInt16) );
+      |                                                       ^
+../bzip2-1.0.8/bzlib_private.h:102:52: note: in definition of macro 'BZALLOC'
+  102 | #define BZALLOC(nnn) (strm->bzalloc)(strm->opaque,(nnn),1)
+      |                                                    ^~~
+../bzip2-1.0.8/decompress.c:212:55: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  212 |          s->ll16 = BZALLOC( s->blockSize100k * 100000 * sizeof(UInt16) );
+../bzip2-1.0.8/bzlib_private.h:102:52: note: in definition of macro 'BZALLOC'
+  102 | #define BZALLOC(nnn) (strm->bzalloc)(strm->opaque,(nnn),1)
+      |                                                    ^~~
+../bzip2-1.0.8/decompress.c:214:62: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  214 |                       ((1 + s->blockSize100k * 100000) >> 1) * sizeof(UChar)
+      |                                                              ^
+../bzip2-1.0.8/bzlib_private.h:102:52: note: in definition of macro 'BZALLOC'
+  102 | #define BZALLOC(nnn) (strm->bzalloc)(strm->opaque,(nnn),1)
+      |                                                    ^~~
+../bzip2-1.0.8/decompress.c:214:62: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  214 |                       ((1 + s->blockSize100k * 100000) >> 1) * sizeof(UChar)
+../bzip2-1.0.8/bzlib_private.h:102:52: note: in definition of macro 'BZALLOC'
+  102 | #define BZALLOC(nnn) (strm->bzalloc)(strm->opaque,(nnn),1)
+      |                                                    ^~~
+../bzip2-1.0.8/decompress.c:218:54: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  218 |          s->tt  = BZALLOC( s->blockSize100k * 100000 * sizeof(Int32) );
+      |                                                      ^
+../bzip2-1.0.8/bzlib_private.h:102:52: note: in definition of macro 'BZALLOC'
+  102 | #define BZALLOC(nnn) (strm->bzalloc)(strm->opaque,(nnn),1)
+      |                                                    ^~~
+../bzip2-1.0.8/decompress.c:218:54: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  218 |          s->tt  = BZALLOC( s->blockSize100k * 100000 * sizeof(Int32) );
+../bzip2-1.0.8/bzlib_private.h:102:52: note: in definition of macro 'BZALLOC'
+  102 | #define BZALLOC(nnn) (strm->bzalloc)(strm->opaque,(nnn),1)
+      |                                                    ^~~
+../bzip2-1.0.8/decompress.c:51:16: warning: conversion from 'UInt32' {aka 'unsigned int'} to 'UChar' {aka 'unsigned char'} may change value [-Wconversion]
+   51 |          vvv = v;                                 \
+      |                ^
+../bzip2-1.0.8/decompress.c:68:4: note: in expansion of macro 'GET_BITS'
+   68 |    GET_BITS(lll,uuu,8)
+      |    ^~~~~~~~
+../bzip2-1.0.8/decompress.c:222:7: note: in expansion of macro 'GET_UCHAR'
+  222 |       GET_UCHAR(BZ_X_BLKHDR_1, uc);
+      |       ^~~~~~~~~
+../bzip2-1.0.8/decompress.c:51:16: warning: conversion from 'UInt32' {aka 'unsigned int'} to 'UChar' {aka 'unsigned char'} may change value [-Wconversion]
+   51 |          vvv = v;                                 \
+      |                ^
+../bzip2-1.0.8/decompress.c:68:4: note: in expansion of macro 'GET_BITS'
+   68 |    GET_BITS(lll,uuu,8)
+      |    ^~~~~~~~
+../bzip2-1.0.8/decompress.c:226:7: note: in expansion of macro 'GET_UCHAR'
+  226 |       GET_UCHAR(BZ_X_BLKHDR_2, uc);
+      |       ^~~~~~~~~
+../bzip2-1.0.8/decompress.c:51:16: warning: conversion from 'UInt32' {aka 'unsigned int'} to 'UChar' {aka 'unsigned char'} may change value [-Wconversion]
+   51 |          vvv = v;                                 \
+      |                ^
+../bzip2-1.0.8/decompress.c:68:4: note: in expansion of macro 'GET_BITS'
+   68 |    GET_BITS(lll,uuu,8)
+      |    ^~~~~~~~
+../bzip2-1.0.8/decompress.c:228:7: note: in expansion of macro 'GET_UCHAR'
+  228 |       GET_UCHAR(BZ_X_BLKHDR_3, uc);
+      |       ^~~~~~~~~
+../bzip2-1.0.8/decompress.c:51:16: warning: conversion from 'UInt32' {aka 'unsigned int'} to 'UChar' {aka 'unsigned char'} may change value [-Wconversion]
+   51 |          vvv = v;                                 \
+      |                ^
+../bzip2-1.0.8/decompress.c:68:4: note: in expansion of macro 'GET_BITS'
+   68 |    GET_BITS(lll,uuu,8)
+      |    ^~~~~~~~
+../bzip2-1.0.8/decompress.c:230:7: note: in expansion of macro 'GET_UCHAR'
+  230 |       GET_UCHAR(BZ_X_BLKHDR_4, uc);
+      |       ^~~~~~~~~
+../bzip2-1.0.8/decompress.c:51:16: warning: conversion from 'UInt32' {aka 'unsigned int'} to 'UChar' {aka 'unsigned char'} may change value [-Wconversion]
+   51 |          vvv = v;                                 \
+      |                ^
+../bzip2-1.0.8/decompress.c:68:4: note: in expansion of macro 'GET_BITS'
+   68 |    GET_BITS(lll,uuu,8)
+      |    ^~~~~~~~
+../bzip2-1.0.8/decompress.c:232:7: note: in expansion of macro 'GET_UCHAR'
+  232 |       GET_UCHAR(BZ_X_BLKHDR_5, uc);
+      |       ^~~~~~~~~
+../bzip2-1.0.8/decompress.c:51:16: warning: conversion from 'UInt32' {aka 'unsigned int'} to 'UChar' {aka 'unsigned char'} may change value [-Wconversion]
+   51 |          vvv = v;                                 \
+      |                ^
+../bzip2-1.0.8/decompress.c:68:4: note: in expansion of macro 'GET_BITS'
+   68 |    GET_BITS(lll,uuu,8)
+      |    ^~~~~~~~
+../bzip2-1.0.8/decompress.c:234:7: note: in expansion of macro 'GET_UCHAR'
+  234 |       GET_UCHAR(BZ_X_BLKHDR_6, uc);
+      |       ^~~~~~~~~
+../bzip2-1.0.8/decompress.c:51:16: warning: conversion from 'UInt32' {aka 'unsigned int'} to 'UChar' {aka 'unsigned char'} may change value [-Wconversion]
+   51 |          vvv = v;                                 \
+      |                ^
+../bzip2-1.0.8/decompress.c:68:4: note: in expansion of macro 'GET_BITS'
+   68 |    GET_BITS(lll,uuu,8)
+      |    ^~~~~~~~
+../bzip2-1.0.8/decompress.c:242:7: note: in expansion of macro 'GET_UCHAR'
+  242 |       GET_UCHAR(BZ_X_BCRC_1, uc);
+      |       ^~~~~~~~~
+../bzip2-1.0.8/decompress.c:51:16: warning: conversion from 'UInt32' {aka 'unsigned int'} to 'UChar' {aka 'unsigned char'} may change value [-Wconversion]
+   51 |          vvv = v;                                 \
+      |                ^
+../bzip2-1.0.8/decompress.c:68:4: note: in expansion of macro 'GET_BITS'
+   68 |    GET_BITS(lll,uuu,8)
+      |    ^~~~~~~~
+../bzip2-1.0.8/decompress.c:244:7: note: in expansion of macro 'GET_UCHAR'
+  244 |       GET_UCHAR(BZ_X_BCRC_2, uc);
+      |       ^~~~~~~~~
+../bzip2-1.0.8/decompress.c:51:16: warning: conversion from 'UInt32' {aka 'unsigned int'} to 'UChar' {aka 'unsigned char'} may change value [-Wconversion]
+   51 |          vvv = v;                                 \
+      |                ^
+../bzip2-1.0.8/decompress.c:68:4: note: in expansion of macro 'GET_BITS'
+   68 |    GET_BITS(lll,uuu,8)
+      |    ^~~~~~~~
+../bzip2-1.0.8/decompress.c:246:7: note: in expansion of macro 'GET_UCHAR'
+  246 |       GET_UCHAR(BZ_X_BCRC_3, uc);
+      |       ^~~~~~~~~
+../bzip2-1.0.8/decompress.c:51:16: warning: conversion from 'UInt32' {aka 'unsigned int'} to 'UChar' {aka 'unsigned char'} may change value [-Wconversion]
+   51 |          vvv = v;                                 \
+      |                ^
+../bzip2-1.0.8/decompress.c:68:4: note: in expansion of macro 'GET_BITS'
+   68 |    GET_BITS(lll,uuu,8)
+      |    ^~~~~~~~
+../bzip2-1.0.8/decompress.c:248:7: note: in expansion of macro 'GET_UCHAR'
+  248 |       GET_UCHAR(BZ_X_BCRC_4, uc);
+      |       ^~~~~~~~~
+../bzip2-1.0.8/decompress.c:51:16: warning: conversion from 'UInt32' {aka 'unsigned int'} to 'Bool' {aka 'unsigned char'} may change value [-Wconversion]
+   51 |          vvv = v;                                 \
+      |                ^
+../bzip2-1.0.8/decompress.c:251:7: note: in expansion of macro 'GET_BITS'
+  251 |       GET_BITS(BZ_X_RANDBIT, s->blockRandomised, 1);
+      |       ^~~~~~~~
+../bzip2-1.0.8/decompress.c:51:16: warning: conversion from 'UInt32' {aka 'unsigned int'} to 'UChar' {aka 'unsigned char'} may change value [-Wconversion]
+   51 |          vvv = v;                                 \
+      |                ^
+../bzip2-1.0.8/decompress.c:68:4: note: in expansion of macro 'GET_BITS'
+   68 |    GET_BITS(lll,uuu,8)
+      |    ^~~~~~~~
+../bzip2-1.0.8/decompress.c:254:7: note: in expansion of macro 'GET_UCHAR'
+  254 |       GET_UCHAR(BZ_X_ORIGPTR_1, uc);
+      |       ^~~~~~~~~
+../bzip2-1.0.8/decompress.c:51:16: warning: conversion from 'UInt32' {aka 'unsigned int'} to 'UChar' {aka 'unsigned char'} may change value [-Wconversion]
+   51 |          vvv = v;                                 \
+      |                ^
+../bzip2-1.0.8/decompress.c:68:4: note: in expansion of macro 'GET_BITS'
+   68 |    GET_BITS(lll,uuu,8)
+      |    ^~~~~~~~
+../bzip2-1.0.8/decompress.c:256:7: note: in expansion of macro 'GET_UCHAR'
+  256 |       GET_UCHAR(BZ_X_ORIGPTR_2, uc);
+      |       ^~~~~~~~~
+../bzip2-1.0.8/decompress.c:51:16: warning: conversion from 'UInt32' {aka 'unsigned int'} to 'UChar' {aka 'unsigned char'} may change value [-Wconversion]
+   51 |          vvv = v;                                 \
+      |                ^
+../bzip2-1.0.8/decompress.c:68:4: note: in expansion of macro 'GET_BITS'
+   68 |    GET_BITS(lll,uuu,8)
+      |    ^~~~~~~~
+../bzip2-1.0.8/decompress.c:258:7: note: in expansion of macro 'GET_UCHAR'
+  258 |       GET_UCHAR(BZ_X_ORIGPTR_3, uc);
+      |       ^~~~~~~~~
+../bzip2-1.0.8/decompress.c:51:16: warning: conversion from 'UInt32' {aka 'unsigned int'} to 'UChar' {aka 'unsigned char'} may change value [-Wconversion]
+   51 |          vvv = v;                                 \
+      |                ^
+../bzip2-1.0.8/decompress.c:71:4: note: in expansion of macro 'GET_BITS'
+   71 |    GET_BITS(lll,uuu,1)
+      |    ^~~~~~~~
+../bzip2-1.0.8/decompress.c:268:10: note: in expansion of macro 'GET_BIT'
+  268 |          GET_BIT(BZ_X_MAPPING_1, uc);
+      |          ^~~~~~~
+../bzip2-1.0.8/decompress.c:51:16: warning: conversion from 'UInt32' {aka 'unsigned int'} to 'UChar' {aka 'unsigned char'} may change value [-Wconversion]
+   51 |          vvv = v;                                 \
+      |                ^
+../bzip2-1.0.8/decompress.c:71:4: note: in expansion of macro 'GET_BITS'
+   71 |    GET_BITS(lll,uuu,1)
+      |    ^~~~~~~~
+../bzip2-1.0.8/decompress.c:279:16: note: in expansion of macro 'GET_BIT'
+  279 |                GET_BIT(BZ_X_MAPPING_2, uc);
+      |                ^~~~~~~
+../bzip2-1.0.8/decompress.c:51:16: warning: conversion to 'Int32' {aka 'int'} from 'UInt32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+   51 |          vvv = v;                                 \
+      |                ^
+../bzip2-1.0.8/decompress.c:287:7: note: in expansion of macro 'GET_BITS'
+  287 |       GET_BITS(BZ_X_SELECTOR_1, nGroups, 3);
+      |       ^~~~~~~~
+../bzip2-1.0.8/decompress.c:51:16: warning: conversion to 'Int32' {aka 'int'} from 'UInt32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+   51 |          vvv = v;                                 \
+      |                ^
+../bzip2-1.0.8/decompress.c:289:7: note: in expansion of macro 'GET_BITS'
+  289 |       GET_BITS(BZ_X_SELECTOR_2, nSelectors, 15);
+      |       ^~~~~~~~
+../bzip2-1.0.8/decompress.c:51:16: warning: conversion from 'UInt32' {aka 'unsigned int'} to 'UChar' {aka 'unsigned char'} may change value [-Wconversion]
+   51 |          vvv = v;                                 \
+      |                ^
+../bzip2-1.0.8/decompress.c:71:4: note: in expansion of macro 'GET_BITS'
+   71 |    GET_BITS(lll,uuu,1)
+      |    ^~~~~~~~
+../bzip2-1.0.8/decompress.c:294:13: note: in expansion of macro 'GET_BIT'
+  294 |             GET_BIT(BZ_X_SELECTOR_3, uc);
+      |             ^~~~~~~
+../bzip2-1.0.8/decompress.c:303:32: warning: conversion from 'Int32' {aka 'int'} to 'UChar' {aka 'unsigned char'} may change value [-Wconversion]
+  303 |            s->selectorMtf[i] = j;
+      |                                ^
+../bzip2-1.0.8/decompress.c:51:16: warning: conversion to 'Int32' {aka 'int'} from 'UInt32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+   51 |          vvv = v;                                 \
+      |                ^
+../bzip2-1.0.8/decompress.c:324:10: note: in expansion of macro 'GET_BITS'
+  324 |          GET_BITS(BZ_X_CODING_1, curr, 5);
+      |          ^~~~~~~~
+../bzip2-1.0.8/decompress.c:51:16: warning: conversion from 'UInt32' {aka 'unsigned int'} to 'UChar' {aka 'unsigned char'} may change value [-Wconversion]
+   51 |          vvv = v;                                 \
+      |                ^
+../bzip2-1.0.8/decompress.c:71:4: note: in expansion of macro 'GET_BITS'
+   71 |    GET_BITS(lll,uuu,1)
+      |    ^~~~~~~~
+../bzip2-1.0.8/decompress.c:328:16: note: in expansion of macro 'GET_BIT'
+  328 |                GET_BIT(BZ_X_CODING_2, uc);
+      |                ^~~~~~~
+../bzip2-1.0.8/decompress.c:51:16: warning: conversion from 'UInt32' {aka 'unsigned int'} to 'UChar' {aka 'unsigned char'} may change value [-Wconversion]
+   51 |          vvv = v;                                 \
+      |                ^
+../bzip2-1.0.8/decompress.c:71:4: note: in expansion of macro 'GET_BITS'
+   71 |    GET_BITS(lll,uuu,1)
+      |    ^~~~~~~~
+../bzip2-1.0.8/decompress.c:330:16: note: in expansion of macro 'GET_BIT'
+  330 |                GET_BIT(BZ_X_CODING_3, uc);
+      |                ^~~~~~~
+../bzip2-1.0.8/decompress.c:333:28: warning: conversion from 'Int32' {aka 'int'} to 'UChar' {aka 'unsigned char'} may change value [-Wconversion]
+  333 |             s->len[t][i] = curr;
+      |                            ^~~~
+../bzip2-1.0.8/decompress.c:49:31: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+   49 |              (s->bsLive-nnn)) & ((1 << nnn)-1);   \
+      |                               ^
+../bzip2-1.0.8/decompress.c:89:4: note: in expansion of macro 'GET_BITS'
+   89 |    GET_BITS(label1, zvec, zn);                    \
+      |    ^~~~~~~~
+../bzip2-1.0.8/decompress.c:379:7: note: in expansion of macro 'GET_MTF_VAL'
+  379 |       GET_MTF_VAL(BZ_X_MTF_1, BZ_X_MTF_2, nextSym);
+      |       ^~~~~~~~~~~
+../bzip2-1.0.8/decompress.c:51:16: warning: conversion to 'Int32' {aka 'int'} from 'UInt32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+   51 |          vvv = v;                                 \
+      |                ^
+../bzip2-1.0.8/decompress.c:89:4: note: in expansion of macro 'GET_BITS'
+   89 |    GET_BITS(label1, zvec, zn);                    \
+      |    ^~~~~~~~
+../bzip2-1.0.8/decompress.c:379:7: note: in expansion of macro 'GET_MTF_VAL'
+  379 |       GET_MTF_VAL(BZ_X_MTF_1, BZ_X_MTF_2, nextSym);
+      |       ^~~~~~~~~~~
+../bzip2-1.0.8/decompress.c:51:16: warning: conversion to 'Int32' {aka 'int'} from 'UInt32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+   51 |          vvv = v;                                 \
+      |                ^
+../bzip2-1.0.8/decompress.c:71:4: note: in expansion of macro 'GET_BITS'
+   71 |    GET_BITS(lll,uuu,1)
+      |    ^~~~~~~~
+../bzip2-1.0.8/decompress.c:95:7: note: in expansion of macro 'GET_BIT'
+   95 |       GET_BIT(label2, zj);                        \
+      |       ^~~~~~~
+../bzip2-1.0.8/decompress.c:379:7: note: in expansion of macro 'GET_MTF_VAL'
+  379 |       GET_MTF_VAL(BZ_X_MTF_1, BZ_X_MTF_2, nextSym);
+      |       ^~~~~~~~~~~
+../bzip2-1.0.8/decompress.c:49:31: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+   49 |              (s->bsLive-nnn)) & ((1 << nnn)-1);   \
+      |                               ^
+../bzip2-1.0.8/decompress.c:89:4: note: in expansion of macro 'GET_BITS'
+   89 |    GET_BITS(label1, zvec, zn);                    \
+      |    ^~~~~~~~
+../bzip2-1.0.8/decompress.c:400:16: note: in expansion of macro 'GET_MTF_VAL'
+  400 |                GET_MTF_VAL(BZ_X_MTF_3, BZ_X_MTF_4, nextSym);
+      |                ^~~~~~~~~~~
+../bzip2-1.0.8/decompress.c:51:16: warning: conversion to 'Int32' {aka 'int'} from 'UInt32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+   51 |          vvv = v;                                 \
+      |                ^
+../bzip2-1.0.8/decompress.c:89:4: note: in expansion of macro 'GET_BITS'
+   89 |    GET_BITS(label1, zvec, zn);                    \
+      |    ^~~~~~~~
+../bzip2-1.0.8/decompress.c:400:16: note: in expansion of macro 'GET_MTF_VAL'
+  400 |                GET_MTF_VAL(BZ_X_MTF_3, BZ_X_MTF_4, nextSym);
+      |                ^~~~~~~~~~~
+../bzip2-1.0.8/decompress.c:51:16: warning: conversion to 'Int32' {aka 'int'} from 'UInt32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+   51 |          vvv = v;                                 \
+      |                ^
+../bzip2-1.0.8/decompress.c:71:4: note: in expansion of macro 'GET_BITS'
+   71 |    GET_BITS(lll,uuu,1)
+      |    ^~~~~~~~
+../bzip2-1.0.8/decompress.c:95:7: note: in expansion of macro 'GET_BIT'
+   95 |       GET_BIT(label2, zj);                        \
+      |       ^~~~~~~
+../bzip2-1.0.8/decompress.c:400:16: note: in expansion of macro 'GET_MTF_VAL'
+  400 |                GET_MTF_VAL(BZ_X_MTF_3, BZ_X_MTF_4, nextSym);
+      |                ^~~~~~~~~~~
+../bzip2-1.0.8/decompress.c:438:34: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  438 |                   uc = s->mtfa[pp+nn];
+      |                                  ^
+../bzip2-1.0.8/decompress.c:440:34: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  440 |                      Int32 z = pp+nn;
+      |                                  ^
+../bzip2-1.0.8/decompress.c:440:32: warning: conversion to 'Int32' {aka 'int'} from 'UInt32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  440 |                      Int32 z = pp+nn;
+      |                                ^~
+../bzip2-1.0.8/decompress.c:448:33: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  448 |                      s->mtfa[(pp+nn)] = s->mtfa[(pp+nn)-1]; nn--;
+      |                                 ^
+../bzip2-1.0.8/decompress.c:448:52: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  448 |                      s->mtfa[(pp+nn)] = s->mtfa[(pp+nn)-1]; nn--;
+      |                                                    ^
+../bzip2-1.0.8/decompress.c:453:25: warning: conversion to 'Int32' {aka 'int'} from 'UInt32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  453 |                   lno = nn / MTFL_SIZE;
+      |                         ^~
+../bzip2-1.0.8/decompress.c:49:31: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+   49 |              (s->bsLive-nnn)) & ((1 << nnn)-1);   \
+      |                               ^
+../bzip2-1.0.8/decompress.c:89:4: note: in expansion of macro 'GET_BITS'
+   89 |    GET_BITS(label1, zvec, zn);                    \
+      |    ^~~~~~~~
+../bzip2-1.0.8/decompress.c:489:13: note: in expansion of macro 'GET_MTF_VAL'
+  489 |             GET_MTF_VAL(BZ_X_MTF_5, BZ_X_MTF_6, nextSym);
+      |             ^~~~~~~~~~~
+../bzip2-1.0.8/decompress.c:51:16: warning: conversion to 'Int32' {aka 'int'} from 'UInt32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+   51 |          vvv = v;                                 \
+      |                ^
+../bzip2-1.0.8/decompress.c:89:4: note: in expansion of macro 'GET_BITS'
+   89 |    GET_BITS(label1, zvec, zn);                    \
+      |    ^~~~~~~~
+../bzip2-1.0.8/decompress.c:489:13: note: in expansion of macro 'GET_MTF_VAL'
+  489 |             GET_MTF_VAL(BZ_X_MTF_5, BZ_X_MTF_6, nextSym);
+      |             ^~~~~~~~~~~
+../bzip2-1.0.8/decompress.c:51:16: warning: conversion to 'Int32' {aka 'int'} from 'UInt32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+   51 |          vvv = v;                                 \
+      |                ^
+../bzip2-1.0.8/decompress.c:71:4: note: in expansion of macro 'GET_BITS'
+   71 |    GET_BITS(lll,uuu,1)
+      |    ^~~~~~~~
+../bzip2-1.0.8/decompress.c:95:7: note: in expansion of macro 'GET_BIT'
+   95 |       GET_BIT(label2, zj);                        \
+      |       ^~~~~~~
+../bzip2-1.0.8/decompress.c:489:13: note: in expansion of macro 'GET_MTF_VAL'
+  489 |             GET_MTF_VAL(BZ_X_MTF_5, BZ_X_MTF_6, nextSym);
+      |             ^~~~~~~~~~~
+../bzip2-1.0.8/bzlib_private.h:460:28: warning: conversion from 'Int32' {aka 'int'} to 'UChar' {aka 'unsigned char'} may change value [-Wconversion]
+  460 |         s->ll4[(i) >> 1] = (s->ll4[(i) >> 1] & 0xf0) | (n); else    \
+      |                            ^
+../bzip2-1.0.8/bzlib_private.h:469:6: note: in expansion of macro 'SET_LL4'
+  469 |      SET_LL4(i, n >> 16);                    \
+      |      ^~~~~~~
+../bzip2-1.0.8/decompress.c:538:13: note: in expansion of macro 'SET_LL'
+  538 |             SET_LL(i, s->cftabCopy[uc]);
+      |             ^~~~~~
+../bzip2-1.0.8/bzlib_private.h:461:28: warning: conversion from 'Int32' {aka 'int'} to 'UChar' {aka 'unsigned char'} may change value [-Wconversion]
+  461 |         s->ll4[(i) >> 1] = (s->ll4[(i) >> 1] & 0x0f) | ((n) << 4);  \
+      |                            ^
+../bzip2-1.0.8/bzlib_private.h:469:6: note: in expansion of macro 'SET_LL4'
+  469 |      SET_LL4(i, n >> 16);                    \
+      |      ^~~~~~~
+../bzip2-1.0.8/decompress.c:538:13: note: in expansion of macro 'SET_LL'
+  538 |             SET_LL(i, s->cftabCopy[uc]);
+      |             ^~~~~~
+../bzip2-1.0.8/bzlib_private.h:460:28: warning: conversion from 'Int32' {aka 'int'} to 'UChar' {aka 'unsigned char'} may change value [-Wconversion]
+  460 |         s->ll4[(i) >> 1] = (s->ll4[(i) >> 1] & 0xf0) | (n); else    \
+      |                            ^
+../bzip2-1.0.8/bzlib_private.h:469:6: note: in expansion of macro 'SET_LL4'
+  469 |      SET_LL4(i, n >> 16);                    \
+      |      ^~~~~~~
+../bzip2-1.0.8/decompress.c:547:13: note: in expansion of macro 'SET_LL'
+  547 |             SET_LL(j, i);
+      |             ^~~~~~
+../bzip2-1.0.8/bzlib_private.h:461:28: warning: conversion from 'Int32' {aka 'int'} to 'UChar' {aka 'unsigned char'} may change value [-Wconversion]
+  461 |         s->ll4[(i) >> 1] = (s->ll4[(i) >> 1] & 0x0f) | ((n) << 4);  \
+      |                            ^
+../bzip2-1.0.8/bzlib_private.h:469:6: note: in expansion of macro 'SET_LL4'
+  469 |      SET_LL4(i, n >> 16);                    \
+      |      ^~~~~~~
+../bzip2-1.0.8/decompress.c:547:13: note: in expansion of macro 'SET_LL'
+  547 |             SET_LL(j, i);
+      |             ^~~~~~
+../bzip2-1.0.8/decompress.c:553:20: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  553 |          s->tPos = s->origPtr;
+      |                    ^
+../bzip2-1.0.8/bzlib_private.h:478:30: warning: conversion to 'Int32' {aka 'int'} from 'UInt32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  478 |     cccc = BZ2_indexIntoF ( s->tPos, s->cftab );    \
+      |                             ~^~~~~~
+../bzip2-1.0.8/decompress.c:557:13: note: in expansion of macro 'BZ_GET_SMALL'
+  557 |             BZ_GET_SMALL(s->k0); s->nblock_used++;
+      |             ^~~~~~~~~~~~
+../bzip2-1.0.8/bzlib_private.h:478:30: warning: conversion to 'Int32' {aka 'int'} from 'UInt32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  478 |     cccc = BZ2_indexIntoF ( s->tPos, s->cftab );    \
+      |                             ~^~~~~~
+../bzip2-1.0.8/decompress.c:560:13: note: in expansion of macro 'BZ_GET_SMALL'
+  560 |             BZ_GET_SMALL(s->k0); s->nblock_used++;
+      |             ^~~~~~~~~~~~
+../bzip2-1.0.8/decompress.c:568:33: warning: conversion to 'UInt32' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  568 |             s->tt[s->cftab[uc]] |= (i << 8);
+      |                                 ^~
+../bzip2-1.0.8/decompress.c:51:16: warning: conversion from 'UInt32' {aka 'unsigned int'} to 'UChar' {aka 'unsigned char'} may change value [-Wconversion]
+   51 |          vvv = v;                                 \
+      |                ^
+../bzip2-1.0.8/decompress.c:68:4: note: in expansion of macro 'GET_BITS'
+   68 |    GET_BITS(lll,uuu,8)
+      |    ^~~~~~~~
+../bzip2-1.0.8/decompress.c:590:7: note: in expansion of macro 'GET_UCHAR'
+  590 |       GET_UCHAR(BZ_X_ENDHDR_2, uc);
+      |       ^~~~~~~~~
+../bzip2-1.0.8/decompress.c:51:16: warning: conversion from 'UInt32' {aka 'unsigned int'} to 'UChar' {aka 'unsigned char'} may change value [-Wconversion]
+   51 |          vvv = v;                                 \
+      |                ^
+../bzip2-1.0.8/decompress.c:68:4: note: in expansion of macro 'GET_BITS'
+   68 |    GET_BITS(lll,uuu,8)
+      |    ^~~~~~~~
+../bzip2-1.0.8/decompress.c:592:7: note: in expansion of macro 'GET_UCHAR'
+  592 |       GET_UCHAR(BZ_X_ENDHDR_3, uc);
+      |       ^~~~~~~~~
+../bzip2-1.0.8/decompress.c:51:16: warning: conversion from 'UInt32' {aka 'unsigned int'} to 'UChar' {aka 'unsigned char'} may change value [-Wconversion]
+   51 |          vvv = v;                                 \
+      |                ^
+../bzip2-1.0.8/decompress.c:68:4: note: in expansion of macro 'GET_BITS'
+   68 |    GET_BITS(lll,uuu,8)
+      |    ^~~~~~~~
+../bzip2-1.0.8/decompress.c:594:7: note: in expansion of macro 'GET_UCHAR'
+  594 |       GET_UCHAR(BZ_X_ENDHDR_4, uc);
+      |       ^~~~~~~~~
+../bzip2-1.0.8/decompress.c:51:16: warning: conversion from 'UInt32' {aka 'unsigned int'} to 'UChar' {aka 'unsigned char'} may change value [-Wconversion]
+   51 |          vvv = v;                                 \
+      |                ^
+../bzip2-1.0.8/decompress.c:68:4: note: in expansion of macro 'GET_BITS'
+   68 |    GET_BITS(lll,uuu,8)
+      |    ^~~~~~~~
+../bzip2-1.0.8/decompress.c:596:7: note: in expansion of macro 'GET_UCHAR'
+  596 |       GET_UCHAR(BZ_X_ENDHDR_5, uc);
+      |       ^~~~~~~~~
+../bzip2-1.0.8/decompress.c:51:16: warning: conversion from 'UInt32' {aka 'unsigned int'} to 'UChar' {aka 'unsigned char'} may change value [-Wconversion]
+   51 |          vvv = v;                                 \
+      |                ^
+../bzip2-1.0.8/decompress.c:68:4: note: in expansion of macro 'GET_BITS'
+   68 |    GET_BITS(lll,uuu,8)
+      |    ^~~~~~~~
+../bzip2-1.0.8/decompress.c:598:7: note: in expansion of macro 'GET_UCHAR'
+  598 |       GET_UCHAR(BZ_X_ENDHDR_6, uc);
+      |       ^~~~~~~~~
+../bzip2-1.0.8/decompress.c:51:16: warning: conversion from 'UInt32' {aka 'unsigned int'} to 'UChar' {aka 'unsigned char'} may change value [-Wconversion]
+   51 |          vvv = v;                                 \
+      |                ^
+../bzip2-1.0.8/decompress.c:68:4: note: in expansion of macro 'GET_BITS'
+   68 |    GET_BITS(lll,uuu,8)
+      |    ^~~~~~~~
+../bzip2-1.0.8/decompress.c:602:7: note: in expansion of macro 'GET_UCHAR'
+  602 |       GET_UCHAR(BZ_X_CCRC_1, uc);
+      |       ^~~~~~~~~
+../bzip2-1.0.8/decompress.c:51:16: warning: conversion from 'UInt32' {aka 'unsigned int'} to 'UChar' {aka 'unsigned char'} may change value [-Wconversion]
+   51 |          vvv = v;                                 \
+      |                ^
+../bzip2-1.0.8/decompress.c:68:4: note: in expansion of macro 'GET_BITS'
+   68 |    GET_BITS(lll,uuu,8)
+      |    ^~~~~~~~
+../bzip2-1.0.8/decompress.c:604:7: note: in expansion of macro 'GET_UCHAR'
+  604 |       GET_UCHAR(BZ_X_CCRC_2, uc);
+      |       ^~~~~~~~~
+../bzip2-1.0.8/decompress.c:51:16: warning: conversion from 'UInt32' {aka 'unsigned int'} to 'UChar' {aka 'unsigned char'} may change value [-Wconversion]
+   51 |          vvv = v;                                 \
+      |                ^
+../bzip2-1.0.8/decompress.c:68:4: note: in expansion of macro 'GET_BITS'
+   68 |    GET_BITS(lll,uuu,8)
+      |    ^~~~~~~~
+../bzip2-1.0.8/decompress.c:606:7: note: in expansion of macro 'GET_UCHAR'
+  606 |       GET_UCHAR(BZ_X_CCRC_3, uc);
+      |       ^~~~~~~~~
+../bzip2-1.0.8/decompress.c:51:16: warning: conversion from 'UInt32' {aka 'unsigned int'} to 'UChar' {aka 'unsigned char'} may change value [-Wconversion]
+   51 |          vvv = v;                                 \
+      |                ^
+../bzip2-1.0.8/decompress.c:68:4: note: in expansion of macro 'GET_BITS'
+   68 |    GET_BITS(lll,uuu,8)
+      |    ^~~~~~~~
+../bzip2-1.0.8/decompress.c:608:7: note: in expansion of macro 'GET_UCHAR'
+  608 |       GET_UCHAR(BZ_X_CCRC_4, uc);
+      |       ^~~~~~~~~
+/bin/bash ./libtool  --tag=CC   --mode=compile arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot -DPACKAGE_NAME=\"bzip2\" -DPACKAGE_TARNAME=\"bzip2\" -DPACKAGE_VERSION=\"1.0.8\" -DPACKAGE_STRING=\"bzip2\ 1.0.8\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"bzip2\" -DVERSION=\"1.0.8\" -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_UNISTD_H=1 -DSTDC_HEADERS=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -I. -I../bzip2-1.0.8   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64  -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/bzip2-1.0.8=/usr/src/debug/bzip2/1.0.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/bzip2-1.0.8=/usr/src/debug/bzip2/1.0.8-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/build=/usr/src/debug/bzip2/1.0.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/build=/usr/src/debug/bzip2/1.0.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot-native=   -Wconversion -Wno-error -fPIC -fpic -Winline -fno-strength-reduce -D_FILE_OFFSET_BITS=64 -c -o bzlib.lo ../bzip2-1.0.8/bzlib.c
+libtool: compile:  arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot -DPACKAGE_NAME=\"bzip2\" -DPACKAGE_TARNAME=\"bzip2\" -DPACKAGE_VERSION=\"1.0.8\" "-DPACKAGE_STRING=\"bzip2 1.0.8\"" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"bzip2\" -DVERSION=\"1.0.8\" -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_UNISTD_H=1 -DSTDC_HEADERS=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -I. -I../bzip2-1.0.8 -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/bzip2-1.0.8=/usr/src/debug/bzip2/1.0.8-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/bzip2-1.0.8=/usr/src/debug/bzip2/1.0.8-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/build=/usr/src/debug/bzip2/1.0.8-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/build=/usr/src/debug/bzip2/1.0.8-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot-native= -Wconversion -Wno-error -fPIC -fpic -Winline -fno-strength-reduce -D_FILE_OFFSET_BITS=64 -c ../bzip2-1.0.8/bzlib.c  -fPIC -DPIC -o .libs/bzlib.o
+../bzip2-1.0.8/bzlib.c: In function 'default_bzalloc':
+../bzip2-1.0.8/bzlib.c:104:29: warning: conversion to 'size_t' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  104 |    void* v = malloc ( items * size );
+      |                       ~~~~~~^~~~~~
+In file included from ../bzip2-1.0.8/bzlib.c:31:
+../bzip2-1.0.8/bzlib.c: In function 'BZ2_bzCompressInit':
+../bzip2-1.0.8/bzlib.c:177:42: warning: conversion to 'unsigned int' from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  177 |    s->arr1 = BZALLOC( n                  * sizeof(UInt32) );
+      |                                          ^
+../bzip2-1.0.8/bzlib_private.h:102:52: note: in definition of macro 'BZALLOC'
+  102 | #define BZALLOC(nnn) (strm->bzalloc)(strm->opaque,(nnn),1)
+      |                                                    ^~~
+../bzip2-1.0.8/bzlib.c:177:42: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  177 |    s->arr1 = BZALLOC( n                  * sizeof(UInt32) );
+../bzip2-1.0.8/bzlib_private.h:102:52: note: in definition of macro 'BZALLOC'
+  102 | #define BZALLOC(nnn) (strm->bzalloc)(strm->opaque,(nnn),1)
+      |                                                    ^~~
+../bzip2-1.0.8/bzlib.c:178:42: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  178 |    s->arr2 = BZALLOC( (n+BZ_N_OVERSHOOT) * sizeof(UInt32) );
+      |                                          ^
+../bzip2-1.0.8/bzlib_private.h:102:52: note: in definition of macro 'BZALLOC'
+  102 | #define BZALLOC(nnn) (strm->bzalloc)(strm->opaque,(nnn),1)
+      |                                                    ^~~
+../bzip2-1.0.8/bzlib.c:178:42: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  178 |    s->arr2 = BZALLOC( (n+BZ_N_OVERSHOOT) * sizeof(UInt32) );
+../bzip2-1.0.8/bzlib_private.h:102:52: note: in definition of macro 'BZALLOC'
+  102 | #define BZALLOC(nnn) (strm->bzalloc)(strm->opaque,(nnn),1)
+      |                                                    ^~~
+../bzip2-1.0.8/bzlib.c: In function 'unRLE_obuf_to_output_FAST':
+../bzip2-1.0.8/bzlib.c:564:28: warning: conversion from 'Int32' {aka 'int'} to 'UChar' {aka 'unsigned char'} may change value [-Wconversion]
+  564 |          s->state_out_ch = s->k0;
+      |                            ^
+../bzip2-1.0.8/bzlib.c:640:27: warning: conversion from 'Int32' {aka 'int'} to 'UChar' {aka 'unsigned char'} may change value [-Wconversion]
+  640 |          c_state_out_ch = c_k0;
+      |                           ^~~~
+../bzip2-1.0.8/bzlib.c: In function 'unRLE_obuf_to_output_SMALL':
+../bzip2-1.0.8/bzlib.c:734:28: warning: conversion from 'Int32' {aka 'int'} to 'UChar' {aka 'unsigned char'} may change value [-Wconversion]
+  734 |          s->state_out_ch = s->k0;
+      |                            ^
+../bzip2-1.0.8/bzlib_private.h:478:30: warning: conversion to 'Int32' {aka 'int'} from 'UInt32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  478 |     cccc = BZ2_indexIntoF ( s->tPos, s->cftab );    \
+      |                             ~^~~~~~
+../bzip2-1.0.8/bzlib.c:735:10: note: in expansion of macro 'BZ_GET_SMALL'
+  735 |          BZ_GET_SMALL(k1); BZ_RAND_UPD_MASK;
+      |          ^~~~~~~~~~~~
+../bzip2-1.0.8/bzlib_private.h:478:12: warning: conversion from 'Int32' {aka 'int'} to 'UChar' {aka 'unsigned char'} may change value [-Wconversion]
+  478 |     cccc = BZ2_indexIntoF ( s->tPos, s->cftab );    \
+      |            ^~~~~~~~~~~~~~
+../bzip2-1.0.8/bzlib.c:735:10: note: in expansion of macro 'BZ_GET_SMALL'
+  735 |          BZ_GET_SMALL(k1); BZ_RAND_UPD_MASK;
+      |          ^~~~~~~~~~~~
+../bzip2-1.0.8/bzlib_private.h:478:30: warning: conversion to 'Int32' {aka 'int'} from 'UInt32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  478 |     cccc = BZ2_indexIntoF ( s->tPos, s->cftab );    \
+      |                             ~^~~~~~
+../bzip2-1.0.8/bzlib.c:741:10: note: in expansion of macro 'BZ_GET_SMALL'
+  741 |          BZ_GET_SMALL(k1); BZ_RAND_UPD_MASK;
+      |          ^~~~~~~~~~~~
+../bzip2-1.0.8/bzlib_private.h:478:12: warning: conversion from 'Int32' {aka 'int'} to 'UChar' {aka 'unsigned char'} may change value [-Wconversion]
+  478 |     cccc = BZ2_indexIntoF ( s->tPos, s->cftab );    \
+      |            ^~~~~~~~~~~~~~
+../bzip2-1.0.8/bzlib.c:741:10: note: in expansion of macro 'BZ_GET_SMALL'
+  741 |          BZ_GET_SMALL(k1); BZ_RAND_UPD_MASK;
+      |          ^~~~~~~~~~~~
+../bzip2-1.0.8/bzlib_private.h:478:30: warning: conversion to 'Int32' {aka 'int'} from 'UInt32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  478 |     cccc = BZ2_indexIntoF ( s->tPos, s->cftab );    \
+      |                             ~^~~~~~
+../bzip2-1.0.8/bzlib.c:747:10: note: in expansion of macro 'BZ_GET_SMALL'
+  747 |          BZ_GET_SMALL(k1); BZ_RAND_UPD_MASK;
+      |          ^~~~~~~~~~~~
+../bzip2-1.0.8/bzlib_private.h:478:12: warning: conversion from 'Int32' {aka 'int'} to 'UChar' {aka 'unsigned char'} may change value [-Wconversion]
+  478 |     cccc = BZ2_indexIntoF ( s->tPos, s->cftab );    \
+      |            ^~~~~~~~~~~~~~
+../bzip2-1.0.8/bzlib.c:747:10: note: in expansion of macro 'BZ_GET_SMALL'
+  747 |          BZ_GET_SMALL(k1); BZ_RAND_UPD_MASK;
+      |          ^~~~~~~~~~~~
+../bzip2-1.0.8/bzlib_private.h:478:30: warning: conversion to 'Int32' {aka 'int'} from 'UInt32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  478 |     cccc = BZ2_indexIntoF ( s->tPos, s->cftab );    \
+      |                             ~^~~~~~
+../bzip2-1.0.8/bzlib.c:752:10: note: in expansion of macro 'BZ_GET_SMALL'
+  752 |          BZ_GET_SMALL(k1); BZ_RAND_UPD_MASK;
+      |          ^~~~~~~~~~~~
+../bzip2-1.0.8/bzlib_private.h:478:12: warning: conversion from 'Int32' {aka 'int'} to 'UChar' {aka 'unsigned char'} may change value [-Wconversion]
+  478 |     cccc = BZ2_indexIntoF ( s->tPos, s->cftab );    \
+      |            ^~~~~~~~~~~~~~
+../bzip2-1.0.8/bzlib.c:752:10: note: in expansion of macro 'BZ_GET_SMALL'
+  752 |          BZ_GET_SMALL(k1); BZ_RAND_UPD_MASK;
+      |          ^~~~~~~~~~~~
+../bzip2-1.0.8/bzlib_private.h:478:30: warning: conversion to 'Int32' {aka 'int'} from 'UInt32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  478 |     cccc = BZ2_indexIntoF ( s->tPos, s->cftab );    \
+      |                             ~^~~~~~
+../bzip2-1.0.8/bzlib.c:755:10: note: in expansion of macro 'BZ_GET_SMALL'
+  755 |          BZ_GET_SMALL(s->k0); BZ_RAND_UPD_MASK;
+      |          ^~~~~~~~~~~~
+../bzip2-1.0.8/bzlib.c:783:28: warning: conversion from 'Int32' {aka 'int'} to 'UChar' {aka 'unsigned char'} may change value [-Wconversion]
+  783 |          s->state_out_ch = s->k0;
+      |                            ^
+../bzip2-1.0.8/bzlib_private.h:478:30: warning: conversion to 'Int32' {aka 'int'} from 'UInt32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  478 |     cccc = BZ2_indexIntoF ( s->tPos, s->cftab );    \
+      |                             ~^~~~~~
+../bzip2-1.0.8/bzlib.c:784:10: note: in expansion of macro 'BZ_GET_SMALL'
+  784 |          BZ_GET_SMALL(k1); s->nblock_used++;
+      |          ^~~~~~~~~~~~
+../bzip2-1.0.8/bzlib_private.h:478:12: warning: conversion from 'Int32' {aka 'int'} to 'UChar' {aka 'unsigned char'} may change value [-Wconversion]
+  478 |     cccc = BZ2_indexIntoF ( s->tPos, s->cftab );    \
+      |            ^~~~~~~~~~~~~~
+../bzip2-1.0.8/bzlib.c:784:10: note: in expansion of macro 'BZ_GET_SMALL'
+  784 |          BZ_GET_SMALL(k1); s->nblock_used++;
+      |          ^~~~~~~~~~~~
+../bzip2-1.0.8/bzlib_private.h:478:30: warning: conversion to 'Int32' {aka 'int'} from 'UInt32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  478 |     cccc = BZ2_indexIntoF ( s->tPos, s->cftab );    \
+      |                             ~^~~~~~
+../bzip2-1.0.8/bzlib.c:789:10: note: in expansion of macro 'BZ_GET_SMALL'
+  789 |          BZ_GET_SMALL(k1); s->nblock_used++;
+      |          ^~~~~~~~~~~~
+../bzip2-1.0.8/bzlib_private.h:478:12: warning: conversion from 'Int32' {aka 'int'} to 'UChar' {aka 'unsigned char'} may change value [-Wconversion]
+  478 |     cccc = BZ2_indexIntoF ( s->tPos, s->cftab );    \
+      |            ^~~~~~~~~~~~~~
+../bzip2-1.0.8/bzlib.c:789:10: note: in expansion of macro 'BZ_GET_SMALL'
+  789 |          BZ_GET_SMALL(k1); s->nblock_used++;
+      |          ^~~~~~~~~~~~
+../bzip2-1.0.8/bzlib_private.h:478:30: warning: conversion to 'Int32' {aka 'int'} from 'UInt32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  478 |     cccc = BZ2_indexIntoF ( s->tPos, s->cftab );    \
+      |                             ~^~~~~~
+../bzip2-1.0.8/bzlib.c:794:10: note: in expansion of macro 'BZ_GET_SMALL'
+  794 |          BZ_GET_SMALL(k1); s->nblock_used++;
+      |          ^~~~~~~~~~~~
+../bzip2-1.0.8/bzlib_private.h:478:12: warning: conversion from 'Int32' {aka 'int'} to 'UChar' {aka 'unsigned char'} may change value [-Wconversion]
+  478 |     cccc = BZ2_indexIntoF ( s->tPos, s->cftab );    \
+      |            ^~~~~~~~~~~~~~
+../bzip2-1.0.8/bzlib.c:794:10: note: in expansion of macro 'BZ_GET_SMALL'
+  794 |          BZ_GET_SMALL(k1); s->nblock_used++;
+      |          ^~~~~~~~~~~~
+../bzip2-1.0.8/bzlib_private.h:478:30: warning: conversion to 'Int32' {aka 'int'} from 'UInt32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  478 |     cccc = BZ2_indexIntoF ( s->tPos, s->cftab );    \
+      |                             ~^~~~~~
+../bzip2-1.0.8/bzlib.c:798:10: note: in expansion of macro 'BZ_GET_SMALL'
+  798 |          BZ_GET_SMALL(k1); s->nblock_used++;
+      |          ^~~~~~~~~~~~
+../bzip2-1.0.8/bzlib_private.h:478:12: warning: conversion from 'Int32' {aka 'int'} to 'UChar' {aka 'unsigned char'} may change value [-Wconversion]
+  478 |     cccc = BZ2_indexIntoF ( s->tPos, s->cftab );    \
+      |            ^~~~~~~~~~~~~~
+../bzip2-1.0.8/bzlib.c:798:10: note: in expansion of macro 'BZ_GET_SMALL'
+  798 |          BZ_GET_SMALL(k1); s->nblock_used++;
+      |          ^~~~~~~~~~~~
+../bzip2-1.0.8/bzlib_private.h:478:30: warning: conversion to 'Int32' {aka 'int'} from 'UInt32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  478 |     cccc = BZ2_indexIntoF ( s->tPos, s->cftab );    \
+      |                             ~^~~~~~
+../bzip2-1.0.8/bzlib.c:800:10: note: in expansion of macro 'BZ_GET_SMALL'
+  800 |          BZ_GET_SMALL(s->k0); s->nblock_used++;
+      |          ^~~~~~~~~~~~
+../bzip2-1.0.8/bzlib.c: In function 'BZ2_bzWrite':
+../bzip2-1.0.8/bzlib.c:984:25: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  984 |    bzf->strm.avail_in = len;
+      |                         ^~~
+In file included from ../bzip2-1.0.8/bzlib_private.h:33:
+../bzip2-1.0.8/bzlib.h:135:23: warning: conversion to 'Int32' {aka 'int'} from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  135 | #define BZ_MAX_UNUSED 5000
+      |                       ^~~~
+../bzip2-1.0.8/bzlib.c:995:14: note: in expansion of macro 'BZ_MAX_UNUSED'
+  995 |          n = BZ_MAX_UNUSED - bzf->strm.avail_out;
+      |              ^~~~~~~~~~~~~
+../bzip2-1.0.8/bzlib.c:997:24: warning: conversion to 'size_t' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  997 |                        n, bzf->handle );
+      |                        ^
+../bzip2-1.0.8/bzlib.c:996:15: warning: conversion to 'Int32' {aka 'int'} from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  996 |          n2 = fwrite ( (void*)(bzf->buf), sizeof(UChar),
+      |               ^~~~~~
+../bzip2-1.0.8/bzlib.c: In function 'BZ2_bzWriteClose64':
+../bzip2-1.0.8/bzlib.h:135:23: warning: conversion to 'Int32' {aka 'int'} from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  135 | #define BZ_MAX_UNUSED 5000
+      |                       ^~~~
+../bzip2-1.0.8/bzlib.c:1054:17: note: in expansion of macro 'BZ_MAX_UNUSED'
+ 1054 |             n = BZ_MAX_UNUSED - bzf->strm.avail_out;
+      |                 ^~~~~~~~~~~~~
+../bzip2-1.0.8/bzlib.c:1056:27: warning: conversion to 'size_t' {aka 'unsigned int'} from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+ 1056 |                           n, bzf->handle );
+      |                           ^
+../bzip2-1.0.8/bzlib.c:1055:18: warning: conversion to 'Int32' {aka 'int'} from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+ 1055 |             n2 = fwrite ( (void*)(bzf->buf), sizeof(UChar),
+      |                  ^~~~~~
+../bzip2-1.0.8/bzlib.c: In function 'BZ2_bzReadOpen':
+../bzip2-1.0.8/bzlib.c:1134:25: warning: conversion to 'unsigned int' from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+ 1134 |    bzf->strm.avail_in = bzf->bufN;
+      |                         ^~~
+../bzip2-1.0.8/bzlib.c: In function 'BZ2_bzRead':
+../bzip2-1.0.8/bzlib.c:1181:26: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 1181 |    bzf->strm.avail_out = len;
+      |                          ^~~
+../bzip2-1.0.8/bzlib.c:1190:14: warning: conversion to 'Int32' {aka 'int'} from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+ 1190 |          n = fread ( bzf->buf, sizeof(UChar),
+      |              ^~~~~
+../bzip2-1.0.8/bzlib.c:1195:31: warning: conversion to 'unsigned int' from 'Int32' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+ 1195 |          bzf->strm.avail_in = bzf->bufN;
+      |                               ^~~
+../bzip2-1.0.8/bzlib.c:1210:23: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 1210 |            return len - bzf->strm.avail_out; };
+      |                       ^
+../bzip2-1.0.8/bzlib.c:1210:23: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+ 1210 |            return len - bzf->strm.avail_out; };
+      |                   ~~~~^~~~~~~~~~~~~~~~~~~~~
+../bzip2-1.0.8/bzlib.c: In function 'BZ2_bzReadGetUnused':
+../bzip2-1.0.8/bzlib.c:1236:15: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+ 1236 |    *nUnused = bzf->strm.avail_in;
+      |               ^~~
+/bin/bash ./libtool  --tag=CC   --mode=link arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot  -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/bzip2-1.0.8=/usr/src/debug/bzip2/1.0.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/bzip2-1.0.8=/usr/src/debug/bzip2/1.0.8-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/build=/usr/src/debug/bzip2/1.0.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/build=/usr/src/debug/bzip2/1.0.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot-native=   -Wconversion -Wno-error -fPIC -fpic -Winline -fno-strength-reduce -D_FILE_OFFSET_BITS=64 -version-info 1:8:0 -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/bzip2-1.0.8=/usr/src/debug/bzip2/1.0.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/bzip2-1.0.8=/usr/src/debug/bzip2/1.0.8-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/build=/usr/src/debug/bzip2/1.0.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/build=/usr/src/debug/bzip2/1.0.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot-native=  -Wl,-z,relro,-z,now -o libbz2.la -rpath /usr/lib blocksort.lo huffman.lo crctable.lo randtable.lo compress.lo decompress.lo bzlib.lo  
+libtool: link: arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot -shared  -fPIC -DPIC  .libs/blocksort.o .libs/huffman.o .libs/crctable.o .libs/randtable.o .libs/compress.o .libs/decompress.o .libs/bzlib.o    -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot -O2 -g -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/bzip2-1.0.8=/usr/src/debug/bzip2/1.0.8-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/bzip2-1.0.8=/usr/src/debug/bzip2/1.0.8-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/build=/usr/src/debug/bzip2/1.0.8-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/build=/usr/src/debug/bzip2/1.0.8-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot-native= -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/bzip2-1.0.8=/usr/src/debug/bzip2/1.0.8-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/bzip2-1.0.8=/usr/src/debug/bzip2/1.0.8-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/build=/usr/src/debug/bzip2/1.0.8-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/build=/usr/src/debug/bzip2/1.0.8-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot-native= -Wl,-z -Wl,relro -Wl,-z -Wl,now   -Wl,-soname -Wl,libbz2.so.1 -o .libs/libbz2.so.1.0.8
+libtool: link: (cd ".libs" && rm -f "libbz2.so.1" && ln -s "libbz2.so.1.0.8" "libbz2.so.1")
+libtool: link: (cd ".libs" && rm -f "libbz2.so" && ln -s "libbz2.so.1.0.8" "libbz2.so")
+libtool: link: ( cd ".libs" && rm -f "libbz2.la" && ln -s "../libbz2.la" "libbz2.la" )
+/bin/bash ./libtool  --tag=CC   --mode=link arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot  -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/bzip2-1.0.8=/usr/src/debug/bzip2/1.0.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/bzip2-1.0.8=/usr/src/debug/bzip2/1.0.8-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/build=/usr/src/debug/bzip2/1.0.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/build=/usr/src/debug/bzip2/1.0.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot-native=   -Wconversion -Wno-error -fPIC -fpic -Winline -fno-strength-reduce -D_FILE_OFFSET_BITS=64  -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/bzip2-1.0.8=/usr/src/debug/bzip2/1.0.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/bzip2-1.0.8=/usr/src/debug/bzip2/1.0.8-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/build=/usr/src/debug/bzip2/1.0.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/build=/usr/src/debug/bzip2/1.0.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot-native=  -Wl,-z,relro,-z,now -o bzip2 bzip2.o libbz2.la 
+libtool: link: arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/bzip2-1.0.8=/usr/src/debug/bzip2/1.0.8-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/bzip2-1.0.8=/usr/src/debug/bzip2/1.0.8-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/build=/usr/src/debug/bzip2/1.0.8-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/build=/usr/src/debug/bzip2/1.0.8-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot-native= -Wconversion -Wno-error -fPIC -fpic -Winline -fno-strength-reduce -D_FILE_OFFSET_BITS=64 -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/bzip2-1.0.8=/usr/src/debug/bzip2/1.0.8-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/bzip2-1.0.8=/usr/src/debug/bzip2/1.0.8-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/build=/usr/src/debug/bzip2/1.0.8-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/build=/usr/src/debug/bzip2/1.0.8-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot-native= -Wl,-z -Wl,relro -Wl,-z -Wl,now -o .libs/bzip2 bzip2.o  ./.libs/libbz2.so
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot -DPACKAGE_NAME=\"bzip2\" -DPACKAGE_TARNAME=\"bzip2\" -DPACKAGE_VERSION=\"1.0.8\" -DPACKAGE_STRING=\"bzip2\ 1.0.8\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"bzip2\" -DVERSION=\"1.0.8\" -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_UNISTD_H=1 -DSTDC_HEADERS=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -I. -I../bzip2-1.0.8   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64  -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/bzip2-1.0.8=/usr/src/debug/bzip2/1.0.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/bzip2-1.0.8=/usr/src/debug/bzip2/1.0.8-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/build=/usr/src/debug/bzip2/1.0.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/build=/usr/src/debug/bzip2/1.0.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot-native=   -Wconversion -Wno-error -fPIC -fpic -Winline -fno-strength-reduce -D_FILE_OFFSET_BITS=64 -c -o bzip2recover.o ../bzip2-1.0.8/bzip2recover.c
+../bzip2-1.0.8/bzip2recover.c: In function 'endsInBz2':
+../bzip2-1.0.8/bzip2recover.c:263:14: warning: conversion to 'Int32' {aka 'int'} from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  263 |    Int32 n = strlen ( name );
+      |              ^~~~~~
+/bin/bash ./libtool  --tag=CC   --mode=link arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot  -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/bzip2-1.0.8=/usr/src/debug/bzip2/1.0.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/bzip2-1.0.8=/usr/src/debug/bzip2/1.0.8-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/build=/usr/src/debug/bzip2/1.0.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/build=/usr/src/debug/bzip2/1.0.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot-native=   -Wconversion -Wno-error -fPIC -fpic -Winline -fno-strength-reduce -D_FILE_OFFSET_BITS=64  -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/bzip2-1.0.8=/usr/src/debug/bzip2/1.0.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/bzip2-1.0.8=/usr/src/debug/bzip2/1.0.8-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/build=/usr/src/debug/bzip2/1.0.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/build=/usr/src/debug/bzip2/1.0.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot-native=  -Wl,-z,relro,-z,now -o bzip2recover bzip2recover.o libbz2.la 
+libtool: link: arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/bzip2-1.0.8=/usr/src/debug/bzip2/1.0.8-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/bzip2-1.0.8=/usr/src/debug/bzip2/1.0.8-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/build=/usr/src/debug/bzip2/1.0.8-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/build=/usr/src/debug/bzip2/1.0.8-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot-native= -Wconversion -Wno-error -fPIC -fpic -Winline -fno-strength-reduce -D_FILE_OFFSET_BITS=64 -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/bzip2-1.0.8=/usr/src/debug/bzip2/1.0.8-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/bzip2-1.0.8=/usr/src/debug/bzip2/1.0.8-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/build=/usr/src/debug/bzip2/1.0.8-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/build=/usr/src/debug/bzip2/1.0.8-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot-native= -Wl,-z -Wl,relro -Wl,-z -Wl,now -o .libs/bzip2recover bzip2recover.o  ./.libs/libbz2.so
+DEBUG: Shell function do_compile finished

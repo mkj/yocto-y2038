@@ -1,0 +1,569 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-core/base-files/base-files_3.0.14.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/base-passwd/base-passwd_3.6.1.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/systemd/systemd-systemctl-native.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux_2.38.1.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/binutils/binutils-cross_2.39.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/opkg-utils/opkg-utils_0.5.0.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/qemu/qemu-native_7.1.0.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-extended/pam/libpam_1.3.1.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-extended/shadow/shadow-sysroot_4.6.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-extended/shadow/shadow_4.12.3.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-extended/zstd/zstd_1.5.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-support/bash-completion/bash-completion_2.11.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-support/libcap/libcap_2.66.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-support/libseccomp/libseccomp_2.5.4.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-core/gettext/gettext_0.21.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/intltool/intltool_0.51.0.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/meson/meson_0.63.3.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/ninja/ninja_1.11.1.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/perl/perl_5.36.0.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pkgconfig/pkgconfig_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/python/python3-jinja2_3.1.2.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/python/python3_3.11.0.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-extended/gperf/gperf_3.1.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-extended/shadow/shadow_4.12.3.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: []
+NOTE: Skipping as already exists in sysroot: ['base-files', 'base-passwd', 'glibc', 'systemd-systemctl-native', 'util-linux', 'binutils-cross-arm', 'gcc-cross-arm', 'gcc-runtime', 'opkg-utils', 'qemu-native', 'quilt-native', 'libpam', 'shadow-sysroot', 'shadow', 'zstd', 'bash-completion', 'libcap', 'libseccomp', 'gettext-native', 'intltool-native', 'meson-native', 'ninja-native', 'patch-native', 'perl-native', 'pkgconfig-native', 'pseudo-native', 'python3-jinja2-native', 'python3-native', 'gperf-native', 'shadow-native', 'python3-setuptools-native', 'python3-picobuild-native', 'python3-markupsafe-native', 'python3-installer-native', 'python3-wheel-native', 'texinfo-dummy-native', 'gettext-minimal-native', 'libtool-native', 'ncurses', 'libxcrypt', 'zlib', 'libcap-ng', 'util-linux-libuuid', 'libgcc', 'linux-libc-headers', 're2c-native', 'cracklib', 'flex', 'flex-native', 'zlib-native', 'gnu-config-native', 'libxml-parser-perl-native', 'mpfr-native', 'gmp-native', 'xz-native', 'libmpc-native', 'zstd-native', 'attr-native', 'glib-2.0-native', 'gdbm-native', 'libnsl2-native', 'sqlite3-native', 'readline-native', 'libffi-native', 'bzip2-native', 'libtirpc-native', 'openssl-native', 'ncurses-native', 'util-linux-libuuid-native', 'make-native', 'python3-flit-core-native', 'm4-native', 'expat-native', 'util-linux-native', 'libpcre-native', 'unzip-native', 'cmake-native', 'libcap-ng-native', 'libpcre2-native', 'curl-native']
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function sstate_task_prefunc
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/libnss_systemd.so.2
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/libudev.so.1
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/libsystemd.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/libsystemd.so.0
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/libudev.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/libudev.so.1.7.4
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/libsystemd.so.0.34.0
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/systemd-journald
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/systemd-sysctl
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/systemd-random-seed
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/systemd-sulogin-shell
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/systemd-boot-check-no-failures
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/systemd-growfs
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/libsystemd-shared-251.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/systemd-timedated
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/systemd-makefs
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/systemd-fsck
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/systemd-user-sessions
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/systemd-update-done
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/systemd-resolved
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/systemd-sleep
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/systemd-ac-power
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/systemd-volatile-root
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/systemd-socket-proxyd
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/systemd-cgroups-agent
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/systemd-remount-fs
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/systemd-pstore
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/systemd-networkd-wait-online
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/systemd-hostnamed
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/systemd-shutdown
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/libsystemd-core-251.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/systemd-update-helper
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/resolv.conf
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/systemd-reply-password
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/systemd
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/systemd-network-generator
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/systemd-time-wait-sync
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/systemd-udevd
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/systemd-networkd
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/systemd-timesyncd
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/systemd-coredump
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system-generators/systemd-gpt-auto-generator
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system-generators/systemd-run-generator
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system-generators/systemd-debug-generator
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system-generators/systemd-system-update-generator
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system-generators/systemd-getty-generator
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system-generators/systemd-fstab-generator
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/ntp-units.d/80-systemd-timesync.list
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/systemd-journald-dev-log.socket
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/console-getty.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/systemd-resolved.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/systemd-halt.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/network-pre.target
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/sys-kernel-tracing.mount
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/systemd-tmpfiles-clean.timer
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/systemd-boot-check-no-failures.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/systemd-fsck@.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/initrd-root-fs.target
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/initrd.target
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/sys-kernel-debug.mount
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/initrd-parse-etc.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/sockets.target
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/first-boot-complete.target
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/network-online.target
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/initrd-udevadm-cleanup-db.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/systemd-ask-password-console.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/kexec.target
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/systemd-time-wait-sync.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/bluetooth.target
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/nss-user-lookup.target
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/systemd-kexec.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/nss-lookup.target
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/systemd-udevd-control.socket
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/shutdown.target
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/multi-user.target
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/systemd-udevd.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/initrd-cleanup.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/modprobe@.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/time-sync.target
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/rescue.target
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/initrd-fs.target
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/systemd-networkd-wait-online.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/systemd-journald@.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/tmp.mount
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/user@.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/sysinit.target
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/network.target
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/factory-reset.target
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/local-fs.target
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/systemd-timesyncd.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/systemd-ask-password-wall.path
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/initrd-usr-fs.target
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/umount.target
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/systemd-nspawn@.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/getty-pre.target
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/systemd-coredump.socket
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/initrd-switch-root.target
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/usb-gadget.target
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/systemd-networkd-wait-online@.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/systemd-reboot.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/swap.target
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/dev-hugepages.mount
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/systemd-network-generator.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/sys-kernel-config.mount
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/systemd-remount-fs.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/systemd-journald-audit.socket
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/systemd-coredump@.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/systemd-pstore.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/getty@.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/systemd-volatile-root.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/sigpwr.target
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/initrd-switch-root.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/getty.target
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/systemd-sysusers.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/rescue.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/remote-fs-pre.target
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/system-update.target
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/exit.target
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/graphical.target
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/final.target
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/systemd-hwdb-update.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/debug-shell.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/basic.target
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/user.slice
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/printer.target
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/systemd-journald.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/reboot.target
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/systemd-exit.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/sound.target
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/systemd-random-seed.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/sleep.target
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/systemd-udev-settle.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/default.target
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/rpcbind.target
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/systemd-sysctl.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/systemd-udevd-kernel.socket
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/systemd-poweroff.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/smartcard.target
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/halt.target
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/local-fs-pre.target
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/systemd-tmpfiles-setup.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/dev-mqueue.mount
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/system-update-cleanup.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/sys-fs-fuse-connections.mount
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/systemd-journal-catalog-update.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/remote-fs.target
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/emergency.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/suspend.target
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/dbus-org.freedesktop.timedate1.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/time-set.target
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/user-runtime-dir@.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/boot-complete.target
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/slices.target
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/paths.target
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/syslog.socket
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/systemd-timedated.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/systemd-ask-password-console.path
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/autovt@.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/systemd-tmpfiles-setup-dev.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/blockdev@.target
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/systemd-journal-flush.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/systemd-journald.socket
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/ctrl-alt-del.target
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/systemd-journald-varlink@.socket
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/systemd-networkd.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/systemd-user-sessions.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/systemd-networkd.socket
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/systemd-hostnamed.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/systemd-machine-id-commit.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/systemd-udev-trigger.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/systemd-tmpfiles-clean.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/timers.target
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/systemd-update-done.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/container-getty@.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/systemd-suspend.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/system-update-pre.target
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/dbus-org.freedesktop.hostname1.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/poweroff.target
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/systemd-fsck-root.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/emergency.target
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/initrd-root-device.target
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/systemd-ask-password-wall.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/systemd-journald@.socket
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/local-fs.target.wants/tmp.mount
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/multi-user.target.wants/systemd-ask-password-wall.path
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/multi-user.target.wants/getty.target
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/multi-user.target.wants/systemd-user-sessions.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/user-.slice.d/10-defaults.conf
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/sockets.target.wants/systemd-udevd-kernel.socket
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/sockets.target.wants/systemd-coredump.socket
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/sockets.target.wants/systemd-journald-dev-log.socket
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/sockets.target.wants/systemd-journald-audit.socket
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/sockets.target.wants/systemd-udevd-control.socket
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/sockets.target.wants/systemd-journald.socket
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/timers.target.wants/systemd-tmpfiles-clean.timer
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/sysinit.target.wants/systemd-udevd.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/sysinit.target.wants/dev-mqueue.mount
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/sysinit.target.wants/systemd-tmpfiles-setup-dev.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/sysinit.target.wants/systemd-update-done.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/sysinit.target.wants/systemd-sysctl.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/sysinit.target.wants/systemd-random-seed.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/sysinit.target.wants/systemd-hwdb-update.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/sysinit.target.wants/sys-kernel-tracing.mount
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/sysinit.target.wants/systemd-machine-id-commit.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/sysinit.target.wants/systemd-ask-password-console.path
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/sysinit.target.wants/dev-hugepages.mount
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/sysinit.target.wants/sys-kernel-config.mount
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/sysinit.target.wants/sys-kernel-debug.mount
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/sysinit.target.wants/systemd-tmpfiles-setup.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/sysinit.target.wants/sys-fs-fuse-connections.mount
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/sysinit.target.wants/systemd-journal-flush.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/sysinit.target.wants/systemd-journald.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/sysinit.target.wants/systemd-udev-trigger.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/sysinit.target.wants/systemd-sysusers.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/sysinit.target.wants/systemd-journal-catalog-update.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system-preset/99-default.preset
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system-preset/90-systemd.preset
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/network/80-vm-vt.network
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/network/80-6rd-tunnel.network
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/network/80-ethernet.network.example
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/network/80-wifi-station.network.example
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/network/80-container-ve.network
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/network/80-container-host0.network
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/network/80-wifi-ap.network.example
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/network/80-wifi-adhoc.network
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/network/80-container-vz.network
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/network/99-default.link
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/modprobe.d/README
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/modprobe.d/systemd.conf
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/udev/cdrom_id
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/udev/ata_id
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/udev/v4l_id
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/udev/fido_id
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/udev/dmi_memory_id
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/udev/scsi_id
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/udev/mtd_probe
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/udev/rules.d/60-input-id.rules
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/udev/rules.d/60-sensor.rules
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/udev/rules.d/60-persistent-alsa.rules
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/udev/rules.d/60-evdev.rules
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/udev/rules.d/99-systemd.rules
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/udev/rules.d/60-persistent-storage-tape.rules
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/udev/rules.d/60-persistent-storage.rules
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/udev/rules.d/70-mouse.rules
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/udev/rules.d/60-serial.rules
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/udev/rules.d/60-persistent-input.rules
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/udev/rules.d/64-btrfs.rules
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/udev/rules.d/50-udev-default.rules
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/udev/rules.d/70-camera.rules
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/udev/rules.d/70-joystick.rules
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/udev/rules.d/75-net-description.rules
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/udev/rules.d/60-autosuspend.rules
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/udev/rules.d/60-block.rules
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/udev/rules.d/60-fido-id.rules
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/udev/rules.d/75-probe_mtd.rules
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/udev/rules.d/80-net-setup-link.rules
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/udev/rules.d/60-cdrom_id.rules
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/udev/rules.d/81-net-dhcp.rules
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/udev/rules.d/60-drm.rules
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/udev/rules.d/README
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/udev/rules.d/60-persistent-v4l.rules
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/udev/rules.d/70-memory.rules
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/udev/rules.d/78-sound-card.rules
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/udev/rules.d/70-touchpad.rules
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/udev/hwdb.d/70-pda.hwdb
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/udev/hwdb.d/60-evdev.hwdb
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/udev/hwdb.d/20-sdio-vendor-model.hwdb
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/udev/hwdb.d/20-net-ifname.hwdb
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/udev/hwdb.d/20-usb-classes.hwdb
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/udev/hwdb.d/20-vmbus-class.hwdb
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/udev/hwdb.d/README
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/udev/hwdb.d/70-mouse.hwdb
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/udev/hwdb.d/70-pointingstick.hwdb
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/udev/hwdb.d/20-sdio-classes.hwdb
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/udev/hwdb.d/20-bluetooth-vendor-product.hwdb
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/udev/hwdb.d/70-analyzers.hwdb
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/udev/hwdb.d/60-input-id.hwdb
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/udev/hwdb.d/60-keyboard.hwdb
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/udev/hwdb.d/70-av-production.hwdb
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/udev/hwdb.d/20-usb-vendor-model.hwdb
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/udev/hwdb.d/60-sensor.hwdb
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/udev/hwdb.d/20-dmi-id.hwdb
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/udev/hwdb.d/70-cameras.hwdb
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/udev/hwdb.d/60-autosuspend.hwdb
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/udev/hwdb.d/60-seat.hwdb
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/udev/hwdb.d/80-ieee1394-unit-function.hwdb
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/udev/hwdb.d/70-touchpad.hwdb
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/udev/hwdb.d/70-joystick.hwdb
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/udev/hwdb.d/20-pci-classes.hwdb
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/udev/hwdb.d/20-acpi-vendor.hwdb
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/udev/hwdb.d/20-pci-vendor-model.hwdb
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/udev/hwdb.d/60-autosuspend-fingerprint-reader.hwdb
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/udev/hwdb.d/60-autosuspend-chromiumos.hwdb
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/udev/hwdb.d/20-OUI.hwdb
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/include/libudev.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/include/systemd/sd-bus-protocol.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/include/systemd/sd-event.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/include/systemd/sd-bus.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/include/systemd/sd-journal.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/include/systemd/sd-id128.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/include/systemd/sd-hwdb.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/include/systemd/sd-daemon.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/include/systemd/sd-bus-vtable.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/include/systemd/sd-messages.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/include/systemd/sd-path.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/include/systemd/sd-device.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/include/systemd/sd-login.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/include/systemd/_sd-common.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/share/pkgconfig/udev.pc
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/share/pkgconfig/systemd.pc
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/share/zsh/site-functions/_timedatectl
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/share/zsh/site-functions/_kernel-install
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/share/zsh/site-functions/_udevadm
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/share/zsh/site-functions/_sd_unit_files
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/share/zsh/site-functions/_sd_outputmodes
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/share/zsh/site-functions/_hostnamectl
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/share/zsh/site-functions/_sd_machines
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/share/zsh/site-functions/_resolvectl
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/share/zsh/site-functions/_systemd-run
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/share/zsh/site-functions/_systemd-nspawn
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/share/zsh/site-functions/_networkctl
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/share/zsh/site-functions/_journalctl
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/share/zsh/site-functions/_coredumpctl
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/share/zsh/site-functions/_systemd-path
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/share/zsh/site-functions/_systemd-analyze
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/share/zsh/site-functions/_systemd-tmpfiles
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/share/zsh/site-functions/_systemd-delta
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/share/zsh/site-functions/_sd_hosts_or_user_at_host
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/share/zsh/site-functions/_busctl
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/share/zsh/site-functions/_systemd
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/share/zsh/site-functions/_systemctl
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/share/dbus-1/system-services/org.freedesktop.network1.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/share/dbus-1/system-services/org.freedesktop.timedate1.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/share/dbus-1/system-services/org.freedesktop.hostname1.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/share/dbus-1/system-services/org.freedesktop.systemd1.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/share/dbus-1/system-services/org.freedesktop.timesync1.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/share/dbus-1/system-services/org.freedesktop.resolve1.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/share/dbus-1/services/org.freedesktop.systemd1.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/share/dbus-1/system.d/org.freedesktop.hostname1.conf
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/share/dbus-1/system.d/org.freedesktop.timesync1.conf
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/share/dbus-1/system.d/org.freedesktop.network1.conf
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/share/dbus-1/system.d/org.freedesktop.timedate1.conf
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/share/dbus-1/system.d/org.freedesktop.resolve1.conf
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/share/dbus-1/system.d/org.freedesktop.systemd1.conf
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/share/polkit-1/actions/org.freedesktop.systemd1.policy
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/share/polkit-1/actions/org.freedesktop.timesync1.policy
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/share/polkit-1/actions/org.freedesktop.resolve1.policy
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/share/polkit-1/actions/org.freedesktop.timedate1.policy
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/share/polkit-1/actions/org.freedesktop.hostname1.policy
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/share/polkit-1/actions/org.freedesktop.network1.policy
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/share/factory/etc/issue
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/share/factory/etc/locale.conf
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/share/factory/etc/nsswitch.conf
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/share/factory/etc/pam.d/system-auth
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/share/factory/etc/pam.d/other
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/tmpfiles.d/static-nodes-permissions.conf
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/tmpfiles.d/systemd-nologin.conf
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/tmpfiles.d/tmp.conf
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/tmpfiles.d/README
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/tmpfiles.d/home.conf
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/tmpfiles.d/systemd.conf
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/tmpfiles.d/journal-nocow.conf
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/tmpfiles.d/etc.conf
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/tmpfiles.d/systemd-network.conf
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/tmpfiles.d/systemd-resolve.conf
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/tmpfiles.d/var.conf
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/tmpfiles.d/systemd-pstore.conf
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/tmpfiles.d/systemd-tmp.conf
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/pkgconfig/libsystemd.pc
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/pkgconfig/libudev.pc
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/systemd/user/timers.target
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/systemd/user/systemd-exit.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/systemd/user/graphical-session.target
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/systemd/user/bluetooth.target
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/systemd/user/background.slice
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/systemd/user/sockets.target
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/systemd/user/graphical-session-pre.target
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/systemd/user/exit.target
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/systemd/user/app.slice
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/systemd/user/default.target
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/systemd/user/shutdown.target
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/systemd/user/session.slice
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/systemd/user/smartcard.target
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/systemd/user/sound.target
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/systemd/user/basic.target
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/systemd/user/printer.target
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/systemd/user/systemd-tmpfiles-clean.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/systemd/user/systemd-tmpfiles-setup.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/systemd/user/systemd-tmpfiles-clean.timer
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/systemd/user/paths.target
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/systemd/catalog/systemd.fr.catalog
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/systemd/catalog/systemd.de.catalog
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/systemd/catalog/systemd.ru.catalog
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/systemd/catalog/systemd.zh_CN.catalog
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/systemd/catalog/systemd.be@latin.catalog
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/systemd/catalog/systemd.pt_BR.catalog
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/systemd/catalog/systemd.zh_TW.catalog
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/systemd/catalog/systemd.be.catalog
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/systemd/catalog/systemd.catalog
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/systemd/catalog/systemd.bg.catalog
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/systemd/catalog/systemd.it.catalog
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/systemd/catalog/systemd.pl.catalog
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/systemd/user-environment-generators/30-systemd-environment-d-generator
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/systemd/user-preset/90-systemd.preset
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/sysctl.d/README
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/sysctl.d/50-default.conf
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/sysctl.d/50-coredump.conf
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/rpm/macros.d/macros.systemd
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/sysusers.d/basic.conf
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/sysusers.d/systemd-coredump.conf
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/sysusers.d/systemd-network.conf
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/sysusers.d/systemd-timesync.conf
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/sysusers.d/README
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/sysusers.d/systemd-resolve.conf
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/sysusers.d/systemd-journal.conf
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/environment.d/99-environment.conf
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/kernel/install.conf
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/kernel/install.d/50-depmod.install
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/kernel/install.d/90-loaderentry.install
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/bin/postinst-useradd-systemd
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/sysroot-providers/systemd
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/sysroot-providers/udev
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/fixmepath.cmd
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/fixmepath
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/systemd/user-environment-generators/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/multi-user.target.wants/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/graphical.target.wants/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/poweroff.target.wants/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/local-fs.target.wants/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/sysinit.target.wants/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/sockets.target.wants/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/timers.target.wants/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/reboot.target.wants/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/rescue.target.wants/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/share/dbus-1/system-services/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/user-.slice.d/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/systemd/user-generators/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system-generators/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/share/zsh/site-functions/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/systemd/user-preset/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/share/factory/etc/pam.d/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system-shutdown/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/share/polkit-1/actions/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/share/dbus-1/system.d/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/share/dbus-1/services/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system-preset/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/kernel/install.d/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system-sleep/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/systemd/catalog/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/ntp-units.d/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/environment.d/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/share/factory/etc/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/rpm/macros.d/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/systemd/user/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/share/pkgconfig/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/include/systemd/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/network/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/sysusers.d/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/tmpfiles.d/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/share/polkit-1/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/system/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/pkgconfig/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/share/factory/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/sysroot-providers/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/sysctl.d/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/share/dbus-1/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/udev/rules.d/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/systemd/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/udev/hwdb.d/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/kernel/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/modprobe.d/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/share/zsh/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/rpm/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/include/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/systemd/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/share/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/udev/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/bin/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/lib/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/usr/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd/lib/
+DEBUG: Python function sstate_task_prefunc finished
+DEBUG: Executing python function do_populate_sysroot
+DEBUG: Executing shell function sysroot_stage_all
+0 blocks
+0 blocks
+0 blocks
+0 blocks
+0 blocks
+DEBUG: Shell function sysroot_stage_all finished
+DEBUG: Executing python function sysroot_strip
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/sysroot-destdir/usr/lib/systemd/user-environment-generators/30-systemd-environment-d-generator']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/sysroot-destdir/lib/libudev.so.1.7.4']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/sysroot-destdir/lib/libnss_systemd.so.2']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/sysroot-destdir/lib/udev/v4l_id']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/sysroot-destdir/lib/libsystemd.so.0.34.0']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/sysroot-destdir/lib/udev/ata_id']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/sysroot-destdir/lib/udev/cdrom_id']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/sysroot-destdir/lib/udev/scsi_id']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/sysroot-destdir/lib/udev/dmi_memory_id']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/sysroot-destdir/lib/udev/mtd_probe']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/sysroot-destdir/lib/udev/fido_id']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/sysroot-destdir/lib/systemd/systemd-networkd']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/sysroot-destdir/lib/systemd/systemd-timedated']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/sysroot-destdir/lib/systemd/systemd-networkd-wait-online']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/sysroot-destdir/lib/systemd/systemd-coredump']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/sysroot-destdir/lib/systemd/systemd-pstore']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/sysroot-destdir/lib/systemd/libsystemd-core-251.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/sysroot-destdir/lib/systemd/systemd-fsck']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/sysroot-destdir/lib/systemd/systemd-shutdown']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/sysroot-destdir/lib/systemd/systemd-reply-password']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/sysroot-destdir/lib/systemd/systemd-volatile-root']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/sysroot-destdir/lib/systemd/systemd-cgroups-agent']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/sysroot-destdir/lib/systemd/systemd-socket-proxyd']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/sysroot-destdir/lib/systemd/systemd-time-wait-sync']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/sysroot-destdir/lib/systemd/systemd-boot-check-no-failures']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/sysroot-destdir/lib/systemd/systemd-ac-power']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/sysroot-destdir/lib/systemd/systemd']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/sysroot-destdir/lib/systemd/systemd-remount-fs']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/sysroot-destdir/lib/systemd/systemd-growfs']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/sysroot-destdir/lib/systemd/systemd-resolved']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/sysroot-destdir/lib/systemd/systemd-random-seed']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/sysroot-destdir/lib/systemd/systemd-timesyncd']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/sysroot-destdir/lib/systemd/systemd-sleep']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/sysroot-destdir/lib/systemd/systemd-sysctl']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/sysroot-destdir/lib/systemd/systemd-user-sessions']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/sysroot-destdir/lib/systemd/systemd-update-done']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/sysroot-destdir/lib/systemd/systemd-network-generator']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/sysroot-destdir/lib/systemd/systemd-sulogin-shell']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/sysroot-destdir/lib/systemd/systemd-journald']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/sysroot-destdir/lib/systemd/libsystemd-shared-251.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/sysroot-destdir/lib/systemd/systemd-hostnamed']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/sysroot-destdir/lib/systemd/system-generators/systemd-gpt-auto-generator']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/sysroot-destdir/lib/systemd/systemd-makefs']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/sysroot-destdir/lib/systemd/system-generators/systemd-run-generator']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/sysroot-destdir/lib/systemd/system-generators/systemd-debug-generator']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/sysroot-destdir/lib/systemd/system-generators/systemd-system-update-generator']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/sysroot-destdir/lib/systemd/system-generators/systemd-fstab-generator']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/sysroot-destdir/lib/systemd/system-generators/systemd-getty-generator']
+DEBUG: Python function sysroot_strip finished
+DEBUG: Executing python function useradd_sysroot_sstate
+DEBUG: Python function useradd_sysroot_sstate finished
+DEBUG: Python function do_populate_sysroot finished
+DEBUG: Executing python function do_qa_sysroot
+NOTE: QA checking do_populate_sysroot
+DEBUG: Python function do_qa_sysroot finished
+DEBUG: Executing python function sstate_task_postfunc
+NOTE: Using umask 0o002 (not 22) for sstate packaging
+DEBUG: Preparing tree /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/sysroot-destdir for packaging at /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/sstate-build-populate_sysroot/sysroot-destdir
+DEBUG: Executing python function target_add_sysroot_deps
+DEBUG: Python function target_add_sysroot_deps finished
+DEBUG: Executing python function sstate_hardcode_path
+NOTE: Removing hardcoded paths from sstate package: 'find /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/sstate-build-populate_sysroot/ \( -name "*.la" -o -name "*-config" -o -name "*_config" -o -name "postinst-*" \) -type f | xargs grep -l -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/recipe-sysroot' -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/recipe-sysroot-native' -e '/home/matt/tmp/build/obmc-y2038/tmp/hosttools' -e '/home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/pseudo-native' -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/pseudo/' -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/temp/fifo.3311551' | tee /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/sstate-build-populate_sysroot/fixmepath | xargs --no-run-if-empty sed -i -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/recipe-sysroot-native:FIXMESTAGINGDIRHOST:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/recipe-sysroot:FIXMESTAGINGDIRTARGET:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:FIXME_HOSTTOOLS_DIR:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/pseudo-native:FIXME_PSEUDO_SYSROOT:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/pseudo/:FIXME_PSEUDO_LOCALSTATEDIR:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/temp/fifo.3311551:FIXME_LOGFIFO:g''
+NOTE: Replacing absolute paths in fixmepath file: 'sed -i -e 's:^/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/sstate-build-populate_sysroot/::g' /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/sstate-build-populate_sysroot/fixmepath'
+DEBUG: Python function sstate_hardcode_path finished
+DEBUG: Executing python function sstate_report_unihash
+DEBUG: Python function sstate_report_unihash finished
+DEBUG: Executing shell function sstate_create_package
+DEBUG: Shell function sstate_create_package finished
+DEBUG: Executing python function sstate_hardcode_path_unpack
+DEBUG: Python function sstate_hardcode_path_unpack finished
+DEBUG: Staging files from /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/sysroot-destdir to /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/systemd
+DEBUG: Python function sstate_task_postfunc finished

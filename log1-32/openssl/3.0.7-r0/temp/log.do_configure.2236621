@@ -1,0 +1,284 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/opkg-utils/opkg-utils_0.5.0.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/perl/perl_5.36.0.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: []
+NOTE: Skipping as already exists in sysroot: ['glibc', 'gcc-cross-arm', 'gcc-runtime', 'opkg-utils', 'quilt-native', 'patch-native', 'perl-native', 'pseudo-native', 'libtool-native', 'attr-native', 'linux-libc-headers', 'gdbm-native', 'zlib-native', 'make-native', 'libgcc', 'texinfo-dummy-native', 'mpfr-native', 'gmp-native', 'binutils-cross-arm', 'xz-native', 'flex-native', 'libmpc-native', 'gnu-config-native', 'zstd-native', 'gettext-minimal-native', 'm4-native']
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing shell function do_configure
+***** Deprecated options: no-ssl2, no-hw
+Configuring OpenSSL version 3.0.7 for target linux-armv4
+Using os-specific seed configuration
+Created configdata.pm
+Running configdata.pm
+Created Makefile.in
+Created Makefile
+Created include/openssl/configuration.h
+
+**********************************************************************
+***                                                                ***
+***   OpenSSL has been successfully configured                     ***
+***                                                                ***
+***   If you encounter a problem while building, please open an    ***
+***   issue on GitHub <https://github.com/openssl/openssl/issues>  ***
+***   and include the output from the following command:           ***
+***                                                                ***
+***       perl configdata.pm --dump                                ***
+***                                                                ***
+***   (If you are new to OpenSSL, you might want to consult the    ***
+***   'Troubleshooting' section in the INSTALL.md file first)      ***
+***                                                                ***
+**********************************************************************
+
+Command line (with current working directory = /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/build):
+
+    perl ../openssl-3.0.7/Configure shared no-hw no-err no-psk no-srp no-ssl2 no-ssl3 no-rmd160 no-whirlpool no-rc2 no-rc4 no-bf no-cast no-gost disable-devcryptoeng --prefix=/usr --openssldir=/usr/lib/ssl-3 --libdir=/usr/lib linux-armv4
+
+Perl information:
+
+    /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/recipe-sysroot-native/usr/bin/perl-native/perl.real
+    5.36.0 for x86_64-linux
+
+Enabled features:
+
+    afalgeng
+    aria
+    asm
+    async
+    autoalginit
+    autoerrinit
+    autoload-config
+    blake2
+    bulk
+    cached-fetch
+    camellia
+    capieng
+    chacha
+    cmac
+    cmp
+    cms
+    comp
+    ct
+    deprecated
+    des
+    dgram
+    dh
+    dsa
+    dso
+    dtls
+    dynamic-engine
+    ec
+    ec2m
+    ecdh
+    ecdsa
+    engine
+    filenames
+    idea
+    legacy
+    loadereng
+    makedepend
+    md4
+    mdc2
+    module
+    multiblock
+    nextprotoneg
+    ocb
+    ocsp
+    pic
+    pinshared
+    poly1305
+    posix-io
+    rdrand
+    rfc3779
+    scrypt
+    secure-memory
+    seed
+    shared
+    siphash
+    siv
+    sm2
+    sm3
+    sm4
+    sock
+    srtp
+    sse2
+    ssl
+    ssl-trace
+    static-engine
+    stdio
+    tests
+    threads
+    tls
+    ts
+    ui-console
+    tls1
+    tls1-method
+    tls1_1
+    tls1_1-method
+    tls1_2
+    tls1_2-method
+    tls1_3
+    dtls1
+    dtls1-method
+    dtls1_2
+    dtls1_2-method
+
+Disabled features:
+
+    acvp-tests          [cascade]        OPENSSL_NO_ACVP_TESTS
+    asan                [default]        OPENSSL_NO_ASAN
+    bf                  [option]         OPENSSL_NO_BF (skip crypto/bf)
+    buildtest-c++       [default]        
+    cast                [option]         OPENSSL_NO_CAST (skip crypto/cast)
+    crypto-mdebug       [default]        OPENSSL_NO_CRYPTO_MDEBUG
+    devcryptoeng        [option]         OPENSSL_NO_DEVCRYPTOENG
+    ec_nistp_64_gcc_128 [default]        OPENSSL_NO_EC_NISTP_64_GCC_128
+    egd                 [default]        OPENSSL_NO_EGD
+    err                 [option]         OPENSSL_NO_ERR
+    external-tests      [default]        OPENSSL_NO_EXTERNAL_TESTS
+    fips                [default]        
+    fips-securitychecks [cascade]        OPENSSL_NO_FIPS_SECURITYCHECKS
+    fuzz-afl            [default]        OPENSSL_NO_FUZZ_AFL
+    fuzz-libfuzzer      [default]        OPENSSL_NO_FUZZ_LIBFUZZER
+    gost                [option]         OPENSSL_NO_GOST
+    ktls                [default]        OPENSSL_NO_KTLS
+    md2                 [default]        OPENSSL_NO_MD2 (skip crypto/md2)
+    msan                [default]        OPENSSL_NO_MSAN
+    padlockeng          [cascade]        OPENSSL_NO_PADLOCKENG
+    psk                 [option]         OPENSSL_NO_PSK
+    rc2                 [option]         OPENSSL_NO_RC2 (skip crypto/rc2)
+    rc4                 [option]         OPENSSL_NO_RC4 (skip crypto/rc4)
+    rc5                 [default]        OPENSSL_NO_RC5 (skip crypto/rc5)
+    rmd160              [option]         OPENSSL_NO_RMD160 (skip crypto/ripemd)
+    sctp                [default]        OPENSSL_NO_SCTP
+    srp                 [option]         OPENSSL_NO_SRP (skip crypto/srp)
+    trace               [default]        OPENSSL_NO_TRACE
+    ubsan               [default]        OPENSSL_NO_UBSAN
+    unit-test           [default]        OPENSSL_NO_UNIT_TEST
+    uplink              [no uplink_arch] OPENSSL_NO_UPLINK
+    weak-ssl-ciphers    [default]        OPENSSL_NO_WEAK_SSL_CIPHERS
+    whirlpool           [option]         OPENSSL_NO_WHIRLPOOL (skip crypto/whrlpool)
+    zlib                [default]        
+    zlib-dynamic        [default]        
+    ssl3                [option]         OPENSSL_NO_SSL3
+    ssl3-method         [default]        OPENSSL_NO_SSL3_METHOD
+
+Config target attributes:
+
+    AR => "ar",
+    ARFLAGS => "qc",
+    CC => "gcc",
+    CFLAGS => "-Wall -O3",
+    CXX => "g++",
+    CXXFLAGS => "-Wall -O3",
+    HASHBANGPERL => "/usr/bin/env perl",
+    RANLIB => "ranlib",
+    RC => "windres",
+    asm_arch => "armv4",
+    bn_ops => "BN_LLONG RC4_CHAR",
+    build_file => "Makefile",
+    build_scheme => [ "unified", "unix" ],
+    cflags => "-pthread",
+    cppflags => "",
+    cxxflags => "-std=c++11 -pthread",
+    defines => [ "OPENSSL_BUILDING_OPENSSL" ],
+    disable => [  ],
+    dso_ldflags => "-Wl,-z,defs",
+    dso_scheme => "dlfcn",
+    enable => [ "afalgeng" ],
+    ex_libs => "-ldl -pthread -latomic",
+    includes => [  ],
+    lflags => "",
+    lib_cflags => "",
+    lib_cppflags => "-DOPENSSL_USE_NODELETE",
+    lib_defines => [  ],
+    module_cflags => "-fPIC",
+    module_cxxflags => undef,
+    module_ldflags => "-Wl,-znodelete -shared -Wl,-Bsymbolic",
+    perl_platform => "Unix",
+    perlasm_scheme => "linux32",
+    shared_cflag => "-fPIC",
+    shared_defflag => "-Wl,--version-script=",
+    shared_defines => [  ],
+    shared_ldflag => "-Wl,-znodelete -shared -Wl,-Bsymbolic",
+    shared_rcflag => "",
+    shared_sonameflag => "-Wl,-soname=",
+    shared_target => "linux-shared",
+    thread_defines => [  ],
+    thread_scheme => "pthreads",
+    unistd => "<unistd.h>",
+
+Recorded environment:
+
+    AR = arm-openbmc-linux-gnueabi-gcc-ar
+    ARFLAGS = 
+    AS = arm-openbmc-linux-gnueabi-as 
+    ASFLAGS = 
+    BUILDFILE = 
+    CC = arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/recipe-sysroot
+    CFLAGS =  -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/openssl-3.0.7=/usr/src/debug/openssl/3.0.7-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/openssl-3.0.7=/usr/src/debug/openssl/3.0.7-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/build=/usr/src/debug/openssl/3.0.7-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/build=/usr/src/debug/openssl/3.0.7-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/recipe-sysroot-native=   -Wconversion -Wno-error
+    CPP = arm-openbmc-linux-gnueabi-gcc -E --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/recipe-sysroot  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security
+    CPPDEFINES = 
+    CPPFLAGS = 
+    CPPINCLUDES = 
+    CROSS_COMPILE = 
+    CXX = arm-openbmc-linux-gnueabi-g++  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/recipe-sysroot
+    CXXFLAGS =  -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/openssl-3.0.7=/usr/src/debug/openssl/3.0.7-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/openssl-3.0.7=/usr/src/debug/openssl/3.0.7-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/build=/usr/src/debug/openssl/3.0.7-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/build=/usr/src/debug/openssl/3.0.7-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/recipe-sysroot-native=   -Wconversion -Wno-error  -Wconversion -Wno-error -fvisibility-inlines-hidden
+    HASHBANGPERL = /usr/bin/env perl
+    LD = arm-openbmc-linux-gnueabi-ld --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/recipe-sysroot 
+    LDFLAGS = -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/openssl-3.0.7=/usr/src/debug/openssl/3.0.7-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/openssl-3.0.7=/usr/src/debug/openssl/3.0.7-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/build=/usr/src/debug/openssl/3.0.7-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/build=/usr/src/debug/openssl/3.0.7-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/recipe-sysroot-native=  -Wl,-z,relro,-z,now
+    LDLIBS = 
+    MT = 
+    MTFLAGS = 
+    OPENSSL_LOCAL_CONFIG_DIR = 
+    PERL = perl
+    RANLIB = arm-openbmc-linux-gnueabi-gcc-ranlib
+    RC = 
+    RCFLAGS = 
+    RM = 
+    WINDRES = 
+    __CNF_CFLAGS = 
+    __CNF_CPPDEFINES = 
+    __CNF_CPPFLAGS = 
+    __CNF_CPPINCLUDES = 
+    __CNF_CXXFLAGS = 
+    __CNF_LDFLAGS = 
+    __CNF_LDLIBS = 
+
+Makevars:
+
+    AR              = arm-openbmc-linux-gnueabi-gcc-ar
+    ARFLAGS         = qc
+    AS              = arm-openbmc-linux-gnueabi-as 
+    CC              = arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/recipe-sysroot
+    CFLAGS          =  -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/openssl-3.0.7=/usr/src/debug/openssl/3.0.7-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/openssl-3.0.7=/usr/src/debug/openssl/3.0.7-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/build=/usr/src/debug/openssl/3.0.7-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/build=/usr/src/debug/openssl/3.0.7-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/recipe-sysroot-native=   -Wconversion -Wno-error
+    CPP             = arm-openbmc-linux-gnueabi-gcc -E --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/recipe-sysroot  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security
+    CPPDEFINES      = 
+    CPPFLAGS        = 
+    CPPINCLUDES     = 
+    CXX             = arm-openbmc-linux-gnueabi-g++  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/recipe-sysroot
+    CXXFLAGS        =  -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/openssl-3.0.7=/usr/src/debug/openssl/3.0.7-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/openssl-3.0.7=/usr/src/debug/openssl/3.0.7-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/build=/usr/src/debug/openssl/3.0.7-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/build=/usr/src/debug/openssl/3.0.7-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/recipe-sysroot-native=   -Wconversion -Wno-error  -Wconversion -Wno-error -fvisibility-inlines-hidden
+    HASHBANGPERL    = /usr/bin/env perl
+    LD              = arm-openbmc-linux-gnueabi-ld --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/recipe-sysroot 
+    LDFLAGS         = -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/openssl-3.0.7=/usr/src/debug/openssl/3.0.7-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/openssl-3.0.7=/usr/src/debug/openssl/3.0.7-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/build=/usr/src/debug/openssl/3.0.7-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/build=/usr/src/debug/openssl/3.0.7-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/recipe-sysroot-native=  -Wl,-z,relro,-z,now
+    LDLIBS          = 
+    PERL            = perl
+    RANLIB          = arm-openbmc-linux-gnueabi-gcc-ranlib
+    RC              = windres
+    RCFLAGS         = 
+
+NOTE: These variables only represent the configuration view.  The build file
+template may have processed these variables further, please have a look at the
+build file for more exact data:
+    /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/build/Makefile
+
+build file:
+
+    /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/build/Makefile
+
+build file templates:
+
+    /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/build/../openssl-3.0.7/Configurations/common0.tmpl
+    /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/build/../openssl-3.0.7/Configurations/unix-Makefile.tmpl
+NOTE: make depend
+DEBUG: Shell function do_configure finished
+DEBUG: Executing python function do_qa_configure
+DEBUG: Python function do_qa_configure finished

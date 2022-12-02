@@ -1,0 +1,35 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/opkg-utils/opkg-utils_0.5.0.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: []
+NOTE: Skipping as already exists in sysroot: ['glibc', 'gcc-cross-arm', 'gcc-runtime', 'opkg-utils', 'quilt-native', 'patch-native', 'pseudo-native', 'linux-libc-headers', 'libgcc', 'attr-native', 'libtool-native', 'zstd-native', 'mpfr-native', 'xz-native', 'zlib-native', 'gmp-native', 'texinfo-dummy-native', 'gnu-config-native', 'libmpc-native', 'flex-native', 'binutils-cross-arm', 'gettext-minimal-native', 'm4-native']
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing shell function do_install
+NOTE: make -j 1 bindir=/usr/bin sbindir=/usr/sbin incdir=/usr/include libdir=/usr/lib mandir=/usr/share/man EXTRA=eeprog DESTDIR=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/image install
+install -m 755 -d /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/image/usr/include/i2c
+for file in i2c/smbus.h ; do \
+install -m 644 include/$file /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/image/usr/include/$file ; done
+install -m 755 -d /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/image/usr/lib /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/image/usr/share/man/man3
+install -m 755 lib/libi2c.so.0.1.1 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/image/usr/lib
+ln -sf libi2c.so.0.1.1 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/image/usr/lib/libi2c.so.0
+ln -sf libi2c.so.0 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/image/usr/lib/libi2c.so
+install -m 644 lib/libi2c.a /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/image/usr/lib
+install -m 644 lib/libi2c.3 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/image/usr/share/man/man3
+install -m 755 -d /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/image/usr/bin /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/image/usr/share/man/man1
+for program in decode-dimms decode-vaio ddcmon decode-edid ; do \
+install -m 755 eeprom/$program /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/image/usr/bin ; done
+for manual in decode-dimms.1 decode-vaio.1 ; do \
+install -m 644 eeprom/$manual /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/image/usr/share/man/man1 ; done
+install -m 755 -d /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/image/usr/sbin /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/image/usr/share/man/man8
+install -m 755 stub/i2c-stub-from-dump /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/image/usr/sbin
+install -m 644 stub/i2c-stub-from-dump.8 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/image/usr/share/man/man8
+install -m 755 -d /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/image/usr/sbin /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/image/usr/share/man/man8
+for program in i2cdetect i2cdump i2cset i2cget i2ctransfer ; do \
+install -m 755 tools/$program /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/image/usr/sbin ; \
+install -m 644 tools/$program.8 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/image/usr/share/man/man8 ; done
+install -m 755 -d /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/image/usr/sbin /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/image/usr/share/man/man8
+for program in eeprog ; do \
+install -m 755 eeprog/$program /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/image/usr/sbin ; \
+install -m 644 eeprog/$program.8 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/i2c-tools/4.3-r0/image/usr/share/man/man8 ; done
+DEBUG: Shell function do_install finished
+DEBUG: Executing shell function remove_libtool_la
+DEBUG: Shell function remove_libtool_la finished

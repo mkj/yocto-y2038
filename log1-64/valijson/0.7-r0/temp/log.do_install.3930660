@@ -1,0 +1,66 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/cmake/cmake-native_3.24.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-support/boost/boost_1.80.0.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/ninja/ninja_1.11.1.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: []
+NOTE: Skipping as already exists in sysroot: ['glibc', 'cmake-native', 'gcc-cross-arm', 'gcc-runtime', 'quilt-native', 'boost', 'ninja-native', 'patch-native', 'pseudo-native', 'bzip2', 'zlib', 'attr-native', 'libtool-native', 'zstd-native', 'mpfr-native', 'libmpc-native', 'gnu-config-native', 'binutils-cross-arm', 'flex-native', 'xz-native', 'texinfo-dummy-native', 'zlib-native', 'gmp-native', 'linux-libc-headers', 'ncurses-native', 'bzip2-native', 'curl-native', 're2c-native', 'libgcc', 'opkg-utils', 'gettext-minimal-native', 'm4-native', 'openssl-native', 'perl-native', 'make-native', 'gdbm-native']
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing shell function do_install
+NOTE: DESTDIR=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/valijson/0.7-r0/image VERBOSE=1 cmake --build /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/valijson/0.7-r0/build --target install --
+[0/1] cd /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/valijson/0.7-r0/build && /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/valijson/0.7-r0/recipe-sysroot-native/usr/bin/cmake -P cmake_install.cmake
+-- Install configuration: ""
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/valijson/0.7-r0/image/usr/include
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/valijson/0.7-r0/image/usr/include/valijson
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/valijson/0.7-r0/image/usr/include/valijson/validation_results.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/valijson/0.7-r0/image/usr/include/valijson/constraint_builder.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/valijson/0.7-r0/image/usr/include/valijson/validation_visitor.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/valijson/0.7-r0/image/usr/include/valijson/subschema.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/valijson/0.7-r0/image/usr/include/valijson/schema_parser.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/valijson/0.7-r0/image/usr/include/valijson/exceptions.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/valijson/0.7-r0/image/usr/include/valijson/schema.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/valijson/0.7-r0/image/usr/include/valijson/constraints
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/valijson/0.7-r0/image/usr/include/valijson/constraints/concrete_constraints.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/valijson/0.7-r0/image/usr/include/valijson/constraints/constraint_visitor.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/valijson/0.7-r0/image/usr/include/valijson/constraints/basic_constraint.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/valijson/0.7-r0/image/usr/include/valijson/constraints/constraint.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/valijson/0.7-r0/image/usr/include/valijson/adapters
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/valijson/0.7-r0/image/usr/include/valijson/adapters/json11_adapter.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/valijson/0.7-r0/image/usr/include/valijson/adapters/jsoncpp_adapter.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/valijson/0.7-r0/image/usr/include/valijson/adapters/boost_json_adapter.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/valijson/0.7-r0/image/usr/include/valijson/adapters/nlohmann_json_adapter.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/valijson/0.7-r0/image/usr/include/valijson/adapters/rapidjson_adapter.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/valijson/0.7-r0/image/usr/include/valijson/adapters/poco_json_adapter.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/valijson/0.7-r0/image/usr/include/valijson/adapters/std_string_adapter.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/valijson/0.7-r0/image/usr/include/valijson/adapters/qtjson_adapter.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/valijson/0.7-r0/image/usr/include/valijson/adapters/property_tree_adapter.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/valijson/0.7-r0/image/usr/include/valijson/adapters/picojson_adapter.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/valijson/0.7-r0/image/usr/include/valijson/adapters/yaml_cpp_adapter.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/valijson/0.7-r0/image/usr/include/valijson/validator.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/valijson/0.7-r0/image/usr/include/valijson/internal
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/valijson/0.7-r0/image/usr/include/valijson/internal/frozen_value.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/valijson/0.7-r0/image/usr/include/valijson/internal/custom_allocator.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/valijson/0.7-r0/image/usr/include/valijson/internal/json_pointer.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/valijson/0.7-r0/image/usr/include/valijson/internal/optional.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/valijson/0.7-r0/image/usr/include/valijson/internal/optional_bundled.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/valijson/0.7-r0/image/usr/include/valijson/internal/adapter.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/valijson/0.7-r0/image/usr/include/valijson/internal/json_reference.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/valijson/0.7-r0/image/usr/include/valijson/internal/uri.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/valijson/0.7-r0/image/usr/include/valijson/internal/debug.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/valijson/0.7-r0/image/usr/include/valijson/internal/basic_adapter.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/valijson/0.7-r0/image/usr/include/valijson/utils
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/valijson/0.7-r0/image/usr/include/valijson/utils/boost_json_utils.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/valijson/0.7-r0/image/usr/include/valijson/utils/json11_utils.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/valijson/0.7-r0/image/usr/include/valijson/utils/nlohmann_json_utils.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/valijson/0.7-r0/image/usr/include/valijson/utils/utf8_utils.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/valijson/0.7-r0/image/usr/include/valijson/utils/file_utils.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/valijson/0.7-r0/image/usr/include/valijson/utils/yaml_cpp_utils.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/valijson/0.7-r0/image/usr/include/valijson/utils/property_tree_utils.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/valijson/0.7-r0/image/usr/include/valijson/utils/jsoncpp_utils.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/valijson/0.7-r0/image/usr/include/valijson/utils/qtjson_utils.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/valijson/0.7-r0/image/usr/include/valijson/utils/rapidjson_utils.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/valijson/0.7-r0/image/usr/include/valijson/utils/picojson_utils.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/valijson/0.7-r0/image/usr/include/valijson/utils/poco_json_utils.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/valijson/0.7-r0/image/usr/include/compat
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/valijson/0.7-r0/image/usr/include/compat/optional.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/valijson/0.7-r0/image/usr/lib/cmake/valijson/valijsonConfig.cmake
+DEBUG: Shell function do_install finished
+DEBUG: Executing shell function remove_libtool_la
+DEBUG: Shell function remove_libtool_la finished

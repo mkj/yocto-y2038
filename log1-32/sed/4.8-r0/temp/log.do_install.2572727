@@ -1,0 +1,95 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-cross_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-native_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/opkg-utils/opkg-utils_0.5.0.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-extended/texinfo-dummy-native/texinfo-dummy-native.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-core/gettext/gettext_0.21.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/autoconf/autoconf_2.71.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/automake/automake_1.16.5.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-extended/xz/xz_5.2.7.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: []
+NOTE: Skipping as already exists in sysroot: ['glibc', 'gcc-cross-arm', 'gcc-runtime', 'libtool-cross', 'libtool-native', 'opkg-utils', 'quilt-native', 'texinfo-dummy-native', 'gettext-native', 'autoconf-native', 'automake-native', 'patch-native', 'pseudo-native', 'xz-native', 'binutils-cross-arm', 'libgcc', 'linux-libc-headers', 'gnu-config-native', 'm4-native', 'gettext-minimal-native', 'attr-native', 'mpfr-native', 'libmpc-native', 'flex-native', 'zstd-native', 'zlib-native', 'gmp-native']
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function autotools_aclocals
+DEBUG: SITE files ['endian-little', 'bit-32', 'arm-common', 'arm-32', 'common-linux', 'common-glibc', 'arm-linux', 'arm-linux-gnueabi', 'common']
+DEBUG: Python function autotools_aclocals finished
+DEBUG: Executing shell function do_install
+NOTE: make -j 1 DESTDIR=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sed/4.8-r0/image install
+make  install-recursive
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sed/4.8-r0/build'
+Making install in po
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sed/4.8-r0/build/po'
+installing ../../sed-4.8/po/af.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sed/4.8-r0/image/usr/share/locale/af/LC_MESSAGES/sed.mo
+installing ../../sed-4.8/po/ast.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sed/4.8-r0/image/usr/share/locale/ast/LC_MESSAGES/sed.mo
+installing ../../sed-4.8/po/bg.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sed/4.8-r0/image/usr/share/locale/bg/LC_MESSAGES/sed.mo
+installing ../../sed-4.8/po/ca.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sed/4.8-r0/image/usr/share/locale/ca/LC_MESSAGES/sed.mo
+installing ../../sed-4.8/po/cs.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sed/4.8-r0/image/usr/share/locale/cs/LC_MESSAGES/sed.mo
+installing ../../sed-4.8/po/da.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sed/4.8-r0/image/usr/share/locale/da/LC_MESSAGES/sed.mo
+installing ../../sed-4.8/po/de.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sed/4.8-r0/image/usr/share/locale/de/LC_MESSAGES/sed.mo
+installing ../../sed-4.8/po/el.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sed/4.8-r0/image/usr/share/locale/el/LC_MESSAGES/sed.mo
+installing ../../sed-4.8/po/eo.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sed/4.8-r0/image/usr/share/locale/eo/LC_MESSAGES/sed.mo
+installing ../../sed-4.8/po/es.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sed/4.8-r0/image/usr/share/locale/es/LC_MESSAGES/sed.mo
+installing ../../sed-4.8/po/et.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sed/4.8-r0/image/usr/share/locale/et/LC_MESSAGES/sed.mo
+installing ../../sed-4.8/po/eu.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sed/4.8-r0/image/usr/share/locale/eu/LC_MESSAGES/sed.mo
+installing ../../sed-4.8/po/fi.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sed/4.8-r0/image/usr/share/locale/fi/LC_MESSAGES/sed.mo
+installing ../../sed-4.8/po/fr.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sed/4.8-r0/image/usr/share/locale/fr/LC_MESSAGES/sed.mo
+installing ../../sed-4.8/po/ga.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sed/4.8-r0/image/usr/share/locale/ga/LC_MESSAGES/sed.mo
+installing ../../sed-4.8/po/gl.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sed/4.8-r0/image/usr/share/locale/gl/LC_MESSAGES/sed.mo
+installing ../../sed-4.8/po/he.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sed/4.8-r0/image/usr/share/locale/he/LC_MESSAGES/sed.mo
+installing ../../sed-4.8/po/hr.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sed/4.8-r0/image/usr/share/locale/hr/LC_MESSAGES/sed.mo
+installing ../../sed-4.8/po/hu.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sed/4.8-r0/image/usr/share/locale/hu/LC_MESSAGES/sed.mo
+installing ../../sed-4.8/po/id.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sed/4.8-r0/image/usr/share/locale/id/LC_MESSAGES/sed.mo
+installing ../../sed-4.8/po/it.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sed/4.8-r0/image/usr/share/locale/it/LC_MESSAGES/sed.mo
+installing ../../sed-4.8/po/ja.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sed/4.8-r0/image/usr/share/locale/ja/LC_MESSAGES/sed.mo
+installing ../../sed-4.8/po/ko.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sed/4.8-r0/image/usr/share/locale/ko/LC_MESSAGES/sed.mo
+installing ../../sed-4.8/po/nb.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sed/4.8-r0/image/usr/share/locale/nb/LC_MESSAGES/sed.mo
+installing ../../sed-4.8/po/nl.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sed/4.8-r0/image/usr/share/locale/nl/LC_MESSAGES/sed.mo
+installing ../../sed-4.8/po/pl.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sed/4.8-r0/image/usr/share/locale/pl/LC_MESSAGES/sed.mo
+installing ../../sed-4.8/po/pt.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sed/4.8-r0/image/usr/share/locale/pt/LC_MESSAGES/sed.mo
+installing ../../sed-4.8/po/pt_BR.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sed/4.8-r0/image/usr/share/locale/pt_BR/LC_MESSAGES/sed.mo
+installing ../../sed-4.8/po/ro.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sed/4.8-r0/image/usr/share/locale/ro/LC_MESSAGES/sed.mo
+installing ../../sed-4.8/po/ru.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sed/4.8-r0/image/usr/share/locale/ru/LC_MESSAGES/sed.mo
+installing ../../sed-4.8/po/sk.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sed/4.8-r0/image/usr/share/locale/sk/LC_MESSAGES/sed.mo
+installing ../../sed-4.8/po/sl.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sed/4.8-r0/image/usr/share/locale/sl/LC_MESSAGES/sed.mo
+installing ../../sed-4.8/po/sr.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sed/4.8-r0/image/usr/share/locale/sr/LC_MESSAGES/sed.mo
+installing ../../sed-4.8/po/sv.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sed/4.8-r0/image/usr/share/locale/sv/LC_MESSAGES/sed.mo
+installing ../../sed-4.8/po/tr.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sed/4.8-r0/image/usr/share/locale/tr/LC_MESSAGES/sed.mo
+installing ../../sed-4.8/po/uk.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sed/4.8-r0/image/usr/share/locale/uk/LC_MESSAGES/sed.mo
+installing ../../sed-4.8/po/vi.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sed/4.8-r0/image/usr/share/locale/vi/LC_MESSAGES/sed.mo
+installing ../../sed-4.8/po/zh_CN.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sed/4.8-r0/image/usr/share/locale/zh_CN/LC_MESSAGES/sed.mo
+installing ../../sed-4.8/po/zh_TW.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sed/4.8-r0/image/usr/share/locale/zh_TW/LC_MESSAGES/sed.mo
+if test "sed" = "gettext-tools"; then \
+  /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sed/4.8-r0/image/usr/share/gettext/po; \
+  for file in Makefile.in.in remove-potcdate.sin quot.sed boldquot.sed en@quot.header en@boldquot.header insert-header.sin Rules-quot   Makevars.template; do \
+    /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../../sed-4.8/po/$file \
+		    /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sed/4.8-r0/image/usr/share/gettext/po/$file; \
+  done; \
+  for file in Makevars; do \
+    rm -f /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sed/4.8-r0/image/usr/share/gettext/po/$file; \
+  done; \
+else \
+  : ; \
+fi
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sed/4.8-r0/build/po'
+Making install in .
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sed/4.8-r0/build'
+make[3]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sed/4.8-r0/build'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sed/4.8-r0/image/usr/bin'
+  /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c sed/sed '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sed/4.8-r0/image/usr/bin'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sed/4.8-r0/image/usr/share/info'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../sed-4.8/doc/sed.info '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sed/4.8-r0/image/usr/share/info'
+ install-info --info-dir='/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sed/4.8-r0/image/usr/share/info' '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sed/4.8-r0/image/usr/share/info/sed.info'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sed/4.8-r0/image/usr/share/man/man1'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../sed-4.8/doc/sed.1 '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sed/4.8-r0/image/usr/share/man/man1'
+make[3]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sed/4.8-r0/build'
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sed/4.8-r0/build'
+Making install in gnulib-tests
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sed/4.8-r0/build/gnulib-tests'
+make  install-recursive
+make[3]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sed/4.8-r0/build/gnulib-tests'
+Making install in .
+make[4]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sed/4.8-r0/build/gnulib-tests'
+make[5]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sed/4.8-r0/build/gnulib-tests'
+make[5]: Nothing to be done for 'install-exec-am'.
+make[5]: Nothing to be done for 'install-data-am'.
+make[5]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sed/4.8-r0/build/gnulib-tests'
+make[4]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sed/4.8-r0/build/gnulib-tests'
+make[3]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sed/4.8-r0/build/gnulib-tests'
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sed/4.8-r0/build/gnulib-tests'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sed/4.8-r0/build'
+DEBUG: Shell function do_install finished
+DEBUG: Executing shell function remove_libtool_la
+DEBUG: Shell function remove_libtool_la finished

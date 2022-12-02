@@ -1,0 +1,34 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/opkg-utils/opkg-utils_0.5.0.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-extended/xz/xz_5.2.7.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: []
+NOTE: Skipping as already exists in sysroot: ['opkg-utils-native', 'pseudo-native', 'xz-native', 'gettext-minimal-native', 'libtool-native', 'perl-native', 'texinfo-dummy-native', 'make-native', 'gdbm-native', 'zlib-native']
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function sstate_task_prefunc
+DEBUG: Python function sstate_task_prefunc finished
+DEBUG: Executing python function do_package_write_ipk
+DEBUG: Executing python function read_subpackage_metadata
+DEBUG: Python function read_subpackage_metadata finished
+DEBUG: Executing python function do_package_ipk
+NOTE: Not creating empty archive for linux-libc-headers-5.19-r0
+NOTE: Not creating empty archive for linux-libc-headers-locale-5.19-r0
+NOTE: Not creating empty archive for linux-libc-headers-doc-5.19-r0
+NOTE: Not creating empty archive for linux-libc-headers-staticdev-5.19-r0
+NOTE: Not creating empty archive for linux-libc-headers-src-5.19-r0
+DEBUG: Python function do_package_ipk finished
+DEBUG: Python function do_package_write_ipk finished
+DEBUG: Executing python function sstate_task_postfunc
+NOTE: Using umask 0o002 (not 22) for sstate packaging
+DEBUG: Preparing tree /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/linux-libc-headers/5.19-r0/deploy-ipks for packaging at /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/linux-libc-headers/5.19-r0/sstate-build-package_write_ipk/deploy-ipks
+DEBUG: Executing python function target_add_sysroot_deps
+DEBUG: Python function target_add_sysroot_deps finished
+DEBUG: Executing python function sstate_hardcode_path
+NOTE: Removing hardcoded paths from sstate package: 'find /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/linux-libc-headers/5.19-r0/sstate-build-package_write_ipk/ \( -name "*.la" -o -name "*-config" -o -name "*_config" -o -name "postinst-*" \) -type f | xargs grep -l -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/linux-libc-headers/5.19-r0/recipe-sysroot' -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/linux-libc-headers/5.19-r0/recipe-sysroot-native' -e '/home/matt/tmp/build/obmc-y2038/tmp/hosttools' | tee /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/linux-libc-headers/5.19-r0/sstate-build-package_write_ipk/fixmepath | xargs --no-run-if-empty sed -i -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/linux-libc-headers/5.19-r0/recipe-sysroot-native:FIXMESTAGINGDIRHOST:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/linux-libc-headers/5.19-r0/recipe-sysroot:FIXMESTAGINGDIRTARGET:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:FIXME_HOSTTOOLS_DIR:g''
+DEBUG: Python function sstate_hardcode_path finished
+DEBUG: Executing python function sstate_report_unihash
+DEBUG: Python function sstate_report_unihash finished
+DEBUG: Executing shell function sstate_create_package
+DEBUG: Shell function sstate_create_package finished
+DEBUG: Executing python function sstate_hardcode_path_unpack
+DEBUG: Python function sstate_hardcode_path_unpack finished
+DEBUG: Staging files from /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/linux-libc-headers/5.19-r0/deploy-ipks to /home/matt/tmp/build/obmc-y2038/tmp/deploy/ipk
+DEBUG: Python function sstate_task_postfunc finished

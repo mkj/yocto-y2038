@@ -1,0 +1,32 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/systemd/systemd-systemctl-native.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/systemd/systemd_251.4.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/opkg-utils/opkg-utils_0.5.0.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/qemu/qemu-native_7.1.0.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-support/gnutls/gnutls_3.7.8.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-support/libcap/libcap_2.66.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/meson/meson_0.63.3.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/ninja/ninja_1.11.1.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pkgconfig/pkgconfig_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/python/python3_3.11.0.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-support/libcap/libcap_2.66.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: []
+NOTE: Skipping as already exists in sysroot: ['glibc', 'systemd-systemctl-native', 'systemd', 'gcc-cross-arm', 'gcc-runtime', 'opkg-utils', 'qemu-native', 'quilt-native', 'gnutls', 'libcap', 'meson-native', 'ninja-native', 'patch-native', 'pkgconfig-native', 'pseudo-native', 'python3-native', 'libcap-native', 'shadow', 'base-passwd', 'zstd', 'shadow-native', 'util-linux', 'bash-completion', 'libseccomp', 'libpam', 'shadow-sysroot', 'base-files', 'libidn2', 'libunistring', 'gmp', 'nettle', 'libgcc', 'linux-libc-headers', 'libtool-native', 'zlib-native', 'glib-2.0-native', 'xz-native', 'attr-native', 're2c-native', 'python3-picobuild-native', 'python3-setuptools-native', 'python3-wheel-native', 'python3-installer-native', 'gnu-config-native', 'texinfo-dummy-native', 'mpfr-native', 'libmpc-native', 'binutils-cross-arm', 'flex-native', 'zstd-native', 'gmp-native', 'bzip2-native', 'libnsl2-native', 'gdbm-native', 'sqlite3-native', 'libtirpc-native', 'libffi-native', 'ncurses-native', 'readline-native', 'util-linux-libuuid-native', 'openssl-native', 'libxcrypt', 'zlib', 'util-linux-libuuid', 'libcap-ng', 'ncurses', 'cracklib', 'flex', 'gettext-minimal-native', 'util-linux-native', 'libpcre-native', 'gettext-native', 'python3-flit-core-native', 'm4-native', 'perl-native', 'libpcre2-native', 'libcap-ng-native', 'unzip-native', 'make-native']
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing shell function do_install
+[1/26] /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot-native/usr/bin/meson.real --internal vcstagger ../git/git-version.h.meson git-version.h 20211215 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/git @VCS_TAG@ '(.*)' git describe --dirty=+
+[1/2] /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot-native/usr/bin/meson.real install --no-rebuild
+Installing ping/ping to /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/image/bin
+RPATH changes at install time disabled
+Installing tracepath to /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/image/bin
+RPATH changes at install time disabled
+Installing clockdiff to /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/image/bin
+RPATH changes at install time disabled
+Installing rdisc to /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/image/sbin
+RPATH changes at install time disabled
+Installing arping to /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/image/bin
+RPATH changes at install time disabled
+Installing rarpd to /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/image/sbin
+RPATH changes at install time disabled
+Installing ninfod/ninfod to /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/image/sbin
+RPATH changes at install time disabled
+Installing /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/build/rdisc.service to /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/image/lib/systemd/system
+Installing /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/build/rarpd@.service to /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/image/lib/systemd/system
+Installing /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/build/ninfod/ninfod.service to /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/image/lib/systemd/system
+DEBUG: Shell function do_install finished
+DEBUG: Executing shell function remove_libtool_la
+DEBUG: Shell function remove_libtool_la finished
+DEBUG: Executing python function rm_sysvinit_initddir
+DEBUG: Python function rm_sysvinit_initddir finished
+DEBUG: Executing python function rm_systemd_unitdir
+DEBUG: Python function rm_systemd_unitdir finished

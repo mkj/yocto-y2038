@@ -1,0 +1,1472 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/libxcrypt/libxcrypt_4.4.28.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses_6.3+20220423.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/systemd/systemd-systemctl-native.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid_2.38.1.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/zlib/zlib_1.2.13.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-cross_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-native_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/opkg-utils/opkg-utils_0.5.0.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-extended/pam/libpam_1.3.1.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-support/bash-completion/bash-completion_2.11.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-support/libcap-ng/libcap-ng_0.8.3.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-core/gettext/gettext_0.21.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/autoconf/autoconf_2.71.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/automake/automake_1.16.5.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/dwarfsrcfiles/dwarfsrcfiles.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pkgconfig/pkgconfig_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/rpm/rpm_4.18.0.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-extended/xz/xz_5.2.7.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: ['dwarfsrcfiles-native', 'rpm-native', 'elfutils-native', 'libgcrypt-native', 'bzip2-native', 'lua-native', 'python3-native', 'popt-native', 'sqlite3-native', 'file-native', 'libgpg-error-native', 'libcap-native', 'readline-native', 'ncurses-native', 'gdbm-native', 'libnsl2-native', 'libffi-native', 'util-linux-libuuid-native', 'openssl-native', 'libtirpc-native', 'perl-native', 'make-native']
+NOTE: Skipping as already exists in sysroot: ['glibc', 'libxcrypt', 'ncurses', 'systemd-systemctl-native', 'util-linux-libuuid', 'zlib', 'gcc-cross-arm', 'gcc-runtime', 'libtool-cross', 'libtool-native', 'opkg-utils', 'quilt-native', 'libpam', 'bash-completion', 'libcap-ng', 'gettext-native', 'autoconf-native', 'automake-native', 'patch-native', 'pkgconfig-native', 'pseudo-native', 'xz-native', 'attr-native', 'texinfo-dummy-native', 'binutils-cross-arm', 'linux-libc-headers', 'libgcc', 'flex', 'cracklib', 'gnu-config-native', 'm4-native', 'gettext-minimal-native', 'zstd-native', 'gmp-native', 'flex-native', 'libmpc-native', 'mpfr-native', 'zlib-native']
+DEBUG: sed -e 's:^[^/]*/:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/recipe-sysroot-native/:g' /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/rpm-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/elfutils-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/libgcrypt-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/lua-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/python3-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/libgpg-error-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/ncurses-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/openssl-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/perl-native/fixmepath | xargs sed -i -e 's:FIXMESTAGINGDIRTARGET:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/recipe-sysroot:g; s:FIXMESTAGINGDIRHOST:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/recipe-sysroot-native:g' -e 's:FIXME_PSEUDO_SYSROOT:/home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/pseudo-native:g' -e 's:FIXME_HOSTTOOLS_DIR:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:g' -e 's:FIXME_PKGDATA_DIR:/home/matt/tmp/build/obmc-y2038/tmp/pkgdata/evb-ast2600:g' -e 's:FIXME_PSEUDO_LOCALSTATEDIR:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/pseudo/:g' -e 's:FIXME_LOGFIFO:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/temp/fifo.135437:g'
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function sstate_task_prefunc
+DEBUG: Python function sstate_task_prefunc finished
+DEBUG: Executing python function do_package
+DEBUG: Executing python function package_convert_pr_autoinc
+DEBUG: Python function package_convert_pr_autoinc finished
+DEBUG: Executing python function package_prepare_pkgdata
+NOTE: Installed into pkgdata-sysroot: ['glibc', 'util-linux-libuuid', 'libpam', 'opkg-utils', 'libcap-ng', 'libxcrypt', 'zlib', 'ncurses', 'bash-completion', 'gcc-runtime', 'linux-libc-headers', 'flex', 'cracklib', 'libgcc']
+DEBUG: Python function package_prepare_pkgdata finished
+DEBUG: Executing python function perform_packagecopy
+DEBUG: Python function perform_packagecopy finished
+DEBUG: Executing python function util_linux_binpackages
+DEBUG: Python function util_linux_binpackages finished
+DEBUG: Executing python function apply_update_alternative_renames
+NOTE: util-linux: Rename /usr/share/man/man8/blkid.8 -> /usr/share/man/man8/blkid.8.util-linux
+NOTE: util-linux: Rename /usr/share/man/man1/eject.1 -> /usr/share/man/man1/eject.1.util-linux
+NOTE: util-linux: Rename /usr/share/man/man8/findfs.8 -> /usr/share/man/man8/findfs.8.util-linux
+NOTE: util-linux: Rename /usr/share/man/man8/fsck.8 -> /usr/share/man/man8/fsck.8.util-linux
+NOTE: util-linux: Rename /usr/share/man/man1/kill.1 -> /usr/share/man/man1/kill.1.util-linux
+NOTE: util-linux: Rename /usr/share/man/man1/last.1 -> /usr/share/man/man1/last.1.util-linux
+NOTE: util-linux: Rename /usr/share/man/man1/lastb.1 -> /usr/share/man/man1/lastb.1.util-linux
+NOTE: util-linux: Rename /usr/share/man/man3/libblkid.3 -> /usr/share/man/man3/libblkid.3.util-linux
+NOTE: util-linux: Rename /usr/share/man/man1/logger.1 -> /usr/share/man/man1/logger.1.util-linux
+NOTE: util-linux: Rename /usr/share/man/man1/mesg.1 -> /usr/share/man/man1/mesg.1.util-linux
+NOTE: util-linux: Rename /usr/share/man/man1/mountpoint.1 -> /usr/share/man/man1/mountpoint.1.util-linux
+NOTE: util-linux: Rename /usr/share/man/man8/nologin.8 -> /usr/share/man/man8/nologin.8.util-linux
+NOTE: util-linux: Rename /usr/share/man/man8/rfkill.8 -> /usr/share/man/man8/rfkill.8.util-linux
+NOTE: util-linux: Rename /usr/share/man/man8/sulogin.8 -> /usr/share/man/man8/sulogin.8.util-linux
+NOTE: util-linux: Rename /usr/share/man/man1/utmpdump.1 -> /usr/share/man/man1/utmpdump.1.util-linux
+NOTE: util-linux: Rename /usr/share/man/man3/uuid.3 -> /usr/share/man/man3/uuid.3.util-linux
+NOTE: util-linux: Rename /usr/share/man/man1/wall.1 -> /usr/share/man/man1/wall.1.util-linux
+NOTE: util-linux: Rename /usr/share/man/man1/su.1 -> /usr/share/man/man1/su.1.util-linux
+NOTE: util-linux: Rename /bin/dmesg -> /bin/dmesg.util-linux
+NOTE: util-linux: Rename /bin/getopt -> /bin/getopt.util-linux
+NOTE: util-linux: Rename /bin/kill -> /bin/kill.util-linux
+NOTE: util-linux: Rename /bin/more -> /bin/more.util-linux
+NOTE: util-linux: Rename /bin/mount -> /bin/mount.util-linux
+NOTE: util-linux: Rename /bin/mountpoint -> /bin/mountpoint.util-linux
+NOTE: util-linux: Rename /bin/su -> /bin/su.util-linux
+NOTE: util-linux: Rename /bin/umount -> /bin/umount.util-linux
+NOTE: util-linux: Rename /sbin/blkid -> /sbin/blkid.util-linux
+NOTE: util-linux: Rename /sbin/blockdev -> /sbin/blockdev.util-linux
+NOTE: util-linux: Rename /sbin/fdisk -> /sbin/fdisk.util-linux
+NOTE: util-linux: Rename /sbin/fsck -> /sbin/fsck.util-linux
+NOTE: util-linux: Rename /sbin/fstrim -> /sbin/fstrim.util-linux
+NOTE: util-linux: Rename /sbin/hwclock -> /sbin/hwclock.util-linux
+NOTE: util-linux: Rename /sbin/losetup -> /sbin/losetup.util-linux
+NOTE: util-linux: Rename /sbin/mkswap -> /sbin/mkswap.util-linux
+NOTE: util-linux: Rename /sbin/nologin -> /sbin/nologin.util-linux
+NOTE: util-linux: Rename /sbin/pivot_root -> /sbin/pivot_root.util-linux
+NOTE: util-linux: Rename /sbin/sulogin -> /sbin/sulogin.util-linux
+NOTE: util-linux: Rename /sbin/swapoff -> /sbin/swapoff.util-linux
+NOTE: util-linux: Rename /sbin/swapon -> /sbin/swapon.util-linux
+NOTE: util-linux: Rename /sbin/switch_root -> /sbin/switch_root.util-linux
+NOTE: util-linux: Rename /usr/bin/cal -> /usr/bin/cal.util-linux
+NOTE: util-linux: Rename /usr/bin/chfn -> /usr/bin/chfn.util-linux
+NOTE: util-linux: Rename /usr/bin/chrt -> /usr/bin/chrt.util-linux
+NOTE: util-linux: Rename /usr/bin/chsh -> /usr/bin/chsh.util-linux
+NOTE: util-linux: Rename /usr/bin/eject -> /usr/bin/eject.util-linux
+NOTE: util-linux: Rename /usr/bin/fallocate -> /usr/bin/fallocate.util-linux
+NOTE: util-linux: Rename /usr/bin/flock -> /usr/bin/flock.util-linux
+NOTE: util-linux: Rename /usr/bin/hexdump -> /usr/bin/hexdump.util-linux
+NOTE: util-linux: Rename /usr/bin/ionice -> /usr/bin/ionice.util-linux
+NOTE: util-linux: Rename /usr/bin/last -> /usr/bin/last.util-linux
+NOTE: util-linux: Creating new link /usr/bin/lastb.util-linux -> last.util-linux
+NOTE: util-linux: Rename /usr/bin/logger -> /usr/bin/logger.util-linux
+NOTE: util-linux: Rename /usr/bin/mcookie -> /usr/bin/mcookie.util-linux
+NOTE: util-linux: Rename /usr/bin/mesg -> /usr/bin/mesg.util-linux
+NOTE: util-linux: Rename /usr/bin/nsenter -> /usr/bin/nsenter.util-linux
+NOTE: util-linux: Rename /usr/bin/prlimit -> /usr/bin/prlimit.util-linux
+NOTE: util-linux: Rename /usr/bin/renice -> /usr/bin/renice.util-linux
+NOTE: util-linux: Rename /usr/bin/rev -> /usr/bin/rev.util-linux
+NOTE: util-linux: Rename /usr/bin/setpriv -> /usr/bin/setpriv.util-linux
+NOTE: util-linux: Rename /usr/bin/setsid -> /usr/bin/setsid.util-linux
+NOTE: util-linux: Rename /usr/bin/taskset -> /usr/bin/taskset.util-linux
+NOTE: util-linux: Rename /usr/bin/unshare -> /usr/bin/unshare.util-linux
+NOTE: util-linux: Rename /usr/bin/utmpdump -> /usr/bin/utmpdump.util-linux
+NOTE: util-linux: Rename /usr/bin/uuidgen -> /usr/bin/uuidgen.util-linux
+NOTE: util-linux: Rename /usr/bin/wall -> /usr/bin/wall.util-linux
+NOTE: util-linux: Rename /usr/sbin/findfs -> /usr/sbin/findfs.util-linux
+NOTE: util-linux: Rename /usr/sbin/fsfreeze -> /usr/sbin/fsfreeze.util-linux
+NOTE: util-linux: Rename /usr/sbin/readprofile -> /usr/sbin/readprofile.util-linux
+NOTE: util-linux: Rename /usr/sbin/rfkill -> /usr/sbin/rfkill.util-linux
+NOTE: util-linux: Rename /usr/sbin/rtcwake -> /usr/sbin/rtcwake.util-linux
+DEBUG: Python function apply_update_alternative_renames finished
+DEBUG: Executing python function split_and_strip_files
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/sbin/zramctl']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/sbin/wipefs']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/sbin/uuidd']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/sbin/swaplabel']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/sbin/sfdisk']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/sbin/runuser']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/sbin/rtcwake.util-linux']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/sbin/rfkill.util-linux']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/sbin/resizepart']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/sbin/readprofile.util-linux']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/sbin/partx']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/sbin/mkfs.cramfs']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/sbin/ldattach']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/sbin/mkfs']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/sbin/addpart']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/sbin/delpart']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/sbin/fsck.cramfs']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/sbin/findfs.util-linux']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/bin/wdctl']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/bin/whereis']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/sbin/fsfreeze.util-linux']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/sbin/blkdiscard']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/bin/wall.util-linux']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/bin/uuidparse']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/bin/write']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/sbin/chcpu']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/bin/uuidgen.util-linux']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/sbin/blkzone']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/bin/ul']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/bin/unshare.util-linux']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/bin/setpriv.util-linux']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/bin/scriptreplay']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/bin/setterm']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/bin/setarch']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/bin/utmpdump.util-linux']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/bin/taskset.util-linux']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/bin/uclampset']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/bin/script']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/bin/scriptlive']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/bin/rev.util-linux']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/bin/setsid.util-linux']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/bin/renice.util-linux']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/bin/rename']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/bin/prlimit.util-linux']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/bin/namei']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/bin/nsenter.util-linux']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/bin/mesg.util-linux']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/bin/lsns']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/bin/lsmem']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/bin/mcookie.util-linux']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/bin/lslocks']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/bin/lslogins']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/bin/lsirq']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/bin/lsfd']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/bin/lsipc']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/bin/lscpu']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/bin/lsblk']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/bin/look']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/bin/logger.util-linux']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/bin/last.util-linux']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/bin/isosize']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/bin/irqtop']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/bin/ipcs']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/bin/ipcmk']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/bin/ionice.util-linux']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/bin/hexdump.util-linux']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/bin/flock.util-linux']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/bin/ipcrm']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/bin/column']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/bin/eject.util-linux']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/bin/hardlink']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/bin/fincore']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/bin/fallocate.util-linux']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/bin/colrm']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/bin/findmnt']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/bin/chsh.util-linux']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/bin/col']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/bin/chrt.util-linux']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/bin/colcrt']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/bin/choom']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/bin/chfn.util-linux']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/bin/chmem']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/usr/bin/cal.util-linux']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/sbin/switch_root.util-linux']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/sbin/swapon.util-linux']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/sbin/swapoff.util-linux']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/sbin/sulogin.util-linux']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/sbin/nologin.util-linux']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/sbin/pivot_root.util-linux']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/sbin/losetup.util-linux']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/sbin/hwclock.util-linux']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/sbin/mkswap.util-linux']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/sbin/fsck.util-linux']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/sbin/fstrim.util-linux']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/sbin/fdisk.util-linux']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/sbin/ctrlaltdel']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/sbin/cfdisk']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/sbin/blockdev.util-linux']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/sbin/blkid.util-linux']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/sbin/agetty']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/lib/libsmartcols.so.1.1.0']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/lib/libmount.so.1.1.0']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/bin/umount.util-linux']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/bin/su.util-linux']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/lib/libfdisk.so.1.1.0']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/bin/mountpoint.util-linux']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/lib/libblkid.so.1.1.0']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/bin/more.util-linux']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/bin/mount.util-linux']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/bin/getopt.util-linux']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/bin/dmesg.util-linux']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/package/bin/kill.util-linux']
+DEBUG: Python function split_and_strip_files finished
+DEBUG: Executing python function fixup_perms
+DEBUG: Python function fixup_perms finished
+DEBUG: Executing python function populate_packages_updatealternatives
+NOTE: adding update-alternatives calls to postinst/prerm for util-linux-doc
+NOTE: 	update-alternatives --install /usr/share/man/man8/blkid.8 blkid.8 /usr/share/man/man8/blkid.8.util-linux 80
+	update-alternatives --install /usr/share/man/man1/eject.1 eject.1 /usr/share/man/man1/eject.1.util-linux 80
+	update-alternatives --install /usr/share/man/man8/findfs.8 findfs.8 /usr/share/man/man8/findfs.8.util-linux 80
+	update-alternatives --install /usr/share/man/man8/fsck.8 fsck.8 /usr/share/man/man8/fsck.8.util-linux 80
+	update-alternatives --install /usr/share/man/man1/kill.1 kill.1 /usr/share/man/man1/kill.1.util-linux 80
+	update-alternatives --install /usr/share/man/man1/last.1 last.1 /usr/share/man/man1/last.1.util-linux 80
+	update-alternatives --install /usr/share/man/man1/lastb.1 lastb.1 /usr/share/man/man1/lastb.1.util-linux 80
+	update-alternatives --install /usr/share/man/man3/libblkid.3 libblkid.3 /usr/share/man/man3/libblkid.3.util-linux 80
+	update-alternatives --install /usr/share/man/man1/logger.1 logger.1 /usr/share/man/man1/logger.1.util-linux 80
+	update-alternatives --install /usr/share/man/man1/mesg.1 mesg.1 /usr/share/man/man1/mesg.1.util-linux 80
+	update-alternatives --install /usr/share/man/man1/mountpoint.1 mountpoint.1 /usr/share/man/man1/mountpoint.1.util-linux 80
+	update-alternatives --install /usr/share/man/man8/nologin.8 nologin.8 /usr/share/man/man8/nologin.8.util-linux 80
+	update-alternatives --install /usr/share/man/man8/rfkill.8 rfkill.8 /usr/share/man/man8/rfkill.8.util-linux 80
+	update-alternatives --install /usr/share/man/man8/sulogin.8 sulogin.8 /usr/share/man/man8/sulogin.8.util-linux 80
+	update-alternatives --install /usr/share/man/man1/utmpdump.1 utmpdump.1 /usr/share/man/man1/utmpdump.1.util-linux 80
+	update-alternatives --install /usr/share/man/man3/uuid.3 uuid.3 /usr/share/man/man3/uuid.3.util-linux 80
+	update-alternatives --install /usr/share/man/man1/wall.1 wall.1 /usr/share/man/man1/wall.1.util-linux 80
+	update-alternatives --install /usr/share/man/man1/su.1 su.1 /usr/share/man/man1/su.1.util-linux 80
+
+NOTE: 	update-alternatives --remove  blkid.8 /usr/share/man/man8/blkid.8.util-linux
+	update-alternatives --remove  eject.1 /usr/share/man/man1/eject.1.util-linux
+	update-alternatives --remove  findfs.8 /usr/share/man/man8/findfs.8.util-linux
+	update-alternatives --remove  fsck.8 /usr/share/man/man8/fsck.8.util-linux
+	update-alternatives --remove  kill.1 /usr/share/man/man1/kill.1.util-linux
+	update-alternatives --remove  last.1 /usr/share/man/man1/last.1.util-linux
+	update-alternatives --remove  lastb.1 /usr/share/man/man1/lastb.1.util-linux
+	update-alternatives --remove  libblkid.3 /usr/share/man/man3/libblkid.3.util-linux
+	update-alternatives --remove  logger.1 /usr/share/man/man1/logger.1.util-linux
+	update-alternatives --remove  mesg.1 /usr/share/man/man1/mesg.1.util-linux
+	update-alternatives --remove  mountpoint.1 /usr/share/man/man1/mountpoint.1.util-linux
+	update-alternatives --remove  nologin.8 /usr/share/man/man8/nologin.8.util-linux
+	update-alternatives --remove  rfkill.8 /usr/share/man/man8/rfkill.8.util-linux
+	update-alternatives --remove  sulogin.8 /usr/share/man/man8/sulogin.8.util-linux
+	update-alternatives --remove  utmpdump.1 /usr/share/man/man1/utmpdump.1.util-linux
+	update-alternatives --remove  uuid.3 /usr/share/man/man3/uuid.3.util-linux
+	update-alternatives --remove  wall.1 /usr/share/man/man1/wall.1.util-linux
+	update-alternatives --remove  su.1 /usr/share/man/man1/su.1.util-linux
+
+NOTE: adding update-alternatives calls to postinst/prerm for util-linux-dmesg
+NOTE: 	update-alternatives --install /bin/dmesg dmesg /bin/dmesg.util-linux 80
+
+NOTE: 	update-alternatives --remove  dmesg /bin/dmesg.util-linux
+
+NOTE: adding update-alternatives calls to postinst/prerm for util-linux-getopt
+NOTE: 	update-alternatives --install /bin/getopt getopt /bin/getopt.util-linux 80
+
+NOTE: 	update-alternatives --remove  getopt /bin/getopt.util-linux
+
+NOTE: adding update-alternatives calls to postinst/prerm for util-linux-kill
+NOTE: 	update-alternatives --install /bin/kill kill /bin/kill.util-linux 80
+
+NOTE: 	update-alternatives --remove  kill /bin/kill.util-linux
+
+NOTE: adding update-alternatives calls to postinst/prerm for util-linux-more
+NOTE: 	update-alternatives --install /bin/more more /bin/more.util-linux 80
+
+NOTE: 	update-alternatives --remove  more /bin/more.util-linux
+
+NOTE: adding update-alternatives calls to postinst/prerm for util-linux-mount
+NOTE: 	update-alternatives --install /bin/mount mount /bin/mount.util-linux 80
+
+NOTE: 	update-alternatives --remove  mount /bin/mount.util-linux
+
+NOTE: adding update-alternatives calls to postinst/prerm for util-linux-mountpoint
+NOTE: 	update-alternatives --install /bin/mountpoint mountpoint /bin/mountpoint.util-linux 80
+
+NOTE: 	update-alternatives --remove  mountpoint /bin/mountpoint.util-linux
+
+NOTE: adding update-alternatives calls to postinst/prerm for util-linux-su
+NOTE: 	update-alternatives --install /bin/su su /bin/su.util-linux 80
+
+NOTE: 	update-alternatives --remove  su /bin/su.util-linux
+
+NOTE: adding update-alternatives calls to postinst/prerm for util-linux-umount
+NOTE: 	update-alternatives --install /bin/umount umount /bin/umount.util-linux 80
+
+NOTE: 	update-alternatives --remove  umount /bin/umount.util-linux
+
+NOTE: adding update-alternatives calls to postinst/prerm for util-linux-agetty
+NOTE: 	update-alternatives --install /sbin/getty getty /sbin/agetty 80
+
+NOTE: 	update-alternatives --remove  getty /sbin/agetty
+
+NOTE: adding update-alternatives calls to postinst/prerm for util-linux-blkid
+NOTE: 	update-alternatives --install /sbin/blkid blkid /sbin/blkid.util-linux 80
+
+NOTE: 	update-alternatives --remove  blkid /sbin/blkid.util-linux
+
+NOTE: adding update-alternatives calls to postinst/prerm for util-linux-blockdev
+NOTE: 	update-alternatives --install /sbin/blockdev blockdev /sbin/blockdev.util-linux 80
+
+NOTE: 	update-alternatives --remove  blockdev /sbin/blockdev.util-linux
+
+NOTE: adding update-alternatives calls to postinst/prerm for util-linux-fdisk
+NOTE: 	update-alternatives --install /sbin/fdisk fdisk /sbin/fdisk.util-linux 80
+
+NOTE: 	update-alternatives --remove  fdisk /sbin/fdisk.util-linux
+
+NOTE: adding update-alternatives calls to postinst/prerm for util-linux-fsck
+NOTE: 	update-alternatives --install /sbin/fsck fsck /sbin/fsck.util-linux 80
+
+NOTE: 	update-alternatives --remove  fsck /sbin/fsck.util-linux
+
+NOTE: adding update-alternatives calls to postinst/prerm for util-linux-fstrim
+NOTE: 	update-alternatives --install /sbin/fstrim fstrim /sbin/fstrim.util-linux 80
+
+NOTE: 	update-alternatives --remove  fstrim /sbin/fstrim.util-linux
+
+NOTE: adding update-alternatives calls to postinst/prerm for util-linux-hwclock
+NOTE: 	update-alternatives --install /sbin/hwclock hwclock /sbin/hwclock.util-linux 80
+
+NOTE: 	update-alternatives --remove  hwclock /sbin/hwclock.util-linux
+
+NOTE: adding update-alternatives calls to postinst/prerm for util-linux-losetup
+NOTE: 	update-alternatives --install /sbin/losetup losetup /sbin/losetup.util-linux 80
+
+NOTE: 	update-alternatives --remove  losetup /sbin/losetup.util-linux
+
+NOTE: adding update-alternatives calls to postinst/prerm for util-linux-mkswap
+NOTE: 	update-alternatives --install /sbin/mkswap mkswap /sbin/mkswap.util-linux 80
+
+NOTE: 	update-alternatives --remove  mkswap /sbin/mkswap.util-linux
+
+NOTE: adding update-alternatives calls to postinst/prerm for util-linux-nologin
+NOTE: 	update-alternatives --install /sbin/nologin nologin /sbin/nologin.util-linux 80
+
+NOTE: 	update-alternatives --remove  nologin /sbin/nologin.util-linux
+
+NOTE: adding update-alternatives calls to postinst/prerm for util-linux-pivot-root
+NOTE: 	update-alternatives --install /sbin/pivot_root pivot_root /sbin/pivot_root.util-linux 80
+
+NOTE: 	update-alternatives --remove  pivot_root /sbin/pivot_root.util-linux
+
+NOTE: adding update-alternatives calls to postinst/prerm for util-linux-sulogin
+NOTE: 	update-alternatives --install /sbin/sulogin sulogin /sbin/sulogin.util-linux 80
+
+NOTE: 	update-alternatives --remove  sulogin /sbin/sulogin.util-linux
+
+NOTE: adding update-alternatives calls to postinst/prerm for util-linux-swapoff
+NOTE: 	update-alternatives --install /sbin/swapoff swapoff /sbin/swapoff.util-linux 80
+
+NOTE: 	update-alternatives --remove  swapoff /sbin/swapoff.util-linux
+
+NOTE: adding update-alternatives calls to postinst/prerm for util-linux-swapon
+NOTE: 	update-alternatives --install /sbin/swapon swapon /sbin/swapon.util-linux 80
+
+NOTE: 	update-alternatives --remove  swapon /sbin/swapon.util-linux
+
+NOTE: adding update-alternatives calls to postinst/prerm for util-linux-switch-root
+NOTE: 	update-alternatives --install /sbin/switch_root switch_root /sbin/switch_root.util-linux 80
+
+NOTE: 	update-alternatives --remove  switch_root /sbin/switch_root.util-linux
+
+NOTE: adding update-alternatives calls to postinst/prerm for util-linux-cal
+NOTE: 	update-alternatives --install /usr/bin/cal cal /usr/bin/cal.util-linux 80
+
+NOTE: 	update-alternatives --remove  cal /usr/bin/cal.util-linux
+
+NOTE: adding update-alternatives calls to postinst/prerm for util-linux-chfn
+NOTE: 	update-alternatives --install /usr/bin/chfn chfn /usr/bin/chfn.util-linux 80
+
+NOTE: 	update-alternatives --remove  chfn /usr/bin/chfn.util-linux
+
+NOTE: adding update-alternatives calls to postinst/prerm for util-linux-chrt
+NOTE: 	update-alternatives --install /usr/bin/chrt chrt /usr/bin/chrt.util-linux 80
+
+NOTE: 	update-alternatives --remove  chrt /usr/bin/chrt.util-linux
+
+NOTE: adding update-alternatives calls to postinst/prerm for util-linux-chsh
+NOTE: 	update-alternatives --install /usr/bin/chsh chsh /usr/bin/chsh.util-linux 80
+
+NOTE: 	update-alternatives --remove  chsh /usr/bin/chsh.util-linux
+
+NOTE: adding update-alternatives calls to postinst/prerm for util-linux-eject
+NOTE: 	update-alternatives --install /usr/bin/eject eject /usr/bin/eject.util-linux 80
+
+NOTE: 	update-alternatives --remove  eject /usr/bin/eject.util-linux
+
+NOTE: adding update-alternatives calls to postinst/prerm for util-linux-fallocate
+NOTE: 	update-alternatives --install /usr/bin/fallocate fallocate /usr/bin/fallocate.util-linux 80
+
+NOTE: 	update-alternatives --remove  fallocate /usr/bin/fallocate.util-linux
+
+NOTE: adding update-alternatives calls to postinst/prerm for util-linux-flock
+NOTE: 	update-alternatives --install /usr/bin/flock flock /usr/bin/flock.util-linux 80
+
+NOTE: 	update-alternatives --remove  flock /usr/bin/flock.util-linux
+
+NOTE: adding update-alternatives calls to postinst/prerm for util-linux-hexdump
+NOTE: 	update-alternatives --install /usr/bin/hexdump hexdump /usr/bin/hexdump.util-linux 80
+
+NOTE: 	update-alternatives --remove  hexdump /usr/bin/hexdump.util-linux
+
+NOTE: adding update-alternatives calls to postinst/prerm for util-linux-ionice
+NOTE: 	update-alternatives --install /usr/bin/ionice ionice /usr/bin/ionice.util-linux 80
+
+NOTE: 	update-alternatives --remove  ionice /usr/bin/ionice.util-linux
+
+NOTE: adding update-alternatives calls to postinst/prerm for util-linux-last
+NOTE: 	update-alternatives --install /usr/bin/last last /usr/bin/last.util-linux 80
+	update-alternatives --install /usr/bin/lastb lastb /usr/bin/lastb.util-linux 80
+
+NOTE: 	update-alternatives --remove  last /usr/bin/last.util-linux
+	update-alternatives --remove  lastb /usr/bin/lastb.util-linux
+
+NOTE: adding update-alternatives calls to postinst/prerm for util-linux-logger
+NOTE: 	update-alternatives --install /usr/bin/logger logger /usr/bin/logger.util-linux 80
+
+NOTE: 	update-alternatives --remove  logger /usr/bin/logger.util-linux
+
+NOTE: adding update-alternatives calls to postinst/prerm for util-linux-mcookie
+NOTE: 	update-alternatives --install /usr/bin/mcookie mcookie /usr/bin/mcookie.util-linux 80
+
+NOTE: 	update-alternatives --remove  mcookie /usr/bin/mcookie.util-linux
+
+NOTE: adding update-alternatives calls to postinst/prerm for util-linux-mesg
+NOTE: 	update-alternatives --install /usr/bin/mesg mesg /usr/bin/mesg.util-linux 80
+
+NOTE: 	update-alternatives --remove  mesg /usr/bin/mesg.util-linux
+
+NOTE: adding update-alternatives calls to postinst/prerm for util-linux-nsenter
+NOTE: 	update-alternatives --install /usr/bin/nsenter nsenter /usr/bin/nsenter.util-linux 80
+
+NOTE: 	update-alternatives --remove  nsenter /usr/bin/nsenter.util-linux
+
+NOTE: adding update-alternatives calls to postinst/prerm for util-linux-prlimit
+NOTE: 	update-alternatives --install /usr/bin/prlimit prlimit /usr/bin/prlimit.util-linux 80
+
+NOTE: 	update-alternatives --remove  prlimit /usr/bin/prlimit.util-linux
+
+NOTE: adding update-alternatives calls to postinst/prerm for util-linux-renice
+NOTE: 	update-alternatives --install /usr/bin/renice renice /usr/bin/renice.util-linux 80
+
+NOTE: 	update-alternatives --remove  renice /usr/bin/renice.util-linux
+
+NOTE: adding update-alternatives calls to postinst/prerm for util-linux-rev
+NOTE: 	update-alternatives --install /usr/bin/rev rev /usr/bin/rev.util-linux 80
+
+NOTE: 	update-alternatives --remove  rev /usr/bin/rev.util-linux
+
+NOTE: adding update-alternatives calls to postinst/prerm for util-linux-setpriv
+NOTE: 	update-alternatives --install /usr/bin/setpriv setpriv /usr/bin/setpriv.util-linux 80
+
+NOTE: 	update-alternatives --remove  setpriv /usr/bin/setpriv.util-linux
+
+NOTE: adding update-alternatives calls to postinst/prerm for util-linux-setsid
+NOTE: 	update-alternatives --install /usr/bin/setsid setsid /usr/bin/setsid.util-linux 80
+
+NOTE: 	update-alternatives --remove  setsid /usr/bin/setsid.util-linux
+
+NOTE: adding update-alternatives calls to postinst/prerm for util-linux-taskset
+NOTE: 	update-alternatives --install /usr/bin/taskset taskset /usr/bin/taskset.util-linux 80
+
+NOTE: 	update-alternatives --remove  taskset /usr/bin/taskset.util-linux
+
+NOTE: adding update-alternatives calls to postinst/prerm for util-linux-unshare
+NOTE: 	update-alternatives --install /usr/bin/unshare unshare /usr/bin/unshare.util-linux 80
+
+NOTE: 	update-alternatives --remove  unshare /usr/bin/unshare.util-linux
+
+NOTE: adding update-alternatives calls to postinst/prerm for util-linux-utmpdump
+NOTE: 	update-alternatives --install /usr/bin/utmpdump utmpdump /usr/bin/utmpdump.util-linux 80
+
+NOTE: 	update-alternatives --remove  utmpdump /usr/bin/utmpdump.util-linux
+
+NOTE: adding update-alternatives calls to postinst/prerm for util-linux-uuidgen
+NOTE: 	update-alternatives --install /usr/bin/uuidgen uuidgen /usr/bin/uuidgen.util-linux 80
+
+NOTE: 	update-alternatives --remove  uuidgen /usr/bin/uuidgen.util-linux
+
+NOTE: adding update-alternatives calls to postinst/prerm for util-linux-wall
+NOTE: 	update-alternatives --install /usr/bin/wall wall /usr/bin/wall.util-linux 80
+
+NOTE: 	update-alternatives --remove  wall /usr/bin/wall.util-linux
+
+NOTE: adding update-alternatives calls to postinst/prerm for util-linux-findfs
+NOTE: 	update-alternatives --install /usr/sbin/findfs findfs /usr/sbin/findfs.util-linux 80
+
+NOTE: 	update-alternatives --remove  findfs /usr/sbin/findfs.util-linux
+
+NOTE: adding update-alternatives calls to postinst/prerm for util-linux-fsfreeze
+NOTE: 	update-alternatives --install /usr/sbin/fsfreeze fsfreeze /usr/sbin/fsfreeze.util-linux 80
+
+NOTE: 	update-alternatives --remove  fsfreeze /usr/sbin/fsfreeze.util-linux
+
+NOTE: adding update-alternatives calls to postinst/prerm for util-linux-readprofile
+NOTE: 	update-alternatives --install /usr/sbin/readprofile readprofile /usr/sbin/readprofile.util-linux 80
+
+NOTE: 	update-alternatives --remove  readprofile /usr/sbin/readprofile.util-linux
+
+NOTE: adding update-alternatives calls to postinst/prerm for util-linux-rfkill
+NOTE: 	update-alternatives --install /usr/sbin/rfkill rfkill /usr/sbin/rfkill.util-linux 80
+
+NOTE: 	update-alternatives --remove  rfkill /usr/sbin/rfkill.util-linux
+
+NOTE: adding update-alternatives calls to postinst/prerm for util-linux-rtcwake
+NOTE: 	update-alternatives --install /usr/sbin/rtcwake rtcwake /usr/sbin/rtcwake.util-linux 80
+
+NOTE: 	update-alternatives --remove  rtcwake /usr/sbin/rtcwake.util-linux
+
+DEBUG: Python function populate_packages_updatealternatives finished
+DEBUG: Executing python function systemd_populate_packages
+DEBUG: Python function systemd_populate_packages finished
+DEBUG: Executing python function util_linux_libpackages
+DEBUG: Python function util_linux_libpackages finished
+DEBUG: Executing python function package_do_split_locales
+DEBUG: Python function package_do_split_locales finished
+DEBUG: Executing python function populate_packages
+DEBUG: Python function populate_packages finished
+DEBUG: Executing python function package_fixsymlinks
+DEBUG: util-linux-dev contains dangling link /lib/libsmartcols.so.1.1.0
+DEBUG: target found in util-linux-libsmartcols
+DEBUG: util-linux-dev contains dangling link /lib/libmount.so.1.1.0
+DEBUG: target found in util-linux-libmount
+DEBUG: util-linux-dev contains dangling link /lib/libfdisk.so.1.1.0
+DEBUG: target found in util-linux-libfdisk
+DEBUG: util-linux-dev contains dangling link /lib/libblkid.so.1.1.0
+DEBUG: target found in util-linux-libblkid
+DEBUG: util-linux-su contains dangling link /etc/pam.d/su
+NOTE: util-linux-su contains dangling symlink to /etc/pam.d/su
+DEBUG: Python function package_fixsymlinks finished
+DEBUG: Executing python function package_name_hook
+DEBUG: Executing python function debian_package_name_hook
+DEBUG: LIBNAMES: pkg util-linux-zramctl libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-write libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-wipefs libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-whereis libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-wdctl libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-wall libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-uuidparse libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-uuidgen libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-uuidd libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-utmpdump libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-unshare libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-umount libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-ul libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-uclampset libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-taskset libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-switch-root libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-swaponoff libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg util-linux-swapon libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-swapoff libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-swaplabel libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-sulogin libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-su libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-staticdev libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg util-linux-src libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg util-linux-sfdisk libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-setterm libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-setsid libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-setpriv libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-setarch libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-scriptreplay libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-scriptlive libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-script libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-runuser libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-rtcwake libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-rfkill libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-rev libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-resizepart libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-renice libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-rename libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-readprofile libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-prlimit libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-pivot-root libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-partx libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-nsenter libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-nologin libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-namei libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-mountpoint libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-mount libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-more libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-mkswap libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-mkfs.cramfs libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-mkfs libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-mesg libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-mcookie libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-lsns libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-lsmem libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-lslogins libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-lslocks libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-lsirq libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-lsipc libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-lsfd libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-lscpu libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-lsblk libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-losetup libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-look libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-logger libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-locale-zh-tw libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg util-linux-locale-zh-cn libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg util-linux-locale-vi libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg util-linux-locale-uk libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg util-linux-locale-tr libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg util-linux-locale-sv libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg util-linux-locale-sl libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg util-linux-locale-ru libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg util-linux-locale-pt-br libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg util-linux-locale-pt libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg util-linux-locale-pl libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg util-linux-locale-nl libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg util-linux-locale-ja libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg util-linux-locale-it libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg util-linux-locale-id libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg util-linux-locale-hu libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg util-linux-locale-hr libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg util-linux-locale-gl libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg util-linux-locale-fr libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg util-linux-locale-fi libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg util-linux-locale-eu libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg util-linux-locale-et libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg util-linux-locale-es libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg util-linux-locale-de libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg util-linux-locale-da libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg util-linux-locale-cs libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg util-linux-locale-ca libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg util-linux-libsmartcols libs 1 bins 0 sonames ['libsmartcols.so.1']
+NOTE: debian: renaming util-linux-libsmartcols to libsmartcols1
+DEBUG: LIBNAMES: pkg util-linux-libmount libs 1 bins 0 sonames ['libmount.so.1']
+NOTE: debian: renaming util-linux-libmount to libmount1
+DEBUG: LIBNAMES: pkg util-linux-libfdisk libs 1 bins 0 sonames ['libfdisk.so.1']
+NOTE: debian: renaming util-linux-libfdisk to libfdisk1
+DEBUG: LIBNAMES: pkg util-linux-libblkid libs 1 bins 0 sonames ['libblkid.so.1']
+NOTE: debian: renaming util-linux-libblkid to libblkid1
+DEBUG: LIBNAMES: pkg util-linux-ldattach libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-last libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-kill libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-isosize libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-irqtop libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-ipcs libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-ipcrm libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-ipcmk libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-ionice libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-hwclock libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-hexdump libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-hardlink libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-getopt libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-fstrim libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-fsfreeze libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-fsck.cramfs libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-fsck libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-flock libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-findmnt libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-findfs libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-fincore libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-fdisk libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-fallocate libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-eject libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-doc libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg util-linux-dmesg libs 0 bins 1 sonames []
+arm-openbmc-linux-gnueabi-objdump: '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-dev/usr/lib/libsmartcols.so': No such file
+arm-openbmc-linux-gnueabi-objdump: '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-dev/usr/lib/libmount.so': No such file
+arm-openbmc-linux-gnueabi-objdump: '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-dev/usr/lib/libfdisk.so': No such file
+arm-openbmc-linux-gnueabi-objdump: '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-dev/usr/lib/libblkid.so': No such file
+DEBUG: LIBNAMES: pkg util-linux-dev libs 1 bins 0 sonames []
+DEBUG: LIBNAMES: pkg util-linux-delpart libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-dbg libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg util-linux-ctrlaltdel libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-column libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-colrm libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-colcrt libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-col libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-chsh libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-chrt libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-choom libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-chmem libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-chfn libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-chcpu libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-cfdisk libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-cal libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-blockdev libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-blkzone libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-blkid libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-blkdiscard libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-bash-completion libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg util-linux-agetty libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux-addpart libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg util-linux libs 0 bins 0 sonames []
+DEBUG: Python function debian_package_name_hook finished
+DEBUG: Python function package_name_hook finished
+DEBUG: Executing python function package_do_filedeps
+DEBUG: Python function package_do_filedeps finished
+DEBUG: Executing python function package_do_shlibs
+DEBUG: Reading shlib providers in /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/pkgdata-sysroot/shlibs2
+DEBUG: calculating shlib provides for util-linux-src
+DEBUG: LIBNAMES: pkg util-linux-src sonames set()
+DEBUG: calculating shlib provides for util-linux-dbg
+DEBUG: LIBNAMES: pkg util-linux-dbg sonames set()
+DEBUG: calculating shlib provides for util-linux-libsmartcols
+DEBUG: registering util-linux-libsmartcols-2.38.1 as shlib provider for libsmartcols.so.1
+DEBUG: adding ldconfig call to postinst for util-linux-libsmartcols
+DEBUG: LIBNAMES: pkg util-linux-libsmartcols sonames {('libsmartcols.so.1', '/lib', '2.38.1')}
+DEBUG: calculating shlib provides for util-linux-libmount
+DEBUG: registering util-linux-libmount-2.38.1 as shlib provider for libmount.so.1
+DEBUG: adding ldconfig call to postinst for util-linux-libmount
+DEBUG: LIBNAMES: pkg util-linux-libmount sonames {('libmount.so.1', '/lib', '2.38.1')}
+DEBUG: calculating shlib provides for util-linux-libfdisk
+DEBUG: registering util-linux-libfdisk-2.38.1 as shlib provider for libfdisk.so.1
+DEBUG: adding ldconfig call to postinst for util-linux-libfdisk
+DEBUG: LIBNAMES: pkg util-linux-libfdisk sonames {('libfdisk.so.1', '/lib', '2.38.1')}
+DEBUG: calculating shlib provides for util-linux-libblkid
+DEBUG: registering util-linux-libblkid-2.38.1 as shlib provider for libblkid.so.1
+DEBUG: adding ldconfig call to postinst for util-linux-libblkid
+DEBUG: LIBNAMES: pkg util-linux-libblkid sonames {('libblkid.so.1', '/lib', '2.38.1')}
+DEBUG: calculating shlib provides for util-linux-swaponoff
+DEBUG: LIBNAMES: pkg util-linux-swaponoff sonames set()
+DEBUG: calculating shlib provides for util-linux-staticdev
+DEBUG: LIBNAMES: pkg util-linux-staticdev sonames set()
+DEBUG: calculating shlib provides for util-linux-dev
+DEBUG: LIBNAMES: pkg util-linux-dev sonames set()
+DEBUG: calculating shlib provides for util-linux-doc
+DEBUG: LIBNAMES: pkg util-linux-doc sonames set()
+DEBUG: calculating shlib provides for util-linux
+DEBUG: LIBNAMES: pkg util-linux sonames set()
+DEBUG: calculating shlib provides for util-linux-bash-completion
+DEBUG: LIBNAMES: pkg util-linux-bash-completion sonames set()
+DEBUG: calculating shlib provides for util-linux-dmesg
+DEBUG: LIBNAMES: pkg util-linux-dmesg sonames set()
+DEBUG: calculating shlib provides for util-linux-getopt
+DEBUG: LIBNAMES: pkg util-linux-getopt sonames set()
+DEBUG: calculating shlib provides for util-linux-kill
+DEBUG: LIBNAMES: pkg util-linux-kill sonames set()
+DEBUG: calculating shlib provides for util-linux-more
+DEBUG: LIBNAMES: pkg util-linux-more sonames set()
+DEBUG: calculating shlib provides for util-linux-mount
+DEBUG: LIBNAMES: pkg util-linux-mount sonames set()
+DEBUG: calculating shlib provides for util-linux-mountpoint
+DEBUG: LIBNAMES: pkg util-linux-mountpoint sonames set()
+DEBUG: calculating shlib provides for util-linux-su
+DEBUG: LIBNAMES: pkg util-linux-su sonames set()
+DEBUG: calculating shlib provides for util-linux-umount
+DEBUG: LIBNAMES: pkg util-linux-umount sonames set()
+DEBUG: calculating shlib provides for util-linux-agetty
+DEBUG: LIBNAMES: pkg util-linux-agetty sonames set()
+DEBUG: calculating shlib provides for util-linux-blkid
+DEBUG: LIBNAMES: pkg util-linux-blkid sonames set()
+DEBUG: calculating shlib provides for util-linux-blockdev
+DEBUG: LIBNAMES: pkg util-linux-blockdev sonames set()
+DEBUG: calculating shlib provides for util-linux-cfdisk
+DEBUG: LIBNAMES: pkg util-linux-cfdisk sonames set()
+DEBUG: calculating shlib provides for util-linux-ctrlaltdel
+DEBUG: LIBNAMES: pkg util-linux-ctrlaltdel sonames set()
+DEBUG: calculating shlib provides for util-linux-fdisk
+DEBUG: LIBNAMES: pkg util-linux-fdisk sonames set()
+DEBUG: calculating shlib provides for util-linux-fsck
+DEBUG: LIBNAMES: pkg util-linux-fsck sonames set()
+DEBUG: calculating shlib provides for util-linux-fstrim
+DEBUG: LIBNAMES: pkg util-linux-fstrim sonames set()
+DEBUG: calculating shlib provides for util-linux-hwclock
+DEBUG: LIBNAMES: pkg util-linux-hwclock sonames set()
+DEBUG: calculating shlib provides for util-linux-losetup
+DEBUG: LIBNAMES: pkg util-linux-losetup sonames set()
+DEBUG: calculating shlib provides for util-linux-mkswap
+DEBUG: LIBNAMES: pkg util-linux-mkswap sonames set()
+DEBUG: calculating shlib provides for util-linux-nologin
+DEBUG: LIBNAMES: pkg util-linux-nologin sonames set()
+DEBUG: calculating shlib provides for util-linux-pivot-root
+DEBUG: LIBNAMES: pkg util-linux-pivot-root sonames set()
+DEBUG: calculating shlib provides for util-linux-sulogin
+DEBUG: LIBNAMES: pkg util-linux-sulogin sonames set()
+DEBUG: calculating shlib provides for util-linux-swapoff
+DEBUG: LIBNAMES: pkg util-linux-swapoff sonames set()
+DEBUG: calculating shlib provides for util-linux-swapon
+DEBUG: LIBNAMES: pkg util-linux-swapon sonames set()
+DEBUG: calculating shlib provides for util-linux-switch-root
+DEBUG: LIBNAMES: pkg util-linux-switch-root sonames set()
+DEBUG: calculating shlib provides for util-linux-cal
+DEBUG: LIBNAMES: pkg util-linux-cal sonames set()
+DEBUG: calculating shlib provides for util-linux-chfn
+DEBUG: LIBNAMES: pkg util-linux-chfn sonames set()
+DEBUG: calculating shlib provides for util-linux-chmem
+DEBUG: LIBNAMES: pkg util-linux-chmem sonames set()
+DEBUG: calculating shlib provides for util-linux-choom
+DEBUG: LIBNAMES: pkg util-linux-choom sonames set()
+DEBUG: calculating shlib provides for util-linux-chrt
+DEBUG: LIBNAMES: pkg util-linux-chrt sonames set()
+DEBUG: calculating shlib provides for util-linux-chsh
+DEBUG: LIBNAMES: pkg util-linux-chsh sonames set()
+DEBUG: calculating shlib provides for util-linux-col
+DEBUG: LIBNAMES: pkg util-linux-col sonames set()
+DEBUG: calculating shlib provides for util-linux-colcrt
+DEBUG: LIBNAMES: pkg util-linux-colcrt sonames set()
+DEBUG: calculating shlib provides for util-linux-colrm
+DEBUG: LIBNAMES: pkg util-linux-colrm sonames set()
+DEBUG: calculating shlib provides for util-linux-column
+DEBUG: LIBNAMES: pkg util-linux-column sonames set()
+DEBUG: calculating shlib provides for util-linux-eject
+DEBUG: LIBNAMES: pkg util-linux-eject sonames set()
+DEBUG: calculating shlib provides for util-linux-fallocate
+DEBUG: LIBNAMES: pkg util-linux-fallocate sonames set()
+DEBUG: calculating shlib provides for util-linux-fincore
+DEBUG: LIBNAMES: pkg util-linux-fincore sonames set()
+DEBUG: calculating shlib provides for util-linux-findmnt
+DEBUG: LIBNAMES: pkg util-linux-findmnt sonames set()
+DEBUG: calculating shlib provides for util-linux-flock
+DEBUG: LIBNAMES: pkg util-linux-flock sonames set()
+DEBUG: calculating shlib provides for util-linux-hardlink
+DEBUG: LIBNAMES: pkg util-linux-hardlink sonames set()
+DEBUG: calculating shlib provides for util-linux-hexdump
+DEBUG: LIBNAMES: pkg util-linux-hexdump sonames set()
+DEBUG: calculating shlib provides for util-linux-ionice
+DEBUG: LIBNAMES: pkg util-linux-ionice sonames set()
+DEBUG: calculating shlib provides for util-linux-ipcmk
+DEBUG: LIBNAMES: pkg util-linux-ipcmk sonames set()
+DEBUG: calculating shlib provides for util-linux-ipcrm
+DEBUG: LIBNAMES: pkg util-linux-ipcrm sonames set()
+DEBUG: calculating shlib provides for util-linux-ipcs
+DEBUG: LIBNAMES: pkg util-linux-ipcs sonames set()
+DEBUG: calculating shlib provides for util-linux-irqtop
+DEBUG: LIBNAMES: pkg util-linux-irqtop sonames set()
+DEBUG: calculating shlib provides for util-linux-isosize
+DEBUG: LIBNAMES: pkg util-linux-isosize sonames set()
+DEBUG: calculating shlib provides for util-linux-last
+DEBUG: LIBNAMES: pkg util-linux-last sonames set()
+DEBUG: calculating shlib provides for util-linux-logger
+DEBUG: LIBNAMES: pkg util-linux-logger sonames set()
+DEBUG: calculating shlib provides for util-linux-look
+DEBUG: LIBNAMES: pkg util-linux-look sonames set()
+DEBUG: calculating shlib provides for util-linux-lsblk
+DEBUG: LIBNAMES: pkg util-linux-lsblk sonames set()
+DEBUG: calculating shlib provides for util-linux-lscpu
+DEBUG: LIBNAMES: pkg util-linux-lscpu sonames set()
+DEBUG: calculating shlib provides for util-linux-lsfd
+DEBUG: LIBNAMES: pkg util-linux-lsfd sonames set()
+DEBUG: calculating shlib provides for util-linux-lsipc
+DEBUG: LIBNAMES: pkg util-linux-lsipc sonames set()
+DEBUG: calculating shlib provides for util-linux-lsirq
+DEBUG: LIBNAMES: pkg util-linux-lsirq sonames set()
+DEBUG: calculating shlib provides for util-linux-lslocks
+DEBUG: LIBNAMES: pkg util-linux-lslocks sonames set()
+DEBUG: calculating shlib provides for util-linux-lslogins
+DEBUG: LIBNAMES: pkg util-linux-lslogins sonames set()
+DEBUG: calculating shlib provides for util-linux-lsmem
+DEBUG: LIBNAMES: pkg util-linux-lsmem sonames set()
+DEBUG: calculating shlib provides for util-linux-lsns
+DEBUG: LIBNAMES: pkg util-linux-lsns sonames set()
+DEBUG: calculating shlib provides for util-linux-mcookie
+DEBUG: LIBNAMES: pkg util-linux-mcookie sonames set()
+DEBUG: calculating shlib provides for util-linux-mesg
+DEBUG: LIBNAMES: pkg util-linux-mesg sonames set()
+DEBUG: calculating shlib provides for util-linux-namei
+DEBUG: LIBNAMES: pkg util-linux-namei sonames set()
+DEBUG: calculating shlib provides for util-linux-nsenter
+DEBUG: LIBNAMES: pkg util-linux-nsenter sonames set()
+DEBUG: calculating shlib provides for util-linux-prlimit
+DEBUG: LIBNAMES: pkg util-linux-prlimit sonames set()
+DEBUG: calculating shlib provides for util-linux-rename
+DEBUG: LIBNAMES: pkg util-linux-rename sonames set()
+DEBUG: calculating shlib provides for util-linux-renice
+DEBUG: LIBNAMES: pkg util-linux-renice sonames set()
+DEBUG: calculating shlib provides for util-linux-rev
+DEBUG: LIBNAMES: pkg util-linux-rev sonames set()
+DEBUG: calculating shlib provides for util-linux-script
+DEBUG: LIBNAMES: pkg util-linux-script sonames set()
+DEBUG: calculating shlib provides for util-linux-scriptlive
+DEBUG: LIBNAMES: pkg util-linux-scriptlive sonames set()
+DEBUG: calculating shlib provides for util-linux-scriptreplay
+DEBUG: LIBNAMES: pkg util-linux-scriptreplay sonames set()
+DEBUG: calculating shlib provides for util-linux-setarch
+DEBUG: LIBNAMES: pkg util-linux-setarch sonames set()
+DEBUG: calculating shlib provides for util-linux-setpriv
+DEBUG: LIBNAMES: pkg util-linux-setpriv sonames set()
+DEBUG: calculating shlib provides for util-linux-setsid
+DEBUG: LIBNAMES: pkg util-linux-setsid sonames set()
+DEBUG: calculating shlib provides for util-linux-setterm
+DEBUG: LIBNAMES: pkg util-linux-setterm sonames set()
+DEBUG: calculating shlib provides for util-linux-taskset
+DEBUG: LIBNAMES: pkg util-linux-taskset sonames set()
+DEBUG: calculating shlib provides for util-linux-uclampset
+DEBUG: LIBNAMES: pkg util-linux-uclampset sonames set()
+DEBUG: calculating shlib provides for util-linux-ul
+DEBUG: LIBNAMES: pkg util-linux-ul sonames set()
+DEBUG: calculating shlib provides for util-linux-unshare
+DEBUG: LIBNAMES: pkg util-linux-unshare sonames set()
+DEBUG: calculating shlib provides for util-linux-utmpdump
+DEBUG: LIBNAMES: pkg util-linux-utmpdump sonames set()
+DEBUG: calculating shlib provides for util-linux-uuidgen
+DEBUG: LIBNAMES: pkg util-linux-uuidgen sonames set()
+DEBUG: calculating shlib provides for util-linux-uuidparse
+DEBUG: LIBNAMES: pkg util-linux-uuidparse sonames set()
+DEBUG: calculating shlib provides for util-linux-wall
+DEBUG: LIBNAMES: pkg util-linux-wall sonames set()
+DEBUG: calculating shlib provides for util-linux-wdctl
+DEBUG: LIBNAMES: pkg util-linux-wdctl sonames set()
+DEBUG: calculating shlib provides for util-linux-whereis
+DEBUG: LIBNAMES: pkg util-linux-whereis sonames set()
+DEBUG: calculating shlib provides for util-linux-write
+DEBUG: LIBNAMES: pkg util-linux-write sonames set()
+DEBUG: calculating shlib provides for util-linux-addpart
+DEBUG: LIBNAMES: pkg util-linux-addpart sonames set()
+DEBUG: calculating shlib provides for util-linux-blkdiscard
+DEBUG: LIBNAMES: pkg util-linux-blkdiscard sonames set()
+DEBUG: calculating shlib provides for util-linux-blkzone
+DEBUG: LIBNAMES: pkg util-linux-blkzone sonames set()
+DEBUG: calculating shlib provides for util-linux-chcpu
+DEBUG: LIBNAMES: pkg util-linux-chcpu sonames set()
+DEBUG: calculating shlib provides for util-linux-delpart
+DEBUG: LIBNAMES: pkg util-linux-delpart sonames set()
+DEBUG: calculating shlib provides for util-linux-findfs
+DEBUG: LIBNAMES: pkg util-linux-findfs sonames set()
+DEBUG: calculating shlib provides for util-linux-fsck.cramfs
+DEBUG: LIBNAMES: pkg util-linux-fsck.cramfs sonames set()
+DEBUG: calculating shlib provides for util-linux-fsfreeze
+DEBUG: LIBNAMES: pkg util-linux-fsfreeze sonames set()
+DEBUG: calculating shlib provides for util-linux-ldattach
+DEBUG: LIBNAMES: pkg util-linux-ldattach sonames set()
+DEBUG: calculating shlib provides for util-linux-mkfs
+DEBUG: LIBNAMES: pkg util-linux-mkfs sonames set()
+DEBUG: calculating shlib provides for util-linux-mkfs.cramfs
+DEBUG: LIBNAMES: pkg util-linux-mkfs.cramfs sonames set()
+DEBUG: calculating shlib provides for util-linux-partx
+DEBUG: LIBNAMES: pkg util-linux-partx sonames set()
+DEBUG: calculating shlib provides for util-linux-readprofile
+DEBUG: LIBNAMES: pkg util-linux-readprofile sonames set()
+DEBUG: calculating shlib provides for util-linux-resizepart
+DEBUG: LIBNAMES: pkg util-linux-resizepart sonames set()
+DEBUG: calculating shlib provides for util-linux-rfkill
+DEBUG: LIBNAMES: pkg util-linux-rfkill sonames set()
+DEBUG: calculating shlib provides for util-linux-rtcwake
+DEBUG: LIBNAMES: pkg util-linux-rtcwake sonames set()
+DEBUG: calculating shlib provides for util-linux-runuser
+DEBUG: LIBNAMES: pkg util-linux-runuser sonames set()
+DEBUG: calculating shlib provides for util-linux-sfdisk
+DEBUG: LIBNAMES: pkg util-linux-sfdisk sonames set()
+DEBUG: calculating shlib provides for util-linux-swaplabel
+DEBUG: LIBNAMES: pkg util-linux-swaplabel sonames set()
+DEBUG: calculating shlib provides for util-linux-uuidd
+DEBUG: LIBNAMES: pkg util-linux-uuidd sonames set()
+DEBUG: calculating shlib provides for util-linux-wipefs
+DEBUG: LIBNAMES: pkg util-linux-wipefs sonames set()
+DEBUG: calculating shlib provides for util-linux-zramctl
+DEBUG: LIBNAMES: pkg util-linux-zramctl sonames set()
+DEBUG: calculating shlib provides for util-linux-locale-ca
+DEBUG: LIBNAMES: pkg util-linux-locale-ca sonames set()
+DEBUG: calculating shlib provides for util-linux-locale-cs
+DEBUG: LIBNAMES: pkg util-linux-locale-cs sonames set()
+DEBUG: calculating shlib provides for util-linux-locale-da
+DEBUG: LIBNAMES: pkg util-linux-locale-da sonames set()
+DEBUG: calculating shlib provides for util-linux-locale-de
+DEBUG: LIBNAMES: pkg util-linux-locale-de sonames set()
+DEBUG: calculating shlib provides for util-linux-locale-es
+DEBUG: LIBNAMES: pkg util-linux-locale-es sonames set()
+DEBUG: calculating shlib provides for util-linux-locale-et
+DEBUG: LIBNAMES: pkg util-linux-locale-et sonames set()
+DEBUG: calculating shlib provides for util-linux-locale-eu
+DEBUG: LIBNAMES: pkg util-linux-locale-eu sonames set()
+DEBUG: calculating shlib provides for util-linux-locale-fi
+DEBUG: LIBNAMES: pkg util-linux-locale-fi sonames set()
+DEBUG: calculating shlib provides for util-linux-locale-fr
+DEBUG: LIBNAMES: pkg util-linux-locale-fr sonames set()
+DEBUG: calculating shlib provides for util-linux-locale-gl
+DEBUG: LIBNAMES: pkg util-linux-locale-gl sonames set()
+DEBUG: calculating shlib provides for util-linux-locale-hr
+DEBUG: LIBNAMES: pkg util-linux-locale-hr sonames set()
+DEBUG: calculating shlib provides for util-linux-locale-hu
+DEBUG: LIBNAMES: pkg util-linux-locale-hu sonames set()
+DEBUG: calculating shlib provides for util-linux-locale-id
+DEBUG: LIBNAMES: pkg util-linux-locale-id sonames set()
+DEBUG: calculating shlib provides for util-linux-locale-it
+DEBUG: LIBNAMES: pkg util-linux-locale-it sonames set()
+DEBUG: calculating shlib provides for util-linux-locale-ja
+DEBUG: LIBNAMES: pkg util-linux-locale-ja sonames set()
+DEBUG: calculating shlib provides for util-linux-locale-nl
+DEBUG: LIBNAMES: pkg util-linux-locale-nl sonames set()
+DEBUG: calculating shlib provides for util-linux-locale-pl
+DEBUG: LIBNAMES: pkg util-linux-locale-pl sonames set()
+DEBUG: calculating shlib provides for util-linux-locale-pt
+DEBUG: LIBNAMES: pkg util-linux-locale-pt sonames set()
+DEBUG: calculating shlib provides for util-linux-locale-pt-br
+DEBUG: LIBNAMES: pkg util-linux-locale-pt-br sonames set()
+DEBUG: calculating shlib provides for util-linux-locale-ru
+DEBUG: LIBNAMES: pkg util-linux-locale-ru sonames set()
+DEBUG: calculating shlib provides for util-linux-locale-sl
+DEBUG: LIBNAMES: pkg util-linux-locale-sl sonames set()
+DEBUG: calculating shlib provides for util-linux-locale-sv
+DEBUG: LIBNAMES: pkg util-linux-locale-sv sonames set()
+DEBUG: calculating shlib provides for util-linux-locale-tr
+DEBUG: LIBNAMES: pkg util-linux-locale-tr sonames set()
+DEBUG: calculating shlib provides for util-linux-locale-uk
+DEBUG: LIBNAMES: pkg util-linux-locale-uk sonames set()
+DEBUG: calculating shlib provides for util-linux-locale-vi
+DEBUG: LIBNAMES: pkg util-linux-locale-vi sonames set()
+DEBUG: calculating shlib provides for util-linux-locale-zh-cn
+DEBUG: LIBNAMES: pkg util-linux-locale-zh-cn sonames set()
+DEBUG: calculating shlib provides for util-linux-locale-zh-tw
+DEBUG: LIBNAMES: pkg util-linux-locale-zh-tw sonames set()
+DEBUG: calculating shlib requirements for util-linux-src
+DEBUG: calculating shlib requirements for util-linux-dbg
+DEBUG: calculating shlib requirements for util-linux-libsmartcols
+DEBUG: util-linux-libsmartcols: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-libsmartcols/lib/libsmartcols.so.1.1.0)
+DEBUG: util-linux-libsmartcols: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-libsmartcols/lib/libsmartcols.so.1.1.0)
+DEBUG: calculating shlib requirements for util-linux-libmount
+DEBUG: util-linux-libmount: Dependency libblkid.so.1 requires package util-linux-libblkid (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-libmount/lib/libmount.so.1.1.0)
+DEBUG: util-linux-libmount: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-libmount/lib/libmount.so.1.1.0)
+DEBUG: util-linux-libmount: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-libmount/lib/libmount.so.1.1.0)
+DEBUG: calculating shlib requirements for util-linux-libfdisk
+DEBUG: util-linux-libfdisk: Dependency libuuid.so.1 requires package util-linux-libuuid (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-libfdisk/lib/libfdisk.so.1.1.0)
+DEBUG: util-linux-libfdisk: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-libfdisk/lib/libfdisk.so.1.1.0)
+DEBUG: util-linux-libfdisk: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-libfdisk/lib/libfdisk.so.1.1.0)
+DEBUG: util-linux-libfdisk: Dependency libblkid.so.1 requires package util-linux-libblkid (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-libfdisk/lib/libfdisk.so.1.1.0)
+DEBUG: calculating shlib requirements for util-linux-libblkid
+DEBUG: util-linux-libblkid: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-libblkid/lib/libblkid.so.1.1.0)
+DEBUG: util-linux-libblkid: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-libblkid/lib/libblkid.so.1.1.0)
+DEBUG: calculating shlib requirements for util-linux-swaponoff
+DEBUG: calculating shlib requirements for util-linux-staticdev
+DEBUG: calculating shlib requirements for util-linux-dev
+DEBUG: calculating shlib requirements for util-linux-doc
+DEBUG: calculating shlib requirements for util-linux
+DEBUG: calculating shlib requirements for util-linux-bash-completion
+DEBUG: calculating shlib requirements for util-linux-dmesg
+DEBUG: util-linux-dmesg: Dependency libtinfo.so.5 requires package ncurses-libtinfo (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-dmesg/bin/dmesg.util-linux)
+DEBUG: util-linux-dmesg: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-dmesg/bin/dmesg.util-linux)
+DEBUG: util-linux-dmesg: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-dmesg/bin/dmesg.util-linux)
+DEBUG: calculating shlib requirements for util-linux-getopt
+DEBUG: util-linux-getopt: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-getopt/bin/getopt.util-linux)
+DEBUG: util-linux-getopt: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-getopt/bin/getopt.util-linux)
+DEBUG: calculating shlib requirements for util-linux-kill
+DEBUG: util-linux-kill: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-kill/bin/kill.util-linux)
+DEBUG: util-linux-kill: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-kill/bin/kill.util-linux)
+DEBUG: calculating shlib requirements for util-linux-more
+DEBUG: util-linux-more: Dependency libtinfo.so.5 requires package ncurses-libtinfo (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-more/bin/more.util-linux)
+DEBUG: util-linux-more: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-more/bin/more.util-linux)
+DEBUG: util-linux-more: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-more/bin/more.util-linux)
+DEBUG: calculating shlib requirements for util-linux-mount
+DEBUG: util-linux-mount: Dependency libmount.so.1 requires package util-linux-libmount (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-mount/bin/mount.util-linux)
+DEBUG: util-linux-mount: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-mount/bin/mount.util-linux)
+DEBUG: util-linux-mount: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-mount/bin/mount.util-linux)
+DEBUG: calculating shlib requirements for util-linux-mountpoint
+DEBUG: util-linux-mountpoint: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-mountpoint/bin/mountpoint.util-linux)
+DEBUG: util-linux-mountpoint: Dependency libmount.so.1 requires package util-linux-libmount (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-mountpoint/bin/mountpoint.util-linux)
+DEBUG: util-linux-mountpoint: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-mountpoint/bin/mountpoint.util-linux)
+DEBUG: calculating shlib requirements for util-linux-su
+DEBUG: util-linux-su: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-su/bin/su.util-linux)
+DEBUG: util-linux-su: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-su/bin/su.util-linux)
+DEBUG: util-linux-su: Dependency libpam.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-su/bin/su.util-linux)
+DEBUG: util-linux-su: Dependency libpam_misc.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-su/bin/su.util-linux)
+DEBUG: calculating shlib requirements for util-linux-umount
+DEBUG: util-linux-umount: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-umount/bin/umount.util-linux)
+DEBUG: util-linux-umount: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-umount/bin/umount.util-linux)
+DEBUG: util-linux-umount: Dependency libmount.so.1 requires package util-linux-libmount (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-umount/bin/umount.util-linux)
+DEBUG: calculating shlib requirements for util-linux-agetty
+DEBUG: util-linux-agetty: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-agetty/sbin/agetty)
+DEBUG: util-linux-agetty: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-agetty/sbin/agetty)
+DEBUG: calculating shlib requirements for util-linux-blkid
+DEBUG: util-linux-blkid: Dependency libblkid.so.1 requires package util-linux-libblkid (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-blkid/sbin/blkid.util-linux)
+DEBUG: util-linux-blkid: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-blkid/sbin/blkid.util-linux)
+DEBUG: util-linux-blkid: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-blkid/sbin/blkid.util-linux)
+DEBUG: calculating shlib requirements for util-linux-blockdev
+DEBUG: util-linux-blockdev: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-blockdev/sbin/blockdev.util-linux)
+DEBUG: util-linux-blockdev: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-blockdev/sbin/blockdev.util-linux)
+DEBUG: calculating shlib requirements for util-linux-cfdisk
+DEBUG: util-linux-cfdisk: Dependency libtinfo.so.5 requires package ncurses-libtinfo (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-cfdisk/sbin/cfdisk)
+DEBUG: util-linux-cfdisk: Dependency libncursesw.so.5 requires package ncurses-libncursesw (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-cfdisk/sbin/cfdisk)
+DEBUG: util-linux-cfdisk: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-cfdisk/sbin/cfdisk)
+DEBUG: util-linux-cfdisk: Dependency libfdisk.so.1 requires package util-linux-libfdisk (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-cfdisk/sbin/cfdisk)
+DEBUG: util-linux-cfdisk: Dependency libsmartcols.so.1 requires package util-linux-libsmartcols (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-cfdisk/sbin/cfdisk)
+DEBUG: util-linux-cfdisk: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-cfdisk/sbin/cfdisk)
+DEBUG: util-linux-cfdisk: Dependency libmount.so.1 requires package util-linux-libmount (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-cfdisk/sbin/cfdisk)
+DEBUG: calculating shlib requirements for util-linux-ctrlaltdel
+DEBUG: util-linux-ctrlaltdel: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-ctrlaltdel/sbin/ctrlaltdel)
+DEBUG: util-linux-ctrlaltdel: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-ctrlaltdel/sbin/ctrlaltdel)
+DEBUG: calculating shlib requirements for util-linux-fdisk
+DEBUG: util-linux-fdisk: Dependency libtinfo.so.5 requires package ncurses-libtinfo (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-fdisk/sbin/fdisk.util-linux)
+DEBUG: util-linux-fdisk: Dependency libsmartcols.so.1 requires package util-linux-libsmartcols (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-fdisk/sbin/fdisk.util-linux)
+DEBUG: util-linux-fdisk: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-fdisk/sbin/fdisk.util-linux)
+DEBUG: util-linux-fdisk: Dependency libfdisk.so.1 requires package util-linux-libfdisk (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-fdisk/sbin/fdisk.util-linux)
+DEBUG: util-linux-fdisk: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-fdisk/sbin/fdisk.util-linux)
+DEBUG: calculating shlib requirements for util-linux-fsck
+DEBUG: util-linux-fsck: Dependency libblkid.so.1 requires package util-linux-libblkid (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-fsck/sbin/fsck.util-linux)
+DEBUG: util-linux-fsck: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-fsck/sbin/fsck.util-linux)
+DEBUG: util-linux-fsck: Dependency libmount.so.1 requires package util-linux-libmount (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-fsck/sbin/fsck.util-linux)
+DEBUG: util-linux-fsck: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-fsck/sbin/fsck.util-linux)
+DEBUG: calculating shlib requirements for util-linux-fstrim
+DEBUG: util-linux-fstrim: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-fstrim/sbin/fstrim.util-linux)
+DEBUG: util-linux-fstrim: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-fstrim/sbin/fstrim.util-linux)
+DEBUG: util-linux-fstrim: Dependency libmount.so.1 requires package util-linux-libmount (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-fstrim/sbin/fstrim.util-linux)
+DEBUG: calculating shlib requirements for util-linux-hwclock
+DEBUG: util-linux-hwclock: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-hwclock/sbin/hwclock.util-linux)
+DEBUG: util-linux-hwclock: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-hwclock/sbin/hwclock.util-linux)
+DEBUG: util-linux-hwclock: Dependency libm.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-hwclock/sbin/hwclock.util-linux)
+DEBUG: calculating shlib requirements for util-linux-losetup
+DEBUG: util-linux-losetup: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-losetup/sbin/losetup.util-linux)
+DEBUG: util-linux-losetup: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-losetup/sbin/losetup.util-linux)
+DEBUG: util-linux-losetup: Dependency libsmartcols.so.1 requires package util-linux-libsmartcols (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-losetup/sbin/losetup.util-linux)
+DEBUG: calculating shlib requirements for util-linux-mkswap
+DEBUG: util-linux-mkswap: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-mkswap/sbin/mkswap.util-linux)
+DEBUG: util-linux-mkswap: Dependency libuuid.so.1 requires package util-linux-libuuid (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-mkswap/sbin/mkswap.util-linux)
+DEBUG: util-linux-mkswap: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-mkswap/sbin/mkswap.util-linux)
+DEBUG: util-linux-mkswap: Dependency libblkid.so.1 requires package util-linux-libblkid (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-mkswap/sbin/mkswap.util-linux)
+DEBUG: calculating shlib requirements for util-linux-nologin
+DEBUG: util-linux-nologin: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-nologin/sbin/nologin.util-linux)
+DEBUG: util-linux-nologin: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-nologin/sbin/nologin.util-linux)
+DEBUG: calculating shlib requirements for util-linux-pivot-root
+DEBUG: util-linux-pivot-root: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-pivot-root/sbin/pivot_root.util-linux)
+DEBUG: calculating shlib requirements for util-linux-sulogin
+DEBUG: util-linux-sulogin: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-sulogin/sbin/sulogin.util-linux)
+DEBUG: util-linux-sulogin: Dependency libcrypt.so.2 requires package libxcrypt (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-sulogin/sbin/sulogin.util-linux)
+DEBUG: util-linux-sulogin: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-sulogin/sbin/sulogin.util-linux)
+DEBUG: calculating shlib requirements for util-linux-swapoff
+DEBUG: util-linux-swapoff: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-swapoff/sbin/swapoff.util-linux)
+DEBUG: util-linux-swapoff: Dependency libblkid.so.1 requires package util-linux-libblkid (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-swapoff/sbin/swapoff.util-linux)
+DEBUG: util-linux-swapoff: Dependency libmount.so.1 requires package util-linux-libmount (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-swapoff/sbin/swapoff.util-linux)
+DEBUG: util-linux-swapoff: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-swapoff/sbin/swapoff.util-linux)
+DEBUG: calculating shlib requirements for util-linux-swapon
+DEBUG: util-linux-swapon: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-swapon/sbin/swapon.util-linux)
+DEBUG: util-linux-swapon: Dependency libmount.so.1 requires package util-linux-libmount (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-swapon/sbin/swapon.util-linux)
+DEBUG: util-linux-swapon: Dependency libblkid.so.1 requires package util-linux-libblkid (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-swapon/sbin/swapon.util-linux)
+DEBUG: util-linux-swapon: Dependency libsmartcols.so.1 requires package util-linux-libsmartcols (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-swapon/sbin/swapon.util-linux)
+DEBUG: util-linux-swapon: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-swapon/sbin/swapon.util-linux)
+DEBUG: calculating shlib requirements for util-linux-switch-root
+DEBUG: util-linux-switch-root: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-switch-root/sbin/switch_root.util-linux)
+DEBUG: util-linux-switch-root: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-switch-root/sbin/switch_root.util-linux)
+DEBUG: calculating shlib requirements for util-linux-cal
+DEBUG: util-linux-cal: Dependency libtinfo.so.5 requires package ncurses-libtinfo (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-cal/usr/bin/cal.util-linux)
+DEBUG: util-linux-cal: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-cal/usr/bin/cal.util-linux)
+DEBUG: util-linux-cal: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-cal/usr/bin/cal.util-linux)
+DEBUG: calculating shlib requirements for util-linux-chfn
+DEBUG: util-linux-chfn: Dependency libpam_misc.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-chfn/usr/bin/chfn.util-linux)
+DEBUG: util-linux-chfn: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-chfn/usr/bin/chfn.util-linux)
+DEBUG: util-linux-chfn: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-chfn/usr/bin/chfn.util-linux)
+DEBUG: util-linux-chfn: Dependency libpam.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-chfn/usr/bin/chfn.util-linux)
+DEBUG: calculating shlib requirements for util-linux-chmem
+DEBUG: util-linux-chmem: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-chmem/usr/bin/chmem)
+DEBUG: util-linux-chmem: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-chmem/usr/bin/chmem)
+DEBUG: calculating shlib requirements for util-linux-choom
+DEBUG: util-linux-choom: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-choom/usr/bin/choom)
+DEBUG: util-linux-choom: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-choom/usr/bin/choom)
+DEBUG: calculating shlib requirements for util-linux-chrt
+DEBUG: util-linux-chrt: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-chrt/usr/bin/chrt.util-linux)
+DEBUG: util-linux-chrt: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-chrt/usr/bin/chrt.util-linux)
+DEBUG: calculating shlib requirements for util-linux-chsh
+DEBUG: util-linux-chsh: Dependency libpam.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-chsh/usr/bin/chsh.util-linux)
+DEBUG: util-linux-chsh: Dependency libpam_misc.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-chsh/usr/bin/chsh.util-linux)
+DEBUG: util-linux-chsh: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-chsh/usr/bin/chsh.util-linux)
+DEBUG: util-linux-chsh: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-chsh/usr/bin/chsh.util-linux)
+DEBUG: calculating shlib requirements for util-linux-col
+DEBUG: util-linux-col: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-col/usr/bin/col)
+DEBUG: util-linux-col: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-col/usr/bin/col)
+DEBUG: calculating shlib requirements for util-linux-colcrt
+DEBUG: util-linux-colcrt: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-colcrt/usr/bin/colcrt)
+DEBUG: util-linux-colcrt: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-colcrt/usr/bin/colcrt)
+DEBUG: calculating shlib requirements for util-linux-colrm
+DEBUG: util-linux-colrm: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-colrm/usr/bin/colrm)
+DEBUG: util-linux-colrm: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-colrm/usr/bin/colrm)
+DEBUG: calculating shlib requirements for util-linux-column
+DEBUG: util-linux-column: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-column/usr/bin/column)
+DEBUG: util-linux-column: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-column/usr/bin/column)
+DEBUG: util-linux-column: Dependency libsmartcols.so.1 requires package util-linux-libsmartcols (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-column/usr/bin/column)
+DEBUG: calculating shlib requirements for util-linux-eject
+DEBUG: util-linux-eject: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-eject/usr/bin/eject.util-linux)
+DEBUG: util-linux-eject: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-eject/usr/bin/eject.util-linux)
+DEBUG: util-linux-eject: Dependency libmount.so.1 requires package util-linux-libmount (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-eject/usr/bin/eject.util-linux)
+DEBUG: calculating shlib requirements for util-linux-fallocate
+DEBUG: util-linux-fallocate: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-fallocate/usr/bin/fallocate.util-linux)
+DEBUG: util-linux-fallocate: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-fallocate/usr/bin/fallocate.util-linux)
+DEBUG: calculating shlib requirements for util-linux-fincore
+DEBUG: util-linux-fincore: Dependency libsmartcols.so.1 requires package util-linux-libsmartcols (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-fincore/usr/bin/fincore)
+DEBUG: util-linux-fincore: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-fincore/usr/bin/fincore)
+DEBUG: util-linux-fincore: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-fincore/usr/bin/fincore)
+DEBUG: calculating shlib requirements for util-linux-findmnt
+DEBUG: util-linux-findmnt: Dependency libsmartcols.so.1 requires package util-linux-libsmartcols (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-findmnt/usr/bin/findmnt)
+DEBUG: util-linux-findmnt: Dependency libblkid.so.1 requires package util-linux-libblkid (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-findmnt/usr/bin/findmnt)
+DEBUG: util-linux-findmnt: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-findmnt/usr/bin/findmnt)
+DEBUG: util-linux-findmnt: Dependency libmount.so.1 requires package util-linux-libmount (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-findmnt/usr/bin/findmnt)
+DEBUG: util-linux-findmnt: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-findmnt/usr/bin/findmnt)
+DEBUG: calculating shlib requirements for util-linux-flock
+DEBUG: util-linux-flock: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-flock/usr/bin/flock.util-linux)
+DEBUG: util-linux-flock: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-flock/usr/bin/flock.util-linux)
+DEBUG: calculating shlib requirements for util-linux-hardlink
+DEBUG: util-linux-hardlink: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-hardlink/usr/bin/hardlink)
+DEBUG: util-linux-hardlink: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-hardlink/usr/bin/hardlink)
+DEBUG: calculating shlib requirements for util-linux-hexdump
+DEBUG: util-linux-hexdump: Dependency libtinfo.so.5 requires package ncurses-libtinfo (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-hexdump/usr/bin/hexdump.util-linux)
+DEBUG: util-linux-hexdump: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-hexdump/usr/bin/hexdump.util-linux)
+DEBUG: util-linux-hexdump: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-hexdump/usr/bin/hexdump.util-linux)
+DEBUG: calculating shlib requirements for util-linux-ionice
+DEBUG: util-linux-ionice: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-ionice/usr/bin/ionice.util-linux)
+DEBUG: util-linux-ionice: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-ionice/usr/bin/ionice.util-linux)
+DEBUG: calculating shlib requirements for util-linux-ipcmk
+DEBUG: util-linux-ipcmk: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-ipcmk/usr/bin/ipcmk)
+DEBUG: util-linux-ipcmk: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-ipcmk/usr/bin/ipcmk)
+DEBUG: calculating shlib requirements for util-linux-ipcrm
+DEBUG: util-linux-ipcrm: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-ipcrm/usr/bin/ipcrm)
+DEBUG: util-linux-ipcrm: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-ipcrm/usr/bin/ipcrm)
+DEBUG: calculating shlib requirements for util-linux-ipcs
+DEBUG: util-linux-ipcs: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-ipcs/usr/bin/ipcs)
+DEBUG: util-linux-ipcs: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-ipcs/usr/bin/ipcs)
+DEBUG: calculating shlib requirements for util-linux-irqtop
+DEBUG: util-linux-irqtop: Dependency libncursesw.so.5 requires package ncurses-libncursesw (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-irqtop/usr/bin/irqtop)
+DEBUG: util-linux-irqtop: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-irqtop/usr/bin/irqtop)
+DEBUG: util-linux-irqtop: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-irqtop/usr/bin/irqtop)
+DEBUG: util-linux-irqtop: Dependency libtinfo.so.5 requires package ncurses-libtinfo (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-irqtop/usr/bin/irqtop)
+DEBUG: util-linux-irqtop: Dependency libsmartcols.so.1 requires package util-linux-libsmartcols (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-irqtop/usr/bin/irqtop)
+DEBUG: calculating shlib requirements for util-linux-isosize
+DEBUG: util-linux-isosize: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-isosize/usr/bin/isosize)
+DEBUG: util-linux-isosize: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-isosize/usr/bin/isosize)
+DEBUG: calculating shlib requirements for util-linux-last
+DEBUG: util-linux-last: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-last/usr/bin/last.util-linux)
+DEBUG: util-linux-last: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-last/usr/bin/last.util-linux)
+DEBUG: calculating shlib requirements for util-linux-logger
+DEBUG: util-linux-logger: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-logger/usr/bin/logger.util-linux)
+DEBUG: util-linux-logger: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-logger/usr/bin/logger.util-linux)
+DEBUG: calculating shlib requirements for util-linux-look
+DEBUG: util-linux-look: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-look/usr/bin/look)
+DEBUG: util-linux-look: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-look/usr/bin/look)
+DEBUG: calculating shlib requirements for util-linux-lsblk
+DEBUG: util-linux-lsblk: Dependency libmount.so.1 requires package util-linux-libmount (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-lsblk/usr/bin/lsblk)
+DEBUG: util-linux-lsblk: Dependency libblkid.so.1 requires package util-linux-libblkid (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-lsblk/usr/bin/lsblk)
+DEBUG: util-linux-lsblk: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-lsblk/usr/bin/lsblk)
+DEBUG: util-linux-lsblk: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-lsblk/usr/bin/lsblk)
+DEBUG: util-linux-lsblk: Dependency libsmartcols.so.1 requires package util-linux-libsmartcols (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-lsblk/usr/bin/lsblk)
+DEBUG: calculating shlib requirements for util-linux-lscpu
+DEBUG: util-linux-lscpu: Dependency libsmartcols.so.1 requires package util-linux-libsmartcols (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-lscpu/usr/bin/lscpu)
+DEBUG: util-linux-lscpu: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-lscpu/usr/bin/lscpu)
+DEBUG: util-linux-lscpu: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-lscpu/usr/bin/lscpu)
+DEBUG: calculating shlib requirements for util-linux-lsfd
+DEBUG: util-linux-lsfd: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-lsfd/usr/bin/lsfd)
+DEBUG: util-linux-lsfd: Dependency libsmartcols.so.1 requires package util-linux-libsmartcols (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-lsfd/usr/bin/lsfd)
+DEBUG: util-linux-lsfd: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-lsfd/usr/bin/lsfd)
+DEBUG: calculating shlib requirements for util-linux-lsipc
+DEBUG: util-linux-lsipc: Dependency libsmartcols.so.1 requires package util-linux-libsmartcols (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-lsipc/usr/bin/lsipc)
+DEBUG: util-linux-lsipc: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-lsipc/usr/bin/lsipc)
+DEBUG: util-linux-lsipc: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-lsipc/usr/bin/lsipc)
+DEBUG: calculating shlib requirements for util-linux-lsirq
+DEBUG: util-linux-lsirq: Dependency libsmartcols.so.1 requires package util-linux-libsmartcols (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-lsirq/usr/bin/lsirq)
+DEBUG: util-linux-lsirq: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-lsirq/usr/bin/lsirq)
+DEBUG: util-linux-lsirq: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-lsirq/usr/bin/lsirq)
+DEBUG: calculating shlib requirements for util-linux-lslocks
+DEBUG: util-linux-lslocks: Dependency libsmartcols.so.1 requires package util-linux-libsmartcols (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-lslocks/usr/bin/lslocks)
+DEBUG: util-linux-lslocks: Dependency libmount.so.1 requires package util-linux-libmount (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-lslocks/usr/bin/lslocks)
+DEBUG: util-linux-lslocks: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-lslocks/usr/bin/lslocks)
+DEBUG: util-linux-lslocks: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-lslocks/usr/bin/lslocks)
+DEBUG: calculating shlib requirements for util-linux-lslogins
+DEBUG: util-linux-lslogins: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-lslogins/usr/bin/lslogins)
+DEBUG: util-linux-lslogins: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-lslogins/usr/bin/lslogins)
+DEBUG: util-linux-lslogins: Dependency libsmartcols.so.1 requires package util-linux-libsmartcols (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-lslogins/usr/bin/lslogins)
+DEBUG: calculating shlib requirements for util-linux-lsmem
+DEBUG: util-linux-lsmem: Dependency libsmartcols.so.1 requires package util-linux-libsmartcols (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-lsmem/usr/bin/lsmem)
+DEBUG: util-linux-lsmem: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-lsmem/usr/bin/lsmem)
+DEBUG: util-linux-lsmem: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-lsmem/usr/bin/lsmem)
+DEBUG: calculating shlib requirements for util-linux-lsns
+DEBUG: util-linux-lsns: Dependency libsmartcols.so.1 requires package util-linux-libsmartcols (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-lsns/usr/bin/lsns)
+DEBUG: util-linux-lsns: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-lsns/usr/bin/lsns)
+DEBUG: util-linux-lsns: Dependency libmount.so.1 requires package util-linux-libmount (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-lsns/usr/bin/lsns)
+DEBUG: util-linux-lsns: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-lsns/usr/bin/lsns)
+DEBUG: calculating shlib requirements for util-linux-mcookie
+DEBUG: util-linux-mcookie: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-mcookie/usr/bin/mcookie.util-linux)
+DEBUG: util-linux-mcookie: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-mcookie/usr/bin/mcookie.util-linux)
+DEBUG: calculating shlib requirements for util-linux-mesg
+DEBUG: util-linux-mesg: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-mesg/usr/bin/mesg.util-linux)
+DEBUG: util-linux-mesg: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-mesg/usr/bin/mesg.util-linux)
+DEBUG: calculating shlib requirements for util-linux-namei
+DEBUG: util-linux-namei: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-namei/usr/bin/namei)
+DEBUG: util-linux-namei: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-namei/usr/bin/namei)
+DEBUG: calculating shlib requirements for util-linux-nsenter
+DEBUG: util-linux-nsenter: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-nsenter/usr/bin/nsenter.util-linux)
+DEBUG: util-linux-nsenter: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-nsenter/usr/bin/nsenter.util-linux)
+DEBUG: calculating shlib requirements for util-linux-prlimit
+DEBUG: util-linux-prlimit: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-prlimit/usr/bin/prlimit.util-linux)
+DEBUG: util-linux-prlimit: Dependency libsmartcols.so.1 requires package util-linux-libsmartcols (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-prlimit/usr/bin/prlimit.util-linux)
+DEBUG: util-linux-prlimit: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-prlimit/usr/bin/prlimit.util-linux)
+DEBUG: calculating shlib requirements for util-linux-rename
+DEBUG: util-linux-rename: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-rename/usr/bin/rename)
+DEBUG: util-linux-rename: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-rename/usr/bin/rename)
+DEBUG: calculating shlib requirements for util-linux-renice
+DEBUG: util-linux-renice: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-renice/usr/bin/renice.util-linux)
+DEBUG: util-linux-renice: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-renice/usr/bin/renice.util-linux)
+DEBUG: calculating shlib requirements for util-linux-rev
+DEBUG: util-linux-rev: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-rev/usr/bin/rev.util-linux)
+DEBUG: calculating shlib requirements for util-linux-script
+DEBUG: util-linux-script: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-script/usr/bin/script)
+DEBUG: util-linux-script: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-script/usr/bin/script)
+DEBUG: calculating shlib requirements for util-linux-scriptlive
+DEBUG: util-linux-scriptlive: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-scriptlive/usr/bin/scriptlive)
+DEBUG: util-linux-scriptlive: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-scriptlive/usr/bin/scriptlive)
+DEBUG: calculating shlib requirements for util-linux-scriptreplay
+DEBUG: util-linux-scriptreplay: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-scriptreplay/usr/bin/scriptreplay)
+DEBUG: util-linux-scriptreplay: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-scriptreplay/usr/bin/scriptreplay)
+DEBUG: calculating shlib requirements for util-linux-setarch
+DEBUG: util-linux-setarch: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-setarch/usr/bin/setarch)
+DEBUG: util-linux-setarch: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-setarch/usr/bin/setarch)
+DEBUG: calculating shlib requirements for util-linux-setpriv
+DEBUG: util-linux-setpriv: Dependency libcap-ng.so.0 requires package libcap-ng (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-setpriv/usr/bin/setpriv.util-linux)
+DEBUG: util-linux-setpriv: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-setpriv/usr/bin/setpriv.util-linux)
+DEBUG: util-linux-setpriv: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-setpriv/usr/bin/setpriv.util-linux)
+DEBUG: calculating shlib requirements for util-linux-setsid
+DEBUG: util-linux-setsid: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-setsid/usr/bin/setsid.util-linux)
+DEBUG: util-linux-setsid: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-setsid/usr/bin/setsid.util-linux)
+DEBUG: calculating shlib requirements for util-linux-setterm
+DEBUG: util-linux-setterm: Dependency libtinfo.so.5 requires package ncurses-libtinfo (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-setterm/usr/bin/setterm)
+DEBUG: util-linux-setterm: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-setterm/usr/bin/setterm)
+DEBUG: util-linux-setterm: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-setterm/usr/bin/setterm)
+DEBUG: calculating shlib requirements for util-linux-taskset
+DEBUG: util-linux-taskset: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-taskset/usr/bin/taskset.util-linux)
+DEBUG: util-linux-taskset: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-taskset/usr/bin/taskset.util-linux)
+DEBUG: calculating shlib requirements for util-linux-uclampset
+DEBUG: util-linux-uclampset: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-uclampset/usr/bin/uclampset)
+DEBUG: util-linux-uclampset: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-uclampset/usr/bin/uclampset)
+DEBUG: calculating shlib requirements for util-linux-ul
+DEBUG: util-linux-ul: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-ul/usr/bin/ul)
+DEBUG: util-linux-ul: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-ul/usr/bin/ul)
+DEBUG: util-linux-ul: Dependency libtinfo.so.5 requires package ncurses-libtinfo (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-ul/usr/bin/ul)
+DEBUG: calculating shlib requirements for util-linux-unshare
+DEBUG: util-linux-unshare: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-unshare/usr/bin/unshare.util-linux)
+DEBUG: util-linux-unshare: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-unshare/usr/bin/unshare.util-linux)
+DEBUG: calculating shlib requirements for util-linux-utmpdump
+DEBUG: util-linux-utmpdump: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-utmpdump/usr/bin/utmpdump.util-linux)
+DEBUG: util-linux-utmpdump: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-utmpdump/usr/bin/utmpdump.util-linux)
+DEBUG: calculating shlib requirements for util-linux-uuidgen
+DEBUG: util-linux-uuidgen: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-uuidgen/usr/bin/uuidgen.util-linux)
+DEBUG: util-linux-uuidgen: Dependency libuuid.so.1 requires package util-linux-libuuid (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-uuidgen/usr/bin/uuidgen.util-linux)
+DEBUG: util-linux-uuidgen: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-uuidgen/usr/bin/uuidgen.util-linux)
+DEBUG: calculating shlib requirements for util-linux-uuidparse
+DEBUG: util-linux-uuidparse: Dependency libsmartcols.so.1 requires package util-linux-libsmartcols (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-uuidparse/usr/bin/uuidparse)
+DEBUG: util-linux-uuidparse: Dependency libuuid.so.1 requires package util-linux-libuuid (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-uuidparse/usr/bin/uuidparse)
+DEBUG: util-linux-uuidparse: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-uuidparse/usr/bin/uuidparse)
+DEBUG: util-linux-uuidparse: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-uuidparse/usr/bin/uuidparse)
+DEBUG: calculating shlib requirements for util-linux-wall
+DEBUG: util-linux-wall: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-wall/usr/bin/wall.util-linux)
+DEBUG: util-linux-wall: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-wall/usr/bin/wall.util-linux)
+DEBUG: calculating shlib requirements for util-linux-wdctl
+DEBUG: util-linux-wdctl: Dependency libsmartcols.so.1 requires package util-linux-libsmartcols (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-wdctl/usr/bin/wdctl)
+DEBUG: util-linux-wdctl: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-wdctl/usr/bin/wdctl)
+DEBUG: util-linux-wdctl: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-wdctl/usr/bin/wdctl)
+DEBUG: calculating shlib requirements for util-linux-whereis
+DEBUG: util-linux-whereis: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-whereis/usr/bin/whereis)
+DEBUG: util-linux-whereis: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-whereis/usr/bin/whereis)
+DEBUG: calculating shlib requirements for util-linux-write
+DEBUG: util-linux-write: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-write/usr/bin/write)
+DEBUG: util-linux-write: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-write/usr/bin/write)
+DEBUG: calculating shlib requirements for util-linux-addpart
+DEBUG: util-linux-addpart: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-addpart/usr/sbin/addpart)
+DEBUG: util-linux-addpart: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-addpart/usr/sbin/addpart)
+DEBUG: calculating shlib requirements for util-linux-blkdiscard
+DEBUG: util-linux-blkdiscard: Dependency libblkid.so.1 requires package util-linux-libblkid (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-blkdiscard/usr/sbin/blkdiscard)
+DEBUG: util-linux-blkdiscard: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-blkdiscard/usr/sbin/blkdiscard)
+DEBUG: util-linux-blkdiscard: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-blkdiscard/usr/sbin/blkdiscard)
+DEBUG: calculating shlib requirements for util-linux-blkzone
+DEBUG: util-linux-blkzone: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-blkzone/usr/sbin/blkzone)
+DEBUG: util-linux-blkzone: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-blkzone/usr/sbin/blkzone)
+DEBUG: calculating shlib requirements for util-linux-chcpu
+DEBUG: util-linux-chcpu: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-chcpu/usr/sbin/chcpu)
+DEBUG: util-linux-chcpu: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-chcpu/usr/sbin/chcpu)
+DEBUG: calculating shlib requirements for util-linux-delpart
+DEBUG: util-linux-delpart: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-delpart/usr/sbin/delpart)
+DEBUG: util-linux-delpart: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-delpart/usr/sbin/delpart)
+DEBUG: calculating shlib requirements for util-linux-findfs
+DEBUG: util-linux-findfs: Dependency libblkid.so.1 requires package util-linux-libblkid (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-findfs/usr/sbin/findfs.util-linux)
+DEBUG: util-linux-findfs: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-findfs/usr/sbin/findfs.util-linux)
+DEBUG: calculating shlib requirements for util-linux-fsck.cramfs
+DEBUG: util-linux-fsck.cramfs: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-fsck.cramfs/usr/sbin/fsck.cramfs)
+DEBUG: util-linux-fsck.cramfs: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-fsck.cramfs/usr/sbin/fsck.cramfs)
+DEBUG: util-linux-fsck.cramfs: Dependency libz.so.1 requires package zlib (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-fsck.cramfs/usr/sbin/fsck.cramfs)
+DEBUG: calculating shlib requirements for util-linux-fsfreeze
+DEBUG: util-linux-fsfreeze: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-fsfreeze/usr/sbin/fsfreeze.util-linux)
+DEBUG: util-linux-fsfreeze: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-fsfreeze/usr/sbin/fsfreeze.util-linux)
+DEBUG: calculating shlib requirements for util-linux-ldattach
+DEBUG: util-linux-ldattach: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-ldattach/usr/sbin/ldattach)
+DEBUG: util-linux-ldattach: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-ldattach/usr/sbin/ldattach)
+DEBUG: calculating shlib requirements for util-linux-mkfs
+DEBUG: util-linux-mkfs: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-mkfs/usr/sbin/mkfs)
+DEBUG: util-linux-mkfs: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-mkfs/usr/sbin/mkfs)
+DEBUG: calculating shlib requirements for util-linux-mkfs.cramfs
+DEBUG: util-linux-mkfs.cramfs: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-mkfs.cramfs/usr/sbin/mkfs.cramfs)
+DEBUG: util-linux-mkfs.cramfs: Dependency libz.so.1 requires package zlib (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-mkfs.cramfs/usr/sbin/mkfs.cramfs)
+DEBUG: util-linux-mkfs.cramfs: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-mkfs.cramfs/usr/sbin/mkfs.cramfs)
+DEBUG: calculating shlib requirements for util-linux-partx
+DEBUG: util-linux-partx: Dependency libsmartcols.so.1 requires package util-linux-libsmartcols (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-partx/usr/sbin/partx)
+DEBUG: util-linux-partx: Dependency libblkid.so.1 requires package util-linux-libblkid (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-partx/usr/sbin/partx)
+DEBUG: util-linux-partx: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-partx/usr/sbin/partx)
+DEBUG: util-linux-partx: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-partx/usr/sbin/partx)
+DEBUG: calculating shlib requirements for util-linux-readprofile
+DEBUG: util-linux-readprofile: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-readprofile/usr/sbin/readprofile.util-linux)
+DEBUG: util-linux-readprofile: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-readprofile/usr/sbin/readprofile.util-linux)
+DEBUG: calculating shlib requirements for util-linux-resizepart
+DEBUG: util-linux-resizepart: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-resizepart/usr/sbin/resizepart)
+DEBUG: util-linux-resizepart: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-resizepart/usr/sbin/resizepart)
+DEBUG: calculating shlib requirements for util-linux-rfkill
+DEBUG: util-linux-rfkill: Dependency libsmartcols.so.1 requires package util-linux-libsmartcols (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-rfkill/usr/sbin/rfkill.util-linux)
+DEBUG: util-linux-rfkill: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-rfkill/usr/sbin/rfkill.util-linux)
+DEBUG: util-linux-rfkill: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-rfkill/usr/sbin/rfkill.util-linux)
+DEBUG: calculating shlib requirements for util-linux-rtcwake
+DEBUG: util-linux-rtcwake: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-rtcwake/usr/sbin/rtcwake.util-linux)
+DEBUG: util-linux-rtcwake: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-rtcwake/usr/sbin/rtcwake.util-linux)
+DEBUG: calculating shlib requirements for util-linux-runuser
+DEBUG: util-linux-runuser: Dependency libpam.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-runuser/usr/sbin/runuser)
+DEBUG: util-linux-runuser: Dependency libpam_misc.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-runuser/usr/sbin/runuser)
+DEBUG: util-linux-runuser: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-runuser/usr/sbin/runuser)
+DEBUG: util-linux-runuser: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-runuser/usr/sbin/runuser)
+DEBUG: calculating shlib requirements for util-linux-sfdisk
+DEBUG: util-linux-sfdisk: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-sfdisk/usr/sbin/sfdisk)
+DEBUG: util-linux-sfdisk: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-sfdisk/usr/sbin/sfdisk)
+DEBUG: util-linux-sfdisk: Dependency libfdisk.so.1 requires package util-linux-libfdisk (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-sfdisk/usr/sbin/sfdisk)
+DEBUG: util-linux-sfdisk: Dependency libtinfo.so.5 requires package ncurses-libtinfo (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-sfdisk/usr/sbin/sfdisk)
+DEBUG: util-linux-sfdisk: Dependency libsmartcols.so.1 requires package util-linux-libsmartcols (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-sfdisk/usr/sbin/sfdisk)
+DEBUG: calculating shlib requirements for util-linux-swaplabel
+DEBUG: util-linux-swaplabel: Dependency libblkid.so.1 requires package util-linux-libblkid (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-swaplabel/usr/sbin/swaplabel)
+DEBUG: util-linux-swaplabel: Dependency libuuid.so.1 requires package util-linux-libuuid (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-swaplabel/usr/sbin/swaplabel)
+DEBUG: util-linux-swaplabel: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-swaplabel/usr/sbin/swaplabel)
+DEBUG: util-linux-swaplabel: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-swaplabel/usr/sbin/swaplabel)
+DEBUG: calculating shlib requirements for util-linux-uuidd
+DEBUG: util-linux-uuidd: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-uuidd/usr/sbin/uuidd)
+DEBUG: util-linux-uuidd: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-uuidd/usr/sbin/uuidd)
+DEBUG: util-linux-uuidd: Dependency libuuid.so.1 requires package util-linux-libuuid (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-uuidd/usr/sbin/uuidd)
+DEBUG: calculating shlib requirements for util-linux-wipefs
+DEBUG: util-linux-wipefs: Dependency libsmartcols.so.1 requires package util-linux-libsmartcols (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-wipefs/usr/sbin/wipefs)
+DEBUG: util-linux-wipefs: Dependency libblkid.so.1 requires package util-linux-libblkid (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-wipefs/usr/sbin/wipefs)
+DEBUG: util-linux-wipefs: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-wipefs/usr/sbin/wipefs)
+DEBUG: util-linux-wipefs: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-wipefs/usr/sbin/wipefs)
+DEBUG: calculating shlib requirements for util-linux-zramctl
+DEBUG: util-linux-zramctl: Dependency libsmartcols.so.1 requires package util-linux-libsmartcols (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-zramctl/usr/sbin/zramctl)
+DEBUG: util-linux-zramctl: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-zramctl/usr/sbin/zramctl)
+DEBUG: util-linux-zramctl: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/packages-split/util-linux-zramctl/usr/sbin/zramctl)
+DEBUG: calculating shlib requirements for util-linux-locale-ca
+DEBUG: calculating shlib requirements for util-linux-locale-cs
+DEBUG: calculating shlib requirements for util-linux-locale-da
+DEBUG: calculating shlib requirements for util-linux-locale-de
+DEBUG: calculating shlib requirements for util-linux-locale-es
+DEBUG: calculating shlib requirements for util-linux-locale-et
+DEBUG: calculating shlib requirements for util-linux-locale-eu
+DEBUG: calculating shlib requirements for util-linux-locale-fi
+DEBUG: calculating shlib requirements for util-linux-locale-fr
+DEBUG: calculating shlib requirements for util-linux-locale-gl
+DEBUG: calculating shlib requirements for util-linux-locale-hr
+DEBUG: calculating shlib requirements for util-linux-locale-hu
+DEBUG: calculating shlib requirements for util-linux-locale-id
+DEBUG: calculating shlib requirements for util-linux-locale-it
+DEBUG: calculating shlib requirements for util-linux-locale-ja
+DEBUG: calculating shlib requirements for util-linux-locale-nl
+DEBUG: calculating shlib requirements for util-linux-locale-pl
+DEBUG: calculating shlib requirements for util-linux-locale-pt
+DEBUG: calculating shlib requirements for util-linux-locale-pt-br
+DEBUG: calculating shlib requirements for util-linux-locale-ru
+DEBUG: calculating shlib requirements for util-linux-locale-sl
+DEBUG: calculating shlib requirements for util-linux-locale-sv
+DEBUG: calculating shlib requirements for util-linux-locale-tr
+DEBUG: calculating shlib requirements for util-linux-locale-uk
+DEBUG: calculating shlib requirements for util-linux-locale-vi
+DEBUG: calculating shlib requirements for util-linux-locale-zh-cn
+DEBUG: calculating shlib requirements for util-linux-locale-zh-tw
+DEBUG: Python function package_do_shlibs finished
+DEBUG: Executing python function package_do_pkgconfig
+DEBUG: Python function package_do_pkgconfig finished
+DEBUG: Executing python function read_shlibdeps
+DEBUG: Python function read_shlibdeps finished
+DEBUG: Executing python function package_depchains
+DEBUG: Python function package_depchains finished
+DEBUG: Executing python function emit_pkgdata
+DEBUG: Python function emit_pkgdata finished
+DEBUG: Python function do_package finished
+DEBUG: Executing python function sstate_task_postfunc
+NOTE: Using umask 0o002 (not 22) for sstate packaging
+DEBUG: Executing python function target_add_sysroot_deps
+DEBUG: Python function target_add_sysroot_deps finished
+DEBUG: Executing python function sstate_hardcode_path
+NOTE: Removing hardcoded paths from sstate package: 'find /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/sstate-build-package/ \( -name "*.la" -o -name "*-config" -o -name "*_config" -o -name "postinst-*" \) -type f | xargs grep -l -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/recipe-sysroot' -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/recipe-sysroot-native' -e '/home/matt/tmp/build/obmc-y2038/tmp/hosttools' | tee /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/sstate-build-package/fixmepath | xargs --no-run-if-empty sed -i -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/recipe-sysroot-native:FIXMESTAGINGDIRHOST:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/recipe-sysroot:FIXMESTAGINGDIRTARGET:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:FIXME_HOSTTOOLS_DIR:g''
+DEBUG: Python function sstate_hardcode_path finished
+DEBUG: Executing python function sstate_report_unihash
+DEBUG: Python function sstate_report_unihash finished
+DEBUG: Executing shell function sstate_create_package
+DEBUG: Shell function sstate_create_package finished
+DEBUG: Executing python function sstate_hardcode_path_unpack
+DEBUG: Python function sstate_hardcode_path_unpack finished
+DEBUG: Python function sstate_task_postfunc finished

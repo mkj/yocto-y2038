@@ -1,0 +1,284 @@
+DEBUG: Executing python function autotools_aclocals
+DEBUG: SITE files ['endian-little', 'bit-32', 'arm-common', 'arm-32', 'common-linux', 'common-glibc', 'arm-linux', 'arm-linux-gnueabi', 'common']
+DEBUG: Python function autotools_aclocals finished
+DEBUG: Executing shell function do_compile
+NOTE: make -j 1
+make  all-recursive
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/build'
+Making all in example
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/build/example'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/build/example'
+Making all in man
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/build/man'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/build/man'
+Making all in src
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/build/src'
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -no-pie -fno-PIE --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../../git/src -I..  -DSYSCONFDIR=\"/etc\" -DRUNSTATEDIR=\"/var/run\" -D_BSD_SOURCE -D_DEFAULT_SOURCE -D_GNU_SOURCE -D_XOPEN_SOURCE=600  -W -Wall -Wextra -std=c99 -Wno-unused-result -Wno-unused-parameter -fno-strict-aliasing -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/git=/usr/src/debug/sysklogd/2.4.4-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/git=/usr/src/debug/sysklogd/2.4.4-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/build=/usr/src/debug/sysklogd/2.4.4-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/build=/usr/src/debug/sysklogd/2.4.4-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o syslogd-syslogd.o `test -f 'syslogd.c' || echo '../../git/src/'`syslogd.c
+../../git/src/syslogd.c: In function 'kernel_cb':
+../../git/src/syslogd.c:641:54: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  641 |                 i = read(fd, line + len, MAXLINE - 1 - len);
+../../git/src/syslogd.c:671:23: warning: conversion to 'int' from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  671 |                 len = strlen(p);
+      |                       ^~~~~~
+../../git/src/syslogd.c:677:46: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  677 |                         memmove(line, p, len + 1);
+      |                                          ~~~~^~~
+../../git/src/syslogd.c: In function 'create_unix_socket':
+../../git/src/syslogd.c:744:26: warning: conversion to 'int' from 'mode_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  744 |         ai.ai_protocol = pe->pe_mode;
+      |                          ^~
+../../git/src/syslogd.c: In function 'parsemsg_remove_unsafe_characters':
+../../git/src/syslogd.c:897:40: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  897 |                                 *q++ = c ^ 0100;
+      |                                        ^
+../../git/src/syslogd.c:900:32: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  900 |                         *q++ = c;
+      |                                ^
+../../git/src/syslogd.c: In function 'printsys':
+../../git/src/syslogd.c:1377:49: warning: conversion to 'uint64_t' {aka 'long long unsigned int'} from 'time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+ 1377 |                                 now = boot_time + ustime / 1000000;
+      |                                                 ^
+../../git/src/syslogd.c:1377:39: warning: conversion from 'uint64_t' {aka 'long long unsigned int'} to 'time_t' {aka 'long int'} may change value [-Wconversion]
+ 1377 |                                 now = boot_time + ustime / 1000000;
+      |                                       ^~~~~~~~~
+../../git/src/syslogd.c:1387:42: warning: conversion to 'uint64_t' {aka 'long long unsigned int'} from 'long int' may change the sign of the result [-Wsign-conversion]
+ 1387 |                                 ustime = tv.tv_usec * 1000000;
+      |                                          ^~
+../../git/src/syslogd.c:1391:49: warning: conversion from 'uint64_t' {aka 'long long unsigned int'} to 'suseconds_t' {aka 'long int'} may change value [-Wconversion]
+ 1391 |                         buffer.timestamp.usec = ustime % 1000000;
+      |                                                 ^~~~~~
+../../git/src/syslogd.c:1437:32: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+ 1437 |                         *q++ = c;
+      |                                ^
+../../git/src/syslogd.c: In function 'logmsg':
+../../git/src/syslogd.c:1529:29: warning: conversion from 'int' to 'short int' may change value [-Wconversion]
+ 1529 |                 f->f_file = open(ctty, O_WRONLY | O_NOCTTY);
+      |                             ^~~~
+../../git/src/syslogd.c:1548:20: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 1548 |         savedlen = snprintf(saved, sizeof(saved),
+      |                    ^~~~~~~~
+../../git/src/syslogd.c: In function 'rotate_file':
+../../git/src/syslogd.c:1633:28: warning: conversion to 'int' from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+ 1633 |                 int  len = strlen(f->f_un.f_fname) + 10 + 5;
+      |                            ^~~~~~
+../../git/src/syslogd.c:1640:43: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 1640 |                         snprintf(oldFile, len, "%s.%d.gz", f->f_un.f_fname, i - 1);
+      |                                           ^~~
+../../git/src/syslogd.c:1641:43: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 1641 |                         snprintf(newFile, len, "%s.%d.gz", f->f_un.f_fname, i);
+      |                                           ^~~
+../../git/src/syslogd.c:1649:43: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 1649 |                         snprintf(oldFile, len, "%s.%d", f->f_un.f_fname, i - 1);
+      |                                           ^~~
+../../git/src/syslogd.c:1650:43: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 1650 |                         snprintf(newFile, len, "%s.%d", f->f_un.f_fname, i);
+      |                                           ^~~
+../../git/src/syslogd.c:1662:35: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 1662 |                 snprintf(newFile, len, "%s.0", f->f_un.f_fname);
+      |                                   ^~~
+../../git/src/syslogd.c:1674:29: warning: conversion from 'int' to 'short int' may change value [-Wconversion]
+ 1674 |                 f->f_file = open(f->f_un.f_fname, O_CREATE | O_NONBLOCK | O_NOCTTY,
+      |                             ^~~~
+../../git/src/syslogd.c: In function 'fprintlog_write':
+../../git/src/syslogd.c:1752:34: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 1752 |                 msg.msg_iovlen = iovcnt;
+      |                                  ^~~~~~
+../../git/src/syslogd.c:1756:29: warning: conversion to 'size_t' {aka 'unsigned int'} from 'ssize_t' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+ 1756 |                         len += iov[i].iov_len;
+      |                             ^~
+../../git/src/syslogd.c:1756:32: warning: conversion to 'ssize_t' {aka 'int'} from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+ 1756 |                         len += iov[i].iov_len;
+      |                                ^~~
+../../git/src/syslogd.c:1871:45: warning: conversion from 'int' to 'short int' may change value [-Wconversion]
+ 1871 |                                 f->f_file = open(f->f_un.f_fname, O_WRONLY | O_APPEND | O_NOCTTY);
+      |                                             ^~~~
+../../git/src/syslogd.c: In function 'fmt5424':
+../../git/src/syslogd.c:1973:38: warning: conversion from 'long int' to 'char' may change value [-Wconversion]
+ 1973 |                 buffer->timebuf[j] = usec % 10 + '0';
+      |                                      ^~~~
+../../git/src/syslogd.c: In function 'wallmsg':
+../../git/src/syslogd.c:2093:23: warning: conversion to 'int' from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+ 2093 |                 len = strlen(greetings);
+      |                       ^~~~~~
+../../git/src/syslogd.c:2127:50: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 2127 |                                 iov[1].iov_len = len;
+      |                                                  ^~~
+../../git/src/syslogd.c: In function 'cvtaddr':
+../../git/src/syslogd.c:2174:47: warning: conversion to 'socklen_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 2174 |         if (getnameinfo((struct sockaddr *)f, len,
+      |                                               ^~~
+../../git/src/syslogd.c: In function 'cvthname':
+../../git/src/syslogd.c:2216:30: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+ 2216 |                         *p = tolower(*p);
+      |                              ^~~~~~~
+../../git/src/syslogd.c: In function 'waitdaemon':
+../../git/src/syslogd.c:2438:31: warning: signed conversion from 'unsigned int' to 'int' changes value from '2147483648' to '-2147483648' [-Wsign-conversion]
+ 2438 |                 sa.sa_flags = SA_RESETHAND;
+      |                               ^~~~~~~~~~~~
+../../git/src/syslogd.c:2444:23: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 2444 |                 alarm(maxwait);
+      |                       ^~~~~~~
+../../git/src/syslogd.c: In function 'timedout':
+../../git/src/syslogd.c:2487:16: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+ 2487 |         left = alarm(0);
+      |                ^~~~~
+../../git/src/syslogd.c: In function 'init':
+../../git/src/syslogd.c:2614:30: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+ 2614 |                         *p = tolower(*p);
+      |                              ^~~~~~~
+../../git/src/syslogd.c: In function 'cfline':
+../../git/src/syslogd.c:2875:74: warning: conversion from 'int' to 'u_char' {aka 'unsigned char'} may change value [-Wconversion]
+ 2875 |                                                         f->f_pmask[i] &= ~(1 << pri);
+      |                                                                          ^
+../../git/src/syslogd.c:2887:90: warning: conversion from 'int' to 'u_char' {aka 'unsigned char'} may change value [-Wconversion]
+ 2887 |                                                                         f->f_pmask[i] &= ~(1 << i2);
+      |                                                                                          ^
+../../git/src/syslogd.c:2910:71: warning: conversion from 'int' to 'u_char' {aka 'unsigned char'} may change value [-Wconversion]
+ 2910 |                                                 f->f_pmask[i >> 3] &= ~(1 << pri);
+      |                                                                       ^
+../../git/src/syslogd.c:2922:87: warning: conversion from 'int' to 'u_char' {aka 'unsigned char'} may change value [-Wconversion]
+ 2922 |                                                                 f->f_pmask[i >> 3] &= ~(1 << i2);
+      |                                                                                       ^
+../../git/src/syslogd.c:2972:37: warning: conversion from 'int' to 'short int' may change value [-Wconversion]
+ 2972 |                         f->f_file = open(++p, O_RDWR | O_NONBLOCK | O_NOCTTY);
+      |                                     ^~~~
+../../git/src/syslogd.c:2975:37: warning: conversion from 'int' to 'short int' may change value [-Wconversion]
+ 2975 |                         f->f_file = open(p, O_CREATE | O_NONBLOCK | O_NOCTTY, 0644);
+      |                                     ^~~~
+../../git/src/syslogd.c: In function 'cfparse':
+../../git/src/syslogd.c:3103:42: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 3103 |         while (fgets(cline, sizeof(cbuf) - (cline - cbuf), fp) != NULL) {
+      |                                          ^
+../../git/src/syslogd.c:3103:42: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+ 3103 |         while (fgets(cline, sizeof(cbuf) - (cline - cbuf), fp) != NULL) {
+      |                             ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+../../git/src/syslogd.c: In function 'decode':
+../../git/src/syslogd.c:3209:30: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+ 3209 |                         *p = tolower(*p);
+      |                              ^~~~~~~
+In file included from /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot/usr/include/arpa/inet.h:22,
+                 from ../../git/src/syslogd.c:85:
+../../git/src/syslogd.c: In function 'allowaddr':
+../../git/src/syslogd.c:3259:44: warning: conversion from 'int' to '__uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+ 3259 |                         ap->port = ntohs(se->s_port);
+      |                                          ~~^~~~~~~~
+../../git/src/syslogd.c:3261:36: warning: conversion from 'long int' to 'u_short' {aka 'short unsigned int'} may change value [-Wconversion]
+ 3261 |                         ap->port = strtol(cp1, &cp2, 0);
+      |                                    ^~~~~~
+../../git/src/syslogd.c:3268:44: warning: conversion from 'int' to '__uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+ 3268 |                         ap->port = ntohs(se->s_port);
+      |                                          ~~^~~~~~~~
+../../git/src/syslogd.c:3302:38: warning: conversion from 'int' to 'short unsigned int' may change value [-Wconversion]
+ 3302 |                         .ss_family = res->ai_family,
+      |                                      ^~~
+../../git/src/syslogd.c:3323:48: warning: conversion to '__uint32_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 3323 |                                 *maskp = htonl(~((1 << (32 - masklen)) - 1));
+      |                                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../git/src/syslogd.c: In function 'validate':
+../../git/src/syslogd.c:3454:17: warning: conversion from 'int' to 'u_short' {aka 'short unsigned int'} may change value [-Wconversion]
+ 3454 |         sport = atoi(port);
+      |                 ^~~~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -no-pie -fno-PIE --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../../git/src -I..  -DSYSCONFDIR=\"/etc\" -DRUNSTATEDIR=\"/var/run\" -D_BSD_SOURCE -D_DEFAULT_SOURCE -D_GNU_SOURCE -D_XOPEN_SOURCE=600  -W -Wall -Wextra -std=c99 -Wno-unused-result -Wno-unused-parameter -fno-strict-aliasing -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/git=/usr/src/debug/sysklogd/2.4.4-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/git=/usr/src/debug/sysklogd/2.4.4-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/build=/usr/src/debug/sysklogd/2.4.4-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/build=/usr/src/debug/sysklogd/2.4.4-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o syslogd-socket.o `test -f 'socket.c' || echo '../../git/src/'`socket.c
+../../git/src/socket.c: In function 'socket_create':
+../../git/src/socket.c:150:23: warning: conversion to 'mode_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  150 |         mode_t mode = ai->ai_protocol;
+      |                       ^~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -no-pie -fno-PIE --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../../git/src -I..  -DSYSCONFDIR=\"/etc\" -DRUNSTATEDIR=\"/var/run\" -D_BSD_SOURCE -D_DEFAULT_SOURCE -D_GNU_SOURCE -D_XOPEN_SOURCE=600  -W -Wall -Wextra -std=c99 -Wno-unused-result -Wno-unused-parameter -fno-strict-aliasing -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/git=/usr/src/debug/sysklogd/2.4.4-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/git=/usr/src/debug/sysklogd/2.4.4-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/build=/usr/src/debug/sysklogd/2.4.4-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/build=/usr/src/debug/sysklogd/2.4.4-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o syslogd-timer.o `test -f 'timer.c' || echo '../../git/src/'`timer.c
+../../git/src/timer.c: In function '__timer_start':
+../../git/src/timer.c:109:22: warning: conversion to 'unsigned int' from 'time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+  109 |         return alarm(sec);
+      |                      ^~~
+../../git/src/timer.c:109:16: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  109 |         return alarm(sec);
+      |                ^~~~~~~~~~
+/bin/bash ../libtool  --tag=CC   --mode=compile arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -no-pie -fno-PIE --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../../git/src -I..  -DSYSCONFDIR=\"/etc\" -DRUNSTATEDIR=\"/var/run\" -D_BSD_SOURCE -D_DEFAULT_SOURCE -D_GNU_SOURCE -D_XOPEN_SOURCE=600  -W -Wall -Wextra -std=c99 -Wno-unused-result -Wno-unused-parameter -fno-strict-aliasing -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/git=/usr/src/debug/sysklogd/2.4.4-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/git=/usr/src/debug/sysklogd/2.4.4-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/build=/usr/src/debug/sysklogd/2.4.4-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/build=/usr/src/debug/sysklogd/2.4.4-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o libsyslog_la-syslog.lo `test -f 'syslog.c' || echo '../../git/src/'`syslog.c
+libtool: compile:  arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -no-pie -fno-PIE --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../../git/src -I.. -DSYSCONFDIR=\"/etc\" -DRUNSTATEDIR=\"/var/run\" -D_BSD_SOURCE -D_DEFAULT_SOURCE -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -W -Wall -Wextra -std=c99 -Wno-unused-result -Wno-unused-parameter -fno-strict-aliasing -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/git=/usr/src/debug/sysklogd/2.4.4-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/git=/usr/src/debug/sysklogd/2.4.4-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/build=/usr/src/debug/sysklogd/2.4.4-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/build=/usr/src/debug/sysklogd/2.4.4-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot-native= -Wconversion -Wno-error -c ../../git/src/syslog.c  -fPIC -DPIC -o .libs/libsyslog_la-syslog.o
+../../git/src/syslog.c: In function 'vsyslogp_r':
+../../git/src/syslog.c:273:33: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  273 |                         prlen = snprintf(p, tbuf_left, "<%d>", pri);
+      |                                 ^~~~~~~~
+../../git/src/syslog.c:296:25: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  296 |                 prlen = snprintf(p, tbuf_left, "%s ", data->log_hostname);
+      |                         ^~~~~~~~
+../../git/src/syslog.c:316:33: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  316 |                         prlen = snprintf(p, tbuf_left, "%s[%d]: ", tag, data->log_pid);
+      |                                 ^~~~~~~~
+../../git/src/syslog.c:318:33: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  318 |                         prlen = snprintf(p, tbuf_left, "%s: ", tag);
+      |                                 ^~~~~~~~
+../../git/src/syslog.c:331:25: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  331 |                 prlen = snprintf(p, tbuf_left, "<%d>1 ", pri);
+      |                         ^~~~~~~~
+../../git/src/syslog.c:339:25: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  339 |                 prlen = snprintf(p, tbuf_left, ".%06ld", (long)tv.tv_usec);
+      |                         ^~~~~~~~
+../../git/src/syslog.c:370:17: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  370 |         prlen = snprintf(p, tbuf_left, " %s ", data->log_hostname);
+      |                 ^~~~~~~~
+../../git/src/syslog.c:376:17: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  376 |         prlen = snprintf(p, tbuf_left, "%s ",
+      |                 ^~~~~~~~
+../../git/src/syslog.c:392:25: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  392 |                 prlen = snprintf(p, tbuf_left, "%d ", data->log_pid);
+      |                         ^~~~~~~~
+../../git/src/syslog.c:405:25: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  405 |                 prlen = snprintf(p, tbuf_left, "- ");
+      |                         ^~~~~~~~
+../../git/src/syslog.c:448:41: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  448 |                                 prlen = snprintf(t, fmt_left, "Error %d",
+      |                                         ^~~~~~~~
+../../git/src/syslog.c:471:17: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  471 |         prlen = vsnprintf(p, tbuf_left, fmt_cpy, ap);
+      |                 ^~~~~~~~~
+../../git/src/syslog.c:479:15: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  479 |         cnt = p - tbuf;
+      |               ^
+/bin/bash ../libtool  --tag=CC   --mode=compile arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -no-pie -fno-PIE --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../../git/src -I..  -DSYSCONFDIR=\"/etc\" -DRUNSTATEDIR=\"/var/run\" -D_BSD_SOURCE -D_DEFAULT_SOURCE -D_GNU_SOURCE  -W -Wall -Wextra -std=c99 -Wno-unused-result -Wno-unused-parameter -fno-strict-aliasing -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/git=/usr/src/debug/sysklogd/2.4.4-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/git=/usr/src/debug/sysklogd/2.4.4-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/build=/usr/src/debug/sysklogd/2.4.4-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/build=/usr/src/debug/sysklogd/2.4.4-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o ../lib/pidfile.lo ../../git/src/../lib/pidfile.c
+libtool: compile:  arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -no-pie -fno-PIE --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../../git/src -I.. -DSYSCONFDIR=\"/etc\" -DRUNSTATEDIR=\"/var/run\" -D_BSD_SOURCE -D_DEFAULT_SOURCE -D_GNU_SOURCE -W -Wall -Wextra -std=c99 -Wno-unused-result -Wno-unused-parameter -fno-strict-aliasing -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/git=/usr/src/debug/sysklogd/2.4.4-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/git=/usr/src/debug/sysklogd/2.4.4-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/build=/usr/src/debug/sysklogd/2.4.4-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/build=/usr/src/debug/sysklogd/2.4.4-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot-native= -Wconversion -Wno-error -c ../../git/src/../lib/pidfile.c  -fPIC -DPIC -o ../lib/.libs/pidfile.o
+/bin/bash ../libtool  --tag=CC   --mode=compile arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -no-pie -fno-PIE --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../../git/src -I..  -DSYSCONFDIR=\"/etc\" -DRUNSTATEDIR=\"/var/run\" -D_BSD_SOURCE -D_DEFAULT_SOURCE -D_GNU_SOURCE  -W -Wall -Wextra -std=c99 -Wno-unused-result -Wno-unused-parameter -fno-strict-aliasing -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/git=/usr/src/debug/sysklogd/2.4.4-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/git=/usr/src/debug/sysklogd/2.4.4-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/build=/usr/src/debug/sysklogd/2.4.4-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/build=/usr/src/debug/sysklogd/2.4.4-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o ../lib/strlcpy.lo ../../git/src/../lib/strlcpy.c
+libtool: compile:  arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -no-pie -fno-PIE --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../../git/src -I.. -DSYSCONFDIR=\"/etc\" -DRUNSTATEDIR=\"/var/run\" -D_BSD_SOURCE -D_DEFAULT_SOURCE -D_GNU_SOURCE -W -Wall -Wextra -std=c99 -Wno-unused-result -Wno-unused-parameter -fno-strict-aliasing -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/git=/usr/src/debug/sysklogd/2.4.4-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/git=/usr/src/debug/sysklogd/2.4.4-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/build=/usr/src/debug/sysklogd/2.4.4-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/build=/usr/src/debug/sysklogd/2.4.4-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot-native= -Wconversion -Wno-error -c ../../git/src/../lib/strlcpy.c  -fPIC -DPIC -o ../lib/.libs/strlcpy.o
+../../git/src/../lib/strlcpy.c: In function '__strlcpy':
+../../git/src/../lib/strlcpy.c:49:27: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+   49 |         return(src - osrc - 1); /* count does not include NUL */
+      |               ~~~~~~~~~~~~^~~~
+/bin/bash ../libtool  --tag=CC   --mode=compile arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -no-pie -fno-PIE --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../../git/src -I..  -DSYSCONFDIR=\"/etc\" -DRUNSTATEDIR=\"/var/run\" -D_BSD_SOURCE -D_DEFAULT_SOURCE -D_GNU_SOURCE  -W -Wall -Wextra -std=c99 -Wno-unused-result -Wno-unused-parameter -fno-strict-aliasing -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/git=/usr/src/debug/sysklogd/2.4.4-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/git=/usr/src/debug/sysklogd/2.4.4-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/build=/usr/src/debug/sysklogd/2.4.4-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/build=/usr/src/debug/sysklogd/2.4.4-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o ../lib/strlcat.lo ../../git/src/../lib/strlcat.c
+libtool: compile:  arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -no-pie -fno-PIE --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../../git/src -I.. -DSYSCONFDIR=\"/etc\" -DRUNSTATEDIR=\"/var/run\" -D_BSD_SOURCE -D_DEFAULT_SOURCE -D_GNU_SOURCE -W -Wall -Wextra -std=c99 -Wno-unused-result -Wno-unused-parameter -fno-strict-aliasing -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/git=/usr/src/debug/sysklogd/2.4.4-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/git=/usr/src/debug/sysklogd/2.4.4-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/build=/usr/src/debug/sysklogd/2.4.4-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/build=/usr/src/debug/sysklogd/2.4.4-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot-native= -Wconversion -Wno-error -c ../../git/src/../lib/strlcat.c  -fPIC -DPIC -o ../lib/.libs/strlcat.o
+../../git/src/../lib/strlcat.c: In function '__strlcat':
+../../git/src/../lib/strlcat.c:40:16: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+   40 |         dlen = dst - odst;
+      |                ^~~
+../../git/src/../lib/strlcat.c:54:21: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+   54 |         return(dlen + (src - osrc));    /* count does not include NUL */
+      |                     ^
+/bin/bash ../libtool  --tag=CC   --mode=link arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -no-pie -fno-PIE --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot -W -Wall -Wextra -std=c99 -Wno-unused-result -Wno-unused-parameter -fno-strict-aliasing -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/git=/usr/src/debug/sysklogd/2.4.4-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/git=/usr/src/debug/sysklogd/2.4.4-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/build=/usr/src/debug/sysklogd/2.4.4-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/build=/usr/src/debug/sysklogd/2.4.4-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot-native=   -Wconversion -Wno-error  -version-info 1:0:1 -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/git=/usr/src/debug/sysklogd/2.4.4-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/git=/usr/src/debug/sysklogd/2.4.4-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/build=/usr/src/debug/sysklogd/2.4.4-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/build=/usr/src/debug/sysklogd/2.4.4-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot-native=   -o libsyslog.la -rpath /usr/lib libsyslog_la-syslog.lo ../lib/pidfile.lo ../lib/strlcpy.lo ../lib/strlcat.lo 
+libtool: link: arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -no-pie -fno-PIE --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot -shared  -fPIC -DPIC  .libs/libsyslog_la-syslog.o ../lib/.libs/pidfile.o ../lib/.libs/strlcpy.o ../lib/.libs/strlcat.o    -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot -O2 -g -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/git=/usr/src/debug/sysklogd/2.4.4-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/git=/usr/src/debug/sysklogd/2.4.4-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/build=/usr/src/debug/sysklogd/2.4.4-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/build=/usr/src/debug/sysklogd/2.4.4-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot-native= -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/git=/usr/src/debug/sysklogd/2.4.4-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/git=/usr/src/debug/sysklogd/2.4.4-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/build=/usr/src/debug/sysklogd/2.4.4-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/build=/usr/src/debug/sysklogd/2.4.4-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot-native=   -Wl,-soname -Wl,libsyslog.so.0 -o .libs/libsyslog.so.0.1.0
+libtool: link: (cd ".libs" && rm -f "libsyslog.so.0" && ln -s "libsyslog.so.0.1.0" "libsyslog.so.0")
+libtool: link: (cd ".libs" && rm -f "libsyslog.so" && ln -s "libsyslog.so.0.1.0" "libsyslog.so")
+libtool: link: ( cd ".libs" && rm -f "libsyslog.la" && ln -s "../libsyslog.la" "libsyslog.la" )
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -no-pie -fno-PIE --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../../git/src -I..  -DSYSCONFDIR=\"/etc\" -DRUNSTATEDIR=\"/var/run\" -D_BSD_SOURCE -D_DEFAULT_SOURCE -D_GNU_SOURCE  -W -Wall -Wextra -std=c99 -Wno-unused-result -Wno-unused-parameter -fno-strict-aliasing -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/git=/usr/src/debug/sysklogd/2.4.4-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/git=/usr/src/debug/sysklogd/2.4.4-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/build=/usr/src/debug/sysklogd/2.4.4-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/build=/usr/src/debug/sysklogd/2.4.4-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o ../lib/pidfile.o ../../git/src/../lib/pidfile.c
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -no-pie -fno-PIE --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../../git/src -I..  -DSYSCONFDIR=\"/etc\" -DRUNSTATEDIR=\"/var/run\" -D_BSD_SOURCE -D_DEFAULT_SOURCE -D_GNU_SOURCE  -W -Wall -Wextra -std=c99 -Wno-unused-result -Wno-unused-parameter -fno-strict-aliasing -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/git=/usr/src/debug/sysklogd/2.4.4-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/git=/usr/src/debug/sysklogd/2.4.4-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/build=/usr/src/debug/sysklogd/2.4.4-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/build=/usr/src/debug/sysklogd/2.4.4-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o ../lib/strlcpy.o ../../git/src/../lib/strlcpy.c
+../../git/src/../lib/strlcpy.c: In function '__strlcpy':
+../../git/src/../lib/strlcpy.c:49:27: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+   49 |         return(src - osrc - 1); /* count does not include NUL */
+      |               ~~~~~~~~~~~~^~~~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -no-pie -fno-PIE --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../../git/src -I..  -DSYSCONFDIR=\"/etc\" -DRUNSTATEDIR=\"/var/run\" -D_BSD_SOURCE -D_DEFAULT_SOURCE -D_GNU_SOURCE  -W -Wall -Wextra -std=c99 -Wno-unused-result -Wno-unused-parameter -fno-strict-aliasing -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/git=/usr/src/debug/sysklogd/2.4.4-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/git=/usr/src/debug/sysklogd/2.4.4-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/build=/usr/src/debug/sysklogd/2.4.4-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/build=/usr/src/debug/sysklogd/2.4.4-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o ../lib/strlcat.o ../../git/src/../lib/strlcat.c
+../../git/src/../lib/strlcat.c: In function '__strlcat':
+../../git/src/../lib/strlcat.c:40:16: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+   40 |         dlen = dst - odst;
+      |                ^~~
+../../git/src/../lib/strlcat.c:54:21: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+   54 |         return(dlen + (src - osrc));    /* count does not include NUL */
+      |                     ^
+/bin/bash ../libtool  --tag=CC   --mode=link arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -no-pie -fno-PIE --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot -W -Wall -Wextra -std=c99 -Wno-unused-result -Wno-unused-parameter -fno-strict-aliasing -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/git=/usr/src/debug/sysklogd/2.4.4-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/git=/usr/src/debug/sysklogd/2.4.4-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/build=/usr/src/debug/sysklogd/2.4.4-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/build=/usr/src/debug/sysklogd/2.4.4-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot-native=   -Wconversion -Wno-error  -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/git=/usr/src/debug/sysklogd/2.4.4-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/git=/usr/src/debug/sysklogd/2.4.4-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/build=/usr/src/debug/sysklogd/2.4.4-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/build=/usr/src/debug/sysklogd/2.4.4-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot-native=   -o syslogd syslogd-syslogd.o syslogd-socket.o syslogd-timer.o  ../lib/pidfile.o ../lib/strlcpy.o ../lib/strlcat.o 
+libtool: link: arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -no-pie -fno-PIE --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot -W -Wall -Wextra -std=c99 -Wno-unused-result -Wno-unused-parameter -fno-strict-aliasing -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/git=/usr/src/debug/sysklogd/2.4.4-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/git=/usr/src/debug/sysklogd/2.4.4-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/build=/usr/src/debug/sysklogd/2.4.4-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/build=/usr/src/debug/sysklogd/2.4.4-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot-native= -Wconversion -Wno-error -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/git=/usr/src/debug/sysklogd/2.4.4-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/git=/usr/src/debug/sysklogd/2.4.4-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/build=/usr/src/debug/sysklogd/2.4.4-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/build=/usr/src/debug/sysklogd/2.4.4-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/recipe-sysroot-native= -o syslogd syslogd-syslogd.o syslogd-socket.o syslogd-timer.o ../lib/pidfile.o ../lib/strlcpy.o ../lib/strlcat.o 
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/build/src'
+Making all in test
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/build/test'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/build/test'
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/build'
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/build'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysklogd/2.4.4-r0/build'
+DEBUG: Shell function do_compile finished

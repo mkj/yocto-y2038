@@ -1,0 +1,132 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/systemd/systemd_251.4.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/zlib/zlib_1.2.13.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/opkg-utils/opkg-utils_0.5.0.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-kernel/kmod/kmod_30.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/dwarfsrcfiles/dwarfsrcfiles.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/make/make_4.3.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pkgconfig/pkgconfig_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/rpm/rpm_4.18.0.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-extended/xz/xz_5.2.7.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: ['dwarfsrcfiles-native', 'rpm-native', 'elfutils-native', 'lua-native', 'bzip2-native', 'python3-native', 'sqlite3-native', 'file-native', 'libgcrypt-native', 'popt-native', 'readline-native', 'libnsl2-native', 'libffi-native', 'ncurses-native', 'openssl-native', 'gdbm-native', 'util-linux-libuuid-native', 'libtirpc-native', 'libcap-native', 'libgpg-error-native', 'perl-native']
+NOTE: Skipping as already exists in sysroot: ['glibc', 'systemd', 'zlib', 'gcc-cross-arm', 'gcc-runtime', 'opkg-utils', 'quilt-native', 'kmod', 'make-native', 'patch-native', 'pkgconfig-native', 'pseudo-native', 'xz-native', 'libtool-native', 'texinfo-dummy-native', 'gettext-minimal-native', 'zstd-native', 'linux-libc-headers', 'attr-native', 'base-files', 'libseccomp', 'zstd', 'libpam', 'shadow-sysroot', 'bash-completion', 'shadow', 'shadow-native', 'base-passwd', 'libcap', 'util-linux', 'libgcc', 'xz', 'binutils-cross-arm', 'mpfr-native', 'flex-native', 'gmp-native', 'zlib-native', 'libmpc-native', 'gnu-config-native', 'cracklib', 'libxcrypt', 'flex', 'util-linux-libuuid', 'ncurses', 'libcap-ng', 'm4-native']
+DEBUG: sed -e 's:^[^/]*/:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot-native/:g' /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/rpm-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/elfutils-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/lua-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/python3-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/libgcrypt-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/ncurses-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/openssl-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/libgpg-error-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/perl-native/fixmepath | xargs sed -i -e 's:FIXMESTAGINGDIRTARGET:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot:g; s:FIXMESTAGINGDIRHOST:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot-native:g' -e 's:FIXME_PSEUDO_SYSROOT:/home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/pseudo-native:g' -e 's:FIXME_HOSTTOOLS_DIR:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:g' -e 's:FIXME_PKGDATA_DIR:/home/matt/tmp/build/obmc-y2038/tmp/pkgdata/evb-ast2600:g' -e 's:FIXME_PSEUDO_LOCALSTATEDIR:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pseudo/:g' -e 's:FIXME_LOGFIFO:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/temp/fifo.732069:g'
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function sstate_task_prefunc
+DEBUG: Python function sstate_task_prefunc finished
+DEBUG: Executing python function do_package
+DEBUG: Executing python function package_convert_pr_autoinc
+DEBUG: Python function package_convert_pr_autoinc finished
+DEBUG: Executing python function package_prepare_pkgdata
+NOTE: Installed into pkgdata-sysroot: ['systemd', 'glibc', 'kmod', 'zlib', 'opkg-utils', 'gcc-runtime', 'libpam', 'base-passwd', 'bash-completion', 'shadow', 'base-files', 'zstd', 'libseccomp', 'util-linux', 'libcap', 'linux-libc-headers', 'xz', 'libgcc', 'flex', 'cracklib', 'libxcrypt', 'util-linux-libuuid', 'ncurses', 'libcap-ng']
+DEBUG: Python function package_prepare_pkgdata finished
+DEBUG: Executing python function perform_packagecopy
+DEBUG: Python function perform_packagecopy finished
+DEBUG: Executing python function apply_update_alternative_renames
+NOTE: pciutils: Rename /usr/bin/lspci -> /usr/bin/lspci.pciutils
+DEBUG: Python function apply_update_alternative_renames finished
+DEBUG: Executing python function split_and_strip_files
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/package/usr/sbin/setpci']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/package/usr/lib/libpci.so.3.8.0']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/package/usr/bin/lspci.pciutils']
+DEBUG: Python function split_and_strip_files finished
+DEBUG: Executing python function fixup_perms
+DEBUG: Python function fixup_perms finished
+DEBUG: Executing python function populate_packages_updatealternatives
+NOTE: adding update-alternatives calls to postinst/prerm for pciutils
+NOTE: 	update-alternatives --install /usr/bin/lspci lspci /usr/bin/lspci.pciutils 100
+
+NOTE: 	update-alternatives --remove  lspci /usr/bin/lspci.pciutils
+
+DEBUG: Python function populate_packages_updatealternatives finished
+DEBUG: Executing python function package_do_split_locales
+DEBUG: No locale files in this package
+DEBUG: Python function package_do_split_locales finished
+DEBUG: Executing python function populate_packages
+DEBUG: Python function populate_packages finished
+DEBUG: Executing python function package_fixsymlinks
+DEBUG: pciutils-dev contains dangling link /usr/lib/libpci.so.3
+DEBUG: target found in libpci
+DEBUG: Python function package_fixsymlinks finished
+DEBUG: Executing python function package_name_hook
+DEBUG: Executing python function debian_package_name_hook
+DEBUG: LIBNAMES: pkg pciutils-staticdev libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg pciutils-src libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg pciutils-locale libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg pciutils-ids libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg pciutils-doc libs 0 bins 0 sonames []
+arm-openbmc-linux-gnueabi-objdump: '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/packages-split/pciutils-dev/usr/lib/libpci.so': No such file
+DEBUG: LIBNAMES: pkg pciutils-dev libs 1 bins 0 sonames []
+DEBUG: LIBNAMES: pkg pciutils-dbg libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg pciutils libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg libpci libs 1 bins 0 sonames ['libpci.so.3']
+NOTE: debian: renaming libpci to libpci3
+DEBUG: Python function debian_package_name_hook finished
+DEBUG: Python function package_name_hook finished
+DEBUG: Executing python function package_do_filedeps
+DEBUG: Python function package_do_filedeps finished
+DEBUG: Executing python function package_do_shlibs
+DEBUG: Reading shlib providers in /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pkgdata-sysroot/shlibs2
+DEBUG: calculating shlib provides for pciutils-src
+DEBUG: LIBNAMES: pkg pciutils-src sonames set()
+DEBUG: calculating shlib provides for pciutils-dbg
+DEBUG: LIBNAMES: pkg pciutils-dbg sonames set()
+DEBUG: calculating shlib provides for pciutils-ids
+DEBUG: LIBNAMES: pkg pciutils-ids sonames set()
+DEBUG: calculating shlib provides for libpci
+DEBUG: registering libpci-3.8.0 as shlib provider for libpci.so.3
+DEBUG: adding ldconfig call to postinst for libpci
+DEBUG: LIBNAMES: pkg libpci sonames {('libpci.so.3', '/usr/lib', '3.8.0')}
+DEBUG: calculating shlib provides for pciutils-staticdev
+DEBUG: LIBNAMES: pkg pciutils-staticdev sonames set()
+DEBUG: calculating shlib provides for pciutils-dev
+DEBUG: LIBNAMES: pkg pciutils-dev sonames set()
+DEBUG: calculating shlib provides for pciutils-doc
+DEBUG: LIBNAMES: pkg pciutils-doc sonames set()
+DEBUG: calculating shlib provides for pciutils-locale
+DEBUG: LIBNAMES: pkg pciutils-locale sonames set()
+DEBUG: calculating shlib provides for pciutils
+DEBUG: LIBNAMES: pkg pciutils sonames set()
+DEBUG: calculating shlib requirements for pciutils-src
+DEBUG: calculating shlib requirements for pciutils-dbg
+DEBUG: calculating shlib requirements for pciutils-ids
+DEBUG: calculating shlib requirements for libpci
+DEBUG: libpci: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/packages-split/libpci/usr/lib/libpci.so.3.8.0)
+DEBUG: libpci: Dependency libz.so.1 requires package zlib (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/packages-split/libpci/usr/lib/libpci.so.3.8.0)
+DEBUG: libpci: Dependency libudev.so.1 requires package libudev (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/packages-split/libpci/usr/lib/libpci.so.3.8.0)
+DEBUG: libpci: Dependency libresolv.so.2 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/packages-split/libpci/usr/lib/libpci.so.3.8.0)
+DEBUG: libpci: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/packages-split/libpci/usr/lib/libpci.so.3.8.0)
+DEBUG: calculating shlib requirements for pciutils-staticdev
+DEBUG: calculating shlib requirements for pciutils-dev
+DEBUG: calculating shlib requirements for pciutils-doc
+DEBUG: calculating shlib requirements for pciutils-locale
+DEBUG: calculating shlib requirements for pciutils
+DEBUG: pciutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/packages-split/pciutils/usr/bin/lspci.pciutils)
+DEBUG: pciutils: Dependency libpci.so.3 requires package libpci (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/packages-split/pciutils/usr/sbin/setpci)
+DEBUG: pciutils: Dependency libresolv.so.2 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/packages-split/pciutils/usr/sbin/setpci)
+DEBUG: pciutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/packages-split/pciutils/usr/sbin/setpci)
+DEBUG: pciutils: Dependency libz.so.1 requires package zlib (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/packages-split/pciutils/usr/sbin/setpci)
+DEBUG: pciutils: Dependency libpci.so.3 requires package libpci (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/packages-split/pciutils/usr/bin/lspci.pciutils)
+DEBUG: pciutils: Dependency libudev.so.1 requires package libudev (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/packages-split/pciutils/usr/sbin/setpci)
+DEBUG: pciutils: Dependency libz.so.1 requires package zlib (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/packages-split/pciutils/usr/bin/lspci.pciutils)
+DEBUG: pciutils: Dependency libudev.so.1 requires package libudev (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/packages-split/pciutils/usr/bin/lspci.pciutils)
+DEBUG: pciutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/packages-split/pciutils/usr/sbin/setpci)
+DEBUG: pciutils: Dependency libkmod.so.2 requires package libkmod (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/packages-split/pciutils/usr/bin/lspci.pciutils)
+DEBUG: pciutils: Dependency libresolv.so.2 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/packages-split/pciutils/usr/bin/lspci.pciutils)
+DEBUG: pciutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/packages-split/pciutils/usr/bin/lspci.pciutils)
+DEBUG: Python function package_do_shlibs finished
+DEBUG: Executing python function package_do_pkgconfig
+DEBUG: Python function package_do_pkgconfig finished
+DEBUG: Executing python function read_shlibdeps
+DEBUG: Python function read_shlibdeps finished
+DEBUG: Executing python function package_depchains
+DEBUG: Python function package_depchains finished
+DEBUG: Executing python function emit_pkgdata
+DEBUG: Python function emit_pkgdata finished
+DEBUG: Python function do_package finished
+DEBUG: Executing python function sstate_task_postfunc
+NOTE: Using umask 0o002 (not 22) for sstate packaging
+DEBUG: Executing python function target_add_sysroot_deps
+DEBUG: Python function target_add_sysroot_deps finished
+DEBUG: Executing python function sstate_hardcode_path
+NOTE: Removing hardcoded paths from sstate package: 'find /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/sstate-build-package/ \( -name "*.la" -o -name "*-config" -o -name "*_config" -o -name "postinst-*" \) -type f | xargs grep -l -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot' -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot-native' -e '/home/matt/tmp/build/obmc-y2038/tmp/hosttools' | tee /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/sstate-build-package/fixmepath | xargs --no-run-if-empty sed -i -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot-native:FIXMESTAGINGDIRHOST:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot:FIXMESTAGINGDIRTARGET:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:FIXME_HOSTTOOLS_DIR:g''
+DEBUG: Python function sstate_hardcode_path finished
+DEBUG: Executing python function sstate_report_unihash
+DEBUG: Python function sstate_report_unihash finished
+DEBUG: Executing shell function sstate_create_package
+DEBUG: Shell function sstate_create_package finished
+DEBUG: Executing python function sstate_hardcode_path_unpack
+DEBUG: Python function sstate_hardcode_path_unpack finished
+DEBUG: Python function sstate_task_postfunc finished

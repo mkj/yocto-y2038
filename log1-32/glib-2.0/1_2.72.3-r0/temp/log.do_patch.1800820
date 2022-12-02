@@ -1,0 +1,359 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-extended/xz/xz_5.2.7.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: ['quilt-native', 'patch-native', 'attr-native']
+NOTE: Skipping as already exists in sysroot: ['xz-native', 'libtool-native', 'gettext-minimal-native', 'texinfo-dummy-native']
+DEBUG: sed -e 's:^[^/]*/:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/recipe-sysroot-native/:g' /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/quilt-native/fixmepath | xargs sed -i -e 's:FIXMESTAGINGDIRTARGET:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/recipe-sysroot:g; s:FIXMESTAGINGDIRHOST:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/recipe-sysroot-native:g' -e 's:FIXME_PSEUDO_SYSROOT:/home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/pseudo-native:g' -e 's:FIXME_HOSTTOOLS_DIR:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:g' -e 's:FIXME_PKGDATA_DIR:/home/matt/tmp/build/obmc-y2038/tmp/pkgdata/evb-ast2600:g' -e 's:FIXME_PSEUDO_LOCALSTATEDIR:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/pseudo/:g' -e 's:FIXME_LOGFIFO:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/temp/fifo.1800820:g'
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function do_patch
+DEBUG: Executing python function patch_do_patch
+DEBUG: Searching for run-ptest in paths:
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/arm
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/arm
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/arm
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/
+DEBUG: Searching for 0001-Fix-DATADIRNAME-on-uclibc-Linux.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/arm
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/arm
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/arm
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/
+DEBUG: Searching for Enable-more-tests-while-cross-compiling.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/arm
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/arm
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/arm
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/
+DEBUG: Searching for 0001-Remove-the-warning-about-deprecated-paths-in-schemas.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/arm
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/arm
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/arm
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/
+DEBUG: Searching for 0001-Install-gio-querymodules-as-libexec_PROGRAM.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/arm
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/arm
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/arm
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/
+DEBUG: Searching for 0001-Do-not-ignore-return-value-of-write.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/arm
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/arm
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/arm
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/
+DEBUG: Searching for 0010-Do-not-hardcode-python-path-into-various-tools.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/arm
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/arm
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/arm
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/
+DEBUG: Searching for 0001-Set-host_machine-correctly-when-building-with-mingw3.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/arm
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/arm
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/arm
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/
+DEBUG: Searching for 0001-Do-not-write-bindir-into-pkg-config-files.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/arm
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/arm
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/arm
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/
+DEBUG: Searching for 0001-meson-Run-atomics-test-on-clang-as-well.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/arm
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/arm
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/arm
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/
+DEBUG: Searching for 0001-gio-tests-resources.c-comment-out-a-build-host-only-.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/arm
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/arm
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/arm
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/
+DEBUG: Searching for 0001-gio-tests-g-file-info-don-t-assume-million-in-one-ev.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/arm
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/arm
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/arm
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0-2.72.3/
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/
+    /home/matt/src/openbmc/meta/recipes-core/glib-2.0/files/
+NOTE: Applying patch '0001-Fix-DATADIRNAME-on-uclibc-Linux.patch' (../../../src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/0001-Fix-DATADIRNAME-on-uclibc-Linux.patch)
+NOTE: Applying patch 'Enable-more-tests-while-cross-compiling.patch' (../../../src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/Enable-more-tests-while-cross-compiling.patch)
+NOTE: Applying patch '0001-Remove-the-warning-about-deprecated-paths-in-schemas.patch' (../../../src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/0001-Remove-the-warning-about-deprecated-paths-in-schemas.patch)
+NOTE: Applying patch '0001-Install-gio-querymodules-as-libexec_PROGRAM.patch' (../../../src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/0001-Install-gio-querymodules-as-libexec_PROGRAM.patch)
+NOTE: Applying patch '0001-Do-not-ignore-return-value-of-write.patch' (../../../src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/0001-Do-not-ignore-return-value-of-write.patch)
+NOTE: Applying patch '0010-Do-not-hardcode-python-path-into-various-tools.patch' (../../../src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/0010-Do-not-hardcode-python-path-into-various-tools.patch)
+NOTE: Applying patch '0001-Set-host_machine-correctly-when-building-with-mingw3.patch' (../../../src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/0001-Set-host_machine-correctly-when-building-with-mingw3.patch)
+NOTE: Applying patch '0001-Do-not-write-bindir-into-pkg-config-files.patch' (../../../src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/0001-Do-not-write-bindir-into-pkg-config-files.patch)
+NOTE: Applying patch '0001-meson-Run-atomics-test-on-clang-as-well.patch' (../../../src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/0001-meson-Run-atomics-test-on-clang-as-well.patch)
+NOTE: Applying patch '0001-gio-tests-resources.c-comment-out-a-build-host-only-.patch' (../../../src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/0001-gio-tests-resources.c-comment-out-a-build-host-only-.patch)
+NOTE: Applying patch '0001-gio-tests-g-file-info-don-t-assume-million-in-one-ev.patch' (../../../src/openbmc/meta/recipes-core/glib-2.0/glib-2.0/0001-gio-tests-g-file-info-don-t-assume-million-in-one-ev.patch)
+DEBUG: Python function patch_do_patch finished
+DEBUG: Python function do_patch finished
+DEBUG: Executing python function do_qa_patch
+DEBUG: Python function do_qa_patch finished

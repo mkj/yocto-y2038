@@ -1,0 +1,83 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-cross_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-native_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/autoconf/autoconf_2.71.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/automake/automake_1.16.5.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: []
+NOTE: Skipping as already exists in sysroot: ['glibc', 'gcc-cross-arm', 'gcc-runtime', 'libtool-cross', 'libtool-native', 'quilt-native', 'autoconf-native', 'automake-native', 'patch-native', 'pseudo-native', 'texinfo-dummy-native', 'linux-libc-headers', 'libgcc', 'flex-native', 'xz-native', 'zlib-native', 'zstd-native', 'binutils-cross-arm', 'mpfr-native', 'gnu-config-native', 'libmpc-native', 'gmp-native', 'm4-native', 'attr-native', 'gettext-minimal-native']
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function autotools_aclocals
+DEBUG: SITE files ['endian-little', 'bit-32', 'arm-common', 'arm-32', 'common-linux', 'common-glibc', 'arm-linux', 'arm-linux-gnueabi', 'common']
+DEBUG: Python function autotools_aclocals finished
+DEBUG: Executing shell function do_install
+NOTE: make -j 1 DESTDIR=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap-ng/0.8.3-r0/image install
+Making install in src
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap-ng/0.8.3-r0/build/src'
+Making install in test
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap-ng/0.8.3-r0/build/src/test'
+make[3]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap-ng/0.8.3-r0/build/src/test'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap-ng/0.8.3-r0/build/src/test'
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap-ng/0.8.3-r0/build/src/test'
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap-ng/0.8.3-r0/build/src'
+make[3]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap-ng/0.8.3-r0/build/src'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap-ng/0.8.3-r0/image/usr/lib'
+ /bin/bash ../libtool   --mode=install /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c   libcap-ng.la libdrop_ambient.la '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap-ng/0.8.3-r0/image/usr/lib'
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c .libs/libcap-ng.so.0.0.0 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap-ng/0.8.3-r0/image/usr/lib/libcap-ng.so.0.0.0
+libtool: install: (cd /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap-ng/0.8.3-r0/image/usr/lib && { ln -s -f libcap-ng.so.0.0.0 libcap-ng.so.0 || { rm -f libcap-ng.so.0 && ln -s libcap-ng.so.0.0.0 libcap-ng.so.0; }; })
+libtool: install: (cd /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap-ng/0.8.3-r0/image/usr/lib && { ln -s -f libcap-ng.so.0.0.0 libcap-ng.so || { rm -f libcap-ng.so && ln -s libcap-ng.so.0.0.0 libcap-ng.so; }; })
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c .libs/libcap-ng.lai /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap-ng/0.8.3-r0/image/usr/lib/libcap-ng.la
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c .libs/libdrop_ambient.so.0.0.0 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap-ng/0.8.3-r0/image/usr/lib/libdrop_ambient.so.0.0.0
+libtool: install: (cd /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap-ng/0.8.3-r0/image/usr/lib && { ln -s -f libdrop_ambient.so.0.0.0 libdrop_ambient.so.0 || { rm -f libdrop_ambient.so.0 && ln -s libdrop_ambient.so.0.0.0 libdrop_ambient.so.0; }; })
+libtool: install: (cd /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap-ng/0.8.3-r0/image/usr/lib && { ln -s -f libdrop_ambient.so.0.0.0 libdrop_ambient.so || { rm -f libdrop_ambient.so && ln -s libdrop_ambient.so.0.0.0 libdrop_ambient.so; }; })
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c .libs/libdrop_ambient.lai /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap-ng/0.8.3-r0/image/usr/lib/libdrop_ambient.la
+libtool: warning: remember to run 'libtool --finish /usr/lib'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap-ng/0.8.3-r0/image/usr/include'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../../libcap-ng-0.8.3/src/cap-ng.h '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap-ng/0.8.3-r0/image/usr/include'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap-ng/0.8.3-r0/image/usr/lib/pkgconfig'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 libcap-ng.pc '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap-ng/0.8.3-r0/image/usr/lib/pkgconfig'
+make[3]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap-ng/0.8.3-r0/build/src'
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap-ng/0.8.3-r0/build/src'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap-ng/0.8.3-r0/build/src'
+Making install in utils
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap-ng/0.8.3-r0/build/utils'
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap-ng/0.8.3-r0/build/utils'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap-ng/0.8.3-r0/image/usr/bin'
+  /bin/bash ../libtool   --mode=install /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c pscap netcap filecap captest '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap-ng/0.8.3-r0/image/usr/bin'
+libtool: warning: '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap-ng/0.8.3-r0/build/src/libcap-ng.la' has not been installed in '/usr/lib'
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c .libs/pscap /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap-ng/0.8.3-r0/image/usr/bin/pscap
+libtool: warning: '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap-ng/0.8.3-r0/build/src/libcap-ng.la' has not been installed in '/usr/lib'
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c .libs/netcap /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap-ng/0.8.3-r0/image/usr/bin/netcap
+libtool: warning: '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap-ng/0.8.3-r0/build/src/libcap-ng.la' has not been installed in '/usr/lib'
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c .libs/filecap /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap-ng/0.8.3-r0/image/usr/bin/filecap
+libtool: warning: '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap-ng/0.8.3-r0/build/src/libcap-ng.la' has not been installed in '/usr/lib'
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c .libs/captest /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap-ng/0.8.3-r0/image/usr/bin/captest
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap-ng/0.8.3-r0/image/usr/share/man/man8'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../../libcap-ng-0.8.3/utils/pscap.8 ../../libcap-ng-0.8.3/utils/netcap.8 ../../libcap-ng-0.8.3/utils/filecap.8 ../../libcap-ng-0.8.3/utils/captest.8 '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap-ng/0.8.3-r0/image/usr/share/man/man8'
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap-ng/0.8.3-r0/build/utils'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap-ng/0.8.3-r0/build/utils'
+Making install in m4
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap-ng/0.8.3-r0/build/m4'
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap-ng/0.8.3-r0/build/m4'
+make[2]: Nothing to be done for 'install-exec-am'.
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap-ng/0.8.3-r0/image/usr/share/aclocal'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../../libcap-ng-0.8.3/m4/cap-ng.m4 '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap-ng/0.8.3-r0/image/usr/share/aclocal'
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap-ng/0.8.3-r0/build/m4'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap-ng/0.8.3-r0/build/m4'
+Making install in docs
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap-ng/0.8.3-r0/build/docs'
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap-ng/0.8.3-r0/build/docs'
+make[2]: Nothing to be done for 'install-exec-am'.
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap-ng/0.8.3-r0/image/usr/share/man/man3'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../../libcap-ng-0.8.3/docs/capng_clear.3 ../../libcap-ng-0.8.3/docs/capng_fill.3 ../../libcap-ng-0.8.3/docs/capng_setpid.3 ../../libcap-ng-0.8.3/docs/capng_get_caps_process.3 ../../libcap-ng-0.8.3/docs/capng_update.3 ../../libcap-ng-0.8.3/docs/capng_updatev.3 ../../libcap-ng-0.8.3/docs/capng_apply.3 ../../libcap-ng-0.8.3/docs/capng_lock.3 ../../libcap-ng-0.8.3/docs/capng_change_id.3 ../../libcap-ng-0.8.3/docs/capng_get_caps_fd.3 ../../libcap-ng-0.8.3/docs/capng_apply_caps_fd.3 ../../libcap-ng-0.8.3/docs/capng_have_capabilities.3 ../../libcap-ng-0.8.3/docs/capng_get_rootid.3 ../../libcap-ng-0.8.3/docs/capng_set_rootid.3 ../../libcap-ng-0.8.3/docs/capng_have_capability.3 ../../libcap-ng-0.8.3/docs/capng_print_caps_numeric.3 ../../libcap-ng-0.8.3/docs/capng_print_caps_text.3 ../../libcap-ng-0.8.3/docs/capng_name_to_capability.3 ../../libcap-ng-0.8.3/docs/capng_capability_to_name.3 ../../libcap-ng-0.8.3/docs/capng_save_state.3 ../../libcap-ng-0.8.3/docs/capng_restore_state.3 '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap-ng/0.8.3-r0/image/usr/share/man/man3'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap-ng/0.8.3-r0/image/usr/share/man/man7'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../../libcap-ng-0.8.3/docs/libdrop_ambient.7 '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap-ng/0.8.3-r0/image/usr/share/man/man7'
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap-ng/0.8.3-r0/build/docs'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap-ng/0.8.3-r0/build/docs'
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap-ng/0.8.3-r0/build'
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap-ng/0.8.3-r0/build'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap-ng/0.8.3-r0/build'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap-ng/0.8.3-r0/build'
+DEBUG: Shell function do_install finished
+DEBUG: Executing shell function remove_libtool_la
+DEBUG: Shell function remove_libtool_la finished

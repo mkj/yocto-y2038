@@ -1,0 +1,330 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: ['quilt-native', 'patch-native', 'attr-native']
+NOTE: Skipping as already exists in sysroot: ['libtool-native', 'gettext-minimal-native', 'texinfo-dummy-native']
+DEBUG: sed -e 's:^[^/]*/:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/recipe-sysroot-native/:g' /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/quilt-native/fixmepath | xargs sed -i -e 's:FIXMESTAGINGDIRTARGET:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/recipe-sysroot:g; s:FIXMESTAGINGDIRHOST:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/recipe-sysroot-native:g' -e 's:FIXME_PSEUDO_SYSROOT:/home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/pseudo-native:g' -e 's:FIXME_HOSTTOOLS_DIR:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:g' -e 's:FIXME_PKGDATA_DIR:/home/matt/tmp/build/obmc-y2038/tmp/pkgdata/evb-ast2600:g' -e 's:FIXME_PSEUDO_LOCALSTATEDIR:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/pseudo/:g' -e 's:FIXME_LOGFIFO:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/temp/fifo.788676:g'
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function do_patch
+DEBUG: Executing python function patch_do_patch
+DEBUG: Searching for 0001-dso-link-change.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/
+DEBUG: Searching for 0002-Fix-elf_cvt_gunhash-if-dest-and-src-are-same.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/
+DEBUG: Searching for 0003-fixheadercheck.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/
+DEBUG: Searching for 0006-Fix-build-on-aarch64-musl.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/
+DEBUG: Searching for 0001-libasm-may-link-with-libbz2-if-found.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/
+DEBUG: Searching for 0001-libelf-elf_end.c-check-data_list.data.d.d_buf-before.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/
+DEBUG: Searching for 0001-skip-the-test-when-gcc-not-deployed.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/
+DEBUG: Searching for run-ptest in paths:
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/
+DEBUG: Searching for ptest.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/
+DEBUG: Searching for 0001-tests-Makefile.am-compile-test_nlist-with-standard-C.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/
+DEBUG: Searching for 0001-tests-Add-libeu-to-tests-needing-error-API.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils-0.187/
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/elfutils/
+    /home/matt/src/openbmc/meta/recipes-devtools/elfutils/files/
+NOTE: Applying patch '0001-dso-link-change.patch' (../../../src/openbmc/meta/recipes-devtools/elfutils/files/0001-dso-link-change.patch)
+NOTE: Applying patch '0002-Fix-elf_cvt_gunhash-if-dest-and-src-are-same.patch' (../../../src/openbmc/meta/recipes-devtools/elfutils/files/0002-Fix-elf_cvt_gunhash-if-dest-and-src-are-same.patch)
+NOTE: Applying patch '0003-fixheadercheck.patch' (../../../src/openbmc/meta/recipes-devtools/elfutils/files/0003-fixheadercheck.patch)
+NOTE: Applying patch '0006-Fix-build-on-aarch64-musl.patch' (../../../src/openbmc/meta/recipes-devtools/elfutils/files/0006-Fix-build-on-aarch64-musl.patch)
+NOTE: Applying patch '0001-libasm-may-link-with-libbz2-if-found.patch' (../../../src/openbmc/meta/recipes-devtools/elfutils/files/0001-libasm-may-link-with-libbz2-if-found.patch)
+NOTE: Applying patch '0001-libelf-elf_end.c-check-data_list.data.d.d_buf-before.patch' (../../../src/openbmc/meta/recipes-devtools/elfutils/files/0001-libelf-elf_end.c-check-data_list.data.d.d_buf-before.patch)
+NOTE: Applying patch '0001-skip-the-test-when-gcc-not-deployed.patch' (../../../src/openbmc/meta/recipes-devtools/elfutils/files/0001-skip-the-test-when-gcc-not-deployed.patch)
+NOTE: Applying patch 'ptest.patch' (../../../src/openbmc/meta/recipes-devtools/elfutils/files/ptest.patch)
+NOTE: Applying patch '0001-tests-Makefile.am-compile-test_nlist-with-standard-C.patch' (../../../src/openbmc/meta/recipes-devtools/elfutils/files/0001-tests-Makefile.am-compile-test_nlist-with-standard-C.patch)
+NOTE: Applying patch '0001-tests-Add-libeu-to-tests-needing-error-API.patch' (../../../src/openbmc/meta/recipes-devtools/elfutils/files/0001-tests-Add-libeu-to-tests-needing-error-API.patch)
+DEBUG: Python function patch_do_patch finished
+DEBUG: Python function do_patch finished
+DEBUG: Executing python function do_qa_patch
+DEBUG: Python function do_qa_patch finished

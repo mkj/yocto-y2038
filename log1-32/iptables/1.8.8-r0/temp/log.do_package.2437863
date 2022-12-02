@@ -1,0 +1,847 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/systemd/systemd-systemctl-native.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-cross_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-native_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/autoconf/autoconf_2.71.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/automake/automake_1.16.5.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/dwarfsrcfiles/dwarfsrcfiles.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pkgconfig/pkgconfig_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/rpm/rpm_4.18.0.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: ['dwarfsrcfiles-native', 'rpm-native', 'elfutils-native', 'file-native', 'libgcrypt-native', 'bzip2-native', 'lua-native', 'sqlite3-native', 'python3-native', 'popt-native', 'libgpg-error-native', 'libcap-native', 'readline-native', 'libnsl2-native', 'gdbm-native', 'libtirpc-native', 'libffi-native', 'ncurses-native', 'util-linux-libuuid-native', 'openssl-native', 'perl-native', 'make-native']
+NOTE: Skipping as already exists in sysroot: ['glibc', 'systemd-systemctl-native', 'gcc-cross-arm', 'gcc-runtime', 'libtool-cross', 'libtool-native', 'quilt-native', 'autoconf-native', 'automake-native', 'patch-native', 'pkgconfig-native', 'pseudo-native', 'texinfo-dummy-native', 'binutils-cross-arm', 'libgcc', 'linux-libc-headers', 'gnu-config-native', 'm4-native', 'attr-native', 'mpfr-native', 'libmpc-native', 'xz-native', 'flex-native', 'zstd-native', 'zlib-native', 'gmp-native', 'gettext-minimal-native']
+DEBUG: sed -e 's:^[^/]*/:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot-native/:g' /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/rpm-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/elfutils-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/libgcrypt-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/lua-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/python3-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/libgpg-error-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/ncurses-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/openssl-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/perl-native/fixmepath | xargs sed -i -e 's:FIXMESTAGINGDIRTARGET:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot:g; s:FIXMESTAGINGDIRHOST:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot-native:g' -e 's:FIXME_PSEUDO_SYSROOT:/home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/pseudo-native:g' -e 's:FIXME_HOSTTOOLS_DIR:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:g' -e 's:FIXME_PKGDATA_DIR:/home/matt/tmp/build/obmc-y2038/tmp/pkgdata/evb-ast2600:g' -e 's:FIXME_PSEUDO_LOCALSTATEDIR:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/pseudo/:g' -e 's:FIXME_LOGFIFO:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/temp/fifo.2437863:g'
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function sstate_task_prefunc
+DEBUG: Python function sstate_task_prefunc finished
+DEBUG: Executing python function do_package
+DEBUG: Executing python function package_convert_pr_autoinc
+DEBUG: Python function package_convert_pr_autoinc finished
+DEBUG: Executing python function package_prepare_pkgdata
+NOTE: Installed into pkgdata-sysroot: ['gcc-runtime', 'glibc', 'libgcc', 'linux-libc-headers']
+DEBUG: Python function package_prepare_pkgdata finished
+DEBUG: Executing python function perform_packagecopy
+DEBUG: Python function perform_packagecopy finished
+DEBUG: Executing python function split_and_strip_files
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/sbin/xtables-legacy-multi']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libxt_udp.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libxt_tos.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libxt_u32.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libxt_time.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libxt_tcp.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libxt_string.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libxt_tcpmss.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libxt_statistic.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libxt_standard.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libxt_socket.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libxt_rpfilter.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libxt_set.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libxt_sctp.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libxt_policy.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libxt_quota.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libxt_recent.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libxt_rateest.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libxt_pkttype.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libxt_physdev.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libxt_owner.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libxt_nfacct.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libxt_multiport.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libxt_osf.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libxt_mark.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libxt_mac.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libxt_limit.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libxt_length.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libxt_ipvs.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libxt_iprange.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libxt_ipcomp.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libxt_helper.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libxt_hashlimit.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libxt_esp.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libxt_dscp.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libxt_devgroup.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libxt_ecn.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libxt_cpu.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libxt_dccp.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libxt_conntrack.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libxt_connmark.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libxt_connlimit.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libxt_connbytes.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libxt_cluster.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libxt_comment.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libxt_bpf.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libxt_cgroup.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libxt_TRACE.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libxt_addrtype.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libxt_TPROXY.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libxt_TCPOPTSTRIP.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libxt_TEE.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libxt_TOS.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libxt_SYNPROXY.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libxt_TCPMSS.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libxt_SECMARK.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libxt_SET.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libxt_RATEEST.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libxt_NFQUEUE.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libxt_NFLOG.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libxt_HMARK.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libxt_IDLETIMER.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libxt_MARK.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libxt_LED.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libxt_DNAT.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libxt_CT.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libxt_DSCP.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libxt_CONNSECMARK.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libxt_CLASSIFY.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libxt_CHECKSUM.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libxt_CONNMARK.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libxt_AUDIT.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libipt_ah.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libipt_realm.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libipt_ttl.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libipt_icmp.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libipt_ULOG.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libipt_TTL.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libipt_REJECT.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libipt_SNAT.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libipt_NETMAP.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libipt_ECN.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libipt_MASQUERADE.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libipt_LOG.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libip6t_srh.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libipt_CLUSTERIP.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libip6t_rt.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libip6t_mh.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libip6t_ipv6header.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libip6t_hbh.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libip6t_icmp6.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libip6t_hl.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libip6t_eui64.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libip6t_frag.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libip6t_dst.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libip6t_ah.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libip6t_SNPT.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libip6t_SNAT.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libip6t_MASQUERADE.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libip6t_NETMAP.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libip6t_LOG.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libip6t_HL.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/libip6tc.so.2.0.0']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libip6t_REJECT.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/xtables/libip6t_DNPT.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/libxtables.so.12.6.0']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/package/usr/lib/libip4tc.so.2.0.0']
+DEBUG: Python function split_and_strip_files finished
+DEBUG: Executing python function fixup_perms
+DEBUG: Python function fixup_perms finished
+DEBUG: Executing python function systemd_populate_packages
+DEBUG: adding systemd calls to postinst/postrm for iptables
+DEBUG: Python function systemd_populate_packages finished
+DEBUG: Executing python function package_do_split_locales
+DEBUG: No locale files in this package
+DEBUG: Python function package_do_split_locales finished
+DEBUG: Executing python function populate_packages
+DEBUG: Python function populate_packages finished
+DEBUG: Executing python function package_fixsymlinks
+DEBUG: iptables-dev contains dangling link /usr/lib/libip6tc.so.2.0.0
+DEBUG: target found in iptables
+DEBUG: iptables-dev contains dangling link /usr/lib/libxtables.so.12.6.0
+DEBUG: target found in iptables
+DEBUG: iptables-dev contains dangling link /usr/lib/libip4tc.so.2.0.0
+DEBUG: target found in iptables
+DEBUG: iptables-module-xt-ct contains dangling link /usr/lib/xtables/libxt_DNAT.so
+DEBUG: target found in iptables-module-xt-dnat
+DEBUG: Python function package_fixsymlinks finished
+DEBUG: Executing python function package_name_hook
+DEBUG: Executing python function debian_package_name_hook
+DEBUG: LIBNAMES: pkg iptables-staticdev libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-src libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-modules libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-xt-udp libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-xt-u32 libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-xt-trace libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-xt-tproxy libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-xt-tos libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-xt-time libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-xt-tee libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-xt-tcpoptstrip libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-xt-tcpmss libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-xt-tcp libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-xt-synproxy libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-xt-string libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-xt-statistic libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-xt-standard libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-xt-socket libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-xt-set libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-xt-secmark libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-xt-sctp libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-xt-rpfilter libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-xt-recent libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-xt-rateest libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-xt-quota libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-xt-policy libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-xt-pkttype libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-xt-physdev libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-xt-owner libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-xt-osf libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-xt-nfqueue libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-xt-nflog libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-xt-nfacct libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-xt-multiport libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-xt-mark libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-xt-mac libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-xt-limit libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-xt-length libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-xt-led libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-xt-ipvs libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-xt-iprange libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-xt-ipcomp libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-xt-idletimer libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-xt-hmark libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-xt-helper libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-xt-hashlimit libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-xt-esp libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-xt-ecn libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-xt-dscp libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-xt-dnat libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-xt-devgroup libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-xt-dccp libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-xt-ct libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-xt-cpu libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-xt-conntrack libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-xt-connsecmark libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-xt-connmark libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-xt-connlimit libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-xt-connbytes libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-xt-comment libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-xt-cluster libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-xt-classify libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-xt-checksum libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-xt-cgroup libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-xt-bpf libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-xt-audit libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-xt-addrtype libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-ipt-ulog libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-ipt-ttl libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-ipt-snat libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-ipt-reject libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-ipt-realm libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-ipt-netmap libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-ipt-masquerade libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-ipt-log libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-ipt-icmp libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-ipt-ecn libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-ipt-clusterip libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-ipt-ah libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-ip6t-srh libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-ip6t-snpt libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-ip6t-snat libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-ip6t-rt libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-ip6t-reject libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-ip6t-netmap libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-ip6t-mh libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-ip6t-masquerade libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-ip6t-log libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-ip6t-ipv6header libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-ip6t-icmp6 libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-ip6t-hl libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-ip6t-hbh libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-ip6t-frag libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-ip6t-eui64 libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-ip6t-dst libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-ip6t-dnpt libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-module-ip6t-ah libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-locale libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-doc libs 0 bins 0 sonames []
+arm-openbmc-linux-gnueabi-objdump: '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-dev/usr/lib/libip6tc.so': No such file
+arm-openbmc-linux-gnueabi-objdump: '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-dev/usr/lib/libxtables.so': No such file
+arm-openbmc-linux-gnueabi-objdump: '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-dev/usr/lib/libip4tc.so': No such file
+DEBUG: LIBNAMES: pkg iptables-dev libs 1 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-dbg libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg iptables-apply libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg iptables libs 1 bins 1 sonames ['libxtables.so.12', 'libip6tc.so.2', 'libip4tc.so.2']
+NOTE: Multiple libraries (libxtables.so.12, libip6tc.so.2, libip4tc.so.2) found and LEAD_SONAME not defined
+DEBUG: Python function debian_package_name_hook finished
+DEBUG: Python function package_name_hook finished
+DEBUG: Executing python function package_do_filedeps
+DEBUG: Python function package_do_filedeps finished
+DEBUG: Executing python function package_do_shlibs
+DEBUG: Reading shlib providers in /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/pkgdata-sysroot/shlibs2
+DEBUG: calculating shlib provides for iptables-src
+DEBUG: LIBNAMES: pkg iptables-src sonames set()
+DEBUG: calculating shlib provides for iptables-dbg
+DEBUG: LIBNAMES: pkg iptables-dbg sonames set()
+DEBUG: calculating shlib provides for iptables-modules
+DEBUG: LIBNAMES: pkg iptables-modules sonames set()
+DEBUG: calculating shlib provides for iptables-apply
+DEBUG: LIBNAMES: pkg iptables-apply sonames set()
+DEBUG: calculating shlib provides for iptables-staticdev
+DEBUG: LIBNAMES: pkg iptables-staticdev sonames set()
+DEBUG: calculating shlib provides for iptables-dev
+DEBUG: LIBNAMES: pkg iptables-dev sonames set()
+DEBUG: calculating shlib provides for iptables-doc
+DEBUG: LIBNAMES: pkg iptables-doc sonames set()
+DEBUG: calculating shlib provides for iptables-locale
+DEBUG: LIBNAMES: pkg iptables-locale sonames set()
+DEBUG: calculating shlib provides for iptables
+DEBUG: registering iptables-1.8.8 as shlib provider for libip4tc.so.2
+DEBUG: registering iptables-1.8.8 as shlib provider for libip6tc.so.2
+DEBUG: registering iptables-1.8.8 as shlib provider for libxtables.so.12
+DEBUG: adding ldconfig call to postinst for iptables
+DEBUG: LIBNAMES: pkg iptables sonames {('libip4tc.so.2', '/usr/lib', '1.8.8'), ('libxtables.so.12', '/usr/lib', '1.8.8'), ('libip6tc.so.2', '/usr/lib', '1.8.8')}
+DEBUG: calculating shlib provides for iptables-module-ip6t-dnpt
+DEBUG: LIBNAMES: pkg iptables-module-ip6t-dnpt sonames set()
+DEBUG: calculating shlib provides for iptables-module-ip6t-hl
+DEBUG: LIBNAMES: pkg iptables-module-ip6t-hl sonames set()
+DEBUG: calculating shlib provides for iptables-module-ip6t-log
+DEBUG: LIBNAMES: pkg iptables-module-ip6t-log sonames set()
+DEBUG: calculating shlib provides for iptables-module-ip6t-masquerade
+DEBUG: LIBNAMES: pkg iptables-module-ip6t-masquerade sonames set()
+DEBUG: calculating shlib provides for iptables-module-ip6t-netmap
+DEBUG: LIBNAMES: pkg iptables-module-ip6t-netmap sonames set()
+DEBUG: calculating shlib provides for iptables-module-ip6t-reject
+DEBUG: LIBNAMES: pkg iptables-module-ip6t-reject sonames set()
+DEBUG: calculating shlib provides for iptables-module-ip6t-snat
+DEBUG: LIBNAMES: pkg iptables-module-ip6t-snat sonames set()
+DEBUG: calculating shlib provides for iptables-module-ip6t-snpt
+DEBUG: LIBNAMES: pkg iptables-module-ip6t-snpt sonames set()
+DEBUG: calculating shlib provides for iptables-module-ip6t-ah
+DEBUG: LIBNAMES: pkg iptables-module-ip6t-ah sonames set()
+DEBUG: calculating shlib provides for iptables-module-ip6t-dst
+DEBUG: LIBNAMES: pkg iptables-module-ip6t-dst sonames set()
+DEBUG: calculating shlib provides for iptables-module-ip6t-eui64
+DEBUG: LIBNAMES: pkg iptables-module-ip6t-eui64 sonames set()
+DEBUG: calculating shlib provides for iptables-module-ip6t-frag
+DEBUG: LIBNAMES: pkg iptables-module-ip6t-frag sonames set()
+DEBUG: calculating shlib provides for iptables-module-ip6t-hbh
+DEBUG: LIBNAMES: pkg iptables-module-ip6t-hbh sonames set()
+DEBUG: calculating shlib provides for iptables-module-ip6t-icmp6
+DEBUG: LIBNAMES: pkg iptables-module-ip6t-icmp6 sonames set()
+DEBUG: calculating shlib provides for iptables-module-ip6t-ipv6header
+DEBUG: LIBNAMES: pkg iptables-module-ip6t-ipv6header sonames set()
+DEBUG: calculating shlib provides for iptables-module-ip6t-mh
+DEBUG: LIBNAMES: pkg iptables-module-ip6t-mh sonames set()
+DEBUG: calculating shlib provides for iptables-module-ip6t-rt
+DEBUG: LIBNAMES: pkg iptables-module-ip6t-rt sonames set()
+DEBUG: calculating shlib provides for iptables-module-ip6t-srh
+DEBUG: LIBNAMES: pkg iptables-module-ip6t-srh sonames set()
+DEBUG: calculating shlib provides for iptables-module-ipt-clusterip
+DEBUG: LIBNAMES: pkg iptables-module-ipt-clusterip sonames set()
+DEBUG: calculating shlib provides for iptables-module-ipt-ecn
+DEBUG: LIBNAMES: pkg iptables-module-ipt-ecn sonames set()
+DEBUG: calculating shlib provides for iptables-module-ipt-log
+DEBUG: LIBNAMES: pkg iptables-module-ipt-log sonames set()
+DEBUG: calculating shlib provides for iptables-module-ipt-masquerade
+DEBUG: LIBNAMES: pkg iptables-module-ipt-masquerade sonames set()
+DEBUG: calculating shlib provides for iptables-module-ipt-netmap
+DEBUG: LIBNAMES: pkg iptables-module-ipt-netmap sonames set()
+DEBUG: calculating shlib provides for iptables-module-ipt-reject
+DEBUG: LIBNAMES: pkg iptables-module-ipt-reject sonames set()
+DEBUG: calculating shlib provides for iptables-module-ipt-snat
+DEBUG: LIBNAMES: pkg iptables-module-ipt-snat sonames set()
+DEBUG: calculating shlib provides for iptables-module-ipt-ttl
+DEBUG: LIBNAMES: pkg iptables-module-ipt-ttl sonames set()
+DEBUG: calculating shlib provides for iptables-module-ipt-ulog
+DEBUG: LIBNAMES: pkg iptables-module-ipt-ulog sonames set()
+DEBUG: calculating shlib provides for iptables-module-ipt-ah
+DEBUG: LIBNAMES: pkg iptables-module-ipt-ah sonames set()
+DEBUG: calculating shlib provides for iptables-module-ipt-icmp
+DEBUG: LIBNAMES: pkg iptables-module-ipt-icmp sonames set()
+DEBUG: calculating shlib provides for iptables-module-ipt-realm
+DEBUG: LIBNAMES: pkg iptables-module-ipt-realm sonames set()
+DEBUG: calculating shlib provides for iptables-module-xt-audit
+DEBUG: LIBNAMES: pkg iptables-module-xt-audit sonames set()
+DEBUG: calculating shlib provides for iptables-module-xt-checksum
+DEBUG: LIBNAMES: pkg iptables-module-xt-checksum sonames set()
+DEBUG: calculating shlib provides for iptables-module-xt-classify
+DEBUG: LIBNAMES: pkg iptables-module-xt-classify sonames set()
+DEBUG: calculating shlib provides for iptables-module-xt-connmark
+DEBUG: LIBNAMES: pkg iptables-module-xt-connmark sonames set()
+DEBUG: calculating shlib provides for iptables-module-xt-connsecmark
+DEBUG: LIBNAMES: pkg iptables-module-xt-connsecmark sonames set()
+DEBUG: calculating shlib provides for iptables-module-xt-ct
+DEBUG: LIBNAMES: pkg iptables-module-xt-ct sonames set()
+DEBUG: calculating shlib provides for iptables-module-xt-dnat
+DEBUG: LIBNAMES: pkg iptables-module-xt-dnat sonames set()
+DEBUG: calculating shlib provides for iptables-module-xt-dscp
+DEBUG: LIBNAMES: pkg iptables-module-xt-dscp sonames set()
+DEBUG: calculating shlib provides for iptables-module-xt-hmark
+DEBUG: LIBNAMES: pkg iptables-module-xt-hmark sonames set()
+DEBUG: calculating shlib provides for iptables-module-xt-idletimer
+DEBUG: LIBNAMES: pkg iptables-module-xt-idletimer sonames set()
+DEBUG: calculating shlib provides for iptables-module-xt-led
+DEBUG: LIBNAMES: pkg iptables-module-xt-led sonames set()
+DEBUG: calculating shlib provides for iptables-module-xt-mark
+DEBUG: LIBNAMES: pkg iptables-module-xt-mark sonames set()
+DEBUG: calculating shlib provides for iptables-module-xt-nflog
+DEBUG: LIBNAMES: pkg iptables-module-xt-nflog sonames set()
+DEBUG: calculating shlib provides for iptables-module-xt-nfqueue
+DEBUG: LIBNAMES: pkg iptables-module-xt-nfqueue sonames set()
+DEBUG: calculating shlib provides for iptables-module-xt-rateest
+DEBUG: LIBNAMES: pkg iptables-module-xt-rateest sonames set()
+DEBUG: calculating shlib provides for iptables-module-xt-secmark
+DEBUG: LIBNAMES: pkg iptables-module-xt-secmark sonames set()
+DEBUG: calculating shlib provides for iptables-module-xt-set
+DEBUG: LIBNAMES: pkg iptables-module-xt-set sonames set()
+DEBUG: calculating shlib provides for iptables-module-xt-synproxy
+DEBUG: LIBNAMES: pkg iptables-module-xt-synproxy sonames set()
+DEBUG: calculating shlib provides for iptables-module-xt-tcpmss
+DEBUG: LIBNAMES: pkg iptables-module-xt-tcpmss sonames set()
+DEBUG: calculating shlib provides for iptables-module-xt-tcpoptstrip
+DEBUG: LIBNAMES: pkg iptables-module-xt-tcpoptstrip sonames set()
+DEBUG: calculating shlib provides for iptables-module-xt-tee
+DEBUG: LIBNAMES: pkg iptables-module-xt-tee sonames set()
+DEBUG: calculating shlib provides for iptables-module-xt-tos
+DEBUG: LIBNAMES: pkg iptables-module-xt-tos sonames set()
+DEBUG: calculating shlib provides for iptables-module-xt-tproxy
+DEBUG: LIBNAMES: pkg iptables-module-xt-tproxy sonames set()
+DEBUG: calculating shlib provides for iptables-module-xt-trace
+DEBUG: LIBNAMES: pkg iptables-module-xt-trace sonames set()
+DEBUG: calculating shlib provides for iptables-module-xt-addrtype
+DEBUG: LIBNAMES: pkg iptables-module-xt-addrtype sonames set()
+DEBUG: calculating shlib provides for iptables-module-xt-bpf
+DEBUG: LIBNAMES: pkg iptables-module-xt-bpf sonames set()
+DEBUG: calculating shlib provides for iptables-module-xt-cgroup
+DEBUG: LIBNAMES: pkg iptables-module-xt-cgroup sonames set()
+DEBUG: calculating shlib provides for iptables-module-xt-cluster
+DEBUG: LIBNAMES: pkg iptables-module-xt-cluster sonames set()
+DEBUG: calculating shlib provides for iptables-module-xt-comment
+DEBUG: LIBNAMES: pkg iptables-module-xt-comment sonames set()
+DEBUG: calculating shlib provides for iptables-module-xt-connbytes
+DEBUG: LIBNAMES: pkg iptables-module-xt-connbytes sonames set()
+DEBUG: calculating shlib provides for iptables-module-xt-connlimit
+DEBUG: LIBNAMES: pkg iptables-module-xt-connlimit sonames set()
+DEBUG: calculating shlib provides for iptables-module-xt-conntrack
+DEBUG: LIBNAMES: pkg iptables-module-xt-conntrack sonames set()
+DEBUG: calculating shlib provides for iptables-module-xt-cpu
+DEBUG: LIBNAMES: pkg iptables-module-xt-cpu sonames set()
+DEBUG: calculating shlib provides for iptables-module-xt-dccp
+DEBUG: LIBNAMES: pkg iptables-module-xt-dccp sonames set()
+DEBUG: calculating shlib provides for iptables-module-xt-devgroup
+DEBUG: LIBNAMES: pkg iptables-module-xt-devgroup sonames set()
+DEBUG: calculating shlib provides for iptables-module-xt-ecn
+DEBUG: LIBNAMES: pkg iptables-module-xt-ecn sonames set()
+DEBUG: calculating shlib provides for iptables-module-xt-esp
+DEBUG: LIBNAMES: pkg iptables-module-xt-esp sonames set()
+DEBUG: calculating shlib provides for iptables-module-xt-hashlimit
+DEBUG: LIBNAMES: pkg iptables-module-xt-hashlimit sonames set()
+DEBUG: calculating shlib provides for iptables-module-xt-helper
+DEBUG: LIBNAMES: pkg iptables-module-xt-helper sonames set()
+DEBUG: calculating shlib provides for iptables-module-xt-ipcomp
+DEBUG: LIBNAMES: pkg iptables-module-xt-ipcomp sonames set()
+DEBUG: calculating shlib provides for iptables-module-xt-iprange
+DEBUG: LIBNAMES: pkg iptables-module-xt-iprange sonames set()
+DEBUG: calculating shlib provides for iptables-module-xt-ipvs
+DEBUG: LIBNAMES: pkg iptables-module-xt-ipvs sonames set()
+DEBUG: calculating shlib provides for iptables-module-xt-length
+DEBUG: LIBNAMES: pkg iptables-module-xt-length sonames set()
+DEBUG: calculating shlib provides for iptables-module-xt-limit
+DEBUG: LIBNAMES: pkg iptables-module-xt-limit sonames set()
+DEBUG: calculating shlib provides for iptables-module-xt-mac
+DEBUG: LIBNAMES: pkg iptables-module-xt-mac sonames set()
+DEBUG: calculating shlib provides for iptables-module-xt-multiport
+DEBUG: LIBNAMES: pkg iptables-module-xt-multiport sonames set()
+DEBUG: calculating shlib provides for iptables-module-xt-nfacct
+DEBUG: LIBNAMES: pkg iptables-module-xt-nfacct sonames set()
+DEBUG: calculating shlib provides for iptables-module-xt-osf
+DEBUG: LIBNAMES: pkg iptables-module-xt-osf sonames set()
+DEBUG: calculating shlib provides for iptables-module-xt-owner
+DEBUG: LIBNAMES: pkg iptables-module-xt-owner sonames set()
+DEBUG: calculating shlib provides for iptables-module-xt-physdev
+DEBUG: LIBNAMES: pkg iptables-module-xt-physdev sonames set()
+DEBUG: calculating shlib provides for iptables-module-xt-pkttype
+DEBUG: LIBNAMES: pkg iptables-module-xt-pkttype sonames set()
+DEBUG: calculating shlib provides for iptables-module-xt-policy
+DEBUG: LIBNAMES: pkg iptables-module-xt-policy sonames set()
+DEBUG: calculating shlib provides for iptables-module-xt-quota
+DEBUG: LIBNAMES: pkg iptables-module-xt-quota sonames set()
+DEBUG: calculating shlib provides for iptables-module-xt-recent
+DEBUG: LIBNAMES: pkg iptables-module-xt-recent sonames set()
+DEBUG: calculating shlib provides for iptables-module-xt-rpfilter
+DEBUG: LIBNAMES: pkg iptables-module-xt-rpfilter sonames set()
+DEBUG: calculating shlib provides for iptables-module-xt-sctp
+DEBUG: LIBNAMES: pkg iptables-module-xt-sctp sonames set()
+DEBUG: calculating shlib provides for iptables-module-xt-socket
+DEBUG: LIBNAMES: pkg iptables-module-xt-socket sonames set()
+DEBUG: calculating shlib provides for iptables-module-xt-standard
+DEBUG: LIBNAMES: pkg iptables-module-xt-standard sonames set()
+DEBUG: calculating shlib provides for iptables-module-xt-statistic
+DEBUG: LIBNAMES: pkg iptables-module-xt-statistic sonames set()
+DEBUG: calculating shlib provides for iptables-module-xt-string
+DEBUG: LIBNAMES: pkg iptables-module-xt-string sonames set()
+DEBUG: calculating shlib provides for iptables-module-xt-tcp
+DEBUG: LIBNAMES: pkg iptables-module-xt-tcp sonames set()
+DEBUG: calculating shlib provides for iptables-module-xt-time
+DEBUG: LIBNAMES: pkg iptables-module-xt-time sonames set()
+DEBUG: calculating shlib provides for iptables-module-xt-u32
+DEBUG: LIBNAMES: pkg iptables-module-xt-u32 sonames set()
+DEBUG: calculating shlib provides for iptables-module-xt-udp
+DEBUG: LIBNAMES: pkg iptables-module-xt-udp sonames set()
+DEBUG: calculating shlib requirements for iptables-src
+DEBUG: calculating shlib requirements for iptables-dbg
+DEBUG: calculating shlib requirements for iptables-modules
+DEBUG: calculating shlib requirements for iptables-apply
+DEBUG: calculating shlib requirements for iptables-staticdev
+DEBUG: calculating shlib requirements for iptables-dev
+DEBUG: calculating shlib requirements for iptables-doc
+DEBUG: calculating shlib requirements for iptables-locale
+DEBUG: calculating shlib requirements for iptables
+DEBUG: iptables: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables/usr/sbin/xtables-legacy-multi)
+DEBUG: iptables: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables/usr/sbin/xtables-legacy-multi)
+DEBUG: iptables: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables/usr/lib/libxtables.so.12.6.0)
+DEBUG: iptables: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables/usr/lib/libip4tc.so.2.0.0)
+DEBUG: iptables: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables/usr/sbin/xtables-legacy-multi)
+DEBUG: iptables: Dependency libip4tc.so.2 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables/usr/sbin/xtables-legacy-multi)
+DEBUG: iptables: Dependency libip6tc.so.2 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables/usr/sbin/xtables-legacy-multi)
+DEBUG: iptables: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables/usr/lib/libxtables.so.12.6.0)
+DEBUG: iptables: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables/usr/lib/libip4tc.so.2.0.0)
+DEBUG: iptables: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables/usr/lib/libip6tc.so.2.0.0)
+DEBUG: iptables: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables/usr/lib/libip6tc.so.2.0.0)
+DEBUG: calculating shlib requirements for iptables-module-ip6t-dnpt
+DEBUG: iptables-module-ip6t-dnpt: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-ip6t-dnpt/usr/lib/xtables/libip6t_DNPT.so)
+DEBUG: iptables-module-ip6t-dnpt: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-ip6t-dnpt/usr/lib/xtables/libip6t_DNPT.so)
+DEBUG: calculating shlib requirements for iptables-module-ip6t-hl
+DEBUG: iptables-module-ip6t-hl: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-ip6t-hl/usr/lib/xtables/libip6t_hl.so)
+DEBUG: iptables-module-ip6t-hl: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-ip6t-hl/usr/lib/xtables/libip6t_HL.so)
+DEBUG: iptables-module-ip6t-hl: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-ip6t-hl/usr/lib/xtables/libip6t_HL.so)
+DEBUG: iptables-module-ip6t-hl: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-ip6t-hl/usr/lib/xtables/libip6t_hl.so)
+DEBUG: calculating shlib requirements for iptables-module-ip6t-log
+DEBUG: iptables-module-ip6t-log: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-ip6t-log/usr/lib/xtables/libip6t_LOG.so)
+DEBUG: iptables-module-ip6t-log: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-ip6t-log/usr/lib/xtables/libip6t_LOG.so)
+DEBUG: calculating shlib requirements for iptables-module-ip6t-masquerade
+DEBUG: iptables-module-ip6t-masquerade: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-ip6t-masquerade/usr/lib/xtables/libip6t_MASQUERADE.so)
+DEBUG: iptables-module-ip6t-masquerade: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-ip6t-masquerade/usr/lib/xtables/libip6t_MASQUERADE.so)
+DEBUG: iptables-module-ip6t-masquerade: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-ip6t-masquerade/usr/lib/xtables/libip6t_MASQUERADE.so)
+DEBUG: calculating shlib requirements for iptables-module-ip6t-netmap
+DEBUG: iptables-module-ip6t-netmap: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-ip6t-netmap/usr/lib/xtables/libip6t_NETMAP.so)
+DEBUG: iptables-module-ip6t-netmap: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-ip6t-netmap/usr/lib/xtables/libip6t_NETMAP.so)
+DEBUG: iptables-module-ip6t-netmap: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-ip6t-netmap/usr/lib/xtables/libip6t_NETMAP.so)
+DEBUG: calculating shlib requirements for iptables-module-ip6t-reject
+DEBUG: iptables-module-ip6t-reject: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-ip6t-reject/usr/lib/xtables/libip6t_REJECT.so)
+DEBUG: iptables-module-ip6t-reject: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-ip6t-reject/usr/lib/xtables/libip6t_REJECT.so)
+DEBUG: calculating shlib requirements for iptables-module-ip6t-snat
+DEBUG: iptables-module-ip6t-snat: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-ip6t-snat/usr/lib/xtables/libip6t_SNAT.so)
+DEBUG: iptables-module-ip6t-snat: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-ip6t-snat/usr/lib/xtables/libip6t_SNAT.so)
+DEBUG: calculating shlib requirements for iptables-module-ip6t-snpt
+DEBUG: iptables-module-ip6t-snpt: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-ip6t-snpt/usr/lib/xtables/libip6t_SNPT.so)
+DEBUG: iptables-module-ip6t-snpt: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-ip6t-snpt/usr/lib/xtables/libip6t_SNPT.so)
+DEBUG: calculating shlib requirements for iptables-module-ip6t-ah
+DEBUG: iptables-module-ip6t-ah: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-ip6t-ah/usr/lib/xtables/libip6t_ah.so)
+DEBUG: iptables-module-ip6t-ah: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-ip6t-ah/usr/lib/xtables/libip6t_ah.so)
+DEBUG: calculating shlib requirements for iptables-module-ip6t-dst
+DEBUG: iptables-module-ip6t-dst: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-ip6t-dst/usr/lib/xtables/libip6t_dst.so)
+DEBUG: iptables-module-ip6t-dst: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-ip6t-dst/usr/lib/xtables/libip6t_dst.so)
+DEBUG: iptables-module-ip6t-dst: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-ip6t-dst/usr/lib/xtables/libip6t_dst.so)
+DEBUG: calculating shlib requirements for iptables-module-ip6t-eui64
+DEBUG: iptables-module-ip6t-eui64: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-ip6t-eui64/usr/lib/xtables/libip6t_eui64.so)
+DEBUG: calculating shlib requirements for iptables-module-ip6t-frag
+DEBUG: iptables-module-ip6t-frag: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-ip6t-frag/usr/lib/xtables/libip6t_frag.so)
+DEBUG: iptables-module-ip6t-frag: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-ip6t-frag/usr/lib/xtables/libip6t_frag.so)
+DEBUG: calculating shlib requirements for iptables-module-ip6t-hbh
+DEBUG: iptables-module-ip6t-hbh: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-ip6t-hbh/usr/lib/xtables/libip6t_hbh.so)
+DEBUG: iptables-module-ip6t-hbh: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-ip6t-hbh/usr/lib/xtables/libip6t_hbh.so)
+DEBUG: iptables-module-ip6t-hbh: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-ip6t-hbh/usr/lib/xtables/libip6t_hbh.so)
+DEBUG: calculating shlib requirements for iptables-module-ip6t-icmp6
+DEBUG: iptables-module-ip6t-icmp6: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-ip6t-icmp6/usr/lib/xtables/libip6t_icmp6.so)
+DEBUG: iptables-module-ip6t-icmp6: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-ip6t-icmp6/usr/lib/xtables/libip6t_icmp6.so)
+DEBUG: iptables-module-ip6t-icmp6: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-ip6t-icmp6/usr/lib/xtables/libip6t_icmp6.so)
+DEBUG: calculating shlib requirements for iptables-module-ip6t-ipv6header
+DEBUG: iptables-module-ip6t-ipv6header: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-ip6t-ipv6header/usr/lib/xtables/libip6t_ipv6header.so)
+DEBUG: iptables-module-ip6t-ipv6header: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-ip6t-ipv6header/usr/lib/xtables/libip6t_ipv6header.so)
+DEBUG: calculating shlib requirements for iptables-module-ip6t-mh
+DEBUG: iptables-module-ip6t-mh: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-ip6t-mh/usr/lib/xtables/libip6t_mh.so)
+DEBUG: iptables-module-ip6t-mh: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-ip6t-mh/usr/lib/xtables/libip6t_mh.so)
+DEBUG: iptables-module-ip6t-mh: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-ip6t-mh/usr/lib/xtables/libip6t_mh.so)
+DEBUG: calculating shlib requirements for iptables-module-ip6t-rt
+DEBUG: iptables-module-ip6t-rt: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-ip6t-rt/usr/lib/xtables/libip6t_rt.so)
+DEBUG: iptables-module-ip6t-rt: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-ip6t-rt/usr/lib/xtables/libip6t_rt.so)
+DEBUG: calculating shlib requirements for iptables-module-ip6t-srh
+DEBUG: iptables-module-ip6t-srh: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-ip6t-srh/usr/lib/xtables/libip6t_srh.so)
+DEBUG: iptables-module-ip6t-srh: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-ip6t-srh/usr/lib/xtables/libip6t_srh.so)
+DEBUG: calculating shlib requirements for iptables-module-ipt-clusterip
+DEBUG: iptables-module-ipt-clusterip: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-ipt-clusterip/usr/lib/xtables/libipt_CLUSTERIP.so)
+DEBUG: iptables-module-ipt-clusterip: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-ipt-clusterip/usr/lib/xtables/libipt_CLUSTERIP.so)
+DEBUG: calculating shlib requirements for iptables-module-ipt-ecn
+DEBUG: iptables-module-ipt-ecn: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-ipt-ecn/usr/lib/xtables/libipt_ECN.so)
+DEBUG: iptables-module-ipt-ecn: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-ipt-ecn/usr/lib/xtables/libipt_ECN.so)
+DEBUG: calculating shlib requirements for iptables-module-ipt-log
+DEBUG: iptables-module-ipt-log: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-ipt-log/usr/lib/xtables/libipt_LOG.so)
+DEBUG: iptables-module-ipt-log: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-ipt-log/usr/lib/xtables/libipt_LOG.so)
+DEBUG: calculating shlib requirements for iptables-module-ipt-masquerade
+DEBUG: iptables-module-ipt-masquerade: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-ipt-masquerade/usr/lib/xtables/libipt_MASQUERADE.so)
+DEBUG: iptables-module-ipt-masquerade: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-ipt-masquerade/usr/lib/xtables/libipt_MASQUERADE.so)
+DEBUG: iptables-module-ipt-masquerade: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-ipt-masquerade/usr/lib/xtables/libipt_MASQUERADE.so)
+DEBUG: calculating shlib requirements for iptables-module-ipt-netmap
+DEBUG: iptables-module-ipt-netmap: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-ipt-netmap/usr/lib/xtables/libipt_NETMAP.so)
+DEBUG: iptables-module-ipt-netmap: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-ipt-netmap/usr/lib/xtables/libipt_NETMAP.so)
+DEBUG: iptables-module-ipt-netmap: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-ipt-netmap/usr/lib/xtables/libipt_NETMAP.so)
+DEBUG: calculating shlib requirements for iptables-module-ipt-reject
+DEBUG: iptables-module-ipt-reject: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-ipt-reject/usr/lib/xtables/libipt_REJECT.so)
+DEBUG: iptables-module-ipt-reject: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-ipt-reject/usr/lib/xtables/libipt_REJECT.so)
+DEBUG: calculating shlib requirements for iptables-module-ipt-snat
+DEBUG: iptables-module-ipt-snat: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-ipt-snat/usr/lib/xtables/libipt_SNAT.so)
+DEBUG: iptables-module-ipt-snat: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-ipt-snat/usr/lib/xtables/libipt_SNAT.so)
+DEBUG: iptables-module-ipt-snat: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-ipt-snat/usr/lib/xtables/libipt_SNAT.so)
+DEBUG: calculating shlib requirements for iptables-module-ipt-ttl
+DEBUG: iptables-module-ipt-ttl: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-ipt-ttl/usr/lib/xtables/libipt_TTL.so)
+DEBUG: iptables-module-ipt-ttl: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-ipt-ttl/usr/lib/xtables/libipt_ttl.so)
+DEBUG: iptables-module-ipt-ttl: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-ipt-ttl/usr/lib/xtables/libipt_ttl.so)
+DEBUG: iptables-module-ipt-ttl: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-ipt-ttl/usr/lib/xtables/libipt_TTL.so)
+DEBUG: calculating shlib requirements for iptables-module-ipt-ulog
+DEBUG: iptables-module-ipt-ulog: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-ipt-ulog/usr/lib/xtables/libipt_ULOG.so)
+DEBUG: iptables-module-ipt-ulog: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-ipt-ulog/usr/lib/xtables/libipt_ULOG.so)
+DEBUG: calculating shlib requirements for iptables-module-ipt-ah
+DEBUG: iptables-module-ipt-ah: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-ipt-ah/usr/lib/xtables/libipt_ah.so)
+DEBUG: iptables-module-ipt-ah: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-ipt-ah/usr/lib/xtables/libipt_ah.so)
+DEBUG: calculating shlib requirements for iptables-module-ipt-icmp
+DEBUG: iptables-module-ipt-icmp: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-ipt-icmp/usr/lib/xtables/libipt_icmp.so)
+DEBUG: iptables-module-ipt-icmp: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-ipt-icmp/usr/lib/xtables/libipt_icmp.so)
+DEBUG: iptables-module-ipt-icmp: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-ipt-icmp/usr/lib/xtables/libipt_icmp.so)
+DEBUG: calculating shlib requirements for iptables-module-ipt-realm
+DEBUG: iptables-module-ipt-realm: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-ipt-realm/usr/lib/xtables/libipt_realm.so)
+DEBUG: iptables-module-ipt-realm: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-ipt-realm/usr/lib/xtables/libipt_realm.so)
+DEBUG: iptables-module-ipt-realm: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-ipt-realm/usr/lib/xtables/libipt_realm.so)
+DEBUG: calculating shlib requirements for iptables-module-xt-audit
+DEBUG: iptables-module-xt-audit: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-audit/usr/lib/xtables/libxt_AUDIT.so)
+DEBUG: iptables-module-xt-audit: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-audit/usr/lib/xtables/libxt_AUDIT.so)
+DEBUG: calculating shlib requirements for iptables-module-xt-checksum
+DEBUG: iptables-module-xt-checksum: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-checksum/usr/lib/xtables/libxt_CHECKSUM.so)
+DEBUG: iptables-module-xt-checksum: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-checksum/usr/lib/xtables/libxt_CHECKSUM.so)
+DEBUG: calculating shlib requirements for iptables-module-xt-classify
+DEBUG: iptables-module-xt-classify: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-classify/usr/lib/xtables/libxt_CLASSIFY.so)
+DEBUG: iptables-module-xt-classify: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-classify/usr/lib/xtables/libxt_CLASSIFY.so)
+DEBUG: iptables-module-xt-classify: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-classify/usr/lib/xtables/libxt_CLASSIFY.so)
+DEBUG: calculating shlib requirements for iptables-module-xt-connmark
+DEBUG: iptables-module-xt-connmark: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-connmark/usr/lib/xtables/libxt_connmark.so)
+DEBUG: iptables-module-xt-connmark: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-connmark/usr/lib/xtables/libxt_CONNMARK.so)
+DEBUG: iptables-module-xt-connmark: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-connmark/usr/lib/xtables/libxt_connmark.so)
+DEBUG: iptables-module-xt-connmark: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-connmark/usr/lib/xtables/libxt_CONNMARK.so)
+DEBUG: calculating shlib requirements for iptables-module-xt-connsecmark
+DEBUG: iptables-module-xt-connsecmark: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-connsecmark/usr/lib/xtables/libxt_CONNSECMARK.so)
+DEBUG: iptables-module-xt-connsecmark: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-connsecmark/usr/lib/xtables/libxt_CONNSECMARK.so)
+DEBUG: calculating shlib requirements for iptables-module-xt-ct
+DEBUG: iptables-module-xt-ct: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-ct/usr/lib/xtables/libxt_CT.so)
+DEBUG: iptables-module-xt-ct: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-ct/usr/lib/xtables/libxt_CT.so)
+DEBUG: iptables-module-xt-ct: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-ct/usr/lib/xtables/libxt_CT.so)
+DEBUG: calculating shlib requirements for iptables-module-xt-dnat
+DEBUG: iptables-module-xt-dnat: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-dnat/usr/lib/xtables/libxt_DNAT.so)
+DEBUG: iptables-module-xt-dnat: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-dnat/usr/lib/xtables/libxt_DNAT.so)
+DEBUG: iptables-module-xt-dnat: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-dnat/usr/lib/xtables/libxt_DNAT.so)
+DEBUG: calculating shlib requirements for iptables-module-xt-dscp
+DEBUG: iptables-module-xt-dscp: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-dscp/usr/lib/xtables/libxt_DSCP.so)
+DEBUG: iptables-module-xt-dscp: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-dscp/usr/lib/xtables/libxt_dscp.so)
+DEBUG: iptables-module-xt-dscp: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-dscp/usr/lib/xtables/libxt_dscp.so)
+DEBUG: iptables-module-xt-dscp: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-dscp/usr/lib/xtables/libxt_DSCP.so)
+DEBUG: calculating shlib requirements for iptables-module-xt-hmark
+DEBUG: iptables-module-xt-hmark: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-hmark/usr/lib/xtables/libxt_HMARK.so)
+DEBUG: iptables-module-xt-hmark: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-hmark/usr/lib/xtables/libxt_HMARK.so)
+DEBUG: calculating shlib requirements for iptables-module-xt-idletimer
+DEBUG: iptables-module-xt-idletimer: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-idletimer/usr/lib/xtables/libxt_IDLETIMER.so)
+DEBUG: iptables-module-xt-idletimer: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-idletimer/usr/lib/xtables/libxt_IDLETIMER.so)
+DEBUG: calculating shlib requirements for iptables-module-xt-led
+DEBUG: iptables-module-xt-led: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-led/usr/lib/xtables/libxt_LED.so)
+DEBUG: iptables-module-xt-led: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-led/usr/lib/xtables/libxt_LED.so)
+DEBUG: calculating shlib requirements for iptables-module-xt-mark
+DEBUG: iptables-module-xt-mark: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-mark/usr/lib/xtables/libxt_MARK.so)
+DEBUG: iptables-module-xt-mark: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-mark/usr/lib/xtables/libxt_mark.so)
+DEBUG: iptables-module-xt-mark: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-mark/usr/lib/xtables/libxt_MARK.so)
+DEBUG: iptables-module-xt-mark: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-mark/usr/lib/xtables/libxt_MARK.so)
+DEBUG: iptables-module-xt-mark: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-mark/usr/lib/xtables/libxt_mark.so)
+DEBUG: calculating shlib requirements for iptables-module-xt-nflog
+DEBUG: iptables-module-xt-nflog: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-nflog/usr/lib/xtables/libxt_NFLOG.so)
+DEBUG: iptables-module-xt-nflog: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-nflog/usr/lib/xtables/libxt_NFLOG.so)
+DEBUG: calculating shlib requirements for iptables-module-xt-nfqueue
+DEBUG: iptables-module-xt-nfqueue: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-nfqueue/usr/lib/xtables/libxt_NFQUEUE.so)
+DEBUG: iptables-module-xt-nfqueue: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-nfqueue/usr/lib/xtables/libxt_NFQUEUE.so)
+DEBUG: calculating shlib requirements for iptables-module-xt-rateest
+DEBUG: iptables-module-xt-rateest: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-rateest/usr/lib/xtables/libxt_RATEEST.so)
+DEBUG: iptables-module-xt-rateest: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-rateest/usr/lib/xtables/libxt_RATEEST.so)
+DEBUG: iptables-module-xt-rateest: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-rateest/usr/lib/xtables/libxt_rateest.so)
+DEBUG: iptables-module-xt-rateest: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-rateest/usr/lib/xtables/libxt_rateest.so)
+DEBUG: iptables-module-xt-rateest: Dependency libm.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-rateest/usr/lib/xtables/libxt_RATEEST.so)
+DEBUG: iptables-module-xt-rateest: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-rateest/usr/lib/xtables/libxt_rateest.so)
+DEBUG: iptables-module-xt-rateest: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-rateest/usr/lib/xtables/libxt_RATEEST.so)
+DEBUG: calculating shlib requirements for iptables-module-xt-secmark
+DEBUG: iptables-module-xt-secmark: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-secmark/usr/lib/xtables/libxt_SECMARK.so)
+DEBUG: iptables-module-xt-secmark: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-secmark/usr/lib/xtables/libxt_SECMARK.so)
+DEBUG: calculating shlib requirements for iptables-module-xt-set
+DEBUG: iptables-module-xt-set: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-set/usr/lib/xtables/libxt_set.so)
+DEBUG: iptables-module-xt-set: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-set/usr/lib/xtables/libxt_set.so)
+DEBUG: iptables-module-xt-set: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-set/usr/lib/xtables/libxt_SET.so)
+DEBUG: iptables-module-xt-set: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-set/usr/lib/xtables/libxt_SET.so)
+DEBUG: iptables-module-xt-set: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-set/usr/lib/xtables/libxt_set.so)
+DEBUG: iptables-module-xt-set: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-set/usr/lib/xtables/libxt_SET.so)
+DEBUG: calculating shlib requirements for iptables-module-xt-synproxy
+DEBUG: iptables-module-xt-synproxy: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-synproxy/usr/lib/xtables/libxt_SYNPROXY.so)
+DEBUG: iptables-module-xt-synproxy: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-synproxy/usr/lib/xtables/libxt_SYNPROXY.so)
+DEBUG: calculating shlib requirements for iptables-module-xt-tcpmss
+DEBUG: iptables-module-xt-tcpmss: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-tcpmss/usr/lib/xtables/libxt_tcpmss.so)
+DEBUG: iptables-module-xt-tcpmss: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-tcpmss/usr/lib/xtables/libxt_tcpmss.so)
+DEBUG: iptables-module-xt-tcpmss: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-tcpmss/usr/lib/xtables/libxt_TCPMSS.so)
+DEBUG: iptables-module-xt-tcpmss: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-tcpmss/usr/lib/xtables/libxt_TCPMSS.so)
+DEBUG: calculating shlib requirements for iptables-module-xt-tcpoptstrip
+DEBUG: iptables-module-xt-tcpoptstrip: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-tcpoptstrip/usr/lib/xtables/libxt_TCPOPTSTRIP.so)
+DEBUG: iptables-module-xt-tcpoptstrip: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-tcpoptstrip/usr/lib/xtables/libxt_TCPOPTSTRIP.so)
+DEBUG: iptables-module-xt-tcpoptstrip: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-tcpoptstrip/usr/lib/xtables/libxt_TCPOPTSTRIP.so)
+DEBUG: calculating shlib requirements for iptables-module-xt-tee
+DEBUG: iptables-module-xt-tee: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-tee/usr/lib/xtables/libxt_TEE.so)
+DEBUG: iptables-module-xt-tee: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-tee/usr/lib/xtables/libxt_TEE.so)
+DEBUG: calculating shlib requirements for iptables-module-xt-tos
+DEBUG: iptables-module-xt-tos: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-tos/usr/lib/xtables/libxt_TOS.so)
+DEBUG: iptables-module-xt-tos: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-tos/usr/lib/xtables/libxt_TOS.so)
+DEBUG: iptables-module-xt-tos: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-tos/usr/lib/xtables/libxt_tos.so)
+DEBUG: iptables-module-xt-tos: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-tos/usr/lib/xtables/libxt_tos.so)
+DEBUG: calculating shlib requirements for iptables-module-xt-tproxy
+DEBUG: iptables-module-xt-tproxy: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-tproxy/usr/lib/xtables/libxt_TPROXY.so)
+DEBUG: iptables-module-xt-tproxy: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-tproxy/usr/lib/xtables/libxt_TPROXY.so)
+DEBUG: calculating shlib requirements for iptables-module-xt-trace
+DEBUG: iptables-module-xt-trace: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-trace/usr/lib/xtables/libxt_TRACE.so)
+DEBUG: calculating shlib requirements for iptables-module-xt-addrtype
+DEBUG: iptables-module-xt-addrtype: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-addrtype/usr/lib/xtables/libxt_addrtype.so)
+DEBUG: iptables-module-xt-addrtype: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-addrtype/usr/lib/xtables/libxt_addrtype.so)
+DEBUG: calculating shlib requirements for iptables-module-xt-bpf
+DEBUG: iptables-module-xt-bpf: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-bpf/usr/lib/xtables/libxt_bpf.so)
+DEBUG: iptables-module-xt-bpf: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-bpf/usr/lib/xtables/libxt_bpf.so)
+DEBUG: iptables-module-xt-bpf: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-bpf/usr/lib/xtables/libxt_bpf.so)
+DEBUG: calculating shlib requirements for iptables-module-xt-cgroup
+DEBUG: iptables-module-xt-cgroup: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-cgroup/usr/lib/xtables/libxt_cgroup.so)
+DEBUG: iptables-module-xt-cgroup: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-cgroup/usr/lib/xtables/libxt_cgroup.so)
+DEBUG: calculating shlib requirements for iptables-module-xt-cluster
+DEBUG: iptables-module-xt-cluster: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-cluster/usr/lib/xtables/libxt_cluster.so)
+DEBUG: iptables-module-xt-cluster: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-cluster/usr/lib/xtables/libxt_cluster.so)
+DEBUG: calculating shlib requirements for iptables-module-xt-comment
+DEBUG: iptables-module-xt-comment: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-comment/usr/lib/xtables/libxt_comment.so)
+DEBUG: iptables-module-xt-comment: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-comment/usr/lib/xtables/libxt_comment.so)
+DEBUG: iptables-module-xt-comment: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-comment/usr/lib/xtables/libxt_comment.so)
+DEBUG: calculating shlib requirements for iptables-module-xt-connbytes
+DEBUG: iptables-module-xt-connbytes: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-connbytes/usr/lib/xtables/libxt_connbytes.so)
+DEBUG: iptables-module-xt-connbytes: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-connbytes/usr/lib/xtables/libxt_connbytes.so)
+DEBUG: calculating shlib requirements for iptables-module-xt-connlimit
+DEBUG: iptables-module-xt-connlimit: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-connlimit/usr/lib/xtables/libxt_connlimit.so)
+DEBUG: iptables-module-xt-connlimit: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-connlimit/usr/lib/xtables/libxt_connlimit.so)
+DEBUG: iptables-module-xt-connlimit: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-connlimit/usr/lib/xtables/libxt_connlimit.so)
+DEBUG: calculating shlib requirements for iptables-module-xt-conntrack
+DEBUG: iptables-module-xt-conntrack: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-conntrack/usr/lib/xtables/libxt_conntrack.so)
+DEBUG: iptables-module-xt-conntrack: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-conntrack/usr/lib/xtables/libxt_conntrack.so)
+DEBUG: iptables-module-xt-conntrack: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-conntrack/usr/lib/xtables/libxt_conntrack.so)
+DEBUG: calculating shlib requirements for iptables-module-xt-cpu
+DEBUG: iptables-module-xt-cpu: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-cpu/usr/lib/xtables/libxt_cpu.so)
+DEBUG: iptables-module-xt-cpu: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-cpu/usr/lib/xtables/libxt_cpu.so)
+DEBUG: calculating shlib requirements for iptables-module-xt-dccp
+DEBUG: iptables-module-xt-dccp: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-dccp/usr/lib/xtables/libxt_dccp.so)
+DEBUG: iptables-module-xt-dccp: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-dccp/usr/lib/xtables/libxt_dccp.so)
+DEBUG: calculating shlib requirements for iptables-module-xt-devgroup
+DEBUG: iptables-module-xt-devgroup: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-devgroup/usr/lib/xtables/libxt_devgroup.so)
+DEBUG: iptables-module-xt-devgroup: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-devgroup/usr/lib/xtables/libxt_devgroup.so)
+DEBUG: iptables-module-xt-devgroup: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-devgroup/usr/lib/xtables/libxt_devgroup.so)
+DEBUG: calculating shlib requirements for iptables-module-xt-ecn
+DEBUG: iptables-module-xt-ecn: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-ecn/usr/lib/xtables/libxt_ecn.so)
+DEBUG: iptables-module-xt-ecn: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-ecn/usr/lib/xtables/libxt_ecn.so)
+DEBUG: calculating shlib requirements for iptables-module-xt-esp
+DEBUG: iptables-module-xt-esp: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-esp/usr/lib/xtables/libxt_esp.so)
+DEBUG: iptables-module-xt-esp: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-esp/usr/lib/xtables/libxt_esp.so)
+DEBUG: calculating shlib requirements for iptables-module-xt-hashlimit
+DEBUG: iptables-module-xt-hashlimit: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-hashlimit/usr/lib/xtables/libxt_hashlimit.so)
+DEBUG: iptables-module-xt-hashlimit: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-hashlimit/usr/lib/xtables/libxt_hashlimit.so)
+DEBUG: iptables-module-xt-hashlimit: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-hashlimit/usr/lib/xtables/libxt_hashlimit.so)
+DEBUG: calculating shlib requirements for iptables-module-xt-helper
+DEBUG: iptables-module-xt-helper: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-helper/usr/lib/xtables/libxt_helper.so)
+DEBUG: iptables-module-xt-helper: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-helper/usr/lib/xtables/libxt_helper.so)
+DEBUG: calculating shlib requirements for iptables-module-xt-ipcomp
+DEBUG: iptables-module-xt-ipcomp: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-ipcomp/usr/lib/xtables/libxt_ipcomp.so)
+DEBUG: iptables-module-xt-ipcomp: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-ipcomp/usr/lib/xtables/libxt_ipcomp.so)
+DEBUG: calculating shlib requirements for iptables-module-xt-iprange
+DEBUG: iptables-module-xt-iprange: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-iprange/usr/lib/xtables/libxt_iprange.so)
+DEBUG: iptables-module-xt-iprange: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-iprange/usr/lib/xtables/libxt_iprange.so)
+DEBUG: iptables-module-xt-iprange: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-iprange/usr/lib/xtables/libxt_iprange.so)
+DEBUG: calculating shlib requirements for iptables-module-xt-ipvs
+DEBUG: iptables-module-xt-ipvs: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-ipvs/usr/lib/xtables/libxt_ipvs.so)
+DEBUG: iptables-module-xt-ipvs: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-ipvs/usr/lib/xtables/libxt_ipvs.so)
+DEBUG: calculating shlib requirements for iptables-module-xt-length
+DEBUG: iptables-module-xt-length: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-length/usr/lib/xtables/libxt_length.so)
+DEBUG: iptables-module-xt-length: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-length/usr/lib/xtables/libxt_length.so)
+DEBUG: calculating shlib requirements for iptables-module-xt-limit
+DEBUG: iptables-module-xt-limit: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-limit/usr/lib/xtables/libxt_limit.so)
+DEBUG: iptables-module-xt-limit: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-limit/usr/lib/xtables/libxt_limit.so)
+DEBUG: iptables-module-xt-limit: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-limit/usr/lib/xtables/libxt_limit.so)
+DEBUG: calculating shlib requirements for iptables-module-xt-mac
+DEBUG: iptables-module-xt-mac: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-mac/usr/lib/xtables/libxt_mac.so)
+DEBUG: iptables-module-xt-mac: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-mac/usr/lib/xtables/libxt_mac.so)
+DEBUG: calculating shlib requirements for iptables-module-xt-multiport
+DEBUG: iptables-module-xt-multiport: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-multiport/usr/lib/xtables/libxt_multiport.so)
+DEBUG: iptables-module-xt-multiport: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-multiport/usr/lib/xtables/libxt_multiport.so)
+DEBUG: calculating shlib requirements for iptables-module-xt-nfacct
+DEBUG: iptables-module-xt-nfacct: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-nfacct/usr/lib/xtables/libxt_nfacct.so)
+DEBUG: iptables-module-xt-nfacct: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-nfacct/usr/lib/xtables/libxt_nfacct.so)
+DEBUG: calculating shlib requirements for iptables-module-xt-osf
+DEBUG: iptables-module-xt-osf: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-osf/usr/lib/xtables/libxt_osf.so)
+DEBUG: iptables-module-xt-osf: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-osf/usr/lib/xtables/libxt_osf.so)
+DEBUG: calculating shlib requirements for iptables-module-xt-owner
+DEBUG: iptables-module-xt-owner: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-owner/usr/lib/xtables/libxt_owner.so)
+DEBUG: iptables-module-xt-owner: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-owner/usr/lib/xtables/libxt_owner.so)
+DEBUG: iptables-module-xt-owner: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-owner/usr/lib/xtables/libxt_owner.so)
+DEBUG: calculating shlib requirements for iptables-module-xt-physdev
+DEBUG: iptables-module-xt-physdev: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-physdev/usr/lib/xtables/libxt_physdev.so)
+DEBUG: iptables-module-xt-physdev: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-physdev/usr/lib/xtables/libxt_physdev.so)
+DEBUG: calculating shlib requirements for iptables-module-xt-pkttype
+DEBUG: iptables-module-xt-pkttype: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-pkttype/usr/lib/xtables/libxt_pkttype.so)
+DEBUG: iptables-module-xt-pkttype: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-pkttype/usr/lib/xtables/libxt_pkttype.so)
+DEBUG: calculating shlib requirements for iptables-module-xt-policy
+DEBUG: iptables-module-xt-policy: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-policy/usr/lib/xtables/libxt_policy.so)
+DEBUG: iptables-module-xt-policy: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-policy/usr/lib/xtables/libxt_policy.so)
+DEBUG: calculating shlib requirements for iptables-module-xt-quota
+DEBUG: iptables-module-xt-quota: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-quota/usr/lib/xtables/libxt_quota.so)
+DEBUG: iptables-module-xt-quota: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-quota/usr/lib/xtables/libxt_quota.so)
+DEBUG: calculating shlib requirements for iptables-module-xt-recent
+DEBUG: iptables-module-xt-recent: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-recent/usr/lib/xtables/libxt_recent.so)
+DEBUG: iptables-module-xt-recent: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-recent/usr/lib/xtables/libxt_recent.so)
+DEBUG: calculating shlib requirements for iptables-module-xt-rpfilter
+DEBUG: iptables-module-xt-rpfilter: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-rpfilter/usr/lib/xtables/libxt_rpfilter.so)
+DEBUG: iptables-module-xt-rpfilter: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-rpfilter/usr/lib/xtables/libxt_rpfilter.so)
+DEBUG: calculating shlib requirements for iptables-module-xt-sctp
+DEBUG: iptables-module-xt-sctp: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-sctp/usr/lib/xtables/libxt_sctp.so)
+DEBUG: iptables-module-xt-sctp: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-sctp/usr/lib/xtables/libxt_sctp.so)
+DEBUG: calculating shlib requirements for iptables-module-xt-socket
+DEBUG: iptables-module-xt-socket: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-socket/usr/lib/xtables/libxt_socket.so)
+DEBUG: iptables-module-xt-socket: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-socket/usr/lib/xtables/libxt_socket.so)
+DEBUG: calculating shlib requirements for iptables-module-xt-standard
+DEBUG: iptables-module-xt-standard: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-standard/usr/lib/xtables/libxt_standard.so)
+DEBUG: iptables-module-xt-standard: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-standard/usr/lib/xtables/libxt_standard.so)
+DEBUG: calculating shlib requirements for iptables-module-xt-statistic
+DEBUG: iptables-module-xt-statistic: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-statistic/usr/lib/xtables/libxt_statistic.so)
+DEBUG: iptables-module-xt-statistic: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-statistic/usr/lib/xtables/libxt_statistic.so)
+DEBUG: iptables-module-xt-statistic: Dependency libm.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-statistic/usr/lib/xtables/libxt_statistic.so)
+DEBUG: calculating shlib requirements for iptables-module-xt-string
+DEBUG: iptables-module-xt-string: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-string/usr/lib/xtables/libxt_string.so)
+DEBUG: iptables-module-xt-string: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-string/usr/lib/xtables/libxt_string.so)
+DEBUG: iptables-module-xt-string: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-string/usr/lib/xtables/libxt_string.so)
+DEBUG: calculating shlib requirements for iptables-module-xt-tcp
+DEBUG: iptables-module-xt-tcp: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-tcp/usr/lib/xtables/libxt_tcp.so)
+DEBUG: iptables-module-xt-tcp: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-tcp/usr/lib/xtables/libxt_tcp.so)
+DEBUG: iptables-module-xt-tcp: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-tcp/usr/lib/xtables/libxt_tcp.so)
+DEBUG: calculating shlib requirements for iptables-module-xt-time
+DEBUG: iptables-module-xt-time: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-time/usr/lib/xtables/libxt_time.so)
+DEBUG: iptables-module-xt-time: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-time/usr/lib/xtables/libxt_time.so)
+DEBUG: iptables-module-xt-time: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-time/usr/lib/xtables/libxt_time.so)
+DEBUG: calculating shlib requirements for iptables-module-xt-u32
+DEBUG: iptables-module-xt-u32: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-u32/usr/lib/xtables/libxt_u32.so)
+DEBUG: iptables-module-xt-u32: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-u32/usr/lib/xtables/libxt_u32.so)
+DEBUG: iptables-module-xt-u32: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-u32/usr/lib/xtables/libxt_u32.so)
+DEBUG: calculating shlib requirements for iptables-module-xt-udp
+DEBUG: iptables-module-xt-udp: Dependency libxtables.so.12 requires package iptables (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-udp/usr/lib/xtables/libxt_udp.so)
+DEBUG: iptables-module-xt-udp: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/packages-split/iptables-module-xt-udp/usr/lib/xtables/libxt_udp.so)
+DEBUG: Python function package_do_shlibs finished
+DEBUG: Executing python function package_do_pkgconfig
+DEBUG: Python function package_do_pkgconfig finished
+DEBUG: Executing python function read_shlibdeps
+DEBUG: Python function read_shlibdeps finished
+DEBUG: Executing python function package_depchains
+DEBUG: Python function package_depchains finished
+DEBUG: Executing python function emit_pkgdata
+DEBUG: Python function emit_pkgdata finished
+DEBUG: Python function do_package finished
+DEBUG: Executing python function sstate_task_postfunc
+NOTE: Using umask 0o002 (not 22) for sstate packaging
+DEBUG: Executing python function target_add_sysroot_deps
+DEBUG: Python function target_add_sysroot_deps finished
+DEBUG: Executing python function sstate_hardcode_path
+NOTE: Removing hardcoded paths from sstate package: 'find /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sstate-build-package/ \( -name "*.la" -o -name "*-config" -o -name "*_config" -o -name "postinst-*" \) -type f | xargs grep -l -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot' -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot-native' -e '/home/matt/tmp/build/obmc-y2038/tmp/hosttools' | tee /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sstate-build-package/fixmepath | xargs --no-run-if-empty sed -i -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot-native:FIXMESTAGINGDIRHOST:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot:FIXMESTAGINGDIRTARGET:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:FIXME_HOSTTOOLS_DIR:g''
+DEBUG: Python function sstate_hardcode_path finished
+DEBUG: Executing python function sstate_report_unihash
+DEBUG: Python function sstate_report_unihash finished
+DEBUG: Executing shell function sstate_create_package
+DEBUG: Shell function sstate_create_package finished
+DEBUG: Executing python function sstate_hardcode_path_unpack
+DEBUG: Python function sstate_hardcode_path_unpack finished
+DEBUG: Python function sstate_task_postfunc finished

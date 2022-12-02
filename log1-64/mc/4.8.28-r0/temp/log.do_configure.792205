@@ -1,0 +1,501 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0_2.72.3.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses_6.3+20220423.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux_2.38.1.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-cross_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-native_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-core/gettext/gettext_0.21.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/autoconf/autoconf_2.71.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/automake/automake_1.16.5.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/file/file_5.43.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pkgconfig/pkgconfig_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: []
+NOTE: Skipping as already exists in sysroot: ['glib-2.0', 'glibc', 'ncurses', 'util-linux', 'gcc-cross-arm', 'gcc-runtime', 'libtool-cross', 'libtool-native', 'quilt-native', 'gettext-native', 'autoconf-native', 'automake-native', 'file-native', 'patch-native', 'pkgconfig-native', 'pseudo-native', 'linux-libc-headers', 'libgcc', 'binutils-cross-arm', 'texinfo-dummy-native', 'attr-native', 'libffi', 'bash-completion', 'zlib', 'libpcre', 'gnu-config-native', 'm4-native', 'opkg-utils', 'xz-native', 'zlib-native', 'bzip2-native', 'zstd-native', 'libmpc-native', 'gmp-native', 'flex-native', 'mpfr-native', 'gettext-minimal-native', 'libxcrypt', 'util-linux-libuuid', 'libcap-ng', 'libpam', 'bzip2', 'flex', 'cracklib']
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing shell function autotools_preconfigure
+DEBUG: Shell function autotools_preconfigure finished
+DEBUG: Executing python function autotools_aclocals
+DEBUG: SITE files ['endian-little', 'bit-32', 'arm-common', 'arm-32', 'common-linux', 'common-glibc', 'arm-linux', 'arm-linux-gnueabi', 'common']
+DEBUG: Python function autotools_aclocals finished
+DEBUG: Executing shell function do_configure
+automake (GNU automake) 1.16.5
+Copyright (C) 2021 Free Software Foundation, Inc.
+License GPLv2+: GNU GPL version 2 or later <https://gnu.org/licenses/gpl-2.0.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Written by Tom Tromey <tromey@redhat.com>
+       and Alexandre Duret-Lutz <adl@gnu.org>.
+AUTOV is 1.16
+NOTE: Executing ACLOCAL="aclocal --system-acdir=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/recipe-sysroot/usr/share/aclocal/ --automake-acdir=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/recipe-sysroot-native/usr/share/aclocal-1.16" autoreconf -Wcross --verbose --install --force --exclude=autopoint --exclude=gtkdocize -I /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/mc-4.8.28/m4/ -I /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/mc-4.8.28/m4.include/ -I /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/recipe-sysroot-native/usr/share/aclocal/
+autoreconf: export WARNINGS=cross,no-obsolete
+autoreconf: Entering directory '.'
+autoreconf: running: aclocal --system-acdir=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/recipe-sysroot/usr/share/aclocal/ --automake-acdir=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/recipe-sysroot-native/usr/share/aclocal-1.16 -I /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/mc-4.8.28/m4/ -I /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/mc-4.8.28/m4.include/ -I /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/recipe-sysroot-native/usr/share/aclocal/ --force -I m4
+autoreconf: configure.ac: tracing
+autoreconf: running: libtoolize --copy --force
+libtoolize: putting auxiliary files in AC_CONFIG_AUX_DIR, 'config'.
+libtoolize: copying file 'config/ltmain.sh'
+libtoolize: putting macros in AC_CONFIG_MACRO_DIRS, 'm4'.
+libtoolize: copying file 'm4/libtool.m4'
+libtoolize: copying file 'm4/ltoptions.m4'
+libtoolize: copying file 'm4/ltsugar.m4'
+libtoolize: copying file 'm4/ltversion.m4'
+libtoolize: copying file 'm4/lt~obsolete.m4'
+autoreconf: configure.ac: not using Intltool
+autoreconf: configure.ac: not using Gtkdoc
+autoreconf: running: aclocal --system-acdir=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/recipe-sysroot/usr/share/aclocal/ --automake-acdir=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/recipe-sysroot-native/usr/share/aclocal-1.16 -I /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/mc-4.8.28/m4/ -I /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/mc-4.8.28/m4.include/ -I /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/recipe-sysroot-native/usr/share/aclocal/ --force -I m4
+autoreconf: running: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/recipe-sysroot-native/usr/bin/autoconf --include=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/mc-4.8.28/m4/ --include=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/mc-4.8.28/m4.include/ --include=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/recipe-sysroot-native/usr/share/aclocal/ --force
+autoreconf: running: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/recipe-sysroot-native/usr/bin/autoheader --include=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/mc-4.8.28/m4/ --include=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/mc-4.8.28/m4.include/ --include=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/recipe-sysroot-native/usr/share/aclocal/ --force
+autoreconf: running: automake --add-missing --copy --force-missing
+configure.ac:32: installing 'config/compile'
+configure.ac:19: installing 'config/missing'
+lib/Makefile.am: installing 'config/depcomp'
+autoreconf: 'config/config.sub' is updated
+autoreconf: 'config/config.guess' is updated
+autoreconf: Leaving directory '.'
+NOTE: Running ../mc-4.8.28/configure  --build=x86_64-linux 		  --host=arm-openbmc-linux-gnueabi 		  --target=arm-openbmc-linux-gnueabi 		  --prefix=/usr 		  --exec_prefix=/usr 		  --bindir=/usr/bin 		  --sbindir=/usr/sbin 		  --libexecdir=/usr/libexec 		  --datadir=/usr/share 		  --sysconfdir=/etc 		  --sharedstatedir=/com 		  --localstatedir=/var 		  --libdir=/usr/lib 		  --includedir=/usr/include 		  --oldincludedir=/usr/include 		  --infodir=/usr/share/info 		  --mandir=/usr/share/man 		  --disable-silent-rules 		  --disable-dependency-tracking 		  --with-libtool-sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/recipe-sysroot --with-screen=ncurses --without-gpm-mouse --without-x --disable-configure-args --disable-static  --disable-vfs-sftp --enable-nls 
+configure: loading site script /home/matt/src/openbmc/meta/site/endian-little
+configure: loading site script /home/matt/src/openbmc/meta/site/arm-common
+configure: loading site script /home/matt/src/openbmc/meta/site/arm-32
+configure: loading site script /home/matt/src/openbmc/meta/site/common-linux
+configure: loading site script /home/matt/src/openbmc/meta/site/common-glibc
+configure: loading site script /home/matt/src/openbmc/meta/site/arm-linux
+configure: loading site script /home/matt/src/openbmc/meta/site/common
+configure: loading site script /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/recipe-sysroot/usr/share/arm-openbmc-linux-gnueabi_config_site.d/ncurses_config
+checking for a BSD-compatible install... /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c
+checking whether build environment is sane... yes
+checking for arm-openbmc-linux-gnueabi-strip... arm-openbmc-linux-gnueabi-strip
+checking for a race-free mkdir -p... /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether make supports nested variables... (cached) yes
+checking whether to enable maintainer-specific portions of Makefiles... no
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... arm-openbmc-linux-gnueabi
+checking whether make supports the include directive... yes (GNU style)
+checking for arm-openbmc-linux-gnueabi-gcc... arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/recipe-sysroot
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... yes
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/recipe-sysroot accepts -g... yes
+checking for arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/recipe-sysroot option to enable C11 features... none needed
+checking whether arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/recipe-sysroot understands -c and -o together... yes
+checking dependency style of arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/recipe-sysroot... none
+checking for stdio.h... (cached) yes
+checking for stdlib.h... (cached) yes
+checking for string.h... (cached) yes
+checking for inttypes.h... (cached) yes
+checking for stdint.h... (cached) yes
+checking for strings.h... (cached) yes
+checking for sys/stat.h... (cached) yes
+checking for sys/types.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking for wchar.h... yes
+checking for minix/config.h... no
+checking for sys/param.h... yes
+checking for sys/statvfs.h... yes
+checking for sys/vfs.h... yes
+checking for sys/fs_types.h... no
+checking for OS.h... no
+checking for netinet/in.h... yes
+checking whether it is safe to define __EXTENSIONS__... yes
+checking whether _XOPEN_SOURCE should be defined... no
+checking for arm-openbmc-linux-gnueabi-gcc... (cached) arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/recipe-sysroot
+checking whether the compiler supports GNU C... (cached) yes
+checking whether arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/recipe-sysroot accepts -g... (cached) yes
+checking for arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/recipe-sysroot option to enable C11 features... (cached) none needed
+checking whether arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/recipe-sysroot understands -c and -o together... (cached) yes
+checking dependency style of arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/recipe-sysroot... (cached) none
+checking whether C compiler accepts -Wassign-enum... no
+checking whether C compiler accepts -Wbad-function-cast... yes
+checking whether C compiler accepts -Wcomment... yes
+checking whether C compiler accepts -Wconditional-uninitialized... no
+checking whether C compiler accepts -Wdeclaration-after-statement... yes
+checking whether C compiler accepts -Wfloat-conversion... yes
+checking whether C compiler accepts -Wfloat-equal... yes
+checking whether C compiler accepts -Wformat... yes
+checking whether C compiler accepts -Wformat-security... yes
+checking whether C compiler accepts -Wformat-signedness... yes
+checking whether C compiler accepts -Wimplicit... yes
+checking whether C compiler accepts -Wimplicit-fallthrough... yes
+checking whether C compiler accepts -Wignored-qualifiers... yes
+checking whether C compiler accepts -Wlogical-not-parentheses... yes
+checking whether C compiler accepts -Wmaybe-uninitialized... yes
+checking whether C compiler accepts -Wmissing-braces... yes
+checking whether C compiler accepts -Wmissing-declarations... yes
+checking whether C compiler accepts -Wmissing-field-initializers... yes
+checking whether C compiler accepts -Wmissing-format-attribute... yes
+checking whether C compiler accepts -Wmissing-parameter-type... yes
+checking whether C compiler accepts -Wmissing-prototypes... yes
+checking whether C compiler accepts -Wmissing-variable-declarations... no
+checking whether C compiler accepts -Wnested-externs... yes
+checking whether C compiler accepts -Wno-long-long... yes
+checking whether C compiler accepts -Wno-unreachable-code... yes
+checking whether C compiler accepts -Wparentheses... yes
+checking whether C compiler accepts -Wpointer-arith... yes
+checking whether C compiler accepts -Wpointer-sign... yes
+checking whether C compiler accepts -Wredundant-decls... yes
+checking whether C compiler accepts -Wreturn-type... yes
+checking whether C compiler accepts -Wsequence-point... yes
+checking whether C compiler accepts -Wshadow... yes
+checking whether C compiler accepts -Wsign-compare... yes
+checking whether C compiler accepts -Wstrict-prototypes... yes
+checking whether C compiler accepts -Wswitch... yes
+checking whether C compiler accepts -Wswitch-default... yes
+checking whether C compiler accepts -Wtype-limits... yes
+checking whether C compiler accepts -Wundef... yes
+checking whether C compiler accepts -Wuninitialized... yes
+checking whether C compiler accepts -Wunreachable-code... yes
+checking whether C compiler accepts -Wunused-but-set-variable... yes
+checking whether C compiler accepts -Wunused-function... yes
+checking whether C compiler accepts -Wunused-label... yes
+checking whether C compiler accepts -Wunused-parameter... yes
+checking whether C compiler accepts -Wunused-result... yes
+checking whether C compiler accepts -Wunused-value... yes
+checking whether C compiler accepts -Wunused-variable... yes
+checking whether C compiler accepts -Wwrite-strings... yes
+checking for __attribute__((fallthrough))... yes
+checking how to print strings... printf
+checking for a sed that does not truncate output... (cached) sed
+checking for grep that handles long lines and -e... (cached) /usr/bin/env grep
+checking for egrep... /usr/bin/env grep -E
+checking for fgrep... /usr/bin/env grep -F
+checking for ld used by arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/recipe-sysroot... arm-openbmc-linux-gnueabi-ld --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/recipe-sysroot 
+checking if the linker (arm-openbmc-linux-gnueabi-ld --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/recipe-sysroot ) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... arm-openbmc-linux-gnueabi-gcc-nm
+checking the name lister (arm-openbmc-linux-gnueabi-gcc-nm) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking how to convert x86_64-pc-linux-gnu file names to arm-openbmc-linux-gnueabi format... func_convert_file_noop
+checking how to convert x86_64-pc-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for arm-openbmc-linux-gnueabi-ld --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/recipe-sysroot  option to reload object files... -r
+checking for arm-openbmc-linux-gnueabi-file... no
+checking for file... file
+checking for arm-openbmc-linux-gnueabi-objdump... arm-openbmc-linux-gnueabi-objdump
+checking how to recognize dependent libraries... pass_all
+checking for arm-openbmc-linux-gnueabi-dlltool... no
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for arm-openbmc-linux-gnueabi-ar... arm-openbmc-linux-gnueabi-gcc-ar
+checking for archiver @FILE support... configure: WARNING: using cross tools not prefixed with host triplet
+@
+checking for arm-openbmc-linux-gnueabi-strip... (cached) arm-openbmc-linux-gnueabi-strip
+checking for arm-openbmc-linux-gnueabi-ranlib... arm-openbmc-linux-gnueabi-gcc-ranlib
+checking command to parse arm-openbmc-linux-gnueabi-gcc-nm output from arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/recipe-sysroot object... ok
+checking for sysroot... /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/recipe-sysroot
+checking for a working dd... /home/matt/tmp/build/obmc-y2038/tmp/hosttools/dd
+checking how to truncate binary pipes... /home/matt/tmp/build/obmc-y2038/tmp/hosttools/dd bs=4096 count=1
+checking for arm-openbmc-linux-gnueabi-mt... no
+checking for mt... no
+checking if : is a manifest tool... no
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/recipe-sysroot supports -fno-rtti -fno-exceptions... no
+checking for arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/recipe-sysroot option to produce PIC... -fPIC -DPIC
+checking if arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/recipe-sysroot PIC flag -fPIC -DPIC works... yes
+checking if arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/recipe-sysroot static flag -static works... yes
+checking if arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/recipe-sysroot supports -c -o file.o... yes
+checking if arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/recipe-sysroot supports -c -o file.o... (cached) yes
+checking whether the arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/recipe-sysroot linker (arm-openbmc-linux-gnueabi-ld --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/recipe-sysroot ) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... no
+checking for arm-openbmc-linux-gnueabi-pkg-config... no
+checking for pkg-config... /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/recipe-sysroot-native/usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking whether ln -s works... yes
+checking for nroff... false
+checking for file... true
+checking for -z option to file command... yes
+checking for -L option to file command... yes
+checking for -S option to file command... yes
+checking for gnome-moz-remote... no
+checking for mozilla... no
+checking for firefox... no
+checking for konqueror... no
+checking for opera... no
+checking for arm-openbmc-linux-gnueabi-ar... (cached) arm-openbmc-linux-gnueabi-gcc-ar
+checking for check >= 0.9.10... no
+checking for sighandler_t... configure: WARNING: 'Check' testing framework not found. Check your environment
+yes
+checking for glib-2.0 >= 2.30... yes
+checking for gmodule-no-export-2.0 >= 2.30... yes
+checking how to run the C preprocessor... arm-openbmc-linux-gnueabi-gcc -E --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/recipe-sysroot  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security
+checking for library containing addwstr... -lncursesw
+checking for library containing stdscr... none required
+checking for ncursesw/curses.h... no
+checking for ncurses/curses.h... (cached) no
+checking for ncurses.h... (cached) yes
+checking for ESCDELAY variable... yes
+checking for resizeterm... yes
+checking for X... disabled
+checking for string.h... (cached) yes
+checking for memory.h... yes
+checking for limits.h... yes
+checking for malloc.h... yes
+checking for utime.h... yes
+checking for sys/statfs.h... yes
+checking for sys/vfs.h... (cached) yes
+checking for sys/select.h... yes
+checking for sys/ioctl.h... yes
+checking for stropts.h... no
+checking for arpa/inet.h... yes
+checking for sys/socket.h... yes
+checking for sys/mkdev.h... no
+checking for sys/sysmacros.h... yes
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... no
+checking size of long... (cached) 4
+checking for unsigned long long int... yes
+checking for uintmax_t... yes
+checking size of uintmax_t... 8
+checking for off_t... yes
+checking size of off_t... 8
+checking for mode_t... yes
+checking for promoted mode_t type... mode_t
+checking for pid_t... yes
+checking for uid_t in sys/types.h... (cached) {ac_cv_type_uid_t=yes}
+checking for struct stat.st_blocks... yes
+checking for struct stat.st_blksize... yes
+checking for struct stat.st_rdev... yes
+checking for struct stat.st_mtim... yes
+checking for sig_atomic_t in signal.h... yes, non volatile
+checking for strverscmp... yes
+checking for strncasecmp... yes
+checking for realpath... yes
+checking for posix_openpt... yes
+checking for grantpt... yes
+checking for statlstat... no
+checking for getpagesize... (cached) yes
+checking for working mmap... (cached) yes
+checking for fcntl.h... yes
+checking for utime.h... (cached) yes
+checking for listmntent... no
+checking for sys/ucred.h... no
+checking for sys/mount.h... yes
+checking for mntent.h... yes
+checking for sys/fs_types.h... (cached) no
+checking for struct fsstat.f_fstypename... no
+checking for library containing getmntent... none required
+checking for getmntent... yes
+checking for mntctl function and struct vmount... no
+checking for one-argument getmntent function... yes
+checking for setmntent... yes
+checking for endmntent... yes
+checking for hasmntopt... yes
+checking for sys/mntent.h... no
+checking for sys/mkdev.h... (cached) no
+checking for sys/sysmacros.h... (cached) yes
+checking for struct statfs.f_fstypename... no
+checking for sys/mount.h... (cached) yes
+checking for statvfs function (SVR4)... yes
+checking whether to use statvfs64... no
+checking for two-argument statfs with statfs.f_frsize member... no
+checking for sys/fs/s5param.h... no
+checking for sys/statfs.h... (cached) yes
+checking for statfs that truncates block counts... no
+checking for struct statfs.f_fstypename... (cached) no
+checking for nfs/vfs.h... no
+checking for struct statvfs.f_basetype... no
+checking for struct statvfs.f_fstypename... no
+checking for struct statvfs.f_type... no
+checking for struct statfs.f_namelen... yes
+checking for struct statfs.f_type... yes
+checking for struct statfs.f_frsize... yes
+checking for setlocale... yes
+checking whether NLS is requested... yes
+checking for msgfmt... /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/recipe-sysroot-native/usr/bin/msgfmt
+checking for gmsgfmt... /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/recipe-sysroot-native/usr/bin/msgfmt
+checking for xgettext... /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/recipe-sysroot-native/usr/bin/xgettext
+checking for msgmerge... /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/recipe-sysroot-native/usr/bin/msgmerge
+checking for ld... arm-openbmc-linux-gnueabi-ld --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/recipe-sysroot 
+checking if the linker (arm-openbmc-linux-gnueabi-ld --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/recipe-sysroot ) is GNU ld... yes
+checking for shared library run path origin... done
+checking 32-bit host C ABI... yes
+checking for ELF binary format... yes
+checking for the common suffixes of directories in the library search path... lib,lib32,lib
+checking for CFPreferencesCopyAppValue... no
+checking for CFLocaleCopyCurrent... no
+checking for GNU gettext in libc... yes
+checking whether to use NLS... yes
+checking where the gettext function comes from... libc
+checking for perl... (cached) /usr/bin/env perl
+checking for python... (cached) /usr/bin/env python
+checking for ruby... /usr/bin/ruby
+checking for AIX defines... no
+checking for utimensat... yes
+checking for linux/fs.h... yes
+configure: using internal editor
+configure: using diff viewer
+checking for subshell support... yes
+checking for pty.h... yes
+checking for libutil.h... no
+checking for util.h... no
+checking for openpty... yes
+checking for ext2fs >= 1.42.4... no
+configure: WARNING: ext2fs library not found or version too old (must be >= 1.42.4)
+configure: Enabling VFS code
+checking for zip... /usr/bin/zip
+checking for unzip... /usr/bin/unzip
+checking for zipinfo code in unzip... (cached) yes
+checking for library containing socket... none required
+checking for library containing gethostbyname... none required
+checking for struct linger.l_linger... yes
+checking for nlink_t... yes
+checking for socklen_t... yes
+checking for pmap_set... no
+checking for pmap_set in -lrpc... no
+checking for pmap_getport... no
+checking for pmap_getmaps... no
+checking for rresvport... yes
+checking for rpc/pmap_clnt.h... no
+checking for arm-openbmc-linux-gnueabi-doxygen... no
+checking for doxygen... no
+checking for arm-openbmc-linux-gnueabi-perl... configure: WARNING: doxygen not found - will not generate any doxygen documentation
+no
+checking for perl... /home/matt/tmp/build/obmc-y2038/tmp/hosttools/perl
+configure: creating ./config.status
+config.status: creating src/man2hlp/man2hlp
+config.status: creating Makefile
+config.status: creating contrib/Makefile
+config.status: creating misc/Makefile
+config.status: creating misc/mc.charsets
+config.status: creating misc/mc.menu
+config.status: creating misc/mcedit.menu
+config.status: creating misc/skins/Makefile
+config.status: creating misc/ext.d/Makefile
+config.status: creating misc/ext.d/doc.sh
+config.status: creating misc/ext.d/misc.sh
+config.status: creating misc/ext.d/text.sh
+config.status: creating misc/ext.d/web.sh
+config.status: creating misc/macros.d/Makefile
+config.status: creating misc/mc.ext
+config.status: creating src/Makefile
+config.status: creating src/consaver/Makefile
+config.status: creating src/editor/Makefile
+config.status: creating src/man2hlp/Makefile
+config.status: creating src/subshell/Makefile
+config.status: creating src/viewer/Makefile
+config.status: creating src/diffviewer/Makefile
+config.status: creating src/filemanager/Makefile
+config.status: creating src/vfs/Makefile
+config.status: creating src/vfs/cpio/Makefile
+config.status: creating src/vfs/extfs/Makefile
+config.status: creating src/vfs/extfs/helpers/Makefile
+config.status: creating src/vfs/extfs/helpers/a+
+config.status: creating src/vfs/extfs/helpers/apt+
+config.status: creating src/vfs/extfs/helpers/audio
+config.status: creating src/vfs/extfs/helpers/deb
+config.status: creating src/vfs/extfs/helpers/deba
+config.status: creating src/vfs/extfs/helpers/debd
+config.status: creating src/vfs/extfs/helpers/dpkg+
+config.status: creating src/vfs/extfs/helpers/iso9660
+config.status: creating src/vfs/extfs/helpers/hp48+
+config.status: creating src/vfs/extfs/helpers/lslR
+config.status: creating src/vfs/extfs/helpers/mailfs
+config.status: creating src/vfs/extfs/helpers/patchfs
+config.status: creating src/vfs/extfs/helpers/rpms+
+config.status: creating src/vfs/extfs/helpers/s3+
+config.status: creating src/vfs/extfs/helpers/uace
+config.status: creating src/vfs/extfs/helpers/ualz
+config.status: creating src/vfs/extfs/helpers/uar
+config.status: creating src/vfs/extfs/helpers/uarc
+config.status: creating src/vfs/extfs/helpers/uarj
+config.status: creating src/vfs/extfs/helpers/ucab
+config.status: creating src/vfs/extfs/helpers/uha
+config.status: creating src/vfs/extfs/helpers/ulha
+config.status: creating src/vfs/extfs/helpers/ulib
+config.status: creating src/vfs/extfs/helpers/unar
+config.status: creating src/vfs/extfs/helpers/urar
+config.status: creating src/vfs/extfs/helpers/uwim
+config.status: creating src/vfs/extfs/helpers/uzip
+config.status: creating src/vfs/extfs/helpers/uzoo
+config.status: creating src/vfs/fish/Makefile
+config.status: creating src/vfs/fish/helpers/Makefile
+config.status: creating src/vfs/ftpfs/Makefile
+config.status: creating src/vfs/sftpfs/Makefile
+config.status: creating src/vfs/local/Makefile
+config.status: creating src/vfs/sfs/Makefile
+config.status: creating src/vfs/tar/Makefile
+config.status: creating src/vfs/undelfs/Makefile
+config.status: creating lib/Makefile
+config.status: creating lib/event/Makefile
+config.status: creating lib/filehighlight/Makefile
+config.status: creating lib/mcconfig/Makefile
+config.status: creating lib/search/Makefile
+config.status: creating lib/skin/Makefile
+config.status: creating lib/strutil/Makefile
+config.status: creating lib/tty/Makefile
+config.status: creating lib/vfs/Makefile
+config.status: creating lib/widget/Makefile
+config.status: creating misc/syntax/Makefile
+config.status: creating misc/syntax/Syntax
+config.status: creating doc/Makefile
+config.status: creating doc/hints/Makefile
+config.status: creating doc/hints/l10n/Makefile
+config.status: creating doc/man/Makefile
+config.status: creating doc/man/es/Makefile
+config.status: creating doc/man/hu/Makefile
+config.status: creating doc/man/it/Makefile
+config.status: creating doc/man/pl/Makefile
+config.status: creating doc/man/ru/Makefile
+config.status: creating doc/man/sr/Makefile
+config.status: creating doc/hlp/Makefile
+config.status: creating doc/hlp/es/Makefile
+config.status: creating doc/hlp/hu/Makefile
+config.status: creating doc/hlp/it/Makefile
+config.status: creating doc/hlp/pl/Makefile
+config.status: creating doc/hlp/ru/Makefile
+config.status: creating doc/hlp/sr/Makefile
+config.status: creating po/Makefile.in
+config.status: creating tests/Makefile
+config.status: creating tests/lib/Makefile
+config.status: creating tests/lib/mcconfig/Makefile
+config.status: creating tests/lib/search/Makefile
+config.status: creating tests/lib/strutil/Makefile
+config.status: creating tests/lib/vfs/Makefile
+config.status: creating tests/lib/widget/Makefile
+config.status: creating tests/src/Makefile
+config.status: creating tests/src/filemanager/Makefile
+config.status: creating tests/src/editor/Makefile
+config.status: creating tests/src/editor/test-data.txt
+config.status: creating tests/src/vfs/Makefile
+config.status: creating tests/src/vfs/extfs/Makefile
+config.status: creating tests/src/vfs/extfs/helpers-list/Makefile
+config.status: creating tests/src/vfs/extfs/helpers-list/data/config.sh
+config.status: creating tests/src/vfs/extfs/helpers-list/misc/Makefile
+config.status: creating tests/src/vfs/ftpfs/Makefile
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+config.status: executing po-directories commands
+config.status: creating po/POTFILES
+config.status: creating po/Makefile
+configure:
+
+Configuration:
+
+  Source code location:           ../mc-4.8.28
+  Compiler:                       arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/recipe-sysroot
+  Compiler flags:                  -Wbad-function-cast -Wcomment -Wdeclaration-after-statement -Wfloat-conversion -Wfloat-equal -Wformat -Wformat-security -Wformat-signedness -Wimplicit -Wimplicit-fallthrough -Wignored-qualifiers -Wlogical-not-parentheses -Wmaybe-uninitialized -Wmissing-braces -Wmissing-declarations -Wmissing-field-initializers -Wmissing-format-attribute -Wmissing-parameter-type -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-unreachable-code -Wparentheses -Wpointer-arith -Wpointer-sign -Wredundant-decls -Wreturn-type -Wsequence-point -Wshadow -Wsign-compare -Wstrict-prototypes -Wswitch -Wswitch-default -Wtype-limits -Wundef -Wuninitialized -Wunreachable-code -Wunused-but-set-variable -Wunused-function -Wunused-label -Wunused-parameter -Wunused-result -Wunused-value -Wunused-variable -Wwrite-strings    -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/mc-4.8.28=/usr/src/debug/mc/4.8.28-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/mc-4.8.28=/usr/src/debug/mc/4.8.28-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/build=/usr/src/debug/mc/4.8.28-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/build=/usr/src/debug/mc/4.8.28-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mc/4.8.28-r0/recipe-sysroot-native=   -Wconversion -Wno-error
+  Assertions:                     yes
+  Unit tests:                     no ('Check' testing framework not found)
+  File system:                    Midnight Commander Virtual Filesystem
+                                  cpio, extfs, fish, ftp, sfs, tar
+  Screen library:                 NCurses
+  Mouse support:                  xterm only
+  X11 events support:             no
+  With subshell support:          yes
+  With background operations:     yes
+  With ext2fs attributes support: no
+  Internal editor:                yes
+  Diff viewer:                    yes
+  Support for charset:            yes
+  Search type:                    glib-regexp
+
+DEBUG: Shell function do_configure finished
+DEBUG: Executing python function do_qa_configure
+NOTE: Checking autotools environment for common misconfiguration
+NOTE: Checking configure output for unrecognised options
+DEBUG: Python function do_qa_configure finished
+DEBUG: Executing shell function autotools_postconfigure
+DEBUG: Shell function autotools_postconfigure finished

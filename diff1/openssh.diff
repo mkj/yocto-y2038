@@ -1,0 +1,235 @@
+1789c1789
+< krl.c:742:39: warning: conversion to 'u_int64_t' {aka 'long long unsigned int'} from 'time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> krl.c:742:39: warning: conversion to 'u_int64_t' {aka 'long long unsigned int'} from 'time_t' {aka 'long long int'} may change the sign of the result [-Wsign-conversion]
+1793c1793
+< krl.c:832:13: warning: conversion from 'u_int64_t' {aka 'long long unsigned int'} to 'time_t' {aka 'long int'} may change value [-Wconversion]
+---
+> krl.c:832:13: warning: conversion to 'time_t' {aka 'long long int'} from 'u_int64_t' {aka 'long long unsigned int'} may change the sign of the result [-Wsign-conversion]
+2168a2169,2178
+> moduli.c: In function 'fmt_time':
+> moduli.c:520:15: warning: conversion from 'time_t' {aka 'long long int'} to 'int' may change value [-Wconversion]
+>   520 |         min = (seconds / 60) % 60;
+>       |               ^
+> moduli.c:521:14: warning: conversion from 'time_t' {aka 'long long int'} to 'int' may change value [-Wconversion]
+>   521 |         hr = (seconds / 60 / 60) % 24;
+>       |              ^
+> moduli.c:522:15: warning: conversion from 'time_t' {aka 'long long int'} to 'int' may change value [-Wconversion]
+>   522 |         day = seconds / 60 / 60 / 24;
+>       |               ^~~~~~~
+2173,2175d2182
+< moduli.c:563:36: warning: conversion to 'time_t' {aka 'long int'} from 'long unsigned int' may change the sign of the result [-Wsign-conversion]
+<   563 |         eta_str = xstrdup(fmt_time(eta));
+<       |                                    ^~~
+2280,2289d2286
+< packet.c: In function 'ssh_packet_get_rekey_timeout':
+< packet.c:2156:42: warning: conversion to 'long unsigned int' from 'time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+<  2156 |         seconds = ssh->state->rekey_time + ssh->state->rekey_interval -
+<       |                                          ^
+< packet.c:2156:71: warning: conversion to 'long unsigned int' from 'time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+<  2156 |         seconds = ssh->state->rekey_time + ssh->state->rekey_interval -
+<       |                                                                       ^
+< packet.c:2156:19: warning: conversion to 'time_t' {aka 'long int'} from 'long unsigned int' may change the sign of the result [-Wsign-conversion]
+<  2156 |         seconds = ssh->state->rekey_time + ssh->state->rekey_interval -
+<       |                   ^~~
+2612c2609
+< misc.c:639:16: warning: conversion to 'long long unsigned int' from 'time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> misc.c:639:16: warning: conversion to 'long long unsigned int' from 'time_t' {aka 'long long int'} may change the sign of the result [-Wsign-conversion]
+2634a2632,2639
+> misc.c: In function 'ms_subtract_diff':
+> misc.c:1646:16: warning: conversion from 'long long int' to 'int' may change value [-Wconversion]
+>  1646 |         *ms -= (diff.tv_sec * 1000) + (diff.tv_usec / 1000);
+>       |                ^
+> misc.c: In function 'monotime_double':
+> misc.c:1714:26: warning: conversion from '__time64_t' {aka 'long long int'} to 'double' may change value [-Wconversion]
+>  1714 |         return ts.tv_sec + ((double)ts.tv_nsec / 1000000000);
+>       |                          ^
+2645c2650
+< misc.c:1751:30: warning: conversion from 'u_int64_t' {aka 'long long unsigned int'} to '__time_t' {aka 'long int'} may change value [-Wconversion]
+---
+> misc.c:1751:30: warning: conversion to '__time64_t' {aka 'long long int'} from 'u_int64_t' {aka 'long long unsigned int'} may change the sign of the result [-Wsign-conversion]
+2648c2653
+< misc.c:1752:31: warning: conversion from 'u_int64_t' {aka 'long long unsigned int'} to '__suseconds_t' {aka 'long int'} may change value [-Wconversion]
+---
+> misc.c:1752:31: warning: conversion to '__suseconds64_t' {aka 'long long int'} from 'u_int64_t' {aka 'long long unsigned int'} may change the sign of the result [-Wsign-conversion]
+2650a2656,2658
+> misc.c:1768:17: warning: conversion from '__suseconds64_t' {aka 'long long int'} to 'long int' may change value [-Wconversion]
+>  1768 |                 TIMEVAL_TO_TIMESPEC(&bw->bwend, &ts);
+>       |                 ^~~~~~~~~~~~~~~~~~~
+2664c2672
+< misc.c:2461:21: warning: conversion from 'uint64_t' {aka 'long long unsigned int'} to 'time_t' {aka 'long int'} may change value [-Wconversion]
+---
+> misc.c:2461:21: warning: conversion to 'time_t' {aka 'long long int'} from 'long long unsigned int' may change the sign of the result [-Wsign-conversion]
+4496c4504
+< clientloop.c:376:39: warning: conversion to 'u_int' {aka 'unsigned int'} from 'long int' may change the sign of the result [-Wsign-conversion]
+---
+> clientloop.c:376:39: warning: conversion from 'time_t' {aka 'long long int'} to 'u_int' {aka 'unsigned int'} may change value [-Wconversion]
+4498a4507,4526
+> In file included from clientloop.c:106:
+> clientloop.c: In function 'client_wait_until_can_do_something':
+> misc.h:228:25: warning: conversion from 'time_t' {aka 'long long int'} to 'int' may change value [-Wconversion]
+>   228 | #define MAXIMUM(a, b)   (((a) > (b)) ? (a) : (b))
+>       |                         ^
+> clientloop.c:555:32: note: in expansion of macro 'MAXIMUM'
+>   555 |                 timeout_secs = MAXIMUM(server_alive_time - now, 0);
+>       |                                ^~~~~~~
+> misc.h:227:25: warning: conversion from 'time_t' {aka 'long long int'} to 'int' may change value [-Wconversion]
+>   227 | #define MINIMUM(a, b)   (((a) < (b)) ? (a) : (b))
+>       |                         ^
+> clientloop.c:557:32: note: in expansion of macro 'MINIMUM'
+>   557 |                 timeout_secs = MINIMUM(timeout_secs,
+>       |                                ^~~~~~~
+> misc.h:227:25: warning: conversion from 'time_t' {aka 'long long int'} to 'int' may change value [-Wconversion]
+>   227 | #define MINIMUM(a, b)   (((a) < (b)) ? (a) : (b))
+>       |                         ^
+> clientloop.c:561:32: note: in expansion of macro 'MINIMUM'
+>   561 |                 timeout_secs = MINIMUM(timeout_secs,
+>       |                                ^~~~~~~
+4839c4867
+< serverloop.c:235:29: warning: conversion from 'u_int64_t' {aka 'long long unsigned int'} to '__time_t' {aka 'long int'} may change value [-Wconversion]
+---
+> serverloop.c:235:29: warning: conversion to '__time64_t' {aka 'long long int'} from 'u_int64_t' {aka 'long long unsigned int'} may change the sign of the result [-Wsign-conversion]
+4842c4870
+< serverloop.c:236:30: warning: conversion from 'u_int64_t' {aka 'long long unsigned int'} to '__syscall_slong_t' {aka 'long int'} may change value [-Wconversion]
+---
+> serverloop.c:236:30: warning: conversion from 'u_int64_t' {aka 'long long unsigned int'} to 'long int' may change value [-Wconversion]
+4852c4880
+< serverloop.c:369:44: warning: conversion to 'u_int64_t' {aka 'long long unsigned int'} from 'long int' may change the sign of the result [-Wsign-conversion]
+---
+> serverloop.c:369:44: warning: conversion to 'u_int64_t' {aka 'long long unsigned int'} from 'time_t' {aka 'long long int'} may change the sign of the result [-Wsign-conversion]
+4905c4933
+< auth2.c:252:21: warning: conversion from 'double' to '__time_t' {aka 'long int'} may change value [-Wfloat-conversion]
+---
+> auth2.c:252:21: warning: conversion from 'double' to '__time64_t' {aka 'long long int'} may change value [-Wfloat-conversion]
+4908c4936,4939
+< auth2.c:253:22: warning: conversion from 'double' to '__syscall_slong_t' {aka 'long int'} may change value [-Wfloat-conversion]
+---
+> auth2.c:253:30: warning: conversion from '__time64_t' {aka 'long long int'} to 'double' may change value [-Wconversion]
+>   253 |         ts.tv_nsec = (remain - ts.tv_sec) * 1000000000;
+>       |                              ^
+> auth2.c:253:22: warning: conversion from 'double' to 'long int' may change value [-Wfloat-conversion]
+5214c5245
+< loginrec.c:416:22: warning: conversion to 'unsigned int' from '__time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> loginrec.c:416:22: warning: conversion from '__time64_t' {aka 'long long int'} to 'unsigned int' may change value [-Wconversion]
+5217c5248
+< loginrec.c:417:23: warning: conversion to 'unsigned int' from '__suseconds_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> loginrec.c:417:23: warning: conversion from '__suseconds64_t' {aka 'long long int'} to 'unsigned int' may change value [-Wconversion]
+5234,5240d5264
+< loginrec.c: In function 'set_utmp_time':
+< loginrec.c:642:28: warning: conversion to '__time_t' {aka 'long int'} from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+<   642 |         ut->ut_tv.tv_sec = li->tv_sec;
+<       |                            ^~
+< loginrec.c:643:29: warning: conversion to '__suseconds_t' {aka 'long int'} from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+<   643 |         ut->ut_tv.tv_usec = li->tv_usec;
+<       |                             ^~
+5305,5307c5329,5339
+< arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/recipe-sysroot -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/openssh-9.1p1=/usr/src/debug/openssh/9.1p1-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/openssh-9.1p1=/usr/src/debug/openssh/9.1p1-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/openssh-9.1p1=/usr/src/debug/openssh/9.1p1-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/openssh-9.1p1=/usr/src/debug/openssh/9.1p1-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/recipe-sysroot-native=   -Wconversion -Wno-error -fno-builtin-memset -fstack-protector-strong   -I. -I.  -D_XOPEN_SOURCE=600 -D_BSD_SOURCE -D_DEFAULT_SOURCE -DSSHDIR=\"/etc/ssh\" -D_PATH_SSH_PROGRAM=\"/usr/bin/ssh\" -D_PATH_SSH_ASKPASS_DEFAULT=\"/usr/libexec/ssh-askpass\" -D_PATH_SFTP_SERVER=\"/usr/libexec/sftp-server\" -D_PATH_SSH_KEY_SIGN=\"/usr/libexec/ssh-keysign\" -D_PATH_SSH_PKCS11_HELPER=\"/usr/libexec/ssh-pkcs11-helper\" -D_PATH_SSH_SK_HELPER=\"/usr/libexec/ssh-sk-helper\" -D_PATH_SSH_PIDDIR=\"/var/run\" -D_PATH_PRIVSEP_CHROOT_DIR=\"/var/run/sshd\" -DHAVE_CONFIG_H -c auth-shadow.c -o auth-shadow.o
+< arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/recipe-sysroot -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/openssh-9.1p1=/usr/src/debug/openssh/9.1p1-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/openssh-9.1p1=/usr/src/debug/openssh/9.1p1-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/openssh-9.1p1=/usr/src/debug/openssh/9.1p1-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/openssh-9.1p1=/usr/src/debug/openssh/9.1p1-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/recipe-sysroot-native=   -Wconversion -Wno-error -fno-builtin-memset -fstack-protector-strong   -I. -I.  -D_XOPEN_SOURCE=600 -D_BSD_SOURCE -D_DEFAULT_SOURCE -DSSHDIR=\"/etc/ssh\" -D_PATH_SSH_PROGRAM=\"/usr/bin/ssh\" -D_PATH_SSH_ASKPASS_DEFAULT=\"/usr/libexec/ssh-askpass\" -D_PATH_SFTP_SERVER=\"/usr/libexec/sftp-server\" -D_PATH_SSH_KEY_SIGN=\"/usr/libexec/ssh-keysign\" -D_PATH_SSH_PKCS11_HELPER=\"/usr/libexec/ssh-pkcs11-helper\" -D_PATH_SSH_SK_HELPER=\"/usr/libexec/ssh-sk-helper\" -D_PATH_SSH_PIDDIR=\"/var/run\" -D_PATH_PRIVSEP_CHROOT_DIR=\"/var/run/sshd\" -DHAVE_CONFIG_H -c auth-sia.c -o auth-sia.o
+< arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/recipe-sysroot -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/openssh-9.1p1=/usr/src/debug/openssh/9.1p1-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/openssh-9.1p1=/usr/src/debug/openssh/9.1p1-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/openssh-9.1p1=/usr/src/debug/openssh/9.1p1-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/openssh-9.1p1=/usr/src/debug/openssh/9.1p1-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/recipe-sysroot-native=   -Wconversion -Wno-error -fno-builtin-memset -fstack-protector-strong   -I. -I.  -D_XOPEN_SOURCE=600 -D_BSD_SOURCE -D_DEFAULT_SOURCE -DSSHDIR=\"/etc/ssh\" -D_PATH_SSH_PROGRAM=\"/usr/bin/ssh\" -D_PATH_SSH_ASKPASS_DEFAULT=\"/usr/libexec/ssh-askpass\" -D_PATH_SFTP_SERVER=\"/usr/libexec/sftp-server\" -D_PATH_SSH_KEY_SIGN=\"/usr/libexec/ssh-keysign\" -D_PATH_SSH_PKCS11_HELPER=\"/usr/libexec/ssh-pkcs11-helper\" -D_PATH_SSH_SK_HELPER=\"/usr/libexec/ssh-sk-helper\" -D_PATH_SSH_PIDDIR=\"/var/run\" -D_PATH_PRIVSEP_CHROOT_DIR=\"/var/run/sshd\" -DHAVE_CONFIG_H -c srclimit.c -o srclimit.o
+---
+> arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/recipe-sysroot -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/openssh-9.1p1=/usr/src/debug/openssh/9.1p1-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/openssh-9.1p1=/usr/src/debug/openssh/9.1p1-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/openssh-9.1p1=/usr/src/debug/openssh/9.1p1-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/openssh-9.1p1=/usr/src/debug/openssh/9.1p1-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/recipe-sysroot-native=   -Wconversion -Wno-error -fno-builtin-memset -fstack-protector-strong   -I. -I.   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -D_XOPEN_SOURCE=600 -D_BSD_SOURCE -D_DEFAULT_SOURCE -DSSHDIR=\"/etc/ssh\" -D_PATH_SSH_PROGRAM=\"/usr/bin/ssh\" -D_PATH_SSH_ASKPASS_DEFAULT=\"/usr/libexec/ssh-askpass\" -D_PATH_SFTP_SERVER=\"/usr/libexec/sftp-server\" -D_PATH_SSH_KEY_SIGN=\"/usr/libexec/ssh-keysign\" -D_PATH_SSH_PKCS11_HELPER=\"/usr/libexec/ssh-pkcs11-helper\" -D_PATH_SSH_SK_HELPER=\"/usr/libexec/ssh-sk-helper\" -D_PATH_SSH_PIDDIR=\"/var/run\" -D_PATH_PRIVSEP_CHROOT_DIR=\"/var/run/sshd\" -DHAVE_CONFIG_H -c auth-shadow.c -o auth-shadow.o
+> auth-shadow.c: In function 'auth_shadow_acctexpired':
+> auth-shadow.c:63:20: warning: conversion from 'time_t' {aka 'long long int'} to 'int' may change value [-Wconversion]
+>    63 |         daysleft = spw->sp_expire - today;
+>       |                    ^~~
+> auth-shadow.c: In function 'auth_shadow_pwexpired':
+> auth-shadow.c:120:20: warning: conversion from 'time_t' {aka 'long long int'} to 'int' may change value [-Wconversion]
+>   120 |         daysleft = spw->sp_lstchg + spw->sp_max - today;
+>       |                    ^~~
+> arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/recipe-sysroot -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/openssh-9.1p1=/usr/src/debug/openssh/9.1p1-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/openssh-9.1p1=/usr/src/debug/openssh/9.1p1-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/openssh-9.1p1=/usr/src/debug/openssh/9.1p1-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/openssh-9.1p1=/usr/src/debug/openssh/9.1p1-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/recipe-sysroot-native=   -Wconversion -Wno-error -fno-builtin-memset -fstack-protector-strong   -I. -I.   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -D_XOPEN_SOURCE=600 -D_BSD_SOURCE -D_DEFAULT_SOURCE -DSSHDIR=\"/etc/ssh\" -D_PATH_SSH_PROGRAM=\"/usr/bin/ssh\" -D_PATH_SSH_ASKPASS_DEFAULT=\"/usr/libexec/ssh-askpass\" -D_PATH_SFTP_SERVER=\"/usr/libexec/sftp-server\" -D_PATH_SSH_KEY_SIGN=\"/usr/libexec/ssh-keysign\" -D_PATH_SSH_PKCS11_HELPER=\"/usr/libexec/ssh-pkcs11-helper\" -D_PATH_SSH_SK_HELPER=\"/usr/libexec/ssh-sk-helper\" -D_PATH_SSH_PIDDIR=\"/var/run\" -D_PATH_PRIVSEP_CHROOT_DIR=\"/var/run/sshd\" -DHAVE_CONFIG_H -c auth-sia.c -o auth-sia.o
+> arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/recipe-sysroot -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/openssh-9.1p1=/usr/src/debug/openssh/9.1p1-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/openssh-9.1p1=/usr/src/debug/openssh/9.1p1-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/openssh-9.1p1=/usr/src/debug/openssh/9.1p1-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/openssh-9.1p1=/usr/src/debug/openssh/9.1p1-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/recipe-sysroot-native=   -Wconversion -Wno-error -fno-builtin-memset -fstack-protector-strong   -I. -I.   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -D_XOPEN_SOURCE=600 -D_BSD_SOURCE -D_DEFAULT_SOURCE -DSSHDIR=\"/etc/ssh\" -D_PATH_SSH_PROGRAM=\"/usr/bin/ssh\" -D_PATH_SSH_ASKPASS_DEFAULT=\"/usr/libexec/ssh-askpass\" -D_PATH_SFTP_SERVER=\"/usr/libexec/sftp-server\" -D_PATH_SSH_KEY_SIGN=\"/usr/libexec/ssh-keysign\" -D_PATH_SSH_PKCS11_HELPER=\"/usr/libexec/ssh-pkcs11-helper\" -D_PATH_SSH_SK_HELPER=\"/usr/libexec/ssh-sk-helper\" -D_PATH_SSH_PIDDIR=\"/var/run\" -D_PATH_PRIVSEP_CHROOT_DIR=\"/var/run/sshd\" -DHAVE_CONFIG_H -c srclimit.c -o srclimit.o
+5392,5405d5423
+< sftp-server.c: In function 'attrib_to_tv':
+< sftp-server.c:967:24: warning: conversion to '__time_t' {aka 'long int'} from 'u_int32_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+<   967 |         tv[0].tv_sec = a->atime;
+<       |                        ^
+< sftp-server.c:969:24: warning: conversion to '__time_t' {aka 'long int'} from 'u_int32_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+<   969 |         tv[1].tv_sec = a->mtime;
+<       |                        ^
+< sftp-server.c: In function 'attrib_to_ts':
+< sftp-server.c:979:24: warning: conversion to '__time_t' {aka 'long int'} from 'u_int32_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+<   979 |         ts[0].tv_sec = a->atime;
+<       |                        ^
+< sftp-server.c:981:24: warning: conversion to '__time_t' {aka 'long int'} from 'u_int32_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+<   981 |         ts[1].tv_sec = a->mtime;
+<       |                        ^
+5410,5412d5427
+< sftp-server.c:1013:28: warning: conversion to 'time_t' {aka 'long int'} from 'u_int32_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+<  1013 |                 time_t t = a.mtime;
+<       |                            ^
+5420,5422d5434
+< sftp-server.c:1070:36: warning: conversion to 'time_t' {aka 'long int'} from 'u_int32_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+<  1070 |                         time_t t = a.mtime;
+<       |                                    ^
+5489,5491d5500
+< sftp-server.c:1493:28: warning: conversion to 'time_t' {aka 'long int'} from 'u_int32_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+<  1493 |                 time_t t = a.mtime;
+<       |                            ^
+5545c5554
+< sftp-common.c:80:20: warning: conversion to 'u_int32_t' {aka 'unsigned int'} from '__time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> sftp-common.c:80:20: warning: conversion from '__time64_t' {aka 'long long int'} to 'u_int32_t' {aka 'unsigned int'} may change value [-Wconversion]
+5548c5557
+< sftp-common.c:81:20: warning: conversion to 'u_int32_t' {aka 'unsigned int'} from '__time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> sftp-common.c:81:20: warning: conversion from '__time64_t' {aka 'long long int'} to 'u_int32_t' {aka 'unsigned int'} may change value [-Wconversion]
+5555,5560d5563
+< sftp-common.c:99:32: warning: conversion to '__time_t' {aka 'long int'} from 'u_int32_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+<    99 |                 st->st_atime = a->atime;
+<       |                                ^
+< sftp-common.c:100:32: warning: conversion to '__time_t' {aka 'long int'} from 'u_int32_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+<   100 |                 st->st_mtime = a->mtime;
+<       |                                ^
+5780c5783
+< ssh-keygen.c:1916:20: warning: conversion to 'long long unsigned int' from 'time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ssh-keygen.c:1916:20: warning: conversion to 'long long unsigned int' from 'time_t' {aka 'long long int'} may change the sign of the result [-Wsign-conversion]
+5784c5787
+< ssh-keygen.c:1945:33: warning: conversion to 'u_int64_t' {aka 'long long unsigned int'} from 'int64_t' {aka 'long long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ssh-keygen.c:1945:33: warning: conversion to 'u_int64_t' {aka 'long long unsigned int'} from 'long long int' may change the sign of the result [-Wsign-conversion]
+5787c5790
+< ssh-keygen.c:1950:35: warning: conversion to 'u_int64_t' {aka 'long long unsigned int'} from 'long int' may change the sign of the result [-Wsign-conversion]
+---
+> ssh-keygen.c:1950:35: warning: conversion to 'u_int64_t' {aka 'long long unsigned int'} from 'time_t' {aka 'long long int'} may change the sign of the result [-Wsign-conversion]
+6020,6027c6023
+< arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/recipe-sysroot -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/openssh-9.1p1=/usr/src/debug/openssh/9.1p1-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/openssh-9.1p1=/usr/src/debug/openssh/9.1p1-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/openssh-9.1p1=/usr/src/debug/openssh/9.1p1-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/openssh-9.1p1=/usr/src/debug/openssh/9.1p1-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/recipe-sysroot-native=   -Wconversion -Wno-error -fno-builtin-memset -fstack-protector-strong   -I. -I.  -D_XOPEN_SOURCE=600 -D_BSD_SOURCE -D_DEFAULT_SOURCE -DSSHDIR=\"/etc/ssh\" -D_PATH_SSH_PROGRAM=\"/usr/bin/ssh\" -D_PATH_SSH_ASKPASS_DEFAULT=\"/usr/libexec/ssh-askpass\" -D_PATH_SFTP_SERVER=\"/usr/libexec/sftp-server\" -D_PATH_SSH_KEY_SIGN=\"/usr/libexec/ssh-keysign\" -D_PATH_SSH_PKCS11_HELPER=\"/usr/libexec/ssh-pkcs11-helper\" -D_PATH_SSH_SK_HELPER=\"/usr/libexec/ssh-sk-helper\" -D_PATH_SSH_PIDDIR=\"/var/run\" -D_PATH_PRIVSEP_CHROOT_DIR=\"/var/run/sshd\" -DHAVE_CONFIG_H -c ssh-agent.c -o ssh-agent.o
+< ssh-agent.c: In function 'parse_key_constraints':
+< ssh-agent.c:1148:46: warning: conversion to 'long unsigned int' from 'time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+<  1148 |                         *deathp = monotime() + seconds;
+<       |                                              ^
+< ssh-agent.c:1148:35: warning: conversion to 'time_t' {aka 'long int'} from 'long unsigned int' may change the sign of the result [-Wsign-conversion]
+<  1148 |                         *deathp = monotime() + seconds;
+<       |                                   ^~~~~~~~
+---
+> arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/recipe-sysroot -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/openssh-9.1p1=/usr/src/debug/openssh/9.1p1-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/openssh-9.1p1=/usr/src/debug/openssh/9.1p1-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/openssh-9.1p1=/usr/src/debug/openssh/9.1p1-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/openssh-9.1p1=/usr/src/debug/openssh/9.1p1-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/recipe-sysroot-native=   -Wconversion -Wno-error -fno-builtin-memset -fstack-protector-strong   -I. -I.   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -D_XOPEN_SOURCE=600 -D_BSD_SOURCE -D_DEFAULT_SOURCE -DSSHDIR=\"/etc/ssh\" -D_PATH_SSH_PROGRAM=\"/usr/bin/ssh\" -D_PATH_SSH_ASKPASS_DEFAULT=\"/usr/libexec/ssh-askpass\" -D_PATH_SFTP_SERVER=\"/usr/libexec/sftp-server\" -D_PATH_SSH_KEY_SIGN=\"/usr/libexec/ssh-keysign\" -D_PATH_SSH_PKCS11_HELPER=\"/usr/libexec/ssh-pkcs11-helper\" -D_PATH_SSH_SK_HELPER=\"/usr/libexec/ssh-sk-helper\" -D_PATH_SSH_PIDDIR=\"/var/run\" -D_PATH_PRIVSEP_CHROOT_DIR=\"/var/run/sshd\" -DHAVE_CONFIG_H -c ssh-agent.c -o ssh-agent.o
+6050a6047,6050
+> ssh-agent.c: In function 'prepare_poll':
+> ssh-agent.c:1941:37: warning: conversion from 'time_t' {aka 'long long int'} to 'int' may change value [-Wconversion]
+>  1941 |                         *timeoutp = deadline * 1000;
+>       |                                     ^~~~~~~~
+6226c6226
+< scp.c:1673:40: warning: conversion from 'long long unsigned int' to '__time_t' {aka 'long int'} may change value [-Wconversion]
+---
+> scp.c:1673:40: warning: conversion to '__time64_t' {aka 'long long int'} from 'long long unsigned int' may change the sign of the result [-Wsign-conversion]
+6229c6229
+< scp.c:1685:40: warning: conversion from 'long long unsigned int' to '__time_t' {aka 'long int'} may change value [-Wconversion]
+---
+> scp.c:1685:40: warning: conversion to '__time64_t' {aka 'long long int'} from 'long long unsigned int' may change the sign of the result [-Wsign-conversion]
+6473,6485d6472
+< sftp-client.c:1837:40: warning: conversion to '__time_t' {aka 'long int'} from 'u_int32_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+<  1837 |                         tv[0].tv_sec = a->atime;
+<       |                                        ^
+< sftp-client.c:1838:40: warning: conversion to '__time_t' {aka 'long int'} from 'u_int32_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+<  1838 |                         tv[1].tv_sec = a->mtime;
+<       |                                        ^
+< sftp-client.c: In function 'download_dir_internal':
+< sftp-client.c:1950:40: warning: conversion to '__time_t' {aka 'long int'} from 'u_int32_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+<  1950 |                         tv[0].tv_sec = dirattrib->atime;
+<       |                                        ^~~~~~~~~
+< sftp-client.c:1951:40: warning: conversion to '__time_t' {aka 'long int'} from 'u_int32_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+<  1951 |                         tv[1].tv_sec = dirattrib->mtime;
+<       |                                        ^~~~~~~~~

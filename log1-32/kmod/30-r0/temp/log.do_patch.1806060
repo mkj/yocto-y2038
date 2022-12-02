@@ -1,0 +1,69 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: ['quilt-native', 'patch-native', 'libtool-native', 'attr-native', 'texinfo-dummy-native', 'gettext-minimal-native']
+NOTE: Skipping as already exists in sysroot: []
+DEBUG: sed -e 's:^[^/]*/:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot-native/:g' /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/quilt-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/libtool-native/fixmepath | xargs sed -i -e 's:FIXMESTAGINGDIRTARGET:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot:g; s:FIXMESTAGINGDIRHOST:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot-native:g' -e 's:FIXME_PSEUDO_SYSROOT:/home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/pseudo-native:g' -e 's:FIXME_HOSTTOOLS_DIR:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:g' -e 's:FIXME_PKGDATA_DIR:/home/matt/tmp/build/obmc-y2038/tmp/pkgdata/evb-ast2600:g' -e 's:FIXME_PSEUDO_LOCALSTATEDIR:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/pseudo/:g' -e 's:FIXME_LOGFIFO:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/temp/fifo.1806060:g'
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function do_patch
+DEBUG: Executing python function patch_do_patch
+DEBUG: Searching for depmod-search.conf in paths:
+    /home/matt/src/openbmc/meta/recipes-kernel/kmod/kmod-30/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-kernel/kmod/kmod/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-kernel/kmod/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-kernel/kmod/kmod-30/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-kernel/kmod/kmod/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-kernel/kmod/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-kernel/kmod/kmod-30/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-kernel/kmod/kmod/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-kernel/kmod/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-kernel/kmod/kmod-30/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-kernel/kmod/kmod/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-kernel/kmod/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-kernel/kmod/kmod-30/aspeed
+    /home/matt/src/openbmc/meta/recipes-kernel/kmod/kmod/aspeed
+    /home/matt/src/openbmc/meta/recipes-kernel/kmod/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-kernel/kmod/kmod-30/armv7a
+    /home/matt/src/openbmc/meta/recipes-kernel/kmod/kmod/armv7a
+    /home/matt/src/openbmc/meta/recipes-kernel/kmod/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-kernel/kmod/kmod-30/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-kernel/kmod/kmod/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-kernel/kmod/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-kernel/kmod/kmod-30/arm
+    /home/matt/src/openbmc/meta/recipes-kernel/kmod/kmod/arm
+    /home/matt/src/openbmc/meta/recipes-kernel/kmod/files/arm
+    /home/matt/src/openbmc/meta/recipes-kernel/kmod/kmod-30/
+    /home/matt/src/openbmc/meta/recipes-kernel/kmod/kmod/
+    /home/matt/src/openbmc/meta/recipes-kernel/kmod/files/
+DEBUG: Searching for avoid_parallel_tests.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-kernel/kmod/kmod-30/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-kernel/kmod/kmod/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-kernel/kmod/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-kernel/kmod/kmod-30/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-kernel/kmod/kmod/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-kernel/kmod/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-kernel/kmod/kmod-30/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-kernel/kmod/kmod/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-kernel/kmod/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-kernel/kmod/kmod-30/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-kernel/kmod/kmod/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-kernel/kmod/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-kernel/kmod/kmod-30/aspeed
+    /home/matt/src/openbmc/meta/recipes-kernel/kmod/kmod/aspeed
+    /home/matt/src/openbmc/meta/recipes-kernel/kmod/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-kernel/kmod/kmod-30/armv7a
+    /home/matt/src/openbmc/meta/recipes-kernel/kmod/kmod/armv7a
+    /home/matt/src/openbmc/meta/recipes-kernel/kmod/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-kernel/kmod/kmod-30/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-kernel/kmod/kmod/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-kernel/kmod/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-kernel/kmod/kmod-30/arm
+    /home/matt/src/openbmc/meta/recipes-kernel/kmod/kmod/arm
+    /home/matt/src/openbmc/meta/recipes-kernel/kmod/files/arm
+    /home/matt/src/openbmc/meta/recipes-kernel/kmod/kmod-30/
+    /home/matt/src/openbmc/meta/recipes-kernel/kmod/kmod/
+    /home/matt/src/openbmc/meta/recipes-kernel/kmod/files/
+NOTE: Applying patch 'avoid_parallel_tests.patch' (../../../src/openbmc/meta/recipes-kernel/kmod/kmod/avoid_parallel_tests.patch)
+DEBUG: Python function patch_do_patch finished
+DEBUG: Python function do_patch finished
+DEBUG: Executing python function do_qa_patch
+DEBUG: Python function do_qa_patch finished

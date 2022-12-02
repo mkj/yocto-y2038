@@ -1,0 +1,272 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-cross_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-native_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/opkg-utils/opkg-utils_0.5.0.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-core/gettext/gettext_0.21.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/autoconf/autoconf_2.71.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/automake/automake_1.16.5.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: []
+NOTE: Skipping as already exists in sysroot: ['glibc', 'gcc-cross-arm', 'gcc-runtime', 'libtool-cross', 'libtool-native', 'opkg-utils', 'quilt-native', 'gettext-native', 'autoconf-native', 'automake-native', 'patch-native', 'pseudo-native', 'texinfo-dummy-native', 'gettext-minimal-native', 'linux-libc-headers', 'libgcc', 'flex-native', 'xz-native', 'zlib-native', 'zstd-native', 'binutils-cross-arm', 'mpfr-native', 'gnu-config-native', 'libmpc-native', 'gmp-native', 'attr-native', 'm4-native']
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function autotools_aclocals
+DEBUG: SITE files ['endian-little', 'bit-32', 'arm-common', 'arm-32', 'common-linux', 'common-glibc', 'arm-linux', 'arm-linux-gnueabi', 'common']
+DEBUG: Python function autotools_aclocals finished
+DEBUG: Executing shell function do_install
+NOTE: make -j 1 DESTDIR=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image install
+Making install in src
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/build/src'
+Making install in liblzma
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/build/src/liblzma'
+Making install in api
+make[3]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/build/src/liblzma/api'
+make[4]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/build/src/liblzma/api'
+make[4]: Nothing to be done for 'install-exec-am'.
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/include'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/include/lzma'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644  ../../../../xz-5.2.7/src/liblzma/api/lzma/base.h ../../../../xz-5.2.7/src/liblzma/api/lzma/bcj.h ../../../../xz-5.2.7/src/liblzma/api/lzma/block.h ../../../../xz-5.2.7/src/liblzma/api/lzma/check.h ../../../../xz-5.2.7/src/liblzma/api/lzma/container.h ../../../../xz-5.2.7/src/liblzma/api/lzma/delta.h ../../../../xz-5.2.7/src/liblzma/api/lzma/filter.h ../../../../xz-5.2.7/src/liblzma/api/lzma/hardware.h ../../../../xz-5.2.7/src/liblzma/api/lzma/index.h ../../../../xz-5.2.7/src/liblzma/api/lzma/index_hash.h ../../../../xz-5.2.7/src/liblzma/api/lzma/lzma12.h ../../../../xz-5.2.7/src/liblzma/api/lzma/stream_flags.h ../../../../xz-5.2.7/src/liblzma/api/lzma/version.h ../../../../xz-5.2.7/src/liblzma/api/lzma/vli.h '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/include/lzma'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644  ../../../../xz-5.2.7/src/liblzma/api/lzma.h '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/include/.'
+make[4]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/build/src/liblzma/api'
+make[3]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/build/src/liblzma/api'
+make[3]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/build/src/liblzma'
+make[4]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/build/src/liblzma'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/lib'
+ /bin/bash ../../libtool   --mode=install /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c   liblzma.la '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/lib'
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c .libs/liblzma.so.5.2.7 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/lib/liblzma.so.5.2.7
+libtool: install: (cd /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/lib && { ln -s -f liblzma.so.5.2.7 liblzma.so.5 || { rm -f liblzma.so.5 && ln -s liblzma.so.5.2.7 liblzma.so.5; }; })
+libtool: install: (cd /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/lib && { ln -s -f liblzma.so.5.2.7 liblzma.so || { rm -f liblzma.so && ln -s liblzma.so.5.2.7 liblzma.so; }; })
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c .libs/liblzma.lai /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/lib/liblzma.la
+libtool: warning: remember to run 'libtool --finish /usr/lib'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/lib/pkgconfig'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 liblzma.pc '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/lib/pkgconfig'
+make[4]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/build/src/liblzma'
+make[3]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/build/src/liblzma'
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/build/src/liblzma'
+Making install in xzdec
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/build/src/xzdec'
+make[3]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/build/src/xzdec'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/bin'
+  /bin/bash ../../libtool   --mode=install /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c xzdec lzmadec '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/bin'
+libtool: warning: '../../src/liblzma/liblzma.la' has not been installed in '/usr/lib'
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c .libs/xzdec /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/bin/xzdec
+libtool: warning: '../../src/liblzma/liblzma.la' has not been installed in '/usr/lib'
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c .libs/lzmadec /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/bin/lzmadec
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/share/man/man1'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../../../xz-5.2.7/src/xzdec/xzdec.1 '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/share/man/man1'
+make  install-data-hook
+make[4]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/build/src/xzdec'
+languages= ; \
+if test "yes" = yes && test -d "../../../xz-5.2.7/po4a/man"; then \
+	languages=`ls "../../../xz-5.2.7/po4a/man"`; \
+fi; \
+target=`echo xzdec | sed 's,x,x,'` && \
+link=`echo lzmadec | sed 's,x,x,'` && \
+for lang in . $languages; do \
+	man="../../../xz-5.2.7/po4a/man/$lang/xzdec.1" ; \
+	if test -f "$man"; then \
+		make dist_man_MANS="$man" man_MANS= \
+			mandir="/usr/share/man/$lang" install-man; \
+	fi; \
+	man1dir="/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/share/man/$lang/man1" && \
+	if test -f "$man1dir/$target.1"; then \
+		if test -n "lzmadec"; then ( \
+			cd "$man1dir" && \
+			rm -f "$link.1" && \
+			ln -s "$target.1" "$link.1" \
+		); fi; \
+	fi; \
+done
+make[5]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/build/src/xzdec'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/share/man/de/man1'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../../../xz-5.2.7/po4a/man/de/xzdec.1 '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/share/man/de/man1'
+make[5]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/build/src/xzdec'
+make[5]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/build/src/xzdec'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/share/man/fr_FR/man1'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../../../xz-5.2.7/po4a/man/fr_FR/xzdec.1 '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/share/man/fr_FR/man1'
+make[5]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/build/src/xzdec'
+make[4]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/build/src/xzdec'
+make[3]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/build/src/xzdec'
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/build/src/xzdec'
+Making install in xz
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/build/src/xz'
+make[3]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/build/src/xz'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/bin'
+  /bin/bash ../../libtool   --mode=install /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c xz '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/bin'
+libtool: warning: '../../src/liblzma/liblzma.la' has not been installed in '/usr/lib'
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c .libs/xz /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/bin/xz
+make  install-exec-hook
+make[4]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/build/src/xz'
+cd "/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/bin" && \
+target=`echo xz | sed 's,x,x,'` && \
+for name in unxz xzcat lzma unlzma lzcat; do \
+	link=`echo $name | sed 's,x,x,'` && \
+	rm -f "$link" && \
+	ln -s "$target" "$link"; \
+done
+make[4]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/build/src/xz'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/share/man/man1'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../../../xz-5.2.7/src/xz/xz.1 '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/share/man/man1'
+make  install-data-hook
+make[4]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/build/src/xz'
+languages= ; \
+if test "yes" = yes && test -d "../../../xz-5.2.7/po4a/man"; then \
+	languages=`ls "../../../xz-5.2.7/po4a/man"`; \
+fi; \
+target=`echo xz | sed 's,x,x,'` && \
+for lang in . $languages; do \
+	man="../../../xz-5.2.7/po4a/man/$lang/xz.1" ; \
+	if test -f "$man"; then \
+		make dist_man_MANS="$man" man_MANS= \
+			mandir="/usr/share/man/$lang" install-man; \
+	fi; \
+	man1dir="/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/share/man/$lang/man1" && \
+	if test -f "$man1dir/$target.1"; then ( \
+		cd "$man1dir" && \
+		for name in unxz xzcat lzma unlzma lzcat; do \
+			link=`echo $name | sed 's,x,x,'` && \
+			rm -f "$link.1" && \
+			ln -s "$target.1" "$link.1"; \
+		done \
+	); fi; \
+done
+make[5]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/build/src/xz'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/share/man/de/man1'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../../../xz-5.2.7/po4a/man/de/xz.1 '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/share/man/de/man1'
+make[5]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/build/src/xz'
+make[5]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/build/src/xz'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/share/man/fr_FR/man1'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../../../xz-5.2.7/po4a/man/fr_FR/xz.1 '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/share/man/fr_FR/man1'
+make[5]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/build/src/xz'
+make[4]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/build/src/xz'
+make[3]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/build/src/xz'
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/build/src/xz'
+Making install in lzmainfo
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/build/src/lzmainfo'
+make[3]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/build/src/lzmainfo'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/bin'
+  /bin/bash ../../libtool   --mode=install /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c lzmainfo '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/bin'
+libtool: warning: '../../src/liblzma/liblzma.la' has not been installed in '/usr/lib'
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c .libs/lzmainfo /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/bin/lzmainfo
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/share/man/man1'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../../../xz-5.2.7/src/lzmainfo/lzmainfo.1 '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/share/man/man1'
+make[3]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/build/src/lzmainfo'
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/build/src/lzmainfo'
+Making install in scripts
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/build/src/scripts'
+make[3]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/build/src/scripts'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/bin'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c xzdiff xzgrep xzmore xzless '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/bin'
+make  install-exec-hook
+make[4]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/build/src/scripts'
+cd "/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/bin" && \
+for pair in xzdiff-xzcmp xzgrep-xzegrep xzgrep-xzfgrep xzdiff-lzdiff xzdiff-lzcmp xzgrep-lzgrep xzgrep-lzegrep xzgrep-lzfgrep xzmore-lzmore xzless-lzless; do \
+	target=`echo $pair | sed 's/-.*$//' | sed 's,x,x,'` && \
+	link=`echo $pair | sed 's/^.*-//' | sed 's,x,x,'` && \
+	rm -f "$link" && \
+	ln -s "$target" "$link"; \
+done
+make[4]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/build/src/scripts'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/share/man/man1'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../../../xz-5.2.7/src/scripts/xzdiff.1 ../../../xz-5.2.7/src/scripts/xzgrep.1 ../../../xz-5.2.7/src/scripts/xzmore.1 ../../../xz-5.2.7/src/scripts/xzless.1 '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/share/man/man1'
+make  install-data-hook
+make[4]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/build/src/scripts'
+languages= ; \
+if test "yes" = yes && test -d "../../../xz-5.2.7/po4a/man"; then \
+	languages=`ls "../../../xz-5.2.7/po4a/man"`; \
+fi; \
+for lang in $languages; do \
+	mans= ; \
+	for man in xzdiff.1 xzgrep.1 xzmore.1 xzless.1; do \
+		man="../../../xz-5.2.7/po4a/man/$lang/$man" ; \
+		if test -f "$man"; then \
+			mans="$mans $man"; \
+		fi; \
+	done; \
+	make dist_man_MANS="$mans" man_MANS= \
+			mandir="/usr/share/man/$lang" install-man; \
+done; \
+for lang in . $languages; do \
+	for pair in xzdiff-xzcmp xzgrep-xzegrep xzgrep-xzfgrep xzdiff-lzdiff xzdiff-lzcmp xzgrep-lzgrep xzgrep-lzegrep xzgrep-lzfgrep xzmore-lzmore xzless-lzless; do \
+		target=`echo $pair | sed 's/-.*$//' \
+				| sed 's,x,x,'` && \
+		link=`echo $pair | sed 's/^.*-//' \
+				| sed 's,x,x,'` && \
+		man1dir="/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/share/man/$lang/man1" && \
+		if test -f "$man1dir/$target.1"; then ( \
+			cd "$man1dir" && \
+			rm -f "$link.1" && \
+			ln -s "$target.1" "$link.1" \
+		); fi; \
+	done; \
+done
+make[5]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/build/src/scripts'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/share/man/de/man1'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../../../xz-5.2.7/po4a/man/de/xzdiff.1 ../../../xz-5.2.7/po4a/man/de/xzmore.1 ../../../xz-5.2.7/po4a/man/de/xzless.1 '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/share/man/de/man1'
+make[5]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/build/src/scripts'
+make[5]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/build/src/scripts'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/share/man/fr_FR/man1'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../../../xz-5.2.7/po4a/man/fr_FR/xzdiff.1 ../../../xz-5.2.7/po4a/man/fr_FR/xzmore.1 ../../../xz-5.2.7/po4a/man/fr_FR/xzless.1 '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/share/man/fr_FR/man1'
+make[5]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/build/src/scripts'
+make[4]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/build/src/scripts'
+make[3]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/build/src/scripts'
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/build/src/scripts'
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/build/src'
+make[3]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/build/src'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/build/src'
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/build/src'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/build/src'
+Making install in po
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/build/po'
+installing ../../xz-5.2.7/po/ca.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/share/locale/ca/LC_MESSAGES/xz.mo
+installing ../../xz-5.2.7/po/cs.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/share/locale/cs/LC_MESSAGES/xz.mo
+installing ../../xz-5.2.7/po/da.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/share/locale/da/LC_MESSAGES/xz.mo
+installing ../../xz-5.2.7/po/de.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/share/locale/de/LC_MESSAGES/xz.mo
+installing ../../xz-5.2.7/po/eo.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/share/locale/eo/LC_MESSAGES/xz.mo
+installing ../../xz-5.2.7/po/es.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/share/locale/es/LC_MESSAGES/xz.mo
+installing ../../xz-5.2.7/po/fi.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/share/locale/fi/LC_MESSAGES/xz.mo
+installing ../../xz-5.2.7/po/fr.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/share/locale/fr/LC_MESSAGES/xz.mo
+installing ../../xz-5.2.7/po/hr.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/share/locale/hr/LC_MESSAGES/xz.mo
+installing ../../xz-5.2.7/po/hu.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/share/locale/hu/LC_MESSAGES/xz.mo
+installing ../../xz-5.2.7/po/it.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/share/locale/it/LC_MESSAGES/xz.mo
+installing ../../xz-5.2.7/po/ko.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/share/locale/ko/LC_MESSAGES/xz.mo
+installing ../../xz-5.2.7/po/pl.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/share/locale/pl/LC_MESSAGES/xz.mo
+installing ../../xz-5.2.7/po/pt.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/share/locale/pt/LC_MESSAGES/xz.mo
+installing ../../xz-5.2.7/po/pt_BR.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/share/locale/pt_BR/LC_MESSAGES/xz.mo
+installing ../../xz-5.2.7/po/ro.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/share/locale/ro/LC_MESSAGES/xz.mo
+installing ../../xz-5.2.7/po/sr.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/share/locale/sr/LC_MESSAGES/xz.mo
+installing ../../xz-5.2.7/po/sv.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/share/locale/sv/LC_MESSAGES/xz.mo
+installing ../../xz-5.2.7/po/tr.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/share/locale/tr/LC_MESSAGES/xz.mo
+installing ../../xz-5.2.7/po/uk.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/share/locale/uk/LC_MESSAGES/xz.mo
+installing ../../xz-5.2.7/po/vi.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/share/locale/vi/LC_MESSAGES/xz.mo
+installing ../../xz-5.2.7/po/zh_CN.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/share/locale/zh_CN/LC_MESSAGES/xz.mo
+installing ../../xz-5.2.7/po/zh_TW.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/share/locale/zh_TW/LC_MESSAGES/xz.mo
+if test "xz" = "gettext-tools"; then \
+  /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/share/gettext/po; \
+  for file in Makefile.in.in remove-potcdate.sin quot.sed boldquot.sed en@quot.header en@boldquot.header insert-header.sin Rules-quot   Makevars.template; do \
+    /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../../xz-5.2.7/po/$file \
+		    /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/share/gettext/po/$file; \
+  done; \
+  for file in Makevars; do \
+    rm -f /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/share/gettext/po/$file; \
+  done; \
+else \
+  : ; \
+fi
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/build/po'
+Making install in tests
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/build/tests'
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/build/tests'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/build/tests'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/build/tests'
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/build'
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/build'
+make[2]: Nothing to be done for 'install-exec-am'.
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/share/doc/xz'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../xz-5.2.7/AUTHORS ../xz-5.2.7/COPYING ../xz-5.2.7/COPYING.GPLv2 ../xz-5.2.7/NEWS ../xz-5.2.7/README ../xz-5.2.7/THANKS ../xz-5.2.7/TODO ../xz-5.2.7/doc/faq.txt ../xz-5.2.7/doc/history.txt ../xz-5.2.7/doc/xz-file-format.txt ../xz-5.2.7/doc/lzma-file-format.txt '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/share/doc/xz'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/share/doc/xz/examples'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../xz-5.2.7/doc/examples/00_README.txt ../xz-5.2.7/doc/examples/01_compress_easy.c ../xz-5.2.7/doc/examples/02_decompress.c ../xz-5.2.7/doc/examples/03_compress_custom.c ../xz-5.2.7/doc/examples/04_compress_easy_mt.c ../xz-5.2.7/doc/examples/Makefile '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/share/doc/xz/examples'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/share/doc/xz/examples_old'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../xz-5.2.7/doc/examples_old/xz_pipe_comp.c ../xz-5.2.7/doc/examples_old/xz_pipe_decomp.c '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/image/usr/share/doc/xz/examples_old'
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/build'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/xz/5.2.7-r0/build'
+DEBUG: Shell function do_install finished
+DEBUG: Executing shell function remove_libtool_la
+DEBUG: Shell function remove_libtool_la finished

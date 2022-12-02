@@ -1,0 +1,1207 @@
+DEBUG: Executing shell function do_compile
+NOTE: make -j 1 -e MAKEFLAGS= ZLIB=yes DNS=yes SHARED=yes STRIP= LIBDIR=/usr/lib
+make -C lib all
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0/lib'
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot-native=   -Wconversion -Wno-error -fPIC -fvisibility=hidden   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64  -c -o init.o init.c
+init.c: In function 'pci_malloc':
+init.c:150:20: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  150 |   void *x = malloc(size);
+      |                    ^~~~
+init.c: In function 'pci_strdup':
+init.c:167:13: warning: conversion to 'int' from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  167 |   int len = strlen(s) + 1;
+      |             ^~~~~~
+init.c:169:16: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  169 |   memcpy(t, s, len);
+      |                ^~~
+init.c: In function 'pci_init_v35':
+init.c:286:27: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  286 |               a->method = probe_sequence[i];
+      |                           ^~~~~~~~~~~~~~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot-native=   -Wconversion -Wno-error -fPIC -fvisibility=hidden   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64  -c -o access.o access.c
+access.c: In function 'pci_link_dev':
+access.c:53:20: warning: conversion from 'int' to 'u16' {aka 'short unsigned int'} may change value [-Wconversion]
+   53 |     d->domain_16 = d->domain;
+      |                    ^
+access.c: In function 'pci_get_dev':
+access.c:64:12: warning: conversion from 'int' to 'u8' {aka 'unsigned char'} may change value [-Wconversion]
+   64 |   d->bus = bus;
+      |            ^~~
+access.c:65:12: warning: conversion from 'int' to 'u8' {aka 'unsigned char'} may change value [-Wconversion]
+   65 |   d->dev = dev;
+      |            ^~~
+access.c:66:13: warning: conversion from 'int' to 'u8' {aka 'unsigned char'} may change value [-Wconversion]
+   66 |   d->func = func;
+      |             ^~~~
+access.c: In function 'pci_read_data':
+access.c:98:33: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+   98 |     memcpy(buf, d->cache + pos, len);
+      |                                 ^~~
+access.c:100:23: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  100 |     memset(buf, 0xff, len);
+      |                       ^~~
+access.c: In function 'pci_write_data':
+access.c:145:33: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  145 |     memcpy(d->cache + pos, buf, len);
+      |                                 ^~~
+access.c: In function 'pci_write_block':
+access.c:175:35: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  175 |       memcpy(d->cache + pos, buf, l);
+      |                                   ^
+access.c: In function 'pci_fill_info_v38':
+access.c:194:25: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  194 |   unsigned int uflags = flags;
+      |                         ^~~~~
+access.c:197:14: warning: unsigned conversion from 'int' to 'unsigned int' changes value from '-65537' to '4294901759' [-Wsign-conversion]
+  197 |       uflags &= ~PCI_FILL_RESCAN;
+      |              ^~
+access.c:202:11: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  202 |   return d->known_fields;
+      |          ~^~~~~~~~~~~~~~
+access.c: In function 'pci_set_property':
+access.c:249:40: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  249 |   p = pci_malloc(d->access, sizeof(*p) + strlen(value));
+      |                             ~~~~~~~~~~~^~~~~~~~~~~~~~~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot-native=   -Wconversion -Wno-error -fPIC -fvisibility=hidden   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64  -c -o generic.o generic.c
+generic.c: In function 'pci_generic_scan_bus':
+generic.c:27:12: warning: conversion from 'int' to 'u8' {aka 'unsigned char'} may change value [-Wconversion]
+   27 |   t->bus = bus;
+      |            ^~~
+generic.c:30:16: warning: conversion from 'int' to 'u8' {aka 'unsigned char'} may change value [-Wconversion]
+   30 |       t->dev = dev;
+      |                ^~~
+generic.c:48:26: warning: conversion from 'u32' {aka 'unsigned int'} to 'u16' {aka 'short unsigned int'} may change value [-Wconversion]
+   48 |           d->device_id = vd >> 16U;
+      |                          ^~
+generic.c: In function 'pci_generic_fill_info':
+generic.c:118:64: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  118 |               d->subsys_vendor_id = pci_read_word(d, cap->addr + PCI_SSVID_VENDOR);
+generic.c:119:57: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  119 |               d->subsys_id = pci_read_word(d, cap->addr + PCI_SSVID_DEVICE);
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot-native=   -Wconversion -Wno-error -fPIC -fvisibility=hidden   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64  -c -o dump.o dump.c
+dump.c: In function 'dump_alloc_data':
+dump.c:37:75: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+   37 |   struct dump_data *dd = pci_malloc(dev->access, sizeof(struct dump_data) + len - 1);
+      |                                                                           ^
+dump.c:37:81: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+   37 |   struct dump_data *dd = pci_malloc(dev->access, sizeof(struct dump_data) + len - 1);
+      |                                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+dump.c:40:26: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+   40 |   memset(dd->data, 0xff, len);
+      |                          ^~~
+dump.c: In function 'dump_init':
+dump.c:115:31: warning: conversion from 'int' to 'byte' {aka 'unsigned char'} may change value [-Wconversion]
+  115 |               dd->data[i++] = j;
+      |                               ^
+dump.c: In function 'dump_read':
+dump.c:157:31: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  157 |   memcpy(buf, dd->data + pos, len);
+      |                               ^~~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot-native=   -Wconversion -Wno-error -fPIC -fvisibility=hidden   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64  -c -o names.o names.c
+names.c: In function 'format_name':
+names.c:76:25: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+   76 |     res = snprintf(buf, size, "%s", num);
+      |                         ^~~~
+names.c:78:25: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+   78 |     res = snprintf(buf, size, ((flags & PCI_LOOKUP_MIXED) ? "%s [%s]" : "%s %s"), unknown, num);
+      |                         ^~~~
+names.c:80:25: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+   80 |     res = snprintf(buf, size, "%s", name);
+      |                         ^~~~
+names.c:82:25: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+   82 |     res = snprintf(buf, size, "%s [%s]", name, num);
+      |                         ^~~~
+names.c: In function 'format_name_pair':
+names.c:97:25: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+   97 |     res = snprintf(buf, size, "%s", num);
+      |                         ^~~~
+names.c:101:29: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  101 |         res = snprintf(buf, size, "%s %s [%s]", v, d, num);
+      |                             ^~~~
+names.c:103:29: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  103 |         res = snprintf(buf, size, "Device [%s]", num);
+      |                             ^~~~
+names.c:105:29: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  105 |         res = snprintf(buf, size, "%s Device [%s]", v, num);
+      |                             ^~~~
+names.c:110:29: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  110 |         res = snprintf(buf, size, "%s %s", v, d);
+      |                             ^~~~
+names.c:112:29: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  112 |         res = snprintf(buf, size, "Device %s", num);
+      |                             ^~~~
+names.c:114:29: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  114 |         res = snprintf(buf, size, "%s Device %s", v, num+5);
+      |                             ^~~~
+names.c: In function 'pci_lookup_name':
+names.c:133:9: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  133 |   flags |= a->id_lookup_mode;
+      |         ^~
+names.c:133:12: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  133 |   flags |= a->id_lookup_mode;
+      |            ^
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot-native=   -Wconversion -Wno-error -fPIC -fvisibility=hidden   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64  -c -o filter.o filter.c
+filter.c: In function 'parse_hex_field':
+filter.c:101:28: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  101 |           out = (out << 4) | d;
+      |                            ^
+filter.c:102:32: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  102 |           bound = (bound << 4) | d;
+      |                                ^
+filter.c:110:11: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  110 |   *outp = out;
+      |           ^~~
+filter.c: In function 'pci_filter_match_v38':
+filter.c:208:47: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  208 |       if ((f->device_class ^ d->device_class) & f->device_class_mask)
+      |                                               ^
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot-native=   -Wconversion -Wno-error -fPIC -fvisibility=hidden   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64  -c -o names-hash.o names-hash.c
+names-hash.c: In function 'id_hash':
+names-hash.c:57:26: warning: conversion to 'u32' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+   57 |   h = id12 ^ (id34 << 3) ^ (cat << 5);
+      |                          ^
+names-hash.c: In function 'pci_id_insert':
+names-hash.c:64:22: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+   64 |   u32 id12 = id_pair(id1, id2);
+      |                      ^~~
+names-hash.c:64:27: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+   64 |   u32 id12 = id_pair(id1, id2);
+      |                           ^~~
+names-hash.c:65:22: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+   65 |   u32 id34 = id_pair(id3, id4);
+      |                      ^~~
+names-hash.c:65:27: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+   65 |   u32 id34 = id_pair(id3, id4);
+      |                           ^~~
+names-hash.c:68:13: warning: conversion to 'int' from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+   68 |   int len = strlen(text);
+      |             ^~~~~~
+names-hash.c:74:43: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+   74 |   n = id_alloc(a, sizeof(struct id_entry) + len);
+      |                                           ^
+names-hash.c:77:12: warning: conversion from 'int' to 'byte' {aka 'unsigned char'} may change value [-Wconversion]
+   77 |   n->cat = cat;
+      |            ^~~
+names-hash.c:79:28: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+   79 |   memcpy(n->name, text, len+1);
+      |                         ~~~^~
+names-hash.c: In function 'pci_id_lookup':
+names-hash.c:89:22: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+   89 |   u32 id12 = id_pair(id1, id2);
+      |                      ^~~
+names-hash.c:89:27: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+   89 |   u32 id12 = id_pair(id1, id2);
+      |                           ^~~
+names-hash.c:90:22: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+   90 |   u32 id34 = id_pair(id3, id4);
+      |                      ^~~
+names-hash.c:90:27: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+   90 |   u32 id34 = id_pair(id3, id4);
+      |                           ^~~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot-native=   -Wconversion -Wno-error -fPIC -fvisibility=hidden   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64  -c -o names-parse.o names-parse.c
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot-native=   -Wconversion -Wno-error -fPIC -fvisibility=hidden   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64  -c -o names-net.o names-net.c
+names-net.c: In function 'pci_id_net_lookup':
+names-net.c:213:37: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  213 |   if (dns_parse_packet(&ds, answer, res) < 0)
+      |                                     ^~~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot-native=   -Wconversion -Wno-error -fPIC -fvisibility=hidden   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64  -c -o names-cache.o names-cache.c
+names-cache.c: In function 'get_cache_name':
+names-cache.c:39:59: warning: conversion to 'int' from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+   39 |   buf = pci_malloc(a, strlen(pw->pw_dir) + strlen(name+1) + 1);
+      |                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+names-cache.c: In function 'pci_id_cache_flush':
+names-cache.c:136:59: warning: conversion to 'int' from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  136 |   tmpname = pci_malloc(a, strlen(name) + strlen(hostname) + 64);
+      |                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot-native=   -Wconversion -Wno-error -fPIC -fvisibility=hidden   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64  -c -o names-hwdb.o names-hwdb.c
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot-native=   -Wconversion -Wno-error -fPIC -fvisibility=hidden   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64  -c -o params.o params.c
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot-native=   -Wconversion -Wno-error -fPIC -fvisibility=hidden   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64  -c -o caps.o caps.c
+caps.c: In function 'pci_add_cap':
+caps.c:25:13: warning: conversion from 'unsigned int' to 'u16' {aka 'short unsigned int'} may change value [-Wconversion]
+   25 |   cap->id = id;
+      |             ^~
+caps.c:26:15: warning: conversion from 'unsigned int' to 'u16' {aka 'short unsigned int'} may change value [-Wconversion]
+   26 |   cap->type = type;
+      |               ^~~~
+caps.c: In function 'pci_scan_trad_caps':
+caps.c:46:19: warning: unsigned conversion from 'int' to 'byte' {aka 'unsigned char'} changes the value of '-4' [-Wsign-conversion]
+   46 |       byte next = pci_read_byte(d, where + PCI_CAP_LIST_NEXT) & ~3;
+      |                   ^~~~~~~~~~~~~
+caps.c:51:22: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+   51 |       pci_add_cap(d, where, id, PCI_CAP_NORMAL);
+      |                      ^~~~~
+caps.c: In function 'pci_scan_ext_caps':
+caps.c:77:22: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+   77 |       pci_add_cap(d, where, id, PCI_CAP_EXTENDED);
+      |                      ^~~~~
+caps.c:77:29: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+   77 |       pci_add_cap(d, where, id, PCI_CAP_EXTENDED);
+      |                             ^~
+caps.c:78:30: warning: unsigned conversion from 'int' to 'u32' {aka 'unsigned int'} changes value from '-4' to '4294967292' [-Wsign-conversion]
+   78 |       where = (header >> 20) & ~3;
+      |                              ^
+caps.c:78:15: warning: conversion to 'int' from 'u32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+   78 |       where = (header >> 20) & ~3;
+      |               ^
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot-native=   -Wconversion -Wno-error -fPIC -fvisibility=hidden   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64  -c -o sysfs.o sysfs.c
+sysfs.c: In function 'sysfs_scan':
+sysfs.c:264:19: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  264 |       d->domain = dom;
+      |                   ^~~
+sysfs.c:265:16: warning: conversion from 'unsigned int' to 'u8' {aka 'unsigned char'} may change value [-Wconversion]
+  265 |       d->bus = bus;
+      |                ^~~
+sysfs.c:266:16: warning: conversion from 'unsigned int' to 'u8' {aka 'unsigned char'} may change value [-Wconversion]
+  266 |       d->dev = dev;
+      |                ^~~
+sysfs.c:267:17: warning: conversion from 'unsigned int' to 'u8' {aka 'unsigned char'} may change value [-Wconversion]
+  267 |       d->func = func;
+      |                 ^~~~
+sysfs.c: In function 'sysfs_fill_info':
+sysfs.c:347:26: warning: conversion from 'int' to 'u16' {aka 'short unsigned int'} may change value [-Wconversion]
+  347 |           d->vendor_id = sysfs_get_value(d, "vendor", 1);
+      |                          ^~~~~~~~~~~~~~~
+sysfs.c:348:26: warning: conversion from 'int' to 'u16' {aka 'short unsigned int'} may change value [-Wconversion]
+  348 |           d->device_id = sysfs_get_value(d, "device", 1);
+      |                          ^~~~~~~~~~~~~~~
+sysfs.c:356:31: warning: conversion from 'int' to 'u16' {aka 'short unsigned int'} may change value [-Wconversion]
+  356 |             d->device_class = value >> 8;
+      |                               ^~~~~
+sysfs.c:359:28: warning: conversion from 'int' to 'u8' {aka 'unsigned char'} may change value [-Wconversion]
+  359 |               d->prog_if = value & 0xff;
+      |                            ^~~~~
+sysfs.c:364:29: warning: conversion from 'int' to 'u8' {aka 'unsigned char'} may change value [-Wconversion]
+  364 |                 d->rev_id = value;
+      |                             ^~~~~
+sysfs.c:372:37: warning: conversion from 'int' to 'u16' {aka 'short unsigned int'} may change value [-Wconversion]
+  372 |               d->subsys_vendor_id = value;
+      |                                     ^~~~~
+sysfs.c:375:32: warning: conversion from 'int' to 'u16' {aka 'short unsigned int'} may change value [-Wconversion]
+  375 |                 d->subsys_id = value;
+      |                                ^~~~~
+In file included from sysfs.c:23:
+sysfs.c: In function 'sysfs_read':
+sysfs.c:531:29: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  531 |   res = do_read(d, fd, buf, len, pos);
+      |                             ^~~
+pread.h:55:38: note: in definition of macro 'do_read'
+   55 | #define do_read(d,f,b,l,p) pread(f,b,l,p)
+      |                                      ^
+sysfs.c: In function 'sysfs_write':
+sysfs.c:549:30: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  549 |   res = do_write(d, fd, buf, len, pos);
+      |                              ^~~
+pread.h:56:40: note: in definition of macro 'do_write'
+   56 | #define do_write(d,f,b,l,p) pwrite(f,b,l,p)
+      |                                        ^
+sysfs.c: In function 'sysfs_read_vpd':
+sysfs.c:581:24: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  581 |   res = pread(fd, buf, len, pos);
+      |                        ^~~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot-native=   -Wconversion -Wno-error -fPIC -fvisibility=hidden   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64  -c -o proc.o proc.c
+proc.c: In function 'proc_scan':
+proc.c:77:13: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+   77 |       cnt = sscanf(buf, "%x %x %x" F F F F F F F F F F F F F F "%n",
+      |             ^~~~~~
+proc.c:99:16: warning: conversion from 'unsigned int' to 'u8' {aka 'unsigned char'} may change value [-Wconversion]
+   99 |       d->bus = dfn >> 8U;
+      |                ^~~
+proc.c:102:22: warning: conversion from 'unsigned int' to 'u16' {aka 'short unsigned int'} may change value [-Wconversion]
+  102 |       d->vendor_id = vend >> 16U;
+      |                      ^~~~
+In file included from proc.c:20:
+proc.c: In function 'proc_read':
+proc.c:176:29: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  176 |   res = do_read(d, fd, buf, len, pos);
+      |                             ^~~
+pread.h:55:38: note: in definition of macro 'do_read'
+   55 | #define do_read(d,f,b,l,p) pread(f,b,l,p)
+      |                                      ^
+proc.c: In function 'proc_write':
+proc.c:195:30: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  195 |   res = do_write(d, fd, buf, len, pos);
+      |                              ^~~
+pread.h:56:40: note: in definition of macro 'do_write'
+   56 | #define do_write(d,f,b,l,p) pwrite(f,b,l,p)
+      |                                        ^
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot -shared -Wl,-O1 -Wl,--hash-style=gnu  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot-native=  -Wl,-z,relro,-z,now -Wl,-soname,libpci.so.3 -Wl,--version-script=libpci.ver -o libpci.so.3.8.0 init.o access.o generic.o dump.o names.o filter.o names-hash.o names-parse.o names-net.o names-cache.o names-hwdb.o params.o caps.o sysfs.o proc.o -lz -lresolv -ludev
+sed <libpci.pc.in >libpci.pc -e 's,@PREFIX@,/usr,' \
+	-e 's,@INCDIR@,/usr/include,' \
+	-e 's,@LIBDIR@,/usr/lib,' \
+	-e 's,@IDSDIR@,/usr/share,' \
+	-e 's,@VERSION@,3.8.0,' \
+	-e 's,@LDLIBS@,,' \
+	-e 's,@WITH_LIBS@,-lz -lresolv -ludev,'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0/lib'
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot-native=   -Wconversion -Wno-error   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64  -c -o lspci.o lspci.c
+lspci.c: In function 'config_fetch':
+lspci.c:102:23: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  102 |       int orig_size = d->config_bufsize;
+      |                       ^
+lspci.c:107:59: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  107 |       memset(d->present + orig_size, 0, d->config_bufsize - orig_size);
+      |                                                           ^
+lspci.c:109:35: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  109 |   result = pci_read_block(d->dev, pos, d->config + pos, len);
+      |                                   ^~~
+lspci.c:109:57: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  109 |   result = pci_read_block(d->dev, pos, d->config + pos, len);
+      |                                                         ^~~
+lspci.c: In function 'scan_device':
+lspci.c:145:34: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  145 |   pci_setup_cache(p, d->config, d->config_cached);
+      |                                 ~^~~~~~~~~~~~~~~
+In file included from /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot/usr/include/stdlib.h:587,
+                 from lspci.c:11:
+lspci.c: In function 'sort_them':
+lspci.c:238:46: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  238 |   h = index = alloca(sizeof(struct device *) * cnt);
+      |                                              ^
+lspci.c:241:16: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  241 |   qsort(index, cnt, sizeof(struct device *), compare_them);
+      |                ^~~
+lspci.c: In function 'show_bases':
+lspci.c:406:144: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  406 |       u32 flg = (p->known_fields & PCI_FILL_IO_FLAGS) ? ioflg_to_pciflg(ioflg) : without_config_data ? 0 : get_conf_long(d, PCI_BASE_ADDRESS_0 + 4*i);
+lspci.c:426:58: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  426 |           hw_lower = get_conf_long(d, PCI_BASE_ADDRESS_0 + 4*i);
+lspci.c:435:74: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  435 |                     hw_upper = get_conf_long(d, PCI_BASE_ADDRESS_0 + 4*i + 1);
+lspci.c: In function 'show_rom':
+lspci.c:498:41: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  498 |   u32 flg = reg >= 0 ? get_conf_long(d, reg) : ioflg_to_pciflg(ioflg);
+      |                                         ^~~
+lspci.c:507:13: warning: conversion from 'pciaddr_t' {aka 'long long unsigned int'} to 'u32' {aka 'unsigned int'} may change value [-Wconversion]
+  507 |       flg = rom;
+      |             ^~~
+lspci.c: In function 'show_htype1':
+lspci.c:571:40: warning: unsigned conversion from 'int' to 'pciaddr_t' {aka 'long long unsigned int'} changes value from '-16' to '18446744073709551600' [-Wsign-conversion]
+  571 |       io_base = p->bridge_base_addr[0] & PCI_IO_RANGE_MASK;
+      |                                        ^
+lspci.c:571:17: warning: conversion from 'pciaddr_t' {aka 'long long unsigned int'} to 'u32' {aka 'unsigned int'} may change value [-Wconversion]
+  571 |       io_base = p->bridge_base_addr[0] & PCI_IO_RANGE_MASK;
+      |                 ^
+lspci.c:572:18: warning: conversion from 'pciaddr_t' {aka 'long long unsigned int'} to 'u32' {aka 'unsigned int'} may change value [-Wconversion]
+  572 |       io_limit = io_base + p->bridge_size[0] - 1;
+      |                  ^~~~~~~
+lspci.c:582:26: warning: unsigned conversion from 'int' to 'u32' {aka 'unsigned int'} changes value from '-16' to '4294967280' [-Wsign-conversion]
+  582 |       io_base = (io_base & PCI_IO_RANGE_MASK) << 8;
+      |                          ^
+lspci.c:583:28: warning: unsigned conversion from 'int' to 'u32' {aka 'unsigned int'} changes value from '-16' to '4294967280' [-Wsign-conversion]
+  583 |       io_limit = (io_limit & PCI_IO_RANGE_MASK) << 8;
+      |                            ^
+lspci.c:600:41: warning: unsigned conversion from 'int' to 'pciaddr_t' {aka 'long long unsigned int'} changes value from '-16' to '18446744073709551600' [-Wsign-conversion]
+  600 |       mem_base = p->bridge_base_addr[1] & PCI_MEMORY_RANGE_MASK;
+      |                                         ^
+lspci.c:600:18: warning: conversion from 'pciaddr_t' {aka 'long long unsigned int'} to 'u32' {aka 'unsigned int'} may change value [-Wconversion]
+  600 |       mem_base = p->bridge_base_addr[1] & PCI_MEMORY_RANGE_MASK;
+      |                  ^
+lspci.c:601:19: warning: conversion from 'pciaddr_t' {aka 'long long unsigned int'} to 'u32' {aka 'unsigned int'} may change value [-Wconversion]
+  601 |       mem_limit = mem_base + p->bridge_size[1] - 1;
+      |                   ^~~~~~~~
+lspci.c:609:28: warning: unsigned conversion from 'int' to 'u32' {aka 'unsigned int'} changes value from '-16' to '4294967280' [-Wsign-conversion]
+  609 |       mem_base = (mem_base & PCI_MEMORY_RANGE_MASK) << 16;
+      |                            ^
+lspci.c:610:30: warning: unsigned conversion from 'int' to 'u32' {aka 'unsigned int'} changes value from '-16' to '4294967280' [-Wsign-conversion]
+  610 |       mem_limit = (mem_limit & PCI_MEMORY_RANGE_MASK) << 16;
+      |                              ^
+lspci.c:616:49: warning: unsigned conversion from 'int' to 'pciaddr_t' {aka 'long long unsigned int'} changes value from '-16' to '18446744073709551600' [-Wsign-conversion]
+  616 |       u64 pref_base_64 = p->bridge_base_addr[2] & PCI_MEMORY_RANGE_MASK;
+      |                                                 ^
+lspci.c:627:37: warning: unsigned conversion from 'int' to 'u32' {aka 'unsigned int'} changes value from '-16' to '4294967280' [-Wsign-conversion]
+  627 |       u64 pref_base_64 = (pref_base & PCI_PREF_RANGE_MASK) << 16;
+      |                                     ^
+lspci.c:628:39: warning: unsigned conversion from 'int' to 'u32' {aka 'unsigned int'} changes value from '-16' to '4294967280' [-Wsign-conversion]
+  628 |       u64 pref_limit_64 = (pref_limit & PCI_PREF_RANGE_MASK) << 16;
+      |                                       ^
+lspci.c: In function 'show_htype2':
+lspci.c:698:56: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  698 |       u32 base = get_conf_long(d, PCI_CB_MEMORY_BASE_0 + p);
+lspci.c:699:58: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  699 |       u32 limit = get_conf_long(d, PCI_CB_MEMORY_LIMIT_0 + p);
+lspci.c:709:52: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  709 |       u32 base = get_conf_long(d, PCI_CB_IO_BASE_0 + p);
+lspci.c:710:54: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  710 |       u32 limit = get_conf_long(d, PCI_CB_IO_LIMIT_0 + p);
+lspci.c:716:12: warning: unsigned conversion from 'int' to 'u32' {aka 'unsigned int'} changes value from '-4' to '4294967292' [-Wsign-conversion]
+  716 |       base &= PCI_CB_IO_RANGE_MASK;
+      |            ^~
+lspci.c:717:22: warning: unsigned conversion from 'int' to 'u32' {aka 'unsigned int'} changes value from '-4' to '4294967292' [-Wsign-conversion]
+  717 |       limit = (limit & PCI_CB_IO_RANGE_MASK) + 3;
+      |                      ^
+lspci.c: In function 'show_verbose':
+lspci.c:796:16: warning: unsigned conversion from 'int' to 'byte' {aka 'unsigned char'} changes the value of '-1' [-Wsign-conversion]
+  796 |   byte htype = d->no_config_access ? -1 : (get_conf_byte(d, PCI_HEADER_TYPE) & 0x7f);
+      |                ^
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot-native=   -Wconversion -Wno-error   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64  -c -o ls-vpd.o ls-vpd.c
+ls-vpd.c: In function 'cap_vpd':
+ls-vpd.c:116:21: warning: conversion from 'int' to 'word' {aka 'short unsigned int'} may change value [-Wconversion]
+  116 |           res_len = buf[0] + (buf[1] << 8);
+      |                     ^~~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot-native=   -Wconversion -Wno-error   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64  -c -o ls-caps.o ls-caps.c
+ls-caps.c: In function 'cap_pm':
+ls-caps.c:34:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+   34 |   if (!config_fetch(d, where + PCI_PM_CTRL, PCI_PM_SIZEOF - PCI_PM_CTRL))
+ls-caps.c:36:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+   36 |   t = get_conf_word(d, where + PCI_PM_CTRL);
+ls-caps.c:44:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+   44 |   b = get_conf_byte(d, where + PCI_PM_PPB_EXTENSIONS);
+ls-caps.c: In function 'cap_agp':
+ls-caps.c:83:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+   83 |   if (!config_fetch(d, where + PCI_AGP_STATUS, PCI_AGP_SIZEOF - PCI_AGP_STATUS))
+ls-caps.c:85:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+   85 |   t = get_conf_long(d, where + PCI_AGP_STATUS);
+ls-caps.c:102:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  102 |   t = get_conf_long(d, where + PCI_AGP_COMMAND);
+ls-caps.c: In function 'cap_pcix_nobridge':
+ls-caps.c:128:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  128 |   if (!config_fetch(d, where + PCI_PCIX_STATUS, 4))
+ls-caps.c:131:36: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  131 |   command = get_conf_word(d, where + PCI_PCIX_COMMAND);
+ls-caps.c:132:35: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  132 |   status = get_conf_long(d, where + PCI_PCIX_STATUS);
+ls-caps.c: In function 'cap_pcix_bridge':
+ls-caps.c:167:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  167 |   if (!config_fetch(d, where + PCI_PCIX_BRIDGE_STATUS, 12))
+ls-caps.c:170:38: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  170 |   secstatus = get_conf_word(d, where + PCI_PCIX_BRIDGE_SEC_STATUS);
+ls-caps.c:179:35: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  179 |   status = get_conf_long(d, where + PCI_PCIX_BRIDGE_STATUS);
+ls-caps.c:190:35: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  190 |   upstcr = get_conf_long(d, where + PCI_PCIX_BRIDGE_UPSTREAM_SPLIT_TRANS_CTRL);
+ls-caps.c:194:37: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  194 |   downstcr = get_conf_long(d, where + PCI_PCIX_BRIDGE_DOWNSTREAM_SPLIT_TRANS_CTRL);
+ls-caps.c: In function 'cap_ht_pri':
+ls-caps.c:239:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  239 |   if (!config_fetch(d, where + PCI_HT_PRI_LCTR0, PCI_HT_PRI_SIZEOF - PCI_HT_PRI_LCTR0))
+ls-caps.c:241:32: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  241 |   rid = get_conf_byte(d, where + PCI_HT_PRI_RID);
+ls-caps.c:254:34: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  254 |   lctr0 = get_conf_word(d, where + PCI_HT_PRI_LCTR0);
+ls-caps.c:272:34: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  272 |   lcnf0 = get_conf_word(d, where + PCI_HT_PRI_LCNF0);
+ls-caps.c:290:34: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  290 |   lctr1 = get_conf_word(d, where + PCI_HT_PRI_LCTR1);
+ls-caps.c:308:34: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  308 |   lcnf1 = get_conf_word(d, where + PCI_HT_PRI_LCNF1);
+ls-caps.c:331:35: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  331 |   lfrer0 = get_conf_byte(d, where + PCI_HT_PRI_LFRER0);
+ls-caps.c:339:35: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  339 |   lfcap0 = get_conf_byte(d, where + PCI_HT_PRI_LFCAP0);
+ls-caps.c:353:32: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  353 |   ftr = get_conf_byte(d, where + PCI_HT_PRI_FTR);
+ls-caps.c:362:35: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  362 |   lfrer1 = get_conf_byte(d, where + PCI_HT_PRI_LFRER1);
+ls-caps.c:370:35: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  370 |   lfcap1 = get_conf_byte(d, where + PCI_HT_PRI_LFCAP1);
+ls-caps.c:384:31: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  384 |   eh = get_conf_word(d, where + PCI_HT_PRI_EH);
+ls-caps.c:403:32: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  403 |   mbu = get_conf_byte(d, where + PCI_HT_PRI_MBU);
+ls-caps.c:404:32: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  404 |   mlu = get_conf_byte(d, where + PCI_HT_PRI_MLU);
+ls-caps.c:407:31: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  407 |   bn = get_conf_byte(d, where + PCI_HT_PRI_BN);
+ls-caps.c: In function 'cap_ht_sec':
+ls-caps.c:422:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  422 |   if (!config_fetch(d, where + PCI_HT_SEC_LCTR, PCI_HT_SEC_SIZEOF - PCI_HT_SEC_LCTR))
+ls-caps.c:424:32: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  424 |   rid = get_conf_byte(d, where + PCI_HT_SEC_RID);
+ls-caps.c:441:33: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  441 |   lctr = get_conf_word(d, where + PCI_HT_SEC_LCTR);
+ls-caps.c:459:33: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  459 |   lcnf = get_conf_word(d, where + PCI_HT_SEC_LCNF);
+ls-caps.c:477:34: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  477 |   lfrer = get_conf_byte(d, where + PCI_HT_SEC_LFRER);
+ls-caps.c:484:34: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  484 |   lfcap = get_conf_byte(d, where + PCI_HT_SEC_LFCAP);
+ls-caps.c:497:32: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  497 |   ftr = get_conf_word(d, where + PCI_HT_SEC_FTR);
+ls-caps.c:509:35: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  509 |       eh = get_conf_word(d, where + PCI_HT_SEC_EH);
+ls-caps.c:527:36: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  527 |       mbu = get_conf_byte(d, where + PCI_HT_SEC_MBU);
+ls-caps.c:528:36: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  528 |       mlu = get_conf_byte(d, where + PCI_HT_SEC_MLU);
+ls-caps.c: In function 'cap_ht':
+ls-caps.c:577:38: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  577 |           if (!config_fetch(d, where + PCI_HT_MSIM_ADDR_LO, 8))
+ls-caps.c:579:41: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  579 |           offl = get_conf_long(d, where + PCI_HT_MSIM_ADDR_LO);
+ls-caps.c:580:41: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  580 |           offh = get_conf_long(d, where + PCI_HT_MSIM_ADDR_HI);
+ls-caps.c:581:97: warning: unsigned conversion from 'int' to 'u32' {aka 'unsigned int'} changes value from '-1048576' to '4293918720' [-Wsign-conversion]
+  581 |           printf("\t\tMapping Address Base: %016" PCI_U64_FMT_X "\n", ((u64)offh << 32) | (offl & ~0xfffff));
+      |                                                                                                 ^
+ls-caps.c: In function 'cap_msi':
+ls-caps.c:617:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  617 |   if (!config_fetch(d, where + PCI_MSI_ADDRESS_LO, (is64 ? PCI_MSI_DATA_64 : PCI_MSI_DATA_32) + 2 - PCI_MSI_ADDRESS_LO))
+ls-caps.c:622:34: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  622 |       t = get_conf_long(d, where + PCI_MSI_ADDRESS_HI);
+ls-caps.c:623:34: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  623 |       w = get_conf_word(d, where + PCI_MSI_DATA_64);
+ls-caps.c:627:32: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  627 |     w = get_conf_word(d, where + PCI_MSI_DATA_32);
+ls-caps.c:628:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  628 |   t = get_conf_long(d, where + PCI_MSI_ADDRESS_LO);
+ls-caps.c:636:38: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  636 |           if (!config_fetch(d, where + PCI_MSI_MASK_BIT_64, 8))
+ls-caps.c:638:41: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  638 |           mask = get_conf_long(d, where + PCI_MSI_MASK_BIT_64);
+ls-caps.c:639:44: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  639 |           pending = get_conf_long(d, where + PCI_MSI_PENDING_64);
+ls-caps.c:643:38: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  643 |           if (!config_fetch(d, where + PCI_MSI_MASK_BIT_32, 8))
+ls-caps.c:645:41: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  645 |           mask = get_conf_long(d, where + PCI_MSI_MASK_BIT_32);
+ls-caps.c:646:44: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  646 |           pending = get_conf_long(d, where + PCI_MSI_PENDING_32);
+ls-caps.c: In function 'show_power_limit':
+ls-caps.c:661:41: warning: conversion from 'double' to 'float' changes value from '1.0000000000000001e-1' to '1.00000001e-1f' [-Wfloat-conversion]
+  661 |   static const float scales[4] = { 1.0, 0.1, 0.01, 0.001 };
+      |                                         ^~~
+ls-caps.c:661:46: warning: conversion from 'double' to 'float' changes value from '1.0e-2' to '9.99999978e-3f' [-Wfloat-conversion]
+  661 |   static const float scales[4] = { 1.0, 0.1, 0.01, 0.001 };
+      |                                              ^~~~
+ls-caps.c:661:52: warning: conversion from 'double' to 'float' changes value from '1.0e-3' to '1.00000005e-3f' [-Wfloat-conversion]
+  661 |   static const float scales[4] = { 1.0, 0.1, 0.01, 0.001 };
+      |                                                    ^~~~~
+ls-caps.c:672:23: warning: conversion from 'int' to 'float' may change value [-Wconversion]
+  672 |   printf("%gW", value * scales[scale]);
+      |                       ^
+ls-caps.c: In function 'cap_express_dev':
+ls-caps.c:692:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  692 |   t = get_conf_long(d, where + PCI_EXP_DEVCAP);
+ls-caps.c:720:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  720 |   w = get_conf_word(d, where + PCI_EXP_DEVCTL);
+ls-caps.c:741:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  741 |   w = get_conf_word(d, where + PCI_EXP_DEVSTA);
+ls-caps.c: In function 'cap_express_link':
+ls-caps.c:812:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  812 |   t = get_conf_long(d, where + PCI_EXP_LNKCAP);
+ls-caps.c:818:20: warning: conversion to 'int' from 'u32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  818 |         link_speed(cap_speed), cap_width,
+      |                    ^~~~~~~~~
+ls-caps.c:819:22: warning: conversion to 'int' from 'u32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  819 |         aspm_support(aspm));
+      |                      ^~~~
+ls-caps.c:837:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  837 |   w = get_conf_word(d, where + PCI_EXP_LNKCTL);
+ls-caps.c:851:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  851 |   w = get_conf_word(d, where + PCI_EXP_LNKSTA);
+ls-caps.c:855:20: warning: conversion to 'int' from 'u32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  855 |         link_speed(sta_speed),
+      |                    ^~~~~~~~~
+ls-caps.c:856:28: warning: conversion to 'int' from 'u32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  856 |         link_compare(type, sta_speed, cap_speed),
+      |                            ^~~~~~~~~
+ls-caps.c:856:39: warning: conversion to 'int' from 'u32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  856 |         link_compare(type, sta_speed, cap_speed),
+      |                                       ^~~~~~~~~
+ls-caps.c:858:28: warning: conversion to 'int' from 'u32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  858 |         link_compare(type, sta_width, cap_width));
+      |                            ^~~~~~~~~
+ls-caps.c:858:39: warning: conversion to 'int' from 'u32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  858 |         link_compare(type, sta_width, cap_width));
+      |                                       ^~~~~~~~~
+ls-caps.c: In function 'cap_express_slot':
+ls-caps.c:879:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  879 |   t = get_conf_long(d, where + PCI_EXP_SLTCAP);
+ls-caps.c:895:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  895 |   w = get_conf_word(d, where + PCI_EXP_SLTCTL);
+ls-caps.c:910:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  910 |   w = get_conf_word(d, where + PCI_EXP_SLTSTA);
+ls-caps.c: In function 'cap_express_root':
+ls-caps.c:928:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  928 |   w = get_conf_word(d, where + PCI_EXP_RTCAP);
+ls-caps.c:932:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  932 |   w = get_conf_word(d, where + PCI_EXP_RTCTL);
+ls-caps.c:940:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  940 |   w = get_conf_long(d, where + PCI_EXP_RTSTA);
+ls-caps.c: In function 'cap_express_dev2':
+ls-caps.c:1103:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 1103 |   l = get_conf_long(d, where + PCI_EXP_DEVCAP2);
+ls-caps.c:1153:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 1153 |   w = get_conf_word(d, where + PCI_EXP_DEVCTL2);
+ls-caps.c: In function 'cap_express_link2':
+ls-caps.c:1326:32: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 1326 |     l = get_conf_long(d, where + PCI_EXP_LNKCAP2);
+ls-caps.c:1337:32: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 1337 |     w = get_conf_word(d, where + PCI_EXP_LNKCTL2);
+ls-caps.c:1354:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 1354 |   w = get_conf_word(d, where + PCI_EXP_LNKSTA2);
+ls-caps.c: In function 'cap_express':
+ls-caps.c:1440:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 1440 |   if (!config_fetch(d, where + PCI_EXP_DEVCAP, size))
+ls-caps.c:1440:48: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 1440 |   if (!config_fetch(d, where + PCI_EXP_DEVCAP, size))
+      |                                                ^~~~
+ls-caps.c:1457:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 1457 |   if (!config_fetch(d, where + PCI_EXP_DEVCAP2, size))
+ls-caps.c:1457:49: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 1457 |   if (!config_fetch(d, where + PCI_EXP_DEVCAP2, size))
+      |                                                 ^~~~
+ls-caps.c: In function 'cap_msix':
+ls-caps.c:1477:45: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 1477 |   if (verbose < 2 || !config_fetch(d, where + PCI_MSIX_TABLE, 8))
+ls-caps.c:1480:32: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 1480 |   off = get_conf_long(d, where + PCI_MSIX_TABLE);
+ls-caps.c:1482:34: warning: unsigned conversion from 'int' to 'u32' {aka 'unsigned int'} changes value from '-8' to '4294967288' [-Wsign-conversion]
+ 1482 |          off & PCI_MSIX_BIR, off & ~PCI_MSIX_BIR);
+      |                                  ^
+ls-caps.c:1483:32: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 1483 |   off = get_conf_long(d, where + PCI_MSIX_PBA);
+ls-caps.c:1485:34: warning: unsigned conversion from 'int' to 'u32' {aka 'unsigned int'} changes value from '-8' to '4294967288' [-Wsign-conversion]
+ 1485 |          off & PCI_MSIX_BIR, off & ~PCI_MSIX_BIR);
+      |                                  ^
+ls-caps.c: In function 'cap_ssvid':
+ls-caps.c:1506:24: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 1506 |   if (!config_fetch(d, where, 8))
+      |                        ^~~~~
+ls-caps.c:1508:37: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 1508 |   subsys_v = get_conf_word(d, where + PCI_SSVID_VENDOR);
+ls-caps.c:1509:37: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 1509 |   subsys_d = get_conf_word(d, where + PCI_SSVID_DEVICE);
+ls-caps.c: In function 'cap_af':
+ls-caps.c:1530:45: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 1530 |   if (verbose < 2 || !config_fetch(d, where + PCI_AF_CAP, 3))
+ls-caps.c:1533:32: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 1533 |   reg = get_conf_byte(d, where + PCI_AF_CAP);
+ls-caps.c:1536:32: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 1536 |   reg = get_conf_byte(d, where + PCI_AF_CTRL);
+ls-caps.c:1538:32: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 1538 |   reg = get_conf_byte(d, where + PCI_AF_STATUS);
+ls-caps.c: In function 'cap_sata_hba':
+ls-caps.c:1549:45: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 1549 |   if (verbose < 2 || !config_fetch(d, where + PCI_SATA_HBA_BARS, 4))
+ls-caps.c:1555:33: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 1555 |   bars = get_conf_long(d, where + PCI_SATA_HBA_BARS);
+ls-caps.c: In function 'cap_ea':
+ls-caps.c:1610:32: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 1610 |     if (!config_fetch(d, where + 4, 2)) {
+      |                          ~~~~~~^~~
+ls-caps.c:1614:40: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 1614 |     fixed_sec = get_conf_byte(d, where + PCI_EA_CAP_TYPE1_SECONDARY);
+ls-caps.c:1615:40: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 1615 |     fixed_sub = get_conf_byte(d, where + PCI_EA_CAP_TYPE1_SUBORDINATE);
+ls-caps.c:1629:26: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 1629 |     if (!config_fetch(d, entry_base, 4))
+      |                          ^~~~~~~~~~
+ls-caps.c:1631:37: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 1631 |     entry_header = get_conf_long(d, entry_base);
+      |                                     ^~~~~~~~~~
+ls-caps.c:1636:37: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 1636 |     if (!config_fetch(d, entry_base + 4, es * 4))
+      |                          ~~~~~~~~~~~^~~
+ls-caps.c:1636:45: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 1636 |     if (!config_fetch(d, entry_base + 4, es * 4))
+      |                                          ~~~^~~
+ls-caps.c:1688:40: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 1688 |     base = get_conf_long(d, entry_base + 4);
+      |                             ~~~~~~~~~~~^~~
+ls-caps.c:1690:10: warning: unsigned conversion from 'int' to 'u32' {aka 'unsigned int'} changes value from '-4' to '4294967292' [-Wsign-conversion]
+ 1690 |     base &= ~3;
+      |          ^~
+ls-caps.c:1692:46: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 1692 |     max_offset = get_conf_long(d, entry_base + 8);
+      |                                   ~~~~~~~~~~~^~~
+ls-caps.c:1699:51: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 1699 |       u32 base_high = get_conf_long(d, entry_base + 12);
+      |                                        ~~~~~~~~~~~^~~~
+ls-caps.c:1708:46: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 1708 |       u32 max_offset_high = get_conf_long(d, max_offset_high_pos);
+      |                                              ^~~~~~~~~~~~~~~~~~~
+ls-caps.c: In function 'show_caps':
+ls-caps.c:1727:32: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 1727 |       where = get_conf_byte(d, where) & ~3;
+      |                                ^~~~~
+ls-caps.c:1733:32: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 1733 |           if (!config_fetch(d, where, 4))
+      |                                ^~~~~
+ls-caps.c:1738:39: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 1738 |           id = get_conf_byte(d, where + PCI_CAP_LIST_ID);
+ls-caps.c:1739:41: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 1739 |           next = get_conf_byte(d, where + PCI_CAP_LIST_NEXT) & ~3;
+ls-caps.c:1740:40: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 1740 |           cap = get_conf_word(d, where + PCI_CAP_FLAGS);
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot-native=   -Wconversion -Wno-error   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64  -c -o ls-caps-vendor.o ls-caps-vendor.c
+ls-caps-vendor.c: In function 'show_vendor_caps_virtio':
+ls-caps-vendor.c:23:24: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+   23 |   if (!config_fetch(d, where, length))
+      |                        ^~~~~
+ls-caps-vendor.c:23:31: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+   23 |   if (!config_fetch(d, where, length))
+      |                               ^~~~~~
+ls-caps-vendor.c:51:33: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+   51 |          get_conf_byte(d, where +  4),
+      |                           ~~~~~~^~~~
+ls-caps-vendor.c:52:33: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+   52 |          get_conf_long(d, where +  8),
+      |                           ~~~~~~^~~~
+ls-caps-vendor.c:53:33: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+   53 |          get_conf_long(d, where + 12));
+      |                           ~~~~~~^~~~
+ls-caps-vendor.c:56:54: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+   56 |     printf(" multiplier=%08x", get_conf_long(d, where+16));
+      |                                                 ~~~~~^~~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot-native=   -Wconversion -Wno-error   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64  -c -o ls-ecaps.o ls-ecaps.c
+ls-ecaps.c: In function 'cap_tph':
+ls-ecaps.c:22:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+   22 |   if (!config_fetch(d, where + PCI_TPH_CAPABILITIES, 4))
+ls-ecaps.c:25:36: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+   25 |   tph_cap = get_conf_long(d, where + PCI_TPH_CAPABILITIES);
+ls-ecaps.c: In function 'cap_ltr':
+ls-ecaps.c:65:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+   65 |   if (!config_fetch(d, where + PCI_LTR_MAX_SNOOP, 4))
+ls-ecaps.c:68:34: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+   68 |   snoop = get_conf_word(d, where + PCI_LTR_MAX_SNOOP);
+ls-ecaps.c:73:36: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+   73 |   nosnoop = get_conf_word(d, where + PCI_LTR_MAX_NOSNOOP);
+ls-ecaps.c: In function 'cap_sec':
+ls-ecaps.c:88:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+   88 |   if (!config_fetch(d, where + PCI_SEC_LNKCTL3, 12))
+ls-ecaps.c:91:34: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+   91 |   ctrl3 = get_conf_word(d, where + PCI_SEC_LNKCTL3);
+ls-ecaps.c:96:42: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+   96 |   lane_err_stat = get_conf_word(d, where + PCI_SEC_LANE_ERR);
+ls-ecaps.c: In function 'cap_dsn':
+ls-ecaps.c:114:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  114 |   if (!config_fetch(d, where + 4, 8))
+      |                        ~~~~~~^~~
+ls-ecaps.c:116:31: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  116 |   t1 = get_conf_long(d, where + 4);
+      |                         ~~~~~~^~~
+ls-ecaps.c:117:31: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  117 |   t2 = get_conf_long(d, where + 8);
+      |                         ~~~~~~^~~
+ls-ecaps.c: In function 'cap_aer':
+ls-ecaps.c:133:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  133 |   if (!config_fetch(d, where + PCI_ERR_UNCOR_STATUS, 40))
+ls-ecaps.c:136:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  136 |   l = get_conf_long(d, where + PCI_ERR_UNCOR_STATUS);
+ls-ecaps.c:143:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  143 |   l = get_conf_long(d, where + PCI_ERR_UNCOR_MASK);
+ls-ecaps.c:150:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  150 |   l = get_conf_long(d, where + PCI_ERR_UNCOR_SEVER);
+ls-ecaps.c:157:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  157 |   l = get_conf_long(d, where + PCI_ERR_COR_STATUS);
+ls-ecaps.c:161:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  161 |   l = get_conf_long(d, where + PCI_ERR_COR_MASK);
+ls-ecaps.c:165:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  165 |   l = get_conf_long(d, where + PCI_ERR_CAP);
+ls-ecaps.c:173:31: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  173 |   l0 = get_conf_long(d, where + PCI_ERR_HEADER_LOG);
+ls-ecaps.c:174:52: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  174 |   l1 = get_conf_long(d, where + PCI_ERR_HEADER_LOG + 4);
+      |                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+ls-ecaps.c:175:52: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  175 |   l2 = get_conf_long(d, where + PCI_ERR_HEADER_LOG + 8);
+      |                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+ls-ecaps.c:176:52: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  176 |   l3 = get_conf_long(d, where + PCI_ERR_HEADER_LOG + 12);
+      |                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+ls-ecaps.c:181:34: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  181 |       if (!config_fetch(d, where + PCI_ERR_ROOT_COMMAND, 12))
+ls-ecaps.c:184:34: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  184 |       l = get_conf_long(d, where + PCI_ERR_ROOT_COMMAND);
+ls-ecaps.c:190:34: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  190 |       l = get_conf_long(d, where + PCI_ERR_ROOT_STATUS);
+ls-ecaps.c:202:34: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  202 |       w = get_conf_word(d, where + PCI_ERR_ROOT_COR_SRC);
+ls-ecaps.c:205:34: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  205 |       w = get_conf_word(d, where + PCI_ERR_ROOT_SRC);
+ls-ecaps.c: In function 'cap_dpc':
+ls-ecaps.c:218:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  218 |   if (!config_fetch(d, where + PCI_DPC_CAP, 8))
+ls-ecaps.c:221:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  221 |   l = get_conf_word(d, where + PCI_DPC_CAP);
+ls-ecaps.c:226:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  226 |   l = get_conf_word(d, where + PCI_DPC_CTL);
+ls-ecaps.c:232:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  232 |   l = get_conf_word(d, where + PCI_DPC_STATUS);
+ls-ecaps.c:237:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  237 |   l = get_conf_word(d, where + PCI_DPC_SOURCE);
+ls-ecaps.c: In function 'cap_acs':
+ls-ecaps.c:250:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  250 |   if (!config_fetch(d, where + PCI_ACS_CAP, 4))
+ls-ecaps.c:253:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  253 |   w = get_conf_word(d, where + PCI_ACS_CAP);
+ls-ecaps.c:259:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  259 |   w = get_conf_word(d, where + PCI_ACS_CTRL);
+ls-ecaps.c: In function 'cap_ari':
+ls-ecaps.c:276:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  276 |   if (!config_fetch(d, where + PCI_ARI_CAP, 4))
+ls-ecaps.c:279:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  279 |   w = get_conf_word(d, where + PCI_ARI_CAP);
+ls-ecaps.c:283:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  283 |   w = get_conf_word(d, where + PCI_ARI_CTRL);
+ls-ecaps.c: In function 'cap_ats':
+ls-ecaps.c:298:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  298 |   if (!config_fetch(d, where + PCI_ATS_CAP, 4))
+ls-ecaps.c:301:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  301 |   w = get_conf_word(d, where + PCI_ATS_CAP);
+ls-ecaps.c:303:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  303 |   w = get_conf_word(d, where + PCI_ATS_CTRL);
+ls-ecaps.c: In function 'cap_pri':
+ls-ecaps.c:318:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  318 |   if (!config_fetch(d, where + PCI_PRI_CTRL, 0xc))
+ls-ecaps.c:321:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  321 |   w = get_conf_word(d, where + PCI_PRI_CTRL);
+ls-ecaps.c:324:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  324 |   w = get_conf_word(d, where + PCI_PRI_STATUS);
+ls-ecaps.c:328:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  328 |   l = get_conf_long(d, where + PCI_PRI_MAX_REQ);
+ls-ecaps.c:330:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  330 |   l = get_conf_long(d, where + PCI_PRI_ALLOC_REQ);
+ls-ecaps.c: In function 'cap_pasid':
+ls-ecaps.c:343:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  343 |   if (!config_fetch(d, where + PCI_PASID_CAP, 4))
+ls-ecaps.c:346:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  346 |   w = get_conf_word(d, where + PCI_PASID_CAP);
+ls-ecaps.c:350:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  350 |   w = get_conf_word(d, where + PCI_PASID_CTRL);
+ls-ecaps.c: In function 'cap_sriov':
+ls-ecaps.c:368:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  368 |   if (!config_fetch(d, where + PCI_IOV_CAP, 0x3c))
+ls-ecaps.c:371:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  371 |   l = get_conf_long(d, where + PCI_IOV_CAP);
+ls-ecaps.c:374:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  374 |   w = get_conf_word(d, where + PCI_IOV_CTRL);
+ls-ecaps.c:379:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  379 |   w = get_conf_word(d, where + PCI_IOV_STATUS);
+ls-ecaps.c:381:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  381 |   w = get_conf_word(d, where + PCI_IOV_INITIALVF);
+ls-ecaps.c:383:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  383 |   w = get_conf_word(d, where + PCI_IOV_TOTALVF);
+ls-ecaps.c:385:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  385 |   w = get_conf_word(d, where + PCI_IOV_NUMVF);
+ls-ecaps.c:387:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  387 |   b = get_conf_byte(d, where + PCI_IOV_FDL);
+ls-ecaps.c:389:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  389 |   w = get_conf_word(d, where + PCI_IOV_OFFSET);
+ls-ecaps.c:391:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  391 |   w = get_conf_word(d, where + PCI_IOV_STRIDE);
+ls-ecaps.c:393:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  393 |   w = get_conf_word(d, where + PCI_IOV_DID);
+ls-ecaps.c:395:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  395 |   l = get_conf_long(d, where + PCI_IOV_SUPPS);
+ls-ecaps.c:397:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  397 |   l = get_conf_long(d, where + PCI_IOV_SYSPS);
+ls-ecaps.c:405:53: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  405 |       l = get_conf_long(d, where + PCI_IOV_BAR_BASE + 4*i);
+      |                            ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+ls-ecaps.c:411:14: warning: conversion from 'long long unsigned int' to 'u32' {aka 'unsigned int'} changes the value of '18446744073709551600' [-Wconversion]
+  411 |       addr = l & PCI_ADDR_MEM_MASK;
+      |              ^
+ls-ecaps.c:416:57: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  416 |           h = get_conf_long(d, where + PCI_IOV_BAR_BASE + (i*4));
+      |                                ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+ls-ecaps.c:425:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  425 |   l = get_conf_long(d, where + PCI_IOV_MSAO);
+ls-ecaps.c: In function 'cap_multicast':
+ls-ecaps.c:441:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  441 |   if (!config_fetch(d, where + PCI_MCAST_CAP, 0x30))
+ls-ecaps.c:444:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  444 |   w = get_conf_word(d, where + PCI_MCAST_CAP);
+ls-ecaps.c:452:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  452 |   w = get_conf_word(d, where + PCI_MCAST_CTRL);
+ls-ecaps.c:455:32: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  455 |   bar = get_conf_long(d, where + PCI_MCAST_BAR);
+ls-ecaps.c:456:46: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  456 |   l = get_conf_long(d, where + PCI_MCAST_BAR + 4);
+      |                        ~~~~~~~~~~~~~~~~~~~~~~^~~
+ls-ecaps.c:460:32: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  460 |   rcv = get_conf_long(d, where + PCI_MCAST_RCV);
+ls-ecaps.c:461:46: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  461 |   l = get_conf_long(d, where + PCI_MCAST_RCV + 4);
+      |                        ~~~~~~~~~~~~~~~~~~~~~~^~~
+ls-ecaps.c:464:34: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  464 |   block = get_conf_long(d, where + PCI_MCAST_BLOCK);
+ls-ecaps.c:465:48: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  465 |   l = get_conf_long(d, where + PCI_MCAST_BLOCK + 4);
+      |                        ~~~~~~~~~~~~~~~~~~~~~~~~^~~
+ls-ecaps.c:468:34: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  468 |   block = get_conf_long(d, where + PCI_MCAST_BLOCK_UNTRANS);
+ls-ecaps.c:469:56: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  469 |   l = get_conf_long(d, where + PCI_MCAST_BLOCK_UNTRANS + 4);
+      |                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+ls-ecaps.c:475:32: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  475 |   bar = get_conf_long(d, where + PCI_MCAST_OVL_BAR);
+ls-ecaps.c:476:50: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  476 |   l = get_conf_long(d, where + PCI_MCAST_OVL_BAR + 4);
+      |                        ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+ls-ecaps.c: In function 'cap_vc':
+ls-ecaps.c:503:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  503 |   if (!config_fetch(d, where + 4, 0x1c - 4))
+      |                        ~~~~~~^~~
+ls-ecaps.c:506:32: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  506 |   cr1 = get_conf_long(d, where + PCI_VC_PORT_REG1);
+ls-ecaps.c:507:32: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  507 |   cr2 = get_conf_long(d, where + PCI_VC_PORT_REG2);
+ls-ecaps.c:508:33: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  508 |   ctrl = get_conf_word(d, where + PCI_VC_PORT_CTRL);
+ls-ecaps.c:509:35: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  509 |   status = get_conf_word(d, where + PCI_VC_PORT_STATUS);
+In file included from ls-ecaps.c:12:
+lspci.h:62:26: warning: conversion to 'int' from 'u32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+   62 | #define BITS(x,at,width) (((x) >> (at)) & ((1 << (width)) - 1))
+      |                          ^
+ls-ecaps.c:521:19: note: in expansion of macro 'BITS'
+  521 |   arb_table_pos = BITS(cr2, 24, 8);
+      |                   ^~~~
+ls-ecaps.c:540:28: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  540 |       if (!config_fetch(d, pos, 12))
+      |                            ^~~
+ls-ecaps.c:545:31: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  545 |       rcap = get_conf_long(d, pos);
+      |                               ^~~
+ls-ecaps.c:546:35: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  546 |       rctrl = get_conf_long(d, pos+4);
+      |                                ~~~^~
+ls-ecaps.c:547:37: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  547 |       rstatus = get_conf_word(d, pos+10);
+      |                                  ~~~^~~
+lspci.h:62:26: warning: conversion to 'int' from 'u32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+   62 | #define BITS(x,at,width) (((x) >> (at)) & ((1 << (width)) - 1))
+      |                          ^
+ls-ecaps.c:549:17: note: in expansion of macro 'BITS'
+  549 |       pat_pos = BITS(rcap, 24, 8);
+      |                 ^~~~
+lspci.h:61:23: warning: unsigned conversion from 'int' to 'u32' {aka 'unsigned int'} changes value from '-2147483648' to '2147483648' [-Wsign-conversion]
+   61 | #define FLAG(x,y) ((x & y) ? '+' : '-')
+      |                       ^
+ls-ecaps.c:561:9: note: in expansion of macro 'FLAG'
+  561 |         FLAG(rctrl, 1 << 31),
+      |         ^~~~
+ls-ecaps.c: In function 'cap_rclink':
+ls-ecaps.c:588:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  588 |   if (!config_fetch(d, where + 4, PCI_RCLINK_LINK1 - 4))
+      |                        ~~~~~~^~~
+ls-ecaps.c:591:32: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  591 |   esd = get_conf_long(d, where + PCI_RCLINK_ESD);
+ls-ecaps.c:605:28: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  605 |       if (!config_fetch(d, pos, PCI_RCLINK_LINK_SIZE))
+      |                            ^~~
+ls-ecaps.c:610:35: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  610 |       desc = get_conf_long(d, pos + PCI_RCLINK_LINK_DESC);
+ls-ecaps.c:611:38: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  611 |       addr_lo = get_conf_long(d, pos + PCI_RCLINK_LINK_ADDR);
+ls-ecaps.c:612:61: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  612 |       addr_hi = get_conf_long(d, pos + PCI_RCLINK_LINK_ADDR + 4);
+      |                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+lspci.h:62:41: warning: conversion to 'u32' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+   62 | #define BITS(x,at,width) (((x) >> (at)) & ((1 << (width)) - 1))
+      |                                         ^
+ls-ecaps.c:627:13: note: in expansion of macro 'BITS'
+  627 |             BITS(addr_lo, 20, n),
+      |             ^~~~
+ls-ecaps.c: In function 'cap_rcec':
+ls-ecaps.c:644:24: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  644 |   if (!config_fetch(d, where, 12))
+      |                        ^~~~~
+ls-ecaps.c:647:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  647 |   u32 hdr = get_conf_long(d, where);
+      |                              ^~~~~
+ls-ecaps.c:649:37: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  649 |   u32 bmap = get_conf_long(d, where + PCI_RCEC_RCIEP_BMAP);
+ls-ecaps.c:682:37: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  682 |   u32 busn = get_conf_long(d, where + PCI_RCEC_BUSN_REG);
+ls-ecaps.c: In function 'cap_dvsec_cxl':
+ls-ecaps.c:701:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  701 |   if (!config_fetch(d, where + PCI_CXL_CAP, 12))
+ls-ecaps.c:704:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  704 |   l = get_conf_word(d, where + PCI_CXL_CAP);
+ls-ecaps.c:709:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  709 |   l = get_conf_word(d, where + PCI_CXL_CTRL);
+ls-ecaps.c:715:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  715 |   l = get_conf_word(d, where + PCI_CXL_STATUS);
+ls-ecaps.c: In function 'cap_dvsec':
+ls-ecaps.c:723:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  723 |   if (!config_fetch(d, where + PCI_DVSEC_HEADER1, 8))
+ls-ecaps.c:729:36: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  729 |   u32 hdr = get_conf_long(d, where + PCI_DVSEC_HEADER1);
+lspci.h:62:26: warning: conversion from 'u32' {aka 'unsigned int'} to 'u16' {aka 'short unsigned int'} may change value [-Wconversion]
+   62 | #define BITS(x,at,width) (((x) >> (at)) & ((1 << (width)) - 1))
+      |                          ^
+ls-ecaps.c:732:13: note: in expansion of macro 'BITS'
+  732 |   u16 len = BITS(hdr, 20, 12);
+      |             ^~~~
+ls-ecaps.c:734:35: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  734 |   u16 id = get_conf_long(d, where + PCI_DVSEC_HEADER2);
+ls-ecaps.c:734:12: warning: conversion from 'u32' {aka 'unsigned int'} to 'u16' {aka 'short unsigned int'} may change value [-Wconversion]
+  734 |   u16 id = get_conf_long(d, where + PCI_DVSEC_HEADER2);
+      |            ^~~~~~~~~~~~~
+ls-ecaps.c: In function 'cap_evendor':
+ls-ecaps.c:749:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  749 |   if (!config_fetch(d, where + PCI_EVNDR_HEADER, 4))
+ls-ecaps.c:755:32: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  755 |   hdr = get_conf_long(d, where + PCI_EVNDR_HEADER);
+ls-ecaps.c: In function 'cap_l1pm':
+ls-ecaps.c:787:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  787 |   if (!config_fetch(d, where + PCI_L1PM_SUBSTAT_CAP, 12))
+ls-ecaps.c:793:35: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  793 |   l1_cap = get_conf_long(d, where + PCI_L1PM_SUBSTAT_CAP);
+ls-ecaps.c:812:32: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  812 |   val = get_conf_long(d, where + PCI_L1PM_SUBSTAT_CTL1);
+ls-ecaps.c:829:102: warning: conversion from 'u32' {aka 'unsigned int'} to 'u8' {aka 'unsigned char'} may change value [-Wconversion]
+  829 |             printf(" LTR1.2_Threshold=%" PCI_U64_FMT_U "ns", BITS(val, 16, 10) * (u64) cap_ltr_scale(scale));
+      |                                                                                                      ^~~~~
+ls-ecaps.c:834:32: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  834 |   val = get_conf_long(d, where + PCI_L1PM_SUBSTAT_CTL2);
+ls-ecaps.c: In function 'cap_ptm':
+ls-ecaps.c:858:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  858 |   if (!config_fetch(d, where + 4, 8))
+      |                        ~~~~~~^~~
+ls-ecaps.c:864:33: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  864 |   buff = get_conf_long(d, where + 4);
+      |                           ~~~~~~^~~
+ls-ecaps.c:885:33: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  885 |   buff = get_conf_long(d, where + 8);
+      |                           ~~~~~~^~~
+ls-ecaps.c: In function 'cap_rebar':
+ls-ecaps.c:949:28: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  949 |       if (!config_fetch(d, where, 8))
+      |                            ^~~~~
+ls-ecaps.c:955:39: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  955 |       sizes_buffer = get_conf_long(d, where) >> 4;
+      |                                       ^~~~~
+ls-ecaps.c:957:41: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  957 |       control_buffer = get_conf_long(d, where);
+      |                                         ^~~~~
+ls-ecaps.c:976:30: warning: conversion to 'int' from 'u32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  976 |       print_rebar_range_size(current_size);
+      |                              ^~~~~~~~~~~~
+ls-ecaps.c: In function 'cap_doe':
+ls-ecaps.c:1005:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 1005 |   if (!config_fetch(d, where + PCI_DOE_CAP, 0x14))
+ls-ecaps.c:1011:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 1011 |   l = get_conf_long(d, where + PCI_DOE_CAP);
+ls-ecaps.c:1018:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 1018 |   l = get_conf_long(d, where + PCI_DOE_CTL);
+ls-ecaps.c:1022:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 1022 |   l = get_conf_long(d, where + PCI_DOE_STS);
+ls-ecaps.c: In function 'show_ext_caps':
+ls-ecaps.c:1041:28: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 1041 |       if (!config_fetch(d, where, 4))
+      |                            ^~~~~
+ls-ecaps.c:1043:33: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 1043 |       header = get_conf_long(d, where);
+      |                                 ^~~~~
+ls-ecaps.c:1184:30: warning: unsigned conversion from 'int' to 'u32' {aka 'unsigned int'} changes value from '-4' to '4294967292' [-Wsign-conversion]
+ 1184 |       where = (header >> 20) & ~3;
+      |                              ^
+ls-ecaps.c:1184:15: warning: conversion to 'int' from 'u32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+ 1184 |       where = (header >> 20) & ~3;
+      |               ^
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot-native=   -Wconversion -Wno-error   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64  -c -o ls-kernel.o ls-kernel.c
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot-native=   -Wconversion -Wno-error   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64  -c -o ls-tree.o ls-tree.c
+ls-tree.c:15:64: warning: unsigned conversion from 'int' to 'unsigned int' changes value from '-1' to '4294967295' [-Wsign-conversion]
+   15 | struct bridge host_bridge = { NULL, NULL, NULL, NULL, NULL, 0, ~0, 0, ~0, NULL };
+      |                                                                ^
+ls-tree.c:15:71: warning: unsigned conversion from 'int' to 'unsigned int' changes value from '-1' to '4294967295' [-Wsign-conversion]
+   15 | struct bridge host_bridge = { NULL, NULL, NULL, NULL, NULL, 0, ~0, 0, ~0, NULL };
+      |                                                                       ^
+ls-tree.c: In function 'insert_dev':
+ls-tree.c:73:40: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+   73 |         bus = new_bus(parent->bridge, p->domain, p->bus);
+      |                                       ~^~~~~~~~
+ls-tree.c:76:37: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+   76 |   if (!bus && ! (bus = find_bus(b, p->domain, p->bus)))
+      |                                    ~^~~~~~~~
+ls-tree.c:85:25: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+   85 |       bus = new_bus(b, p->domain, p->bus);
+      |                        ~^~~~~~~~
+ls-tree.c: In function 'grow_tree':
+ls-tree.c:110:17: warning: unsigned conversion from 'int' to 'byte' {aka 'unsigned char'} changes the value of '-1' [-Wsign-conversion]
+  110 |       byte ht = d->no_config_access ? -1 : (get_conf_byte(d, PCI_HEADER_TYPE) & 0x7f);
+      |                 ^
+ls-tree.c:115:23: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  115 |           b->domain = dd->domain;
+      |                       ^~
+ls-tree.c:151:19: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  151 |       b->domain = parent->dev->domain;
+      |                   ^~~~~~
+ls-tree.c: In function 'tree_printf':
+ls-tree.c:234:26: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  234 |   int res = vsnprintf(p, space, fmt, args);
+      |                          ^~~~~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot-native=   -Wconversion -Wno-error   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64  -c -o ls-map.o ls-map.c
+ls-map.c: In function 'map_bridge':
+ls-map.c:36:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+   36 |   b->this = get_conf_byte(d, np);
+      |                              ^~
+ls-map.c:39:31: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+   39 |   b->first = get_conf_byte(d, ns);
+      |                               ^~
+ls-map.c:40:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+   40 |   b->last = get_conf_byte(d, nl);
+      |                              ^~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot-native=   -Wconversion -Wno-error   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64  -c -o common.o common.c
+common.c: In function 'xstrdup':
+common.c:49:13: warning: conversion to 'int' from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+   49 |   int len = strlen(str) + 1;
+      |             ^~~~~~
+common.c:50:24: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+   50 |   char *copy = xmalloc(len);
+      |                        ^~~
+common.c:51:21: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+   51 |   memcpy(copy, str, len);
+      |                     ^~~
+common.c: In function 'set_pci_method':
+common.c:74:22: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+   74 |       pacc->method = i;
+      |                      ^
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot -Wl,-O1 -Wl,--hash-style=gnu  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot-native=  -Wl,-z,relro,-z,now  lspci.o ls-vpd.o ls-caps.o ls-caps-vendor.o ls-ecaps.o ls-kernel.o ls-tree.o ls-map.o common.o lib/libpci.so.3.8.0 -lz -lresolv -ludev -lkmod -o lspci
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot-native=   -Wconversion -Wno-error   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64  -c -o setpci.o setpci.c
+setpci.c: In function 'select_devices':
+setpci.c:86:46: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+   86 |       devs = xmalloc(sizeof(struct device *) * cnt);
+      |                                              ^
+setpci.c: In function 'exec_op':
+setpci.c:114:15: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  114 |   int width = op->width;
+      |               ^~
+setpci.c:125:16: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  125 |         addr = cap->addr;
+      |                ^~~
+setpci.c:138:8: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  138 |   addr += op->addr;
+      |        ^~
+setpci.c:138:11: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  138 |   addr += op->addr;
+      |           ^~
+setpci.c:178:45: warning: conversion from 'unsigned int' to 'u8' {aka 'unsigned char'} may change value [-Wconversion]
+  178 |                   pci_write_byte(dev, addr, x);
+      |                                             ^
+setpci.c:181:45: warning: conversion from 'unsigned int' to 'u16' {aka 'short unsigned int'} may change value [-Wconversion]
+  181 |                   pci_write_word(dev, addr, x);
+      |                                             ^
+setpci.c: In function 'parse_register':
+setpci.c:626:24: warning: conversion from 'unsigned int' to 'u16' {aka 'short unsigned int'} may change value [-Wconversion]
+  626 |           op->cap_id = cap;
+      |                        ^~~
+setpci.c:636:24: warning: conversion from 'unsigned int' to 'u16' {aka 'short unsigned int'} may change value [-Wconversion]
+  636 |           op->cap_id = cap;
+      |                        ^~~
+setpci.c: In function 'parse_op':
+setpci.c:675:37: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  675 |   op = xmalloc(sizeof(struct op) + n*sizeof(struct value));
+      |                                     ^
+setpci.c:679:20: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  679 |   op->num_values = n;
+      |                    ^
+setpci.c:728:49: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  728 |   if (op->addr >= 0x1000 || op->addr + op->width*(n ? n : 1) > 0x1000)
+      |                                                 ^
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot -Wl,-O1 -Wl,--hash-style=gnu  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot-native=  -Wl,-z,relro,-z,now  setpci.o common.o lib/libpci.so.3.8.0 -lz -lresolv -ludev  -o setpci
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot-native=   -Wconversion -Wno-error   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64  -c -o example.o example.c
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot -Wl,-O1 -Wl,--hash-style=gnu  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0=/usr/src/debug/pciutils/3.8.0-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/recipe-sysroot-native=  -Wl,-z,relro,-z,now  example.o lib/libpci.so.3.8.0 -lz -lresolv -ludev  -o example
+M=`echo 2022-04-18 | sed 's/-01-/-January-/;s/-02-/-February-/;s/-03-/-March-/;s/-04-/-April-/;s/-05-/-May-/;s/-06-/-June-/;s/-07-/-July-/;s/-08-/-August-/;s/-09-/-September-/;s/-10-/-October-/;s/-11-/-November-/;s/-12-/-December-/;s/\(.*\)-\(.*\)-\(.*\)/\3 \2 \1/'` ; sed <lspci.man >lspci.8 "s/@TODAY@/$M/;s/@VERSION@/pciutils-3.8.0/;s#@IDSDIR@#/usr/share#;s#@PCI_IDS@#pci.ids.gz#"
+M=`echo 2022-04-18 | sed 's/-01-/-January-/;s/-02-/-February-/;s/-03-/-March-/;s/-04-/-April-/;s/-05-/-May-/;s/-06-/-June-/;s/-07-/-July-/;s/-08-/-August-/;s/-09-/-September-/;s/-10-/-October-/;s/-11-/-November-/;s/-12-/-December-/;s/\(.*\)-\(.*\)-\(.*\)/\3 \2 \1/'` ; sed <setpci.man >setpci.8 "s/@TODAY@/$M/;s/@VERSION@/pciutils-3.8.0/;s#@IDSDIR@#/usr/share#;s#@PCI_IDS@#pci.ids.gz#"
+M=`echo 2022-04-18 | sed 's/-01-/-January-/;s/-02-/-February-/;s/-03-/-March-/;s/-04-/-April-/;s/-05-/-May-/;s/-06-/-June-/;s/-07-/-July-/;s/-08-/-August-/;s/-09-/-September-/;s/-10-/-October-/;s/-11-/-November-/;s/-12-/-December-/;s/\(.*\)-\(.*\)-\(.*\)/\3 \2 \1/'` ; sed <pcilib.man >pcilib.7 "s/@TODAY@/$M/;s/@VERSION@/pciutils-3.8.0/;s#@IDSDIR@#/usr/share#;s#@PCI_IDS@#pci.ids.gz#"
+M=`echo 2022-04-18 | sed 's/-01-/-January-/;s/-02-/-February-/;s/-03-/-March-/;s/-04-/-April-/;s/-05-/-May-/;s/-06-/-June-/;s/-07-/-July-/;s/-08-/-August-/;s/-09-/-September-/;s/-10-/-October-/;s/-11-/-November-/;s/-12-/-December-/;s/\(.*\)-\(.*\)-\(.*\)/\3 \2 \1/'` ; sed <pci.ids.man >pci.ids.5 "s/@TODAY@/$M/;s/@VERSION@/pciutils-3.8.0/;s#@IDSDIR@#/usr/share#;s#@PCI_IDS@#pci.ids.gz#"
+sed <update-pciids.sh >update-pciids "s@^DEST=.*@DEST=/usr/share/pci.ids.gz@;s@^PCI_COMPRESSED_IDS=.*@PCI_COMPRESSED_IDS=1@"
+chmod +x update-pciids
+M=`echo 2022-04-18 | sed 's/-01-/-January-/;s/-02-/-February-/;s/-03-/-March-/;s/-04-/-April-/;s/-05-/-May-/;s/-06-/-June-/;s/-07-/-July-/;s/-08-/-August-/;s/-09-/-September-/;s/-10-/-October-/;s/-11-/-November-/;s/-12-/-December-/;s/\(.*\)-\(.*\)-\(.*\)/\3 \2 \1/'` ; sed <update-pciids.man >update-pciids.8 "s/@TODAY@/$M/;s/@VERSION@/pciutils-3.8.0/;s#@IDSDIR@#/usr/share#;s#@PCI_IDS@#pci.ids.gz#"
+gzip -9n <pci.ids >pci.ids.gz
+DEBUG: Shell function do_compile finished

@@ -1,0 +1,307 @@
+DEBUG: Executing python function autotools_aclocals
+DEBUG: SITE files ['endian-little', 'bit-32', 'arm-common', 'arm-32', 'common-linux', 'common-glibc', 'arm-linux', 'arm-linux-gnueabi', 'common']
+DEBUG: Python function autotools_aclocals finished
+DEBUG: Executing shell function do_compile
+NOTE: make -j 1
+make  all-recursive
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/build'
+Making all in src
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/build/src'
+/bin/bash ../libtool  --tag=CC   --mode=compile arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../../libmnl-1.0.5/src -I..  -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../../libmnl-1.0.5/include -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wshadow -Wstrict-prototypes 	-Wformat=2 -pipe -fvisibility=hidden -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/libmnl-1.0.5=/usr/src/debug/libmnl/1.0.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/libmnl-1.0.5=/usr/src/debug/libmnl/1.0.5-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/build=/usr/src/debug/libmnl/1.0.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/build=/usr/src/debug/libmnl/1.0.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o socket.lo ../../libmnl-1.0.5/src/socket.c
+libtool: compile:  arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../../libmnl-1.0.5/src -I.. -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../../libmnl-1.0.5/include -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wshadow -Wstrict-prototypes -Wformat=2 -pipe -fvisibility=hidden -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/libmnl-1.0.5=/usr/src/debug/libmnl/1.0.5-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/libmnl-1.0.5=/usr/src/debug/libmnl/1.0.5-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/build=/usr/src/debug/libmnl/1.0.5-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/build=/usr/src/debug/libmnl/1.0.5-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/recipe-sysroot-native= -Wconversion -Wno-error -c ../../libmnl-1.0.5/src/socket.c  -fPIC -DPIC -o .libs/socket.o
+../../libmnl-1.0.5/src/socket.c: In function 'mnl_socket_bind':
+../../libmnl-1.0.5/src/socket.c:201:27: warning: conversion to '__u32' {aka 'unsigned int'} from 'pid_t' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  201 |         nl->addr.nl_pid = pid;
+      |                           ^~~
+/bin/bash ../libtool  --tag=CC   --mode=compile arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../../libmnl-1.0.5/src -I..  -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../../libmnl-1.0.5/include -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wshadow -Wstrict-prototypes 	-Wformat=2 -pipe -fvisibility=hidden -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/libmnl-1.0.5=/usr/src/debug/libmnl/1.0.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/libmnl-1.0.5=/usr/src/debug/libmnl/1.0.5-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/build=/usr/src/debug/libmnl/1.0.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/build=/usr/src/debug/libmnl/1.0.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o callback.lo ../../libmnl-1.0.5/src/callback.c
+libtool: compile:  arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../../libmnl-1.0.5/src -I.. -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../../libmnl-1.0.5/include -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wshadow -Wstrict-prototypes -Wformat=2 -pipe -fvisibility=hidden -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/libmnl-1.0.5=/usr/src/debug/libmnl/1.0.5-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/libmnl-1.0.5=/usr/src/debug/libmnl/1.0.5-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/build=/usr/src/debug/libmnl/1.0.5-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/build=/usr/src/debug/libmnl/1.0.5-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/recipe-sysroot-native= -Wconversion -Wno-error -c ../../libmnl-1.0.5/src/callback.c  -fPIC -DPIC -o .libs/callback.o
+../../libmnl-1.0.5/src/callback.c: In function '__mnl_cb_run':
+../../libmnl-1.0.5/src/callback.c:54:36: warning: conversion to 'int' from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+   54 |         int ret = MNL_CB_OK, len = numbytes;
+      |                                    ^~~~~~~~
+/bin/bash ../libtool  --tag=CC   --mode=compile arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../../libmnl-1.0.5/src -I..  -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../../libmnl-1.0.5/include -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wshadow -Wstrict-prototypes 	-Wformat=2 -pipe -fvisibility=hidden -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/libmnl-1.0.5=/usr/src/debug/libmnl/1.0.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/libmnl-1.0.5=/usr/src/debug/libmnl/1.0.5-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/build=/usr/src/debug/libmnl/1.0.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/build=/usr/src/debug/libmnl/1.0.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o nlmsg.lo ../../libmnl-1.0.5/src/nlmsg.c
+libtool: compile:  arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../../libmnl-1.0.5/src -I.. -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../../libmnl-1.0.5/include -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wshadow -Wstrict-prototypes -Wformat=2 -pipe -fvisibility=hidden -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/libmnl-1.0.5=/usr/src/debug/libmnl/1.0.5-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/libmnl-1.0.5=/usr/src/debug/libmnl/1.0.5-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/build=/usr/src/debug/libmnl/1.0.5-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/build=/usr/src/debug/libmnl/1.0.5-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/recipe-sysroot-native= -Wconversion -Wno-error -c ../../libmnl-1.0.5/src/nlmsg.c  -fPIC -DPIC -o .libs/nlmsg.o
+In file included from ../../libmnl-1.0.5/src/nlmsg.c:15:
+../../libmnl-1.0.5/src/nlmsg.c: In function 'mnl_nlmsg_size':
+../../libmnl-1.0.5/include/libmnl/libmnl.h:42:56: warning: unsigned conversion from 'int' to 'unsigned int' changes value from '-4' to '4294967292' [-Wsign-conversion]
+   42 | #define MNL_ALIGN(len)          (((len)+MNL_ALIGNTO-1) & ~(MNL_ALIGNTO-1))
+      |                                                        ^
+../../libmnl-1.0.5/include/libmnl/libmnl.h:43:33: note: in expansion of macro 'MNL_ALIGN'
+   43 | #define MNL_NLMSG_HDRLEN        MNL_ALIGN(sizeof(struct nlmsghdr))
+      |                                 ^~~~~~~~~
+../../libmnl-1.0.5/src/nlmsg.c:56:22: note: in expansion of macro 'MNL_NLMSG_HDRLEN'
+   56 |         return len + MNL_NLMSG_HDRLEN;
+      |                      ^~~~~~~~~~~~~~~~
+../../libmnl-1.0.5/src/nlmsg.c: In function 'mnl_nlmsg_get_payload_len':
+../../libmnl-1.0.5/include/libmnl/libmnl.h:42:56: warning: unsigned conversion from 'int' to 'unsigned int' changes value from '-4' to '4294967292' [-Wsign-conversion]
+   42 | #define MNL_ALIGN(len)          (((len)+MNL_ALIGNTO-1) & ~(MNL_ALIGNTO-1))
+      |                                                        ^
+../../libmnl-1.0.5/include/libmnl/libmnl.h:43:33: note: in expansion of macro 'MNL_ALIGN'
+   43 | #define MNL_NLMSG_HDRLEN        MNL_ALIGN(sizeof(struct nlmsghdr))
+      |                                 ^~~~~~~~~
+../../libmnl-1.0.5/src/nlmsg.c:68:33: note: in expansion of macro 'MNL_NLMSG_HDRLEN'
+   68 |         return nlh->nlmsg_len - MNL_NLMSG_HDRLEN;
+      |                                 ^~~~~~~~~~~~~~~~
+../../libmnl-1.0.5/src/nlmsg.c: In function 'mnl_nlmsg_put_header':
+../../libmnl-1.0.5/include/libmnl/libmnl.h:42:56: warning: unsigned conversion from 'int' to 'unsigned int' changes value from '-4' to '4294967292' [-Wsign-conversion]
+   42 | #define MNL_ALIGN(len)          (((len)+MNL_ALIGNTO-1) & ~(MNL_ALIGNTO-1))
+      |                                                        ^
+../../libmnl-1.0.5/src/nlmsg.c:82:19: note: in expansion of macro 'MNL_ALIGN'
+   82 |         int len = MNL_ALIGN(sizeof(struct nlmsghdr));
+      |                   ^~~~~~~~~
+../../libmnl-1.0.5/src/nlmsg.c:85:24: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+   85 |         memset(buf, 0, len);
+      |                        ^~~
+../../libmnl-1.0.5/src/nlmsg.c:86:26: warning: conversion to '__u32' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+   86 |         nlh->nlmsg_len = len;
+      |                          ^~~
+../../libmnl-1.0.5/src/nlmsg.c: In function 'mnl_nlmsg_put_extra_header':
+../../libmnl-1.0.5/include/libmnl/libmnl.h:42:56: warning: unsigned conversion from 'int' to 'size_t' {aka 'unsigned int'} changes value from '-4' to '4294967292' [-Wsign-conversion]
+   42 | #define MNL_ALIGN(len)          (((len)+MNL_ALIGNTO-1) & ~(MNL_ALIGNTO-1))
+      |                                                        ^
+../../libmnl-1.0.5/src/nlmsg.c:105:22: note: in expansion of macro 'MNL_ALIGN'
+  105 |         size_t len = MNL_ALIGN(size);
+      |                      ^~~~~~~~~
+../../libmnl-1.0.5/src/nlmsg.c: In function 'mnl_nlmsg_get_payload':
+../../libmnl-1.0.5/include/libmnl/libmnl.h:42:56: warning: unsigned conversion from 'int' to 'unsigned int' changes value from '-4' to '4294967292' [-Wsign-conversion]
+   42 | #define MNL_ALIGN(len)          (((len)+MNL_ALIGNTO-1) & ~(MNL_ALIGNTO-1))
+      |                                                        ^
+../../libmnl-1.0.5/include/libmnl/libmnl.h:43:33: note: in expansion of macro 'MNL_ALIGN'
+   43 | #define MNL_NLMSG_HDRLEN        MNL_ALIGN(sizeof(struct nlmsghdr))
+      |                                 ^~~~~~~~~
+../../libmnl-1.0.5/src/nlmsg.c:119:30: note: in expansion of macro 'MNL_NLMSG_HDRLEN'
+  119 |         return (void *)nlh + MNL_NLMSG_HDRLEN;
+      |                              ^~~~~~~~~~~~~~~~
+../../libmnl-1.0.5/src/nlmsg.c: In function 'mnl_nlmsg_get_payload_offset':
+../../libmnl-1.0.5/include/libmnl/libmnl.h:42:56: warning: unsigned conversion from 'int' to 'unsigned int' changes value from '-4' to '4294967292' [-Wsign-conversion]
+   42 | #define MNL_ALIGN(len)          (((len)+MNL_ALIGNTO-1) & ~(MNL_ALIGNTO-1))
+      |                                                        ^
+../../libmnl-1.0.5/include/libmnl/libmnl.h:43:33: note: in expansion of macro 'MNL_ALIGN'
+   43 | #define MNL_NLMSG_HDRLEN        MNL_ALIGN(sizeof(struct nlmsghdr))
+      |                                 ^~~~~~~~~
+../../libmnl-1.0.5/src/nlmsg.c:133:30: note: in expansion of macro 'MNL_NLMSG_HDRLEN'
+  133 |         return (void *)nlh + MNL_NLMSG_HDRLEN + MNL_ALIGN(offset);
+      |                              ^~~~~~~~~~~~~~~~
+../../libmnl-1.0.5/include/libmnl/libmnl.h:42:56: warning: unsigned conversion from 'int' to 'size_t' {aka 'unsigned int'} changes value from '-4' to '4294967292' [-Wsign-conversion]
+   42 | #define MNL_ALIGN(len)          (((len)+MNL_ALIGNTO-1) & ~(MNL_ALIGNTO-1))
+      |                                                        ^
+../../libmnl-1.0.5/src/nlmsg.c:133:49: note: in expansion of macro 'MNL_ALIGN'
+  133 |         return (void *)nlh + MNL_NLMSG_HDRLEN + MNL_ALIGN(offset);
+      |                                                 ^~~~~~~~~
+../../libmnl-1.0.5/src/nlmsg.c: In function 'mnl_nlmsg_next':
+../../libmnl-1.0.5/include/libmnl/libmnl.h:42:56: warning: unsigned conversion from 'int' to '__u32' {aka 'unsigned int'} changes value from '-4' to '4294967292' [-Wsign-conversion]
+   42 | #define MNL_ALIGN(len)          (((len)+MNL_ALIGNTO-1) & ~(MNL_ALIGNTO-1))
+      |                                                        ^
+../../libmnl-1.0.5/src/nlmsg.c:175:17: note: in expansion of macro 'MNL_ALIGN'
+  175 |         *len -= MNL_ALIGN(nlh->nlmsg_len);
+      |                 ^~~~~~~~~
+../../libmnl-1.0.5/src/nlmsg.c:175:14: warning: conversion to '__u32' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  175 |         *len -= MNL_ALIGN(nlh->nlmsg_len);
+      |              ^~
+../../libmnl-1.0.5/include/libmnl/libmnl.h:42:33: warning: conversion to 'int' from '__u32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+   42 | #define MNL_ALIGN(len)          (((len)+MNL_ALIGNTO-1) & ~(MNL_ALIGNTO-1))
+      |                                 ^
+../../libmnl-1.0.5/src/nlmsg.c:175:17: note: in expansion of macro 'MNL_ALIGN'
+  175 |         *len -= MNL_ALIGN(nlh->nlmsg_len);
+      |                 ^~~~~~~~~
+../../libmnl-1.0.5/include/libmnl/libmnl.h:42:56: warning: unsigned conversion from 'int' to '__u32' {aka 'unsigned int'} changes value from '-4' to '4294967292' [-Wsign-conversion]
+   42 | #define MNL_ALIGN(len)          (((len)+MNL_ALIGNTO-1) & ~(MNL_ALIGNTO-1))
+      |                                                        ^
+../../libmnl-1.0.5/src/nlmsg.c:176:50: note: in expansion of macro 'MNL_ALIGN'
+  176 |         return (struct nlmsghdr *)((void *)nlh + MNL_ALIGN(nlh->nlmsg_len));
+      |                                                  ^~~~~~~~~
+../../libmnl-1.0.5/src/nlmsg.c: In function 'mnl_nlmsg_get_payload_tail':
+../../libmnl-1.0.5/include/libmnl/libmnl.h:42:56: warning: unsigned conversion from 'int' to '__u32' {aka 'unsigned int'} changes value from '-4' to '4294967292' [-Wsign-conversion]
+   42 | #define MNL_ALIGN(len)          (((len)+MNL_ALIGNTO-1) & ~(MNL_ALIGNTO-1))
+      |                                                        ^
+../../libmnl-1.0.5/src/nlmsg.c:189:30: note: in expansion of macro 'MNL_ALIGN'
+  189 |         return (void *)nlh + MNL_ALIGN(nlh->nlmsg_len);
+      |                              ^~~~~~~~~
+../../libmnl-1.0.5/src/nlmsg.c: In function 'mnl_nlmsg_fprintf_payload':
+../../libmnl-1.0.5/src/nlmsg.c:297:64: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  297 |                                 rem = NLA_ALIGN(attr->nla_len) -
+      |                                                                ^
+In file included from ../../libmnl-1.0.5/include/libmnl/libmnl.h:9:
+../../libmnl-1.0.5/include/linux/netlink.h:149:33: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  149 | #define NLA_ALIGN(len)          (((len) + NLA_ALIGNTO - 1) & ~(NLA_ALIGNTO - 1))
+      |                                 ^
+../../libmnl-1.0.5/src/nlmsg.c:297:39: note: in expansion of macro 'NLA_ALIGN'
+  297 |                                 rem = NLA_ALIGN(attr->nla_len) -
+      |                                       ^~~~~~~~~
+../../libmnl-1.0.5/src/nlmsg.c: In function 'mnl_nlmsg_fprintf':
+../../libmnl-1.0.5/src/nlmsg.c:364:19: warning: conversion to 'int' from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  364 |         int len = datalen;
+      |                   ^~~~~~~
+/bin/bash ../libtool  --tag=CC   --mode=compile arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../../libmnl-1.0.5/src -I..  -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../../libmnl-1.0.5/include -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wshadow -Wstrict-prototypes 	-Wformat=2 -pipe -fvisibility=hidden -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/libmnl-1.0.5=/usr/src/debug/libmnl/1.0.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/libmnl-1.0.5=/usr/src/debug/libmnl/1.0.5-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/build=/usr/src/debug/libmnl/1.0.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/build=/usr/src/debug/libmnl/1.0.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o attr.lo ../../libmnl-1.0.5/src/attr.c
+libtool: compile:  arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../../libmnl-1.0.5/src -I.. -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../../libmnl-1.0.5/include -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wshadow -Wstrict-prototypes -Wformat=2 -pipe -fvisibility=hidden -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/libmnl-1.0.5=/usr/src/debug/libmnl/1.0.5-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/libmnl-1.0.5=/usr/src/debug/libmnl/1.0.5-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/build=/usr/src/debug/libmnl/1.0.5-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/build=/usr/src/debug/libmnl/1.0.5-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/recipe-sysroot-native= -Wconversion -Wno-error -c ../../libmnl-1.0.5/src/attr.c  -fPIC -DPIC -o .libs/attr.o
+../../libmnl-1.0.5/src/attr.c: In function 'mnl_attr_get_type':
+../../libmnl-1.0.5/src/attr.c:40:31: warning: unsigned conversion from 'int' to 'uint16_t' {aka 'short unsigned int'} changes the value of '-49153' [-Wsign-conversion]
+   40 |         return attr->nla_type & NLA_TYPE_MASK;
+In file included from ../../libmnl-1.0.5/src/attr.c:10:
+../../libmnl-1.0.5/src/attr.c: In function 'mnl_attr_get_payload_len':
+../../libmnl-1.0.5/include/libmnl/libmnl.h:42:56: warning: unsigned conversion from 'int' to 'unsigned int' changes value from '-4' to '4294967292' [-Wsign-conversion]
+   42 | #define MNL_ALIGN(len)          (((len)+MNL_ALIGNTO-1) & ~(MNL_ALIGNTO-1))
+      |                                                        ^
+../../libmnl-1.0.5/include/libmnl/libmnl.h:84:25: note: in expansion of macro 'MNL_ALIGN'
+   84 | #define MNL_ATTR_HDRLEN MNL_ALIGN(sizeof(struct nlattr))
+      |                         ^~~~~~~~~
+../../libmnl-1.0.5/src/attr.c:63:32: note: in expansion of macro 'MNL_ATTR_HDRLEN'
+   63 |         return attr->nla_len - MNL_ATTR_HDRLEN;
+      |                                ^~~~~~~~~~~~~~~
+../../libmnl-1.0.5/src/attr.c:63:30: warning: conversion from 'unsigned int' to 'uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+   63 |         return attr->nla_len - MNL_ATTR_HDRLEN;
+../../libmnl-1.0.5/src/attr.c: In function 'mnl_attr_get_payload':
+../../libmnl-1.0.5/include/libmnl/libmnl.h:42:56: warning: unsigned conversion from 'int' to 'unsigned int' changes value from '-4' to '4294967292' [-Wsign-conversion]
+   42 | #define MNL_ALIGN(len)          (((len)+MNL_ALIGNTO-1) & ~(MNL_ALIGNTO-1))
+      |                                                        ^
+../../libmnl-1.0.5/include/libmnl/libmnl.h:84:25: note: in expansion of macro 'MNL_ALIGN'
+   84 | #define MNL_ATTR_HDRLEN MNL_ALIGN(sizeof(struct nlattr))
+      |                         ^~~~~~~~~
+../../libmnl-1.0.5/src/attr.c:74:31: note: in expansion of macro 'MNL_ATTR_HDRLEN'
+   74 |         return (void *)attr + MNL_ATTR_HDRLEN;
+      |                               ^~~~~~~~~~~~~~~
+../../libmnl-1.0.5/src/attr.c: In function '__mnl_attr_validate':
+../../libmnl-1.0.5/include/libmnl/libmnl.h:42:56: warning: unsigned conversion from 'int' to 'unsigned int' changes value from '-4' to '4294967292' [-Wsign-conversion]
+   42 | #define MNL_ALIGN(len)          (((len)+MNL_ALIGNTO-1) & ~(MNL_ALIGNTO-1))
+      |                                                        ^
+../../libmnl-1.0.5/include/libmnl/libmnl.h:84:25: note: in expansion of macro 'MNL_ALIGN'
+   84 | #define MNL_ATTR_HDRLEN MNL_ALIGN(sizeof(struct nlattr))
+      |                         ^~~~~~~~~
+../../libmnl-1.0.5/src/attr.c:174:32: note: in expansion of macro 'MNL_ATTR_HDRLEN'
+  174 |                 if (attr_len < MNL_ATTR_HDRLEN) {
+      |                                ^~~~~~~~~~~~~~~
+../../libmnl-1.0.5/src/attr.c: In function 'mnl_attr_validate':
+../../libmnl-1.0.5/src/attr.c:215:19: warning: conversion to 'int' from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  215 |         exp_len = mnl_attr_data_type_len[type];
+      |                   ^~~~~~~~~~~~~~~~~~~~~~
+../../libmnl-1.0.5/src/attr.c:216:48: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  216 |         return __mnl_attr_validate(attr, type, exp_len);
+      |                                                ^~~~~~~
+../../libmnl-1.0.5/src/attr.c: In function 'mnl_attr_put':
+../../libmnl-1.0.5/include/libmnl/libmnl.h:42:56: warning: unsigned conversion from 'int' to 'unsigned int' changes value from '-4' to '4294967292' [-Wsign-conversion]
+   42 | #define MNL_ALIGN(len)          (((len)+MNL_ALIGNTO-1) & ~(MNL_ALIGNTO-1))
+      |                                                        ^
+../../libmnl-1.0.5/src/attr.c:399:32: note: in expansion of macro 'MNL_ALIGN'
+  399 |         uint16_t payload_len = MNL_ALIGN(sizeof(struct nlattr)) + len;
+      |                                ^~~~~~~~~
+../../libmnl-1.0.5/include/libmnl/libmnl.h:42:33: warning: conversion from 'unsigned int' to 'uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+   42 | #define MNL_ALIGN(len)          (((len)+MNL_ALIGNTO-1) & ~(MNL_ALIGNTO-1))
+      |                                 ^
+../../libmnl-1.0.5/src/attr.c:399:32: note: in expansion of macro 'MNL_ALIGN'
+  399 |         uint16_t payload_len = MNL_ALIGN(sizeof(struct nlattr)) + len;
+      |                                ^~~~~~~~~
+../../libmnl-1.0.5/include/libmnl/libmnl.h:42:56: warning: unsigned conversion from 'int' to 'size_t' {aka 'unsigned int'} changes value from '-4' to '4294967292' [-Wsign-conversion]
+   42 | #define MNL_ALIGN(len)          (((len)+MNL_ALIGNTO-1) & ~(MNL_ALIGNTO-1))
+      |                                                        ^
+../../libmnl-1.0.5/src/attr.c:405:15: note: in expansion of macro 'MNL_ALIGN'
+  405 |         pad = MNL_ALIGN(len) - len;
+      |               ^~~~~~~~~
+../../libmnl-1.0.5/include/libmnl/libmnl.h:42:33: warning: conversion to 'int' from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+   42 | #define MNL_ALIGN(len)          (((len)+MNL_ALIGNTO-1) & ~(MNL_ALIGNTO-1))
+      |                                 ^
+../../libmnl-1.0.5/src/attr.c:405:15: note: in expansion of macro 'MNL_ALIGN'
+  405 |         pad = MNL_ALIGN(len) - len;
+      |               ^~~~~~~~~
+../../libmnl-1.0.5/src/attr.c:407:61: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  407 |                 memset(mnl_attr_get_payload(attr) + len, 0, pad);
+      |                                                             ^~~
+../../libmnl-1.0.5/src/attr.c:409:24: warning: conversion to '__u32' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  409 |         nlh->nlmsg_len += MNL_ALIGN(payload_len);
+      |                        ^~
+../../libmnl-1.0.5/src/attr.c: In function 'mnl_attr_nest_start':
+../../libmnl-1.0.5/include/libmnl/libmnl.h:42:56: warning: unsigned conversion from 'int' to 'unsigned int' changes value from '-4' to '4294967292' [-Wsign-conversion]
+   42 | #define MNL_ALIGN(len)          (((len)+MNL_ALIGNTO-1) & ~(MNL_ALIGNTO-1))
+      |                                                        ^
+../../libmnl-1.0.5/src/attr.c:521:27: note: in expansion of macro 'MNL_ALIGN'
+  521 |         nlh->nlmsg_len += MNL_ALIGN(sizeof(struct nlattr));
+      |                           ^~~~~~~~~
+../../libmnl-1.0.5/src/attr.c: In function 'mnl_attr_put_check':
+../../libmnl-1.0.5/include/libmnl/libmnl.h:42:56: warning: unsigned conversion from 'int' to 'unsigned int' changes value from '-4' to '4294967292' [-Wsign-conversion]
+   42 | #define MNL_ALIGN(len)          (((len)+MNL_ALIGNTO-1) & ~(MNL_ALIGNTO-1))
+      |                                                        ^
+../../libmnl-1.0.5/include/libmnl/libmnl.h:84:25: note: in expansion of macro 'MNL_ALIGN'
+   84 | #define MNL_ATTR_HDRLEN MNL_ALIGN(sizeof(struct nlattr))
+      |                         ^~~~~~~~~
+../../libmnl-1.0.5/src/attr.c:544:30: note: in expansion of macro 'MNL_ATTR_HDRLEN'
+  544 |         if (nlh->nlmsg_len + MNL_ATTR_HDRLEN + MNL_ALIGN(len) > buflen)
+      |                              ^~~~~~~~~~~~~~~
+../../libmnl-1.0.5/include/libmnl/libmnl.h:42:56: warning: unsigned conversion from 'int' to 'size_t' {aka 'unsigned int'} changes value from '-4' to '4294967292' [-Wsign-conversion]
+   42 | #define MNL_ALIGN(len)          (((len)+MNL_ALIGNTO-1) & ~(MNL_ALIGNTO-1))
+      |                                                        ^
+../../libmnl-1.0.5/src/attr.c:544:48: note: in expansion of macro 'MNL_ALIGN'
+  544 |         if (nlh->nlmsg_len + MNL_ATTR_HDRLEN + MNL_ALIGN(len) > buflen)
+      |                                                ^~~~~~~~~
+../../libmnl-1.0.5/src/attr.c: In function 'mnl_attr_nest_start_check':
+../../libmnl-1.0.5/include/libmnl/libmnl.h:42:56: warning: unsigned conversion from 'int' to 'unsigned int' changes value from '-4' to '4294967292' [-Wsign-conversion]
+   42 | #define MNL_ALIGN(len)          (((len)+MNL_ALIGNTO-1) & ~(MNL_ALIGNTO-1))
+      |                                                        ^
+../../libmnl-1.0.5/include/libmnl/libmnl.h:84:25: note: in expansion of macro 'MNL_ALIGN'
+   84 | #define MNL_ATTR_HDRLEN MNL_ALIGN(sizeof(struct nlattr))
+      |                         ^~~~~~~~~
+../../libmnl-1.0.5/src/attr.c:689:30: note: in expansion of macro 'MNL_ATTR_HDRLEN'
+  689 |         if (nlh->nlmsg_len + MNL_ATTR_HDRLEN > buflen)
+      |                              ^~~~~~~~~~~~~~~
+../../libmnl-1.0.5/src/attr.c: In function 'mnl_attr_nest_end':
+../../libmnl-1.0.5/src/attr.c:704:26: warning: conversion from 'int' to '__u16' {aka 'short unsigned int'} may change value [-Wconversion]
+  704 |         start->nla_len = mnl_nlmsg_get_payload_tail(nlh) - (void *)start;
+      |                          ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../../libmnl-1.0.5/src/attr.c: In function 'mnl_attr_nest_cancel':
+../../libmnl-1.0.5/src/attr.c:717:24: warning: conversion to '__u32' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  717 |         nlh->nlmsg_len -= mnl_nlmsg_get_payload_tail(nlh) - (void *)start;
+      |                        ^~
+/bin/bash ../libtool  --tag=CC   --mode=link arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/recipe-sysroot -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wshadow -Wstrict-prototypes 	-Wformat=2 -pipe -fvisibility=hidden -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/libmnl-1.0.5=/usr/src/debug/libmnl/1.0.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/libmnl-1.0.5=/usr/src/debug/libmnl/1.0.5-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/build=/usr/src/debug/libmnl/1.0.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/build=/usr/src/debug/libmnl/1.0.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/recipe-sysroot-native=   -Wconversion -Wno-error -Wl,--version-script=../../libmnl-1.0.5/src/libmnl.map -version-info 2:0:2 -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/libmnl-1.0.5=/usr/src/debug/libmnl/1.0.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/libmnl-1.0.5=/usr/src/debug/libmnl/1.0.5-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/build=/usr/src/debug/libmnl/1.0.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/build=/usr/src/debug/libmnl/1.0.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/recipe-sysroot-native=  -Wl,-z,relro,-z,now -o libmnl.la -rpath /usr/lib socket.lo callback.lo nlmsg.lo attr.lo  
+libtool: link: arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/recipe-sysroot -shared  -fPIC -DPIC  .libs/socket.o .libs/callback.o .libs/nlmsg.o .libs/attr.o    -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/recipe-sysroot -O2 -g -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/libmnl-1.0.5=/usr/src/debug/libmnl/1.0.5-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/libmnl-1.0.5=/usr/src/debug/libmnl/1.0.5-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/build=/usr/src/debug/libmnl/1.0.5-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/build=/usr/src/debug/libmnl/1.0.5-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/recipe-sysroot-native= -Wl,--version-script=../../libmnl-1.0.5/src/libmnl.map -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/libmnl-1.0.5=/usr/src/debug/libmnl/1.0.5-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/libmnl-1.0.5=/usr/src/debug/libmnl/1.0.5-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/build=/usr/src/debug/libmnl/1.0.5-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/build=/usr/src/debug/libmnl/1.0.5-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/recipe-sysroot-native= -Wl,-z -Wl,relro -Wl,-z -Wl,now   -Wl,-soname -Wl,libmnl.so.0 -o .libs/libmnl.so.0.2.0
+libtool: link: (cd ".libs" && rm -f "libmnl.so.0" && ln -s "libmnl.so.0.2.0" "libmnl.so.0")
+libtool: link: (cd ".libs" && rm -f "libmnl.so" && ln -s "libmnl.so.0.2.0" "libmnl.so")
+libtool: link: ( cd ".libs" && rm -f "libmnl.la" && ln -s "../libmnl.la" "libmnl.la" )
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/build/src'
+Making all in include
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/build/include'
+Making all in libmnl
+make[3]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/build/include/libmnl'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/build/include/libmnl'
+Making all in linux
+make[3]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/build/include/linux'
+Making all in netfilter
+make[4]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/build/include/linux/netfilter'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/build/include/linux/netfilter'
+make[4]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/build/include/linux'
+make[4]: Nothing to be done for 'all-am'.
+make[4]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/build/include/linux'
+make[3]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/build/include/linux'
+make[3]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/build/include'
+make[3]: Nothing to be done for 'all-am'.
+make[3]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/build/include'
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/build/include'
+Making all in examples
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/build/examples'
+Making all in genl
+make[3]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/build/examples/genl'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/build/examples/genl'
+Making all in kobject
+make[3]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/build/examples/kobject'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/build/examples/kobject'
+Making all in netfilter
+make[3]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/build/examples/netfilter'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/build/examples/netfilter'
+Making all in rtnl
+make[3]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/build/examples/rtnl'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/build/examples/rtnl'
+make[3]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/build/examples'
+make[3]: Nothing to be done for 'all-am'.
+make[3]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/build/examples'
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/build/examples'
+Making all in doxygen
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/build/doxygen'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/build/doxygen'
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/build'
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/build'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libmnl/1.0.5-r0/build'
+DEBUG: Shell function do_compile finished

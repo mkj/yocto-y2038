@@ -1,0 +1,29 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: []
+NOTE: Skipping as already exists in sysroot: ['glibc', 'gcc-cross-arm', 'gcc-runtime', 'quilt-native', 'patch-native', 'pseudo-native', 'libtool-native', 'attr-native', 'gmp-native', 'mpfr-native', 'xz-native', 'binutils-cross-arm', 'texinfo-dummy-native', 'zlib-native', 'zstd-native', 'libmpc-native', 'linux-libc-headers', 'gnu-config-native', 'flex-native', 'libgcc', 'gettext-minimal-native', 'm4-native']
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing shell function do_configure
+prefix                        /usr
+includedir                    /usr/include
+libdir                        /usr/lib
+libdevdir                     /usr/lib
+relativelibdir                
+mandir                        /usr/share/man
+datadir                       /usr/share
+stringop_overflow             yes
+array_bounds                  yes
+__kernel_rwf_t                yes
+__kernel_timespec             yes
+open_how                      yes
+statx                         yes
+glibc_statx                   yes
+C++                           yes
+has_ucontext                  yes
+has_memfd_create              yes
+liburing_nolibc               no
+CC                            arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/liburing/2.2-r0/recipe-sysroot
+CXX                           arm-openbmc-linux-gnueabi-g++  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/liburing/2.2-r0/recipe-sysroot
+DEBUG: Shell function do_configure finished
+DEBUG: Executing python function do_qa_configure
+DEBUG: Python function do_qa_configure finished

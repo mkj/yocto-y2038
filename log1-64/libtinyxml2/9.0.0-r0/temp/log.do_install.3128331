@@ -1,0 +1,21 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/cmake/cmake-native_3.24.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/ninja/ninja_1.11.1.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: []
+NOTE: Skipping as already exists in sysroot: ['glibc', 'cmake-native', 'gcc-cross-arm', 'gcc-runtime', 'quilt-native', 'ninja-native', 'patch-native', 'pseudo-native', 'zstd-native', 'mpfr-native', 'libtool-native', 'xz-native', 'zlib-native', 'linux-libc-headers', 'gmp-native', 'binutils-cross-arm', 'gnu-config-native', 'texinfo-dummy-native', 'flex-native', 'libmpc-native', 'attr-native', 'ncurses-native', 'curl-native', 'bzip2-native', 're2c-native', 'libgcc', 'gettext-minimal-native', 'm4-native', 'openssl-native', 'perl-native', 'make-native', 'gdbm-native']
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing shell function do_install
+NOTE: DESTDIR=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtinyxml2/9.0.0-r0/image VERBOSE=1 cmake --build /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtinyxml2/9.0.0-r0/build --target install --
+[0/1] cd /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtinyxml2/9.0.0-r0/build && /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtinyxml2/9.0.0-r0/recipe-sysroot-native/usr/bin/cmake -P cmake_install.cmake
+-- Install configuration: ""
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtinyxml2/9.0.0-r0/image/usr/lib/libtinyxml2.so.9.0.0
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtinyxml2/9.0.0-r0/image/usr/lib/libtinyxml2.so.9
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtinyxml2/9.0.0-r0/image/usr/lib/libtinyxml2.so
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtinyxml2/9.0.0-r0/image/usr/lib/cmake/tinyxml2/tinyxml2-shared-targets.cmake
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtinyxml2/9.0.0-r0/image/usr/lib/cmake/tinyxml2/tinyxml2-shared-targets-noconfig.cmake
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtinyxml2/9.0.0-r0/image/usr/lib/cmake/tinyxml2/tinyxml2-config.cmake
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtinyxml2/9.0.0-r0/image/usr/lib/cmake/tinyxml2/tinyxml2-config-version.cmake
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtinyxml2/9.0.0-r0/image/usr/include/tinyxml2.h
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtinyxml2/9.0.0-r0/image/usr/lib/pkgconfig/tinyxml2.pc
+DEBUG: Shell function do_install finished
+DEBUG: Executing shell function remove_libtool_la
+DEBUG: Shell function remove_libtool_la finished

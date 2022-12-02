@@ -1,0 +1,56 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/qemu/qemu-native_7.1.0.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/meson/meson_0.63.3.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/ninja/ninja_1.11.1.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pkgconfig/pkgconfig_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/python/python3_3.11.0.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: []
+NOTE: Skipping as already exists in sysroot: ['glibc', 'gcc-cross-arm', 'gcc-runtime', 'qemu-native', 'quilt-native', 'meson-native', 'ninja-native', 'patch-native', 'pkgconfig-native', 'pseudo-native', 'python3-native', 'libtool-native', 'attr-native', 'zstd-native', 'flex-native', 'binutils-cross-arm', 'zlib-native', 'linux-libc-headers', 'gmp-native', 'mpfr-native', 'texinfo-dummy-native', 'libmpc-native', 'gnu-config-native', 'xz-native', 'python3-installer-native', 'python3-wheel-native', 'python3-setuptools-native', 'python3-picobuild-native', 'glib-2.0-native', 'openssl-native', 'libnsl2-native', 'util-linux-libuuid-native', 'libtirpc-native', 'sqlite3-native', 'ncurses-native', 'gdbm-native', 'libffi-native', 'bzip2-native', 'readline-native', 're2c-native', 'libgcc', 'gettext-minimal-native', 'm4-native', 'python3-flit-core-native', 'libpcre-native', 'util-linux-native', 'gettext-native', 'perl-native', 'unzip-native', 'libcap-ng-native', 'libpcre2-native', 'make-native']
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing shell function do_configure
+NOTE: Executing meson -Dexamples=false -Dtests=disabled -Dwerror=false -Db_lto=true ...
+The Meson build system
+Version: 0.63.3
+Source dir: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gpioplus/0.1+gitAUTOINC+42c77addd0-r1/git
+Build dir: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gpioplus/0.1+gitAUTOINC+42c77addd0-r1/build
+Build type: cross build
+Project name: gpioplus
+Project version: 0.1
+C++ compiler for the host machine: arm-openbmc-linux-gnueabi-g++ -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gpioplus/0.1+gitAUTOINC+42c77addd0-r1/recipe-sysroot (gcc 12.2.0 "arm-openbmc-linux-gnueabi-g++ (GCC) 12.2.0")
+C++ linker for the host machine: arm-openbmc-linux-gnueabi-g++ -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gpioplus/0.1+gitAUTOINC+42c77addd0-r1/recipe-sysroot ld.bfd 2.39.0.20220819
+C++ compiler for the build machine: g++ (gcc 12.2.0 "g++ (Ubuntu 12.2.0-3ubuntu1) 12.2.0")
+C++ linker for the build machine: g++ ld.bfd 2.39
+Build machine cpu family: x86_64
+Build machine cpu: x86_64
+Host machine cpu family: arm
+Host machine cpu: arm
+Target machine cpu family: arm
+Target machine cpu: arm
+Build targets in project: 1
+
+gpioplus 0.1
+
+  User defined options
+    Cross files   : /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gpioplus/0.1+gitAUTOINC+42c77addd0-r1/meson.cross
+    Native files  : /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gpioplus/0.1+gitAUTOINC+42c77addd0-r1/meson.native
+    bindir        : bin
+    buildtype     : plain
+    datadir       : share
+    includedir    : include
+    infodir       : share/info
+    libdir        : lib
+    libexecdir    : libexec
+    localstatedir : /var
+    mandir        : share/man
+    prefix        : /usr
+    sbindir       : sbin
+    sharedstatedir: /com
+    sysconfdir    : /etc
+    werror        : false
+    wrap_mode     : nodownload
+    b_lto         : true
+    examples      : false
+    tests         : disabled
+
+Found ninja-1.11.1 at /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gpioplus/0.1+gitAUTOINC+42c77addd0-r1/recipe-sysroot-native/usr/bin/ninja
+DEBUG: Shell function do_configure finished
+DEBUG: Executing python function do_qa_configure
+DEBUG: Python function do_qa_configure finished
+DEBUG: Executing python function meson_do_qa_configure
+DEBUG: Python function meson_do_qa_configure finished

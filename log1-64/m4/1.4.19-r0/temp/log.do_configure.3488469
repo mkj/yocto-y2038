@@ -1,0 +1,718 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-cross_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-native_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-extended/texinfo-dummy-native/texinfo-dummy-native.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-core/gettext/gettext_0.21.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/autoconf/autoconf_2.71.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/automake/automake_1.16.5.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: []
+NOTE: Skipping as already exists in sysroot: ['glibc', 'gcc-cross-arm', 'gcc-runtime', 'libtool-cross', 'libtool-native', 'quilt-native', 'texinfo-dummy-native', 'gettext-native', 'autoconf-native', 'automake-native', 'patch-native', 'pseudo-native', 'attr-native', 'gettext-minimal-native', 'm4-native', 'gnu-config-native', 'zstd-native', 'flex-native', 'binutils-cross-arm', 'zlib-native', 'linux-libc-headers', 'gmp-native', 'mpfr-native', 'libmpc-native', 'xz-native', 'libgcc']
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing shell function autotools_preconfigure
+DEBUG: Shell function autotools_preconfigure finished
+DEBUG: Executing python function autotools_aclocals
+DEBUG: SITE files ['endian-little', 'bit-32', 'arm-common', 'arm-32', 'common-linux', 'common-glibc', 'arm-linux', 'arm-linux-gnueabi', 'common']
+DEBUG: Python function autotools_aclocals finished
+DEBUG: Executing shell function do_configure
+automake (GNU automake) 1.16.5
+Copyright (C) 2021 Free Software Foundation, Inc.
+License GPLv2+: GNU GPL version 2 or later <https://gnu.org/licenses/gpl-2.0.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Written by Tom Tromey <tromey@redhat.com>
+       and Alexandre Duret-Lutz <adl@gnu.org>.
+AUTOV is 1.16
+NOTE: Executing ACLOCAL="aclocal --system-acdir=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/m4/1.4.19-r0/recipe-sysroot/usr/share/aclocal/ --automake-acdir=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/m4/1.4.19-r0/recipe-sysroot-native/usr/share/aclocal-1.16" autoreconf -Wcross --verbose --install --force --exclude=autopoint --exclude=gtkdocize -I ./m4 -I /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/m4/1.4.19-r0/recipe-sysroot-native/usr/share/aclocal/
+autoreconf: export WARNINGS=cross,no-obsolete
+autoreconf: Entering directory '.'
+autoreconf: running: aclocal --system-acdir=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/m4/1.4.19-r0/recipe-sysroot/usr/share/aclocal/ --automake-acdir=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/m4/1.4.19-r0/recipe-sysroot-native/usr/share/aclocal-1.16 -I ./m4 -I /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/m4/1.4.19-r0/recipe-sysroot-native/usr/share/aclocal/ --force -I m4
+autoreconf: configure.ac: tracing
+autoreconf: configure.ac: not using Libtool
+autoreconf: configure.ac: not using Intltool
+autoreconf: configure.ac: not using Gtkdoc
+autoreconf: running: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/m4/1.4.19-r0/recipe-sysroot-native/usr/bin/autoconf --include=./m4 --include=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/m4/1.4.19-r0/recipe-sysroot-native/usr/share/aclocal/ --force
+configure.ac:153: warning: AC_RUN_IFELSE called without default to allow cross compiling
+../autoconf-2.71/lib/autoconf/general.m4:2981: AC_RUN_IFELSE is expanded from...
+../autoconf-2.71/lib/m4sugar/m4sh.m4:692: _AS_IF_ELSE is expanded from...
+../autoconf-2.71/lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+../autoconf-2.71/lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+../autoconf-2.71/lib/autoconf/general.m4:2270: AC_CACHE_CHECK is expanded from...
+m4/calloc.m4:18: _AC_FUNC_CALLOC_IF is expanded from...
+m4/calloc.m4:57: gl_FUNC_CALLOC_GNU is expanded from...
+m4/gnulib-comp.m4:688: M4_INIT is expanded from...
+configure.ac:153: the top level
+configure.ac:153: warning: AC_RUN_IFELSE called without default to allow cross compiling
+../autoconf-2.71/lib/autoconf/general.m4:2981: AC_RUN_IFELSE is expanded from...
+../autoconf-2.71/lib/m4sugar/m4sh.m4:692: _AS_IF_ELSE is expanded from...
+../autoconf-2.71/lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+../autoconf-2.71/lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+../autoconf-2.71/lib/autoconf/general.m4:2270: AC_CACHE_CHECK is expanded from...
+m4/getopt.m4:48: gl_GETOPT_CHECK_HEADERS is expanded from...
+m4/getopt.m4:8: gl_FUNC_GETOPT_POSIX is expanded from...
+m4/gnulib-comp.m4:688: M4_INIT is expanded from...
+configure.ac:153: the top level
+configure.ac:153: warning: AC_RUN_IFELSE called without default to allow cross compiling
+../autoconf-2.71/lib/autoconf/general.m4:2981: AC_RUN_IFELSE is expanded from...
+../autoconf-2.71/lib/m4sugar/m4sh.m4:692: _AS_IF_ELSE is expanded from...
+../autoconf-2.71/lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+../autoconf-2.71/lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+../autoconf-2.71/lib/autoconf/general.m4:2270: AC_CACHE_CHECK is expanded from...
+m4/posix_spawn.m4:132: gl_POSIX_SPAWN_WORKS is expanded from...
+m4/posix_spawn.m4:13: gl_POSIX_SPAWN_BODY is expanded from...
+m4/posix_spawn.m4:8: gl_POSIX_SPAWN is expanded from...
+m4/gnulib-comp.m4:688: M4_INIT is expanded from...
+configure.ac:153: the top level
+autoreconf: running: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/m4/1.4.19-r0/recipe-sysroot-native/usr/bin/autoheader --include=./m4 --include=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/m4/1.4.19-r0/recipe-sysroot-native/usr/share/aclocal/ --force
+autoreconf: running: automake --add-missing --copy --force-missing
+autoreconf: 'build-aux/config.sub' is updated
+autoreconf: 'build-aux/config.guess' is updated
+autoreconf: Leaving directory '.'
+NOTE: Running ../m4-1.4.19/configure  --build=x86_64-linux 		  --host=arm-openbmc-linux-gnueabi 		  --target=arm-openbmc-linux-gnueabi 		  --prefix=/usr 		  --exec_prefix=/usr 		  --bindir=/usr/bin 		  --sbindir=/usr/sbin 		  --libexecdir=/usr/libexec 		  --datadir=/usr/share 		  --sysconfdir=/etc 		  --sharedstatedir=/com 		  --localstatedir=/var 		  --libdir=/usr/lib 		  --includedir=/usr/include 		  --oldincludedir=/usr/include 		  --infodir=/usr/share/info 		  --mandir=/usr/share/man 		  --disable-silent-rules 		  --disable-dependency-tracking 		  --with-libtool-sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/m4/1.4.19-r0/recipe-sysroot  --without-libsigsegv-prefix --disable-static  --enable-nls 
+configure: WARNING: unrecognized options: --with-libtool-sysroot, --disable-static
+configure: loading site script /home/matt/src/openbmc/meta/site/endian-little
+configure: loading site script /home/matt/src/openbmc/meta/site/arm-common
+configure: loading site script /home/matt/src/openbmc/meta/site/arm-32
+configure: loading site script /home/matt/src/openbmc/meta/site/common-linux
+configure: loading site script /home/matt/src/openbmc/meta/site/common-glibc
+configure: loading site script /home/matt/src/openbmc/meta/site/arm-linux
+configure: loading site script /home/matt/src/openbmc/meta/site/common
+checking for a BSD-compatible install... /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c
+checking whether build environment is sane... yes
+checking for arm-openbmc-linux-gnueabi-strip... arm-openbmc-linux-gnueabi-strip
+checking for a race-free mkdir -p... /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether make supports nested variables... (cached) yes
+checking for arm-openbmc-linux-gnueabi-gcc... arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/m4/1.4.19-r0/recipe-sysroot
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... yes
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/m4/1.4.19-r0/recipe-sysroot accepts -g... yes
+checking for arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/m4/1.4.19-r0/recipe-sysroot option to enable C11 features... none needed
+checking whether arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/m4/1.4.19-r0/recipe-sysroot understands -c and -o together... yes
+checking whether the compiler is clang... no
+checking for compiler option needed when checking for declarations... none
+checking whether make supports the include directive... yes (GNU style)
+checking dependency style of arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/m4/1.4.19-r0/recipe-sysroot... none
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for wchar.h... yes
+checking for minix/config.h... no
+checking for pthread.h... yes
+checking for sys/param.h... yes
+checking for sys/socket.h... yes
+checking for dirent.h... yes
+checking for stdio_ext.h... yes
+checking for getopt.h... yes
+checking for sys/cdefs.h... yes
+checking for threads.h... yes
+checking for iconv.h... yes
+checking for limits.h... yes
+checking for crtdefs.h... no
+checking for wctype.h... yes
+checking for langinfo.h... yes
+checking for xlocale.h... no
+checking for math.h... yes
+checking for sys/mman.h... yes
+checking for malloc.h... yes
+checking for spawn.h... yes
+checking for sys/time.h... yes
+checking for sys/random.h... yes
+checking for sys/wait.h... yes
+checking for features.h... yes
+checking for arpa/inet.h... yes
+checking for semaphore.h... yes
+checking for netdb.h... yes
+checking for netinet/in.h... yes
+checking for sys/select.h... yes
+checking for sys/ioctl.h... yes
+checking for sys/uio.h... yes
+checking whether it is safe to define __EXTENSIONS__... yes
+checking whether _XOPEN_SOURCE should be defined... no
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... arm-openbmc-linux-gnueabi
+checking how to run the C preprocessor... arm-openbmc-linux-gnueabi-gcc -E --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/m4/1.4.19-r0/recipe-sysroot  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security
+checking for grep that handles long lines and -e... /home/matt/tmp/build/obmc-y2038/tmp/hosttools/grep
+checking for egrep... /home/matt/tmp/build/obmc-y2038/tmp/hosttools/grep -E
+checking for Minix Amsterdam compiler... no
+checking for arm-openbmc-linux-gnueabi-ar... arm-openbmc-linux-gnueabi-gcc-ar
+checking whether to use C++... no
+checking for _LARGEFILE_SOURCE value needed for large files... no
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... no
+configure: autobuild project... GNU M4
+configure: autobuild revision... 1.4.19
+configure: autobuild hostname... aforest
+configure: autobuild timestamp... 20221201T080129Z
+checking for unsigned long long int... yes
+checking for long long int... yes
+checking for unsigned long long int... (cached) yes
+checking for size_t... yes
+checking for working alloca.h... yes
+checking for alloca... yes
+checking for inline... inline
+checking whether <wchar.h> uses 'inline' correctly... yes
+checking for btowc... yes
+checking for canonicalize_file_name... yes
+checking for faccessat... yes
+checking for realpath... yes
+checking for lstat... yes
+checking for _set_invalid_parameter_handler... no
+checking for fchdir... yes
+checking for fcntl... yes
+checking for symlink... yes
+checking for fdopendir... yes
+checking for mempcpy... yes
+checking for fpurge... no
+checking for __fpurge... yes
+checking for __freadahead... no
+checking for __freading... yes
+checking for fstatat... yes
+checking for getdtablesize... yes
+checking for getprogname... no
+checking for getexecname... no
+checking for getrandom... yes
+checking for iswcntrl... yes
+checking for iswblank... yes
+checking for uselocale... yes
+checking for newlocale... yes
+checking for duplocale... yes
+checking for freelocale... yes
+checking for mbsinit... yes
+checking for mbrtowc... yes
+checking for mbslen... no
+checking for mprotect... yes
+checking for mkstemp... yes
+checking for nl_langinfo... yes
+checking for openat... yes
+checking for pipe... yes
+checking for pipe2... yes
+checking for posix_spawn_file_actions_addchdir_np... yes
+checking for posix_spawn_file_actions_addchdir... no
+checking for readlink... yes
+checking for isblank... yes
+checking for iswctype... yes
+checking for link... yes
+checking for secure_getenv... yes
+checking for getuid... yes
+checking for geteuid... yes
+checking for getgid... yes
+checking for getegid... yes
+checking for sigaction... yes
+checking for sigaltstack... yes
+checking for siginterrupt... yes
+checking for setrlimit... yes
+checking for getrlimit... yes
+checking for snprintf... yes
+checking for strerror_r... yes
+checking for __xpg_strerror_r... yes
+checking for strndup... yes
+checking for vasnprintf... no
+checking for wcrtomb... yes
+checking for wcwidth... yes
+checking for explicit_bzero... yes
+checking for memset_s... no
+checking for ftruncate... yes
+checking for gettimeofday... yes
+checking for pthread_sigmask... yes
+checking for setenv... yes
+checking for sleep... yes
+checking for catgets... yes
+checking for shutdown... yes
+checking for mquery... no
+checking for pstat_getprocvm... no
+checking for wctob... yes
+checking for nl_langinfo and CODESET... yes
+checking for a traditional french locale... (cached) fr_FR
+checking whether malloc is ptrdiff_t safe... yes
+checking whether malloc, realloc, calloc set errno on failure... yes
+checking whether lstat correctly handles trailing slash... guessing yes
+checking whether // is distinct from /... unknown, assuming no
+checking whether realpath works... guessing yes
+checking for getcwd... yes
+checking whether the preprocessor supports include_next... yes
+checking whether source code line length is unlimited... yes
+checking for arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/m4/1.4.19-r0/recipe-sysroot options needed to detect all undeclared functions... none needed
+checking if environ is properly declared... yes
+checking for complete errno.h... yes
+checking whether strerror_r is declared... yes
+checking whether strerror_r returns char *... yes
+checking for mode_t... yes
+checking for sig_atomic_t... yes
+checking whether fchdir is declared... yes
+checking for working fcntl.h... (cached) yes
+checking for pid_t... yes
+checking for eaccess... yes
+checking whether frexp() can be used without linking with libm... yes
+checking whether alarm is declared... yes
+checking whether long double and double are the same... yes
+checking whether stdin defaults to large file offsets... yes
+checking whether fseeko is declared... yes
+checking for fseeko... yes
+checking whether fflush works on input streams... cross
+checking whether stat file-mode macros are broken... no
+checking for C/C++ restrict keyword... __restrict__
+checking for nlink_t... yes
+checking whether ftello is declared... yes
+checking whether ungetc works on arbitrary bytes... guessing yes
+checking for ftello... yes
+checking whether ftello works... guessing yes
+checking whether getcwd (NULL, 0) allocates memory for result... (cached) yes
+checking for getcwd with POSIX signature... yes
+checking whether getcwd is declared... yes
+checking whether getdtablesize is declared... yes
+checking for getopt.h... (cached) yes
+checking for getopt_long_only... yes
+checking whether getopt is POSIX compatible... guessing yes
+checking for working GNU getopt function... guessing no
+checking for pthread.h... (cached) yes
+checking for pthread_kill in -lpthread... yes
+checking whether POSIX threads API is available... yes
+checking whether setlocale (LC_ALL, NULL) is multithread-safe... yes
+checking whether setlocale (category, NULL) is multithread-safe... yes
+checking host CPU and C ABI... armhf
+checking for ld... arm-openbmc-linux-gnueabi-ld --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/m4/1.4.19-r0/recipe-sysroot 
+checking if the linker (arm-openbmc-linux-gnueabi-ld --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/m4/1.4.19-r0/recipe-sysroot ) is GNU ld... yes
+checking for shared library run path origin... done
+checking 32-bit host C ABI... yes
+checking for ELF binary format... yes
+checking for the common suffixes of directories in the library search path... lib,lib32,lib
+checking for iconv... yes
+checking for working iconv... (cached) yes
+checking for iconv declaration... 
+         extern size_t iconv (iconv_t cd, char * *inbuf, size_t *inbytesleft, char * *outbuf, size_t *outbytesleft);
+checking whether limits.h has LLONG_MAX, WORD_BIT, ULLONG_WIDTH etc.... yes
+checking for wint_t... yes
+checking whether wint_t is large enough... yes
+checking whether the compiler produces multi-arch binaries... no
+checking whether stdint.h conforms to C99... guessing yes
+checking whether stdint.h works without ISO C predefines... yes
+checking whether stdint.h has UINTMAX_WIDTH etc.... yes
+checking where to find the exponent in a 'double'... unknown
+checking where to find the exponent in a 'float'... word 0 bit 23
+checking whether byte ordering is bigendian... (cached) no
+checking whether iswcntrl works... guessing yes
+checking for towlower... yes
+checking for wctype_t... yes
+checking for wctrans_t... yes
+checking for a traditional japanese locale... none
+checking for a french Unicode locale... none
+checking for a transitional chinese locale... none
+checking whether langinfo.h defines CODESET... yes
+checking whether langinfo.h defines T_FMT_AMPM... yes
+checking whether langinfo.h defines ALTMON_1... yes
+checking whether langinfo.h defines ERA... yes
+checking whether langinfo.h defines YESEXPR... yes
+checking for wchar_t... yes
+checking for good max_align_t... yes
+checking whether NULL can be used in arbitrary expressions... yes
+checking whether locale.h defines locale_t... yes
+checking whether locale.h conforms to POSIX:2001... yes
+checking whether struct lconv is properly defined... yes
+checking for LC_MESSAGES... yes
+checking whether uselocale works... guessing yes
+checking for fake locale system (OpenBSD)... guessing no
+checking for Solaris 11.4 locale system... no
+checking for getlocalename_l... no
+checking for CFPreferencesCopyAppValue... no
+checking for CFLocaleCopyPreferredLanguages... no
+checking for multithread API to use... none
+checking for a sed that does not truncate output... (cached) sed
+checking whether malloc (0) returns nonnull... (cached) yes
+checking whether NAN macro works... yes
+checking whether HUGE_VAL works... yes
+checking for mbstate_t... yes
+checking for mmap... yes
+checking for MAP_ANONYMOUS... yes
+checking whether memchr works... guessing no
+checking whether memrchr is declared... yes
+checking whether <limits.h> defines MIN and MAX... no
+checking whether <sys/param.h> defines MIN and MAX... yes
+checking for O_CLOEXEC... yes
+checking for promoted mode_t type... mode_t
+checking for library containing posix_spawn... none required
+checking for posix_spawn... yes
+checking whether posix_spawn is declared... yes
+checking whether posix_spawn works... guessing yes
+checking whether posix_spawn rejects scripts without shebang... guessing yes
+checking whether posix_spawnp rejects scripts without shebang... guessing yes
+checking whether posix_spawnattr_setschedpolicy is supported... yes
+checking whether posix_spawnattr_setschedparam is supported... yes
+checking for sigset_t... yes
+checking for SIGPIPE... yes
+checking for sched.h... yes
+checking for struct sched_param... yes
+checking for uid_t in sys/types.h... (cached) {ac_cv_type_uid_t=yes}
+checking for volatile sig_atomic_t... yes
+checking for sighandler_t... yes
+checking whether C symbols are prefixed with underscore at the linker level... no
+checking whether snprintf returns a byte count as in C99... guessing yes
+checking whether snprintf is declared... yes
+checking for posix_spawnattr_t... yes
+checking for posix_spawn_file_actions_t... yes
+checking for stdbool.h that conforms to C99... yes
+checking for _Bool... yes
+checking whether fcloseall is declared... yes
+checking which flavor of printf attribute matches inttypes macros... system
+checking whether ecvt is declared... yes
+checking whether fcvt is declared... yes
+checking whether gcvt is declared... yes
+checking whether strdup is declared... yes
+checking whether strerror(0) succeeds... guessing yes
+checking for strerror_r with POSIX signature... no
+checking whether __xpg_strerror_r works... guessing no
+checking whether strndup is declared... yes
+checking whether strnlen is declared... yes
+checking whether strsignal is declared... yes
+checking whether ldexp() can be used without linking with libm... yes
+checking for struct timespec in <time.h>... yes
+checking for TIME_UTC in <time.h>... yes
+checking whether execvpe is declared... yes
+checking whether clearerr_unlocked is declared... yes
+checking whether feof_unlocked is declared... yes
+checking whether ferror_unlocked is declared... yes
+checking whether fflush_unlocked is declared... yes
+checking whether fgets_unlocked is declared... yes
+checking whether fputc_unlocked is declared... yes
+checking whether fputs_unlocked is declared... yes
+checking whether fread_unlocked is declared... yes
+checking whether fwrite_unlocked is declared... yes
+checking whether getc_unlocked is declared... yes
+checking whether getchar_unlocked is declared... yes
+checking whether putc_unlocked is declared... yes
+checking whether putchar_unlocked is declared... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for intmax_t... yes
+checking whether snprintf truncates the result as in C99... guessing yes
+checking for snprintf... (cached) yes
+checking for strnlen... yes
+checking for wcslen... yes
+checking for wcsnlen... yes
+checking for mbrtowc... (cached) yes
+checking for wcrtomb... (cached) yes
+checking whether _snprintf is declared... no
+checking whether printf supports size specifiers as in C99... guessing yes
+checking whether printf supports 'long double' arguments... guessing yes
+checking whether printf supports infinite 'double' arguments... guessing yes
+checking whether printf supports infinite 'long double' arguments... guessing yes
+checking whether printf supports the 'a' and 'A' directives... guessing yes
+checking whether printf supports the 'F' directive... guessing yes
+checking whether printf supports the 'n' directive... guessing no
+checking whether printf supports the 'ls' directive... guessing yes
+checking whether printf supports the grouping flag... guessing yes
+checking whether printf supports the left-adjust flag correctly... guessing yes
+checking whether printf supports the zero flag correctly... guessing yes
+checking whether printf supports large precisions... guessing yes
+checking whether printf survives out-of-memory conditions... guessing yes
+checking whether wcsdup is declared... yes
+checking whether <sys/socket.h> is self-contained... yes
+checking for shutdown... (cached) yes
+checking whether <sys/socket.h> defines the SHUT_* macros... yes
+checking for struct sockaddr_storage... yes
+checking for sa_family_t... yes
+checking for struct sockaddr_storage.ss_family... yes
+checking for library needed for semaphore functions... none
+checking for struct timeval... yes
+checking for wide-enough struct timeval.tv_sec member... yes
+checking for IPv4 sockets... yes
+checking for IPv6 sockets... yes
+checking for off_t... yes
+checking whether INT32_MAX < INTMAX_MAX... yes
+checking whether INT64_MAX == LONG_MAX... no
+checking whether UINT32_MAX < UINTMAX_MAX... yes
+checking whether UINT64_MAX == ULONG_MAX... no
+checking whether <sys/select.h> is self-contained... yes
+checking for library containing setsockopt... none needed
+checking whether select supports a 0 argument... guessing yes
+checking whether select detects invalid fds... guessing yes
+checking for pthread_t... yes
+checking for pthread_spinlock_t... yes
+checking for PTHREAD_CREATE_DETACHED... yes
+checking for PTHREAD_MUTEX_RECURSIVE... yes
+checking for PTHREAD_MUTEX_ROBUST... yes
+checking for PTHREAD_PROCESS_SHARED... yes
+checking whether setenv is declared... yes
+checking for search.h... yes
+checking for tsearch... yes
+checking whether <sys/ioctl.h> declares ioctl... yes
+checking whether unsetenv is declared... yes
+checking for alloca as a compiler built-in... yes
+checking whether to enable assertions... yes
+checking whether btowc(0) is correct... guessing yes
+checking whether btowc(EOF) is correct... (cached) yes
+checking for __builtin_expect... yes
+checking whether calloc (0, n) and calloc (n, 0) return nonnull... (cached) yes
+checking whether this system supports file names of any length... no
+checking for library containing clock_gettime... none required
+checking for clock_gettime... yes
+checking for clock_settime... yes
+checking for closedir... yes
+checking for d_ino member in directory struct... guessing yes
+checking for dirfd... yes
+checking whether dirfd is declared... yes
+checking whether dirfd is a macro... no
+checking whether // is distinct from /... (cached) unknown, assuming no
+checking whether dup works... guessing yes
+checking whether dup2 works... guessing yes
+checking for error_at_line... yes
+checking whether fflush works on input streams... (cached) cross
+checking whether fcntl handles F_DUPFD correctly... guessing yes
+checking whether fcntl understands F_DUPFD_CLOEXEC... guessing no
+checking whether fdopendir is declared... yes
+checking whether fdopendir works... guessing yes
+checking whether fflush works on input streams... (cached) cross
+checking for flexible array member... yes
+checking whether conversion from 'int' to 'long double' works... guessing yes
+checking whether fopen recognizes a trailing slash... guessing yes
+checking whether fopen supports the mode character 'x'... guessing yes
+checking whether fopen supports the mode character 'e'... guessing yes
+checking for __fpending... yes
+checking whether __fpending is declared... yes
+checking whether fpurge is declared... no
+checking whether free is known to preserve errno... yes
+checking whether frexp works... guessing yes
+checking whether frexpl is declared... yes
+checking whether frexpl() can be used without linking with libm... yes
+checking whether frexpl works... guessing yes
+checking for fseeko... (cached) yes
+checking whether fflush works on input streams... (cached) cross
+checking for _fseeki64... no
+checking whether fstatat (..., 0) works... (cached) yes
+checking for ftello... (cached) yes
+checking whether ftello works... (cached) guessing yes
+checking whether getcwd handles long file names properly... (cached) yes
+checking for getpagesize... yes
+checking whether getcwd succeeds when 4k < cwd_length < 16k... guessing no
+checking whether getdtablesize works... guessing yes
+checking for getpagesize... (cached) yes
+checking whether getpagesize is declared... yes
+checking whether program_invocation_name is declared... yes
+checking whether program_invocation_short_name is declared... yes
+checking whether __argv is declared... no
+checking whether getrandom is compatible with its GNU+BSD signature... yes
+checking whether the compiler generally respects inline... yes
+checking whether isnan(double) can be used without linking with libm... yes
+checking whether isnan(float) can be used without linking with libm... yes
+checking whether isnan(float) works... guessing yes
+checking whether isnan(long double) can be used without linking with libm... yes
+checking whether isnanl works... guessing yes
+checking whether iswblank is declared... yes
+checking whether iswdigit is ISO C compliant... guessing yes
+checking whether iswxdigit is ISO C compliant... guessing yes
+checking whether the compiler supports the __inline keyword... yes
+checking whether lseek detects pipes... yes
+checking whether malloc (0) returns nonnull... (cached) yes
+checking whether mbrtowc handles incomplete characters... (cached) yes
+checking whether mbrtowc works as well as mbtowc... (cached) yes
+checking whether mbrtowc handles a NULL pwc argument... guessing yes
+checking whether mbrtowc handles a NULL string argument... guessing yes
+checking whether mbrtowc has a correct return value... (cached) yes
+checking whether mbrtowc returns 0 when parsing a NUL character... (cached) yes
+checking whether mbrtowc stores incomplete characters... guessing no
+checking whether mbrtowc works on empty input... guessing no
+checking whether the C locale is free of encoding errors... guessing no
+checking whether mbrtowc handles incomplete characters... (cached) yes
+checking whether mbrtowc works as well as mbtowc... (cached) yes
+checking for mbtowc... yes
+checking for bp-sym.h... no
+checking for mempcpy... (cached) yes
+checking for memrchr... yes
+checking whether mkdir handles trailing slash... guessing yes
+checking whether mkdir handles trailing dot... guessing yes
+checking for mkdtemp... yes
+checking for working mkstemp... (cached) yes
+checking whether YESEXPR works... guessing yes
+checking for obstacks that work with any size object... no
+checking whether open recognizes a trailing slash... guessing yes
+checking for opendir... yes
+checking whether posix_spawn_file_actions_addclose works... guessing yes
+checking whether posix_spawn_file_actions_adddup2 works... guessing yes
+checking whether posix_spawn_file_actions_addopen works... guessing yes
+checking whether frexp works... (cached) guessing yes
+checking whether ldexp can be used without linking with libm... (cached) yes
+checking whether frexpl() can be used without linking with libm... (cached) yes
+checking whether frexpl works... (cached) guessing yes
+checking whether frexpl is declared... (cached) yes
+checking whether ldexpl() can be used without linking with libm... yes
+checking whether ldexpl works... guessing yes
+checking whether ldexpl is declared... yes
+checking whether program_invocation_name is declared... (cached) yes
+checking whether program_invocation_short_name is declared... (cached) yes
+checking for raise... yes
+checking for sigprocmask... yes
+checking for rawmemchr... yes
+checking for readdir... yes
+checking whether readlink signature is correct... yes
+checking whether readlink handles trailing slash correctly... guessing yes
+checking whether readlink truncates results correctly... guessing yes
+checking whether realloc (0, 0) returns nonnull... (cached) yes
+checking for reallocarray... yes
+checking for working re_compile_pattern... guessing no
+checking for libintl.h... yes
+checking whether isblank is declared... yes
+checking whether rename honors trailing slash on destination... guessing yes
+checking whether rename honors trailing slash on source... guessing yes
+checking whether rename manages hard links correctly... guessing yes
+checking whether rename manages existing destinations correctly... guessing yes
+checking for rewinddir... yes
+checking whether rmdir works... guessing yes
+checking whether setlocale supports the C locale... guessing yes
+checking whether setlocale (LC_ALL, NULL) is multithread-safe... (cached) yes
+checking whether setlocale (category, NULL) is multithread-safe... (cached) yes
+checking for struct sigaction.sa_sigaction... yes
+checking for signbit macro... guessing yes
+checking for signbit compiler built-ins... guessing yes
+checking for sigprocmask... (cached) yes
+checking for stack direction... grows down
+checking for stack_t... yes
+checking for working sigaltstack... guessing yes
+checking for correct stack_t interpretation... guessing yes
+checking for stdint.h... (cached) yes
+checking for SIZE_MAX... yes
+checking for snprintf... (cached) yes
+checking whether snprintf respects a size of 1... guessing yes
+checking whether printf supports POSIX/XSI format strings with positions... guessing yes
+checking for ssize_t... yes
+checking whether stat handles trailing slashes on files... guessing yes
+checking for struct stat.st_atim.tv_nsec... yes
+checking whether struct stat.st_atim is of type struct timespec... yes
+checking for struct stat.st_birthtimespec.tv_nsec... no
+checking for struct stat.st_birthtimensec... no
+checking for struct stat.st_birthtim.tv_nsec... no
+checking for working stdalign.h... yes
+checking for va_copy... yes
+checking for stpcpy... yes
+checking for strchrnul... yes
+checking whether strchrnul works... guessing yes
+checking for working strerror function... guessing yes
+checking for working strndup... guessing yes
+checking for working strnlen... yes
+checking for strsignal... yes
+checking whether strsignal always returns a string... guessing yes
+checking whether strtod obeys C99... guessing yes
+checking for sys/single_threaded.h... yes
+checking for ptrdiff_t... yes
+checking for vasprintf... yes
+checking for vasprintf... (cached) yes
+checking for ptrdiff_t... (cached) yes
+checking for waitid... yes
+checking whether mbrtowc handles incomplete characters... (cached) yes
+checking whether mbrtowc works as well as mbtowc... (cached) yes
+checking whether wcrtomb works in the C locale... guessing yes
+checking whether wcrtomb return value is correct... (cached) yes
+checking whether wcwidth is declared... yes
+checking whether wcwidth works reasonably in UTF-8 locales... guessing yes
+checking for stdint.h... (cached) yes
+checking for a traditional french locale... (cached) fr_FR
+checking for a french Unicode locale... (cached) none
+checking for a traditional french locale... (cached) fr_FR
+checking for a turkish Unicode locale... none
+checking whether open recognizes a trailing slash... (cached) guessing yes
+checking for close_range... yes
+checking whether fdopen sets errno... guessing yes
+checking whether freopen works on closed fds... guessing no
+checking for gettimeofday with POSIX signature... yes
+checking for library containing inet_pton... none required
+checking whether inet_pton is declared... yes
+checking whether byte ordering is bigendian... (cached) no
+checking for ioctl... yes
+checking for ioctl with POSIX signature... no
+checking where to find the exponent in a 'double'... (cached) unknown
+checking where to find the exponent in a 'float'... (cached) word 0 bit 23
+checking where to find the exponent in a 'long double'... unknown
+checking for a traditional french locale... (cached) fr_FR
+checking for a french Unicode locale... (cached) none
+checking for a traditional japanese locale... (cached) none
+checking for a transitional chinese locale... (cached) none
+checking for a traditional french locale... (cached) fr_FR
+checking for a french Unicode locale... (cached) none
+checking for a traditional japanese locale... (cached) none
+checking for a transitional chinese locale... (cached) none
+checking whether link obeys POSIX... guessing yes
+checking for a traditional french locale... (cached) fr_FR
+checking for a french Unicode locale... (cached) none
+checking for a traditional japanese locale... (cached) none
+checking for a transitional chinese locale... (cached) none
+checking for a french Unicode locale... (cached) none
+checking for a french Unicode locale... (cached) none
+checking for a transitional chinese locale... (cached) none
+checking for library containing nanosleep... none required
+checking for working nanosleep... (cached) no (mishandles large arguments)
+checking whether <netinet/in.h> is self-contained... yes
+checking for a traditional french locale... (cached) fr_FR
+checking for a french Unicode locale... (cached) none
+checking whether pthread_create exists as a global function... yes
+checking whether pthread_sigmask is a macro... no
+checking whether pthread_sigmask works without -lpthread... guessing yes
+checking whether pthread_sigmask returns error numbers... guessing yes
+checking whether pthread_sigmask unblocks signals correctly... guessing yes
+checking for putenv compatible with GNU and SVID... guessing yes
+checking whether sched_yield is declared... yes
+checking whether select supports a 0 argument... (cached) guessing yes
+checking whether select detects invalid fds... (cached) guessing yes
+checking whether setenv validates arguments... guessing yes
+checking for a traditional french locale... (cached) fr_FR
+checking for a french Unicode locale... (cached) none
+checking for a traditional japanese locale... (cached) none
+checking for a transitional chinese locale... (cached) none
+checking whether sleep is declared... yes
+checking for working sleep... (cached) yes
+checking for socklen_t... yes
+checking for a traditional french locale... (cached) fr_FR
+checking for a french Unicode locale... (cached) none
+checking whether symlink handles trailing slash correctly... guessing yes
+checking for unsetenv... yes
+checking for unsetenv() return type... int
+checking whether unsetenv obeys POSIX... guessing yes
+checking for a traditional french locale... (cached) fr_FR
+checking for a french Unicode locale... (cached) none
+checking for a traditional japanese locale... (cached) none
+checking for a transitional chinese locale... (cached) none
+checking whether wctob works... (cached) yes
+checking whether wctob is declared... yes
+checking whether an open file can be renamed... guessing no
+checking if changeword is wanted... no
+checking which shell to use for syscmd... /bin/sh
+checking if malloc debugging is wanted... no
+checking whether NLS is requested... yes
+checking for msgfmt... /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/m4/1.4.19-r0/recipe-sysroot-native/usr/bin/msgfmt
+checking for gmsgfmt... /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/m4/1.4.19-r0/recipe-sysroot-native/usr/bin/msgfmt
+checking for xgettext... /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/m4/1.4.19-r0/recipe-sysroot-native/usr/bin/xgettext
+checking for msgmerge... /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/m4/1.4.19-r0/recipe-sysroot-native/usr/bin/msgmerge
+checking for CFPreferencesCopyAppValue... (cached) no
+checking for CFLocaleCopyPreferredLanguages... (cached) no
+checking for GNU gettext in libc... yes
+checking whether to use NLS... yes
+checking where the gettext function comes from... libc
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating doc/Makefile
+config.status: creating lib/Makefile
+config.status: creating po/Makefile.in
+config.status: creating src/Makefile
+config.status: creating tests/Makefile
+config.status: creating checks/Makefile
+config.status: creating examples/Makefile
+config.status: creating lib/config.h
+config.status: linking ../m4-1.4.19/GNUmakefile to GNUmakefile
+config.status: executing depfiles commands
+config.status: executing stamp-h commands
+config.status: executing po-directories commands
+config.status: creating po/POTFILES
+config.status: creating po/Makefile
+configure: WARNING: unrecognized options: --with-libtool-sysroot, --disable-static
+DEBUG: Shell function do_configure finished
+DEBUG: Executing python function do_qa_configure
+NOTE: Checking autotools environment for common misconfiguration
+NOTE: Checking configure output for unrecognised options
+DEBUG: Python function do_qa_configure finished
+DEBUG: Executing shell function autotools_postconfigure
+DEBUG: Shell function autotools_postconfigure finished

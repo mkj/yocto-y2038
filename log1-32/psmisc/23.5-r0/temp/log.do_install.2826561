@@ -1,0 +1,130 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses_6.3+20220423.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-cross_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-native_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/opkg-utils/opkg-utils_0.5.0.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-core/gettext/gettext_0.21.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/autoconf/autoconf_2.71.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/automake/automake_1.16.5.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: []
+NOTE: Skipping as already exists in sysroot: ['glibc', 'ncurses', 'gcc-cross-arm', 'gcc-runtime', 'libtool-cross', 'libtool-native', 'opkg-utils', 'quilt-native', 'gettext-native', 'autoconf-native', 'automake-native', 'patch-native', 'pseudo-native', 'texinfo-dummy-native', 'binutils-cross-arm', 'libgcc', 'linux-libc-headers', 'gnu-config-native', 'm4-native', 'gettext-minimal-native', 'attr-native', 'mpfr-native', 'libmpc-native', 'xz-native', 'flex-native', 'zstd-native', 'zlib-native', 'gmp-native']
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function autotools_aclocals
+DEBUG: SITE files ['endian-little', 'bit-32', 'arm-common', 'arm-32', 'common-linux', 'common-glibc', 'arm-linux', 'arm-linux-gnueabi', 'common']
+DEBUG: Python function autotools_aclocals finished
+DEBUG: Executing shell function do_install
+NOTE: make -j 1 DESTDIR=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/image install
+make  install-recursive
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build'
+Making install in doc
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build/doc'
+make[3]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build/doc'
+make[3]: Nothing to be done for 'install-exec-am'.
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/image/usr/share/man/man1'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../../git/doc/killall.1 ../../git/doc/peekfd.1 ../../git/doc/prtstat.1 ../../git/doc/pslog.1 ../../git/doc/pstree.1 ../../git/doc/fuser.1 '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/image/usr/share/man/man1'
+make[3]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build/doc'
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build/doc'
+Making install in po
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build/po'
+installing ../../git/po/bg.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/image/usr/share/locale/bg/LC_MESSAGES/psmisc.mo
+installing ../../git/po/ca.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/image/usr/share/locale/ca/LC_MESSAGES/psmisc.mo
+installing ../../git/po/cs.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/image/usr/share/locale/cs/LC_MESSAGES/psmisc.mo
+installing ../../git/po/da.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/image/usr/share/locale/da/LC_MESSAGES/psmisc.mo
+installing ../../git/po/de.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/image/usr/share/locale/de/LC_MESSAGES/psmisc.mo
+installing ../../git/po/el.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/image/usr/share/locale/el/LC_MESSAGES/psmisc.mo
+installing ../../git/po/eo.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/image/usr/share/locale/eo/LC_MESSAGES/psmisc.mo
+installing ../../git/po/es.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/image/usr/share/locale/es/LC_MESSAGES/psmisc.mo
+installing ../../git/po/eu.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/image/usr/share/locale/eu/LC_MESSAGES/psmisc.mo
+installing ../../git/po/fi.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/image/usr/share/locale/fi/LC_MESSAGES/psmisc.mo
+installing ../../git/po/fr.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/image/usr/share/locale/fr/LC_MESSAGES/psmisc.mo
+installing ../../git/po/hr.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/image/usr/share/locale/hr/LC_MESSAGES/psmisc.mo
+installing ../../git/po/hu.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/image/usr/share/locale/hu/LC_MESSAGES/psmisc.mo
+installing ../../git/po/id.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/image/usr/share/locale/id/LC_MESSAGES/psmisc.mo
+installing ../../git/po/it.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/image/usr/share/locale/it/LC_MESSAGES/psmisc.mo
+installing ../../git/po/ja.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/image/usr/share/locale/ja/LC_MESSAGES/psmisc.mo
+installing ../../git/po/nb.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/image/usr/share/locale/nb/LC_MESSAGES/psmisc.mo
+installing ../../git/po/nl.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/image/usr/share/locale/nl/LC_MESSAGES/psmisc.mo
+installing ../../git/po/pl.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/image/usr/share/locale/pl/LC_MESSAGES/psmisc.mo
+installing ../../git/po/pt_BR.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/image/usr/share/locale/pt_BR/LC_MESSAGES/psmisc.mo
+installing ../../git/po/pt.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/image/usr/share/locale/pt/LC_MESSAGES/psmisc.mo
+installing ../../git/po/ro.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/image/usr/share/locale/ro/LC_MESSAGES/psmisc.mo
+installing ../../git/po/ru.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/image/usr/share/locale/ru/LC_MESSAGES/psmisc.mo
+installing ../../git/po/sr.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/image/usr/share/locale/sr/LC_MESSAGES/psmisc.mo
+installing ../../git/po/sv.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/image/usr/share/locale/sv/LC_MESSAGES/psmisc.mo
+installing ../../git/po/uk.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/image/usr/share/locale/uk/LC_MESSAGES/psmisc.mo
+installing ../../git/po/vi.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/image/usr/share/locale/vi/LC_MESSAGES/psmisc.mo
+installing ../../git/po/zh_CN.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/image/usr/share/locale/zh_CN/LC_MESSAGES/psmisc.mo
+installing ../../git/po/zh_TW.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/image/usr/share/locale/zh_TW/LC_MESSAGES/psmisc.mo
+if test "psmisc" = "gettext-tools"; then \
+  /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/image/usr/share/gettext/po; \
+  for file in Makefile.in.in remove-potcdate.sin    Makevars.template; do \
+    /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../../git/po/$file \
+		    /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/image/usr/share/gettext/po/$file; \
+  done; \
+  for file in Makevars; do \
+    rm -f /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/image/usr/share/gettext/po/$file; \
+  done; \
+else \
+  : ; \
+fi
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build/po'
+Making install in icons
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build/icons'
+make[3]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build/icons'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build/icons'
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build/icons'
+Making install in man-po
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build/man-po'
+make[3]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build/man-po'
+make[3]: Nothing to be done for 'install-exec-am'.
+for lang in de fr hr pt_BR ru sr uk; do \
+	files=""; \
+	for trans in fuser.1 killall.1 peekfd.1 prtstat.1 pslog.1 pstree.1; do \
+		if [ -f /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build/man-po/$lang/$trans ]; then \
+			files="$files /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build/man-po/$lang/$trans"; \
+		elif [ -f ../../git/man-po/$lang/$trans ]; then \
+			files="$files ../../git/man-po/$lang/$trans"; \
+		fi; \
+	done; \
+	make install-man \
+		mandir="/usr/share/man/$lang" \
+		man_MANS="" \
+		dist_man_MANS="$files"; \
+done
+make[4]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build/man-po'
+make[4]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build/man-po'
+make[4]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build/man-po'
+make[4]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build/man-po'
+make[4]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build/man-po'
+make[4]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build/man-po'
+make[4]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build/man-po'
+make[4]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build/man-po'
+make[4]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build/man-po'
+make[4]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build/man-po'
+make[4]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build/man-po'
+make[4]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build/man-po'
+make[4]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build/man-po'
+make[4]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build/man-po'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/image/usr/share/man/man1'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../../git/man-po/../doc/fuser.1 ../../git/man-po/../doc/killall.1 ../../git/man-po/../doc/peekfd.1 ../../git/man-po/../doc/prtstat.1 ../../git/man-po/../doc/pslog.1 ../../git/man-po/../doc/pstree.1 '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/image/usr/share/man/man1'
+make[3]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build/man-po'
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build/man-po'
+Making install in testsuite
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build/testsuite'
+make[3]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build/testsuite'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build/testsuite'
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build/testsuite'
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build'
+make[3]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/image/usr/bin'
+  /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c src/killall src/pslog src/prtstat src/pstree src/fuser src/peekfd '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/image/usr/bin'
+make  install-exec-hook
+make[4]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build'
+cd /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/image/usr/bin && \
+		( [ -h pstree.x11 ]  || ln -s pstree pstree.x11)
+make[4]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build'
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build'
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build'
+DEBUG: Shell function do_install finished
+DEBUG: Executing shell function remove_libtool_la
+DEBUG: Shell function remove_libtool_la finished

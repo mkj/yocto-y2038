@@ -1,0 +1,5 @@
+def install_relative_symlinks(d):
+    oe.path.replace_absolute_symlinks(d.getVar('D'), d)
+
+install_relative_symlinks(d)
+

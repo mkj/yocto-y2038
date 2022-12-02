@@ -1,0 +1,64 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-devtools/binutils/binutils-cross_2.39.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: []
+NOTE: Skipping as already exists in sysroot: ['binutils-cross-arm', 'pseudo-native', 'gnu-config-native', 'flex-native', 'zlib-native', 'texinfo-dummy-native', 'm4-native', 'libtool-native', 'gettext-minimal-native']
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function sstate_task_prefunc
+DEBUG: Python function sstate_task_prefunc finished
+DEBUG: Executing python function do_package_qa
+NOTE: DO PACKAGE QA
+DEBUG: Executing python function read_subpackage_metadata
+DEBUG: Python function read_subpackage_metadata finished
+NOTE: Checking Package: openssh-doc
+NOTE: Checking Package: openssh-misc
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/packages-split/openssh-misc/usr/libexec/ssh-sk-helper
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/packages-split/openssh-misc/usr/libexec/ssh-keysign
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/packages-split/openssh-misc/usr/libexec/ssh-pkcs11-helper
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/packages-split/openssh-misc/usr/bin/ssh-agent
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/packages-split/openssh-misc/usr/bin/ssh-keyscan
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/packages-split/openssh-misc/usr/bin/ssh-add
+NOTE: Checking Package: openssh-dbg
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/packages-split/openssh-dbg/usr/sbin/.debug/sshd
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/packages-split/openssh-dbg/usr/bin/.debug/ssh-add
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/packages-split/openssh-dbg/usr/bin/.debug/ssh-agent
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/packages-split/openssh-dbg/usr/bin/.debug/sftp
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/packages-split/openssh-dbg/usr/bin/.debug/ssh.openssh
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/packages-split/openssh-dbg/usr/bin/.debug/scp.openssh
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/packages-split/openssh-dbg/usr/bin/.debug/ssh-keyscan
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/packages-split/openssh-dbg/usr/bin/.debug/ssh-keygen
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/packages-split/openssh-dbg/usr/libexec/.debug/ssh-sk-helper
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/packages-split/openssh-dbg/usr/libexec/.debug/ssh-keysign
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/packages-split/openssh-dbg/usr/libexec/.debug/sftp-server
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/packages-split/openssh-dbg/usr/libexec/.debug/ssh-pkcs11-helper
+NOTE: Checking Package: openssh-sftp
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/packages-split/openssh-sftp/usr/bin/sftp
+NOTE: Checking Package: openssh-sftp-server
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/packages-split/openssh-sftp-server/usr/libexec/sftp-server
+NOTE: Checking Package: openssh-keygen
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/packages-split/openssh-keygen/usr/bin/ssh-keygen
+NOTE: Checking Package: openssh-dev
+NOTE: Checking Package: openssh-scp
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/packages-split/openssh-scp/usr/bin/scp.openssh
+NOTE: Checking Package: openssh-ssh
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/packages-split/openssh-ssh/usr/bin/ssh.openssh
+NOTE: Checking Package: openssh-sshd
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/packages-split/openssh-sshd/usr/sbin/sshd
+NOTE: Checking Package: openssh-staticdev
+NOTE: Checking Package: openssh-locale
+NOTE: Checking Package: openssh
+NOTE: Checking Package: openssh-src
+DEBUG: Python function do_package_qa finished
+DEBUG: Executing python function sstate_task_postfunc
+NOTE: Using umask 0o002 (not 22) for sstate packaging
+DEBUG: Executing python function target_add_sysroot_deps
+DEBUG: Python function target_add_sysroot_deps finished
+DEBUG: Executing python function sstate_hardcode_path
+NOTE: Removing hardcoded paths from sstate package: 'find /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/sstate-build-package_qa/ \( -name "*.la" -o -name "*-config" -o -name "*_config" -o -name "postinst-*" \) -type f | xargs grep -l -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/recipe-sysroot' -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/recipe-sysroot-native' -e '/home/matt/tmp/build/obmc-y2038/tmp/hosttools' -e '/home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/pseudo-native' -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/pseudo/' -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/temp/fifo.3332795' | tee /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/sstate-build-package_qa/fixmepath | xargs --no-run-if-empty sed -i -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/recipe-sysroot-native:FIXMESTAGINGDIRHOST:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/recipe-sysroot:FIXMESTAGINGDIRTARGET:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:FIXME_HOSTTOOLS_DIR:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/pseudo-native:FIXME_PSEUDO_SYSROOT:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/pseudo/:FIXME_PSEUDO_LOCALSTATEDIR:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/temp/fifo.3332795:FIXME_LOGFIFO:g''
+DEBUG: Python function sstate_hardcode_path finished
+DEBUG: Executing python function sstate_report_unihash
+DEBUG: Python function sstate_report_unihash finished
+DEBUG: Executing shell function sstate_create_package
+DEBUG: Shell function sstate_create_package finished
+DEBUG: Executing python function sstate_hardcode_path_unpack
+DEBUG: Python function sstate_hardcode_path_unpack finished
+DEBUG: Python function sstate_task_postfunc finished

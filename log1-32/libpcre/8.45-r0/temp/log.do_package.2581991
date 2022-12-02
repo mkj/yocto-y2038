@@ -1,0 +1,152 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/zlib/zlib_1.2.13.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-cross_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-native_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-extended/bzip2/bzip2_1.0.8.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/autoconf/autoconf_2.71.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/automake/automake_1.16.5.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/dwarfsrcfiles/dwarfsrcfiles.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/rpm/rpm_4.18.0.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: ['dwarfsrcfiles-native', 'rpm-native', 'elfutils-native', 'file-native', 'libgcrypt-native', 'bzip2-native', 'lua-native', 'sqlite3-native', 'python3-native', 'popt-native', 'libgpg-error-native', 'libcap-native', 'readline-native', 'libnsl2-native', 'gdbm-native', 'libtirpc-native', 'libffi-native', 'ncurses-native', 'util-linux-libuuid-native', 'openssl-native', 'perl-native', 'make-native']
+NOTE: Skipping as already exists in sysroot: ['glibc', 'zlib', 'gcc-cross-arm', 'gcc-runtime', 'libtool-cross', 'libtool-native', 'quilt-native', 'bzip2', 'autoconf-native', 'automake-native', 'patch-native', 'pseudo-native', 'texinfo-dummy-native', 'binutils-cross-arm', 'libgcc', 'linux-libc-headers', 'gnu-config-native', 'm4-native', 'opkg-utils', 'attr-native', 'mpfr-native', 'libmpc-native', 'xz-native', 'flex-native', 'zstd-native', 'zlib-native', 'gmp-native', 'gettext-minimal-native']
+DEBUG: sed -e 's:^[^/]*/:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpcre/8.45-r0/recipe-sysroot-native/:g' /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/rpm-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/elfutils-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/libgcrypt-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/lua-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/python3-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/libgpg-error-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/ncurses-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/openssl-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/perl-native/fixmepath | xargs sed -i -e 's:FIXMESTAGINGDIRTARGET:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpcre/8.45-r0/recipe-sysroot:g; s:FIXMESTAGINGDIRHOST:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpcre/8.45-r0/recipe-sysroot-native:g' -e 's:FIXME_PSEUDO_SYSROOT:/home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/pseudo-native:g' -e 's:FIXME_HOSTTOOLS_DIR:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:g' -e 's:FIXME_PKGDATA_DIR:/home/matt/tmp/build/obmc-y2038/tmp/pkgdata/evb-ast2600:g' -e 's:FIXME_PSEUDO_LOCALSTATEDIR:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpcre/8.45-r0/pseudo/:g' -e 's:FIXME_LOGFIFO:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpcre/8.45-r0/temp/fifo.2581991:g'
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function sstate_task_prefunc
+DEBUG: Python function sstate_task_prefunc finished
+DEBUG: Executing python function do_package
+DEBUG: Executing python function package_convert_pr_autoinc
+DEBUG: Python function package_convert_pr_autoinc finished
+DEBUG: Executing python function package_prepare_pkgdata
+NOTE: Installed into pkgdata-sysroot: ['gcc-runtime', 'bzip2', 'glibc', 'zlib', 'libgcc', 'opkg-utils', 'linux-libc-headers']
+DEBUG: Python function package_prepare_pkgdata finished
+DEBUG: Executing python function perform_packagecopy
+DEBUG: Python function perform_packagecopy finished
+DEBUG: Executing python function split_and_strip_files
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpcre/8.45-r0/package/usr/lib/libpcrecpp.so.0.0.2']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpcre/8.45-r0/package/usr/lib/libpcre.so.1.2.13']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpcre/8.45-r0/package/usr/lib/libpcreposix.so.0.0.7']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpcre/8.45-r0/package/usr/bin/pcretest']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpcre/8.45-r0/package/usr/bin/pcregrep']
+DEBUG: Python function split_and_strip_files finished
+DEBUG: Executing python function fixup_perms
+DEBUG: Python function fixup_perms finished
+DEBUG: Executing python function package_do_split_locales
+DEBUG: No locale files in this package
+DEBUG: Python function package_do_split_locales finished
+DEBUG: Executing python function populate_packages
+DEBUG: Python function populate_packages finished
+DEBUG: Executing python function package_fixsymlinks
+DEBUG: libpcre-dev contains dangling link /usr/lib/libpcreposix.so.0.0.7
+DEBUG: target found in libpcreposix
+DEBUG: libpcre-dev contains dangling link /usr/lib/libpcrecpp.so.0.0.2
+DEBUG: target found in libpcrecpp
+DEBUG: libpcre-dev contains dangling link /usr/lib/libpcre.so.1.2.13
+DEBUG: target found in libpcre
+DEBUG: Python function package_fixsymlinks finished
+DEBUG: Executing python function package_name_hook
+DEBUG: Executing python function debian_package_name_hook
+DEBUG: LIBNAMES: pkg pcretest-doc libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg pcretest libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg pcregrep-doc libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg pcregrep libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg libpcreposix libs 1 bins 0 sonames ['libpcreposix.so.0']
+NOTE: debian: renaming libpcreposix to libpcreposix0
+DEBUG: LIBNAMES: pkg libpcrecpp libs 1 bins 0 sonames ['libpcrecpp.so.0']
+NOTE: debian: renaming libpcrecpp to libpcrecpp0
+DEBUG: LIBNAMES: pkg libpcre-staticdev libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpcre-src libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpcre-locale libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpcre-doc libs 0 bins 0 sonames []
+arm-openbmc-linux-gnueabi-objdump: '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpcre/8.45-r0/packages-split/libpcre-dev/usr/lib/libpcreposix.so': No such file
+arm-openbmc-linux-gnueabi-objdump: '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpcre/8.45-r0/packages-split/libpcre-dev/usr/lib/libpcrecpp.so': No such file
+arm-openbmc-linux-gnueabi-objdump: '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpcre/8.45-r0/packages-split/libpcre-dev/usr/lib/libpcre.so': No such file
+DEBUG: LIBNAMES: pkg libpcre-dev libs 1 bins 1 sonames []
+DEBUG: LIBNAMES: pkg libpcre-dbg libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpcre libs 1 bins 0 sonames ['libpcre.so.1']
+NOTE: debian: renaming libpcre to libpcre1
+DEBUG: Python function debian_package_name_hook finished
+DEBUG: Python function package_name_hook finished
+DEBUG: Executing python function package_do_filedeps
+DEBUG: Python function package_do_filedeps finished
+DEBUG: Executing python function package_do_shlibs
+DEBUG: Reading shlib providers in /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpcre/8.45-r0/pkgdata-sysroot/shlibs2
+DEBUG: calculating shlib provides for libpcre-src
+DEBUG: LIBNAMES: pkg libpcre-src sonames set()
+DEBUG: calculating shlib provides for libpcre-dbg
+DEBUG: LIBNAMES: pkg libpcre-dbg sonames set()
+DEBUG: calculating shlib provides for libpcrecpp
+DEBUG: registering libpcrecpp-8.45 as shlib provider for libpcrecpp.so.0
+DEBUG: adding ldconfig call to postinst for libpcrecpp
+DEBUG: LIBNAMES: pkg libpcrecpp sonames {('libpcrecpp.so.0', '/usr/lib', '8.45')}
+DEBUG: calculating shlib provides for libpcreposix
+DEBUG: registering libpcreposix-8.45 as shlib provider for libpcreposix.so.0
+DEBUG: adding ldconfig call to postinst for libpcreposix
+DEBUG: LIBNAMES: pkg libpcreposix sonames {('libpcreposix.so.0', '/usr/lib', '8.45')}
+DEBUG: calculating shlib provides for pcregrep
+DEBUG: LIBNAMES: pkg pcregrep sonames set()
+DEBUG: calculating shlib provides for pcregrep-doc
+DEBUG: LIBNAMES: pkg pcregrep-doc sonames set()
+DEBUG: calculating shlib provides for pcretest
+DEBUG: LIBNAMES: pkg pcretest sonames set()
+DEBUG: calculating shlib provides for pcretest-doc
+DEBUG: LIBNAMES: pkg pcretest-doc sonames set()
+DEBUG: calculating shlib provides for libpcre-staticdev
+DEBUG: LIBNAMES: pkg libpcre-staticdev sonames set()
+DEBUG: calculating shlib provides for libpcre-dev
+DEBUG: LIBNAMES: pkg libpcre-dev sonames set()
+DEBUG: calculating shlib provides for libpcre-doc
+DEBUG: LIBNAMES: pkg libpcre-doc sonames set()
+DEBUG: calculating shlib provides for libpcre-locale
+DEBUG: LIBNAMES: pkg libpcre-locale sonames set()
+DEBUG: calculating shlib provides for libpcre
+DEBUG: registering libpcre-8.45 as shlib provider for libpcre.so.1
+DEBUG: adding ldconfig call to postinst for libpcre
+DEBUG: LIBNAMES: pkg libpcre sonames {('libpcre.so.1', '/usr/lib', '8.45')}
+DEBUG: calculating shlib requirements for libpcre-src
+DEBUG: calculating shlib requirements for libpcre-dbg
+DEBUG: calculating shlib requirements for libpcrecpp
+DEBUG: libpcrecpp: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpcre/8.45-r0/packages-split/libpcrecpp/usr/lib/libpcrecpp.so.0.0.2)
+DEBUG: libpcrecpp: Dependency libgcc_s.so.1 requires package libgcc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpcre/8.45-r0/packages-split/libpcrecpp/usr/lib/libpcrecpp.so.0.0.2)
+DEBUG: libpcrecpp: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpcre/8.45-r0/packages-split/libpcrecpp/usr/lib/libpcrecpp.so.0.0.2)
+DEBUG: libpcrecpp: Dependency libpcre.so.1 requires package libpcre (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpcre/8.45-r0/packages-split/libpcrecpp/usr/lib/libpcrecpp.so.0.0.2)
+DEBUG: libpcrecpp: Dependency libm.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpcre/8.45-r0/packages-split/libpcrecpp/usr/lib/libpcrecpp.so.0.0.2)
+DEBUG: libpcrecpp: Dependency libstdc++.so.6 requires package libstdc++ (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpcre/8.45-r0/packages-split/libpcrecpp/usr/lib/libpcrecpp.so.0.0.2)
+DEBUG: calculating shlib requirements for libpcreposix
+DEBUG: libpcreposix: Dependency libpcre.so.1 requires package libpcre (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpcre/8.45-r0/packages-split/libpcreposix/usr/lib/libpcreposix.so.0.0.7)
+DEBUG: libpcreposix: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpcre/8.45-r0/packages-split/libpcreposix/usr/lib/libpcreposix.so.0.0.7)
+DEBUG: libpcreposix: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpcre/8.45-r0/packages-split/libpcreposix/usr/lib/libpcreposix.so.0.0.7)
+DEBUG: calculating shlib requirements for pcregrep
+DEBUG: pcregrep: Dependency libpcre.so.1 requires package libpcre (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpcre/8.45-r0/packages-split/pcregrep/usr/bin/pcregrep)
+DEBUG: pcregrep: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpcre/8.45-r0/packages-split/pcregrep/usr/bin/pcregrep)
+DEBUG: pcregrep: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpcre/8.45-r0/packages-split/pcregrep/usr/bin/pcregrep)
+DEBUG: calculating shlib requirements for pcregrep-doc
+DEBUG: calculating shlib requirements for pcretest
+DEBUG: pcretest: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpcre/8.45-r0/packages-split/pcretest/usr/bin/pcretest)
+DEBUG: pcretest: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpcre/8.45-r0/packages-split/pcretest/usr/bin/pcretest)
+DEBUG: pcretest: Dependency libpcreposix.so.0 requires package libpcreposix (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpcre/8.45-r0/packages-split/pcretest/usr/bin/pcretest)
+DEBUG: pcretest: Dependency libpcre.so.1 requires package libpcre (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpcre/8.45-r0/packages-split/pcretest/usr/bin/pcretest)
+DEBUG: calculating shlib requirements for pcretest-doc
+DEBUG: calculating shlib requirements for libpcre-staticdev
+DEBUG: calculating shlib requirements for libpcre-dev
+DEBUG: calculating shlib requirements for libpcre-doc
+DEBUG: calculating shlib requirements for libpcre-locale
+DEBUG: calculating shlib requirements for libpcre
+DEBUG: libpcre: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpcre/8.45-r0/packages-split/libpcre/usr/lib/libpcre.so.1.2.13)
+DEBUG: libpcre: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpcre/8.45-r0/packages-split/libpcre/usr/lib/libpcre.so.1.2.13)
+DEBUG: Python function package_do_shlibs finished
+DEBUG: Executing python function package_do_pkgconfig
+DEBUG: Python function package_do_pkgconfig finished
+DEBUG: Executing python function read_shlibdeps
+DEBUG: Python function read_shlibdeps finished
+DEBUG: Executing python function package_depchains
+DEBUG: Python function package_depchains finished
+DEBUG: Executing python function emit_pkgdata
+DEBUG: Python function emit_pkgdata finished
+DEBUG: Python function do_package finished
+DEBUG: Executing python function sstate_task_postfunc
+NOTE: Using umask 0o002 (not 22) for sstate packaging
+DEBUG: Executing python function target_add_sysroot_deps
+DEBUG: Python function target_add_sysroot_deps finished
+DEBUG: Executing python function sstate_hardcode_path
+NOTE: Removing hardcoded paths from sstate package: 'find /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpcre/8.45-r0/sstate-build-package/ \( -name "*.la" -o -name "*-config" -o -name "*_config" -o -name "postinst-*" \) -type f | xargs grep -l -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpcre/8.45-r0/recipe-sysroot' -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpcre/8.45-r0/recipe-sysroot-native' -e '/home/matt/tmp/build/obmc-y2038/tmp/hosttools' | tee /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpcre/8.45-r0/sstate-build-package/fixmepath | xargs --no-run-if-empty sed -i -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpcre/8.45-r0/recipe-sysroot-native:FIXMESTAGINGDIRHOST:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpcre/8.45-r0/recipe-sysroot:FIXMESTAGINGDIRTARGET:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:FIXME_HOSTTOOLS_DIR:g''
+DEBUG: Python function sstate_hardcode_path finished
+DEBUG: Executing python function sstate_report_unihash
+DEBUG: Python function sstate_report_unihash finished
+DEBUG: Executing shell function sstate_create_package
+DEBUG: Shell function sstate_create_package finished
+DEBUG: Executing python function sstate_hardcode_path_unpack
+DEBUG: Python function sstate_hardcode_path_unpack finished
+DEBUG: Python function sstate_task_postfunc finished

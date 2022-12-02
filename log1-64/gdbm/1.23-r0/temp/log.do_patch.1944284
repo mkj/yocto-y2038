@@ -1,0 +1,69 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: ['quilt-native', 'patch-native', 'libtool-native', 'attr-native', 'texinfo-dummy-native', 'gettext-minimal-native']
+NOTE: Skipping as already exists in sysroot: []
+DEBUG: sed -e 's:^[^/]*/:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gdbm/1.23-r0/recipe-sysroot-native/:g' /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/quilt-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/libtool-native/fixmepath | xargs sed -i -e 's:FIXMESTAGINGDIRTARGET:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gdbm/1.23-r0/recipe-sysroot:g; s:FIXMESTAGINGDIRHOST:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gdbm/1.23-r0/recipe-sysroot-native:g' -e 's:FIXME_PSEUDO_SYSROOT:/home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/pseudo-native:g' -e 's:FIXME_HOSTTOOLS_DIR:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:g' -e 's:FIXME_PKGDATA_DIR:/home/matt/tmp/build/obmc-y2038/tmp/pkgdata/evb-ast2600:g' -e 's:FIXME_PSEUDO_LOCALSTATEDIR:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gdbm/1.23-r0/pseudo/:g' -e 's:FIXME_LOGFIFO:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gdbm/1.23-r0/temp/fifo.1944284:g'
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function do_patch
+DEBUG: Executing python function patch_do_patch
+DEBUG: Searching for run-ptest in paths:
+    /home/matt/src/openbmc/meta/recipes-support/gdbm/gdbm-1.23/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/gdbm/gdbm/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/gdbm/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/gdbm/gdbm-1.23/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/gdbm/gdbm/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/gdbm/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/gdbm/gdbm-1.23/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-support/gdbm/gdbm/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-support/gdbm/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-support/gdbm/gdbm-1.23/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-support/gdbm/gdbm/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-support/gdbm/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-support/gdbm/gdbm-1.23/aspeed
+    /home/matt/src/openbmc/meta/recipes-support/gdbm/gdbm/aspeed
+    /home/matt/src/openbmc/meta/recipes-support/gdbm/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-support/gdbm/gdbm-1.23/armv7a
+    /home/matt/src/openbmc/meta/recipes-support/gdbm/gdbm/armv7a
+    /home/matt/src/openbmc/meta/recipes-support/gdbm/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-support/gdbm/gdbm-1.23/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-support/gdbm/gdbm/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-support/gdbm/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-support/gdbm/gdbm-1.23/arm
+    /home/matt/src/openbmc/meta/recipes-support/gdbm/gdbm/arm
+    /home/matt/src/openbmc/meta/recipes-support/gdbm/files/arm
+    /home/matt/src/openbmc/meta/recipes-support/gdbm/gdbm-1.23/
+    /home/matt/src/openbmc/meta/recipes-support/gdbm/gdbm/
+    /home/matt/src/openbmc/meta/recipes-support/gdbm/files/
+DEBUG: Searching for ptest.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-support/gdbm/gdbm-1.23/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/gdbm/gdbm/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/gdbm/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/gdbm/gdbm-1.23/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/gdbm/gdbm/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/gdbm/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/gdbm/gdbm-1.23/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-support/gdbm/gdbm/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-support/gdbm/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-support/gdbm/gdbm-1.23/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-support/gdbm/gdbm/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-support/gdbm/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-support/gdbm/gdbm-1.23/aspeed
+    /home/matt/src/openbmc/meta/recipes-support/gdbm/gdbm/aspeed
+    /home/matt/src/openbmc/meta/recipes-support/gdbm/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-support/gdbm/gdbm-1.23/armv7a
+    /home/matt/src/openbmc/meta/recipes-support/gdbm/gdbm/armv7a
+    /home/matt/src/openbmc/meta/recipes-support/gdbm/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-support/gdbm/gdbm-1.23/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-support/gdbm/gdbm/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-support/gdbm/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-support/gdbm/gdbm-1.23/arm
+    /home/matt/src/openbmc/meta/recipes-support/gdbm/gdbm/arm
+    /home/matt/src/openbmc/meta/recipes-support/gdbm/files/arm
+    /home/matt/src/openbmc/meta/recipes-support/gdbm/gdbm-1.23/
+    /home/matt/src/openbmc/meta/recipes-support/gdbm/gdbm/
+    /home/matt/src/openbmc/meta/recipes-support/gdbm/files/
+NOTE: Applying patch 'ptest.patch' (../../../src/openbmc/meta/recipes-support/gdbm/files/ptest.patch)
+DEBUG: Python function patch_do_patch finished
+DEBUG: Python function do_patch finished
+DEBUG: Executing python function do_qa_patch
+DEBUG: Python function do_qa_patch finished

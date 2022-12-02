@@ -1,0 +1,30 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/systemd/systemd_251.4.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/zlib/zlib_1.2.13.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/opkg-utils/opkg-utils_0.5.0.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-kernel/kmod/kmod_30.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/make/make_4.3.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pkgconfig/pkgconfig_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-extended/xz/xz_5.2.7.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: []
+NOTE: Skipping as already exists in sysroot: ['glibc', 'systemd', 'zlib', 'gcc-cross-arm', 'gcc-runtime', 'opkg-utils', 'quilt-native', 'kmod', 'make-native', 'patch-native', 'pkgconfig-native', 'pseudo-native', 'xz-native', 'libtool-native', 'texinfo-dummy-native', 'gettext-minimal-native', 'linux-libc-headers', 'attr-native', 'base-files', 'libseccomp', 'zstd', 'libpam', 'shadow-sysroot', 'bash-completion', 'shadow', 'shadow-native', 'base-passwd', 'libcap', 'util-linux', 'libgcc', 'xz', 'zstd-native', 'binutils-cross-arm', 'mpfr-native', 'flex-native', 'gmp-native', 'zlib-native', 'libmpc-native', 'gnu-config-native', 'cracklib', 'libxcrypt', 'flex', 'util-linux-libuuid', 'ncurses', 'libcap-ng', 'm4-native']
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing shell function do_install
+NOTE: make -j 1 -e MAKEFLAGS= ZLIB=yes DNS=yes SHARED=yes STRIP= LIBDIR=/usr/lib DESTDIR=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/image install install-lib
+make -C lib all
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0/lib'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/pciutils-3.8.0/lib'
+install -d -m 755 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/image/usr/lib
+install -c -m 644 lib/libpci.so.3.8.0 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/image/usr/lib
+install -d -m 755 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/image/usr/bin /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/image/usr/sbin /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/image/usr/share /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/image/usr/share/man/man8 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/image/usr/share/man/man7 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/image//usr/share/man/man5
+install -c -m 755  lspci /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/image/usr/bin
+install -c -m 755  setpci /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/image/usr/sbin
+install -c -m 755 update-pciids /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/image/usr/sbin
+install -c -m 644 pci.ids.gz /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/image/usr/share
+install -c -m 644 lspci.8 setpci.8 update-pciids.8 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/image/usr/share/man/man8
+install -c -m 644 pcilib.7 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/image/usr/share/man/man7
+install -c -m 644 pci.ids.5 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/image/usr/share/man/man5
+ln -sf libpci.so.3.8.0 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/image/usr/lib/libpci.so.3
+install -d -m 755 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/image/usr/include/pci /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/image/usr/lib/pkgconfig
+install -c -m 644 lib/config.h lib/header.h lib/pci.h lib/types.h /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/image/usr/include/pci
+install -c -m 644 lib/libpci.pc /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/image/usr/lib/pkgconfig
+ln -sf libpci.so.3.8.0 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/image/usr/lib/libpci.so.3
+ln -sf libpci.so.3 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pciutils/3.8.0-r0/image/usr/lib/libpci.so
+DEBUG: Shell function do_install finished
+DEBUG: Executing shell function remove_libtool_la
+DEBUG: Shell function remove_libtool_la finished

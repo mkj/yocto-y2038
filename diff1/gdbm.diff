@@ -1,0 +1,56 @@
+1145a1146,1150
+> ../../gdbm-1.23/tools/gdbmshell.c:1184:20: warning: format '%ld' expects argument of type 'long int', but argument 3 has type '__time64_t' {aka 'long long int'} [-Wformat=]
+>  1184 |       fprintf (fp, "%ld.%09ld", st.st_mtim.tv_sec, st.st_mtim.tv_nsec);
+>       |                    ^~~~~~~~~~~  ~~~~~~~~~~~~~~~~~
+>       |                                           |
+>       |                                           __time64_t {aka long long int}
+1173a1179,1227
+> ../../gdbm-1.23/tools/gdbmshell.c: In function 'run_command':
+> ../../gdbm-1.23/tools/gdbmshell.c:3060:33: warning: format '%lu' expects argument of type 'long unsigned int', but argument 4 has type '__time64_t' {aka 'long long int'} [-Wformat=]
+>  3060 |               fprintf (cenv.fp, "[%s r=%lu.%06lu u=%lu.%06lu s=%lu.%06lu]\n",
+>       |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+>  3061 |                        cmd->name,
+>  3062 |                        tm.real.tv_sec, tm.real.tv_usec,
+>       |                        ~~~~~~~~~~~~~~
+>       |                               |
+>       |                               __time64_t {aka long long int}
+> ../../gdbm-1.23/tools/gdbmshell.c:3060:33: warning: format '%lu' expects argument of type 'long unsigned int', but argument 5 has type '__suseconds64_t' {aka 'long long int'} [-Wformat=]
+>  3060 |               fprintf (cenv.fp, "[%s r=%lu.%06lu u=%lu.%06lu s=%lu.%06lu]\n",
+>       |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+>  3061 |                        cmd->name,
+>  3062 |                        tm.real.tv_sec, tm.real.tv_usec,
+>       |                                        ~~~~~~~~~~~~~~~
+>       |                                               |
+>       |                                               __suseconds64_t {aka long long int}
+> ../../gdbm-1.23/tools/gdbmshell.c:3060:33: warning: format '%lu' expects argument of type 'long unsigned int', but argument 6 has type '__time64_t' {aka 'long long int'} [-Wformat=]
+>  3060 |               fprintf (cenv.fp, "[%s r=%lu.%06lu u=%lu.%06lu s=%lu.%06lu]\n",
+>       |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+> ......
+>  3063 |                        tm.user.tv_sec, tm.user.tv_usec,
+>       |                        ~~~~~~~~~~~~~~
+>       |                               |
+>       |                               __time64_t {aka long long int}
+> ../../gdbm-1.23/tools/gdbmshell.c:3060:33: warning: format '%lu' expects argument of type 'long unsigned int', but argument 7 has type '__suseconds64_t' {aka 'long long int'} [-Wformat=]
+>  3060 |               fprintf (cenv.fp, "[%s r=%lu.%06lu u=%lu.%06lu s=%lu.%06lu]\n",
+>       |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+> ......
+>  3063 |                        tm.user.tv_sec, tm.user.tv_usec,
+>       |                                        ~~~~~~~~~~~~~~~
+>       |                                               |
+>       |                                               __suseconds64_t {aka long long int}
+> ../../gdbm-1.23/tools/gdbmshell.c:3060:33: warning: format '%lu' expects argument of type 'long unsigned int', but argument 8 has type '__time64_t' {aka 'long long int'} [-Wformat=]
+>  3060 |               fprintf (cenv.fp, "[%s r=%lu.%06lu u=%lu.%06lu s=%lu.%06lu]\n",
+>       |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+> ......
+>  3064 |                        tm.sys.tv_sec, tm.sys.tv_usec);
+>       |                        ~~~~~~~~~~~~~
+>       |                              |
+>       |                              __time64_t {aka long long int}
+> ../../gdbm-1.23/tools/gdbmshell.c:3060:33: warning: format '%lu' expects argument of type 'long unsigned int', but argument 9 has type '__suseconds64_t' {aka 'long long int'} [-Wformat=]
+>  3060 |               fprintf (cenv.fp, "[%s r=%lu.%06lu u=%lu.%06lu s=%lu.%06lu]\n",
+>       |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+> ......
+>  3064 |                        tm.sys.tv_sec, tm.sys.tv_usec);
+>       |                                       ~~~~~~~~~~~~~~
+>       |                                             |
+>       |                                             __suseconds64_t {aka long long int}

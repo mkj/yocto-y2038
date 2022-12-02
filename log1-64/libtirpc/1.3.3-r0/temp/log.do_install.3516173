@@ -1,0 +1,58 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-cross_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-native_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/autoconf/autoconf_2.71.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/automake/automake_1.16.5.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pkgconfig/pkgconfig_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: []
+NOTE: Skipping as already exists in sysroot: ['glibc', 'gcc-cross-arm', 'gcc-runtime', 'libtool-cross', 'libtool-native', 'quilt-native', 'autoconf-native', 'automake-native', 'patch-native', 'pkgconfig-native', 'pseudo-native', 'linux-libc-headers', 'libgcc', 'texinfo-dummy-native', 'gnu-config-native', 'm4-native', 'flex-native', 'xz-native', 'zlib-native', 'zstd-native', 'binutils-cross-arm', 'mpfr-native', 'libmpc-native', 'gmp-native', 'attr-native', 'gettext-minimal-native']
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function autotools_aclocals
+DEBUG: SITE files ['endian-little', 'bit-32', 'arm-common', 'arm-32', 'common-linux', 'common-glibc', 'arm-linux', 'arm-linux-gnueabi', 'common']
+DEBUG: Python function autotools_aclocals finished
+DEBUG: Executing shell function do_install
+NOTE: make -j 1 DESTDIR=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtirpc/1.3.3-r0/image install
+Making install in src
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtirpc/1.3.3-r0/build/src'
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtirpc/1.3.3-r0/build/src'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtirpc/1.3.3-r0/image/usr/lib'
+ /bin/bash ../libtool   --mode=install /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c   libtirpc.la '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtirpc/1.3.3-r0/image/usr/lib'
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c .libs/libtirpc.so.3.0.0 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtirpc/1.3.3-r0/image/usr/lib/libtirpc.so.3.0.0
+libtool: install: (cd /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtirpc/1.3.3-r0/image/usr/lib && { ln -s -f libtirpc.so.3.0.0 libtirpc.so.3 || { rm -f libtirpc.so.3 && ln -s libtirpc.so.3.0.0 libtirpc.so.3; }; })
+libtool: install: (cd /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtirpc/1.3.3-r0/image/usr/lib && { ln -s -f libtirpc.so.3.0.0 libtirpc.so || { rm -f libtirpc.so && ln -s libtirpc.so.3.0.0 libtirpc.so; }; })
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c .libs/libtirpc.lai /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtirpc/1.3.3-r0/image/usr/lib/libtirpc.la
+libtool: warning: remember to run 'libtool --finish /usr/lib'
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtirpc/1.3.3-r0/build/src'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtirpc/1.3.3-r0/build/src'
+Making install in man
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtirpc/1.3.3-r0/build/man'
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtirpc/1.3.3-r0/build/man'
+make[2]: Nothing to be done for 'install-exec-am'.
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtirpc/1.3.3-r0/image/usr/share/man/man3'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../../libtirpc-1.3.3/man/getrpcent.3t ../../libtirpc-1.3.3/man/getrpcport.3t ../../libtirpc-1.3.3/man/getnetconfig.3t ../../libtirpc-1.3.3/man/getnetpath.3t ../../libtirpc-1.3.3/man/bindresvport.3t ../../libtirpc-1.3.3/man/rpc.3t ../../libtirpc-1.3.3/man/rpc_xdr.3t ../../libtirpc-1.3.3/man/des_crypt.3t ../../libtirpc-1.3.3/man/rpc_soc.3t ../../libtirpc-1.3.3/man/rpc_secure.3t ../../libtirpc-1.3.3/man/rtime.3t ../../libtirpc-1.3.3/man/rpc_clnt_auth.3t ../../libtirpc-1.3.3/man/rpc_clnt_calls.3t ../../libtirpc-1.3.3/man/rpc_clnt_create.3t ../../libtirpc-1.3.3/man/rpcbind.3t ../../libtirpc-1.3.3/man/rpc_svc_calls.3t ../../libtirpc-1.3.3/man/rpc_svc_create.3t ../../libtirpc-1.3.3/man/rpc_svc_err.3t ../../libtirpc-1.3.3/man/rpc_svc_reg.3t '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtirpc/1.3.3-r0/image/usr/share/man/man3'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtirpc/1.3.3-r0/image/usr/share/man/man5'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../../libtirpc-1.3.3/man/netconfig.5 '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtirpc/1.3.3-r0/image/usr/share/man/man5'
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtirpc/1.3.3-r0/build/man'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtirpc/1.3.3-r0/build/man'
+Making install in doc
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtirpc/1.3.3-r0/build/doc'
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtirpc/1.3.3-r0/build/doc'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtirpc/1.3.3-r0/image/etc'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../../libtirpc-1.3.3/doc/netconfig ../../libtirpc-1.3.3/doc/bindresvport.blacklist '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtirpc/1.3.3-r0/image/etc'
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtirpc/1.3.3-r0/build/doc'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtirpc/1.3.3-r0/build/doc'
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtirpc/1.3.3-r0/build'
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtirpc/1.3.3-r0/build'
+make[2]: Nothing to be done for 'install-exec-am'.
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtirpc/1.3.3-r0/image/usr/include'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtirpc/1.3.3-r0/image/usr/include/tirpc/rpcsvc'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644  ../libtirpc-1.3.3/tirpc/rpcsvc/crypt.x ../libtirpc-1.3.3/tirpc/rpcsvc/crypt.h '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtirpc/1.3.3-r0/image/usr/include/tirpc/rpcsvc'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtirpc/1.3.3-r0/image/usr/include/tirpc'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644  ../libtirpc-1.3.3/tirpc/netconfig.h '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtirpc/1.3.3-r0/image/usr/include/tirpc'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtirpc/1.3.3-r0/image/usr/include/tirpc/rpc'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644  ../libtirpc-1.3.3/tirpc/rpc/xdr.h ../libtirpc-1.3.3/tirpc/rpc/types.h ../libtirpc-1.3.3/tirpc/rpc/svc_soc.h ../libtirpc-1.3.3/tirpc/rpc/svc.h ../libtirpc-1.3.3/tirpc/rpc/svc_dg.h ../libtirpc-1.3.3/tirpc/rpc/svc_auth.h ../libtirpc-1.3.3/tirpc/rpc/svc_mt.h ../libtirpc-1.3.3/tirpc/rpc/rpc_msg.h ../libtirpc-1.3.3/tirpc/rpc/rpc.h ../libtirpc-1.3.3/tirpc/rpc/rpcent.h ../libtirpc-1.3.3/tirpc/rpc/rpc_com.h ../libtirpc-1.3.3/tirpc/rpc/rpcb_prot.x ../libtirpc-1.3.3/tirpc/rpc/rpcb_prot.h ../libtirpc-1.3.3/tirpc/rpc/rpcb_clnt.h ../libtirpc-1.3.3/tirpc/rpc/raw.h ../libtirpc-1.3.3/tirpc/rpc/pmap_rmt.h ../libtirpc-1.3.3/tirpc/rpc/pmap_prot.h ../libtirpc-1.3.3/tirpc/rpc/pmap_clnt.h ../libtirpc-1.3.3/tirpc/rpc/nettype.h ../libtirpc-1.3.3/tirpc/rpc/key_prot.h ../libtirpc-1.3.3/tirpc/rpc/des.h ../libtirpc-1.3.3/tirpc/rpc/des_crypt.h ../libtirpc-1.3.3/tirpc/rpc/clnt_stat.h ../libtirpc-1.3.3/tirpc/rpc/clnt_soc.h ../libtirpc-1.3.3/tirpc/rpc/clnt.h ../libtirpc-1.3.3/tirpc/rpc/auth_unix.h ../libtirpc-1.3.3/tirpc/rpc/auth_des.h ../libtirpc-1.3.3/tirpc/rpc/auth.h '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtirpc/1.3.3-r0/image/usr/include/tirpc/rpc'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtirpc/1.3.3-r0/image/usr/lib/pkgconfig'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 libtirpc.pc '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtirpc/1.3.3-r0/image/usr/lib/pkgconfig'
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtirpc/1.3.3-r0/build'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtirpc/1.3.3-r0/build'
+DEBUG: Shell function do_install finished
+DEBUG: Executing shell function remove_libtool_la
+DEBUG: Shell function remove_libtool_la finished

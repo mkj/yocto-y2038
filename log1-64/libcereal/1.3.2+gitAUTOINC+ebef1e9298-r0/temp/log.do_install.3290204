@@ -1,0 +1,116 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/cmake/cmake-native_3.24.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/ninja/ninja_1.11.1.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pkgconfig/pkgconfig_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: []
+NOTE: Skipping as already exists in sysroot: ['glibc', 'cmake-native', 'gcc-cross-arm', 'gcc-runtime', 'quilt-native', 'ninja-native', 'patch-native', 'pkgconfig-native', 'pseudo-native', 'linux-libc-headers', 'libgcc', 'libtool-native', 'attr-native', 're2c-native', 'zstd-native', 'mpfr-native', 'xz-native', 'zlib-native', 'gmp-native', 'texinfo-dummy-native', 'gnu-config-native', 'libmpc-native', 'flex-native', 'binutils-cross-arm', 'bzip2-native', 'ncurses-native', 'curl-native', 'gettext-minimal-native', 'm4-native', 'openssl-native', 'perl-native', 'make-native', 'gdbm-native']
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing shell function do_install
+NOTE: DESTDIR=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image VERBOSE=1 cmake --build /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/build --target install --
+[0/1] cd /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/build && /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/recipe-sysroot-native/usr/bin/cmake -P cmake_install.cmake
+-- Install configuration: ""
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/details
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/details/polymorphic_impl.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/details/traits.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/details/static_object.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/details/polymorphic_impl_fwd.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/details/helpers.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/details/util.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/cereal.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/archives
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/archives/binary.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/archives/adapters.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/archives/xml.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/archives/portable_binary.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/archives/json.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/access.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/version.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/macros.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/types
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/types/set.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/types/optional.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/types/array.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/types/memory.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/types/map.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/types/complex.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/types/chrono.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/types/deque.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/types/base_class.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/types/bitset.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/types/common.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/types/valarray.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/types/atomic.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/types/boost_variant.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/types/variant.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/types/stack.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/types/forward_list.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/types/queue.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/types/utility.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/types/list.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/types/vector.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/types/functional.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/types/concepts
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/types/concepts/pair_associative_container.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/types/unordered_set.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/types/polymorphic.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/types/tuple.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/types/unordered_map.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/types/string.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/external
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/external/base64.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/external/rapidxml
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/external/rapidxml/rapidxml_iterators.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/external/rapidxml/rapidxml_utils.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/external/rapidxml/rapidxml.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/external/rapidxml/rapidxml_print.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/external/rapidxml/license.txt
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/external/rapidxml/manual.html
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/external/LICENSE
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/external/rapidjson
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/external/rapidjson/filewritestream.h
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/external/rapidjson/prettywriter.h
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/external/rapidjson/stringbuffer.h
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/external/rapidjson/reader.h
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/external/rapidjson/memorystream.h
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/external/rapidjson/document.h
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/external/rapidjson/schema.h
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/external/rapidjson/LICENSE
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/external/rapidjson/ostreamwrapper.h
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/external/rapidjson/writer.h
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/external/rapidjson/msinttypes
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/external/rapidjson/msinttypes/LICENSE
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/external/rapidjson/msinttypes/stdint.h
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/external/rapidjson/msinttypes/inttypes.h
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/external/rapidjson/stream.h
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/external/rapidjson/fwd.h
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/external/rapidjson/pointer.h
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/external/rapidjson/allocators.h
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/external/rapidjson/istreamwrapper.h
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/external/rapidjson/cursorstreamwrapper.h
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/external/rapidjson/memorybuffer.h
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/external/rapidjson/filereadstream.h
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/external/rapidjson/error
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/external/rapidjson/error/error.h
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/external/rapidjson/error/en.h
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/external/rapidjson/rapidjson.h
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/external/rapidjson/internal
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/external/rapidjson/internal/ieee754.h
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/external/rapidjson/internal/pow10.h
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/external/rapidjson/internal/diyfp.h
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/external/rapidjson/internal/stack.h
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/external/rapidjson/internal/biginteger.h
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/external/rapidjson/internal/dtoa.h
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/external/rapidjson/internal/regex.h
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/external/rapidjson/internal/meta.h
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/external/rapidjson/internal/strtod.h
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/external/rapidjson/internal/swap.h
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/external/rapidjson/internal/itoa.h
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/external/rapidjson/internal/strfunc.h
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/external/rapidjson/encodings.h
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/external/rapidjson/encodedstream.h
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/include/cereal/specialize.hpp
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/lib/cmake/cereal/cerealConfig.cmake
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/lib/cmake/cereal/cerealConfigVersion.cmake
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/image/usr/lib/cmake/cereal/cerealTargets.cmake
+DEBUG: Shell function do_install finished
+DEBUG: Executing shell function remove_libtool_la
+DEBUG: Shell function remove_libtool_la finished

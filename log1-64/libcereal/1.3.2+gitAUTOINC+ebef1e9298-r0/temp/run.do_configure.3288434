@@ -1,0 +1,204 @@
+#!/bin/sh
+
+__BITBAKE_LAST_LINE=0
+
+# Emit a useful diagnostic if something fails:
+bb_sh_exit_handler() {
+    ret=$?
+    if [ "$ret" != 0 ]; then
+        echo "WARNING: exit code $ret from a shell command."
+    fi
+    exit $ret
+}
+
+bb_bash_exit_handler() {
+    ret=$?
+    { set +x; } > /dev/null
+    trap "" DEBUG
+    if [ "$ret" != 0 ]; then
+        echo "WARNING: ${BASH_SOURCE[0]}:${__BITBAKE_LAST_LINE} exit $ret from '$1'"
+
+        echo "WARNING: Backtrace (BB generated script): "
+        for i in $(seq 1 $((${#FUNCNAME[@]} - 1))); do
+            if [ "$i" -eq 1 ]; then
+                echo -e "	#$((i)): ${FUNCNAME[$i]}, ${BASH_SOURCE[$((i-1))]}, line ${__BITBAKE_LAST_LINE}"
+            else
+                echo -e "	#$((i)): ${FUNCNAME[$i]}, ${BASH_SOURCE[$((i-1))]}, line ${BASH_LINENO[$((i-1))]}"
+            fi
+        done
+    fi
+    exit $ret
+}
+
+bb_bash_debug_handler() {
+    local line=${BASH_LINENO[0]}
+    # For some reason the DEBUG trap trips with lineno=1 when scripts exit; ignore it
+    if [ "$line" -eq 1 ]; then
+        return
+    fi
+
+    # Track the line number of commands as they execute. This is so we can have access to the failing line number
+    # in the EXIT trap. See http://gnu-bash.2382.n7.nabble.com/trap-echo-quot-trap-exit-on-LINENO-quot-EXIT-gt-wrong-linenumber-td3666.html
+    if [ "${FUNCNAME[1]}" != "bb_bash_exit_handler" ]; then
+        __BITBAKE_LAST_LINE=$line
+    fi
+}
+
+case $BASH_VERSION in
+"") trap 'bb_sh_exit_handler' 0
+    set -e
+    ;;
+*)  trap 'bb_bash_exit_handler "$BASH_COMMAND"' 0
+    trap '{ bb_bash_debug_handler; } 2>/dev/null' DEBUG
+    set -e
+    shopt -s extdebug
+    ;;
+esac
+export AR="arm-openbmc-linux-gnueabi-gcc-ar"
+export AS="arm-openbmc-linux-gnueabi-as "
+export BUILD_AR="ar"
+export BUILD_AS="as "
+export BUILD_CC="gcc "
+export BUILD_CCLD="gcc "
+export BUILD_CFLAGS="-isystem/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/recipe-sysroot-native/usr/include -O2 -pipe"
+export BUILD_CPP="gcc  -E"
+export BUILD_CPPFLAGS="-isystem/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/recipe-sysroot-native/usr/include"
+export BUILD_CXX="g++ "
+export BUILD_CXXFLAGS="-isystem/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/recipe-sysroot-native/usr/include -O2 -pipe"
+export BUILD_FC="gfortran "
+export BUILD_LD="ld "
+export BUILD_LDFLAGS="-L/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/recipe-sysroot-native/usr/lib                         -L/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/recipe-sysroot-native/lib                         -Wl,--enable-new-dtags                         -Wl,-rpath-link,/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/recipe-sysroot-native/usr/lib                         -Wl,-rpath-link,/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/recipe-sysroot-native/lib                         -Wl,-rpath,/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/recipe-sysroot-native/usr/lib                         -Wl,-rpath,/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/recipe-sysroot-native/lib                         -Wl,-O1"
+export BUILD_NM="nm"
+export BUILD_RANLIB="ranlib -D"
+export BUILD_STRIP="strip"
+export CC="arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/recipe-sysroot"
+export CCLD="arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/recipe-sysroot"
+export CFLAGS="  -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/git=/usr/src/debug/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/git=/usr/src/debug/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/build=/usr/src/debug/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/build=/usr/src/debug/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/recipe-sysroot-native=   -Wconversion -Wno-error"
+export CPP="arm-openbmc-linux-gnueabi-gcc -E --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/recipe-sysroot  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security"
+export CPPFLAGS="  -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64"
+export CXX="arm-openbmc-linux-gnueabi-g++  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/recipe-sysroot"
+export CXXFLAGS="  -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/git=/usr/src/debug/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/git=/usr/src/debug/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/build=/usr/src/debug/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/build=/usr/src/debug/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/recipe-sysroot-native=   -Wconversion -Wno-error  -Wconversion -Wno-error -fvisibility-inlines-hidden"
+export FC="arm-openbmc-linux-gnueabi-gfortran  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/recipe-sysroot"
+export GIT_CEILING_DIRECTORIES="/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0"
+export HOME="/home/matt"
+export LC_ALL="en_US.UTF-8"
+export LD="arm-openbmc-linux-gnueabi-ld --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/recipe-sysroot "
+export LDFLAGS="-Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/git=/usr/src/debug/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/git=/usr/src/debug/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/build=/usr/src/debug/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/build=/usr/src/debug/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/recipe-sysroot-native=  -Wl,-z,relro,-z,now"
+export LOGNAME="matt"
+export MAKE="make"
+export NM="arm-openbmc-linux-gnueabi-gcc-nm"
+export OBJCOPY="arm-openbmc-linux-gnueabi-objcopy"
+export OBJDUMP="arm-openbmc-linux-gnueabi-objdump"
+export OMP_NUM_THREADS="30"
+export PATH="/home/matt/src/openbmc/scripts:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/recipe-sysroot-native/usr/bin/arm-openbmc-linux-gnueabi:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/recipe-sysroot/usr/bin/crossscripts:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/recipe-sysroot-native/usr/sbin:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/recipe-sysroot-native/usr/bin:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/recipe-sysroot-native/sbin:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/recipe-sysroot-native/bin:/home/matt/src/openbmc/poky/bitbake/bin:/home/matt/tmp/build/obmc-y2038/tmp/hosttools"
+export PERL_HASH_SEED="0"
+export PKG_CONFIG_DIR="/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/recipe-sysroot/usr/lib/pkgconfig"
+export PKG_CONFIG_DISABLE_UNINSTALLED="yes"
+export PKG_CONFIG_LIBDIR="/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/recipe-sysroot/usr/lib/pkgconfig"
+export PKG_CONFIG_PATH="/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/recipe-sysroot/usr/lib/pkgconfig:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/recipe-sysroot/usr/share/pkgconfig"
+export PKG_CONFIG_SYSROOT_DIR="/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/recipe-sysroot"
+export PKG_CONFIG_SYSTEM_INCLUDE_PATH="/usr/include"
+export PKG_CONFIG_SYSTEM_LIBRARY_PATH="/lib:/usr/lib"
+export PSEUDO_DISABLED="1"
+export PSEUDO_UNLOAD="1"
+export PYTHONHASHSEED="0"
+export RANLIB="arm-openbmc-linux-gnueabi-gcc-ranlib"
+export READELF="arm-openbmc-linux-gnueabi-readelf"
+unset SHELL
+export SOURCE_DATE_EPOCH="1646019992"
+export SOURCE_DATE_EPOCH_FALLBACK="1302044400"
+export STRINGS="arm-openbmc-linux-gnueabi-strings"
+export STRIP="arm-openbmc-linux-gnueabi-strip"
+export TZ="UTC"
+export USER="matt"
+export base_bindir="/bin"
+export base_libdir="/lib"
+export base_prefix=""
+export base_sbindir="/sbin"
+export bindir="/usr/bin"
+export datadir="/usr/share"
+export docdir="/usr/share/doc"
+export exec_prefix="/usr"
+export includedir="/usr/include"
+export infodir="/usr/share/info"
+export libdir="/usr/lib"
+export libexecdir="/usr/libexec"
+export localstatedir="/var"
+export mandir="/usr/share/man"
+export nonarch_base_libdir="/lib"
+export nonarch_libdir="/usr/lib"
+export oldincludedir="/usr/include"
+export prefix="/usr"
+export sbindir="/usr/sbin"
+export servicedir="/srv"
+export sharedstatedir="/com"
+export sysconfdir="/etc"
+export systemd_system_unitdir="/lib/systemd/system"
+export systemd_unitdir="/lib/systemd"
+export systemd_user_unitdir="/usr/lib/systemd/user"
+
+# line: 1, file: autogenerated
+do_configure() {
+    cmake_do_configure
+}
+
+# line: 158, file: /home/matt/src/openbmc/meta/classes-recipe/cmake.bbclass
+cmake_do_configure() {
+	if [ "${OECMAKE_BUILDPATH}" ]; then
+		bbnote "cmake.bbclass no longer uses OECMAKE_BUILDPATH.  The default behaviour is now out-of-tree builds with B=WORKDIR/build."
+	fi
+
+	if [ "/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/git" = "/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/build" ]; then
+		find /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/build -name CMakeFiles -or -name Makefile -or -name cmake_install.cmake -or -name CMakeCache.txt -delete
+	fi
+
+	# Just like autotools cmake can use a site file to cache result that need generated binaries to run
+	if [ -e /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/site-file.cmake ] ; then
+		oecmake_sitefile="-C /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/site-file.cmake"
+	else
+		oecmake_sitefile=
+	fi
+
+	cmake \
+	  -G 'Ninja' -DCMAKE_MAKE_PROGRAM=ninja \
+	  $oecmake_sitefile \
+	  /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/git \
+	  -DCMAKE_INSTALL_PREFIX:PATH=/usr \
+	  -DCMAKE_INSTALL_BINDIR:PATH=bin \
+	  -DCMAKE_INSTALL_SBINDIR:PATH=sbin \
+	  -DCMAKE_INSTALL_LIBEXECDIR:PATH=libexec \
+	  -DCMAKE_INSTALL_SYSCONFDIR:PATH=/etc \
+	  -DCMAKE_INSTALL_SHAREDSTATEDIR:PATH=../com \
+	  -DCMAKE_INSTALL_LOCALSTATEDIR:PATH=/var \
+	  -DCMAKE_INSTALL_LIBDIR:PATH=lib \
+	  -DCMAKE_INSTALL_INCLUDEDIR:PATH=include \
+	  -DCMAKE_INSTALL_DATAROOTDIR:PATH=share \
+	  -DPYTHON_EXECUTABLE:PATH=/bin/python3 \
+	  -DPython_EXECUTABLE:PATH=/bin/python3 \
+	  -DPython3_EXECUTABLE:PATH=/bin/python3 \
+	  -DLIB_SUFFIX= \
+	  -DCMAKE_INSTALL_SO_NO_EXE=0 \
+	  -DCMAKE_TOOLCHAIN_FILE=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/toolchain.cmake \
+	  -DCMAKE_NO_SYSTEM_FROM_IMPORTED=1 \
+	  -DCMAKE_EXPORT_NO_PACKAGE_REGISTRY=ON \
+	  -DFETCHCONTENT_FULLY_DISCONNECTED=ON \
+	  -DJUST_INSTALL_CEREAL=ON                  -DSKIP_PORTABILITY_TEST=ON  \
+	  -Wno-dev
+}
+
+# line: 27, file: /home/matt/src/openbmc/meta/classes-global/logging.bbclass
+bbnote() {
+	if [ -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/temp/fifo.3288434 ] ; then
+		printf "%b\0" "bbnote $*" > /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/temp/fifo.3288434
+	else
+		echo "NOTE: $*"
+	fi
+}
+
+cd '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcereal/1.3.2+gitAUTOINC+ebef1e9298-r0/build'
+do_configure
+
+# cleanup
+ret=$?
+trap '' 0
+exit $ret

@@ -1,0 +1,138 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/systemd/systemd-systemctl-native.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/systemd/systemd_251.4.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/opkg-utils/opkg-utils_0.5.0.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/qemu/qemu-native_7.1.0.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-support/gnutls/gnutls_3.7.8.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-support/libcap/libcap_2.66.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/meson/meson_0.63.3.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/ninja/ninja_1.11.1.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pkgconfig/pkgconfig_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/python/python3_3.11.0.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-support/libcap/libcap_2.66.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: []
+NOTE: Skipping as already exists in sysroot: ['glibc', 'systemd-systemctl-native', 'systemd', 'gcc-cross-arm', 'gcc-runtime', 'opkg-utils', 'qemu-native', 'quilt-native', 'gnutls', 'libcap', 'meson-native', 'ninja-native', 'patch-native', 'pkgconfig-native', 'pseudo-native', 'python3-native', 'libcap-native', 'zlib-native', 'glib-2.0-native', 'xz-native', 'python3-setuptools-native', 'python3-picobuild-native', 'python3-installer-native', 'python3-wheel-native', 'libgcc', 'linux-libc-headers', 'gdbm-native', 'libnsl2-native', 'sqlite3-native', 'libtool-native', 'readline-native', 'libffi-native', 'bzip2-native', 'libtirpc-native', 'openssl-native', 'ncurses-native', 'util-linux-libuuid-native', 're2c-native', 'gmp', 'libunistring', 'libseccomp', 'libidn2', 'nettle', 'texinfo-dummy-native', 'mpfr-native', 'gmp-native', 'binutils-cross-arm', 'flex-native', 'libmpc-native', 'gnu-config-native', 'zstd-native', 'shadow-sysroot', 'util-linux', 'libpam', 'shadow-native', 'base-files', 'shadow', 'bash-completion', 'zstd', 'base-passwd', 'attr-native', 'gettext-native', 'gettext-minimal-native', 'util-linux-native', 'libpcre-native', 'python3-flit-core-native', 'perl-native', 'm4-native', 'ncurses', 'libxcrypt', 'zlib', 'libcap-ng', 'util-linux-libuuid', 'cracklib', 'flex', 'libcap-ng-native', 'libpcre2-native', 'unzip-native', 'make-native']
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing shell function do_configure
+NOTE: Executing meson --prefix=/ -DSKIP_TESTS=true -Dwerror=false -Db_lto=true -DBUILD_HTML_MANS=false -DBUILD_MANS=false -DUSE_GETTEXT=false -DUSE_CAP=true -DUSE_IDN=false -DBUILD_NINFOD=true -DBUILD_RARPD=true -Dsystemdunitdir=/lib/systemd/system...
+The Meson build system
+Version: 0.63.3
+Source dir: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/git
+Build dir: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/build
+Build type: cross build
+Project name: iputils
+Project version: 20211215
+C compiler for the host machine: arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot (gcc 12.2.0 "arm-openbmc-linux-gnueabi-gcc (GCC) 12.2.0")
+C linker for the host machine: arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot ld.bfd 2.39.0.20220819
+C compiler for the build machine: gcc (gcc 12.2.0 "gcc (Ubuntu 12.2.0-3ubuntu1) 12.2.0")
+C linker for the build machine: gcc ld.bfd 2.39
+Build machine cpu family: x86_64
+Build machine cpu: x86_64
+Host machine cpu family: arm
+Host machine cpu: arm
+Target machine cpu family: arm
+Target machine cpu: arm
+Found pkg-config: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot-native/usr/bin/pkg-config (0.29.2)
+Run-time dependency systemd found: YES 251
+Checking for function "__fpending" : YES 
+Checking for function "getrandom" : YES 
+Checking for function "nanosleep" : YES 
+Checking if "struct icmp6_nodeinfo" compiles: NO 
+Checking if "struct tm time;" compiles: YES 
+Library m found: YES
+Library resolv found: YES
+Checking for function "clock_gettime" : YES 
+Library disabler-appears-to-disable-executable-build found: NO
+Library cap found: YES
+Found CMake: NO
+Run-time dependency disabler-appears-to-disable-executable-build found: NO (tried pkgconfig and cmake)
+Has header "inttypes.h" : YES 
+Has header "limits.h" : YES 
+Has header "linux/rtnetlink.h" : YES 
+Has header "memory.h" : YES 
+Has header "netdb.h" : YES 
+Has header "netinet/icmp6.h" : YES 
+Has header "netinet/in.h" : YES 
+Has header "netinet/ip6.h" : YES 
+Has header "pwd.h" : YES 
+Has header "stdint.h" : YES 
+Has header "stdlib.h" : YES 
+Has header "string.h" : YES 
+Has header "strings.h" : YES 
+Has header "sys/capability.h" : YES 
+Has header "syslog.h" : YES 
+Has header "sys/time.h" : YES 
+Has header "sys/types.h" : YES 
+Has header "sys/uio.h" : YES 
+Has header "sys/utsname.h" : YES 
+Has header "unistd.h" : YES 
+Has header "stdio.h" : YES 
+Has header "stdlib.h" : YES (cached)
+Has header "stddef.h" : YES 
+Has header "stdarg.h" : YES 
+Run-time dependency threads found: YES
+Has header "error.h" : YES 
+Found git repository at /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/git
+Configuring config.h using configuration
+Program setcap found: YES (/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot-native/usr/sbin/setcap)
+Configuring rdisc.service using configuration
+Configuring rarpd@.service using configuration
+Configuring ninfod.service using configuration
+Message: 
+
+APPLICATIONS (build)
+man: false
+HTML man: false
+arping: true (capability or suid: false)
+clockdiff: true (capability or suid: false)
+ninfod: true (syslog: true)
+ping: true (capability or suid: false)
+rarpd: true
+rdisc: true (server: true, capability or suid: false)
+tracepath: true
+
+CONFIGURATION
+Capatiblity (with libcap): true
+IDN (with libidn2): false
+I18N (with gettext): false
+systemd: true
+run tests: false
+
+SYSTEM PATHS
+prefix: /
+bindir: /bin
+localedir: /share/locale
+sbindir: /sbin
+systemdunitdir: /lib/systemd/system
+
+Build targets in project: 9
+NOTICE: Future-deprecated features used:
+ * 0.55.0: {'ExternalProgram.path'}
+
+iputils 20211215
+
+  User defined options
+    Cross files    : /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/meson.cross
+    Native files   : /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/meson.native
+    bindir         : bin
+    buildtype      : plain
+    datadir        : share
+    includedir     : include
+    infodir        : share/info
+    libdir         : lib
+    libexecdir     : libexec
+    localstatedir  : /var
+    mandir         : share/man
+    prefix         : /
+    sbindir        : sbin
+    sharedstatedir : /com
+    sysconfdir     : /etc
+    werror         : false
+    wrap_mode      : nodownload
+    b_lto          : true
+    BUILD_HTML_MANS: false
+    BUILD_MANS     : false
+    BUILD_NINFOD   : true
+    BUILD_RARPD    : true
+    SKIP_TESTS     : true
+    USE_CAP        : true
+    USE_GETTEXT    : false
+    USE_IDN        : false
+    systemdunitdir : /lib/systemd/system
+
+Found ninja-1.11.1 at /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot-native/usr/bin/ninja
+DEBUG: Shell function do_configure finished
+DEBUG: Executing python function do_qa_configure
+DEBUG: Python function do_qa_configure finished
+DEBUG: Executing python function meson_do_qa_configure
+DEBUG: Python function meson_do_qa_configure finished

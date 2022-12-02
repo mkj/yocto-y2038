@@ -1,0 +1,316 @@
+DEBUG: Executing python function autotools_aclocals
+DEBUG: SITE files ['endian-little', 'bit-32', 'arm-common', 'arm-32', 'common-linux', 'common-glibc', 'arm-linux', 'arm-linux-gnueabi', 'common']
+DEBUG: Python function autotools_aclocals finished
+DEBUG: Executing shell function do_compile
+NOTE: make -j 1
+export LC_ALL=C ; \
+	arm-openbmc-linux-gnueabi-gcc -E --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security  -dM ../git/src/signames.c |\
+	tr -s '\t ' ' ' | sort -n -k 3 | sed \
+'s:#define SIG\([A-Z][A-Z]*[0-9]*\) \([0-9][0-9]*\).*:{\ \2,"\1" },:p;d' | \
+	  grep -v '[0-9][0-9][0-9]' >src/signames.h || \
+	  { rm -f src/signames.h; exit 1; }
+grep '^{ 1,"HUP" },$' src/signames.h >/dev/null || \
+	  { rm -f src/signames.h; exit 1; }
+echo 23.5-dirty > .version-t && mv .version-t .version
+make  all-recursive
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build'
+Making all in doc
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build/doc'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build/doc'
+Making all in po
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build/po'
+test ! -f ../../git/po/psmisc.pot || \
+  test -z "../../git/po/bg.gmo ../../git/po/ca.gmo ../../git/po/cs.gmo ../../git/po/da.gmo ../../git/po/de.gmo ../../git/po/el.gmo ../../git/po/eo.gmo ../../git/po/es.gmo ../../git/po/eu.gmo ../../git/po/fi.gmo ../../git/po/fr.gmo ../../git/po/hr.gmo ../../git/po/hu.gmo ../../git/po/id.gmo ../../git/po/it.gmo ../../git/po/ja.gmo ../../git/po/nb.gmo ../../git/po/nl.gmo ../../git/po/pl.gmo ../../git/po/pt_BR.gmo ../../git/po/pt.gmo ../../git/po/ro.gmo ../../git/po/ru.gmo ../../git/po/sr.gmo ../../git/po/sv.gmo ../../git/po/uk.gmo ../../git/po/vi.gmo ../../git/po/zh_CN.gmo ../../git/po/zh_TW.gmo" || make ../../git/po/bg.gmo ../../git/po/ca.gmo ../../git/po/cs.gmo ../../git/po/da.gmo ../../git/po/de.gmo ../../git/po/el.gmo ../../git/po/eo.gmo ../../git/po/es.gmo ../../git/po/eu.gmo ../../git/po/fi.gmo ../../git/po/fr.gmo ../../git/po/hr.gmo ../../git/po/hu.gmo ../../git/po/id.gmo ../../git/po/it.gmo ../../git/po/ja.gmo ../../git/po/nb.gmo ../../git/po/nl.gmo ../../git/po/pl.gmo ../../git/po/pt_BR.gmo ../../git/po/pt.gmo ../../git/po/ro.gmo ../../git/po/ru.gmo ../../git/po/sr.gmo ../../git/po/sv.gmo ../../git/po/uk.gmo ../../git/po/vi.gmo ../../git/po/zh_CN.gmo ../../git/po/zh_TW.gmo
+make[3]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build/po'
+cd ../../git/po && /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native/usr/bin/msgmerge --update  --lang=bg --previous bg.po psmisc.pot
+.......... done.
+cd ../../git/po && rm -f bg.gmo && /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native/usr/bin/msgmerge --for-msgfmt -o bg.1po bg.po psmisc.pot && /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native/usr/bin/msgfmt -c --statistics --verbose -o bg.gmo bg.1po && rm -f bg.1po
+bg.1po: 34 translated messages.
+cd ../../git/po && /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native/usr/bin/msgmerge --update  --lang=ca --previous ca.po psmisc.pot
+.......... done.
+cd ../../git/po && rm -f ca.gmo && /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native/usr/bin/msgmerge --for-msgfmt -o ca.1po ca.po psmisc.pot && /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native/usr/bin/msgfmt -c --statistics --verbose -o ca.gmo ca.1po && rm -f ca.1po
+ca.1po: 11 translated messages.
+cd ../../git/po && rm -f cs.gmo && /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native/usr/bin/msgmerge --for-msgfmt -o cs.1po cs.po psmisc.pot && /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native/usr/bin/msgfmt -c --statistics --verbose -o cs.gmo cs.1po && rm -f cs.1po
+cs.1po: 94 translated messages.
+cd ../../git/po && rm -f da.gmo && /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native/usr/bin/msgmerge --for-msgfmt -o da.1po da.po psmisc.pot && /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native/usr/bin/msgfmt -c --statistics --verbose -o da.gmo da.1po && rm -f da.1po
+da.1po: 80 translated messages.
+cd ../../git/po && rm -f de.gmo && /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native/usr/bin/msgmerge --for-msgfmt -o de.1po de.po psmisc.pot && /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native/usr/bin/msgfmt -c --statistics --verbose -o de.gmo de.1po && rm -f de.1po
+de.1po: 94 translated messages.
+cd ../../git/po && rm -f el.gmo && /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native/usr/bin/msgmerge --for-msgfmt -o el.1po el.po psmisc.pot && /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native/usr/bin/msgfmt -c --statistics --verbose -o el.gmo el.1po && rm -f el.1po
+el.1po: 92 translated messages.
+cd ../../git/po && rm -f eo.gmo && /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native/usr/bin/msgmerge --for-msgfmt -o eo.1po eo.po psmisc.pot && /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native/usr/bin/msgfmt -c --statistics --verbose -o eo.gmo eo.1po && rm -f eo.1po
+eo.1po: 92 translated messages.
+cd ../../git/po && rm -f es.gmo && /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native/usr/bin/msgmerge --for-msgfmt -o es.1po es.po psmisc.pot && /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native/usr/bin/msgfmt -c --statistics --verbose -o es.gmo es.1po && rm -f es.1po
+es.1po: 94 translated messages.
+cd ../../git/po && rm -f eu.gmo && /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native/usr/bin/msgmerge --for-msgfmt -o eu.1po eu.po psmisc.pot && /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native/usr/bin/msgfmt -c --statistics --verbose -o eu.gmo eu.1po && rm -f eu.1po
+eu.1po: 67 translated messages.
+cd ../../git/po && rm -f fi.gmo && /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native/usr/bin/msgmerge --for-msgfmt -o fi.1po fi.po psmisc.pot && /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native/usr/bin/msgfmt -c --statistics --verbose -o fi.gmo fi.1po && rm -f fi.1po
+fi.1po: 77 translated messages.
+cd ../../git/po && rm -f fr.gmo && /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native/usr/bin/msgmerge --for-msgfmt -o fr.1po fr.po psmisc.pot && /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native/usr/bin/msgfmt -c --statistics --verbose -o fr.gmo fr.1po && rm -f fr.1po
+fr.1po: 94 translated messages.
+cd ../../git/po && rm -f hr.gmo && /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native/usr/bin/msgmerge --for-msgfmt -o hr.1po hr.po psmisc.pot && /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native/usr/bin/msgfmt -c --statistics --verbose -o hr.gmo hr.1po && rm -f hr.1po
+hr.1po: 94 translated messages.
+cd ../../git/po && rm -f hu.gmo && /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native/usr/bin/msgmerge --for-msgfmt -o hu.1po hu.po psmisc.pot && /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native/usr/bin/msgfmt -c --statistics --verbose -o hu.gmo hu.1po && rm -f hu.1po
+hu.1po: 77 translated messages.
+cd ../../git/po && rm -f id.gmo && /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native/usr/bin/msgmerge --for-msgfmt -o id.1po id.po psmisc.pot && /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native/usr/bin/msgfmt -c --statistics --verbose -o id.gmo id.1po && rm -f id.1po
+id.1po: 94 translated messages.
+cd ../../git/po && rm -f it.gmo && /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native/usr/bin/msgmerge --for-msgfmt -o it.1po it.po psmisc.pot && /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native/usr/bin/msgfmt -c --statistics --verbose -o it.gmo it.1po && rm -f it.1po
+it.1po: 87 translated messages.
+cd ../../git/po && rm -f ja.gmo && /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native/usr/bin/msgmerge --for-msgfmt -o ja.1po ja.po psmisc.pot && /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native/usr/bin/msgfmt -c --statistics --verbose -o ja.gmo ja.1po && rm -f ja.1po
+ja.1po: 34 translated messages.
+cd ../../git/po && rm -f nb.gmo && /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native/usr/bin/msgmerge --for-msgfmt -o nb.1po nb.po psmisc.pot && /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native/usr/bin/msgfmt -c --statistics --verbose -o nb.gmo nb.1po && rm -f nb.1po
+nb.1po: 34 translated messages.
+cd ../../git/po && rm -f nl.gmo && /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native/usr/bin/msgmerge --for-msgfmt -o nl.1po nl.po psmisc.pot && /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native/usr/bin/msgfmt -c --statistics --verbose -o nl.gmo nl.1po && rm -f nl.1po
+nl.1po: 92 translated messages.
+cd ../../git/po && rm -f pl.gmo && /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native/usr/bin/msgmerge --for-msgfmt -o pl.1po pl.po psmisc.pot && /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native/usr/bin/msgfmt -c --statistics --verbose -o pl.gmo pl.1po && rm -f pl.1po
+pl.1po: 94 translated messages.
+cd ../../git/po && rm -f pt_BR.gmo && /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native/usr/bin/msgmerge --for-msgfmt -o pt_BR.1po pt_BR.po psmisc.pot && /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native/usr/bin/msgfmt -c --statistics --verbose -o pt_BR.gmo pt_BR.1po && rm -f pt_BR.1po
+pt_BR.1po: 92 translated messages.
+cd ../../git/po && rm -f pt.gmo && /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native/usr/bin/msgmerge --for-msgfmt -o pt.1po pt.po psmisc.pot && /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native/usr/bin/msgfmt -c --statistics --verbose -o pt.gmo pt.1po && rm -f pt.1po
+pt.1po: 92 translated messages.
+cd ../../git/po && rm -f ro.gmo && /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native/usr/bin/msgmerge --for-msgfmt -o ro.1po ro.po psmisc.pot && /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native/usr/bin/msgfmt -c --statistics --verbose -o ro.gmo ro.1po && rm -f ro.1po
+ro.1po: 94 translated messages.
+cd ../../git/po && rm -f ru.gmo && /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native/usr/bin/msgmerge --for-msgfmt -o ru.1po ru.po psmisc.pot && /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native/usr/bin/msgfmt -c --statistics --verbose -o ru.gmo ru.1po && rm -f ru.1po
+ru.1po: 94 translated messages.
+cd ../../git/po && rm -f sr.gmo && /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native/usr/bin/msgmerge --for-msgfmt -o sr.1po sr.po psmisc.pot && /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native/usr/bin/msgfmt -c --statistics --verbose -o sr.gmo sr.1po && rm -f sr.1po
+sr.1po: 92 translated messages.
+cd ../../git/po && rm -f sv.gmo && /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native/usr/bin/msgmerge --for-msgfmt -o sv.1po sv.po psmisc.pot && /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native/usr/bin/msgfmt -c --statistics --verbose -o sv.gmo sv.1po && rm -f sv.1po
+sv.1po: 89 translated messages.
+cd ../../git/po && rm -f uk.gmo && /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native/usr/bin/msgmerge --for-msgfmt -o uk.1po uk.po psmisc.pot && /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native/usr/bin/msgfmt -c --statistics --verbose -o uk.gmo uk.1po && rm -f uk.1po
+uk.1po: 94 translated messages.
+cd ../../git/po && rm -f vi.gmo && /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native/usr/bin/msgmerge --for-msgfmt -o vi.1po vi.po psmisc.pot && /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native/usr/bin/msgfmt -c --statistics --verbose -o vi.gmo vi.1po && rm -f vi.1po
+vi.1po: 94 translated messages.
+cd ../../git/po && rm -f zh_CN.gmo && /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native/usr/bin/msgmerge --for-msgfmt -o zh_CN.1po zh_CN.po psmisc.pot && /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native/usr/bin/msgfmt -c --statistics --verbose -o zh_CN.gmo zh_CN.1po && rm -f zh_CN.1po
+zh_CN.1po: 94 translated messages.
+cd ../../git/po && rm -f zh_TW.gmo && /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native/usr/bin/msgmerge --for-msgfmt -o zh_TW.1po zh_TW.po psmisc.pot && /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native/usr/bin/msgfmt -c --statistics --verbose -o zh_TW.gmo zh_TW.1po && rm -f zh_TW.1po
+zh_TW.1po: 94 translated messages.
+make[3]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build/po'
+touch ../../git/po/stamp-po
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build/po'
+Making all in icons
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build/icons'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build/icons'
+Making all in man-po
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build/man-po'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build/man-po'
+Making all in testsuite
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build/testsuite'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build/testsuite'
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build'
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../git  -Wall -DLOCALEDIR=\"/usr/share/locale\" -I./src -g -O2 -fstack-protector-strong -Wformat -Werror=format-security    -DARM      -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/git=/usr/src/debug/psmisc/23.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/git=/usr/src/debug/psmisc/23.5-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build=/usr/src/debug/psmisc/23.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build=/usr/src/debug/psmisc/23.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o src/killall.o ../git/src/killall.c
+../git/src/killall.c: In function 'process_age':
+../git/src/killall.c:158:25: warning: conversion from 'long long unsigned int' to 'double' may change value [-Wconversion]
+  158 |     age = uptime() - jf / sc_clk_tck;
+      |                         ^
+../git/src/killall.c: In function 'get_ns':
+../git/src/killall.c:231:18: warning: conversion from '__ino64_t' {aka 'long long unsigned int'} to 'int' may change value [-Wconversion]
+  231 |         return st.st_ino;
+      |                ~~^~~~~~~
+../git/src/killall.c: In function 'build_regexp_list':
+../git/src/killall.c:350:46: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  350 |     if (!(reglist = malloc (sizeof (regex_t) * names)))
+      |                                              ^
+../git/src/killall.c: In function 'build_nameinfo':
+../git/src/killall.c:376:40: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  376 |     if ( (ni = malloc(sizeof(NAMEINFO) * names)) == NULL)
+      |                                        ^
+../git/src/killall.c:385:33: warning: conversion to 'int' from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  385 |             ni[i].name_length = strlen (namelist[i]);
+      |                                 ^~~~~~
+../git/src/killall.c: In function 'load_process_name_and_age':
+../git/src/killall.c:426:15: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  426 |     lencomm = endcomm - startcomm;
+      |               ^~~~~~~
+../git/src/killall.c:443:12: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  443 |     return lencomm;
+      |            ^~~~~~~
+../git/src/killall.c: In function 'load_proc_cmdline':
+../git/src/killall.c:464:41: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  464 |     if ( (command_buf = (char *)malloc (cmd_size)) == NULL)
+      |                                         ^~~~~~~~
+../git/src/killall.c:480:64: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  480 |                 new_command_buf = (char *)realloc(command_buf, cmd_size);
+      |                                                                ^~~~~~~~
+../git/src/killall.c:495:22: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  495 |                 *p = c;
+      |                      ^
+../git/src/killall.c:504:30: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  504 |         if (strncmp(p, comm, check_comm_length) == 0) {
+      |                              ^~~~~~~~~~~~~~~~~
+../git/src/killall.c: In function 'create_pid_table':
+../git/src/killall.c:544:35: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  544 |     pid_table = malloc (*max_pids * sizeof (pid_t));
+      |                                   ^
+../git/src/killall.c:557:69: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  557 |             if (!(realloc_pid_table = realloc (pid_table, 2 * *pids * sizeof (pid_t))))
+      |                                                                     ^
+../git/src/killall.c: In function 'kill_all':
+../git/src/killall.c:642:35: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  642 |     pid_killed = malloc (max_pids * sizeof (pid_t));
+      |                                   ^
+../git/src/killall.c:650:25: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  650 |         pgids = calloc (pids, sizeof (pid_t));
+      |                         ^~~~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../git  -Wall -DLOCALEDIR=\"/usr/share/locale\" -I./src -g -O2 -fstack-protector-strong -Wformat -Werror=format-security    -DARM      -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/git=/usr/src/debug/psmisc/23.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/git=/usr/src/debug/psmisc/23.5-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build=/usr/src/debug/psmisc/23.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build=/usr/src/debug/psmisc/23.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o src/signals.o ../git/src/signals.c
+../git/src/signals.c: In function 'list_signals':
+../git/src/signals.c:58:15: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+   58 |       if (col + strlen (walk->name) + 1 > 80)
+      |               ^
+../git/src/signals.c:64:11: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+   64 |       col += strlen (walk->name) + 1;
+      |           ^~
+../git/src/signals.c:64:14: warning: conversion to 'int' from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+   64 |       col += strlen (walk->name) + 1;
+      |              ^~~~~~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot  -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/git=/usr/src/debug/psmisc/23.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/git=/usr/src/debug/psmisc/23.5-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build=/usr/src/debug/psmisc/23.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build=/usr/src/debug/psmisc/23.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native=   -Wconversion -Wno-error -Wl,-z,relro -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/git=/usr/src/debug/psmisc/23.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/git=/usr/src/debug/psmisc/23.5-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build=/usr/src/debug/psmisc/23.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build=/usr/src/debug/psmisc/23.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native=  -Wl,-z,relro,-z,now -o src/killall src/killall.o src/signals.o   
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../git  -Wall -DLOCALEDIR=\"/usr/share/locale\" -I./src -g -O2 -fstack-protector-strong -Wformat -Werror=format-security    -DARM      -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/git=/usr/src/debug/psmisc/23.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/git=/usr/src/debug/psmisc/23.5-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build=/usr/src/debug/psmisc/23.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build=/usr/src/debug/psmisc/23.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o src/pslog.o ../git/src/pslog.c
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot  -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/git=/usr/src/debug/psmisc/23.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/git=/usr/src/debug/psmisc/23.5-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build=/usr/src/debug/psmisc/23.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build=/usr/src/debug/psmisc/23.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native=   -Wconversion -Wno-error -Wl,-z,relro -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/git=/usr/src/debug/psmisc/23.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/git=/usr/src/debug/psmisc/23.5-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build=/usr/src/debug/psmisc/23.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build=/usr/src/debug/psmisc/23.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native=  -Wl,-z,relro,-z,now -o src/pslog src/pslog.o  
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../git  -Wall -DLOCALEDIR=\"/usr/share/locale\" -I./src -g -O2 -fstack-protector-strong -Wformat -Werror=format-security    -DARM      -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/git=/usr/src/debug/psmisc/23.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/git=/usr/src/debug/psmisc/23.5-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build=/usr/src/debug/psmisc/23.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build=/usr/src/debug/psmisc/23.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o src/prtstat.o ../git/src/prtstat.c
+../git/src/prtstat.c: In function 'convert_tty':
+../git/src/prtstat.c:125:70: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  125 |   sprintf(buf, "%d:%d",(tty_nr & 0xff00)>>8,(tty_nr & 0xff)|((tty_nr & 0xfff00000)>>20));
+      |                                                                      ^
+../git/src/prtstat.c: In function 'print_formated_stat':
+../git/src/prtstat.c:183:106: warning: conversion from 'long long unsigned int' to 'long unsigned int' may change value [-Wconversion]
+  183 |           convert_time(pr->utime), convert_time(pr->stime), convert_time(pr->guest_time), convert_time(pr->blkio),
+      |                                                                                                        ~~^~~~~~~
+../git/src/prtstat.c:184:26: warning: conversion to 'long unsigned int' from 'long int' may change the sign of the result [-Wsign-conversion]
+  184 |           convert_time(pr->cutime), convert_time(pr->cstime), convert_time(pr->cguest_time));
+      |                        ~~^~~~~~~~
+../git/src/prtstat.c:184:52: warning: conversion to 'long unsigned int' from 'long int' may change the sign of the result [-Wsign-conversion]
+  184 |           convert_time(pr->cutime), convert_time(pr->cstime), convert_time(pr->cguest_time));
+      |                                                  ~~^~~~~~~~
+../git/src/prtstat.c:184:78: warning: conversion to 'long unsigned int' from 'long int' may change the sign of the result [-Wsign-conversion]
+  184 |           convert_time(pr->cutime), convert_time(pr->cstime), convert_time(pr->cguest_time));
+      |                                                                            ~~^~~~~~~~~~~~~
+../git/src/prtstat.c:186:33: warning: conversion to 'long unsigned int' from 'long int' may change the sign of the result [-Wsign-conversion]
+  186 |   convert_bytes(buf_rss, pr->rss*page_size);
+      |                          ~~~~~~~^~~~~~~~~~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot  -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/git=/usr/src/debug/psmisc/23.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/git=/usr/src/debug/psmisc/23.5-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build=/usr/src/debug/psmisc/23.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build=/usr/src/debug/psmisc/23.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native=   -Wconversion -Wno-error -Wl,-z,relro -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/git=/usr/src/debug/psmisc/23.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/git=/usr/src/debug/psmisc/23.5-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build=/usr/src/debug/psmisc/23.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build=/usr/src/debug/psmisc/23.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native=  -Wl,-z,relro,-z,now -o src/prtstat src/prtstat.o  
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../git  -Wall -DLOCALEDIR=\"/usr/share/locale\" -I./src -g -O2 -fstack-protector-strong -Wformat -Werror=format-security    -DARM      -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/git=/usr/src/debug/psmisc/23.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/git=/usr/src/debug/psmisc/23.5-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build=/usr/src/debug/psmisc/23.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build=/usr/src/debug/psmisc/23.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o src/pstree.o ../git/src/pstree.c
+../git/src/pstree.c: In function 'ensure_buffer_capacity':
+../git/src/pstree.c:352:47: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  352 |         if (!(width = realloc(width, capacity * sizeof(int)))) {
+      |                                               ^
+../git/src/pstree.c:356:45: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  356 |         if (!(more = realloc(more, capacity * sizeof(int)))) {
+      |                                             ^
+../git/src/pstree.c: In function 'out_int':
+../git/src/pstree.c:464:22: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  464 |         out_char('0' + (x / div) % 10);
+      |                  ~~~~^~~~~~~~~~~~~~~~
+../git/src/pstree.c: In function 'out_scontext':
+../git/src/pstree.c:516:28: warning: conversion to 'int' from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  516 |                 num_read = strlen(readbuf);
+      |                            ^~~~~~
+../git/src/pstree.c: In function 'set_args':
+../git/src/pstree.c:636:46: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  636 |     if (!(this->argv = malloc(sizeof(char *) * this->argc))) {
+      |                                              ^
+../git/src/pstree.c: In function 'dump_tree':
+../git/src/pstree.c:778:29: warning: conversion from 'double' to 'int' may change value [-Wfloat-conversion]
+  778 |     print_proc_color(current->age);
+      |                      ~~~~~~~^~~~~
+../git/src/pstree.c:799:35: warning: conversion to 'int' from 'uid_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  799 |             (void) out_int(current->uid);
+      |                            ~~~~~~~^~~~~
+../git/src/pstree.c: In function 'process_age':
+../git/src/pstree.c:984:25: warning: conversion from 'long long unsigned int' to 'double' may change value [-Wconversion]
+  984 |     age = uptime() - jf / sc_clk_tck;
+      |                         ^
+../git/src/pstree.c: In function 'get_threadname':
+../git/src/pstree.c:1009:19: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 1009 |     path = malloc(len);
+      |                   ^~~
+../git/src/pstree.c:1012:29: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 1012 |     nbytes = snprintf(path, len, "%s/%d/task/%d/stat", PROC_BASE, pid, tid);
+      |                             ^~~
+../git/src/pstree.c: In function 'read_proc':
+../git/src/pstree.c:1058:19: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 1058 |     buffer_size = output_width + 1;
+      |                   ^~~~~~~~~~~~
+../git/src/pstree.c:1087:16: warning: conversion to 'int' from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+ 1087 |         size = fread(readbuf, 1, BUFSIZ, file);
+      |                ^~~~~
+../git/src/pstree.c:1122:63: warning: conversion to 'int' from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+ 1122 |                               threadname, strlen (threadname) + 1, 1,
+      |                                           ~~~~~~~~~~~~~~~~~~~~^~~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot  -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/git=/usr/src/debug/psmisc/23.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/git=/usr/src/debug/psmisc/23.5-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build=/usr/src/debug/psmisc/23.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build=/usr/src/debug/psmisc/23.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native=   -Wconversion -Wno-error -Wl,-z,relro -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/git=/usr/src/debug/psmisc/23.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/git=/usr/src/debug/psmisc/23.5-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build=/usr/src/debug/psmisc/23.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build=/usr/src/debug/psmisc/23.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native=  -Wl,-z,relro,-z,now -o src/pstree src/pstree.o -ltinfo 
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../git  -Wall -DLOCALEDIR=\"/usr/share/locale\" -I./src -g -O2 -fstack-protector-strong -Wformat -Werror=format-security    -DARM      -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/git=/usr/src/debug/psmisc/23.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/git=/usr/src/debug/psmisc/23.5-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build=/usr/src/debug/psmisc/23.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build=/usr/src/debug/psmisc/23.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o src/fuser.o ../git/src/fuser.c
+../git/src/fuser.c: In function 'add_ip_conn':
+../git/src/fuser.c:350:24: warning: conversion to 'long unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  350 |     ip_tmp->lcl_port = lcl_port;
+      |                        ^~~~~~~~
+../git/src/fuser.c:351:24: warning: conversion to 'long unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  351 |     ip_tmp->rmt_port = rmt_port;
+      |                        ^~~~~~~~
+../git/src/fuser.c: In function 'add_ip6_conn':
+../git/src/fuser.c:375:24: warning: conversion to 'long unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  375 |     ip_tmp->lcl_port = lcl_port;
+      |                        ^~~~~~~~
+../git/src/fuser.c:376:24: warning: conversion to 'long unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  376 |     ip_tmp->rmt_port = rmt_port;
+      |                        ^~~~~~~~
+../git/src/fuser.c: In function 'main':
+../git/src/fuser.c:1378:17: warning: unsigned conversion from 'int' to 'opt_type' {aka 'short unsigned int'} changes the value of '-2' [-Wsign-conversion]
+ 1378 |         opts &= ~OPT_VERBOSE;
+      |                 ^
+../git/src/fuser.c:1379:17: warning: unsigned conversion from 'int' to 'opt_type' {aka 'short unsigned int'} changes the value of '-65' [-Wsign-conversion]
+ 1379 |         opts &= ~OPT_USER;
+      |                 ^
+../git/src/fuser.c: In function 'print_matches':
+../git/src/fuser.c:1488:23: warning: conversion to 'int' from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+ 1488 |                 len = strlen(nptr->filename) + 1;
+      |                       ^~~~~~
+../git/src/fuser.c: In function 'find_net_dev':
+../git/src/fuser.c:1976:16: warning: unsigned conversion from 'int' to 'dev_t' {aka 'long long unsigned int'} changes value from '-1' to '18446744073709551615' [-Wsign-conversion]
+ 1976 |         return -1;
+      |                ^
+../git/src/fuser.c:1982:16: warning: unsigned conversion from 'int' to 'dev_t' {aka 'long long unsigned int'} changes value from '-1' to '18446744073709551615' [-Wsign-conversion]
+ 1982 |         return -1;
+      |                ^
+../git/src/fuser.c: In function 'expandpath':
+../git/src/fuser.c:2349:45: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 2349 |             dest = mempcpy(dest, start, end - start);
+      |                                         ~~~~^~~~~~~
+../git/src/fuser.c:2369:20: warning: conversion to 'size_t' {aka 'unsigned int'} from 'ssize_t' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+ 2369 |             if ((n + len) > PATH_MAX)
+      |                    ^
+../git/src/fuser.c:2376:49: warning: conversion to 'size_t' {aka 'unsigned int'} from 'ssize_t' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+ 2376 |             path = end = memcpy(tmpbuf, lnkbuf, n);
+      |                                                 ^
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot  -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/git=/usr/src/debug/psmisc/23.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/git=/usr/src/debug/psmisc/23.5-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build=/usr/src/debug/psmisc/23.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build=/usr/src/debug/psmisc/23.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native=   -Wconversion -Wno-error -Wl,-z,relro -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/git=/usr/src/debug/psmisc/23.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/git=/usr/src/debug/psmisc/23.5-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build=/usr/src/debug/psmisc/23.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build=/usr/src/debug/psmisc/23.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native=  -Wl,-z,relro,-z,now -o src/fuser src/fuser.o src/signals.o   
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../git  -Wall -DLOCALEDIR=\"/usr/share/locale\" -I./src -g -O2 -fstack-protector-strong -Wformat -Werror=format-security    -DARM      -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/git=/usr/src/debug/psmisc/23.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/git=/usr/src/debug/psmisc/23.5-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build=/usr/src/debug/psmisc/23.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build=/usr/src/debug/psmisc/23.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o src/peekfd.o ../git/src/peekfd.c
+../git/src/peekfd.c: In function 'main':
+../git/src/peekfd.c:299:32: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  299 |       fds = malloc(sizeof(int) * numfds);
+      |                                ^
+../git/src/peekfd.c:335:39: warning: unsigned conversion from 'int' to 'long unsigned int' changes value from '-1' to '4294967295' [-Wsign-conversion]
+  335 |         unsigned long last_buf_size = -1;
+      |                                       ^
+../git/src/peekfd.c:416:84: warning: conversion to 'long unsigned int' from 'long int' may change the sign of the result [-Wsign-conversion]
+  416 |                                                         bufdiff(pid, lastbuf, regs.REG_PARAM2, regs.REG_PARAM3)) {
+      |                                                                                    ^~~~~~~~~~
+../git/src/peekfd.c:416:101: warning: conversion to 'long unsigned int' from 'long int' may change the sign of the result [-Wsign-conversion]
+  416 |                                                         bufdiff(pid, lastbuf, regs.REG_PARAM2, regs.REG_PARAM3)) {
+      |                                                                                                     ^~~~~~~~~~
+../git/src/peekfd.c:421:93: warning: conversion to 'size_t' {aka 'unsigned int'} from 'long int' may change the sign of the result [-Wsign-conversion]
+  421 |                                                         if ( NULL == (lastbuf = malloc(regs.REG_PARAM3))) {
+      |                                                                                             ^~~~~~~~~~
+../git/src/peekfd.c:425:73: warning: conversion to 'long unsigned int' from 'long int' may change the sign of the result [-Wsign-conversion]
+  425 |                                                         last_buf_size = regs.REG_PARAM3;
+      |                                                                         ^~~~
+../git/src/peekfd.c:436:119: warning: conversion to 'long unsigned int' from 'long int' may change the sign of the result [-Wsign-conversion]
+  436 |                                                         unsigned int a = ptrace(PTRACE_PEEKTEXT, pid, regs.REG_PARAM2 + j, 0);
+      |                                                                                                                       ^
+../git/src/peekfd.c:436:74: warning: conversion to 'unsigned int' from 'long int' may change the sign of the result [-Wsign-conversion]
+  436 |                                                         unsigned int a = ptrace(PTRACE_PEEKTEXT, pid, regs.REG_PARAM2 + j, 0);
+      |                                                                          ^~~~~~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot  -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/git=/usr/src/debug/psmisc/23.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/git=/usr/src/debug/psmisc/23.5-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build=/usr/src/debug/psmisc/23.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build=/usr/src/debug/psmisc/23.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native=   -Wconversion -Wno-error -Wl,-z,relro -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/git=/usr/src/debug/psmisc/23.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/git=/usr/src/debug/psmisc/23.5-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build=/usr/src/debug/psmisc/23.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build=/usr/src/debug/psmisc/23.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native=  -Wl,-z,relro,-z,now -o src/peekfd src/peekfd.o  
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/build'
+DEBUG: Shell function do_compile finished

@@ -1,0 +1,127 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/zlib/zlib_1.2.13.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-cross_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-native_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-core/gettext/gettext_0.21.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/autoconf/autoconf_2.71.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/automake/automake_1.16.5.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pkgconfig/pkgconfig_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: []
+NOTE: Skipping as already exists in sysroot: ['glibc', 'zlib', 'gcc-cross-arm', 'gcc-runtime', 'libtool-cross', 'libtool-native', 'quilt-native', 'gettext-native', 'autoconf-native', 'automake-native', 'patch-native', 'pkgconfig-native', 'pseudo-native', 'texinfo-dummy-native', 'binutils-cross-arm', 'libgcc', 'linux-libc-headers', 'gnu-config-native', 'm4-native', 'attr-native', 'gettext-minimal-native', 'mpfr-native', 'libmpc-native', 'xz-native', 'flex-native', 'zstd-native', 'zlib-native', 'gmp-native']
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function autotools_aclocals
+DEBUG: SITE files ['endian-little', 'bit-32', 'arm-common', 'arm-32', 'common-linux', 'common-glibc', 'arm-linux', 'arm-linux-gnueabi', 'common']
+DEBUG: Python function autotools_aclocals finished
+DEBUG: Executing shell function do_install
+NOTE: make -j 1 DESTDIR=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/image install
+Making install in config
+make[2]: Nothing to be done for 'install-exec-am'.
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/image/usr/lib/pkgconfig'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 libelf.pc libdw.pc '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/image/usr/lib/pkgconfig'
+Making install in lib
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+Making install in libelf
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/image/usr/lib'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644  libelf.a '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/image/usr/lib'
+ ( cd '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/image/usr/lib' && arm-openbmc-linux-gnueabi-gcc-ranlib libelf.a )
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/image/usr/include'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../../elfutils-0.187/libelf/libelf.h ../../elfutils-0.187/libelf/gelf.h ../../elfutils-0.187/libelf/nlist.h '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/image/usr/include'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/image/usr/include/elfutils'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../../elfutils-0.187/libelf/elf-knowledge.h '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/image/usr/include/elfutils'
+/bin/bash /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/elfutils-0.187/config/install-sh -d /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/image/usr/lib
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c libelf.so /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/image/usr/lib/libelf-0.187.so
+ln -fs libelf-0.187.so /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/image/usr/lib/libelf.so.1
+ln -fs libelf.so.1 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/image/usr/lib/libelf.so
+Making install in libcpu
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+Making install in backends
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+Making install in libebl
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+Making install in libdwelf
+make[2]: Nothing to be done for 'install-exec-am'.
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/image/usr/include/elfutils'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../../elfutils-0.187/libdwelf/libdwelf.h '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/image/usr/include/elfutils'
+Making install in libdwfl
+make[2]: Nothing to be done for 'install-exec-am'.
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/image/usr/include/elfutils'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../../elfutils-0.187/libdwfl/libdwfl.h '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/image/usr/include/elfutils'
+Making install in libdw
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/image/usr/lib'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644  libdw.a '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/image/usr/lib'
+ ( cd '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/image/usr/lib' && arm-openbmc-linux-gnueabi-gcc-ranlib libdw.a )
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/image/usr/include'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../../elfutils-0.187/libdw/dwarf.h '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/image/usr/include'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/image/usr/include/elfutils'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../../elfutils-0.187/libdw/libdw.h ../../elfutils-0.187/libdw/known-dwarf.h '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/image/usr/include/elfutils'
+/bin/bash /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/elfutils-0.187/config/install-sh -d /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/image/usr/lib
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c libdw.so /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/image/usr/lib/libdw-0.187.so
+ln -fs libdw-0.187.so /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/image/usr/lib/libdw.so.1
+ln -fs libdw.so.1 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/image/usr/lib/libdw.so
+Making install in libasm
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/image/usr/lib'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644  libasm.a '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/image/usr/lib'
+ ( cd '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/image/usr/lib' && arm-openbmc-linux-gnueabi-gcc-ranlib libasm.a )
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/image/usr/include/elfutils'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../../elfutils-0.187/libasm/libasm.h '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/image/usr/include/elfutils'
+/bin/bash /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/elfutils-0.187/config/install-sh -d /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/image/usr/lib
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c libasm.so /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/image/usr/lib/libasm-0.187.so
+ln -fs libasm-0.187.so /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/image/usr/lib/libasm.so.1
+ln -fs libasm.so.1 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/image/usr/lib/libasm.so
+Making install in debuginfod
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/image/usr/bin'
+Making install in src
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/image/usr/bin'
+  /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c readelf '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/image/usr/bin/./eu-readelf'
+  /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c nm '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/image/usr/bin/./eu-nm'
+  /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c size '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/image/usr/bin/./eu-size'
+  /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c strip '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/image/usr/bin/./eu-strip'
+  /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c elflint '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/image/usr/bin/./eu-elflint'
+  /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c findtextrel '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/image/usr/bin/./eu-findtextrel'
+  /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c addr2line '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/image/usr/bin/./eu-addr2line'
+  /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c elfcmp '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/image/usr/bin/./eu-elfcmp'
+  /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c objdump '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/image/usr/bin/./eu-objdump'
+  /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c ranlib '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/image/usr/bin/./eu-ranlib'
+  /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c strings '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/image/usr/bin/./eu-strings'
+  /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c ar '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/image/usr/bin/./eu-ar'
+  /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c unstrip '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/image/usr/bin/./eu-unstrip'
+  /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c stack '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/image/usr/bin/./eu-stack'
+  /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c elfcompress '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/image/usr/bin/./eu-elfcompress'
+  /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c elfclassify '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/image/usr/bin/./eu-elfclassify'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/image/usr/bin'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c make-debug-archive '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/image/usr/bin/./eu-make-debug-archive'
+make[2]: Nothing to be done for 'install-data-am'.
+Making install in po
+installing ../../elfutils-0.187/po/de.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/image/usr/share/locale/de/LC_MESSAGES/elfutils.mo
+installing ../../elfutils-0.187/po/es.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/image/usr/share/locale/es/LC_MESSAGES/elfutils.mo
+installing ../../elfutils-0.187/po/ja.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/image/usr/share/locale/ja/LC_MESSAGES/elfutils.mo
+installing ../../elfutils-0.187/po/pl.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/image/usr/share/locale/pl/LC_MESSAGES/elfutils.mo
+installing ../../elfutils-0.187/po/uk.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/image/usr/share/locale/uk/LC_MESSAGES/elfutils.mo
+installing ../../elfutils-0.187/po/en@quot.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/image/usr/share/locale/en@quot/LC_MESSAGES/elfutils.mo
+installing ../../elfutils-0.187/po/en@boldquot.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/image/usr/share/locale/en@boldquot/LC_MESSAGES/elfutils.mo
+if test "elfutils" = "gettext-tools"; then \
+  /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/image/usr/share/gettext/po; \
+  for file in Makefile.in.in remove-potcdate.sin quot.sed boldquot.sed en@quot.header en@boldquot.header insert-header.sin Rules-quot   Makevars.template; do \
+    /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../../elfutils-0.187/po/$file \
+		    /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/image/usr/share/gettext/po/$file; \
+  done; \
+  for file in Makevars; do \
+    rm -f /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/image/usr/share/gettext/po/$file; \
+  done; \
+else \
+  : ; \
+fi
+Making install in doc
+make[2]: Nothing to be done for 'install-exec-am'.
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/image/usr/share/man/man1'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 '../../elfutils-0.187/doc/readelf.1' '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/image/usr/share/man/man1/eu-readelf.1'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 '../../elfutils-0.187/doc/elfclassify.1' '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/image/usr/share/man/man1/eu-elfclassify.1'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/image/usr/share/man/man3'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../../elfutils-0.187/doc/elf_update.3 ../../elfutils-0.187/doc/elf_getdata.3 ../../elfutils-0.187/doc/elf_clone.3 ../../elfutils-0.187/doc/elf_begin.3 '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/image/usr/share/man/man3'
+Making install in tests
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Nothing to be done for 'install-exec-am'.
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/image/usr/include/elfutils'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 version.h '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/image/usr/include/elfutils'
+DEBUG: Shell function do_install finished
+DEBUG: Executing shell function remove_libtool_la
+DEBUG: Shell function remove_libtool_la finished

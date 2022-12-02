@@ -1,0 +1,281 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-devtools/binutils/binutils-cross_2.39.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: []
+NOTE: Skipping as already exists in sysroot: ['binutils-cross-arm', 'pseudo-native', 'gnu-config-native', 'zlib-native', 'texinfo-dummy-native', 'flex-native', 'gettext-minimal-native', 'libtool-native', 'm4-native']
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function sstate_task_prefunc
+DEBUG: Python function sstate_task_prefunc finished
+DEBUG: Executing python function do_package_qa
+NOTE: DO PACKAGE QA
+DEBUG: Executing python function read_subpackage_metadata
+DEBUG: Python function read_subpackage_metadata finished
+NOTE: Checking Package: libnss-systemd
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/libnss-systemd/lib/libnss_systemd.so.2
+NOTE: Checking Package: systemd-locale-be
+NOTE: Checking Package: systemd-locale-ca
+NOTE: Checking Package: systemd-gui
+NOTE: Checking Package: systemd-locale-pa
+NOTE: Checking Package: systemd-journal-remote
+NOTE: Checking Package: systemd-locale-ru
+NOTE: Checking Package: systemd-locale-tr
+NOTE: Checking Package: systemd-udev-rules
+NOTE: Checking Package: systemd-locale-ro
+NOTE: Checking Package: systemd-bash-completion
+NOTE: Checking Package: systemd-locale-gl
+NOTE: Checking Package: systemd-rpm-macros
+NOTE: Checking Package: libsystemd
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/libsystemd/lib/libsystemd.so.0
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/libsystemd/lib/libsystemd.so.0.34.0
+NOTE: Checking Package: systemd-locale-es
+NOTE: Checking Package: systemd-locale-be+latin
+NOTE: Checking Package: systemd-locale-de
+NOTE: Checking Package: systemd-locale-si
+NOTE: Checking Package: systemd-locale-cs
+NOTE: Package systemd skipping QA tests: {'libdir', 'dev-so'}
+NOTE: Checking Package: systemd
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd/sbin/init
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd/sbin/poweroff
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd/sbin/halt
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd/sbin/resolvconf
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd/sbin/reboot
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd/sbin/shutdown
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd/bin/systemd-notify
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd/bin/systemd-sysusers
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd/bin/systemd-tmpfiles
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd/bin/journalctl
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd/bin/networkctl
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd/bin/systemd-creds
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd/bin/systemd-machine-id-setup
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd/bin/systemctl
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd/usr/bin/coredumpctl
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd/usr/bin/systemd-resolve
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd/usr/bin/systemd-socket-activate
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd/usr/bin/systemd-umount
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd/usr/bin/timedatectl
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd/usr/bin/resolvectl
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd/usr/bin/systemd-mount
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd/usr/bin/hostnamectl
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd/usr/bin/systemd-id128
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd/usr/lib/systemd/user-environment-generators/30-systemd-environment-d-generator
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd/usr/bin/busctl
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd/lib/systemd/system-generators/systemd-run-generator
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd/lib/systemd/system-generators/systemd-fstab-generator
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd/lib/systemd/system-generators/systemd-system-update-generator
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd/lib/systemd/system-generators/systemd-debug-generator
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd/lib/systemd/systemd-random-seed
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd/lib/systemd/systemd-sulogin-shell
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd/lib/systemd/system-generators/systemd-getty-generator
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd/lib/systemd/systemd-timedated
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd/lib/systemd/systemd-time-wait-sync
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd/lib/systemd/systemd-journald
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd/lib/systemd/systemd-network-generator
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd/lib/systemd/systemd-remount-fs
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd/lib/systemd/systemd
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd/lib/systemd/systemd-resolved
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd/lib/systemd/systemd-update-done
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd/lib/systemd/systemd-boot-check-no-failures
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd/lib/systemd/systemd-user-sessions
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd/lib/systemd/libsystemd-core-251.so
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd/lib/systemd/systemd-shutdown
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd/lib/systemd/systemd-pstore
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd/lib/systemd/systemd-makefs
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd/lib/systemd/systemd-networkd-wait-online
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd/lib/systemd/systemd-volatile-root
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd/lib/systemd/systemd-timesyncd
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd/lib/systemd/systemd-sysctl
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd/lib/systemd/systemd-networkd
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd/lib/systemd/systemd-fsck
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd/lib/systemd/systemd-coredump
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd/lib/systemd/systemd-hostnamed
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd/lib/systemd/systemd-growfs
+NOTE: Checking Package: systemd-locale-kab
+NOTE: Checking Package: systemd-locale-nl
+NOTE: Package systemd-doc skipping QA tests: {'libdir'}
+NOTE: Checking Package: systemd-doc
+NOTE: Checking Package: systemd-locale-id
+NOTE: Checking Package: systemd-locale-pl
+NOTE: Checking Package: systemd-locale-pt-br
+NOTE: Checking Package: systemd-journal-gatewayd
+NOTE: Checking Package: systemd-initramfs
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-initramfs/init
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-initramfs/init failed: Execution of 'arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-initramfs/init' failed with exit code 1:
+arm-openbmc-linux-gnueabi-objdump: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-initramfs/init: file format not recognized
+
+NOTE: Checking Package: systemd-locale-fi
+NOTE: Checking Package: systemd-dev
+NOTE: Checking Package: systemd-container
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-container/usr/bin/systemd-nspawn
+NOTE: Checking Package: systemd-src
+NOTE: Checking Package: udev
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/udev/sbin/udevd
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/udev/sbin/udevadm
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/udev/sbin/udevd failed: Execution of 'arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/udev/sbin/udevd' failed with exit code 1:
+arm-openbmc-linux-gnueabi-objdump: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/udev/sbin/udevd: file format not recognized
+
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/udev/lib/udev/ata_id
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/udev/lib/udev/dmi_memory_id
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/udev/lib/udev/mtd_probe
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/udev/lib/udev/v4l_id
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/udev/lib/udev/scsi_id
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/udev/lib/udev/fido_id
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/udev/sbin/udevadm failed: Execution of 'arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/udev/sbin/udevadm' failed with exit code 1:
+arm-openbmc-linux-gnueabi-objdump: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/udev/sbin/udevadm: file format not recognized
+
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/udev/lib/udev/cdrom_id
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/udev/bin/udevadm
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/udev/bin/systemd-hwdb
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/udev/lib/systemd/systemd-udevd
+NOTE: Checking Package: systemd-locale-fr
+NOTE: Checking Package: systemd-locale-ja
+NOTE: Checking Package: systemd-extra-utils
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-extra-utils/lib/systemd/system-generators/systemd-gpt-auto-generator
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-extra-utils/lib/systemd/systemd-reply-password
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-extra-utils/lib/systemd/systemd-socket-proxyd
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-extra-utils/lib/systemd/systemd-ac-power
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-extra-utils/lib/systemd/systemd-cgroups-agent
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-extra-utils/lib/systemd/systemd-sleep
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-extra-utils/bin/systemd-ask-password
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-extra-utils/bin/systemd-escape
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-extra-utils/usr/bin/systemd-detect-virt
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-extra-utils/usr/bin/systemd-stdio-bridge
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-extra-utils/bin/systemd-tty-ask-password-agent
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-extra-utils/usr/bin/systemd-cgtop
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-extra-utils/usr/bin/systemd-cat
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-extra-utils/usr/bin/systemd-dissect
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-extra-utils/usr/bin/systemd-run
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-extra-utils/usr/bin/systemd-delta
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-extra-utils/usr/bin/systemd-path
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-extra-utils/usr/bin/systemd-cgls
+NOTE: Checking Package: systemd-binfmt
+NOTE: Checking Package: systemd-locale-ka
+NOTE: Checking Package: systemd-journal-upload
+NOTE: Checking Package: systemd-locale-bg
+NOTE: Checking Package: systemd-vconsole-setup
+NOTE: Package systemd-dbg skipping QA tests: {'libdir'}
+NOTE: Checking Package: systemd-dbg
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/lib/.debug/libudev.so.1.7.4
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/lib/.debug/libnss_systemd.so.2
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/lib/.debug/libsystemd.so.0.34.0
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/lib/udev/.debug/v4l_id
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/lib/udev/.debug/ata_id
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/lib/udev/.debug/fido_id
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/lib/udev/.debug/mtd_probe
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/lib/udev/.debug/scsi_id
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/lib/udev/.debug/cdrom_id
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/lib/udev/.debug/dmi_memory_id
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/lib/systemd/system-generators/.debug/systemd-getty-generator
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/lib/systemd/system-generators/.debug/systemd-debug-generator
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/lib/systemd/system-generators/.debug/systemd-fstab-generator
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/lib/systemd/system-generators/.debug/systemd-system-update-generator
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/lib/systemd/system-generators/.debug/systemd-gpt-auto-generator
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/lib/systemd/.debug/systemd-boot-check-no-failures
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/lib/systemd/system-generators/.debug/systemd-run-generator
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/lib/systemd/.debug/systemd-random-seed
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/lib/systemd/.debug/systemd-journald
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/lib/systemd/.debug/systemd-timesyncd
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/lib/systemd/.debug/systemd
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/lib/systemd/.debug/systemd-pstore
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/lib/systemd/.debug/systemd-resolved
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/lib/systemd/.debug/systemd-networkd-wait-online
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/lib/systemd/.debug/systemd-remount-fs
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/lib/systemd/.debug/systemd-update-done
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/lib/systemd/.debug/systemd-socket-proxyd
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/lib/systemd/.debug/systemd-cgroups-agent
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/lib/systemd/.debug/systemd-network-generator
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/lib/systemd/.debug/systemd-volatile-root
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/lib/systemd/.debug/systemd-hostnamed
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/lib/systemd/.debug/systemd-user-sessions
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/lib/systemd/.debug/systemd-timedated
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/lib/systemd/.debug/systemd-ac-power
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/lib/systemd/.debug/libsystemd-shared-251.so
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/lib/systemd/.debug/libsystemd-core-251.so
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/lib/systemd/.debug/systemd-makefs
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/lib/systemd/.debug/systemd-shutdown
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/lib/systemd/.debug/systemd-growfs
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/lib/systemd/.debug/systemd-coredump
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/lib/systemd/.debug/systemd-time-wait-sync
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/lib/systemd/.debug/systemd-reply-password
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/lib/systemd/.debug/systemd-networkd
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/lib/systemd/.debug/systemd-sleep
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/lib/systemd/.debug/systemd-sysctl
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/lib/systemd/.debug/systemd-sulogin-shell
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/lib/systemd/.debug/systemd-fsck
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/usr/lib/systemd/user-environment-generators/.debug/30-systemd-environment-d-generator
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/usr/bin/.debug/coredumpctl
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/usr/bin/.debug/systemd-cgtop
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/usr/bin/.debug/systemd-stdio-bridge
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/usr/bin/.debug/systemd-path
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/usr/bin/.debug/systemd-nspawn
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/usr/bin/.debug/busctl
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/usr/bin/.debug/systemd-socket-activate
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/usr/bin/.debug/systemd-cgls
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/usr/bin/.debug/systemd-detect-virt
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/usr/bin/.debug/resolvectl
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/usr/bin/.debug/systemd-delta
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/usr/bin/.debug/timedatectl
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/usr/bin/.debug/systemd-analyze
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/usr/bin/.debug/systemd-dissect
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/usr/bin/.debug/systemd-cat
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/usr/bin/.debug/systemd-run
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/usr/bin/.debug/systemd-id128
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/usr/bin/.debug/hostnamectl
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/usr/bin/.debug/systemd-mount
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/bin/.debug/systemd-sysusers
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/bin/.debug/systemd-creds
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/bin/.debug/systemd-hwdb
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/bin/.debug/networkctl
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/bin/.debug/udevadm
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/bin/.debug/systemd-escape
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/bin/.debug/journalctl
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/bin/.debug/systemd-tmpfiles
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/bin/.debug/systemd-machine-id-setup
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/bin/.debug/systemd-tty-ask-password-agent
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/bin/.debug/systemd-ask-password
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/bin/.debug/systemctl
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-dbg/bin/.debug/systemd-notify
+NOTE: Checking Package: systemd-staticdev
+NOTE: Checking Package: systemd-locale-hr
+NOTE: Checking Package: udev-hwdb
+NOTE: Checking Package: systemd-locale-lt
+NOTE: Checking Package: systemd-locale-sv
+NOTE: Checking Package: systemd-zsh-completion
+NOTE: Checking Package: systemd-locale-sr
+NOTE: Checking Package: systemd-locale-hu
+NOTE: Checking Package: systemd-locale-uk
+NOTE: Checking Package: systemd-locale-zh-tw
+NOTE: Checking Package: systemd-analyze
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/systemd-analyze/usr/bin/systemd-analyze
+NOTE: Checking Package: systemd-kernel-install
+NOTE: Checking Package: systemd-locale-da
+NOTE: Checking Package: systemd-locale-pt
+NOTE: Checking Package: systemd-locale-el
+NOTE: Checking Package: libudev
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/libudev/lib/libudev.so.1
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/libudev/lib/libudev.so.1.7.4
+NOTE: Checking Package: systemd-locale-it
+NOTE: Checking Package: systemd-locale-sk
+NOTE: Checking Package: systemd-locale-ko
+NOTE: Checking Package: systemd-catalog-extralocales
+NOTE: Package libsystemd-shared skipping QA tests: {'libdir'}
+NOTE: Checking Package: libsystemd-shared
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/packages-split/libsystemd-shared/lib/systemd/libsystemd-shared-251.so
+NOTE: Checking Package: systemd-locale-zh-cn
+NOTE: Package systemd-doc skipping libdir QA test
+NOTE: Package libsystemd-shared skipping libdir QA test
+NOTE: Package systemd skipping libdir QA test
+NOTE: Package systemd-dbg skipping libdir QA test
+DEBUG: Python function do_package_qa finished
+DEBUG: Executing python function sstate_task_postfunc
+NOTE: Using umask 0o002 (not 22) for sstate packaging
+DEBUG: Executing python function target_add_sysroot_deps
+DEBUG: Python function target_add_sysroot_deps finished
+DEBUG: Executing python function sstate_hardcode_path
+NOTE: Removing hardcoded paths from sstate package: 'find /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/sstate-build-package_qa/ \( -name "*.la" -o -name "*-config" -o -name "*_config" -o -name "postinst-*" \) -type f | xargs grep -l -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/recipe-sysroot' -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/recipe-sysroot-native' -e '/home/matt/tmp/build/obmc-y2038/tmp/hosttools' -e '/home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/pseudo-native' -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/pseudo/' -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/temp/fifo.870935' | tee /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/sstate-build-package_qa/fixmepath | xargs --no-run-if-empty sed -i -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/recipe-sysroot-native:FIXMESTAGINGDIRHOST:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/recipe-sysroot:FIXMESTAGINGDIRTARGET:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:FIXME_HOSTTOOLS_DIR:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/pseudo-native:FIXME_PSEUDO_SYSROOT:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/pseudo/:FIXME_PSEUDO_LOCALSTATEDIR:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/temp/fifo.870935:FIXME_LOGFIFO:g''
+DEBUG: Python function sstate_hardcode_path finished
+DEBUG: Executing python function sstate_report_unihash
+DEBUG: Python function sstate_report_unihash finished
+DEBUG: Executing shell function sstate_create_package
+DEBUG: Shell function sstate_create_package finished
+DEBUG: Executing python function sstate_hardcode_path_unpack
+DEBUG: Python function sstate_hardcode_path_unpack finished
+DEBUG: Python function sstate_task_postfunc finished

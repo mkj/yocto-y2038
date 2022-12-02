@@ -1,0 +1,184 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-cross_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-native_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-support/gmp/gmp_6.2.1.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/autoconf/autoconf_2.71.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/automake/automake_1.16.5.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: []
+NOTE: Skipping as already exists in sysroot: ['glibc', 'gcc-cross-arm', 'gcc-runtime', 'libtool-cross', 'libtool-native', 'quilt-native', 'gmp', 'autoconf-native', 'automake-native', 'patch-native', 'pseudo-native', 'linux-libc-headers', 'libgcc', 'binutils-cross-arm', 'texinfo-dummy-native', 'gnu-config-native', 'm4-native', 'attr-native', 'zstd-native', 'libmpc-native', 'gmp-native', 'xz-native', 'zlib-native', 'flex-native', 'mpfr-native', 'gettext-minimal-native']
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing shell function autotools_preconfigure
+DEBUG: Shell function autotools_preconfigure finished
+DEBUG: Executing python function autotools_aclocals
+DEBUG: SITE files ['endian-little', 'bit-32', 'arm-common', 'arm-32', 'common-linux', 'common-glibc', 'arm-linux', 'arm-linux-gnueabi', 'common']
+DEBUG: Python function autotools_aclocals finished
+DEBUG: Executing shell function do_configure
+automake (GNU automake) 1.16.5
+Copyright (C) 2021 Free Software Foundation, Inc.
+License GPLv2+: GNU GPL version 2 or later <https://gnu.org/licenses/gpl-2.0.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Written by Tom Tromey <tromey@redhat.com>
+       and Alexandre Duret-Lutz <adl@gnu.org>.
+AUTOV is 1.16
+NOTE: Executing ACLOCAL="aclocal --system-acdir=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nettle/3.8.1-r0/recipe-sysroot/usr/share/aclocal/ --automake-acdir=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nettle/3.8.1-r0/recipe-sysroot-native/usr/share/aclocal-1.16" autoreconf -Wcross --verbose --install --force --exclude=autopoint --exclude=gtkdocize --exclude=aclocal -I /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nettle/3.8.1-r0/nettle-3.8.1/ -I /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nettle/3.8.1-r0/nettle-3.8.1/arm/ -I /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nettle/3.8.1-r0/nettle-3.8.1/arm64/ -I /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nettle/3.8.1-r0/nettle-3.8.1/powerpc64/ -I /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nettle/3.8.1-r0/nettle-3.8.1/s390x/ -I /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nettle/3.8.1-r0/nettle-3.8.1/sparc32/ -I /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nettle/3.8.1-r0/nettle-3.8.1/sparc64/ -I /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nettle/3.8.1-r0/nettle-3.8.1/x86/ -I /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nettle/3.8.1-r0/nettle-3.8.1/x86_64/ -I /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nettle/3.8.1-r0/recipe-sysroot-native/usr/share/aclocal/
+autoreconf: export WARNINGS=cross,no-obsolete
+autoreconf: Entering directory '.'
+autoreconf: configure.ac: not using Gettext
+autoreconf: configure.ac: not using aclocal
+autoreconf: configure.ac: tracing
+autoreconf: configure.ac: not using Libtool
+autoreconf: configure.ac: not using Intltool
+autoreconf: configure.ac: not using Gtkdoc
+autoreconf: running: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nettle/3.8.1-r0/recipe-sysroot-native/usr/bin/autoconf --include=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nettle/3.8.1-r0/nettle-3.8.1/ --include=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nettle/3.8.1-r0/nettle-3.8.1/arm/ --include=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nettle/3.8.1-r0/nettle-3.8.1/arm64/ --include=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nettle/3.8.1-r0/nettle-3.8.1/powerpc64/ --include=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nettle/3.8.1-r0/nettle-3.8.1/s390x/ --include=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nettle/3.8.1-r0/nettle-3.8.1/sparc32/ --include=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nettle/3.8.1-r0/nettle-3.8.1/sparc64/ --include=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nettle/3.8.1-r0/nettle-3.8.1/x86/ --include=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nettle/3.8.1-r0/nettle-3.8.1/x86_64/ --include=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nettle/3.8.1-r0/recipe-sysroot-native/usr/share/aclocal/ --force
+autoreconf: running: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nettle/3.8.1-r0/recipe-sysroot-native/usr/bin/autoheader --include=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nettle/3.8.1-r0/nettle-3.8.1/ --include=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nettle/3.8.1-r0/nettle-3.8.1/arm/ --include=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nettle/3.8.1-r0/nettle-3.8.1/arm64/ --include=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nettle/3.8.1-r0/nettle-3.8.1/powerpc64/ --include=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nettle/3.8.1-r0/nettle-3.8.1/s390x/ --include=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nettle/3.8.1-r0/nettle-3.8.1/sparc32/ --include=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nettle/3.8.1-r0/nettle-3.8.1/sparc64/ --include=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nettle/3.8.1-r0/nettle-3.8.1/x86/ --include=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nettle/3.8.1-r0/nettle-3.8.1/x86_64/ --include=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nettle/3.8.1-r0/recipe-sysroot-native/usr/share/aclocal/ --force
+autoreconf: configure.ac: not using Automake
+autoreconf: './config.sub' is updated
+autoreconf: './config.guess' is updated
+autoreconf: './install-sh' is updated
+autoreconf: Leaving directory '.'
+NOTE: Running ../nettle-3.8.1/configure  --build=x86_64-linux 		  --host=arm-openbmc-linux-gnueabi 		  --target=arm-openbmc-linux-gnueabi 		  --prefix=/usr 		  --exec_prefix=/usr 		  --bindir=/usr/bin 		  --sbindir=/usr/sbin 		  --libexecdir=/usr/libexec 		  --datadir=/usr/share 		  --sysconfdir=/etc 		  --sharedstatedir=/com 		  --localstatedir=/var 		  --libdir=/usr/lib 		  --includedir=/usr/include 		  --oldincludedir=/usr/include 		  --infodir=/usr/share/info 		  --mandir=/usr/share/man 		  --disable-silent-rules 		  --disable-dependency-tracking 		  --with-libtool-sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nettle/3.8.1-r0/recipe-sysroot --disable-openssl --disable-static  
+configure: WARNING: unrecognized options: --disable-silent-rules, --with-libtool-sysroot
+configure: loading site script /home/matt/src/openbmc/meta/site/endian-little
+configure: loading site script /home/matt/src/openbmc/meta/site/arm-common
+configure: loading site script /home/matt/src/openbmc/meta/site/arm-32
+configure: loading site script /home/matt/src/openbmc/meta/site/common-linux
+configure: loading site script /home/matt/src/openbmc/meta/site/common-glibc
+configure: loading site script /home/matt/src/openbmc/meta/site/arm-linux
+configure: loading site script /home/matt/src/openbmc/meta/site/common
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... arm-openbmc-linux-gnueabi
+checking for -R flag... using -Wl,-rpath,
+Searching for libraries
+checking /usr... added
+checking /usr/local/lib... added
+checking /sw/local/lib... not found
+checking /sw/lib... not found
+checking /usr/gnu/lib... not found
+checking /opt/gnu/lib... not found
+checking /sw/gnu/lib... not found
+checking /usr/freeware/lib... not found
+checking /usr/pkg/lib... not found
+checking for arm-openbmc-linux-gnueabi-gcc... arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nettle/3.8.1-r0/recipe-sysroot
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... yes
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nettle/3.8.1-r0/recipe-sysroot accepts -g... yes
+checking for arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nettle/3.8.1-r0/recipe-sysroot option to enable C11 features... none needed
+checking for ifunc support... yes
+checking whether the compiler supports GNU C++... yes
+checking whether arm-openbmc-linux-gnueabi-g++  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nettle/3.8.1-r0/recipe-sysroot accepts -g... yes
+checking for arm-openbmc-linux-gnueabi-g++  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nettle/3.8.1-r0/recipe-sysroot option to enable C++11 features... none needed
+checking if LD -Wl,--version-script works... yes
+checking whether make sets $(MAKE)... yes
+checking for arm-openbmc-linux-gnueabi-ranlib... arm-openbmc-linux-gnueabi-gcc-ranlib
+checking for arm-openbmc-linux-gnueabi-nm... arm-openbmc-linux-gnueabi-gcc-nm
+checking for arm-openbmc-linux-gnueabi-objdump... arm-openbmc-linux-gnueabi-objdump
+checking for arm-openbmc-linux-gnueabi-ar... arm-openbmc-linux-gnueabi-gcc-ar
+checking for a BSD-compatible install... /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c
+checking for a race-free mkdir -p... /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p
+checking whether ln -s works... yes
+checking build system compiler gcc ... yes
+checking for build system executable suffix... 
+checking for an ANSI C-conforming const... yes
+checking for inline... inline
+checking how to run the C preprocessor... arm-openbmc-linux-gnueabi-gcc -E --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nettle/3.8.1-r0/recipe-sysroot  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security
+checking for grep that handles long lines and -e... /home/matt/tmp/build/obmc-y2038/tmp/hosttools/grep
+checking for egrep... /home/matt/tmp/build/obmc-y2038/tmp/hosttools/grep -E
+checking for uid_t in sys/types.h... (cached) {ac_cv_type_uid_t=yes}
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for sys/time.h... yes
+checking for size_t... yes
+checking size of long... (cached) 4
+checking size of size_t... (cached) 4
+checking for valgrind/memcheck.h... no
+checking for dlfcn.h... yes
+checking for dlopen in -ldl... yes
+checking for working alloca.h... yes
+checking for alloca... yes
+checking for malloc.h... yes
+checking for strerror... (cached) yes
+checking for secure_getenv... yes
+checking for getline... yes
+checking whether byte ordering is bigendian... (cached) no
+checking for __builtin_bswap64... yes
+checking for __attribute__... yes
+checking for fcntl file locking... yes
+checking for __gmpn_zero_p in -lgmp... yes
+checking for GMP limb size... 32 bits
+configure: Looking for assembler files in arm/fat arm.
+checking CCPIC... -fpic
+checking if globals are prefixed by underscore... no
+checking for ELF-style .type,%function pseudo-ops... yes
+checking for ELF-style .type,#function pseudo-ops... yes
+checking for COFF-style .type directive... no
+checking if we should use a .note.GNU-stack section... yes
+checking if .align assembly directive is logarithmic... yes
+checking if Intel CET is enabled... no
+checking for m4... /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nettle/3.8.1-r0/recipe-sysroot-native/usr/bin/m4
+checking for makeinfo... /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nettle/3.8.1-r0/recipe-sysroot-native/bin/makeinfo
+checking for library containing clock_gettime... none required
+configure: creating ./config.status
+config.status: creating config.make
+config.status: creating config.m4
+config.status: creating Makefile
+config.status: creating version.h
+config.status: creating tools/Makefile
+config.status: creating testsuite/Makefile
+config.status: creating examples/Makefile
+config.status: creating nettle.pc
+config.status: creating hogweed.pc
+config.status: creating libnettle.map
+config.status: creating libhogweed.map
+config.status: creating config.h
+config.status: linking ../nettle-3.8.1/arm/fat/aes-encrypt-internal.asm to aes-encrypt-internal.asm
+config.status: linking ../nettle-3.8.1/arm/fat/aes-decrypt-internal.asm to aes-decrypt-internal.asm
+config.status: linking ../nettle-3.8.1/arm/memxor.asm to memxor.asm
+config.status: linking ../nettle-3.8.1/arm/memxor3.asm to memxor3.asm
+config.status: linking ../nettle-3.8.1/arm/machine.m4 to machine.m4
+config.status: linking ../nettle-3.8.1/arm/fat/aes-encrypt-internal-2.asm to aes-encrypt-internal-2.asm
+config.status: linking ../nettle-3.8.1/arm/fat/aes-decrypt-internal-2.asm to aes-decrypt-internal-2.asm
+config.status: linking ../nettle-3.8.1/arm/fat/chacha-3core.asm to chacha-3core.asm
+config.status: linking ../nettle-3.8.1/arm/fat/salsa20-2core.asm to salsa20-2core.asm
+config.status: linking ../nettle-3.8.1/arm/fat/sha1-compress-2.asm to sha1-compress-2.asm
+config.status: linking ../nettle-3.8.1/arm/fat/sha256-compress-2.asm to sha256-compress-2.asm
+config.status: linking ../nettle-3.8.1/arm/fat/sha3-permute-2.asm to sha3-permute-2.asm
+config.status: linking ../nettle-3.8.1/arm/fat/sha512-compress-2.asm to sha512-compress-2.asm
+config.status: linking ../nettle-3.8.1/arm/fat/umac-nh-n-2.asm to umac-nh-n-2.asm
+config.status: linking ../nettle-3.8.1/arm/fat/umac-nh-2.asm to umac-nh-2.asm
+config.status: linking ../nettle-3.8.1/arm/ecc-secp192r1-modp.asm to ecc-secp192r1-modp.asm
+config.status: linking ../nettle-3.8.1/arm/ecc-secp224r1-modp.asm to ecc-secp224r1-modp.asm
+config.status: linking ../nettle-3.8.1/arm/ecc-secp256r1-redc.asm to ecc-secp256r1-redc.asm
+config.status: linking ../nettle-3.8.1/arm/ecc-secp384r1-modp.asm to ecc-secp384r1-modp.asm
+config.status: linking ../nettle-3.8.1/arm/ecc-secp521r1-modp.asm to ecc-secp521r1-modp.asm
+configure: WARNING: unrecognized options: --disable-silent-rules, --with-libtool-sysroot
+configure: summary of build options:
+
+  Version:           nettle 3.8.1
+  Host type:         arm-openbmc-linux-gnueabi
+  ABI:               standard
+  Assembly files:    arm/fat arm
+  Install prefix:    /usr
+  Library directory: /usr/lib
+  Compiler:          arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nettle/3.8.1-r0/recipe-sysroot
+  Static libraries:  no
+  Shared libraries:  yes
+  Public key crypto: yes
+  Using mini-gmp:    no
+  Documentation:     yes
+
+DEBUG: Shell function do_configure finished
+DEBUG: Executing python function do_qa_configure
+NOTE: Checking autotools environment for common misconfiguration
+NOTE: Checking configure output for unrecognised options
+DEBUG: Python function do_qa_configure finished
+DEBUG: Executing shell function autotools_postconfigure
+DEBUG: Shell function autotools_postconfigure finished

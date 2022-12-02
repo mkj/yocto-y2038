@@ -1,0 +1,262 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-cross_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-native_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-extended/libidn/libidn2_2.3.3.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-extended/texinfo-dummy-native/texinfo-dummy-native.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-support/gmp/gmp_6.2.1.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-support/libseccomp/libseccomp_2.5.4.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-support/libunistring/libunistring_1.0.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-support/nettle/nettle_3.8.1.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-core/gettext/gettext_0.21.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/autoconf/autoconf_2.71.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/automake/automake_1.16.5.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/dwarfsrcfiles/dwarfsrcfiles.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pkgconfig/pkgconfig_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/python/python3_3.11.0.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/rpm/rpm_4.18.0.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-extended/xz/xz_5.2.7.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-gnome/gtk-doc/gtk-doc_1.33.2.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: ['dwarfsrcfiles-native', 'rpm-native', 'file-native', 'elfutils-native', 'lua-native', 'libgcrypt-native', 'popt-native', 'libcap-native', 'libgpg-error-native']
+NOTE: Skipping as already exists in sysroot: ['glibc', 'gcc-cross-arm', 'gcc-runtime', 'libtool-cross', 'libtool-native', 'quilt-native', 'libidn2', 'texinfo-dummy-native', 'gmp', 'libseccomp', 'libunistring', 'nettle', 'gettext-native', 'autoconf-native', 'automake-native', 'patch-native', 'pkgconfig-native', 'pseudo-native', 'python3-native', 'xz-native', 'gtk-doc-native', 'gettext-minimal-native', 'mpfr-native', 'gmp-native', 'zstd-native', 'binutils-cross-arm', 'gnu-config-native', 'linux-libc-headers', 'libmpc-native', 'zlib-native', 'flex-native', 'libtirpc-native', 'gdbm-native', 'sqlite3-native', 'openssl-native', 'util-linux-libuuid-native', 'ncurses-native', 'libffi-native', 'libnsl2-native', 'bzip2-native', 'readline-native', 'm4-native', 'attr-native', 'libgcc', 'perl-native', 'make-native']
+DEBUG: sed -e 's:^[^/]*/:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gnutls/3.7.8-r0/recipe-sysroot-native/:g' /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/rpm-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/elfutils-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/lua-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/libgcrypt-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/libgpg-error-native/fixmepath | xargs sed -i -e 's:FIXMESTAGINGDIRTARGET:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gnutls/3.7.8-r0/recipe-sysroot:g; s:FIXMESTAGINGDIRHOST:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gnutls/3.7.8-r0/recipe-sysroot-native:g' -e 's:FIXME_PSEUDO_SYSROOT:/home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/pseudo-native:g' -e 's:FIXME_HOSTTOOLS_DIR:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:g' -e 's:FIXME_PKGDATA_DIR:/home/matt/tmp/build/obmc-y2038/tmp/pkgdata/evb-ast2600:g' -e 's:FIXME_PSEUDO_LOCALSTATEDIR:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gnutls/3.7.8-r0/pseudo/:g' -e 's:FIXME_LOGFIFO:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gnutls/3.7.8-r0/temp/fifo.1156165:g'
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function sstate_task_prefunc
+DEBUG: Python function sstate_task_prefunc finished
+DEBUG: Executing python function do_package
+DEBUG: Executing python function package_convert_pr_autoinc
+DEBUG: Python function package_convert_pr_autoinc finished
+DEBUG: Executing python function package_prepare_pkgdata
+NOTE: Installed into pkgdata-sysroot: ['libseccomp', 'libunistring', 'libidn2', 'gmp', 'glibc', 'nettle', 'gcc-runtime', 'libgcc', 'linux-libc-headers']
+DEBUG: Python function package_prepare_pkgdata finished
+DEBUG: Executing python function perform_packagecopy
+DEBUG: Python function perform_packagecopy finished
+DEBUG: Executing python function split_and_strip_files
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gnutls/3.7.8-r0/package/usr/lib/libgnutlsxx.so.30.0.0']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gnutls/3.7.8-r0/package/usr/lib/libgnutls.so.30.34.2']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gnutls/3.7.8-r0/package/usr/lib/libgnutls-openssl.so.27.0.2']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gnutls/3.7.8-r0/package/usr/bin/srptool']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gnutls/3.7.8-r0/package/usr/bin/psktool']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gnutls/3.7.8-r0/package/usr/bin/ocsptool']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gnutls/3.7.8-r0/package/usr/bin/gnutls-serv']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gnutls/3.7.8-r0/package/usr/bin/gnutls-cli-debug']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gnutls/3.7.8-r0/package/usr/bin/gnutls-cli']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gnutls/3.7.8-r0/package/usr/bin/certtool']
+DEBUG: Python function split_and_strip_files finished
+DEBUG: Executing python function fixup_perms
+DEBUG: Python function fixup_perms finished
+DEBUG: Executing python function package_do_split_locales
+DEBUG: Python function package_do_split_locales finished
+DEBUG: Executing python function populate_packages
+DEBUG: Python function populate_packages finished
+DEBUG: Executing python function package_fixsymlinks
+DEBUG: gnutls-dev contains dangling link /usr/lib/libgnutls-openssl.so.27.0.2
+DEBUG: target found in gnutls-openssl
+DEBUG: gnutls-dev contains dangling link /usr/lib/libgnutls.so.30.34.2
+DEBUG: target found in gnutls
+DEBUG: gnutls-dev contains dangling link /usr/lib/libgnutlsxx.so.30.0.0
+DEBUG: target found in gnutls-xx
+DEBUG: Python function package_fixsymlinks finished
+DEBUG: Executing python function package_name_hook
+DEBUG: Executing python function debian_package_name_hook
+DEBUG: LIBNAMES: pkg gnutls-xx libs 1 bins 0 sonames ['libgnutlsxx.so.30']
+NOTE: debian: renaming gnutls-xx to libgnutlsxx30
+DEBUG: LIBNAMES: pkg gnutls-staticdev libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg gnutls-src libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg gnutls-openssl libs 1 bins 0 sonames ['libgnutls-openssl.so.27']
+NOTE: debian: renaming gnutls-openssl to libgnutls-openssl27
+DEBUG: LIBNAMES: pkg gnutls-locale-zh-cn libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg gnutls-locale-vi libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg gnutls-locale-uk libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg gnutls-locale-sv libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg gnutls-locale-sr libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg gnutls-locale-pt-br libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg gnutls-locale-pl libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg gnutls-locale-nl libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg gnutls-locale-ms libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg gnutls-locale-it libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg gnutls-locale-fr libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg gnutls-locale-fi libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg gnutls-locale-es libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg gnutls-locale-eo libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg gnutls-locale-de libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg gnutls-locale-cs libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg gnutls-fips libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg gnutls-doc libs 0 bins 0 sonames []
+arm-openbmc-linux-gnueabi-objdump: '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gnutls/3.7.8-r0/packages-split/gnutls-dev/usr/lib/libgnutls-openssl.so': No such file
+arm-openbmc-linux-gnueabi-objdump: '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gnutls/3.7.8-r0/packages-split/gnutls-dev/usr/lib/libgnutls.so': No such file
+arm-openbmc-linux-gnueabi-objdump: '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gnutls/3.7.8-r0/packages-split/gnutls-dev/usr/lib/libgnutlsxx.so': No such file
+DEBUG: LIBNAMES: pkg gnutls-dev libs 1 bins 1 sonames []
+DEBUG: LIBNAMES: pkg gnutls-dbg libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg gnutls-bin libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg gnutls libs 1 bins 0 sonames ['libgnutls.so.30']
+NOTE: debian: renaming gnutls-src to libgnutls-src
+NOTE: debian: renaming gnutls-dbg to libgnutls-dbg
+NOTE: debian: renaming gnutls-fips to libgnutls-fips
+NOTE: debian: renaming gnutls-staticdev to libgnutls-staticdev
+NOTE: debian: renaming gnutls-dev to libgnutls-dev
+NOTE: debian: renaming gnutls-doc to libgnutls-doc
+NOTE: debian: renaming gnutls-bin to libgnutls-bin
+NOTE: debian: renaming gnutls to libgnutls30
+NOTE: debian: renaming gnutls-locale-cs to libgnutls-locale-cs
+NOTE: debian: renaming gnutls-locale-de to libgnutls-locale-de
+NOTE: debian: renaming gnutls-locale-eo to libgnutls-locale-eo
+NOTE: debian: renaming gnutls-locale-es to libgnutls-locale-es
+NOTE: debian: renaming gnutls-locale-fi to libgnutls-locale-fi
+NOTE: debian: renaming gnutls-locale-fr to libgnutls-locale-fr
+NOTE: debian: renaming gnutls-locale-it to libgnutls-locale-it
+NOTE: debian: renaming gnutls-locale-ms to libgnutls-locale-ms
+NOTE: debian: renaming gnutls-locale-nl to libgnutls-locale-nl
+NOTE: debian: renaming gnutls-locale-pl to libgnutls-locale-pl
+NOTE: debian: renaming gnutls-locale-pt-br to libgnutls-locale-pt-br
+NOTE: debian: renaming gnutls-locale-sr to libgnutls-locale-sr
+NOTE: debian: renaming gnutls-locale-sv to libgnutls-locale-sv
+NOTE: debian: renaming gnutls-locale-uk to libgnutls-locale-uk
+NOTE: debian: renaming gnutls-locale-vi to libgnutls-locale-vi
+NOTE: debian: renaming gnutls-locale-zh-cn to libgnutls-locale-zh-cn
+DEBUG: Python function debian_package_name_hook finished
+DEBUG: Python function package_name_hook finished
+DEBUG: Executing python function package_do_filedeps
+DEBUG: Python function package_do_filedeps finished
+DEBUG: Executing python function package_do_shlibs
+DEBUG: Reading shlib providers in /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gnutls/3.7.8-r0/pkgdata-sysroot/shlibs2
+DEBUG: calculating shlib provides for gnutls-src
+DEBUG: LIBNAMES: pkg gnutls-src sonames set()
+DEBUG: calculating shlib provides for gnutls-dbg
+DEBUG: LIBNAMES: pkg gnutls-dbg sonames set()
+DEBUG: calculating shlib provides for gnutls-openssl
+DEBUG: registering gnutls-openssl-3.7.8 as shlib provider for libgnutls-openssl.so.27
+DEBUG: adding ldconfig call to postinst for gnutls-openssl
+DEBUG: LIBNAMES: pkg gnutls-openssl sonames {('libgnutls-openssl.so.27', '/usr/lib', '3.7.8')}
+DEBUG: calculating shlib provides for gnutls-xx
+DEBUG: registering gnutls-xx-3.7.8 as shlib provider for libgnutlsxx.so.30
+DEBUG: adding ldconfig call to postinst for gnutls-xx
+DEBUG: LIBNAMES: pkg gnutls-xx sonames {('libgnutlsxx.so.30', '/usr/lib', '3.7.8')}
+DEBUG: calculating shlib provides for gnutls-fips
+DEBUG: LIBNAMES: pkg gnutls-fips sonames set()
+DEBUG: calculating shlib provides for gnutls-staticdev
+DEBUG: LIBNAMES: pkg gnutls-staticdev sonames set()
+DEBUG: calculating shlib provides for gnutls-dev
+DEBUG: LIBNAMES: pkg gnutls-dev sonames set()
+DEBUG: calculating shlib provides for gnutls-doc
+DEBUG: LIBNAMES: pkg gnutls-doc sonames set()
+DEBUG: calculating shlib provides for gnutls-bin
+DEBUG: LIBNAMES: pkg gnutls-bin sonames set()
+DEBUG: calculating shlib provides for gnutls
+DEBUG: registering gnutls-3.7.8 as shlib provider for libgnutls.so.30
+DEBUG: adding ldconfig call to postinst for gnutls
+DEBUG: LIBNAMES: pkg gnutls sonames {('libgnutls.so.30', '/usr/lib', '3.7.8')}
+DEBUG: calculating shlib provides for gnutls-locale-cs
+DEBUG: LIBNAMES: pkg gnutls-locale-cs sonames set()
+DEBUG: calculating shlib provides for gnutls-locale-de
+DEBUG: LIBNAMES: pkg gnutls-locale-de sonames set()
+DEBUG: calculating shlib provides for gnutls-locale-eo
+DEBUG: LIBNAMES: pkg gnutls-locale-eo sonames set()
+DEBUG: calculating shlib provides for gnutls-locale-es
+DEBUG: LIBNAMES: pkg gnutls-locale-es sonames set()
+DEBUG: calculating shlib provides for gnutls-locale-fi
+DEBUG: LIBNAMES: pkg gnutls-locale-fi sonames set()
+DEBUG: calculating shlib provides for gnutls-locale-fr
+DEBUG: LIBNAMES: pkg gnutls-locale-fr sonames set()
+DEBUG: calculating shlib provides for gnutls-locale-it
+DEBUG: LIBNAMES: pkg gnutls-locale-it sonames set()
+DEBUG: calculating shlib provides for gnutls-locale-ms
+DEBUG: LIBNAMES: pkg gnutls-locale-ms sonames set()
+DEBUG: calculating shlib provides for gnutls-locale-nl
+DEBUG: LIBNAMES: pkg gnutls-locale-nl sonames set()
+DEBUG: calculating shlib provides for gnutls-locale-pl
+DEBUG: LIBNAMES: pkg gnutls-locale-pl sonames set()
+DEBUG: calculating shlib provides for gnutls-locale-pt-br
+DEBUG: LIBNAMES: pkg gnutls-locale-pt-br sonames set()
+DEBUG: calculating shlib provides for gnutls-locale-sr
+DEBUG: LIBNAMES: pkg gnutls-locale-sr sonames set()
+DEBUG: calculating shlib provides for gnutls-locale-sv
+DEBUG: LIBNAMES: pkg gnutls-locale-sv sonames set()
+DEBUG: calculating shlib provides for gnutls-locale-uk
+DEBUG: LIBNAMES: pkg gnutls-locale-uk sonames set()
+DEBUG: calculating shlib provides for gnutls-locale-vi
+DEBUG: LIBNAMES: pkg gnutls-locale-vi sonames set()
+DEBUG: calculating shlib provides for gnutls-locale-zh-cn
+DEBUG: LIBNAMES: pkg gnutls-locale-zh-cn sonames set()
+DEBUG: calculating shlib requirements for gnutls-src
+DEBUG: calculating shlib requirements for gnutls-dbg
+DEBUG: calculating shlib requirements for gnutls-openssl
+DEBUG: gnutls-openssl: Dependency libhogweed.so.6 requires package nettle (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gnutls/3.7.8-r0/packages-split/gnutls-openssl/usr/lib/libgnutls-openssl.so.27.0.2)
+DEBUG: gnutls-openssl: Dependency libunistring.so.2 requires package libunistring (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gnutls/3.7.8-r0/packages-split/gnutls-openssl/usr/lib/libgnutls-openssl.so.27.0.2)
+DEBUG: gnutls-openssl: Dependency libidn2.so.0 requires package libidn2 (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gnutls/3.7.8-r0/packages-split/gnutls-openssl/usr/lib/libgnutls-openssl.so.27.0.2)
+DEBUG: gnutls-openssl: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gnutls/3.7.8-r0/packages-split/gnutls-openssl/usr/lib/libgnutls-openssl.so.27.0.2)
+DEBUG: gnutls-openssl: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gnutls/3.7.8-r0/packages-split/gnutls-openssl/usr/lib/libgnutls-openssl.so.27.0.2)
+DEBUG: gnutls-openssl: Dependency libnettle.so.8 requires package nettle (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gnutls/3.7.8-r0/packages-split/gnutls-openssl/usr/lib/libgnutls-openssl.so.27.0.2)
+DEBUG: gnutls-openssl: Dependency libgnutls.so.30 requires package gnutls (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gnutls/3.7.8-r0/packages-split/gnutls-openssl/usr/lib/libgnutls-openssl.so.27.0.2)
+DEBUG: gnutls-openssl: Dependency libgmp.so.10 requires package gmp (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gnutls/3.7.8-r0/packages-split/gnutls-openssl/usr/lib/libgnutls-openssl.so.27.0.2)
+DEBUG: calculating shlib requirements for gnutls-xx
+DEBUG: gnutls-xx: Dependency libstdc++.so.6 requires package libstdc++ (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gnutls/3.7.8-r0/packages-split/gnutls-xx/usr/lib/libgnutlsxx.so.30.0.0)
+DEBUG: gnutls-xx: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gnutls/3.7.8-r0/packages-split/gnutls-xx/usr/lib/libgnutlsxx.so.30.0.0)
+DEBUG: gnutls-xx: Dependency libunistring.so.2 requires package libunistring (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gnutls/3.7.8-r0/packages-split/gnutls-xx/usr/lib/libgnutlsxx.so.30.0.0)
+DEBUG: gnutls-xx: Dependency libidn2.so.0 requires package libidn2 (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gnutls/3.7.8-r0/packages-split/gnutls-xx/usr/lib/libgnutlsxx.so.30.0.0)
+DEBUG: gnutls-xx: Dependency libgcc_s.so.1 requires package libgcc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gnutls/3.7.8-r0/packages-split/gnutls-xx/usr/lib/libgnutlsxx.so.30.0.0)
+DEBUG: gnutls-xx: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gnutls/3.7.8-r0/packages-split/gnutls-xx/usr/lib/libgnutlsxx.so.30.0.0)
+DEBUG: gnutls-xx: Dependency libnettle.so.8 requires package nettle (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gnutls/3.7.8-r0/packages-split/gnutls-xx/usr/lib/libgnutlsxx.so.30.0.0)
+DEBUG: gnutls-xx: Dependency libgnutls.so.30 requires package gnutls (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gnutls/3.7.8-r0/packages-split/gnutls-xx/usr/lib/libgnutlsxx.so.30.0.0)
+DEBUG: gnutls-xx: Dependency libm.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gnutls/3.7.8-r0/packages-split/gnutls-xx/usr/lib/libgnutlsxx.so.30.0.0)
+DEBUG: gnutls-xx: Dependency libgmp.so.10 requires package gmp (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gnutls/3.7.8-r0/packages-split/gnutls-xx/usr/lib/libgnutlsxx.so.30.0.0)
+DEBUG: gnutls-xx: Dependency libhogweed.so.6 requires package nettle (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gnutls/3.7.8-r0/packages-split/gnutls-xx/usr/lib/libgnutlsxx.so.30.0.0)
+DEBUG: calculating shlib requirements for gnutls-fips
+DEBUG: calculating shlib requirements for gnutls-staticdev
+DEBUG: calculating shlib requirements for gnutls-dev
+DEBUG: gnutls-dev: Dependency libgnutls.so.30 requires package gnutls (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gnutls/3.7.8-r0/packages-split/gnutls-dev/usr/bin/gnutls-cli-debug)
+DEBUG: gnutls-dev: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gnutls/3.7.8-r0/packages-split/gnutls-dev/usr/bin/gnutls-cli-debug)
+DEBUG: gnutls-dev: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gnutls/3.7.8-r0/packages-split/gnutls-dev/usr/bin/gnutls-cli-debug)
+DEBUG: calculating shlib requirements for gnutls-doc
+DEBUG: calculating shlib requirements for gnutls-bin
+DEBUG: gnutls-bin: Dependency libgnutls.so.30 requires package gnutls (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gnutls/3.7.8-r0/packages-split/gnutls-bin/usr/bin/gnutls-cli)
+DEBUG: gnutls-bin: Dependency libm.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gnutls/3.7.8-r0/packages-split/gnutls-bin/usr/bin/gnutls-cli)
+DEBUG: gnutls-bin: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gnutls/3.7.8-r0/packages-split/gnutls-bin/usr/bin/gnutls-cli)
+DEBUG: gnutls-bin: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gnutls/3.7.8-r0/packages-split/gnutls-bin/usr/bin/gnutls-cli)
+DEBUG: gnutls-bin: Dependency libgnutls.so.30 requires package gnutls (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gnutls/3.7.8-r0/packages-split/gnutls-bin/usr/bin/psktool)
+DEBUG: gnutls-bin: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gnutls/3.7.8-r0/packages-split/gnutls-bin/usr/bin/psktool)
+DEBUG: gnutls-bin: Dependency libgnutls.so.30 requires package gnutls (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gnutls/3.7.8-r0/packages-split/gnutls-bin/usr/bin/srptool)
+DEBUG: gnutls-bin: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gnutls/3.7.8-r0/packages-split/gnutls-bin/usr/bin/srptool)
+DEBUG: gnutls-bin: Dependency libgnutls.so.30 requires package gnutls (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gnutls/3.7.8-r0/packages-split/gnutls-bin/usr/bin/gnutls-serv)
+DEBUG: gnutls-bin: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gnutls/3.7.8-r0/packages-split/gnutls-bin/usr/bin/ocsptool)
+DEBUG: gnutls-bin: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gnutls/3.7.8-r0/packages-split/gnutls-bin/usr/bin/gnutls-serv)
+DEBUG: gnutls-bin: Dependency libgnutls.so.30 requires package gnutls (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gnutls/3.7.8-r0/packages-split/gnutls-bin/usr/bin/ocsptool)
+DEBUG: gnutls-bin: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gnutls/3.7.8-r0/packages-split/gnutls-bin/usr/bin/psktool)
+DEBUG: gnutls-bin: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gnutls/3.7.8-r0/packages-split/gnutls-bin/usr/bin/srptool)
+DEBUG: gnutls-bin: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gnutls/3.7.8-r0/packages-split/gnutls-bin/usr/bin/ocsptool)
+DEBUG: gnutls-bin: Dependency libgnutls.so.30 requires package gnutls (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gnutls/3.7.8-r0/packages-split/gnutls-bin/usr/bin/certtool)
+DEBUG: gnutls-bin: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gnutls/3.7.8-r0/packages-split/gnutls-bin/usr/bin/certtool)
+DEBUG: gnutls-bin: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gnutls/3.7.8-r0/packages-split/gnutls-bin/usr/bin/gnutls-serv)
+DEBUG: gnutls-bin: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gnutls/3.7.8-r0/packages-split/gnutls-bin/usr/bin/certtool)
+DEBUG: calculating shlib requirements for gnutls
+DEBUG: gnutls: Dependency libhogweed.so.6 requires package nettle (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gnutls/3.7.8-r0/packages-split/gnutls/usr/lib/libgnutls.so.30.34.2)
+DEBUG: gnutls: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gnutls/3.7.8-r0/packages-split/gnutls/usr/lib/libgnutls.so.30.34.2)
+DEBUG: gnutls: Dependency libidn2.so.0 requires package libidn2 (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gnutls/3.7.8-r0/packages-split/gnutls/usr/lib/libgnutls.so.30.34.2)
+DEBUG: gnutls: Dependency libunistring.so.2 requires package libunistring (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gnutls/3.7.8-r0/packages-split/gnutls/usr/lib/libgnutls.so.30.34.2)
+DEBUG: gnutls: Dependency libnettle.so.8 requires package nettle (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gnutls/3.7.8-r0/packages-split/gnutls/usr/lib/libgnutls.so.30.34.2)
+DEBUG: gnutls: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gnutls/3.7.8-r0/packages-split/gnutls/usr/lib/libgnutls.so.30.34.2)
+DEBUG: gnutls: Dependency libgmp.so.10 requires package gmp (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gnutls/3.7.8-r0/packages-split/gnutls/usr/lib/libgnutls.so.30.34.2)
+DEBUG: calculating shlib requirements for gnutls-locale-cs
+DEBUG: calculating shlib requirements for gnutls-locale-de
+DEBUG: calculating shlib requirements for gnutls-locale-eo
+DEBUG: calculating shlib requirements for gnutls-locale-es
+DEBUG: calculating shlib requirements for gnutls-locale-fi
+DEBUG: calculating shlib requirements for gnutls-locale-fr
+DEBUG: calculating shlib requirements for gnutls-locale-it
+DEBUG: calculating shlib requirements for gnutls-locale-ms
+DEBUG: calculating shlib requirements for gnutls-locale-nl
+DEBUG: calculating shlib requirements for gnutls-locale-pl
+DEBUG: calculating shlib requirements for gnutls-locale-pt-br
+DEBUG: calculating shlib requirements for gnutls-locale-sr
+DEBUG: calculating shlib requirements for gnutls-locale-sv
+DEBUG: calculating shlib requirements for gnutls-locale-uk
+DEBUG: calculating shlib requirements for gnutls-locale-vi
+DEBUG: calculating shlib requirements for gnutls-locale-zh-cn
+DEBUG: Python function package_do_shlibs finished
+DEBUG: Executing python function package_do_pkgconfig
+DEBUG: Python function package_do_pkgconfig finished
+DEBUG: Executing python function read_shlibdeps
+DEBUG: Python function read_shlibdeps finished
+DEBUG: Executing python function package_depchains
+DEBUG: Python function package_depchains finished
+DEBUG: Executing python function emit_pkgdata
+DEBUG: adding deferred pkg_postinst_ontarget() to pkg_postinst() for gnutls-fips
+DEBUG: Python function emit_pkgdata finished
+DEBUG: Python function do_package finished
+DEBUG: Executing python function sstate_task_postfunc
+NOTE: Using umask 0o002 (not 22) for sstate packaging
+DEBUG: Executing python function target_add_sysroot_deps
+DEBUG: Python function target_add_sysroot_deps finished
+DEBUG: Executing python function sstate_hardcode_path
+NOTE: Removing hardcoded paths from sstate package: 'find /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gnutls/3.7.8-r0/sstate-build-package/ \( -name "*.la" -o -name "*-config" -o -name "*_config" -o -name "postinst-*" \) -type f | xargs grep -l -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gnutls/3.7.8-r0/recipe-sysroot' -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gnutls/3.7.8-r0/recipe-sysroot-native' -e '/home/matt/tmp/build/obmc-y2038/tmp/hosttools' | tee /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gnutls/3.7.8-r0/sstate-build-package/fixmepath | xargs --no-run-if-empty sed -i -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gnutls/3.7.8-r0/recipe-sysroot-native:FIXMESTAGINGDIRHOST:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gnutls/3.7.8-r0/recipe-sysroot:FIXMESTAGINGDIRTARGET:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:FIXME_HOSTTOOLS_DIR:g''
+DEBUG: Python function sstate_hardcode_path finished
+DEBUG: Executing python function sstate_report_unihash
+DEBUG: Python function sstate_report_unihash finished
+DEBUG: Executing shell function sstate_create_package
+DEBUG: Shell function sstate_create_package finished
+DEBUG: Executing python function sstate_hardcode_path_unpack
+DEBUG: Python function sstate_hardcode_path_unpack finished
+DEBUG: Python function sstate_task_postfunc finished

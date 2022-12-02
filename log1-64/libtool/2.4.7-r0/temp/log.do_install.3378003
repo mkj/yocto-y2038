@@ -1,0 +1,102 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-native_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/opkg-utils/opkg-utils_0.5.0.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-extended/texinfo-dummy-native/texinfo-dummy-native.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/autoconf/autoconf_2.71.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/automake/automake_1.16.5.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: []
+NOTE: Skipping as already exists in sysroot: ['glibc', 'gcc-cross-arm', 'gcc-runtime', 'libtool-native', 'opkg-utils', 'quilt-native', 'texinfo-dummy-native', 'autoconf-native', 'automake-native', 'patch-native', 'pseudo-native', 'linux-libc-headers', 'libgcc', 'flex-native', 'xz-native', 'zlib-native', 'zstd-native', 'binutils-cross-arm', 'mpfr-native', 'gnu-config-native', 'libmpc-native', 'gmp-native', 'attr-native', 'm4-native', 'gettext-minimal-native']
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function autotools_aclocals
+DEBUG: SITE files ['endian-little', 'bit-32', 'arm-common', 'arm-32', 'common-linux', 'common-glibc', 'arm-linux', 'arm-linux-gnueabi', 'common']
+DEBUG: Python function autotools_aclocals finished
+DEBUG: Executing shell function do_install
+NOTE: make -j 1 DESTDIR=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/image install
+make  install-recursive
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/build'
+Making install in .
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/build'
+make[3]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/build'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/image/usr/bin'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c libtool '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/image/usr/bin'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/image/usr/lib'
+ /bin/bash ./libtool   --mode=install /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c   libltdl/libltdl.la '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/image/usr/lib'
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c libltdl/.libs/libltdl.so.7.3.2 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/image/usr/lib/libltdl.so.7.3.2
+libtool: install: (cd /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/image/usr/lib && { ln -s -f libltdl.so.7.3.2 libltdl.so.7 || { rm -f libltdl.so.7 && ln -s libltdl.so.7.3.2 libltdl.so.7; }; })
+libtool: install: (cd /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/image/usr/lib && { ln -s -f libltdl.so.7.3.2 libltdl.so || { rm -f libltdl.so && ln -s libltdl.so.7.3.2 libltdl.so; }; })
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c libltdl/.libs/libltdl.lai /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/image/usr/lib/libltdl.la
+libtool: warning: remember to run 'libtool --finish /usr/lib'
+ GREP='grep' SED='sed' '../libtool-2.4.7/build-aux/inline-source' libtoolize > '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/image/usr/bin/libtoolize'
+rm -rf '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/image/usr/share/libtool'/*
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 '../libtool-2.4.7/m4/libtool.m4' '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/image/usr/share/aclocal/libtool.m4'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 '../libtool-2.4.7/m4/ltargz.m4' '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/image/usr/share/aclocal/ltargz.m4'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 '../libtool-2.4.7/m4/ltdl.m4' '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/image/usr/share/aclocal/ltdl.m4'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 '../libtool-2.4.7/m4/ltoptions.m4' '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/image/usr/share/aclocal/ltoptions.m4'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 '../libtool-2.4.7/m4/ltsugar.m4' '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/image/usr/share/aclocal/ltsugar.m4'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 '../libtool-2.4.7/m4/ltversion.m4' '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/image/usr/share/aclocal/ltversion.m4'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 '../libtool-2.4.7/m4/lt~obsolete.m4' '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/image/usr/share/aclocal/lt~obsolete.m4'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c '../libtool-2.4.7/build-aux/compile' '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/image/usr/share/libtool/build-aux/compile'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c '../libtool-2.4.7/build-aux/config.guess' '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/image/usr/share/libtool/build-aux/config.guess'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c '../libtool-2.4.7/build-aux/config.sub' '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/image/usr/share/libtool/build-aux/config.sub'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c '../libtool-2.4.7/build-aux/depcomp' '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/image/usr/share/libtool/build-aux/depcomp'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c '../libtool-2.4.7/build-aux/install-sh' '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/image/usr/share/libtool/build-aux/install-sh'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c '../libtool-2.4.7/build-aux/missing' '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/image/usr/share/libtool/build-aux/missing'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 '../libtool-2.4.7/build-aux/ltmain.sh' '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/image/usr/share/libtool/build-aux/ltmain.sh'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 '../libtool-2.4.7/libltdl/COPYING.LIB' '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/image/usr/share/libtool/COPYING.LIB'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 '../libtool-2.4.7/libltdl/Makefile.am' '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/image/usr/share/libtool/Makefile.am'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 '../libtool-2.4.7/libltdl/README' '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/image/usr/share/libtool/README'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 '../libtool-2.4.7/libltdl/configure.ac' '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/image/usr/share/libtool/configure.ac'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 '../libtool-2.4.7/libltdl/aclocal.m4' '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/image/usr/share/libtool/aclocal.m4'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 '../libtool-2.4.7/libltdl/Makefile.in' '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/image/usr/share/libtool/Makefile.in'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 '../libtool-2.4.7/libltdl/config-h.in' '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/image/usr/share/libtool/config-h.in'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 '../libtool-2.4.7/libltdl/configure' '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/image/usr/share/libtool/configure'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 '../libtool-2.4.7/libltdl/libltdl/lt__alloc.h' '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/image/usr/share/libtool/libltdl/lt__alloc.h'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 '../libtool-2.4.7/libltdl/libltdl/lt__argz_.h' '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/image/usr/share/libtool/libltdl/lt__argz_.h'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 '../libtool-2.4.7/libltdl/libltdl/lt__dirent.h' '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/image/usr/share/libtool/libltdl/lt__dirent.h'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 '../libtool-2.4.7/libltdl/libltdl/lt__glibc.h' '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/image/usr/share/libtool/libltdl/lt__glibc.h'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 '../libtool-2.4.7/libltdl/libltdl/lt__private.h' '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/image/usr/share/libtool/libltdl/lt__private.h'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 '../libtool-2.4.7/libltdl/libltdl/lt__strl.h' '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/image/usr/share/libtool/libltdl/lt__strl.h'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 '../libtool-2.4.7/libltdl/libltdl/lt_dlloader.h' '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/image/usr/share/libtool/libltdl/lt_dlloader.h'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 '../libtool-2.4.7/libltdl/libltdl/lt_error.h' '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/image/usr/share/libtool/libltdl/lt_error.h'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 '../libtool-2.4.7/libltdl/libltdl/lt_system.h' '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/image/usr/share/libtool/libltdl/lt_system.h'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 '../libtool-2.4.7/libltdl/libltdl/slist.h' '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/image/usr/share/libtool/libltdl/slist.h'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 '../libtool-2.4.7/libltdl/loaders/dld_link.c' '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/image/usr/share/libtool/loaders/dld_link.c'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 '../libtool-2.4.7/libltdl/loaders/dlopen.c' '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/image/usr/share/libtool/loaders/dlopen.c'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 '../libtool-2.4.7/libltdl/loaders/dyld.c' '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/image/usr/share/libtool/loaders/dyld.c'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 '../libtool-2.4.7/libltdl/loaders/load_add_on.c' '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/image/usr/share/libtool/loaders/load_add_on.c'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 '../libtool-2.4.7/libltdl/loaders/loadlibrary.c' '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/image/usr/share/libtool/loaders/loadlibrary.c'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 '../libtool-2.4.7/libltdl/loaders/preopen.c' '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/image/usr/share/libtool/loaders/preopen.c'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 '../libtool-2.4.7/libltdl/loaders/shl_load.c' '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/image/usr/share/libtool/loaders/shl_load.c'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 '../libtool-2.4.7/libltdl/lt__alloc.c' '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/image/usr/share/libtool/lt__alloc.c'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 '../libtool-2.4.7/libltdl/lt__argz.c' '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/image/usr/share/libtool/lt__argz.c'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 '../libtool-2.4.7/libltdl/lt__dirent.c' '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/image/usr/share/libtool/lt__dirent.c'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 '../libtool-2.4.7/libltdl/lt__strl.c' '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/image/usr/share/libtool/lt__strl.c'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 '../libtool-2.4.7/libltdl/lt_dlloader.c' '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/image/usr/share/libtool/lt_dlloader.c'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 '../libtool-2.4.7/libltdl/lt_error.c' '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/image/usr/share/libtool/lt_error.c'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 '../libtool-2.4.7/libltdl/ltdl.c' '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/image/usr/share/libtool/ltdl.c'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 '../libtool-2.4.7/libltdl/ltdl.h' '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/image/usr/share/libtool/ltdl.h'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 '../libtool-2.4.7/libltdl/ltdl.mk' '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/image/usr/share/libtool/ltdl.mk'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 '../libtool-2.4.7/libltdl/slist.c' '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/image/usr/share/libtool/slist.c'
+chmod a+x '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/image/usr/share/libtool/configure'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/image/usr/include'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../libtool-2.4.7/libltdl/ltdl.h '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/image/usr/include'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/image/usr/share/info'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../libtool-2.4.7/doc/libtool.info ../libtool-2.4.7/doc/libtool.info-1 ../libtool-2.4.7/doc/libtool.info-2 '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/image/usr/share/info'
+ install-info --info-dir='/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/image/usr/share/info' '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/image/usr/share/info/libtool.info'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/image/usr/include/libltdl'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../libtool-2.4.7/libltdl/libltdl/lt_system.h ../libtool-2.4.7/libltdl/libltdl/lt_error.h ../libtool-2.4.7/libltdl/libltdl/lt_dlloader.h '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/image/usr/include/libltdl'
+make[3]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/build'
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/build'
+Making install in gnulib-tests
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/build/gnulib-tests'
+make  install-recursive
+make[3]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/build/gnulib-tests'
+Making install in .
+make[4]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/build/gnulib-tests'
+make[5]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/build/gnulib-tests'
+make[5]: Nothing to be done for 'install-exec-am'.
+make[5]: Nothing to be done for 'install-data-am'.
+make[5]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/build/gnulib-tests'
+make[4]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/build/gnulib-tests'
+make[3]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/build/gnulib-tests'
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/build/gnulib-tests'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libtool/2.4.7-r0/build'
+DEBUG: Shell function do_install finished
+DEBUG: Executing shell function remove_libtool_la
+DEBUG: Shell function remove_libtool_la finished

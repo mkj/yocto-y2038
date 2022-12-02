@@ -1,0 +1,111 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/systemd/systemd-systemctl-native.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-cross_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-native_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/autoconf/autoconf_2.71.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/automake/automake_1.16.5.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pkgconfig/pkgconfig_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: []
+NOTE: Skipping as already exists in sysroot: ['glibc', 'systemd-systemctl-native', 'gcc-cross-arm', 'gcc-runtime', 'libtool-cross', 'libtool-native', 'quilt-native', 'autoconf-native', 'automake-native', 'patch-native', 'pkgconfig-native', 'pseudo-native', 'gnu-config-native', 'm4-native', 'texinfo-dummy-native', 'mpfr-native', 'gmp-native', 'zstd-native', 'xz-native', 'binutils-cross-arm', 'linux-libc-headers', 'libmpc-native', 'zlib-native', 'flex-native', 'attr-native', 'libgcc', 'gettext-minimal-native']
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function autotools_aclocals
+DEBUG: SITE files ['endian-little', 'bit-32', 'arm-common', 'arm-32', 'common-linux', 'common-glibc', 'arm-linux', 'arm-linux-gnueabi', 'common']
+DEBUG: Python function autotools_aclocals finished
+DEBUG: Executing shell function do_install
+NOTE: make -j 1 DESTDIR=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/image install
+Making install in libiptc
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build/libiptc'
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build/libiptc'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/image/usr/lib'
+ /bin/bash ../libtool   --mode=install /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c   libip4tc.la libip6tc.la '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/image/usr/lib'
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c .libs/libip4tc.so.2.0.0 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/image/usr/lib/libip4tc.so.2.0.0
+libtool: install: (cd /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/image/usr/lib && { ln -s -f libip4tc.so.2.0.0 libip4tc.so.2 || { rm -f libip4tc.so.2 && ln -s libip4tc.so.2.0.0 libip4tc.so.2; }; })
+libtool: install: (cd /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/image/usr/lib && { ln -s -f libip4tc.so.2.0.0 libip4tc.so || { rm -f libip4tc.so && ln -s libip4tc.so.2.0.0 libip4tc.so; }; })
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c .libs/libip4tc.lai /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/image/usr/lib/libip4tc.la
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c .libs/libip6tc.so.2.0.0 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/image/usr/lib/libip6tc.so.2.0.0
+libtool: install: (cd /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/image/usr/lib && { ln -s -f libip6tc.so.2.0.0 libip6tc.so.2 || { rm -f libip6tc.so.2 && ln -s libip6tc.so.2.0.0 libip6tc.so.2; }; })
+libtool: install: (cd /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/image/usr/lib && { ln -s -f libip6tc.so.2.0.0 libip6tc.so || { rm -f libip6tc.so && ln -s libip6tc.so.2.0.0 libip6tc.so; }; })
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c .libs/libip6tc.lai /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/image/usr/lib/libip6tc.la
+libtool: warning: remember to run 'libtool --finish /usr/lib'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/image/usr/lib/pkgconfig'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 libiptc.pc libip4tc.pc libip6tc.pc '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/image/usr/lib/pkgconfig'
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build/libiptc'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build/libiptc'
+Making install in libxtables
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build/libxtables'
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build/libxtables'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/image/usr/lib'
+ /bin/bash ../libtool   --mode=install /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c   libxtables.la '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/image/usr/lib'
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c .libs/libxtables.so.12.6.0 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/image/usr/lib/libxtables.so.12.6.0
+libtool: install: (cd /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/image/usr/lib && { ln -s -f libxtables.so.12.6.0 libxtables.so.12 || { rm -f libxtables.so.12 && ln -s libxtables.so.12.6.0 libxtables.so.12; }; })
+libtool: install: (cd /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/image/usr/lib && { ln -s -f libxtables.so.12.6.0 libxtables.so || { rm -f libxtables.so && ln -s libxtables.so.12.6.0 libxtables.so; }; })
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c .libs/libxtables.lai /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/image/usr/lib/libxtables.la
+libtool: warning: remember to run 'libtool --finish /usr/lib'
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build/libxtables'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build/libxtables'
+Making install in include
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build/include'
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build/include'
+make[2]: Nothing to be done for 'install-exec-am'.
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/image/usr/include'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/image/usr/include/libiptc'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644  ../../iptables-1.8.8/include/libiptc/ipt_kernel_headers.h ../../iptables-1.8.8/include/libiptc/libiptc.h ../../iptables-1.8.8/include/libiptc/libip6tc.h ../../iptables-1.8.8/include/libiptc/libxtc.h ../../iptables-1.8.8/include/libiptc/xtcshared.h '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/image/usr/include/libiptc'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644  ../../iptables-1.8.8/include/xtables.h xtables-version.h '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/image/usr/include/.'
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build/include'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build/include'
+Making install in utils
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build/utils'
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build/utils'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/image/usr/sbin'
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build/utils'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build/utils'
+Making install in extensions
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build/extensions'
+if test -n "libxt_AUDIT.so libxt_CHECKSUM.so libxt_CLASSIFY.so libxt_CONNMARK.so libxt_CONNSECMARK.so libxt_CT.so libxt_DNAT.so libxt_DSCP.so libxt_HMARK.so libxt_IDLETIMER.so libxt_LED.so libxt_MARK.so libxt_NFLOG.so libxt_NFQUEUE.so libxt_RATEEST.so libxt_SECMARK.so libxt_SET.so libxt_SYNPROXY.so libxt_TCPMSS.so libxt_TCPOPTSTRIP.so libxt_TEE.so libxt_TOS.so libxt_TPROXY.so libxt_TRACE.so libxt_addrtype.so libxt_bpf.so libxt_cgroup.so libxt_cluster.so libxt_comment.so libxt_connbytes.so libxt_connlimit.so libxt_connmark.so libxt_conntrack.so libxt_cpu.so libxt_dccp.so libxt_devgroup.so libxt_dscp.so libxt_ecn.so libxt_esp.so libxt_hashlimit.so libxt_helper.so libxt_ipcomp.so libxt_iprange.so libxt_ipvs.so libxt_length.so libxt_limit.so libxt_mac.so libxt_mark.so libxt_multiport.so libxt_nfacct.so libxt_osf.so libxt_owner.so libxt_physdev.so libxt_pkttype.so libxt_policy.so libxt_quota.so libxt_rateest.so libxt_recent.so libxt_rpfilter.so libxt_sctp.so libxt_set.so libxt_socket.so libxt_standard.so libxt_statistic.so libxt_string.so libxt_tcp.so libxt_tcpmss.so libxt_time.so libxt_tos.so libxt_u32.so libxt_udp.so  libipt_CLUSTERIP.so libipt_ECN.so libipt_LOG.so libipt_MASQUERADE.so libipt_NETMAP.so libipt_REJECT.so libipt_SNAT.so libipt_TTL.so libipt_ULOG.so libipt_ah.so libipt_icmp.so libipt_realm.so libipt_ttl.so libip6t_DNPT.so libip6t_HL.so libip6t_LOG.so libip6t_MASQUERADE.so libip6t_NETMAP.so libip6t_REJECT.so libip6t_SNAT.so libip6t_SNPT.so libip6t_ah.so libip6t_dst.so libip6t_eui64.so libip6t_frag.so libip6t_hbh.so libip6t_hl.so libip6t_icmp6.so libip6t_ipv6header.so libip6t_mh.so libip6t_rt.so libip6t_srh.so "; then \
+	install -pm0755 libxt_AUDIT.so libxt_CHECKSUM.so libxt_CLASSIFY.so libxt_CONNMARK.so libxt_CONNSECMARK.so libxt_CT.so libxt_DNAT.so libxt_DSCP.so libxt_HMARK.so libxt_IDLETIMER.so libxt_LED.so libxt_MARK.so libxt_NFLOG.so libxt_NFQUEUE.so libxt_RATEEST.so libxt_SECMARK.so libxt_SET.so libxt_SYNPROXY.so libxt_TCPMSS.so libxt_TCPOPTSTRIP.so libxt_TEE.so libxt_TOS.so libxt_TPROXY.so libxt_TRACE.so libxt_addrtype.so libxt_bpf.so libxt_cgroup.so libxt_cluster.so libxt_comment.so libxt_connbytes.so libxt_connlimit.so libxt_connmark.so libxt_conntrack.so libxt_cpu.so libxt_dccp.so libxt_devgroup.so libxt_dscp.so libxt_ecn.so libxt_esp.so libxt_hashlimit.so libxt_helper.so libxt_ipcomp.so libxt_iprange.so libxt_ipvs.so libxt_length.so libxt_limit.so libxt_mac.so libxt_mark.so libxt_multiport.so libxt_nfacct.so libxt_osf.so libxt_owner.so libxt_physdev.so libxt_pkttype.so libxt_policy.so libxt_quota.so libxt_rateest.so libxt_recent.so libxt_rpfilter.so libxt_sctp.so libxt_set.so libxt_socket.so libxt_standard.so libxt_statistic.so libxt_string.so libxt_tcp.so libxt_tcpmss.so libxt_time.so libxt_tos.so libxt_u32.so libxt_udp.so  libipt_CLUSTERIP.so libipt_ECN.so libipt_LOG.so libipt_MASQUERADE.so libipt_NETMAP.so libipt_REJECT.so libipt_SNAT.so libipt_TTL.so libipt_ULOG.so libipt_ah.so libipt_icmp.so libipt_realm.so libipt_ttl.so libip6t_DNPT.so libip6t_HL.so libip6t_LOG.so libip6t_MASQUERADE.so libip6t_NETMAP.so libip6t_REJECT.so libip6t_SNAT.so libip6t_SNPT.so libip6t_ah.so libip6t_dst.so libip6t_eui64.so libip6t_frag.so libip6t_hbh.so libip6t_hl.so libip6t_icmp6.so libip6t_ipv6header.so libip6t_mh.so libip6t_rt.so libip6t_srh.so  "/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/image/usr/lib/xtables/"; \
+fi;
+if test -n "libxt_NOTRACK.so libxt_state.so libxt_REDIRECT.so"; then \
+	cp -P libxt_NOTRACK.so libxt_state.so libxt_REDIRECT.so "/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/image/usr/lib/xtables/"; \
+fi;
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build/extensions'
+Making install in iptables
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build/iptables'
+make  install-am
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build/iptables'
+make[3]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build/iptables'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/image/usr/sbin'
+  /bin/bash ../libtool   --mode=install /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c xtables-legacy-multi '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/image/usr/sbin'
+libtool: warning: '../libiptc/libip4tc.la' has not been installed in '/usr/lib'
+libtool: warning: '../libiptc/libip6tc.la' has not been installed in '/usr/lib'
+libtool: warning: '../libxtables/libxtables.la' has not been installed in '/usr/lib'
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c .libs/xtables-legacy-multi /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/image/usr/sbin/xtables-legacy-multi
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/image/usr/sbin'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c ../../iptables-1.8.8/iptables/iptables-apply '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/image/usr/sbin'
+make  install-exec-hook
+make[4]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build/iptables'
+if test -z "/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/image"; then /sbin/ldconfig; fi;
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -dm0755 "/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/image/usr/bin";
+for i in iptables-xml; do ln -s -f "/usr/sbin/xtables-legacy-multi" "/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/image/usr/bin/$i"; done;
+for i in iptables-legacy iptables-legacy-restore iptables-legacy-save iptables iptables-restore iptables-save; do ln -s -f xtables-legacy-multi "/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/image/usr/sbin/$i"; done;
+for i in ip6tables-legacy ip6tables-legacy-restore ip6tables-legacy-save ip6tables ip6tables-restore ip6tables-save; do ln -s -f xtables-legacy-multi "/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/image/usr/sbin/$i"; done;
+for i in ; do ln -s -f xtables-nft-multi "/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/image/usr/sbin/$i"; done;
+ln -s -f iptables-apply "/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/image/usr/sbin/ip6tables-apply"
+make[4]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build/iptables'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/image/usr/share/man/man1'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 iptables-xml.1 '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/image/usr/share/man/man1'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/image/usr/share/man/man8'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 iptables.8 iptables-restore.8 iptables-save.8 ../../iptables-1.8.8/iptables/ip6tables.8 ../../iptables-1.8.8/iptables/ip6tables-restore.8 ../../iptables-1.8.8/iptables/ip6tables-save.8 iptables-extensions.8 iptables-apply.8 ../../iptables-1.8.8/iptables/ip6tables-apply.8 '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/image/usr/share/man/man8'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/image/usr/lib/pkgconfig'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 xtables.pc '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/image/usr/lib/pkgconfig'
+make[3]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build/iptables'
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build/iptables'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build/iptables'
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build'
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build'
+DEBUG: Shell function do_install finished
+DEBUG: Executing shell function remove_libtool_la
+DEBUG: Shell function remove_libtool_la finished
+DEBUG: Executing python function rm_sysvinit_initddir
+DEBUG: Python function rm_sysvinit_initddir finished
+DEBUG: Executing python function rm_systemd_unitdir
+DEBUG: Python function rm_systemd_unitdir finished

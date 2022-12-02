@@ -1,0 +1,75 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['virtual:native:/home/matt/src/openbmc/meta/recipes-extended/xz/xz_5.2.7.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: ['xz-native', 'gettext-minimal-native', 'libtool-native', 'texinfo-dummy-native']
+NOTE: Skipping as already exists in sysroot: []
+DEBUG: sed -e 's:^[^/]*/:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/linux-libc-headers/5.19-r0/recipe-sysroot-native/:g' /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/libtool-native/fixmepath | xargs sed -i -e 's:FIXMESTAGINGDIRTARGET:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/linux-libc-headers/5.19-r0/recipe-sysroot:g; s:FIXMESTAGINGDIRHOST:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/linux-libc-headers/5.19-r0/recipe-sysroot-native:g' -e 's:FIXME_PSEUDO_SYSROOT:/home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/pseudo-native:g' -e 's:FIXME_HOSTTOOLS_DIR:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:g' -e 's:FIXME_PKGDATA_DIR:/home/matt/tmp/build/obmc-y2038/tmp/pkgdata/evb-ast2600:g' -e 's:FIXME_PSEUDO_LOCALSTATEDIR:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/linux-libc-headers/5.19-r0/pseudo/:g' -e 's:FIXME_LOGFIFO:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/linux-libc-headers/5.19-r0/temp/fifo.1792765:g'
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function do_unpack
+DEBUG: Executing python function base_do_unpack
+NOTE: Unpacking /home/matt/tmp/build/obmc-y2038/downloads/linux-5.19.tar.xz to /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/linux-libc-headers/5.19-r0/
+DEBUG: Searching for 0001-scripts-Use-fixed-input-and-output-files-instead-of-.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-kernel/linux-libc-headers/linux-libc-headers-5.19/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-kernel/linux-libc-headers/linux-libc-headers/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-kernel/linux-libc-headers/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-kernel/linux-libc-headers/linux-libc-headers-5.19/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-kernel/linux-libc-headers/linux-libc-headers/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-kernel/linux-libc-headers/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-kernel/linux-libc-headers/linux-libc-headers-5.19/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-kernel/linux-libc-headers/linux-libc-headers/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-kernel/linux-libc-headers/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-kernel/linux-libc-headers/linux-libc-headers-5.19/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-kernel/linux-libc-headers/linux-libc-headers/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-kernel/linux-libc-headers/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-kernel/linux-libc-headers/linux-libc-headers-5.19/aspeed
+    /home/matt/src/openbmc/meta/recipes-kernel/linux-libc-headers/linux-libc-headers/aspeed
+    /home/matt/src/openbmc/meta/recipes-kernel/linux-libc-headers/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-kernel/linux-libc-headers/linux-libc-headers-5.19/armv7a
+    /home/matt/src/openbmc/meta/recipes-kernel/linux-libc-headers/linux-libc-headers/armv7a
+    /home/matt/src/openbmc/meta/recipes-kernel/linux-libc-headers/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-kernel/linux-libc-headers/linux-libc-headers-5.19/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-kernel/linux-libc-headers/linux-libc-headers/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-kernel/linux-libc-headers/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-kernel/linux-libc-headers/linux-libc-headers-5.19/arm
+    /home/matt/src/openbmc/meta/recipes-kernel/linux-libc-headers/linux-libc-headers/arm
+    /home/matt/src/openbmc/meta/recipes-kernel/linux-libc-headers/files/arm
+    /home/matt/src/openbmc/meta/recipes-kernel/linux-libc-headers/linux-libc-headers-5.19/
+    /home/matt/src/openbmc/meta/recipes-kernel/linux-libc-headers/linux-libc-headers/
+    /home/matt/src/openbmc/meta/recipes-kernel/linux-libc-headers/files/
+NOTE: Unpacking /home/matt/src/openbmc/meta/recipes-kernel/linux-libc-headers/linux-libc-headers/0001-scripts-Use-fixed-input-and-output-files-instead-of-.patch to /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/linux-libc-headers/5.19-r0/
+DEBUG: Searching for 0001-kbuild-install_headers.sh-Strip-_UAPI-from-if-define.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-kernel/linux-libc-headers/linux-libc-headers-5.19/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-kernel/linux-libc-headers/linux-libc-headers/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-kernel/linux-libc-headers/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-kernel/linux-libc-headers/linux-libc-headers-5.19/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-kernel/linux-libc-headers/linux-libc-headers/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-kernel/linux-libc-headers/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-kernel/linux-libc-headers/linux-libc-headers-5.19/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-kernel/linux-libc-headers/linux-libc-headers/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-kernel/linux-libc-headers/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-kernel/linux-libc-headers/linux-libc-headers-5.19/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-kernel/linux-libc-headers/linux-libc-headers/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-kernel/linux-libc-headers/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-kernel/linux-libc-headers/linux-libc-headers-5.19/aspeed
+    /home/matt/src/openbmc/meta/recipes-kernel/linux-libc-headers/linux-libc-headers/aspeed
+    /home/matt/src/openbmc/meta/recipes-kernel/linux-libc-headers/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-kernel/linux-libc-headers/linux-libc-headers-5.19/armv7a
+    /home/matt/src/openbmc/meta/recipes-kernel/linux-libc-headers/linux-libc-headers/armv7a
+    /home/matt/src/openbmc/meta/recipes-kernel/linux-libc-headers/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-kernel/linux-libc-headers/linux-libc-headers-5.19/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-kernel/linux-libc-headers/linux-libc-headers/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-kernel/linux-libc-headers/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-kernel/linux-libc-headers/linux-libc-headers-5.19/arm
+    /home/matt/src/openbmc/meta/recipes-kernel/linux-libc-headers/linux-libc-headers/arm
+    /home/matt/src/openbmc/meta/recipes-kernel/linux-libc-headers/files/arm
+    /home/matt/src/openbmc/meta/recipes-kernel/linux-libc-headers/linux-libc-headers-5.19/
+    /home/matt/src/openbmc/meta/recipes-kernel/linux-libc-headers/linux-libc-headers/
+    /home/matt/src/openbmc/meta/recipes-kernel/linux-libc-headers/files/
+NOTE: Unpacking /home/matt/src/openbmc/meta/recipes-kernel/linux-libc-headers/linux-libc-headers/0001-kbuild-install_headers.sh-Strip-_UAPI-from-if-define.patch to /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/linux-libc-headers/5.19-r0/
+DEBUG: Python function base_do_unpack finished
+DEBUG: Python function do_unpack finished
+DEBUG: Executing python function create_source_date_epoch_stamp
+DEBUG: Newest file found: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/linux-libc-headers/5.19-r0/linux-5.19/MAINTAINERS
+DEBUG: SOURCE_DATE_EPOCH: 1659301381
+DEBUG: Python function create_source_date_epoch_stamp finished
+DEBUG: Executing python function do_qa_unpack
+DEBUG: Python function do_qa_unpack finished

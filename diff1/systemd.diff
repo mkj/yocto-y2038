@@ -1,0 +1,81 @@
+3749c3749
+< ../git/src/basic/stat-util.c:409:38: warning: conversion to 'unsigned int' from '__syscall_slong_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../git/src/basic/stat-util.c:409:38: warning: conversion to 'unsigned int' from 'long int' may change the sign of the result [-Wsign-conversion]
+3752c3752
+< ../git/src/basic/stat-util.c:411:38: warning: conversion to 'unsigned int' from '__syscall_slong_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../git/src/basic/stat-util.c:411:38: warning: conversion to 'unsigned int' from 'long int' may change the sign of the result [-Wsign-conversion]
+3755c3755
+< ../git/src/basic/stat-util.c:413:38: warning: conversion to 'unsigned int' from '__syscall_slong_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../git/src/basic/stat-util.c:413:38: warning: conversion to 'unsigned int' from 'long int' may change the sign of the result [-Wsign-conversion]
+4282c4282
+< ../git/src/basic/time-util.c:211:62: warning: conversion to 'long long unsigned int' from '__syscall_slong_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../git/src/basic/time-util.c:211:62: warning: conversion to 'long long unsigned int' from 'long int' may change the sign of the result [-Wsign-conversion]
+4286c4286
+< ../git/src/basic/time-util.c:225:48: warning: conversion to 'long long unsigned int' from '__syscall_slong_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../git/src/basic/time-util.c:225:48: warning: conversion to 'long long unsigned int' from 'long int' may change the sign of the result [-Wsign-conversion]
+4290c4290
+< ../git/src/basic/time-util.c:269:47: warning: conversion to 'long long unsigned int' from '__suseconds_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../git/src/basic/time-util.c:269:47: warning: conversion to 'long long unsigned int' from '__suseconds64_t' {aka 'long long int'} may change the sign of the result [-Wsign-conversion]
+10824,10827d10823
+< ../git/src/shared/calendarspec.c: In function 'parse_date':
+< ../git/src/shared/calendarspec.c:753:24: warning: conversion to 'time_t' {aka 'long int'} from 'long unsigned int' may change the sign of the result [-Wsign-conversion]
+<   753 |                 time = value;
+<       |                        ^~~~~
+37481,37486d37476
+< ../git/src/resolve/resolved-dns-rr.c:1007:83: warning: conversion to 'time_t' {aka 'long int'} from 'uint32_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+<  1007 |                 r = format_timestamp_dns(expiration, sizeof(expiration), rr->rrsig.expiration);
+<       |                                                                          ~~~~~~~~~^~~~~~~~~~~
+< ../git/src/resolve/resolved-dns-rr.c:1011:81: warning: conversion to 'time_t' {aka 'long int'} from 'uint32_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+<  1011 |                 r = format_timestamp_dns(inception, sizeof(inception), rr->rrsig.inception);
+<       |                                                                        ~~~~~~~~~^~~~~~~~~~
+37995a37986,37989
+> ../git/src/timesync/timesyncd-manager.c: In function 'ts_to_d':
+> ../git/src/timesync/timesyncd-manager.c:77:27: warning: conversion from '__time64_t' {aka 'long long int'} to 'double' may change value [-Wconversion]
+>    77 |         return ts->tv_sec + (1.0e-9 * ts->tv_nsec);
+>       |                           ^
+37997c37991
+< ../git/src/timesync/timesyncd-manager.c:137:55: warning: conversion to 'uint32_t' {aka 'unsigned int'} from '__syscall_slong_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../git/src/timesync/timesyncd-manager.c:137:55: warning: conversion to 'uint32_t' {aka 'unsigned int'} from 'long int' may change the sign of the result [-Wsign-conversion]
+38001c37995
+< ../git/src/timesync/timesyncd-manager.c:256:35: warning: conversion from 'double' to 'long int' may change value [-Wfloat-conversion]
+---
+> ../git/src/timesync/timesyncd-manager.c:256:35: warning: conversion from 'double' to 'long long int' may change value [-Wfloat-conversion]
+38006,38009c38000
+< ../git/src/timesync/timesyncd-manager.c:257:37: warning: conversion to 'long int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+<   257 |                         .constant = log2i(m->poll_interval_usec / USEC_PER_SEC) - 4,
+<       |                                     ^~~~~
+< ../git/src/timesync/timesyncd-manager.c:267:41: warning: conversion from 'double' to 'long int' may change value [-Wfloat-conversion]
+---
+> ../git/src/timesync/timesyncd-manager.c:267:41: warning: conversion from 'double' to 'long long int' may change value [-Wfloat-conversion]
+38012c38003
+< ../git/src/timesync/timesyncd-manager.c:273:42: warning: conversion to 'long long unsigned int' from '__suseconds_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../git/src/timesync/timesyncd-manager.c:273:42: warning: conversion to 'long long unsigned int' from '__suseconds64_t' {aka 'long long int'} may change the sign of the result [-Wsign-conversion]
+38014a38006,38014
+> In file included from ../git/src/basic/siphash24.h:11,
+>                  from ../git/src/basic/hash-funcs.h:6,
+>                  from ../git/src/basic/hashmap.h:8:
+> ../git/src/basic/time-util.h:48:23: warning: conversion to '__suseconds64_t' {aka 'long long int'} from 'long long unsigned int' may change the sign of the result [-Wsign-conversion]
+>    48 | #define NSEC_PER_SEC  ((nsec_t) 1000000000ULL)
+>       |                       ^
+> ../git/src/timesync/timesyncd-manager.c:273:45: note: in expansion of macro 'NSEC_PER_SEC'
+>   273 |                         tmx.time.tv_usec += NSEC_PER_SEC;
+>       |                                             ^~~~~~~~~~~~
+38016c38016
+< ../git/src/timesync/timesyncd-manager.c:308:53: warning: conversion to 'long long unsigned int' from '__suseconds_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../git/src/timesync/timesyncd-manager.c:308:53: warning: conversion to 'long long unsigned int' from '__suseconds64_t' {aka 'long long int'} may change the sign of the result [-Wsign-conversion]
+56709,56714d56708
+< ../git/src/resolve/resolved-dns-rr.c:1007:83: warning: conversion to 'time_t' {aka 'long int'} from 'uint32_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+<  1007 |                 r = format_timestamp_dns(expiration, sizeof(expiration), rr->rrsig.expiration);
+<       |                                                                          ~~~~~~~~~^~~~~~~~~~~
+< ../git/src/resolve/resolved-dns-rr.c:1011:81: warning: conversion to 'time_t' {aka 'long int'} from 'uint32_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+<  1011 |                 r = format_timestamp_dns(inception, sizeof(inception), rr->rrsig.inception);
+<       |                                                                        ~~~~~~~~~^~~~~~~~~~

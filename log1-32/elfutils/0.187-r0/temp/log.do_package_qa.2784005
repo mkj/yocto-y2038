@@ -1,0 +1,86 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-devtools/binutils/binutils-cross_2.39.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: []
+NOTE: Skipping as already exists in sysroot: ['binutils-cross-arm', 'pseudo-native', 'gnu-config-native', 'flex-native', 'zlib-native', 'texinfo-dummy-native', 'm4-native', 'libtool-native', 'gettext-minimal-native']
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function sstate_task_prefunc
+DEBUG: Python function sstate_task_prefunc finished
+DEBUG: Executing python function do_package_qa
+NOTE: DO PACKAGE QA
+DEBUG: Executing python function read_subpackage_metadata
+DEBUG: Python function read_subpackage_metadata finished
+NOTE: Checking Package: elfutils-locale-ja
+NOTE: Checking Package: elfutils-binutils
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/packages-split/elfutils-binutils/usr/bin/eu-readelf
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/packages-split/elfutils-binutils/usr/bin/eu-addr2line
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/packages-split/elfutils-binutils/usr/bin/eu-size
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/packages-split/elfutils-binutils/usr/bin/eu-strip
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/packages-split/elfutils-binutils/usr/bin/eu-nm
+NOTE: Checking Package: elfutils-doc
+NOTE: Checking Package: elfutils-locale-en+quot
+NOTE: Package libdw skipping QA tests: {'dev-so'}
+NOTE: Checking Package: libdw
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/packages-split/libdw/usr/lib/libdw-0.187.so
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/packages-split/libdw/usr/lib/libdw.so.1
+NOTE: Checking Package: elfutils-locale-uk
+NOTE: Checking Package: elfutils-src
+NOTE: Checking Package: libelf
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/packages-split/libelf/usr/lib/libelf-0.187.so
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/packages-split/libelf/usr/lib/libelf.so.1
+NOTE: Checking Package: elfutils-dbg
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/packages-split/elfutils-dbg/usr/lib/.debug/libelf-0.187.so
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/packages-split/elfutils-dbg/usr/lib/.debug/libasm-0.187.so
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/packages-split/elfutils-dbg/usr/lib/.debug/libdw-0.187.so
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/packages-split/elfutils-dbg/usr/bin/.debug/eu-ar
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/packages-split/elfutils-dbg/usr/bin/.debug/eu-unstrip
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/packages-split/elfutils-dbg/usr/bin/.debug/eu-findtextrel
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/packages-split/elfutils-dbg/usr/bin/.debug/eu-strip
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/packages-split/elfutils-dbg/usr/bin/.debug/eu-readelf
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/packages-split/elfutils-dbg/usr/bin/.debug/eu-elflint
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/packages-split/elfutils-dbg/usr/bin/.debug/eu-elfclassify
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/packages-split/elfutils-dbg/usr/bin/.debug/eu-nm
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/packages-split/elfutils-dbg/usr/bin/.debug/eu-strings
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/packages-split/elfutils-dbg/usr/bin/.debug/eu-ranlib
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/packages-split/elfutils-dbg/usr/bin/.debug/eu-size
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/packages-split/elfutils-dbg/usr/bin/.debug/eu-addr2line
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/packages-split/elfutils-dbg/usr/bin/.debug/eu-elfcmp
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/packages-split/elfutils-dbg/usr/bin/.debug/eu-elfcompress
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/packages-split/elfutils-dbg/usr/bin/.debug/eu-objdump
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/packages-split/elfutils-dbg/usr/bin/.debug/eu-stack
+NOTE: Checking Package: elfutils-staticdev
+NOTE: Checking Package: elfutils
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/packages-split/elfutils/usr/bin/eu-unstrip
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/packages-split/elfutils/usr/bin/eu-elfclassify
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/packages-split/elfutils/usr/bin/eu-elflint
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/packages-split/elfutils/usr/bin/eu-stack
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/packages-split/elfutils/usr/bin/eu-findtextrel
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/packages-split/elfutils/usr/bin/eu-elfcompress
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/packages-split/elfutils/usr/bin/eu-strings
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/packages-split/elfutils/usr/bin/eu-ranlib
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/packages-split/elfutils/usr/bin/eu-ar
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/packages-split/elfutils/usr/bin/eu-elfcmp
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/packages-split/elfutils/usr/bin/eu-objdump
+NOTE: Checking Package: elfutils-locale-en+boldquot
+NOTE: Checking Package: elfutils-locale-es
+NOTE: Checking Package: libasm
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/packages-split/libasm/usr/lib/libasm-0.187.so
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/packages-split/libasm/usr/lib/libasm.so.1
+NOTE: Checking Package: elfutils-dev
+NOTE: Checking Package: libdebuginfod
+NOTE: Checking Package: elfutils-locale-de
+NOTE: Checking Package: elfutils-locale-pl
+DEBUG: Python function do_package_qa finished
+DEBUG: Executing python function sstate_task_postfunc
+NOTE: Using umask 0o002 (not 22) for sstate packaging
+DEBUG: Executing python function target_add_sysroot_deps
+DEBUG: Python function target_add_sysroot_deps finished
+DEBUG: Executing python function sstate_hardcode_path
+NOTE: Removing hardcoded paths from sstate package: 'find /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/sstate-build-package_qa/ \( -name "*.la" -o -name "*-config" -o -name "*_config" -o -name "postinst-*" \) -type f | xargs grep -l -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/recipe-sysroot' -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/recipe-sysroot-native' -e '/home/matt/tmp/build/obmc-y2038/tmp/hosttools' | tee /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/sstate-build-package_qa/fixmepath | xargs --no-run-if-empty sed -i -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/recipe-sysroot-native:FIXMESTAGINGDIRHOST:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/elfutils/0.187-r0/recipe-sysroot:FIXMESTAGINGDIRTARGET:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:FIXME_HOSTTOOLS_DIR:g''
+DEBUG: Python function sstate_hardcode_path finished
+DEBUG: Executing python function sstate_report_unihash
+DEBUG: Python function sstate_report_unihash finished
+DEBUG: Executing shell function sstate_create_package
+DEBUG: Shell function sstate_create_package finished
+DEBUG: Executing python function sstate_hardcode_path_unpack
+DEBUG: Python function sstate_hardcode_path_unpack finished
+DEBUG: Python function sstate_task_postfunc finished

@@ -1,0 +1,131 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-devtools/binutils/binutils-cross_2.39.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: []
+NOTE: Skipping as already exists in sysroot: ['binutils-cross-arm', 'pseudo-native', 'texinfo-dummy-native', 'flex-native', 'gnu-config-native', 'zlib-native', 'gettext-minimal-native', 'm4-native', 'libtool-native']
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function sstate_task_prefunc
+DEBUG: Python function sstate_task_prefunc finished
+DEBUG: Executing python function do_package_qa
+NOTE: DO PACKAGE QA
+DEBUG: Executing python function read_subpackage_metadata
+DEBUG: Python function read_subpackage_metadata finished
+NOTE: Checking Package: krb5-dbg
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/packages-split/krb5-dbg/usr/bin/.debug/gss-client
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/packages-split/krb5-dbg/usr/bin/.debug/ktutil
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/packages-split/krb5-dbg/usr/bin/.debug/kadmin
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/packages-split/krb5-dbg/usr/bin/.debug/kdestroy
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/packages-split/krb5-dbg/usr/bin/.debug/klist
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/packages-split/krb5-dbg/usr/bin/.debug/ksu
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/packages-split/krb5-dbg/usr/bin/.debug/kvno
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/packages-split/krb5-dbg/usr/bin/.debug/kinit
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/packages-split/krb5-dbg/usr/bin/.debug/kswitch
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/packages-split/krb5-dbg/usr/bin/.debug/kpasswd
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/packages-split/krb5-dbg/usr/sbin/.debug/gss-server
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/packages-split/krb5-dbg/usr/sbin/.debug/krb5kdc
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/packages-split/krb5-dbg/usr/sbin/.debug/kpropd
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/packages-split/krb5-dbg/usr/sbin/.debug/kproplog
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/packages-split/krb5-dbg/usr/sbin/.debug/kadmind
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/packages-split/krb5-dbg/usr/sbin/.debug/kadmin.local
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/packages-split/krb5-dbg/usr/sbin/.debug/kdb5_util
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/packages-split/krb5-dbg/usr/sbin/.debug/kprop
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/packages-split/krb5-dbg/usr/lib/krb5/plugins/tls/.debug/k5tls.so
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/packages-split/krb5-dbg/usr/lib/krb5/plugins/preauth/.debug/spake.so
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/packages-split/krb5-dbg/usr/lib/krb5/plugins/preauth/.debug/test.so
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/packages-split/krb5-dbg/usr/lib/krb5/plugins/preauth/.debug/pkinit.so
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/packages-split/krb5-dbg/usr/lib/krb5/plugins/preauth/.debug/otp.so
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/packages-split/krb5-dbg/usr/lib/krb5/plugins/kdb/.debug/db2.so
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/packages-split/krb5-dbg/usr/lib/.debug/libkrb5.so.3.3
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/packages-split/krb5-dbg/usr/lib/.debug/libkadm5srv_mit.so.11.0
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/packages-split/krb5-dbg/usr/lib/.debug/libverto.so.0.0
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/packages-split/krb5-dbg/usr/lib/.debug/libgssrpc.so.4.2
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/packages-split/krb5-dbg/usr/lib/.debug/libkdb5.so.9.0
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/packages-split/krb5-dbg/usr/lib/.debug/libkrb5support.so.0.1
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/packages-split/krb5-dbg/usr/lib/.debug/libgssapi_krb5.so.2.2
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/packages-split/krb5-dbg/usr/lib/.debug/libkrad.so.0.0
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/packages-split/krb5-dbg/usr/lib/.debug/libk5crypto.so.3.1
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/packages-split/krb5-dbg/usr/lib/.debug/libkadm5clnt_mit.so.11.0
+NOTE: Checking Package: libverto
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/packages-split/libverto/usr/lib/libverto.so.0.0
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/packages-split/libverto/usr/lib/libverto.so.0
+NOTE: Checking Package: libkrad
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/packages-split/libkrad/usr/lib/libkrad.so.0
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/packages-split/libkrad/usr/lib/libkrad.so.0.0
+NOTE: Checking Package: libkrb5support
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/packages-split/libkrb5support/usr/lib/libkrb5support.so.0.1
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/packages-split/libkrb5support/usr/lib/libkrb5support.so.0
+NOTE: Checking Package: libkadm5srv-mit
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/packages-split/libkadm5srv-mit/usr/lib/libkadm5srv_mit.so.11.0
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/packages-split/libkadm5srv-mit/usr/lib/libkadm5srv_mit.so.11
+NOTE: Checking Package: libkadm5clnt-mit
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/packages-split/libkadm5clnt-mit/usr/lib/libkadm5clnt_mit.so.11
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/packages-split/libkadm5clnt-mit/usr/lib/libkadm5clnt_mit.so.11.0
+NOTE: Checking Package: libk5crypto
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/packages-split/libk5crypto/usr/lib/libk5crypto.so.3
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/packages-split/libk5crypto/usr/lib/libk5crypto.so.3.1
+NOTE: Checking Package: krb5-pkinit
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/packages-split/krb5-pkinit/usr/lib/krb5/plugins/preauth/pkinit.so
+NOTE: Checking Package: krb5
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/packages-split/krb5/usr/lib/krb5/plugins/preauth/test.so
+NOTE: Checking Package: krb5-src
+NOTE: Checking Package: libgssapi-krb5
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/packages-split/libgssapi-krb5/usr/lib/libgssapi_krb5.so.2.2
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/packages-split/libgssapi-krb5/usr/lib/libgssapi_krb5.so.2
+NOTE: Checking Package: krb5-otp
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/packages-split/krb5-otp/usr/lib/krb5/plugins/preauth/otp.so
+NOTE: Checking Package: krb5-k5tls
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/packages-split/krb5-k5tls/usr/lib/krb5/plugins/tls/k5tls.so
+NOTE: Checking Package: krb5-doc
+NOTE: Checking Package: krb5-gss-samples
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/packages-split/krb5-gss-samples/usr/sbin/gss-server
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/packages-split/krb5-gss-samples/usr/bin/gss-client
+NOTE: Checking Package: libkdb5
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/packages-split/libkdb5/usr/lib/libkdb5.so.9
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/packages-split/libkdb5/usr/lib/libkdb5.so.9.0
+NOTE: Checking Package: krb5-staticdev
+NOTE: Checking Package: krb5-spake
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/packages-split/krb5-spake/usr/lib/krb5/plugins/preauth/spake.so
+NOTE: Checking Package: krb5-kdc
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/packages-split/krb5-kdc/usr/lib/krb5/plugins/kdb/db2.so
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/packages-split/krb5-kdc/usr/sbin/kproplog
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/packages-split/krb5-kdc/usr/sbin/krb5kdc
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/packages-split/krb5-kdc/usr/sbin/kdb5_util
+NOTE: Checking Package: krb5-kdc-ldap
+NOTE: Checking Package: libkrb5
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/packages-split/libkrb5/usr/lib/libkrb5.so.3.3
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/packages-split/libkrb5/usr/lib/libkrb5.so.3
+NOTE: Checking Package: krb5-dev
+NOTE: Checking Package: krb5-user
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/packages-split/krb5-user/usr/bin/kinit
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/packages-split/krb5-user/usr/bin/ksu
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/packages-split/krb5-user/usr/bin/klist
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/packages-split/krb5-user/usr/bin/kpasswd
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/packages-split/krb5-user/usr/bin/kswitch
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/packages-split/krb5-user/usr/bin/kadmin
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/packages-split/krb5-user/usr/bin/kdestroy
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/packages-split/krb5-user/usr/bin/ktutil
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/packages-split/krb5-user/usr/bin/kvno
+NOTE: Checking Package: krb5-kpropd
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/packages-split/krb5-kpropd/usr/sbin/kpropd
+NOTE: Checking Package: krb5-locale
+NOTE: Checking Package: libgssrpc
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/packages-split/libgssrpc/usr/lib/libgssrpc.so.4
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/packages-split/libgssrpc/usr/lib/libgssrpc.so.4.2
+NOTE: Checking Package: krb5-admin-server
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/packages-split/krb5-admin-server/usr/sbin/kprop
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/packages-split/krb5-admin-server/usr/sbin/kadmin.local
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/packages-split/krb5-admin-server/usr/sbin/kadmind
+DEBUG: Python function do_package_qa finished
+DEBUG: Executing python function sstate_task_postfunc
+NOTE: Using umask 0o002 (not 22) for sstate packaging
+DEBUG: Executing python function target_add_sysroot_deps
+DEBUG: Python function target_add_sysroot_deps finished
+DEBUG: Executing python function sstate_hardcode_path
+NOTE: Removing hardcoded paths from sstate package: 'find /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/sstate-build-package_qa/ \( -name "*.la" -o -name "*-config" -o -name "*_config" -o -name "postinst-*" \) -type f | xargs grep -l -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/recipe-sysroot' -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/recipe-sysroot-native' -e '/home/matt/tmp/build/obmc-y2038/tmp/hosttools' | tee /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/sstate-build-package_qa/fixmepath | xargs --no-run-if-empty sed -i -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/recipe-sysroot-native:FIXMESTAGINGDIRHOST:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/recipe-sysroot:FIXMESTAGINGDIRTARGET:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:FIXME_HOSTTOOLS_DIR:g''
+DEBUG: Python function sstate_hardcode_path finished
+DEBUG: Executing python function sstate_report_unihash
+DEBUG: Python function sstate_report_unihash finished
+DEBUG: Executing shell function sstate_create_package
+DEBUG: Shell function sstate_create_package finished
+DEBUG: Executing python function sstate_hardcode_path_unpack
+DEBUG: Python function sstate_hardcode_path_unpack finished
+DEBUG: Python function sstate_task_postfunc finished

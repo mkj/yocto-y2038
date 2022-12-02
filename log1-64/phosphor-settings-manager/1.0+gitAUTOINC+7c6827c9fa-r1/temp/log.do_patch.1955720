@@ -1,0 +1,68 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: ['quilt-native', 'patch-native', 'libtool-native', 'attr-native', 'texinfo-dummy-native', 'gettext-minimal-native']
+NOTE: Skipping as already exists in sysroot: []
+DEBUG: sed -e 's:^[^/]*/:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/phosphor-settings-manager/1.0+gitAUTOINC+7c6827c9fa-r1/recipe-sysroot-native/:g' /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/quilt-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/libtool-native/fixmepath | xargs sed -i -e 's:FIXMESTAGINGDIRTARGET:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/phosphor-settings-manager/1.0+gitAUTOINC+7c6827c9fa-r1/recipe-sysroot:g; s:FIXMESTAGINGDIRHOST:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/phosphor-settings-manager/1.0+gitAUTOINC+7c6827c9fa-r1/recipe-sysroot-native:g' -e 's:FIXME_PSEUDO_SYSROOT:/home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/pseudo-native:g' -e 's:FIXME_HOSTTOOLS_DIR:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:g' -e 's:FIXME_PKGDATA_DIR:/home/matt/tmp/build/obmc-y2038/tmp/pkgdata/evb-ast2600:g' -e 's:FIXME_PSEUDO_LOCALSTATEDIR:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/phosphor-settings-manager/1.0+gitAUTOINC+7c6827c9fa-r1/pseudo/:g' -e 's:FIXME_LOGFIFO:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/phosphor-settings-manager/1.0+gitAUTOINC+7c6827c9fa-r1/temp/fifo.1955720:g'
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function do_patch
+DEBUG: Executing python function patch_do_patch
+DEBUG: Searching for merge_settings.py in paths:
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/settings/phosphor-settings-manager-1.0+gitAUTOINC+7c6827c9fa/openbmc-phosphor
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/settings/phosphor-settings-manager/openbmc-phosphor
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/settings/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/settings/phosphor-settings-manager-1.0+gitAUTOINC+7c6827c9fa/openbmc-phosphor
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/settings/phosphor-settings-manager/openbmc-phosphor
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/settings/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/settings/phosphor-settings-manager-1.0+gitAUTOINC+7c6827c9fa/evb-ast2600
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/settings/phosphor-settings-manager/evb-ast2600
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/settings/files/evb-ast2600
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/settings/phosphor-settings-manager-1.0+gitAUTOINC+7c6827c9fa/aspeed-g6
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/settings/phosphor-settings-manager/aspeed-g6
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/settings/files/aspeed-g6
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/settings/phosphor-settings-manager-1.0+gitAUTOINC+7c6827c9fa/aspeed
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/settings/phosphor-settings-manager/aspeed
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/settings/files/aspeed
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/settings/phosphor-settings-manager-1.0+gitAUTOINC+7c6827c9fa/armv7a
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/settings/phosphor-settings-manager/armv7a
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/settings/files/armv7a
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/settings/phosphor-settings-manager-1.0+gitAUTOINC+7c6827c9fa/phosphor-evb
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/settings/phosphor-settings-manager/phosphor-evb
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/settings/files/phosphor-evb
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/settings/phosphor-settings-manager-1.0+gitAUTOINC+7c6827c9fa/arm
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/settings/phosphor-settings-manager/arm
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/settings/files/arm
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/settings/phosphor-settings-manager-1.0+gitAUTOINC+7c6827c9fa/
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/settings/phosphor-settings-manager/
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/settings/files/
+DEBUG: Searching for xyz.openbmc_project.Settings.service in paths:
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/settings/phosphor-settings-manager-1.0+gitAUTOINC+7c6827c9fa/openbmc-phosphor
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/settings/phosphor-settings-manager/openbmc-phosphor
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/settings/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/settings/phosphor-settings-manager-1.0+gitAUTOINC+7c6827c9fa/openbmc-phosphor
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/settings/phosphor-settings-manager/openbmc-phosphor
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/settings/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/settings/phosphor-settings-manager-1.0+gitAUTOINC+7c6827c9fa/evb-ast2600
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/settings/phosphor-settings-manager/evb-ast2600
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/settings/files/evb-ast2600
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/settings/phosphor-settings-manager-1.0+gitAUTOINC+7c6827c9fa/aspeed-g6
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/settings/phosphor-settings-manager/aspeed-g6
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/settings/files/aspeed-g6
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/settings/phosphor-settings-manager-1.0+gitAUTOINC+7c6827c9fa/aspeed
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/settings/phosphor-settings-manager/aspeed
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/settings/files/aspeed
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/settings/phosphor-settings-manager-1.0+gitAUTOINC+7c6827c9fa/armv7a
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/settings/phosphor-settings-manager/armv7a
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/settings/files/armv7a
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/settings/phosphor-settings-manager-1.0+gitAUTOINC+7c6827c9fa/phosphor-evb
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/settings/phosphor-settings-manager/phosphor-evb
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/settings/files/phosphor-evb
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/settings/phosphor-settings-manager-1.0+gitAUTOINC+7c6827c9fa/arm
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/settings/phosphor-settings-manager/arm
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/settings/files/arm
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/settings/phosphor-settings-manager-1.0+gitAUTOINC+7c6827c9fa/
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/settings/phosphor-settings-manager/
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/settings/files/
+DEBUG: Python function patch_do_patch finished
+DEBUG: Python function do_patch finished
+DEBUG: Executing python function do_qa_patch
+DEBUG: Python function do_qa_patch finished

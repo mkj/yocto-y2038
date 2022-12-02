@@ -1,0 +1,6 @@
+def do_warn_musl(d):
+    if d.getVar('TCLIBC') == "musl":
+        bb.warn("Using systemd with musl is not recommended since it is not supported upstream and some patches are known to be problematic.")
+
+do_warn_musl(d)
+

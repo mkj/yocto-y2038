@@ -1,0 +1,60 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-connectivity/openssl/openssl_3.0.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/base-files/base-files_3.0.14.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/base-passwd/base-passwd_3.6.1.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/libxcrypt/libxcrypt_4.4.28.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/systemd/systemd-systemctl-native.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/zlib/zlib_1.2.13.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-cross_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-native_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/opkg-utils/opkg-utils_0.5.0.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-extended/pam/libpam_1.3.1.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-extended/shadow/shadow-sysroot_4.6.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-extended/shadow/shadow_4.12.3.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/autoconf/autoconf_2.71.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/automake/automake_1.16.5.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-extended/shadow/shadow_4.12.3.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: []
+NOTE: Skipping as already exists in sysroot: ['openssl', 'base-files', 'base-passwd', 'glibc', 'libxcrypt', 'systemd-systemctl-native', 'zlib', 'gcc-cross-arm', 'gcc-runtime', 'libtool-cross', 'libtool-native', 'opkg-utils', 'quilt-native', 'libpam', 'shadow-sysroot', 'shadow', 'autoconf-native', 'automake-native', 'patch-native', 'pseudo-native', 'shadow-native', 'linux-libc-headers', 'texinfo-dummy-native', 'gmp-native', 'xz-native', 'flex-native', 'libmpc-native', 'zstd-native', 'binutils-cross-arm', 'gnu-config-native', 'mpfr-native', 'zlib-native', 'attr-native', 'libgcc', 'flex', 'cracklib', 'm4-native', 'gettext-minimal-native']
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function autotools_aclocals
+DEBUG: SITE files ['endian-little', 'bit-32', 'arm-common', 'arm-32', 'common-linux', 'common-glibc', 'arm-linux', 'arm-linux-gnueabi', 'common']
+DEBUG: Python function autotools_aclocals finished
+DEBUG: Executing shell function do_install
+NOTE: make -j 1 DESTDIR=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/image install
+Makefile:684: warning: ignoring prerequisites on suffix rule definition
+(cd openbsd-compat && make)
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/openssh-9.1p1/openbsd-compat'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/openssh-9.1p1/openbsd-compat'
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/image/usr/bin
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/image/usr/sbin
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/image/usr/share/man/cat1
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/image/usr/share/man/cat5
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/image/usr/share/man/cat8
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/image/usr/libexec
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p -m 0755 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/image/var/run/sshd
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 0755  ssh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/image/usr/bin/ssh
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 0755  scp /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/image/usr/bin/scp
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 0755  ssh-add /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/image/usr/bin/ssh-add
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 0755  ssh-agent /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/image/usr/bin/ssh-agent
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 0755  ssh-keygen /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/image/usr/bin/ssh-keygen
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 0755  ssh-keyscan /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/image/usr/bin/ssh-keyscan
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 0755  sshd /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/image/usr/sbin/sshd
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 4711  ssh-keysign /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/image/usr/libexec/ssh-keysign
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 0755  ssh-pkcs11-helper /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/image/usr/libexec/ssh-pkcs11-helper
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 0755  ssh-sk-helper /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/image/usr/libexec/ssh-sk-helper
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 0755  sftp /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/image/usr/bin/sftp
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 0755  sftp-server /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/image/usr/libexec/sftp-server
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ssh.1.out /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/image/usr/share/man/cat1/ssh.1
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 scp.1.out /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/image/usr/share/man/cat1/scp.1
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ssh-add.1.out /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/image/usr/share/man/cat1/ssh-add.1
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ssh-agent.1.out /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/image/usr/share/man/cat1/ssh-agent.1
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ssh-keygen.1.out /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/image/usr/share/man/cat1/ssh-keygen.1
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ssh-keyscan.1.out /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/image/usr/share/man/cat1/ssh-keyscan.1
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 moduli.5.out /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/image/usr/share/man/cat5/moduli.5
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 sshd_config.5.out /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/image/usr/share/man/cat5/sshd_config.5
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ssh_config.5.out /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/image/usr/share/man/cat5/ssh_config.5
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 sshd.8.out /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/image/usr/share/man/cat8/sshd.8
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 sftp.1.out /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/image/usr/share/man/cat1/sftp.1
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 sftp-server.8.out /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/image/usr/share/man/cat8/sftp-server.8
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ssh-keysign.8.out /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/image/usr/share/man/cat8/ssh-keysign.8
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ssh-pkcs11-helper.8.out /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/image/usr/share/man/cat8/ssh-pkcs11-helper.8
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ssh-sk-helper.8.out /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/image/usr/share/man/cat8/ssh-sk-helper.8
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/image/etc/ssh
+/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/image/usr/sbin/sshd -t -f /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/image/etc/ssh/sshd_config
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/bash: line 1: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/image/usr/sbin/sshd: cannot execute binary file: Exec format error
+make: [Makefile:385: check-config] Error 126 (ignored)
+DEBUG: Shell function do_install finished
+DEBUG: Executing shell function remove_libtool_la
+DEBUG: Shell function remove_libtool_la finished
+DEBUG: Executing python function rm_sysvinit_initddir
+DEBUG: Python function rm_sysvinit_initddir finished
+DEBUG: Executing python function rm_systemd_unitdir
+DEBUG: Python function rm_systemd_unitdir finished

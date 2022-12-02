@@ -1,0 +1,1541 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/libxcrypt/libxcrypt_4.4.28.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/zlib/zlib_1.2.13.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/opkg-utils/opkg-utils_0.5.0.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-support/gdbm/gdbm_1.23.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/make/make_4.3.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/perl-cross/perlcross_1.4.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: []
+NOTE: Skipping as already exists in sysroot: ['glibc', 'libxcrypt', 'zlib', 'gcc-cross-arm', 'gcc-runtime', 'opkg-utils', 'quilt-native', 'gdbm', 'make-native', 'patch-native', 'perlcross-native', 'pseudo-native', 'linux-libc-headers', 'libtool-native', 'attr-native', 'libgcc', 'texinfo-dummy-native', 'gettext-minimal-native', 'zlib-native', 'mpfr-native', 'gmp-native', 'binutils-cross-arm', 'xz-native', 'flex-native', 'libmpc-native', 'gnu-config-native', 'zstd-native', 'm4-native']
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing shell function do_configure
+Guessing build platform ... x86_64-pc-linux-gnu
+Guessing target architecture ... arm-openbmc-linux-gnueabi
+Respawning configure for build and target platforms
+
+Configuring build-time miniperl for x86_64-pc-linux-gnu
+Checking perl version ... perl5-5.36.0
+Checking for cc ... gcc
+Checking for ar ... ar
+Checking for nm ... nm
+Checking for ranlib ... ranlib
+Checking for readelf ... readelf
+Checking for objdump ... objdump
+Trying gcc ... gcc 12.2.0
+Checking whether gcc is a C++ compiler ... no
+Deciding how to declare external symbols ... extern
+Checking whether ld supports scripts ... yes
+Trying to guess target OS ... Linux
+Checking whether to enable -g ... no
+Checking whether to use -DDEBUGGING ... no
+Checking whether address sanitizer is enabled ... no
+Checking which hints to use
+	using cnf/hints/linux
+Checking whether to include <arpa/inet.h> ... yes
+Checking whether to include <assert.h> ... yes
+Checking whether to include <bfd.h> ... no
+Checking whether to include <sys/bsdioctl.h> ... no
+Checking whether to include <crypt.h> ... yes
+Checking whether to include <db.h> ... no
+Checking whether to include <dbm.h> ... no
+Checking whether to include <dirent.h> ... yes
+Checking whether to include <dlfcn.h> ... yes
+Checking whether to include <execinfo.h> ... yes
+Checking whether to include <fcntl.h> ... yes
+Checking whether to include <fenv.h> ... yes
+Checking whether to include <float.h> ... yes
+Checking whether to include <fp.h> ... no
+Checking whether to include <fp_class.h> ... no
+Checking whether to include <gdbm.h> ... no
+Checking whether to include <gdbm-ndbm.h> ... no
+Checking whether to include <gdbm/ndbm.h> ... no
+Checking whether to include <grp.h> ... yes
+Checking whether to include <ieeefp.h> ... no
+Checking whether to include <inttypes.h> ... yes
+Checking whether to include <langinfo.h> ... yes
+Checking whether to include <libutil.h> ... no
+Checking whether to include <limits.h> ... yes
+Checking whether to include <locale.h> ... yes
+Checking whether to include <mach/cthreads.h> ... no
+Checking whether to include <malloc.h> ... yes
+Checking whether to include <malloc/malloc.h> ... no
+Checking whether to include <math.h> ... yes
+Checking whether to include <memory.h> ... yes
+Checking whether to include <mntent.h> ... yes
+Checking whether to include <ndbm.h> ... no
+Checking whether to include <netdb.h> ... yes
+Checking whether to include <net/errno.h> ... no
+Checking whether to include <netinet/tcp.h> ... yes
+Checking whether to include <netinet/in.h> ... yes
+Checking whether to include <netinet/ip.h> ... yes
+Checking whether to include <netinet/ip6.h> ... yes
+Checking whether to include <netinet6/in6.h> ... no
+Checking whether to include <netinet/in_systm.h> ... yes
+Checking whether to include <poll.h> ... yes
+Checking whether to include <prot.h> ... no
+Checking whether to include <pthread.h> ... yes
+Checking whether to include <pwd.h> ... yes
+Checking whether to include <quadmath.h> ... yes
+Checking whether to include <rpcsvc/dbm.h> ... no
+Checking whether to include <sgtty.h> ... yes
+Checking whether to include <shadow.h> ... yes
+Checking whether to include <socks.h> ... no
+Checking whether to include <stdbool.h> ... yes
+Checking whether to include <stddef.h> ... yes
+Checking whether to include <stdint.h> ... yes
+Checking whether to include <stdlib.h> ... yes
+Checking whether to include <string.h> ... yes
+Checking whether to include <sunmath.h> ... no
+Checking whether to include <sys/access.h> ... no
+Checking whether to include <sys/dir.h> ... yes
+Checking whether to include <sys/file.h> ... yes
+Checking whether to include <sys/filio.h> ... no
+Checking whether to include <sys/in.h> ... no
+Checking whether to include <sys/ioctl.h> ... yes
+Checking whether to include <syslog.h> ... yes
+Checking whether to include <sys/mman.h> ... yes
+Checking whether to include <sys/mode.h> ... no
+Checking whether to include <sys/mount.h> ... yes
+Checking whether to include <sys/ndir.h> ... no
+Checking whether to include <sys/param.h> ... yes
+Checking whether to include <sys/poll.h> ... yes
+Checking whether to include <sys/resource.h> ... yes
+Checking whether to include <sys/security.h> ... no
+Checking whether to include <sys/select.h> ... yes
+Checking whether to include <sys/sockio.h> ... no
+Checking whether to include <sys/stat.h> ... yes
+Checking whether to include <sys/statfs.h> ... yes
+Checking whether to include <sys/statvfs.h> ... yes
+Checking whether to include <sys/time.h> ... yes
+Checking whether to include <sys/times.h> ... yes
+Checking whether to include <sys/types.h> ... yes
+Checking whether to include <sys/uio.h> ... yes
+Checking whether to include <sys/un.h> ... yes
+Checking whether to include <sys/utsname.h> ... yes
+Checking whether to include <sys/vfs.h> ... yes
+Checking whether to include <sys/wait.h> ... yes
+Checking whether to include <termio.h> ... yes
+Checking whether to include <termios.h> ... yes
+Checking whether to include <time.h> ... yes
+Checking whether to include <unistd.h> ... yes
+Checking whether to include <ustat.h> ... no
+Checking whether to include <utime.h> ... yes
+Checking whether to include <valgrind/valgrind.h> ... yes
+Checking whether to include <values.h> ... yes
+Checking whether to include <vfork.h> ... no
+Checking whether to include <wchar.h> ... yes
+Checking whether to include <wctype.h> ... yes
+Checking whether to include <xlocale.h> ... no
+Checking whether to include <zlib.h> ... yes
+Checking whether to include <stdarg.h> ... yes
+Looking which header to use for varargs ... <stdarg.h>
+Checking whether to enable large file support ... yes
+Checking type long double ... found
+Checking type long long ... found
+Checking size of char ... 1 byte
+Checking size of short ... 2 bytes
+Checking size of int ... 4 bytes
+Checking size of long ... 8 bytes
+Checking size of double ... 8 bytes
+Checking size of void* ... 8 bytes
+Checking size of long double ... 16 bytes
+Checking size of long long ... 8 bytes
+Checking type fd_set ... found
+Checking type fpos64_t ... missing
+Checking type off64_t ... missing
+Checking type ptrdiff_t ... found
+Checking type struct cmsghdr ... found
+Checking type struct fs_data ... missing
+Checking type struct msghdr ... found
+Checking type struct statfs ... found
+Checking type union semun ... missing
+Checking type socklen_t ... found
+Checking type struct sockaddr_in6 ... found
+Checking type struct sockaddr_storage ... found
+Checking type clock_t ... found
+Checking type struct ip_mreq ... found
+Checking type struct ip_mreq_source ... found
+Checking type struct ipv6_mreq ... found
+Checking type struct ipv6_mreq_source ... missing
+Checking sizetype ... size_t
+Checking size of size_t ... 8 bytes
+Checking fpostype ... fpos_t
+Checking size of fpos_t ... 16 bytes
+Checking lseektype ... off_t
+Checking size of off_t ... 8 bytes
+Checking uidtype ... uid_t
+Checking size of uid_t ... 4 bytes
+Checking gidtype ... gid_t
+Checking size of gid_t ... 4 bytes
+Checking timetype ... time_t
+Checking size of time_t ... 8 bytes
+Checking whether struct statfs has f_flags ... yes
+Checking whether struct tm has tm_zone ... yes
+Checking whether struct tm has tm_gmtoff ... yes
+Checking whether struct passwd has pw_quota ... no
+Checking whether struct passwd has pw_age ... no
+Checking whether struct passwd has pw_change ... no
+Checking whether struct passwd has pw_class ... no
+Checking whether struct passwd has pw_expire ... no
+Checking whether struct passwd has pw_comment ... no
+Checking whether struct passwd has pw_gecos ... yes
+Checking whether struct passwd has pw_passwd ... yes
+Checking whether struct stat has st_blocks ... yes
+Checking whether struct dirent has d_namelen ... no
+Checking whether struct group has gr_passwd ... yes
+Checking whether struct sockaddr has sa_len ... no
+Checking whether struct sockaddr_in6 has sin6_scope_id ... yes
+Checking whether fd_set has fds_bits ... no
+Checking whether siginfo_t has si_errno ... yes
+Checking whether siginfo_t has si_pid ... yes
+Checking whether siginfo_t has si_uid ... yes
+Checking whether siginfo_t has si_addr ... yes
+Checking whether siginfo_t has si_band ... yes
+Checking whether siginfo_t has si_value ... yes
+Checking whether siginfo_t has si_fd ... yes
+Checking whether siginfo_t has si_status ... yes
+Choosing C types to be used for perl internal types
+	IV will be long, 8 bytes
+	UV will be unsigned long, 8 bytes
+	NV will be double, 8 bytes
+Guessing nv_preserves_uv_bits value ... 53
+Deciding whether nv preserves full uv ... no
+Checking integer capacity of nv ... double
+Guessing byte order ... 12345678
+Checking mantissa bits in double ... 52
+Checking mantissa bits in double ... 52
+Checking mantissa bits in long double ... 112
+Assuming IEEE 754 64-bit little endian doubles.
+Assuming long doubles are doubles.
+Checking available signal names
+   got SIGHUP = 1
+   got SIGINT = 2
+   got SIGQUIT = 3
+   got SIGILL = 4
+   got SIGTRAP = 5
+   got SIGABRT = 6
+   got SIGBUS = 7
+   got SIGFPE = 8
+   got SIGKILL = 9
+   got SIGUSR1 = 10
+   got SIGSEGV = 11
+   got SIGUSR2 = 12
+   got SIGPIPE = 13
+   got SIGALRM = 14
+   got SIGTERM = 15
+   got SIGSTKFLT = 16
+   got SIGCHLD = 17
+   got SIGCONT = 18
+   got SIGSTOP = 19
+   got SIGTSTP = 20
+   got SIGTTIN = 21
+   got SIGTTOU = 22
+   got SIGURG = 23
+   got SIGXCPU = 24
+   got SIGXFSZ = 25
+   got SIGVTALRM = 26
+   got SIGPROF = 27
+   got SIGWINCH = 28
+   got SIGIO = 29
+   got SIGPWR = 30
+   got SIGSYS = 31
+   got SIGIOT = 6
+   got SIGCLD = 17
+   got SIGPOLL = 29
+Checking NSIG value ... 641
+Deciding whether to use DynaLoader ... yes
+Checking which libraries are available ... -lm -lcrypt -lpthread -ldl
+Checking which libs to use for perl ... -lm -lcrypt -ldl
+Deciding how to name libperl ... libperl.a (static)
+Checking for _fwalk ... missing
+Checking for accept4 ... found
+Checking for access ... found
+Checking for accessx ... missing
+Checking for aintl ... missing
+Checking for alarm ... found
+Checking for asctime64 ... missing
+Checking for atolf ... missing
+Checking for atoll ... found
+Checking for backtrace ... found
+Checking for bcmp ... found
+Checking for bcopy ... found
+Checking for bzero ... found
+Checking for chown ... found
+Checking for chroot ... found
+Checking for chsize ... missing
+Checking for class ... missing
+Checking for clearenv ... found
+Checking for closedir ... found
+Checking for crypt ... found
+Checking for ctermid ... found
+Checking for ctime64 ... missing
+Checking for cuserid ... found
+Checking for difftime ... found
+Checking for difftime64 ... missing
+Checking for dirfd ... found
+Checking for dladdr ... found
+Checking for dlerror ... found
+Checking for dlopen ... found
+Checking for drand48 ... found
+Checking for dup2 ... found
+Checking for dup3 ... found
+Checking for duplocale ... found
+Checking for eaccess ... found
+Checking for endgrent ... found
+Checking for endhostent ... found
+Checking for endnetent ... found
+Checking for endprotoent ... found
+Checking for endpwent ... found
+Checking for endservent ... found
+Checking for fchdir ... found
+Checking for fchmod ... found
+Checking for fchmodat ... found
+Checking for fchown ... found
+Checking for fcntl ... found
+Checking for fdclose ... missing
+Checking for ffs ... found
+Checking for ffsl ... found
+Checking for fgetpos ... found
+Checking for flock ... found
+Checking for fork ... found
+Checking for fp_class ... missing
+Checking for fpathconf ... found
+Checking for freelocale ... found
+Checking for fseeko ... found
+Checking for fsetpos ... found
+Checking for fstatfs ... found
+Checking for fstatvfs ... found
+Checking for fsync ... found
+Checking for ftello ... found
+Checking for futimes ... found
+Checking for gai_strerror ... found
+Checking for getaddrinfo ... found
+Checking for get_current_dir_name ... found
+Checking for getcwd ... found
+Checking for getespwnam ... missing
+Checking for getfsstat ... missing
+Checking for getgrent ... found
+Checking for getgroups ... found
+Checking for gethostbyaddr ... found
+Checking for gethostbyname ... found
+Checking for getnetbyaddr ... found
+Checking for getnetbyname ... found
+Checking for gethostent ... found
+Checking for gethostname ... found
+Checking for getitimer ... found
+Checking for getlogin ... found
+Checking for getmnt ... missing
+Checking for getmntent ... found
+Checking for getnameinfo ... found
+Checking for getnetent ... found
+Checking for getnetbyaddr ... found
+Checking for getnetbyname ... found
+Checking for getpagesize ... found
+Checking for getprotobyaddr ... missing
+Checking for getprotobyname ... found
+Checking for getprotobynumber ... found
+Checking for getprotoent ... found
+Checking for getpgid ... found
+Checking for getpgrp ... found
+Checking for getpgrp2 ... missing
+Checking for getppid ... found
+Checking for getpriority ... found
+Checking for getprpwnam ... missing
+Checking for getpwent ... found
+Checking for getservbyaddr ... missing
+Checking for getservbyname ... found
+Checking for getservbyport ... found
+Checking for getservent ... found
+Checking for setservent ... found
+Checking for endservent ... found
+Checking for getspnam ... found
+Checking for gettimeofday ... found
+Checking for gmtime64 ... missing
+Checking for hasmntopt ... found
+Checking for htonl ... found
+Checking for ilogbl ... found
+Checking for index ... found
+Checking for inet_aton ... found
+Checking for inet_ntop ... found
+Checking for inet_pton ... found
+Checking for isascii ... found
+Checking for isblank ... found
+Checking for killpg ... found
+Checking for lchown ... found
+Checking for link ... found
+Checking for linkat ... found
+Checking for localtime64 ... missing
+Checking for localeconv_l ... missing
+Checking for localeconv ... found
+Checking for lockf ... found
+Checking for lstat ... found
+Checking for madvise ... found
+Checking for malloc_good_size ... missing
+Checking for malloc_size ... missing
+Checking for mblen ... found
+Checking for mbstowcs ... found
+Checking for mbtowc ... found
+Checking for mbrlen ... found
+Checking for mbrtowc ... found
+Checking for memchr ... found
+Checking for memcmp ... found
+Checking for memcpy ... found
+Checking for memmem ... found
+Checking for memmove ... found
+Checking for memrchr ... found
+Checking for memset ... found
+Checking for mkdir ... found
+Checking for mkdtemp ... found
+Checking for mkfifo ... found
+Checking for mkostemp ... found
+Checking for mkstemp ... found
+Checking for mkstemps ... found
+Checking for mktime ... found
+Checking for mktime64 ... missing
+Checking for mmap ... found
+Checking for mprotect ... found
+Checking for msgctl ... found
+Checking for msgget ... found
+Checking for msgrcv ... found
+Checking for msgsnd ... found
+Checking for msync ... found
+Checking for munmap ... found
+Checking for newlocale ... found
+Checking for nice ... found
+Checking for nl_langinfo ... found
+Checking for nl_langinfo_l ... found
+Checking for open ... found
+Checking for openat ... found
+Checking for pathconf ... found
+Checking for pause ... found
+Checking for pipe ... found
+Checking for pipe ... missing
+Checking for poll ... found
+Checking for prctl ... found
+Checking for pthread_atfork ... found
+Checking for pthread_attr_setscope ... found
+Checking for pthread_yield ... found
+Checking for querylocale ... missing
+Checking for qgcvt ... found
+Checking for rand ... found
+Checking for random ... found
+Checking for re_comp ... found
+Checking for readdir ... found
+Checking for readlink ... found
+Checking for realpath ... found
+Checking for readv ... found
+Checking for recvmsg ... found
+Checking for regcmp ... missing
+Checking for regcomp ... found
+Checking for rename ... found
+Checking for renameat ... found
+Checking for rewinddir ... found
+Checking for rmdir ... found
+Checking for sched_yield ... found
+Checking for seekdir ... found
+Checking for select ... found
+Checking for semctl ... found
+Checking for semget ... found
+Checking for semop ... found
+Checking for sendmsg ... found
+Checking for setegid ... found
+Checking for setservent ... found
+Checking for setenv ... found
+Checking for seteuid ... found
+Checking for setgrent ... found
+Checking for setgroups ... found
+Checking for sethostent ... found
+Checking for setitimer ... found
+Checking for setlinebuf ... found
+Checking for setlocale ... found
+Checking for setnetent ... found
+Checking for setprotoent ... found
+Checking for setpgid ... found
+Checking for setpgrp ... found
+Checking for setpgrp2 ... missing
+Checking for setpriority ... found
+Checking for setproctitle ... missing
+Checking for setpwent ... found
+Checking for setregid ... found
+Checking for setresgid ... found
+Checking for setresuid ... found
+Checking for setreuid ... found
+Checking for setrgid ... missing
+Checking for setruid ... missing
+Checking for setsid ... found
+Checking for setvbuf ... found
+Checking for sfreserve ... missing
+Checking for shmat ... found
+Checking for shmctl ... found
+Checking for shmdt ... found
+Checking for shmget ... found
+Checking for sigaction ... found
+Checking for sigprocmask ... found
+Checking for sigsetjmp ... found
+Checking for snprintf ... found
+Checking for sockatmark ... found
+Checking for socket ... found
+Checking for socketpair ... found
+Checking for socks5_init ... missing
+Checking for stat ... found
+Checking for statvfs ... found
+Checking for strchr ... found
+Checking for strcoll ... found
+Checking for strerror ... found
+Checking for strerror_l ... found
+Checking for strftime ... found
+Checking for strlcat ... missing
+Checking for strlcpy ... missing
+Checking for strnlen ... found
+Checking for strtod ... found
+Checking for strtod_l ... found
+Checking for strtol ... found
+Checking for strtold ... found
+Checking for strtold_l ... found
+Checking for strtoll ... found
+Checking for strtoq ... found
+Checking for strtoul ... found
+Checking for strtoull ... found
+Checking for strtouq ... found
+Checking for strxfrm ... found
+Checking for strxfrm_l ... found
+Checking for symlink ... found
+Checking for syscall ... found
+Checking for sysconf ... found
+Checking for system ... found
+Checking for tcgetpgrp ... found
+Checking for tcsetpgrp ... found
+Checking for telldir ... found
+Checking for time ... found
+Checking for timegm ... found
+Checking for times ... found
+Checking for towlower ... found
+Checking for towupper ... found
+Checking for truncate ... found
+Checking for ualarm ... found
+Checking for umask ... found
+Checking for uname ... found
+Checking for unlinkat ... found
+Checking for unordered ... missing
+Checking for unsetenv ... found
+Checking for uselocale ... found
+Checking for usleep ... found
+Checking for ustat ... missing
+Checking for vprintf ... found
+Checking for vsnprintf ... found
+Checking for wait4 ... found
+Checking for waitpid ... found
+Checking for wcrtomb ... found
+Checking for wcscmp ... found
+Checking for wcstombs ... found
+Checking for wcsxfrm ... found
+Checking for wctomb ... found
+Checking for writev ... found
+Checking for acosh ... found
+Checking for asinh ... found
+Checking for atanh ... found
+Checking for cbrt ... found
+Checking for copysign ... found
+Checking for copysignl ... found
+Checking for erf ... found
+Checking for erfc ... found
+Checking for exp2 ... found
+Checking for expm1 ... found
+Checking for fdim ... found
+Checking for fegetround ... found
+Checking for finite ... found
+Checking for finitel ... found
+Checking for fma ... found
+Checking for fmax ... found
+Checking for fmin ... found
+Checking for fp_classify ... missing
+Checking for fp_classl ... missing
+Checking for fpclassl ... missing
+Checking for fpgetround ... missing
+Checking for frexpl ... found
+Checking for hypot ... found
+Checking for ilogb ... found
+Checking for isfinite ... found
+Checking for isfinitel ... missing
+Checking for isinf ... found
+Checking for isinfl ... found
+Checking for isless ... found
+Checking for isnan ... found
+Checking for isnanl ... found
+Checking for isnormal ... found
+Checking for j0 ... found
+Checking for j0l ... found
+Checking for ldexpl ... found
+Checking for lgamma ... found
+Checking for lgamma_r ... found
+Checking for llabs ... found
+Checking for llrint ... found
+Checking for llrintl ... found
+Checking for llround ... found
+Checking for llroundl ... found
+Checking for log1p ... found
+Checking for log2 ... found
+Checking for logb ... found
+Checking for lrint ... found
+Checking for lrintl ... found
+Checking for lround ... found
+Checking for lroundl ... found
+Checking for modfl ... found
+Checking for nan ... found
+Checking for nearbyint ... found
+Checking for nextafter ... found
+Checking for nexttoward ... found
+Checking for remainder ... found
+Checking for remquo ... found
+Checking for rint ... found
+Checking for round ... found
+Checking for scalbn ... found
+Checking for scalbnl ... found
+Checking for signbit ... found
+Checking for sqrtl ... found
+Checking for tgamma ... found
+Checking for trunc ... found
+Checking for truncl ... found
+Checking whether fpclassify() is usable ... yes
+Checking whether fpclass() is usable ... no, disabling fpclass()
+Checking dbminit prototype ... declared
+Checking drand48 prototype ... declared
+Checking flock prototype ... declared
+Checking lseek prototype ... declared
+Checking modfl prototype ... declared
+Checking sbrk prototype ... declared
+Checking sockatmark prototype ... declared
+Checking setresgid prototype ... declared
+Checking setresuid prototype ... declared
+Checking syscall prototype ... declared
+Checking telldir prototype ... declared
+Checking usleep prototype ... declared
+Checking gethostbyaddr prototype ... declared
+Checking getservbyport prototype ... declared
+Checking getnetbyaddr prototype ... declared
+Checking getprotobynumber prototype ... declared
+Checking for sys_errlist ... missing
+Checking for sys_errnolist ... missing
+Checking for tzname ... found
+Checking whether DBL_DIG is defined ... yes
+Checking whether LDBL_DIG is defined ... yes
+Checking whether SCM_RIGHTS is defined ... yes
+Checking whether closedir is void ... no
+Checking whether prctl supports PR_SET_NAME ... yes
+Checking FD_SET macros ... found
+Checking if we're using GNU libc ... yes
+Checking whether you have the full shm*(2) library ... yes
+Checking whether you have the full sem*(2) library ... yes
+Checking whether you have the full msg*(2) library ... yes
+Looking how to get error messages ... strerror()
+Looking for a random number function ... good, found drand48()
+Looking what times() may return ... clock_t
+Checking if compiler supports __attribute__((format)) ... yes
+Checking if compiler supports __attribute__((malloc)) ... yes
+Checking if compiler supports __attribute__((nonnull)) ... yes
+Checking if compiler supports __attribute__((noreturn)) ... yes
+Checking if compiler supports __attribute__((pure)) ... yes
+Checking if compiler supports __attribute__((unused)) ... yes
+Checking if compiler supports __attribute__((used)) ... yes
+Checking if compiler supports __attribute__((deprecated)) ... yes
+Checking if compiler supports __attribute__((warn_unused_result)) ... yes
+Checking if compiler supports __attribute__((always_inline)) ... yes
+Checking if compiler supports __builtin_add_overflow ... yes
+Checking if compiler supports __builtin_sub_overflow ... yes
+Checking if compiler supports __builtin_mul_overflow ... yes
+Checking to see if your C compiler knows about volatile ... yes
+Checking C99 variadic macros ... supported
+Checking non-int bitfields ... supported
+Deciding installation paths
+Deciding whether to use $vendorprefix ... no
+Looking whether to enable threads ... no
+Disabling thread-related stuff
+
+Configuring primary perl executable for arm-openbmc-linux-gnueabi (arm-openbmc-linux-gnueabi)
+Checking perl version ... perl5-5.36.0
+Checking for cc ... arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/perl/5.36.0-r0/recipe-sysroot
+Checking for ar ... arm-openbmc-linux-gnueabi-gcc-ar
+Checking for nm ... arm-openbmc-linux-gnueabi-gcc-nm
+Checking for ranlib ... arm-openbmc-linux-gnueabi-gcc-ranlib
+Checking for readelf ... arm-openbmc-linux-gnueabi-readelf
+Checking for objdump ... arm-openbmc-linux-gnueabi-objdump
+Trying arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/perl/5.36.0-r0/recipe-sysroot ... gcc 12.2.0
+Checking whether arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/perl/5.36.0-r0/recipe-sysroot is a C++ compiler ... no
+Deciding how to declare external symbols ... extern
+Checking whether ld supports scripts ... yes
+Trying to guess target OS ... Linux
+Checking whether to enable -g ... no
+Checking whether to use -DDEBUGGING ... no
+Checking whether address sanitizer is enabled ... no
+Checking which hints to use
+	using cnf/hints/linux
+Checking whether to include <arpa/inet.h> ... yes
+Checking whether to include <assert.h> ... yes
+Checking whether to include <bfd.h> ... no
+Checking whether to include <sys/bsdioctl.h> ... no
+Checking whether to include <crypt.h> ... yes
+Checking whether to include <db.h> ... (args) undef
+Checking whether to include <dbm.h> ... yes
+Checking whether to include <dirent.h> ... yes
+Checking whether to include <dlfcn.h> ... yes
+Checking whether to include <execinfo.h> ... yes
+Checking whether to include <fcntl.h> ... yes
+Checking whether to include <fenv.h> ... yes
+Checking whether to include <float.h> ... yes
+Checking whether to include <fp.h> ... no
+Checking whether to include <fp_class.h> ... no
+Checking whether to include <gdbm.h> ... yes
+Checking whether to include <gdbm-ndbm.h> ... no
+Checking whether to include <gdbm/ndbm.h> ... yes
+Checking whether to include <grp.h> ... yes
+Checking whether to include <ieeefp.h> ... no
+Checking whether to include <inttypes.h> ... yes
+Checking whether to include <langinfo.h> ... yes
+Checking whether to include <libutil.h> ... no
+Checking whether to include <limits.h> ... yes
+Checking whether to include <locale.h> ... yes
+Checking whether to include <mach/cthreads.h> ... no
+Checking whether to include <malloc.h> ... yes
+Checking whether to include <malloc/malloc.h> ... no
+Checking whether to include <math.h> ... yes
+Checking whether to include <memory.h> ... yes
+Checking whether to include <mntent.h> ... yes
+Checking whether to include <ndbm.h> ... yes
+Checking whether to include <netdb.h> ... yes
+Checking whether to include <net/errno.h> ... no
+Checking whether to include <netinet/tcp.h> ... yes
+Checking whether to include <netinet/in.h> ... yes
+Checking whether to include <netinet/ip.h> ... yes
+Checking whether to include <netinet/ip6.h> ... yes
+Checking whether to include <netinet6/in6.h> ... no
+Checking whether to include <netinet/in_systm.h> ... yes
+Checking whether to include <poll.h> ... yes
+Checking whether to include <prot.h> ... no
+Checking whether to include <pthread.h> ... yes
+Checking whether to include <pwd.h> ... yes
+Checking whether to include <quadmath.h> ... no
+Checking whether to include <rpcsvc/dbm.h> ... no
+Checking whether to include <sgtty.h> ... yes
+Checking whether to include <shadow.h> ... yes
+Checking whether to include <socks.h> ... no
+Checking whether to include <stdbool.h> ... yes
+Checking whether to include <stddef.h> ... yes
+Checking whether to include <stdint.h> ... yes
+Checking whether to include <stdlib.h> ... yes
+Checking whether to include <string.h> ... yes
+Checking whether to include <sunmath.h> ... no
+Checking whether to include <sys/access.h> ... no
+Checking whether to include <sys/dir.h> ... yes
+Checking whether to include <sys/file.h> ... yes
+Checking whether to include <sys/filio.h> ... no
+Checking whether to include <sys/in.h> ... no
+Checking whether to include <sys/ioctl.h> ... yes
+Checking whether to include <syslog.h> ... yes
+Checking whether to include <sys/mman.h> ... yes
+Checking whether to include <sys/mode.h> ... no
+Checking whether to include <sys/mount.h> ... yes
+Checking whether to include <sys/ndir.h> ... no
+Checking whether to include <sys/param.h> ... yes
+Checking whether to include <sys/poll.h> ... yes
+Checking whether to include <sys/resource.h> ... yes
+Checking whether to include <sys/security.h> ... no
+Checking whether to include <sys/select.h> ... yes
+Checking whether to include <sys/sockio.h> ... no
+Checking whether to include <sys/stat.h> ... yes
+Checking whether to include <sys/statfs.h> ... yes
+Checking whether to include <sys/statvfs.h> ... yes
+Checking whether to include <sys/time.h> ... yes
+Checking whether to include <sys/times.h> ... yes
+Checking whether to include <sys/types.h> ... yes
+Checking whether to include <sys/uio.h> ... yes
+Checking whether to include <sys/un.h> ... yes
+Checking whether to include <sys/utsname.h> ... yes
+Checking whether to include <sys/vfs.h> ... yes
+Checking whether to include <sys/wait.h> ... yes
+Checking whether to include <termio.h> ... yes
+Checking whether to include <termios.h> ... yes
+Checking whether to include <time.h> ... yes
+Checking whether to include <unistd.h> ... yes
+Checking whether to include <ustat.h> ... no
+Checking whether to include <utime.h> ... yes
+Checking whether to include <valgrind/valgrind.h> ... no
+Checking whether to include <values.h> ... yes
+Checking whether to include <vfork.h> ... no
+Checking whether to include <wchar.h> ... yes
+Checking whether to include <wctype.h> ... yes
+Checking whether to include <xlocale.h> ... no
+Checking whether to include <zlib.h> ... yes
+Checking whether to include <stdarg.h> ... yes
+Looking which header to use for varargs ... <stdarg.h>
+Checking whether to enable large file support ... already there
+Checking type long double ... found
+Checking type long long ... found
+Checking size of char ... 1 byte
+Checking size of short ... 2 bytes
+Checking size of int ... 4 bytes
+Checking size of long ... 4 bytes
+Checking size of double ... 8 bytes
+Checking size of void* ... 4 bytes
+Checking size of long double ... 8 bytes
+Checking size of long long ... 8 bytes
+Checking type fd_set ... found
+Checking type fpos64_t ... found
+Checking type off64_t ... found
+Checking type ptrdiff_t ... found
+Checking type struct cmsghdr ... found
+Checking type struct fs_data ... missing
+Checking type struct msghdr ... found
+Checking type struct statfs ... found
+Checking type union semun ... missing
+Checking type socklen_t ... found
+Checking type struct sockaddr_in6 ... found
+Checking type struct sockaddr_storage ... found
+Checking type clock_t ... found
+Checking type struct ip_mreq ... found
+Checking type struct ip_mreq_source ... found
+Checking type struct ipv6_mreq ... found
+Checking type struct ipv6_mreq_source ... missing
+Checking sizetype ... size_t
+Checking size of size_t ... 4 bytes
+Checking fpostype ... fpos_t
+Checking size of fpos_t ... 16 bytes
+Checking lseektype ... off_t
+Checking size of off_t ... 8 bytes
+Checking uidtype ... uid_t
+Checking size of uid_t ... 4 bytes
+Checking gidtype ... gid_t
+Checking size of gid_t ... 4 bytes
+Checking timetype ... time_t
+Checking size of time_t ... 4 bytes
+Checking whether struct statfs has f_flags ... yes
+Checking whether struct tm has tm_zone ... yes
+Checking whether struct tm has tm_gmtoff ... yes
+Checking whether struct passwd has pw_quota ... no
+Checking whether struct passwd has pw_age ... no
+Checking whether struct passwd has pw_change ... no
+Checking whether struct passwd has pw_class ... no
+Checking whether struct passwd has pw_expire ... no
+Checking whether struct passwd has pw_comment ... no
+Checking whether struct passwd has pw_gecos ... yes
+Checking whether struct passwd has pw_passwd ... yes
+Checking whether struct stat has st_blocks ... yes
+Checking whether struct dirent has d_namelen ... no
+Checking whether struct group has gr_passwd ... yes
+Checking whether struct sockaddr has sa_len ... no
+Checking whether struct sockaddr_in6 has sin6_scope_id ... yes
+Checking whether fd_set has fds_bits ... yes
+Checking whether siginfo_t has si_errno ... yes
+Checking whether siginfo_t has si_pid ... yes
+Checking whether siginfo_t has si_uid ... yes
+Checking whether siginfo_t has si_addr ... yes
+Checking whether siginfo_t has si_band ... yes
+Checking whether siginfo_t has si_value ... yes
+Checking whether siginfo_t has si_fd ... yes
+Checking whether siginfo_t has si_status ... yes
+Choosing C types to be used for perl internal types
+	IV will be long, 4 bytes
+	UV will be unsigned long, 4 bytes
+	NV will be double, 8 bytes
+Guessing nv_preserves_uv_bits value ... 32
+Deciding whether nv preserves full uv ... yes
+Checking integer capacity of nv ... double
+Guessing byte order ... 1234
+Checking mantissa bits in double ... 52
+Checking mantissa bits in double ... 52
+Checking mantissa bits in long double ... 52
+Assuming IEEE 754 64-bit little endian doubles.
+Assuming long doubles are doubles.
+Checking available signal names
+   got SIGHUP = 1
+   got SIGINT = 2
+   got SIGQUIT = 3
+   got SIGILL = 4
+   got SIGTRAP = 5
+   got SIGABRT = 6
+   got SIGBUS = 7
+   got SIGFPE = 8
+   got SIGKILL = 9
+   got SIGUSR1 = 10
+   got SIGSEGV = 11
+   got SIGUSR2 = 12
+   got SIGPIPE = 13
+   got SIGALRM = 14
+   got SIGTERM = 15
+   got SIGSTKFLT = 16
+   got SIGCHLD = 17
+   got SIGCONT = 18
+   got SIGSTOP = 19
+   got SIGTSTP = 20
+   got SIGTTIN = 21
+   got SIGTTOU = 22
+   got SIGURG = 23
+   got SIGXCPU = 24
+   got SIGXFSZ = 25
+   got SIGVTALRM = 26
+   got SIGPROF = 27
+   got SIGWINCH = 28
+   got SIGIO = 29
+   got SIGPWR = 30
+   got SIGSYS = 31
+   got SIGIOT = 6
+   got SIGCLD = 17
+   got SIGPOLL = 29
+Checking NSIG value ... 641
+Deciding whether to use DynaLoader ... yes
+Checking which libraries are available ... -lm -lcrypt -lpthread -lgdbm -ldl -lgdbm_compat
+Checking which libs to use for perl ... -lm -lcrypt -lpthread -ldl
+Deciding how to name libperl ... libperl.so.5.36.0 (SONAME libperl.so.5, dynamic)
+Checking for _fwalk ... missing
+Checking for accept4 ... found
+Checking for access ... found
+Checking for accessx ... missing
+Checking for aintl ... missing
+Checking for alarm ... found
+Checking for asctime64 ... missing
+Checking for atolf ... missing
+Checking for atoll ... found
+Checking for backtrace ... found
+Checking for bcmp ... found
+Checking for bcopy ... found
+Checking for bzero ... found
+Checking for chown ... found
+Checking for chroot ... found
+Checking for chsize ... missing
+Checking for class ... missing
+Checking for clearenv ... found
+Checking for closedir ... found
+Checking for crypt ... found
+Checking for ctermid ... found
+Checking for ctime64 ... missing
+Checking for cuserid ... found
+Checking for difftime ... found
+Checking for difftime64 ... missing
+Checking for dirfd ... found
+Checking for dladdr ... found
+Checking for dlerror ... found
+Checking for dlopen ... found
+Checking for drand48 ... found
+Checking for dup2 ... found
+Checking for dup3 ... found
+Checking for duplocale ... found
+Checking for eaccess ... found
+Checking for endgrent ... found
+Checking for endhostent ... found
+Checking for endnetent ... found
+Checking for endprotoent ... found
+Checking for endpwent ... found
+Checking for endservent ... found
+Checking for fchdir ... found
+Checking for fchmod ... found
+Checking for fchmodat ... found
+Checking for fchown ... found
+Checking for fcntl ... found
+Checking for fdclose ... missing
+Checking for ffs ... found
+Checking for ffsl ... found
+Checking for fgetpos ... found
+Checking for flock ... found
+Checking for fork ... found
+Checking for fp_class ... missing
+Checking for fpathconf ... found
+Checking for freelocale ... found
+Checking for fseeko ... found
+Checking for fsetpos ... found
+Checking for fstatfs ... found
+Checking for fstatvfs ... found
+Checking for fsync ... found
+Checking for ftello ... found
+Checking for futimes ... found
+Checking for gai_strerror ... found
+Checking for getaddrinfo ... found
+Checking for get_current_dir_name ... found
+Checking for getcwd ... found
+Checking for getespwnam ... missing
+Checking for getfsstat ... missing
+Checking for getgrent ... found
+Checking for getgroups ... found
+Checking for gethostbyaddr ... found
+Checking for gethostbyname ... found
+Checking for getnetbyaddr ... found
+Checking for getnetbyname ... found
+Checking for gethostent ... found
+Checking for gethostname ... found
+Checking for getitimer ... found
+Checking for getlogin ... found
+Checking for getmnt ... missing
+Checking for getmntent ... found
+Checking for getnameinfo ... found
+Checking for getnetent ... found
+Checking for getnetbyaddr ... found
+Checking for getnetbyname ... found
+Checking for getpagesize ... found
+Checking for getprotobyaddr ... missing
+Checking for getprotobyname ... found
+Checking for getprotobynumber ... found
+Checking for getprotoent ... found
+Checking for getpgid ... found
+Checking for getpgrp ... found
+Checking for getpgrp2 ... missing
+Checking for getppid ... found
+Checking for getpriority ... found
+Checking for getprpwnam ... missing
+Checking for getpwent ... found
+Checking for getservbyaddr ... missing
+Checking for getservbyname ... found
+Checking for getservbyport ... found
+Checking for getservent ... found
+Checking for setservent ... found
+Checking for endservent ... found
+Checking for getspnam ... found
+Checking for gettimeofday ... found
+Checking for gmtime64 ... missing
+Checking for hasmntopt ... found
+Checking for htonl ... found
+Checking for ilogbl ... found
+Checking for index ... found
+Checking for inet_aton ... found
+Checking for inet_ntop ... found
+Checking for inet_pton ... found
+Checking for isascii ... found
+Checking for isblank ... found
+Checking for killpg ... found
+Checking for lchown ... found
+Checking for link ... found
+Checking for linkat ... found
+Checking for localtime64 ... missing
+Checking for localeconv_l ... missing
+Checking for localeconv ... found
+Checking for lockf ... found
+Checking for lstat ... found
+Checking for madvise ... found
+Checking for malloc_good_size ... missing
+Checking for malloc_size ... missing
+Checking for mblen ... found
+Checking for mbstowcs ... found
+Checking for mbtowc ... found
+Checking for mbrlen ... found
+Checking for mbrtowc ... found
+Checking for memchr ... found
+Checking for memcmp ... found
+Checking for memcpy ... found
+Checking for memmem ... found
+Checking for memmove ... found
+Checking for memrchr ... found
+Checking for memset ... found
+Checking for mkdir ... found
+Checking for mkdtemp ... found
+Checking for mkfifo ... found
+Checking for mkostemp ... found
+Checking for mkstemp ... found
+Checking for mkstemps ... found
+Checking for mktime ... found
+Checking for mktime64 ... missing
+Checking for mmap ... found
+Checking for mprotect ... found
+Checking for msgctl ... found
+Checking for msgget ... found
+Checking for msgrcv ... found
+Checking for msgsnd ... found
+Checking for msync ... found
+Checking for munmap ... found
+Checking for newlocale ... found
+Checking for nice ... found
+Checking for nl_langinfo ... found
+Checking for nl_langinfo_l ... found
+Checking for open ... found
+Checking for openat ... found
+Checking for pathconf ... found
+Checking for pause ... found
+Checking for pipe ... found
+Checking for pipe ... missing
+Checking for poll ... found
+Checking for prctl ... found
+Checking for pthread_atfork ... found
+Checking for pthread_attr_setscope ... found
+Checking for pthread_yield ... found
+Checking for querylocale ... missing
+Checking for qgcvt ... found
+Checking for rand ... found
+Checking for random ... found
+Checking for re_comp ... found
+Checking for readdir ... found
+Checking for readlink ... found
+Checking for realpath ... found
+Checking for readv ... found
+Checking for recvmsg ... found
+Checking for regcmp ... missing
+Checking for regcomp ... found
+Checking for rename ... found
+Checking for renameat ... found
+Checking for rewinddir ... found
+Checking for rmdir ... found
+Checking for sched_yield ... found
+Checking for seekdir ... found
+Checking for select ... found
+Checking for semctl ... found
+Checking for semget ... found
+Checking for semop ... found
+Checking for sendmsg ... found
+Checking for setegid ... found
+Checking for setservent ... found
+Checking for setenv ... found
+Checking for seteuid ... found
+Checking for setgrent ... found
+Checking for setgroups ... found
+Checking for sethostent ... found
+Checking for setitimer ... found
+Checking for setlinebuf ... found
+Checking for setlocale ... found
+Checking for setnetent ... found
+Checking for setprotoent ... found
+Checking for setpgid ... found
+Checking for setpgrp ... found
+Checking for setpgrp2 ... missing
+Checking for setpriority ... found
+Checking for setproctitle ... missing
+Checking for setpwent ... found
+Checking for setregid ... found
+Checking for setresgid ... found
+Checking for setresuid ... found
+Checking for setreuid ... found
+Checking for setrgid ... missing
+Checking for setruid ... missing
+Checking for setsid ... found
+Checking for setvbuf ... found
+Checking for sfreserve ... missing
+Checking for shmat ... found
+Checking for shmctl ... found
+Checking for shmdt ... found
+Checking for shmget ... found
+Checking for sigaction ... found
+Checking for sigprocmask ... found
+Checking for sigsetjmp ... found
+Checking for snprintf ... found
+Checking for sockatmark ... found
+Checking for socket ... found
+Checking for socketpair ... found
+Checking for socks5_init ... missing
+Checking for stat ... found
+Checking for statvfs ... found
+Checking for strchr ... found
+Checking for strcoll ... found
+Checking for strerror ... found
+Checking for strerror_l ... found
+Checking for strftime ... found
+Checking for strlcat ... missing
+Checking for strlcpy ... missing
+Checking for strnlen ... found
+Checking for strtod ... found
+Checking for strtod_l ... found
+Checking for strtol ... found
+Checking for strtold ... found
+Checking for strtold_l ... found
+Checking for strtoll ... found
+Checking for strtoq ... found
+Checking for strtoul ... found
+Checking for strtoull ... found
+Checking for strtouq ... found
+Checking for strxfrm ... found
+Checking for strxfrm_l ... found
+Checking for symlink ... found
+Checking for syscall ... found
+Checking for sysconf ... found
+Checking for system ... found
+Checking for tcgetpgrp ... found
+Checking for tcsetpgrp ... found
+Checking for telldir ... found
+Checking for time ... found
+Checking for timegm ... found
+Checking for times ... found
+Checking for towlower ... found
+Checking for towupper ... found
+Checking for truncate ... found
+Checking for ualarm ... found
+Checking for umask ... found
+Checking for uname ... found
+Checking for unlinkat ... found
+Checking for unordered ... missing
+Checking for unsetenv ... found
+Checking for uselocale ... found
+Checking for usleep ... found
+Checking for ustat ... missing
+Checking for vprintf ... missing
+Checking for vsnprintf ... missing
+Checking for wait4 ... found
+Checking for waitpid ... found
+Checking for wcrtomb ... found
+Checking for wcscmp ... found
+Checking for wcstombs ... found
+Checking for wcsxfrm ... found
+Checking for wctomb ... found
+Checking for writev ... found
+Checking for acosh ... found
+Checking for asinh ... found
+Checking for atanh ... found
+Checking for cbrt ... found
+Checking for copysign ... found
+Checking for copysignl ... found
+Checking for erf ... found
+Checking for erfc ... found
+Checking for exp2 ... found
+Checking for expm1 ... found
+Checking for fdim ... found
+Checking for fegetround ... found
+Checking for finite ... found
+Checking for finitel ... found
+Checking for fma ... found
+Checking for fmax ... found
+Checking for fmin ... found
+Checking for fp_classify ... missing
+Checking for fp_classl ... missing
+Checking for fpclassl ... missing
+Checking for fpgetround ... missing
+Checking for frexpl ... found
+Checking for hypot ... found
+Checking for ilogb ... found
+Checking for isfinite ... found
+Checking for isfinitel ... missing
+Checking for isinf ... found
+Checking for isinfl ... found
+Checking for isless ... found
+Checking for isnan ... found
+Checking for isnanl ... found
+Checking for isnormal ... found
+Checking for j0 ... found
+Checking for j0l ... found
+Checking for ldexpl ... found
+Checking for lgamma ... found
+Checking for lgamma_r ... found
+Checking for llabs ... found
+Checking for llrint ... found
+Checking for llrintl ... found
+Checking for llround ... found
+Checking for llroundl ... found
+Checking for log1p ... found
+Checking for log2 ... found
+Checking for logb ... found
+Checking for lrint ... found
+Checking for lrintl ... found
+Checking for lround ... found
+Checking for lroundl ... found
+Checking for modfl ... found
+Checking for nan ... found
+Checking for nearbyint ... found
+Checking for nextafter ... found
+Checking for nexttoward ... found
+Checking for remainder ... found
+Checking for remquo ... found
+Checking for rint ... found
+Checking for round ... found
+Checking for scalbn ... found
+Checking for scalbnl ... found
+Checking for signbit ... found
+Checking for sqrtl ... found
+Checking for tgamma ... found
+Checking for trunc ... found
+Checking for truncl ... found
+Checking whether fpclassify() is usable ... yes
+Checking whether fpclass() is usable ... no, disabling fpclass()
+Checking dbminit prototype ... missing
+Checking drand48 prototype ... declared
+Checking flock prototype ... declared
+Checking lseek prototype ... declared
+Checking modfl prototype ... declared
+Checking sbrk prototype ... declared
+Checking sockatmark prototype ... declared
+Checking setresgid prototype ... declared
+Checking setresuid prototype ... declared
+Checking syscall prototype ... declared
+Checking telldir prototype ... declared
+Checking usleep prototype ... declared
+Checking gethostbyaddr prototype ... declared
+Checking getservbyport prototype ... declared
+Checking getnetbyaddr prototype ... declared
+Checking getprotobynumber prototype ... declared
+Checking for sys_errlist ... missing
+Checking for sys_errnolist ... missing
+Checking for tzname ... found
+Checking whether DBL_DIG is defined ... yes
+Checking whether LDBL_DIG is defined ... yes
+Checking whether SCM_RIGHTS is defined ... yes
+Checking whether closedir is void ... no
+Checking whether prctl supports PR_SET_NAME ... yes
+Checking FD_SET macros ... found
+Checking if we're using GNU libc ... (args) no
+Checking whether you have the full shm*(2) library ... yes
+Checking whether you have the full sem*(2) library ... yes
+Checking whether you have the full msg*(2) library ... yes
+Looking how to get error messages ... strerror()
+Looking for a random number function ... good, found drand48()
+Looking what times() may return ... clock_t
+Checking if compiler supports __attribute__((format)) ... yes
+Checking if compiler supports __attribute__((malloc)) ... yes
+Checking if compiler supports __attribute__((nonnull)) ... yes
+Checking if compiler supports __attribute__((noreturn)) ... yes
+Checking if compiler supports __attribute__((pure)) ... yes
+Checking if compiler supports __attribute__((unused)) ... yes
+Checking if compiler supports __attribute__((used)) ... yes
+Checking if compiler supports __attribute__((deprecated)) ... yes
+Checking if compiler supports __attribute__((warn_unused_result)) ... yes
+Checking if compiler supports __attribute__((always_inline)) ... yes
+Checking if compiler supports __builtin_add_overflow ... yes
+Checking if compiler supports __builtin_sub_overflow ... yes
+Checking if compiler supports __builtin_mul_overflow ... yes
+Checking to see if your C compiler knows about volatile ... yes
+Checking C99 variadic macros ... supported
+Checking non-int bitfields ... supported
+Deciding installation paths
+Deciding whether to use $vendorprefix ... yes
+Looking whether to enable threads ... yes, ithreads
+Checking for asctime_r ... found, B_SB
+Checking for ctime_r ... found, B_SB
+Checking for crypt_r ... found, B_CCS
+Checking for ctermid_r ... missing
+Checking for endpwent_r ... missing
+Checking for getgrent_r ... found, I_SBWR
+Checking for endgrent_r ... missing
+Checking for getgrgid_r ... found, I_TSBWR
+Checking for getgrnam_r ... found, I_CSBWR
+Checking for drand48_r ... found, I_ST
+Checking for endhostent_r ... missing
+Checking for endnetent_r ... missing
+Checking for endprotoent_r ... missing
+Checking for endservent_r ... missing
+Checking for gethostbyaddr_r ... found, I_TsISBWRE
+Checking for gethostbyname_r ... found, I_CSBWRE
+Checking for gethostent_r ... found, I_SBWRE
+Checking for getlogin_r ... found, I_BW
+Checking for getnetbyaddr_r ... found, I_uISBWRE
+Checking for getnetbyname_r ... found, I_CSBWRE
+Checking for getnetent_r ... found, I_SBWRE
+Checking for getprotobyname_r ... found, I_CSBWR
+Checking for getprotobynumber_r ... found, I_ISBWR
+Checking for getprotoent_r ... found, I_SBWR
+Checking for getpwent_r ... found, I_SBWR
+Checking for getpwnam_r ... found, I_CSBWR
+Checking for getpwuid_r ... found, I_TSBWR
+Checking for getservbyname_r ... found, I_CCSBWR
+Checking for getservbyport_r ... found, I_ICSBWR
+Checking for getservent_r ... found, I_SBWR
+Checking for getspnam_r ... found, I_CSBWR
+Checking for gmtime_r ... found, S_TS
+Checking for localtime_r ... found, S_TS
+Checking for random_r ... found, I_St
+Checking for readdir64_r ... found, I_TSR
+Checking for readdir_r ... found, I_TSR
+Checking for setgrent_r ... missing
+Checking for sethostent_r ... missing
+Checking for setlocale_r ... missing
+Checking for setnetent_r ... missing
+Checking for setprotoent_r ... missing
+Checking for setpwent_r ... missing
+Checking for setservent_r ... missing
+Checking for srand48_r ... found, I_LS
+Checking for srandom_r ... found, I_TS
+Checking for strerror_r ... found, B_IBW
+Checking for tmpnam_r ... found, B_B
+Checking for ttyname_r ... found, I_IBW
+Looking which extensions should be disabled
+    pre-disabling db_file
+    pre-disabling odbm_file
+    pre-disabling vms_dclsym
+    pre-disabling vms_stdio
+    pre-disabling vms_filespec
+    pre-disabling amiga_arexx
+    pre-disabling amiga_exec
+    pre-disabling win32
+    pre-disabling win32api_file
+    pre-disabling win32core
+Looking for extensions recursively under ext/
+    disabled ext/Amiga-ARexx
+    disabled ext/Amiga-Exec
+    dynamic ext/attributes
+    dynamic ext/B
+    dynamic ext/Devel-Peek
+    non-xs ext/Errno
+    non-xs ext/ExtUtils-Miniperl
+    dynamic ext/Fcntl
+    non-xs ext/FileCache
+    dynamic ext/File-DosGlob
+    non-xs ext/File-Find
+    dynamic ext/File-Glob
+    dynamic ext/GDBM_File
+    dynamic ext/Hash-Util
+    dynamic ext/Hash-Util-FieldHash
+    dynamic ext/I18N-Langinfo
+    non-xs ext/IPC-Open3
+    dynamic ext/mro
+    dynamic ext/NDBM_File
+    disabled ext/ODBM_File
+    dynamic ext/Opcode
+    dynamic ext/PerlIO-encoding
+    dynamic ext/PerlIO-mmap
+    dynamic ext/PerlIO-scalar
+    dynamic ext/PerlIO-via
+    non-xs ext/Pod-Functions
+    non-xs ext/Pod-Html
+    dynamic ext/POSIX
+    dynamic ext/re
+    dynamic ext/SDBM_File
+    dynamic ext/Sys-Hostname
+    non-xs ext/Tie-Hash-NamedCapture
+    non-xs ext/Tie-Memoize
+    disabled ext/VMS-DCLsym
+    disabled ext/VMS-Filespec
+    disabled ext/VMS-Stdio
+    disabled ext/Win32CORE
+    dynamic ext/XS-APItest
+    dynamic ext/XS-Typemap
+Looking for extensions recursively under cpan/
+    non-xs cpan/Archive-Tar
+    non-xs cpan/autodie
+    non-xs cpan/AutoLoader
+    non-xs cpan/bignum
+    dynamic cpan/Compress-Raw-Bzip2
+    dynamic cpan/Compress-Raw-Zlib
+    non-xs cpan/Config-Perl-V
+    non-xs cpan/CPAN
+    non-xs cpan/CPAN-Meta
+    non-xs cpan/CPAN-Meta-Requirements
+    non-xs cpan/CPAN-Meta-YAML
+    disabled cpan/DB_File
+    non-xs cpan/Digest
+    dynamic cpan/Digest-MD5
+    dynamic cpan/Digest-SHA
+    dynamic cpan/Encode
+    non-xs cpan/experimental
+    non-xs cpan/ExtUtils-Constant
+    non-xs cpan/ExtUtils-Install
+    non-xs cpan/ExtUtils-MakeMaker
+    non-xs cpan/ExtUtils-Manifest
+    non-xs cpan/ExtUtils-PL2Bat
+    non-xs cpan/File-Fetch
+    non-xs cpan/File-Path
+    non-xs cpan/File-Temp
+    dynamic cpan/Filter-Util-Call
+    non-xs cpan/Getopt-Long
+    non-xs cpan/HTTP-Tiny
+    non-xs cpan/IO-Compress
+    non-xs cpan/IO-Socket-IP
+    non-xs cpan/IO-Zlib
+    non-xs cpan/IPC-Cmd
+    dynamic cpan/IPC-SysV
+    non-xs cpan/JSON-PP
+    non-xs cpan/libnet
+    non-xs cpan/Locale-Maketext-Simple
+    non-xs cpan/Math-BigInt
+    dynamic cpan/Math-BigInt-FastCalc
+    non-xs cpan/Math-BigRat
+    non-xs cpan/Math-Complex
+    non-xs cpan/Memoize
+    dynamic cpan/MIME-Base64
+    non-xs cpan/Module-Load
+    non-xs cpan/Module-Load-Conditional
+    non-xs cpan/Module-Loaded
+    non-xs cpan/Module-Metadata
+    non-xs cpan/NEXT
+    non-xs cpan/Params-Check
+    non-xs cpan/parent
+    non-xs cpan/perlfaq
+    non-xs cpan/PerlIO-via-QuotedPrint
+    non-xs cpan/Perl-OSType
+    non-xs cpan/Pod-Checker
+    non-xs cpan/Pod-Escapes
+    non-xs cpan/podlators
+    non-xs cpan/Pod-Perldoc
+    non-xs cpan/Pod-Simple
+    non-xs cpan/Pod-Usage
+    dynamic cpan/Scalar-List-Utils
+    dynamic cpan/Socket
+    dynamic cpan/Sys-Syslog
+    non-xs cpan/Term-ANSIColor
+    non-xs cpan/Term-Cap
+    non-xs cpan/Test-Harness
+    non-xs cpan/Test-Simple
+    non-xs cpan/Text-Balanced
+    non-xs cpan/Text-ParseWords
+    non-xs cpan/Text-Tabs
+    non-xs cpan/Tie-RefHash
+    non-xs cpan/Time-Local
+    dynamic cpan/Time-Piece
+    dynamic cpan/Unicode-Collate
+    non-xs cpan/version
+    disabled cpan/Win32
+    disabled cpan/Win32API-File
+Looking for extensions recursively under dist/
+    non-xs dist/Attribute-Handlers
+    non-xs dist/autouse
+    non-xs dist/base
+    non-xs dist/Carp
+    non-xs dist/constant
+    dynamic dist/Data-Dumper
+    dynamic dist/Devel-PPPort
+    non-xs dist/Devel-SelfStubber
+    non-xs dist/Dumpvalue
+    non-xs dist/encoding-warnings
+    non-xs dist/Env
+    non-xs dist/Exporter
+    non-xs dist/ExtUtils-CBuilder
+    non-xs dist/ExtUtils-ParseXS
+    non-xs dist/Filter-Simple
+    non-xs dist/FindBin
+    non-xs dist/I18N-Collate
+    non-xs dist/I18N-LangTags
+    non-xs dist/if
+    dynamic dist/IO
+    non-xs dist/lib
+    non-xs dist/Locale-Maketext
+    non-xs dist/Module-CoreList
+    non-xs dist/Net-Ping
+    dynamic dist/PathTools
+    non-xs dist/Safe
+    non-xs dist/Search-Dict
+    non-xs dist/SelfLoader
+    dynamic dist/Storable
+    non-xs dist/Term-Complete
+    non-xs dist/Term-ReadLine
+    non-xs dist/Test
+    non-xs dist/Text-Abbrev
+    non-xs dist/Thread-Queue
+    dynamic dist/threads
+    non-xs dist/Thread-Semaphore
+    dynamic dist/threads-shared
+    non-xs dist/Tie-File
+    dynamic dist/Time-HiRes
+    dynamic dist/Unicode-Normalize
+    non-xs dist/XSLoader
+
+Static modules: 
+Non-XS modules: Errno ExtUtils/Miniperl FileCache File/Find IPC/Open3 Pod/Functions Pod/Html Tie/Hash/NamedCapture Tie/Memoize Archive/Tar autodie AutoLoader bignum Config/Perl/V CPAN CPAN/Meta CPAN/Meta/Requirements CPAN/Meta/YAML Digest experimental ExtUtils/Constant ExtUtils/Install ExtUtils/MakeMaker ExtUtils/Manifest ExtUtils/PL2Bat File/Fetch File/Path File/Temp Getopt/Long HTTP/Tiny IO/Compress IO/Socket/IP IO/Zlib IPC/Cmd JSON/PP libnet Locale/Maketext/Simple Math/BigInt Math/BigRat Math/Complex Memoize Module/Load Module/Load/Conditional Module/Loaded Module/Metadata NEXT Params/Check parent perlfaq PerlIO/via/QuotedPrint Perl/OSType Pod/Checker Pod/Escapes podlators Pod/Perldoc Pod/Simple Pod/Usage Term/ANSIColor Term/Cap Test/Harness Test/Simple Text/Balanced Text/ParseWords Text/Tabs Tie/RefHash Time/Local version Attribute/Handlers autouse base Carp constant Devel/SelfStubber Dumpvalue encoding/warnings Env Exporter ExtUtils/CBuilder ExtUtils/ParseXS Filter/Simple FindBin I18N/Collate I18N/LangTags if lib Locale/Maketext Module/CoreList Net/Ping Safe Search/Dict SelfLoader Term/Complete Term/ReadLine Test Text/Abbrev Thread/Queue Thread/Semaphore Tie/File XSLoader 
+Dynamic modules: attributes B Devel/Peek Fcntl File/DosGlob File/Glob GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo mro NDBM_File Opcode PerlIO/encoding PerlIO/mmap PerlIO/scalar PerlIO/via POSIX re SDBM_File Sys/Hostname XS/APItest XS/Typemap Compress/Raw/Bzip2 Compress/Raw/Zlib Digest/MD5 Digest/SHA Encode Filter/Util/Call IPC/SysV Math/BigInt/FastCalc MIME/Base64 Scalar/List/Utils Socket Sys/Syslog Time/Piece Unicode/Collate Data/Dumper Devel/PPPort IO PathTools Storable threads threads/shared Time/HiRes Unicode/Normalize 
+
+Ok, back to the top-level configure
+Generating config.h and xconfig.h
+Extracting config.h (with variable substitutions)
+Extracting xconfig.h (with variable substitutions)
+Generating Makefile.config
+
+Configuration completed for cross build
+
+      build platform:  x86_64-linux
+          C compiler:  gcc
+              linker:  gcc
+                  ar:  ar
+              ranlib:  ranlib
+             objdump:  objdump
+
+     target platform:  arm-linux
+          C compiler:  arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/perl/5.36.0-r0/recipe-sysroot
+                  ld:  arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/perl/5.36.0-r0/recipe-sysroot
+                  ar:  arm-openbmc-linux-gnueabi-gcc-ar
+              ranlib:  arm-openbmc-linux-gnueabi-gcc-ranlib
+             objdump:  arm-openbmc-linux-gnueabi-objdump
+
+              prefix:  /usr
+             sysroot:  
+ installation prefix:  
+         executables:  /usr/bin
+             scripts:  /usr/bin
+             privlib:  /usr/lib/perl5/5.36.0
+             archlib:  /usr/lib/perl5/5.36.0/arm-linux
+ section 1 man pages:  /usr/share/man/man1  (with '1' extension)
+ section 3 man pages:  /usr/share/man/man3  (with '3' extension)
+
+DEBUG: Shell function do_configure finished
+DEBUG: Executing python function do_qa_configure
+DEBUG: Python function do_qa_configure finished

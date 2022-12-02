@@ -1,0 +1,357 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/libxcrypt/libxcrypt_4.4.28.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/systemd/systemd-systemctl-native.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/flex/flex_2.6.4.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-cross_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-native_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-extended/cracklib/cracklib_2.9.8.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-core/gettext/gettext_0.21.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-core/libxml/libxml2_2.9.14.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/autoconf/autoconf_2.71.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/automake/automake_1.16.5.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/bison/bison_3.8.2.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/flex/flex_2.6.4.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pkgconfig/pkgconfig_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-extended/xz/xz_5.2.7.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: []
+NOTE: Skipping as already exists in sysroot: ['glibc', 'libxcrypt', 'systemd-systemctl-native', 'flex', 'gcc-cross-arm', 'gcc-runtime', 'libtool-cross', 'libtool-native', 'quilt-native', 'cracklib', 'gettext-native', 'libxml2-native', 'autoconf-native', 'automake-native', 'bison-native', 'flex-native', 'patch-native', 'pkgconfig-native', 'pseudo-native', 'xz-native', 'texinfo-dummy-native', 'gettext-minimal-native', 'libgcc', 'linux-libc-headers', 'zlib-native', 'mpfr-native', 'gmp-native', 'binutils-cross-arm', 'libmpc-native', 'gnu-config-native', 'zstd-native', 'zlib', 'm4-native', 'attr-native', 'python3-native', 'gdbm-native', 'libnsl2-native', 'sqlite3-native', 'readline-native', 'libffi-native', 'bzip2-native', 'libtirpc-native', 'openssl-native', 'ncurses-native', 'util-linux-libuuid-native', 'perl-native', 'make-native']
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing shell function autotools_preconfigure
+DEBUG: Shell function autotools_preconfigure finished
+DEBUG: Executing python function autotools_aclocals
+DEBUG: SITE files ['endian-little', 'bit-32', 'arm-common', 'arm-32', 'common-linux', 'common-glibc', 'arm-linux', 'arm-linux-gnueabi', 'common']
+DEBUG: Python function autotools_aclocals finished
+DEBUG: Executing shell function do_configure
+automake (GNU automake) 1.16.5
+Copyright (C) 2021 Free Software Foundation, Inc.
+License GPLv2+: GNU GPL version 2 or later <https://gnu.org/licenses/gpl-2.0.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Written by Tom Tromey <tromey@redhat.com>
+       and Alexandre Duret-Lutz <adl@gnu.org>.
+AUTOV is 1.16
+NOTE: Executing ACLOCAL="aclocal --system-acdir=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/recipe-sysroot/usr/share/aclocal/ --automake-acdir=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/recipe-sysroot-native/usr/share/aclocal-1.16" autoreconf -Wcross --verbose --install --force --exclude=autopoint --exclude=gtkdocize -I /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/Linux-PAM-1.3.1/m4/ -I /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/recipe-sysroot-native/usr/share/aclocal/
+autoreconf: export WARNINGS=cross,no-obsolete
+autoreconf: Entering directory '.'
+autoreconf: running: aclocal --system-acdir=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/recipe-sysroot/usr/share/aclocal/ --automake-acdir=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/recipe-sysroot-native/usr/share/aclocal-1.16 -I /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/Linux-PAM-1.3.1/m4/ -I /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/recipe-sysroot-native/usr/share/aclocal/ --force -I m4
+autoreconf: configure.ac: tracing
+autoreconf: running: libtoolize --copy --force
+libtoolize: putting auxiliary files in AC_CONFIG_AUX_DIR, 'build-aux'.
+libtoolize: copying file 'build-aux/ltmain.sh'
+libtoolize: putting macros in AC_CONFIG_MACRO_DIRS, 'm4'.
+libtoolize: copying file 'm4/libtool.m4'
+libtoolize: copying file 'm4/ltoptions.m4'
+libtoolize: copying file 'm4/ltsugar.m4'
+libtoolize: copying file 'm4/ltversion.m4'
+libtoolize: copying file 'm4/lt~obsolete.m4'
+autoreconf: configure.ac: not using Intltool
+autoreconf: configure.ac: not using Gtkdoc
+autoreconf: running: aclocal --system-acdir=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/recipe-sysroot/usr/share/aclocal/ --automake-acdir=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/recipe-sysroot-native/usr/share/aclocal-1.16 -I /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/Linux-PAM-1.3.1/m4/ -I /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/recipe-sysroot-native/usr/share/aclocal/ --force -I m4
+autoreconf: running: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/recipe-sysroot-native/usr/bin/autoconf --include=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/Linux-PAM-1.3.1/m4/ --include=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/recipe-sysroot-native/usr/share/aclocal/ --force
+configure.ac:433: warning: AC_CHECK_FUNCS(db_create$with_db_uniquename): you should use literals
+../autoconf-2.71/lib/autoconf/functions.m4:117: AC_CHECK_FUNCS is expanded from...
+configure.ac:433: the top level
+configure.ac:433: warning: AC_CHECK_FUNCS(dbm_store$with_db_uniquename): you should use literals
+../autoconf-2.71/lib/autoconf/functions.m4:117: AC_CHECK_FUNCS is expanded from...
+configure.ac:433: the top level
+autoreconf: running: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/recipe-sysroot-native/usr/bin/autoheader --include=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/Linux-PAM-1.3.1/m4/ --include=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/recipe-sysroot-native/usr/share/aclocal/ --force
+autoreconf: running: automake --add-missing --copy --force-missing
+configure.ac:61: installing 'build-aux/compile'
+configure.ac:5: installing 'build-aux/missing'
+conf/pam_conv1/Makefile.am: installing 'build-aux/depcomp'
+doc/specs/Makefile.am:16: warning: 'CFLAGS' is a user variable, you should not override it;
+doc/specs/Makefile.am:16: use 'AM_CFLAGS' instead
+doc/specs/Makefile.am:15: warning: 'CPPFLAGS' is a user variable, you should not override it;
+doc/specs/Makefile.am:15: use 'AM_CPPFLAGS' instead
+doc/specs/Makefile.am:17: warning: 'LDFLAGS' is a user variable, you should not override it;
+doc/specs/Makefile.am:17: use 'AM_LDFLAGS' instead
+xtests/Makefile.am:57: warning: user target 'install' defined here ...
+/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/recipe-sysroot-native/usr/share/automake-1.16/am/install.am: ... overrides Automake target 'install' defined here
+autoreconf: 'build-aux/config.sub' is updated
+autoreconf: 'build-aux/config.guess' is updated
+autoreconf: Leaving directory '.'
+NOTE: Running ../Linux-PAM-1.3.1/configure  --build=x86_64-linux 		  --host=arm-openbmc-linux-gnueabi 		  --target=arm-openbmc-linux-gnueabi 		  --prefix=/usr 		  --exec_prefix=/usr 		  --bindir=/usr/bin 		  --sbindir=/usr/sbin 		  --libexecdir=/usr/libexec 		  --datadir=/usr/share 		  --sysconfdir=/etc 		  --sharedstatedir=/com 		  --localstatedir=/var 		  --libdir=/usr/lib 		  --includedir=/usr/include 		  --oldincludedir=/usr/include 		  --infodir=/usr/share/info 		  --mandir=/usr/share/man 		  --disable-silent-rules 		  --disable-dependency-tracking 		  --with-libtool-sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/recipe-sysroot --includedir=/usr/include/security                 --libdir=/lib                 --disable-nis                 --disable-regenerate-docu 		--disable-prelude  --disable-audit --enable-db=no --enable-nls 
+configure: loading site script /home/matt/src/openbmc/meta/site/endian-little
+configure: loading site script /home/matt/src/openbmc/meta/site/arm-common
+configure: loading site script /home/matt/src/openbmc/meta/site/arm-32
+configure: loading site script /home/matt/src/openbmc/meta/site/common-linux
+configure: loading site script /home/matt/src/openbmc/meta/site/common-glibc
+configure: loading site script /home/matt/src/openbmc/meta/site/arm-linux
+configure: loading site script /home/matt/src/openbmc/meta/site/common
+checking for a BSD-compatible install... /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c
+checking whether build environment is sane... yes
+checking for arm-openbmc-linux-gnueabi-strip... arm-openbmc-linux-gnueabi-strip
+checking for a race-free mkdir -p... /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... arm-openbmc-linux-gnueabi
+checking whether make supports the include directive... yes (GNU style)
+checking for arm-openbmc-linux-gnueabi-gcc... arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/recipe-sysroot
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... yes
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/recipe-sysroot accepts -g... yes
+checking for arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/recipe-sysroot option to enable C11 features... none needed
+checking whether arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/recipe-sysroot understands -c and -o together... yes
+checking dependency style of arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/recipe-sysroot... none
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for wchar.h... yes
+checking for minix/config.h... no
+checking for sys/time.h... yes
+checking whether it is safe to define __EXTENSIONS__... yes
+checking whether _XOPEN_SOURCE should be defined... no
+checking how to print strings... printf
+checking for a sed that does not truncate output... (cached) sed
+checking for grep that handles long lines and -e... /home/matt/tmp/build/obmc-y2038/tmp/hosttools/grep
+checking for egrep... /home/matt/tmp/build/obmc-y2038/tmp/hosttools/grep -E
+checking for fgrep... /home/matt/tmp/build/obmc-y2038/tmp/hosttools/grep -F
+checking for ld used by arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/recipe-sysroot... arm-openbmc-linux-gnueabi-ld --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/recipe-sysroot 
+checking if the linker (arm-openbmc-linux-gnueabi-ld --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/recipe-sysroot ) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... arm-openbmc-linux-gnueabi-gcc-nm
+checking the name lister (arm-openbmc-linux-gnueabi-gcc-nm) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking how to convert x86_64-pc-linux-gnu file names to arm-openbmc-linux-gnueabi format... func_convert_file_noop
+checking how to convert x86_64-pc-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for arm-openbmc-linux-gnueabi-ld --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/recipe-sysroot  option to reload object files... -r
+checking for arm-openbmc-linux-gnueabi-file... no
+checking for file... file
+checking for arm-openbmc-linux-gnueabi-objdump... arm-openbmc-linux-gnueabi-objdump
+checking how to recognize dependent libraries... pass_all
+checking for arm-openbmc-linux-gnueabi-dlltool... no
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for arm-openbmc-linux-gnueabi-ar... arm-openbmc-linux-gnueabi-gcc-ar
+checking for archiver @FILE support... configure: WARNING: using cross tools not prefixed with host triplet
+@
+checking for arm-openbmc-linux-gnueabi-strip... (cached) arm-openbmc-linux-gnueabi-strip
+checking for arm-openbmc-linux-gnueabi-ranlib... arm-openbmc-linux-gnueabi-gcc-ranlib
+checking command to parse arm-openbmc-linux-gnueabi-gcc-nm output from arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/recipe-sysroot object... ok
+checking for sysroot... /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/recipe-sysroot
+checking for a working dd... /home/matt/tmp/build/obmc-y2038/tmp/hosttools/dd
+checking how to truncate binary pipes... /home/matt/tmp/build/obmc-y2038/tmp/hosttools/dd bs=4096 count=1
+checking for arm-openbmc-linux-gnueabi-mt... no
+checking for mt... no
+checking if : is a manifest tool... no
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/recipe-sysroot supports -fno-rtti -fno-exceptions... no
+checking for arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/recipe-sysroot option to produce PIC... -fPIC -DPIC
+checking if arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/recipe-sysroot PIC flag -fPIC -DPIC works... yes
+checking if arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/recipe-sysroot static flag -static works... yes
+checking if arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/recipe-sysroot supports -c -o file.o... yes
+checking if arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/recipe-sysroot supports -c -o file.o... (cached) yes
+checking whether the arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/recipe-sysroot linker (arm-openbmc-linux-gnueabi-ld --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/recipe-sysroot ) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... no
+checking for arm-openbmc-linux-gnueabi-gcc... (cached) arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/recipe-sysroot
+checking whether the compiler supports GNU C... (cached) yes
+checking whether arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/recipe-sysroot accepts -g... (cached) yes
+checking for arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/recipe-sysroot option to enable C11 features... (cached) none needed
+checking whether arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/recipe-sysroot understands -c and -o together... (cached) yes
+checking dependency style of arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/recipe-sysroot... (cached) none
+checking for bison... bison -y
+checking for flex... flex
+checking for lex output file root... lex.yy
+checking for lex library... none needed
+checking for library containing yywrap... no
+checking whether yytext is a pointer... yes
+checking whether ln -s works... yes
+checking whether make sets $(MAKE)... (cached) yes
+checking whether ld supports --as-needed... yes
+checking whether ld supports --no-undefined... yes
+checking whether ld supports -O1... yes
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... 64
+checking for CC_FOR_BUILD... gcc 
+checking for __attribute__... ../Linux-PAM-1.3.1/configure: line 14769: test: syntax error: `-march=armv7-a' unexpected
+../Linux-PAM-1.3.1/configure: line 14796: test: syntax error: `-march=armv7-a' unexpected
+yes
+checking for .symver assembler directive... yes
+checking for ld --version-script... yes
+checking for -fpie... yes
+Defining $ISA to "../../lib/security"
+checking for paths.h... yes
+checking for xauth... no
+checking for dlopen in -ldl... yes
+checking for crack.h... yes
+checking for FascistCheck in -lcrack... yes
+checking for xcrypt.h... no
+checking for crypt.h... yes
+checking for library containing crypt... -lcrypt
+checking for crypt_r... yes
+checking for crypt_gensalt_r... no
+checking for arm-openbmc-linux-gnueabi-pkg-config... no
+checking for pkg-config... /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/recipe-sysroot-native/usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/recipe-sysroot options needed to detect all undeclared functions... none needed
+checking for getfilecon in -lselinux... no
+checking for dirent.h that defines DIR... yes
+checking for library containing opendir... none required
+checking for egrep... (cached) /home/matt/tmp/build/obmc-y2038/tmp/hosttools/grep -E
+checking for sys/wait.h that is POSIX.1 compatible... yes
+checking for fcntl.h... yes
+checking for limits.h... yes
+checking for malloc.h... yes
+checking for sys/file.h... yes
+checking for sys/ioctl.h... yes
+checking for sys/time.h... (cached) yes
+checking for syslog.h... yes
+checking for net/if.h... yes
+checking for termio.h... yes
+checking for unistd.h... (cached) yes
+checking for sys/fsuid.h... yes
+checking for inittypes.h... no
+checking for lastlog.h... yes
+checking for utmp.h... yes
+checking for utmpx.h... yes
+checking whether byte ordering is bigendian... (cached) no
+checking for an ANSI C-conforming const... yes
+checking how to run the C preprocessor... arm-openbmc-linux-gnueabi-gcc -E --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/recipe-sysroot  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security
+checking for uid_t in sys/types.h... (cached) {ac_cv_type_uid_t=yes}
+checking for off_t... yes
+checking for pid_t... yes
+checking for size_t... yes
+checking whether struct tm is in sys/time.h or time.h... time.h
+checking type of array argument to getgroups... gid_t
+checking whether arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/recipe-sysroot needs -traditional... no
+checking for working memcmp... (cached) yes
+checking for vprintf... yes
+checking for fseeko... yes
+checking for getdomainname... yes
+checking for gethostname... yes
+checking for gettimeofday... yes
+checking for lckpwdf... yes
+checking for mkdir... yes
+checking for select... yes
+checking for strcspn... yes
+checking for strdup... yes
+checking for strspn... yes
+checking for strstr... yes
+checking for strtol... yes
+checking for uname... yes
+checking for getutent_r... yes
+checking for getpwnam_r... yes
+checking for getpwuid_r... (cached) yes
+checking for getgrnam_r... yes
+checking for getgrgid_r... (cached) yes
+checking for getspnam_r... yes
+checking for getgrouplist... yes
+checking for getline... yes
+checking for getdelim... yes
+checking for inet_ntop... yes
+checking for inet_pton... yes
+checking for innetgr... yes
+checking for ruserok_af... yes
+checking for unshare... yes
+checking for xsltproc... no
+checking for xmllint... /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/recipe-sysroot-native/usr/bin/xmllint
+checking for XML catalog (/etc/xml/catalog)... found
+checking for xmlcatalog... /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/recipe-sysroot-native/usr/bin/xmlcatalog
+checking for DocBook XML DTD V4.4 in XML catalog... found
+checking for DocBook XSL Stylesheets in XML catalog... found
+checking for w3m... no
+checking for elinks... no
+checking for fop... no
+checking whether NLS is requested... yes
+checking for msgfmt... /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/recipe-sysroot-native/usr/bin/msgfmt
+checking for gmsgfmt... /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/recipe-sysroot-native/usr/bin/msgfmt
+checking for xgettext... /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/recipe-sysroot-native/usr/bin/xgettext
+checking for msgmerge... /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/recipe-sysroot-native/usr/bin/msgmerge
+checking for ld... arm-openbmc-linux-gnueabi-ld --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/recipe-sysroot 
+checking if the linker (arm-openbmc-linux-gnueabi-ld --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/recipe-sysroot ) is GNU ld... yes
+checking for shared library run path origin... done
+checking 32-bit host C ABI... yes
+checking for ELF binary format... yes
+checking for the common suffixes of directories in the library search path... lib,lib32,lib
+checking for CFPreferencesCopyAppValue... no
+checking for CFLocaleCopyCurrent... no
+checking for GNU gettext in libc... yes
+checking whether to use NLS... yes
+checking where the gettext function comes from... libc
+checking for dngettext... yes
+checking whether __NR_keyctl is declared... yes
+checking whether ENOKEY is declared... yes
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating libpam/Makefile
+config.status: creating libpamc/Makefile
+config.status: creating libpamc/test/Makefile
+config.status: creating libpam_misc/Makefile
+config.status: creating conf/Makefile
+config.status: creating conf/pam_conv1/Makefile
+config.status: creating po/Makefile.in
+config.status: creating modules/Makefile
+config.status: creating modules/pam_access/Makefile
+config.status: creating modules/pam_cracklib/Makefile
+config.status: creating modules/pam_debug/Makefile
+config.status: creating modules/pam_deny/Makefile
+config.status: creating modules/pam_echo/Makefile
+config.status: creating modules/pam_env/Makefile
+config.status: creating modules/pam_faildelay/Makefile
+config.status: creating modules/pam_filter/Makefile
+config.status: creating modules/pam_filter/upperLOWER/Makefile
+config.status: creating modules/pam_ftp/Makefile
+config.status: creating modules/pam_group/Makefile
+config.status: creating modules/pam_issue/Makefile
+config.status: creating modules/pam_keyinit/Makefile
+config.status: creating modules/pam_lastlog/Makefile
+config.status: creating modules/pam_limits/Makefile
+config.status: creating modules/pam_listfile/Makefile
+config.status: creating modules/pam_localuser/Makefile
+config.status: creating modules/pam_loginuid/Makefile
+config.status: creating modules/pam_mail/Makefile
+config.status: creating modules/pam_mkhomedir/Makefile
+config.status: creating modules/pam_motd/Makefile
+config.status: creating modules/pam_namespace/Makefile
+config.status: creating modules/pam_nologin/Makefile
+config.status: creating modules/pam_permit/Makefile
+config.status: creating modules/pam_pwhistory/Makefile
+config.status: creating modules/pam_rhosts/Makefile
+config.status: creating modules/pam_rootok/Makefile
+config.status: creating modules/pam_exec/Makefile
+config.status: creating modules/pam_securetty/Makefile
+config.status: creating modules/pam_selinux/Makefile
+config.status: creating modules/pam_sepermit/Makefile
+config.status: creating modules/pam_shells/Makefile
+config.status: creating modules/pam_stress/Makefile
+config.status: creating modules/pam_succeed_if/Makefile
+config.status: creating modules/pam_tally/Makefile
+config.status: creating modules/pam_tally2/Makefile
+config.status: creating modules/pam_time/Makefile
+config.status: creating modules/pam_timestamp/Makefile
+config.status: creating modules/pam_tty_audit/Makefile
+config.status: creating modules/pam_umask/Makefile
+config.status: creating modules/pam_unix/Makefile
+config.status: creating modules/pam_userdb/Makefile
+config.status: creating modules/pam_warn/Makefile
+config.status: creating modules/pam_wheel/Makefile
+config.status: creating modules/pam_xauth/Makefile
+config.status: creating doc/Makefile
+config.status: creating doc/specs/Makefile
+config.status: creating doc/man/Makefile
+config.status: creating doc/sag/Makefile
+config.status: creating doc/adg/Makefile
+config.status: creating doc/mwg/Makefile
+config.status: creating examples/Makefile
+config.status: creating tests/Makefile
+config.status: creating xtests/Makefile
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+config.status: executing po-directories commands
+config.status: creating po/POTFILES
+config.status: creating po/Makefile
+DEBUG: Shell function do_configure finished
+DEBUG: Executing python function do_qa_configure
+NOTE: Checking autotools environment for common misconfiguration
+NOTE: Checking configure output for unrecognised options
+DEBUG: Python function do_qa_configure finished
+DEBUG: Executing shell function autotools_postconfigure
+DEBUG: Shell function autotools_postconfigure finished

@@ -1,0 +1,866 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-connectivity/openssl/openssl_3.0.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/libxcrypt/libxcrypt_4.4.28.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses_6.3+20220423.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/readline/readline_8.1.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid_2.38.1.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/zlib/zlib_1.2.13.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-cross_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-native_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/opkg-utils/opkg-utils_0.5.0.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-extended/bzip2/bzip2_1.0.8.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-extended/libnsl/libnsl2_git.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-extended/libtirpc/libtirpc_1.3.3.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-extended/xz/xz_5.2.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-support/gdbm/gdbm_1.23.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-support/libffi/libffi_3.4.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-support/sqlite/sqlite3_3.39.4.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/autoconf-archive/autoconf-archive_2022.09.03.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/autoconf/autoconf_2.71.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/automake/automake_1.16.5.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pkgconfig/pkgconfig_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/python/python3_3.11.0.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-extended/bzip2/bzip2_1.0.8.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-extended/xz/xz_5.2.7.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: []
+NOTE: Skipping as already exists in sysroot: ['openssl', 'glibc', 'libxcrypt', 'ncurses', 'readline', 'util-linux-libuuid', 'zlib', 'gcc-cross-arm', 'gcc-runtime', 'libtool-cross', 'libtool-native', 'opkg-utils', 'quilt-native', 'bzip2', 'libnsl2', 'libtirpc', 'xz', 'gdbm', 'libffi', 'sqlite3', 'autoconf-archive-native', 'autoconf-native', 'automake-native', 'patch-native', 'pkgconfig-native', 'pseudo-native', 'python3-native', 'bzip2-native', 'xz-native', 'texinfo-dummy-native', 'm4-native', 'gnu-config-native', 'linux-libc-headers', 'zstd-native', 'libmpc-native', 'binutils-cross-arm', 'flex-native', 'zlib-native', 'gmp-native', 'mpfr-native', 'readline-native', 'ncurses-native', 'libtirpc-native', 'util-linux-libuuid-native', 'libnsl2-native', 'libffi-native', 'openssl-native', 'gdbm-native', 'sqlite3-native', 'libgcc', 'attr-native', 'gettext-minimal-native', 'perl-native', 'make-native']
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing shell function autotools_preconfigure
+DEBUG: Shell function autotools_preconfigure finished
+DEBUG: Executing python function autotools_aclocals
+DEBUG: SITE files ['endian-little', 'bit-32', 'arm-common', 'arm-32', 'common-linux', 'common-glibc', 'arm-linux', 'arm-linux-gnueabi', 'common']
+DEBUG: Python function autotools_aclocals finished
+DEBUG: Executing shell function do_configure
+automake (GNU automake) 1.16.5
+Copyright (C) 2021 Free Software Foundation, Inc.
+License GPLv2+: GNU GPL version 2 or later <https://gnu.org/licenses/gpl-2.0.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Written by Tom Tromey <tromey@redhat.com>
+       and Alexandre Duret-Lutz <adl@gnu.org>.
+AUTOV is 1.16
+NOTE: Executing ACLOCAL="aclocal --system-acdir=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/python3/3.11.0-r0/recipe-sysroot/usr/share/aclocal/ --automake-acdir=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/python3/3.11.0-r0/recipe-sysroot-native/usr/share/aclocal-1.16" autoreconf -Wcross --verbose --install --force --exclude=autopoint --exclude=gtkdocize -I /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/python3/3.11.0-r0/recipe-sysroot-native/usr/share/aclocal/
+autoreconf: export WARNINGS=cross,no-obsolete
+autoreconf: Entering directory '.'
+autoreconf: configure.ac: not using Gettext
+autoreconf: running: aclocal --system-acdir=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/python3/3.11.0-r0/recipe-sysroot/usr/share/aclocal/ --automake-acdir=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/python3/3.11.0-r0/recipe-sysroot-native/usr/share/aclocal-1.16 -I /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/python3/3.11.0-r0/recipe-sysroot-native/usr/share/aclocal/ --force 
+autoreconf: configure.ac: tracing
+autoreconf: running: libtoolize --copy --force
+libtoolize: putting auxiliary files in '.'.
+libtoolize: copying file './ltmain.sh'
+libtoolize: Consider adding 'AC_CONFIG_MACRO_DIRS([m4])' to configure.ac,
+libtoolize: and rerunning libtoolize and aclocal.
+libtoolize: Consider adding '-I m4' to ACLOCAL_AMFLAGS in Makefile.am.
+autoreconf: configure.ac: not using Intltool
+autoreconf: configure.ac: not using Gtkdoc
+autoreconf: running: aclocal --system-acdir=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/python3/3.11.0-r0/recipe-sysroot/usr/share/aclocal/ --automake-acdir=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/python3/3.11.0-r0/recipe-sysroot-native/usr/share/aclocal-1.16 -I /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/python3/3.11.0-r0/recipe-sysroot-native/usr/share/aclocal/ --force 
+autoreconf: running: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/python3/3.11.0-r0/recipe-sysroot-native/usr/bin/autoconf --include=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/python3/3.11.0-r0/recipe-sysroot-native/usr/share/aclocal/ --force
+configure.ac:851: warning: AC_COMPILE_IFELSE was called before AC_USE_SYSTEM_EXTENSIONS
+../autoconf-2.71/lib/autoconf/specific.m4:364: AC_USE_SYSTEM_EXTENSIONS is expanded from...
+configure.ac:851: the top level
+configure.ac:851: warning: AC_LINK_IFELSE was called before AC_USE_SYSTEM_EXTENSIONS
+../autoconf-2.71/lib/autoconf/specific.m4:364: AC_USE_SYSTEM_EXTENSIONS is expanded from...
+configure.ac:851: the top level
+configure.ac:851: warning: AC_CHECK_INCLUDES_DEFAULT was called before AC_USE_SYSTEM_EXTENSIONS
+../autoconf-2.71/lib/autoconf/specific.m4:364: AC_USE_SYSTEM_EXTENSIONS is expanded from...
+configure.ac:851: the top level
+configure.ac:5985: warning: cannot check for file existence when cross compiling
+../autoconf-2.71/lib/autoconf/general.m4:3010: AC_CHECK_FILE is expanded from...
+configure.ac:5985: the top level
+configure.ac:5990: warning: cannot check for file existence when cross compiling
+../autoconf-2.71/lib/autoconf/general.m4:3010: AC_CHECK_FILE is expanded from...
+configure.ac:5990: the top level
+autoreconf: running: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/python3/3.11.0-r0/recipe-sysroot-native/usr/bin/autoheader --include=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/python3/3.11.0-r0/recipe-sysroot-native/usr/share/aclocal/ --force
+autoreconf: configure.ac: not using Automake
+autoreconf: './config.sub' is updated
+autoreconf: './config.guess' is updated
+autoreconf: Leaving directory '.'
+NOTE: Running ../Python-3.11.0/configure  --build=x86_64-linux 		  --host=arm-openbmc-linux-gnueabi 		  --target=arm-openbmc-linux-gnueabi 		  --prefix=/usr 		  --exec_prefix=/usr 		  --bindir=/usr/bin 		  --sbindir=/usr/sbin 		  --libexecdir=/usr/libexec 		  --datadir=/usr/share 		  --sysconfdir=/etc 		  --sharedstatedir=/com 		  --localstatedir=/var 		  --libdir=/usr/lib 		  --includedir=/usr/include 		  --oldincludedir=/usr/include 		  --infodir=/usr/share/info 		  --mandir=/usr/share/man 		  --disable-silent-rules 		  --disable-dependency-tracking 		  --with-libtool-sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/python3/3.11.0-r0/recipe-sysroot  --without-ensurepip --enable-shared --with-platlibdir=lib --disable-static  --with-build-python=nativepython3 
+configure: WARNING: unrecognized options: --disable-silent-rules, --disable-dependency-tracking
+configure: loading site script /home/matt/src/openbmc/meta/site/endian-little
+configure: loading site script /home/matt/src/openbmc/meta/site/arm-common
+configure: loading site script /home/matt/src/openbmc/meta/site/arm-32
+configure: loading site script /home/matt/src/openbmc/meta/site/common-linux
+configure: loading site script /home/matt/src/openbmc/meta/site/common-glibc
+configure: loading site script /home/matt/src/openbmc/meta/site/arm-linux
+configure: loading site script /home/matt/src/openbmc/meta/site/common
+configure: loading site script /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/python3/3.11.0-r0/recipe-sysroot/usr/share/arm-openbmc-linux-gnueabi_config_site.d/ncurses_config
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... arm-openbmc-linux-gnueabi
+checking how to print strings... printf
+checking for arm-openbmc-linux-gnueabi-gcc... arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/python3/3.11.0-r0/recipe-sysroot
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... yes
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/python3/3.11.0-r0/recipe-sysroot accepts -g... yes
+checking for arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/python3/3.11.0-r0/recipe-sysroot option to enable C11 features... none needed
+checking for a sed that does not truncate output... (cached) sed
+checking for grep that handles long lines and -e... /home/matt/tmp/build/obmc-y2038/tmp/hosttools/grep
+checking for egrep... /home/matt/tmp/build/obmc-y2038/tmp/hosttools/grep -E
+checking for fgrep... /home/matt/tmp/build/obmc-y2038/tmp/hosttools/grep -F
+checking for ld used by arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/python3/3.11.0-r0/recipe-sysroot... arm-openbmc-linux-gnueabi-ld --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/python3/3.11.0-r0/recipe-sysroot 
+checking if the linker (arm-openbmc-linux-gnueabi-ld --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/python3/3.11.0-r0/recipe-sysroot ) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... arm-openbmc-linux-gnueabi-gcc-nm
+checking the name lister (arm-openbmc-linux-gnueabi-gcc-nm) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking how to convert x86_64-pc-linux-gnu file names to arm-openbmc-linux-gnueabi format... func_convert_file_noop
+checking how to convert x86_64-pc-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for arm-openbmc-linux-gnueabi-ld --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/python3/3.11.0-r0/recipe-sysroot  option to reload object files... -r
+checking for arm-openbmc-linux-gnueabi-file... no
+checking for file... file
+checking for arm-openbmc-linux-gnueabi-objdump... arm-openbmc-linux-gnueabi-objdump
+configure: WARNING: using cross tools not prefixed with host triplet
+checking how to recognize dependent libraries... pass_all
+checking for arm-openbmc-linux-gnueabi-dlltool... no
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for arm-openbmc-linux-gnueabi-ar... arm-openbmc-linux-gnueabi-gcc-ar
+checking for archiver @FILE support... @
+checking for arm-openbmc-linux-gnueabi-strip... arm-openbmc-linux-gnueabi-strip
+checking for arm-openbmc-linux-gnueabi-ranlib... arm-openbmc-linux-gnueabi-gcc-ranlib
+checking for gawk... gawk
+checking command to parse arm-openbmc-linux-gnueabi-gcc-nm output from arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/python3/3.11.0-r0/recipe-sysroot object... ok
+checking for sysroot... /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/python3/3.11.0-r0/recipe-sysroot
+checking for a working dd... /home/matt/tmp/build/obmc-y2038/tmp/hosttools/dd
+checking how to truncate binary pipes... /home/matt/tmp/build/obmc-y2038/tmp/hosttools/dd bs=4096 count=1
+checking for arm-openbmc-linux-gnueabi-mt... no
+checking for mt... no
+checking if : is a manifest tool... no
+checking for stdio.h... (cached) yes
+checking for stdlib.h... (cached) yes
+checking for string.h... (cached) yes
+checking for inttypes.h... (cached) yes
+checking for stdint.h... (cached) yes
+checking for strings.h... (cached) yes
+checking for sys/stat.h... (cached) yes
+checking for sys/types.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking for wchar.h... yes
+checking for minix/config.h... no
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/python3/3.11.0-r0/recipe-sysroot supports -fno-rtti -fno-exceptions... no
+checking for arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/python3/3.11.0-r0/recipe-sysroot option to produce PIC... -fPIC -DPIC
+checking if arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/python3/3.11.0-r0/recipe-sysroot PIC flag -fPIC -DPIC works... yes
+checking if arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/python3/3.11.0-r0/recipe-sysroot static flag -static works... yes
+checking if arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/python3/3.11.0-r0/recipe-sysroot supports -c -o file.o... yes
+checking if arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/python3/3.11.0-r0/recipe-sysroot supports -c -o file.o... (cached) yes
+checking whether the arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/python3/3.11.0-r0/recipe-sysroot linker (arm-openbmc-linux-gnueabi-ld --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/python3/3.11.0-r0/recipe-sysroot ) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... no
+checking for --with-build-python... nativepython3
+checking for Python interpreter freezing... nativepython3
+checking for python3.11... (cached) nativepython3
+checking Python for regen version... Python 3.11.0
+checking for arm-openbmc-linux-gnueabi-pkg-config... no
+checking for pkg-config... /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/python3/3.11.0-r0/recipe-sysroot-native/usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for --enable-universalsdk... no
+checking for --with-universal-archs... no
+checking MACHDEP... "linux"
+checking for arm-openbmc-linux-gnueabi-gcc... (cached) arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/python3/3.11.0-r0/recipe-sysroot
+checking whether the compiler supports GNU C... (cached) yes
+checking whether arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/python3/3.11.0-r0/recipe-sysroot accepts -g... (cached) yes
+checking for arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/python3/3.11.0-r0/recipe-sysroot option to enable C11 features... (cached) none needed
+checking how to run the C preprocessor... arm-openbmc-linux-gnueabi-gcc -E --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/python3/3.11.0-r0/recipe-sysroot  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security
+checking for grep that handles long lines and -e... (cached) /home/matt/tmp/build/obmc-y2038/tmp/hosttools/grep
+checking for a sed that does not truncate output... (cached) sed
+checking for egrep... (cached) /home/matt/tmp/build/obmc-y2038/tmp/hosttools/grep -E
+checking for CC compiler name... gcc
+checking whether it is safe to define __EXTENSIONS__... yes
+checking whether _XOPEN_SOURCE should be defined... no
+checking for --with-cxx-main=<compiler>... no
+checking target system type... arm-openbmc-linux-gnueabi
+checking for multiarch... 
+checking for PEP 11 support tier... configure: WARNING: arm-openbmc-linux-gnueabi/gcc is not supported
+checking for -Wl,--no-as-needed... yes
+checking for the Android API level... not Android
+checking for --with-emscripten-target... 
+checking for --enable-wasm-dynamic-linking... missing
+checking for --enable-wasm-pthreads... missing
+checking for --with-suffix... 
+checking for case-insensitive build directory... no
+checking LIBRARY... libpython$(VERSION)$(ABIFLAGS).a
+checking LINKCC... $(PURIFY) $(MAINCC)
+checking EXPORTSYMS... 
+checking for GNU ld... yes
+checking for --enable-shared... yes
+checking for --with-static-libpython... yes
+checking for --enable-profiling... no
+checking LDLIBRARY... checking HOSTRUNNER... 
+libpython$(LDVERSION).so
+checking for arm-openbmc-linux-gnueabi-ar... (cached) arm-openbmc-linux-gnueabi-gcc-ar
+checking for arm-openbmc-linux-gnueabi-readelf... arm-openbmc-linux-gnueabi-readelf
+checking for a BSD-compatible install... /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c
+checking for a race-free mkdir -p... /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p
+checking for --with-pydebug... no
+checking for --with-trace-refs... no
+checking for --enable-pystats... no
+checking for --with-assertions... no
+checking for --enable-optimizations... no
+checking PROFILE_TASK... -m test --pgo --timeout=$(TESTTIMEOUT)
+checking for --with-lto... no
+checking for arm-openbmc-linux-gnueabi-llvm-profdata... no
+checking for llvm-profdata... no
+checking if arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/python3/3.11.0-r0/recipe-sysroot supports -Og optimization level... yes
+checking if we can add -Wextra... yes
+checking whether arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/python3/3.11.0-r0/recipe-sysroot -fno-strict-aliasing accepts and needs -fno-strict-aliasing... no
+checking if we can disable arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/python3/3.11.0-r0/recipe-sysroot unused-parameter warning... yes
+checking if we can disable arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/python3/3.11.0-r0/recipe-sysroot missing-field-initializers warning... yes
+checking if we can enable arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/python3/3.11.0-r0/recipe-sysroot sign-compare warning... yes
+checking if we can enable arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/python3/3.11.0-r0/recipe-sysroot unreachable-code warning... yes
+checking if we can enable arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/python3/3.11.0-r0/recipe-sysroot strict-prototypes warning... yes
+checking if we can make implicit function declaration an error in arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/python3/3.11.0-r0/recipe-sysroot -Werror=implicit-function-declaration... yes
+checking if we can use visibility in arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/python3/3.11.0-r0/recipe-sysroot -fvisibility=hidden... yes
+checking whether pthreads are available without options... no
+checking whether arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/python3/3.11.0-r0/recipe-sysroot accepts -Kpthread... no
+checking whether arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/python3/3.11.0-r0/recipe-sysroot accepts -Kthread... no
+checking whether arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/python3/3.11.0-r0/recipe-sysroot accepts -pthread... no
+checking whether arm-openbmc-linux-gnueabi-g++  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/python3/3.11.0-r0/recipe-sysroot also accepts flags for thread support... no
+checking for alloca.h... yes
+checking for asm/types.h... yes
+checking for bluetooth.h... no
+checking for conio.h... no
+checking for crypt.h... yes
+checking for direct.h... no
+checking for dlfcn.h... (cached) yes
+checking for endian.h... yes
+checking for errno.h... yes
+checking for fcntl.h... yes
+checking for grp.h... yes
+checking for ieeefp.h... no
+checking for io.h... no
+checking for langinfo.h... yes
+checking for libintl.h... yes
+checking for libutil.h... no
+checking for linux/auxvec.h... yes
+checking for sys/auxv.h... yes
+checking for linux/memfd.h... yes
+checking for linux/random.h... yes
+checking for linux/soundcard.h... yes
+checking for linux/tipc.h... yes
+checking for linux/wait.h... yes
+checking for netdb.h... yes
+checking for netinet/in.h... yes
+checking for netpacket/packet.h... yes
+checking for poll.h... yes
+checking for process.h... no
+checking for pthread.h... yes
+checking for pty.h... yes
+checking for sched.h... yes
+checking for setjmp.h... yes
+checking for shadow.h... yes
+checking for signal.h... yes
+checking for spawn.h... yes
+checking for stropts.h... no
+checking for sys/audioio.h... no
+checking for sys/bsdtty.h... no
+checking for sys/devpoll.h... no
+checking for sys/endian.h... no
+checking for sys/epoll.h... yes
+checking for sys/event.h... no
+checking for sys/eventfd.h... yes
+checking for sys/file.h... yes
+checking for sys/ioctl.h... yes
+checking for sys/kern_control.h... no
+checking for sys/loadavg.h... no
+checking for sys/lock.h... no
+checking for sys/memfd.h... no
+checking for sys/mkdev.h... no
+checking for sys/mman.h... yes
+checking for sys/modem.h... no
+checking for sys/param.h... yes
+checking for sys/poll.h... yes
+checking for sys/random.h... yes
+checking for sys/resource.h... yes
+checking for sys/select.h... yes
+checking for sys/sendfile.h... yes
+checking for sys/socket.h... yes
+checking for sys/soundcard.h... yes
+checking for sys/stat.h... (cached) yes
+checking for sys/statvfs.h... yes
+checking for sys/sys_domain.h... no
+checking for sys/syscall.h... yes
+checking for sys/sysmacros.h... yes
+checking for sys/termio.h... no
+checking for sys/time.h... yes
+checking for sys/times.h... yes
+checking for sys/types.h... (cached) yes
+checking for sys/uio.h... yes
+checking for sys/un.h... yes
+checking for sys/utsname.h... yes
+checking for sys/wait.h... yes
+checking for sys/xattr.h... yes
+checking for sysexits.h... yes
+checking for syslog.h... yes
+checking for termios.h... yes
+checking for util.h... no
+checking for utime.h... yes
+checking for utmp.h... yes
+checking for dirent.h that defines DIR... yes
+checking for library containing opendir... none required
+checking for sys/mkdev.h... (cached) no
+checking for sys/sysmacros.h... (cached) yes
+checking for bluetooth/bluetooth.h... no
+checking for net/if.h... yes
+checking for linux/netlink.h... yes
+checking for linux/qrtr.h... yes
+checking for linux/vm_sockets.h... yes
+checking for linux/can.h... yes
+checking for linux/can/bcm.h... yes
+checking for linux/can/j1939.h... yes
+checking for linux/can/raw.h... yes
+checking for netcan/can.h... no
+checking for clock_t in time.h... yes
+checking for makedev... yes
+checking for le64toh... yes
+checking for mode_t... yes
+checking for off_t... yes
+checking for pid_t... yes
+checking for size_t... yes
+checking for uid_t in sys/types.h... (cached) {ac_cv_type_uid_t=yes}
+checking for ssize_t... yes
+checking for __uint128_t... no
+checking size of int... (cached) 4
+checking size of long... (cached) 4
+checking alignment of long... 4
+checking size of long long... (cached) 8
+checking size of void *... (cached) 4
+checking size of short... (cached) 2
+checking size of float... (cached) 4
+checking size of double... (cached) 8
+checking size of fpos_t... 16
+checking size of size_t... (cached) 4
+checking alignment of size_t... 4
+checking size of pid_t... (cached) 4
+checking size of uintptr_t... 4
+checking for long double... yes
+checking size of long double... (cached) 8
+checking size of _Bool... 1
+checking size of off_t... 8
+checking whether to enable large file support... yes
+checking size of time_t... 8
+checking for pthread_t... yes
+checking size of pthread_t... 4
+checking size of pthread_key_t... 4
+checking whether pthread_key_t is compatible with int... yes
+checking for --enable-framework... no
+checking for dyld... no
+checking for --with-address-sanitizer... no
+checking for --with-memory-sanitizer... no
+checking for --with-undefined-behavior-sanitizer... no
+checking the extension of shared libraries... .so
+checking LDSHARED... $(CC) -shared
+checking BLDSHARED flags... $(CC) -shared
+checking CCSHARED... -fPIC
+checking LINKFORSHARED... -Xlinker -export-dynamic
+checking CFLAGSFORSHARED... $(CCSHARED)
+checking SHLIBS... $(LIBS)
+checking for sendfile in -lsendfile... no
+checking for dlopen in -ldl... yes
+checking for shl_load in -ldld... no
+checking for uuid.h... yes
+checking for uuid_create... no
+checking for uuid_enc_be... no
+checking for uuid >= 2.20... yes
+checking for library containing sem_init... none required
+checking for textdomain in -lintl... no
+checking aligned memory access is required... yes
+checking for --with-hash-algorithm... default
+checking for --with-tzpath... "/usr/share/zoneinfo:/usr/lib/zoneinfo:/usr/share/lib/zoneinfo:/etc/zoneinfo"
+checking for t_open in -lnsl... no
+checking for socket in -lsocket... no
+checking for --with-libs... no
+checking for --with-system-expat... no
+checking for --with-system-ffi... yes
+checking for --with-system-libmpdec... no
+checking for --with-decimal-contextvar... yes
+checking for decimal libmpdec machine... ansi32
+checking for libnsl... yes
+checking for rpc/rpc.h... yes
+checking for sqlite3 >= 3.7.15... yes
+checking for sqlite3.h... yes
+checking for sqlite3_bind_double in -lsqlite3... yes
+checking for sqlite3_column_decltype in -lsqlite3... yes
+checking for sqlite3_column_double in -lsqlite3... yes
+checking for sqlite3_complete in -lsqlite3... yes
+checking for sqlite3_enable_shared_cache in -lsqlite3... yes
+checking for sqlite3_progress_handler in -lsqlite3... yes
+checking for sqlite3_result_double in -lsqlite3... yes
+checking for sqlite3_set_authorizer in -lsqlite3... yes
+checking for sqlite3_trace_v2 in -lsqlite3... yes
+checking for sqlite3_value_double in -lsqlite3... yes
+checking for sqlite3_load_extension in -lsqlite3... yes
+checking for sqlite3_serialize in -lsqlite3... yes
+checking for --enable-loadable-sqlite-extensions... no
+checking for gdbm.h... yes
+checking for gdbm_open in -lgdbm... yes
+checking for ndbm.h... yes
+checking for dbm_open in -lndbm... no
+checking for dbm_open in -lgdbm_compat... yes
+checking for gdbm/ndbm.h... yes
+checking for gdbm-ndbm.h... no
+checking for dbm_open in -lgdbm_compat... (cached) yes
+checking for db.h... no
+checking for --with-dbmliborder... gdbm:ndbm:bdb
+checking for _POSIX_THREADS in unistd.h... yes
+checking for pthread_create in -lpthread... yes
+checking for usconfig in -lmpc... no
+checking if PTHREAD_SCOPE_SYSTEM is supported... no
+checking for pthread_sigmask... yes
+checking for pthread_getcpuclockid... yes
+checking if --enable-ipv6 is specified... yes
+checking if RFC2553 API is available... yes
+checking ipv6 stack type... linux-glibc
+checking CAN_RAW_FD_FRAMES... yes
+checking for CAN_RAW_JOIN_FILTERS... yes
+checking for --with-doc-strings... yes
+checking for --with-pymalloc... yes
+checking for --with-freelists... yes
+checking for --with-c-locale-coercion... yes
+checking for --with-valgrind... no
+checking for --with-dtrace... no
+checking for dlopen... yes
+checking DYNLOADFILE... dynload_shlib.o
+checking MACHDEP_OBJS... none
+checking for accept4... yes
+checking for alarm... yes
+checking for bind_textdomain_codeset... yes
+checking for chmod... yes
+checking for chown... yes
+checking for clock... yes
+checking for close_range... yes
+checking for confstr... yes
+checking for copy_file_range... yes
+checking for ctermid... yes
+checking for dup... yes
+checking for dup3... yes
+checking for execv... yes
+checking for explicit_bzero... yes
+checking for explicit_memset... no
+checking for faccessat... yes
+checking for fchmod... yes
+checking for fchmodat... yes
+checking for fchown... yes
+checking for fchownat... yes
+checking for fdopendir... yes
+checking for fdwalk... no
+checking for fexecve... yes
+checking for fork... yes
+checking for fork1... no
+checking for fpathconf... yes
+checking for fstatat... yes
+checking for ftime... yes
+checking for ftruncate... yes
+checking for futimens... yes
+checking for futimes... yes
+checking for futimesat... yes
+checking for gai_strerror... yes
+checking for getegid... yes
+checking for getentropy... yes
+checking for geteuid... yes
+checking for getgid... yes
+checking for getgrgid... yes
+checking for getgrgid_r... (cached) yes
+checking for getgrnam_r... yes
+checking for getgrouplist... yes
+checking for getgroups... yes
+checking for gethostname... yes
+checking for getitimer... yes
+checking for getloadavg... yes
+checking for getlogin... yes
+checking for getpeername... yes
+checking for getpgid... yes
+checking for getpid... yes
+checking for getppid... yes
+checking for getpriority... yes
+checking for _getpty... no
+checking for getpwent... yes
+checking for getpwnam_r... yes
+checking for getpwuid... yes
+checking for getpwuid_r... (cached) yes
+checking for getresgid... yes
+checking for getresuid... yes
+checking for getrusage... yes
+checking for getsid... yes
+checking for getspent... yes
+checking for getspnam... yes
+checking for getuid... yes
+checking for getwd... yes
+checking for if_nameindex... yes
+checking for initgroups... yes
+checking for kill... yes
+checking for killpg... yes
+checking for lchown... yes
+checking for linkat... yes
+checking for lockf... yes
+checking for lstat... yes
+checking for lutimes... yes
+checking for madvise... yes
+checking for mbrtowc... yes
+checking for memrchr... yes
+checking for mkdirat... yes
+checking for mkfifo... yes
+checking for mkfifoat... yes
+checking for mknod... yes
+checking for mknodat... yes
+checking for mktime... yes
+checking for mmap... yes
+checking for mremap... yes
+checking for nice... yes
+checking for openat... yes
+checking for opendir... yes
+checking for pathconf... yes
+checking for pause... yes
+checking for pipe... yes
+checking for pipe2... yes
+checking for plock... no
+checking for poll... yes
+checking for posix_fadvise... yes
+checking for posix_fallocate... yes
+checking for posix_spawn... yes
+checking for posix_spawnp... yes
+checking for pread... yes
+checking for preadv... yes
+checking for preadv2... yes
+checking for pthread_condattr_setclock... yes
+checking for pthread_init... no
+checking for pthread_kill... yes
+checking for pwrite... yes
+checking for pwritev... yes
+checking for pwritev2... yes
+checking for readlink... yes
+checking for readlinkat... yes
+checking for readv... yes
+checking for realpath... yes
+checking for renameat... yes
+checking for rtpSpawn... no
+checking for sched_get_priority_max... yes
+checking for sched_rr_get_interval... yes
+checking for sched_setaffinity... yes
+checking for sched_setparam... yes
+checking for sched_setscheduler... yes
+checking for sem_clockwait... yes
+checking for sem_getvalue... yes
+checking for sem_open... yes
+checking for sem_timedwait... yes
+checking for sem_unlink... yes
+checking for sendfile... yes
+checking for setegid... yes
+checking for seteuid... yes
+checking for setgid... yes
+checking for sethostname... yes
+checking for setitimer... yes
+checking for setlocale... yes
+checking for setpgid... yes
+checking for setpgrp... yes
+checking for setpriority... yes
+checking for setregid... yes
+checking for setresgid... yes
+checking for setresuid... (cached) yes
+checking for setreuid... yes
+checking for setsid... yes
+checking for setuid... yes
+checking for setvbuf... yes
+checking for shutdown... yes
+checking for sigaction... yes
+checking for sigaltstack... yes
+checking for sigfillset... yes
+checking for siginterrupt... yes
+checking for sigpending... yes
+checking for sigrelse... yes
+checking for sigtimedwait... yes
+checking for sigwait... yes
+checking for sigwaitinfo... yes
+checking for snprintf... yes
+checking for splice... yes
+checking for strftime... yes
+checking for strlcpy... no
+checking for strsignal... yes
+checking for symlinkat... yes
+checking for sync... yes
+checking for sysconf... yes
+checking for system... yes
+checking for tcgetpgrp... yes
+checking for tcsetpgrp... yes
+checking for tempnam... yes
+checking for timegm... yes
+checking for times... yes
+checking for tmpfile... yes
+checking for tmpnam... yes
+checking for tmpnam_r... yes
+checking for truncate... yes
+checking for ttyname... yes
+checking for umask... yes
+checking for uname... yes
+checking for unlinkat... yes
+checking for utimensat... yes
+checking for utimes... yes
+checking for vfork... yes
+checking for wait... yes
+checking for wait3... yes
+checking for wait4... yes
+checking for waitid... yes
+checking for waitpid... yes
+checking for wcscoll... yes
+checking for wcsftime... yes
+checking for wcsxfrm... yes
+checking for wmemcmp... yes
+checking for writev... yes
+checking for arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/python3/3.11.0-r0/recipe-sysroot options needed to detect all undeclared functions... none needed
+checking whether dirfd is declared... yes
+checking for chroot... yes
+checking for link... yes
+checking for symlink... yes
+checking for fchdir... yes
+checking for fsync... yes
+checking for fdatasync... yes
+checking for epoll_create... yes
+checking for epoll_create1... yes
+checking for kqueue... no
+checking for prlimit... yes
+checking for _dyld_shared_cache_contains_path... no
+checking for memfd_create... yes
+checking for eventfd... yes
+checking for ctermid_r... no
+checking for flock declaration... yes
+checking for flock... yes
+checking for flock in -lbsd... no
+checking for getpagesize... (cached) yes
+checking for broken unsetenv... no
+checking for true... true
+checking for inet_aton in -lc... yes
+checking for chflags... cross
+checking for chflags... no
+checking for lchflags... cross
+checking for lchflags... no
+checking for zlib >= 1.2.0... yes
+checking for bzip2... no
+checking for bzlib.h... yes
+checking for BZ2_bzCompress in -lbz2... yes
+checking for liblzma... yes
+checking for hstrerror... yes
+checking for getservbyname... yes
+checking for getservbyport... yes
+checking for gethostbyname... yes
+checking for gethostbyaddr... yes
+checking for getprotobyname... yes
+checking for inet_aton... yes
+checking for inet_ntoa... yes
+checking for inet_pton... yes
+checking for getpeername... (cached) yes
+checking for getsockname... yes
+checking for accept... yes
+checking for bind... yes
+checking for connect... yes
+checking for listen... yes
+checking for recvfrom... yes
+checking for sendto... yes
+checking for setsockopt... yes
+checking for socket... yes
+checking for setgroups... yes
+checking for openpty... yes
+checking for library containing login_tty... none required
+checking for forkpty... yes
+checking for fseek64... no
+checking for fseeko... yes
+checking for fstatvfs... yes
+checking for ftell64... no
+checking for ftello... yes
+checking for statvfs... yes
+checking for dup2... yes
+checking for getpgrp... yes
+checking for setpgrp... (cached) yes
+checking for libxcrypt >= 3.1.1... yes
+checking for crypt or crypt_r... yes
+checking for clock_gettime... yes
+checking for clock_getres... yes
+checking for clock_settime... yes
+checking for clock_nanosleep... yes
+checking for nanosleep... yes
+checking for major, minor, and makedev... yes
+checking for getaddrinfo... (cached) yes
+checking getaddrinfo bug... (cached) no
+checking for getnameinfo... yes
+checking whether struct tm is in sys/time.h or time.h... time.h
+checking for struct tm.tm_zone... yes
+checking for struct stat.st_rdev... yes
+checking for struct stat.st_blksize... yes
+checking for struct stat.st_flags... no
+checking for struct stat.st_gen... no
+checking for struct stat.st_birthtime... no
+checking for struct stat.st_blocks... yes
+checking for struct passwd.pw_gecos... yes
+checking for struct passwd.pw_passwd... yes
+checking for siginfo_t.si_band... yes
+checking for time.h that defines altzone... no
+checking for addrinfo... yes
+checking for sockaddr_storage... yes
+checking for sockaddr_alg... yes
+checking for an ANSI C-conforming const... yes
+checking for working signed char... yes
+checking for prototypes... yes
+checking for variable length prototypes and stdarg.h... yes
+checking for socketpair... yes
+checking if sockaddr has sa_len member... no
+checking for gethostbyname_r... yes
+checking gethostbyname_r with 6 args... yes
+checking for __fpu_control... yes
+checking for --with-libm=STRING... default LIBM="-lm"
+checking for --with-libc=STRING... default LIBC=""
+checking for x64 gcc inline assembler... no
+checking whether float word ordering is bigendian... no
+checking whether we can use gcc inline assembler to get and set x87 control word... no
+checking whether we can use gcc inline assembler to get and set mc68881 fpcr... no
+checking for x87-style double rounding... no
+checking for acosh... yes
+checking for asinh... yes
+checking for atanh... yes
+checking for erf... yes
+checking for erfc... yes
+checking for expm1... yes
+checking for log1p... yes
+checking for log2... yes
+checking whether POSIX semaphores are enabled... yes
+checking for broken sem_getvalue... yes
+checking whether RTLD_LAZY is declared... yes
+checking whether RTLD_NOW is declared... yes
+checking whether RTLD_GLOBAL is declared... yes
+checking whether RTLD_LOCAL is declared... yes
+checking whether RTLD_NODELETE is declared... yes
+checking whether RTLD_NOLOAD is declared... yes
+checking whether RTLD_DEEPBIND is declared... yes
+checking whether RTLD_MEMBER is declared... no
+checking digit size for Python's longs... no value specified
+checking for wchar.h... (cached) yes
+checking size of wchar_t... (cached) 4
+checking whether wchar_t is signed... yes
+checking whether wchar_t is usable... no
+checking whether byte ordering is bigendian... (cached) no
+checking ABIFLAGS... 
+checking SOABI... cpython-311-arm-linux-gnueabi
+checking LDVERSION... $(VERSION)$(ABIFLAGS)
+checking for --with-platlibdir... yes
+checking for --with-wheel-pkg-dir... no
+checking whether right shift extends the sign bit... yes
+checking for getc_unlocked() and friends... yes
+checking how to link readline libs... -lreadline
+checking whether rl_completion_append_character is declared... yes
+checking whether rl_completion_suppress_append is declared... yes
+checking for rl_pre_input_hook in -lreadline... yes
+checking for rl_completion_display_matches_hook in -lreadline... yes
+checking for rl_resize_terminal in -lreadline... yes
+checking for rl_completion_matches in -lreadline... yes
+checking whether rl_catch_signals is declared... yes
+checking for append_history in -lreadline... yes
+checking for broken nice()... no
+checking for broken poll()... no
+checking for working tzset()... (cached) yes
+checking for tv_nsec in struct stat... yes
+checking for tv_nsec2 in struct stat... no
+checking for curses.h... (cached) yes
+checking for ncurses.h... (cached) yes
+checking for term.h... yes
+checking whether mvwdelch is an expression... yes
+checking whether WINDOW has _flags... yes
+checking for curses function is_pad... yes
+checking for curses function is_term_resized... yes
+checking for curses function resize_term... yes
+checking for curses function resizeterm... yes
+checking for curses function immedok... yes
+checking for curses function syncok... yes
+checking for curses function wchgat... yes
+checking for curses function filter... yes
+checking for curses function has_key... yes
+checking for curses function typeahead... yes
+checking for curses function use_env... yes
+configure: checking for device files
+checking for /dev/ptmx... (cached) yes
+checking for /dev/ptc... (cached) no
+checking for %zd printf() format support... cross -- assuming yes
+checking for socklen_t... yes
+checking for broken mbstowcs... no
+checking for --with-computed-gotos... no value specified
+checking whether arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/python3/3.11.0-r0/recipe-sysroot supports computed gotos... no
+checking for build directories... done
+checking for -O2... yes
+checking for glibc _FORTIFY_SOURCE/memmove bug... undefined
+checking for stdatomic.h... yes
+checking for builtin __atomic_load_n and __atomic_store_n functions... yes
+checking for ensurepip... no
+checking if the dirent structure of a d_type field... yes
+checking for the Linux getrandom() syscall... yes
+checking for the getrandom() function... yes
+checking for library containing shm_open... none required
+checking for shm_open... yes
+checking for shm_unlink... yes
+checking for arm-openbmc-linux-gnueabi-pkg-config... /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/python3/3.11.0-r0/recipe-sysroot-native/usr/bin/pkg-config
+checking whether compiling and linking against OpenSSL works... yes
+checking for --with-openssl-rpath... 
+checking whether OpenSSL provides required ssl module APIs... yes
+checking whether OpenSSL provides required hashlib module APIs... yes
+checking for --with-ssl-default-suites... python
+checking for --with-builtin-hashlib-hashes... md5,sha1,sha256,sha512,sha3,blake2
+checking for libb2... no
+checking for --disable-test-modules... yes
+checking for additional Modules/Setup files... 
+checking for stdlib extension module _multiprocessing... yes
+checking for stdlib extension module _posixshmem... yes
+checking for stdlib extension module fcntl... yes
+checking for stdlib extension module mmap... yes
+checking for stdlib extension module _socket... yes
+checking for stdlib extension module grp... yes
+checking for stdlib extension module ossaudiodev... yes
+checking for stdlib extension module pwd... yes
+checking for stdlib extension module resource... yes
+checking for stdlib extension module _scproxy... n/a
+checking for stdlib extension module spwd... yes
+checking for stdlib extension module syslog... yes
+checking for stdlib extension module termios... yes
+checking for stdlib extension module pyexpat... yes
+checking for stdlib extension module _elementtree... yes
+checking for stdlib extension module _md5... yes
+checking for stdlib extension module _sha1... yes
+checking for stdlib extension module _sha256... yes
+checking for stdlib extension module _sha512... yes
+checking for stdlib extension module _sha3... yes
+checking for stdlib extension module _blake2... yes
+checking for stdlib extension module _crypt... yes
+checking for stdlib extension module _decimal... yes
+checking for stdlib extension module _gdbm... yes
+checking for stdlib extension module nis... yes
+checking for stdlib extension module _sqlite3... yes
+checking for stdlib extension module _tkinter... missing
+checking for stdlib extension module _uuid... yes
+checking for stdlib extension module zlib... yes
+checking for stdlib extension module _bz2... yes
+checking for stdlib extension module _lzma... yes
+checking for stdlib extension module _ssl... yes
+checking for stdlib extension module _hashlib... yes
+checking for stdlib extension module _testcapi... yes
+checking for stdlib extension module _testinternalcapi... yes
+checking for stdlib extension module _testbuffer... yes
+checking for stdlib extension module _testimportmultiple... yes
+checking for stdlib extension module _testmultiphase... yes
+checking for stdlib extension module _xxtestfuzz... yes
+checking for stdlib extension module _ctypes_test... yes
+checking for stdlib extension module xxlimited... yes
+checking for stdlib extension module xxlimited_35... yes
+configure: creating ./config.status
+config.status: creating Makefile.pre
+config.status: creating Misc/python.pc
+config.status: creating Misc/python-embed.pc
+config.status: creating Misc/python-config.sh
+config.status: creating Modules/Setup.bootstrap
+config.status: creating Modules/Setup.stdlib
+config.status: creating Modules/ld_so_aix
+config.status: creating pyconfig.h
+config.status: executing libtool commands
+configure: creating Modules/Setup.local
+configure: WARNING: unrecognized options: --disable-silent-rules, --disable-dependency-tracking
+configure: creating Makefile
+configure:
+
+If you want a release build with all stable optimizations active (PGO, etc),
+please run ./configure --enable-optimizations
+
+configure: WARNING:
+
+Platform "arm-openbmc-linux-gnueabi" with compiler "gcc" is not supported by the
+CPython core team, see https://peps.python.org/pep-0011/ for more information.
+
+DEBUG: Shell function do_configure finished
+DEBUG: Executing python function do_qa_configure
+NOTE: Checking autotools environment for common misconfiguration
+NOTE: Checking configure output for unrecognised options
+DEBUG: Python function do_qa_configure finished
+DEBUG: Executing shell function autotools_postconfigure
+DEBUG: Shell function autotools_postconfigure finished

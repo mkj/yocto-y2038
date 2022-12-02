@@ -1,0 +1,707 @@
+6141,6162c6141
+< ../../../git/lib/e2p/ls.c:317:22: warning: conversion to 'time_t' {aka 'long int'} from '__u32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+<   317 |                 tm = sb->s_mkfs_time;
+<       |                      ^~
+< ../../../git/lib/e2p/ls.c:320:14: warning: conversion to 'time_t' {aka 'long int'} from '__u32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+<   320 |         tm = sb->s_mtime;
+<       |              ^~
+< ../../../git/lib/e2p/ls.c:323:14: warning: conversion to 'time_t' {aka 'long int'} from '__u32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+<   323 |         tm = sb->s_wtime;
+<       |              ^~
+< ../../../git/lib/e2p/ls.c:327:14: warning: conversion to 'time_t' {aka 'long int'} from '__u32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+<   327 |         tm = sb->s_lastcheck;
+<       |              ^~
+< ../../../git/lib/e2p/ls.c:335:24: warning: conversion to 'time_t' {aka 'long int'} from '__u32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+<   335 |                 next = sb->s_lastcheck + sb->s_checkinterval;
+<       |                        ^~
+< ../../../git/lib/e2p/ls.c:423:22: warning: conversion to 'time_t' {aka 'long int'} from '__u32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+<   423 |                 tm = sb->s_first_error_time;
+<       |                      ^~
+< ../../../git/lib/e2p/ls.c:440:22: warning: conversion to 'time_t' {aka 'long int'} from '__u32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+<   440 |                 tm = sb->s_last_error_time;
+<       |                      ^~
+< arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/recipe-sysroot -I. -I../../lib -I../../../git/lib  -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/git=/usr/src/debug/e2fsprogs/1.46.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/git=/usr/src/debug/e2fsprogs/1.46.5-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/build=/usr/src/debug/e2fsprogs/1.46.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/build=/usr/src/debug/e2fsprogs/1.46.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/recipe-sysroot-native=   -Wconversion -Wno-error -pthread  -DHAVE_CONFIG_H  -fPIC -shared -o elfshared/ls.o -c ../../../git/lib/e2p/ls.c
+---
+> arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/recipe-sysroot -I. -I../../lib -I../../../git/lib   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64  -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/git=/usr/src/debug/e2fsprogs/1.46.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/git=/usr/src/debug/e2fsprogs/1.46.5-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/build=/usr/src/debug/e2fsprogs/1.46.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/build=/usr/src/debug/e2fsprogs/1.46.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/recipe-sysroot-native=   -Wconversion -Wno-error -pthread  -DHAVE_CONFIG_H  -fPIC -shared -o elfshared/ls.o -c ../../../git/lib/e2p/ls.c
+6519,6540c6498
+< ../../../git/lib/e2p/ls.c:317:22: warning: conversion to 'time_t' {aka 'long int'} from '__u32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+<   317 |                 tm = sb->s_mkfs_time;
+<       |                      ^~
+< ../../../git/lib/e2p/ls.c:320:14: warning: conversion to 'time_t' {aka 'long int'} from '__u32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+<   320 |         tm = sb->s_mtime;
+<       |              ^~
+< ../../../git/lib/e2p/ls.c:323:14: warning: conversion to 'time_t' {aka 'long int'} from '__u32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+<   323 |         tm = sb->s_wtime;
+<       |              ^~
+< ../../../git/lib/e2p/ls.c:327:14: warning: conversion to 'time_t' {aka 'long int'} from '__u32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+<   327 |         tm = sb->s_lastcheck;
+<       |              ^~
+< ../../../git/lib/e2p/ls.c:335:24: warning: conversion to 'time_t' {aka 'long int'} from '__u32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+<   335 |                 next = sb->s_lastcheck + sb->s_checkinterval;
+<       |                        ^~
+< ../../../git/lib/e2p/ls.c:423:22: warning: conversion to 'time_t' {aka 'long int'} from '__u32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+<   423 |                 tm = sb->s_first_error_time;
+<       |                      ^~
+< ../../../git/lib/e2p/ls.c:440:22: warning: conversion to 'time_t' {aka 'long int'} from '__u32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+<   440 |                 tm = sb->s_last_error_time;
+<       |                      ^~
+< arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/recipe-sysroot -I. -I../../lib -I../../../git/lib  -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/git=/usr/src/debug/e2fsprogs/1.46.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/git=/usr/src/debug/e2fsprogs/1.46.5-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/build=/usr/src/debug/e2fsprogs/1.46.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/build=/usr/src/debug/e2fsprogs/1.46.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/recipe-sysroot-native=   -Wconversion -Wno-error -pthread  -DHAVE_CONFIG_H  -c ../../../git/lib/e2p/ljs.c -o ljs.o
+---
+> arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/recipe-sysroot -I. -I../../lib -I../../../git/lib   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64  -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/git=/usr/src/debug/e2fsprogs/1.46.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/git=/usr/src/debug/e2fsprogs/1.46.5-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/build=/usr/src/debug/e2fsprogs/1.46.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/build=/usr/src/debug/e2fsprogs/1.46.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/recipe-sysroot-native=   -Wconversion -Wno-error -pthread  -DHAVE_CONFIG_H  -c ../../../git/lib/e2p/ljs.c -o ljs.o
+17036,17046c16994
+< ../../../git/lib/support/plausible.c: In function 'print_ext2_info':
+< ../../../git/lib/support/plausible.c:117:22: warning: conversion to 'time_t' {aka 'long int'} from '__u32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+<   117 |                 tm = sb->s_mtime;
+<       |                      ^~
+< ../../../git/lib/support/plausible.c:124:22: warning: conversion to 'time_t' {aka 'long int'} from '__u32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+<   124 |                 tm = sb->s_mkfs_time;
+<       |                      ^~
+< ../../../git/lib/support/plausible.c:127:22: warning: conversion to 'time_t' {aka 'long int'} from '__u32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+<   127 |                 tm = sb->s_wtime;
+<       |                      ^~
+< arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/recipe-sysroot -I. -I../../lib -I../../../git/lib  -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/git=/usr/src/debug/e2fsprogs/1.46.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/git=/usr/src/debug/e2fsprogs/1.46.5-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/build=/usr/src/debug/e2fsprogs/1.46.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/build=/usr/src/debug/e2fsprogs/1.46.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/recipe-sysroot-native=   -Wconversion -Wno-error -pthread  -DHAVE_CONFIG_H  -c ../../../git/lib/support/profile.c -o profile.o
+---
+> arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/recipe-sysroot -I. -I../../lib -I../../../git/lib   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64  -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/git=/usr/src/debug/e2fsprogs/1.46.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/git=/usr/src/debug/e2fsprogs/1.46.5-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/build=/usr/src/debug/e2fsprogs/1.46.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/build=/usr/src/debug/e2fsprogs/1.46.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/recipe-sysroot-native=   -Wconversion -Wno-error -pthread  -DHAVE_CONFIG_H  -c ../../../git/lib/support/profile.c -o profile.o
+17731c17679
+< ../../../git/lib/support/quotaio.c:122:33: warning: conversion to '__u32' {aka 'unsigned int'} from 'time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../../../git/lib/support/quotaio.c:122:33: warning: conversion from 'time_t' {aka 'long long int'} to '__u32' {aka 'unsigned int'} may change value [-Wconversion]
+17746c17694
+< ../../../git/lib/support/quotaio.c:291:33: warning: conversion to '__u32' {aka 'unsigned int'} from 'time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../../../git/lib/support/quotaio.c:291:33: warning: conversion from 'time_t' {aka 'long long int'} to '__u32' {aka 'unsigned int'} may change value [-Wconversion]
+18080c18028
+< ../../../git/lib/ext2fs/bitops.h:29:31: warning: conversion from 'long long unsigned int' to 'time_t' {aka 'long int'} may change value [-Wconversion]
+---
+> ../../../git/lib/ext2fs/bitops.h:29:31: warning: conversion to 'time_t' {aka 'long long int'} from 'long long unsigned int' may change the sign of the result [-Wsign-conversion]
+18086c18034
+< ../../../git/lib/ext2fs/bitops.h:29:31: warning: conversion from 'long long unsigned int' to 'time_t' {aka 'long int'} may change value [-Wconversion]
+---
+> ../../../git/lib/ext2fs/bitops.h:29:31: warning: conversion to 'time_t' {aka 'long long int'} from 'long long unsigned int' may change the sign of the result [-Wsign-conversion]
+18129c18077
+< ../../../git/lib/ext2fs/bitops.h:29:31: warning: conversion from 'long long unsigned int' to 'time_t' {aka 'long int'} may change value [-Wconversion]
+---
+> ../../../git/lib/ext2fs/bitops.h:29:31: warning: conversion to 'time_t' {aka 'long long int'} from 'long long unsigned int' may change the sign of the result [-Wsign-conversion]
+18135c18083
+< ../../../git/lib/ext2fs/bitops.h:29:31: warning: conversion from 'long long unsigned int' to 'time_t' {aka 'long int'} may change value [-Wconversion]
+---
+> ../../../git/lib/ext2fs/bitops.h:29:31: warning: conversion to 'time_t' {aka 'long long int'} from 'long long unsigned int' may change the sign of the result [-Wsign-conversion]
+18141,18153d18088
+< ../../../git/lib/support/quotaio_v2.c: In function 'v2_disk2memdqinfo':
+< ../../../git/lib/ext2fs/bitops.h:31:31: warning: conversion to 'time_t' {aka 'long int'} from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+<    31 | #define ext2fs_le32_to_cpu(x) ((__force __u32)(__le32)(x))
+<       |                               ^
+< ../../../git/lib/support/quotaio_v2.c:174:25: note: in expansion of macro 'ext2fs_le32_to_cpu'
+<   174 |         m->dqi_bgrace = ext2fs_le32_to_cpu(d->dqi_bgrace);
+<       |                         ^~~~~~~~~~~~~~~~~~
+< ../../../git/lib/ext2fs/bitops.h:31:31: warning: conversion to 'time_t' {aka 'long int'} from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+<    31 | #define ext2fs_le32_to_cpu(x) ((__force __u32)(__le32)(x))
+<       |                               ^
+< ../../../git/lib/support/quotaio_v2.c:175:25: note: in expansion of macro 'ext2fs_le32_to_cpu'
+<   175 |         m->dqi_igrace = ext2fs_le32_to_cpu(d->dqi_igrace);
+<       |                         ^~~~~~~~~~~~~~~~~~
+27292c27227
+< ../../../git/lib/ext2fs/bb_inode.c:127:41: warning: conversion to '__u32' {aka 'unsigned int'} from 'time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../../../git/lib/ext2fs/bb_inode.c:127:41: warning: conversion from 'time_t' {aka 'long long int'} to '__u32' {aka 'unsigned int'} may change value [-Wconversion]
+27295c27230
+< ../../../git/lib/ext2fs/bb_inode.c:129:33: warning: conversion to '__u32' {aka 'unsigned int'} from 'time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../../../git/lib/ext2fs/bb_inode.c:129:33: warning: conversion from 'time_t' {aka 'long long int'} to '__u32' {aka 'unsigned int'} may change value [-Wconversion]
+27635c27570
+< ../../../git/lib/ext2fs/bb_inode.c:127:41: warning: conversion to '__u32' {aka 'unsigned int'} from 'time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../../../git/lib/ext2fs/bb_inode.c:127:41: warning: conversion from 'time_t' {aka 'long long int'} to '__u32' {aka 'unsigned int'} may change value [-Wconversion]
+27638c27573
+< ../../../git/lib/ext2fs/bb_inode.c:129:33: warning: conversion to '__u32' {aka 'unsigned int'} from 'time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../../../git/lib/ext2fs/bb_inode.c:129:33: warning: conversion from 'time_t' {aka 'long long int'} to '__u32' {aka 'unsigned int'} may change value [-Wconversion]
+33942c33877
+< ../../../git/lib/ext2fs/closefs.c:304:30: warning: conversion to '__u32' {aka 'unsigned int'} from 'time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../../../git/lib/ext2fs/closefs.c:304:30: warning: conversion from 'time_t' {aka 'long long int'} to '__u32' {aka 'unsigned int'} may change value [-Wconversion]
+34331c34266
+< ../../../git/lib/ext2fs/closefs.c:304:30: warning: conversion to '__u32' {aka 'unsigned int'} from 'time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../../../git/lib/ext2fs/closefs.c:304:30: warning: conversion from 'time_t' {aka 'long long int'} to '__u32' {aka 'unsigned int'} may change value [-Wconversion]
+40216c40151
+< ../../../git/lib/ext2fs/ext_attr.c:1282:25: warning: conversion to '__u32' {aka 'unsigned int'} from 'time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../../../git/lib/ext2fs/ext_attr.c:1282:25: warning: conversion from 'time_t' {aka 'long long int'} to '__u32' {aka 'unsigned int'} may change value [-Wconversion]
+40772c40707
+< ../../../git/lib/ext2fs/ext_attr.c:1282:25: warning: conversion to '__u32' {aka 'unsigned int'} from 'time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../../../git/lib/ext2fs/ext_attr.c:1282:25: warning: conversion from 'time_t' {aka 'long long int'} to '__u32' {aka 'unsigned int'} may change value [-Wconversion]
+51873,51875d51807
+< ../../../git/lib/ext2fs/initialize.c:130:27: warning: conversion to 'time_t' {aka 'long int'} from 'long unsigned int' may change the sign of the result [-Wsign-conversion]
+<   130 |                 fs->now = strtoul(time_env, NULL, 0);
+<       |                           ^~~~~~~
+51894c51826
+< ../../../git/lib/ext2fs/initialize.c:221:51: warning: conversion to '__u32' {aka 'unsigned int'} from 'time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../../../git/lib/ext2fs/initialize.c:221:51: warning: conversion from 'time_t' {aka 'long long int'} to '__u32' {aka 'unsigned int'} may change value [-Wconversion]
+52337,52339d52268
+< ../../../git/lib/ext2fs/initialize.c:130:27: warning: conversion to 'time_t' {aka 'long int'} from 'long unsigned int' may change the sign of the result [-Wsign-conversion]
+<   130 |                 fs->now = strtoul(time_env, NULL, 0);
+<       |                           ^~~~~~~
+52358c52287
+< ../../../git/lib/ext2fs/initialize.c:221:51: warning: conversion to '__u32' {aka 'unsigned int'} from 'time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../../../git/lib/ext2fs/initialize.c:221:51: warning: conversion from 'time_t' {aka 'long long int'} to '__u32' {aka 'unsigned int'} may change value [-Wconversion]
+54322c54251
+< ../../../git/lib/ext2fs/inode.c:1034:37: warning: conversion to '__u32' {aka 'unsigned int'} from 'time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../../../git/lib/ext2fs/inode.c:1034:37: warning: conversion from 'time_t' {aka 'long long int'} to '__u32' {aka 'unsigned int'} may change value [-Wconversion]
+54788c54717
+< ../../../git/lib/ext2fs/inode.c:1034:37: warning: conversion to '__u32' {aka 'unsigned int'} from 'time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../../../git/lib/ext2fs/inode.c:1034:37: warning: conversion from 'time_t' {aka 'long long int'} to '__u32' {aka 'unsigned int'} may change value [-Wconversion]
+58644c58573
+< ../../../git/lib/ext2fs/mkjournal.c:315:41: warning: conversion to '__u32' {aka 'unsigned int'} from 'time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../../../git/lib/ext2fs/mkjournal.c:315:41: warning: conversion from 'time_t' {aka 'long long int'} to '__u32' {aka 'unsigned int'} may change value [-Wconversion]
+58673c58602,58606
+< arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/recipe-sysroot -I. -I../../lib -I../../../git/lib  -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/git=/usr/src/debug/e2fsprogs/1.46.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/git=/usr/src/debug/e2fsprogs/1.46.5-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/build=/usr/src/debug/e2fsprogs/1.46.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/build=/usr/src/debug/e2fsprogs/1.46.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/recipe-sysroot-native=   -Wconversion -Wno-error -pthread  -DHAVE_CONFIG_H  -fPIC -shared -o elfshared/mkjournal.o -c ../../../git/lib/ext2fs/mkjournal.c
+---
+> ../../../git/lib/ext2fs/mkjournal.c: In function 'ext2fs_add_journal_inode3':
+> ../../../git/lib/ext2fs/mkjournal.c:574:31: warning: conversion from '__ino64_t' {aka 'long long unsigned int'} to 'ext2_ino_t' {aka 'unsigned int'} may change value [-Wconversion]
+>   574 |                 journal_ino = st.st_ino;
+>       |                               ^~
+> arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/recipe-sysroot -I. -I../../lib -I../../../git/lib   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64  -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/git=/usr/src/debug/e2fsprogs/1.46.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/git=/usr/src/debug/e2fsprogs/1.46.5-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/build=/usr/src/debug/e2fsprogs/1.46.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/build=/usr/src/debug/e2fsprogs/1.46.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/recipe-sysroot-native=   -Wconversion -Wno-error -pthread  -DHAVE_CONFIG_H  -fPIC -shared -o elfshared/mkjournal.o -c ../../../git/lib/ext2fs/mkjournal.c
+59044c58977
+< ../../../git/lib/ext2fs/mkjournal.c:315:41: warning: conversion to '__u32' {aka 'unsigned int'} from 'time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../../../git/lib/ext2fs/mkjournal.c:315:41: warning: conversion from 'time_t' {aka 'long long int'} to '__u32' {aka 'unsigned int'} may change value [-Wconversion]
+59073c59006,59010
+< arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/recipe-sysroot -I. -I../../lib -I../../../git/lib  -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/git=/usr/src/debug/e2fsprogs/1.46.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/git=/usr/src/debug/e2fsprogs/1.46.5-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/build=/usr/src/debug/e2fsprogs/1.46.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/build=/usr/src/debug/e2fsprogs/1.46.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/recipe-sysroot-native=   -Wconversion -Wno-error -pthread  -DHAVE_CONFIG_H  -c ../../../git/lib/ext2fs/mmp.c -o mmp.o
+---
+> ../../../git/lib/ext2fs/mkjournal.c: In function 'ext2fs_add_journal_inode3':
+> ../../../git/lib/ext2fs/mkjournal.c:574:31: warning: conversion from '__ino64_t' {aka 'long long unsigned int'} to 'ext2_ino_t' {aka 'unsigned int'} may change value [-Wconversion]
+>   574 |                 journal_ino = st.st_ino;
+>       |                               ^~
+> arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/recipe-sysroot -I. -I../../lib -I../../../git/lib   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64  -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/git=/usr/src/debug/e2fsprogs/1.46.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/git=/usr/src/debug/e2fsprogs/1.46.5-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/build=/usr/src/debug/e2fsprogs/1.46.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/build=/usr/src/debug/e2fsprogs/1.46.5-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/recipe-sysroot-native=   -Wconversion -Wno-error -pthread  -DHAVE_CONFIG_H  -c ../../../git/lib/ext2fs/mmp.c -o mmp.o
+59398c59335
+< ../../../git/lib/ext2fs/mmp.c:134:27: warning: conversion to '__u64' {aka 'long long unsigned int'} from '__time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../../../git/lib/ext2fs/mmp.c:134:27: warning: conversion to '__u64' {aka 'long long unsigned int'} from '__time64_t' {aka 'long long int'} may change the sign of the result [-Wsign-conversion]
+59400a59338,59340
+> ../../../git/lib/ext2fs/mmp.c:135:32: warning: conversion from '__time64_t' {aka 'long long int'} to 'long int' may change value [-Wconversion]
+>   135 |         fs->mmp_last_written = tv.tv_sec;
+>       |                                ^~
+59405c59345
+< ../../../git/lib/ext2fs/mmp.c:179:30: warning: conversion to 'long unsigned int' from '__time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../../../git/lib/ext2fs/mmp.c:179:42: warning: conversion from 'long long int' to 'unsigned int' may change value [-Wconversion]
+59407,59413c59347
+<       |                              ^
+< ../../../git/lib/ext2fs/mmp.c:166:33: note: in definition of macro 'srand'
+<   166 | #define srand(x)        srandom(x)
+<       |                                 ^
+< ../../../git/lib/ext2fs/mmp.c:179:42: warning: conversion to 'long unsigned int' from '__suseconds_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+<   179 |         srand(pid ^ getuid() ^ tv.tv_sec ^ tv.tv_usec);
+<       |                                          ^
+---
+>       |               ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~
+59424c59358
+< ../../../git/lib/ext2fs/mmp.c:472:25: warning: conversion to '__u64' {aka 'long long unsigned int'} from '__time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../../../git/lib/ext2fs/mmp.c:472:25: warning: conversion to '__u64' {aka 'long long unsigned int'} from '__time64_t' {aka 'long long int'} may change the sign of the result [-Wsign-conversion]
+59752c59686
+< ../../../git/lib/ext2fs/mmp.c:134:27: warning: conversion to '__u64' {aka 'long long unsigned int'} from '__time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../../../git/lib/ext2fs/mmp.c:134:27: warning: conversion to '__u64' {aka 'long long unsigned int'} from '__time64_t' {aka 'long long int'} may change the sign of the result [-Wsign-conversion]
+59754a59689,59691
+> ../../../git/lib/ext2fs/mmp.c:135:32: warning: conversion from '__time64_t' {aka 'long long int'} to 'long int' may change value [-Wconversion]
+>   135 |         fs->mmp_last_written = tv.tv_sec;
+>       |                                ^~
+59759,59765c59696
+< ../../../git/lib/ext2fs/mmp.c:179:30: warning: conversion to 'long unsigned int' from '__time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+<   179 |         srand(pid ^ getuid() ^ tv.tv_sec ^ tv.tv_usec);
+<       |                              ^
+< ../../../git/lib/ext2fs/mmp.c:166:33: note: in definition of macro 'srand'
+<   166 | #define srand(x)        srandom(x)
+<       |                                 ^
+< ../../../git/lib/ext2fs/mmp.c:179:42: warning: conversion to 'long unsigned int' from '__suseconds_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../../../git/lib/ext2fs/mmp.c:179:42: warning: conversion from 'long long int' to 'unsigned int' may change value [-Wconversion]
+59767c59698
+<       |                                          ^
+---
+>       |               ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~
+59778c59709
+< ../../../git/lib/ext2fs/mmp.c:472:25: warning: conversion to '__u64' {aka 'long long unsigned int'} from '__time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../../../git/lib/ext2fs/mmp.c:472:25: warning: conversion to '__u64' {aka 'long long unsigned int'} from '__time64_t' {aka 'long long int'} may change the sign of the result [-Wsign-conversion]
+62806,62808d62736
+< ../../../git/lib/ext2fs/openfs.c:154:27: warning: conversion to 'time_t' {aka 'long int'} from 'long unsigned int' may change the sign of the result [-Wsign-conversion]
+<   154 |                 fs->now = strtoul(time_env, NULL, 0);
+<       |                           ^~~~~~~
+63253,63255d63180
+< ../../../git/lib/ext2fs/openfs.c:154:27: warning: conversion to 'time_t' {aka 'long int'} from 'long unsigned int' may change the sign of the result [-Wsign-conversion]
+<   154 |                 fs->now = strtoul(time_env, NULL, 0);
+<       |                           ^~~~~~~
+67094c67019
+< ../../../git/lib/ext2fs/res_gdt.c:138:33: warning: conversion to '__u32' {aka 'unsigned int'} from 'time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../../../git/lib/ext2fs/res_gdt.c:138:33: warning: conversion from 'time_t' {aka 'long long int'} to '__u32' {aka 'unsigned int'} may change value [-Wconversion]
+67103c67028
+< ../../../git/lib/ext2fs/res_gdt.c:230:49: warning: conversion to '__u32' {aka 'unsigned int'} from 'time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../../../git/lib/ext2fs/res_gdt.c:230:49: warning: conversion from 'time_t' {aka 'long long int'} to '__u32' {aka 'unsigned int'} may change value [-Wconversion]
+67437c67362
+< ../../../git/lib/ext2fs/res_gdt.c:138:33: warning: conversion to '__u32' {aka 'unsigned int'} from 'time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../../../git/lib/ext2fs/res_gdt.c:138:33: warning: conversion from 'time_t' {aka 'long long int'} to '__u32' {aka 'unsigned int'} may change value [-Wconversion]
+67446c67371
+< ../../../git/lib/ext2fs/res_gdt.c:230:49: warning: conversion to '__u32' {aka 'unsigned int'} from 'time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../../../git/lib/ext2fs/res_gdt.c:230:49: warning: conversion from 'time_t' {aka 'long long int'} to '__u32' {aka 'unsigned int'} may change value [-Wconversion]
+70282,70287d70206
+< ../../../git/lib/ext2fs/tdb.c:358:22: warning: conversion to '__off_t' {aka 'long int'} from 'tdb_off_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+<   358 |         fl.l_start = offset;
+<       |                      ^~~~~~
+< ../../../git/lib/ext2fs/tdb.c:359:20: warning: conversion to '__off_t' {aka 'long int'} from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+<   359 |         fl.l_len = len;
+<       |                    ^~~
+70395c70314
+< ../../../git/lib/ext2fs/tdb.c:877:25: warning: conversion to 'tdb_len_t' {aka 'unsigned int'} from '__off_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../../../git/lib/ext2fs/tdb.c:877:25: warning: conversion from '__off64_t' {aka 'long long int'} to 'tdb_len_t' {aka 'unsigned int'} may change value [-Wconversion]
+70398,70405d70316
+< ../../../git/lib/ext2fs/tdb.c: In function 'tdb_write':
+< ../../../git/lib/ext2fs/tdb.c:900:46: warning: conversion to '__off_t' {aka 'long int'} from 'tdb_off_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+<   900 |         } else if (pwrite(tdb->fd, buf, len, off) != (ssize_t)len) {
+<       |                                              ^~~
+< ../../../git/lib/ext2fs/tdb.c: In function 'tdb_read':
+< ../../../git/lib/ext2fs/tdb.c:931:56: warning: conversion to '__off_t' {aka 'long int'} from 'tdb_off_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+<   931 |                 ssize_t ret = pread(tdb->fd, buf, len, off);
+<       |                                                        ^~~
+70407,70412d70317
+< ../../../git/lib/ext2fs/tdb.c:1033:36: warning: conversion to '__off_t' {aka 'long int'} from 'tdb_off_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+<  1033 |         if (ftruncate(tdb->fd, size+addition) == -1) {
+<       |                                ~~~~^~~~~~~~~
+< ../../../git/lib/ext2fs/tdb.c:1035:61: warning: conversion to '__off_t' {aka 'long int'} from 'tdb_off_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+<  1035 |                 if (pwrite(tdb->fd,  &b, 1, (size+addition) - 1) != 1) {
+<       |                                             ~~~~~~~~~~~~~~~~^~~
+70419,70421d70323
+< ../../../git/lib/ext2fs/tdb.c:1048:51: warning: conversion to '__off_t' {aka 'long int'} from 'tdb_off_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+<  1048 |                 int ret = pwrite(tdb->fd, buf, n, size);
+<       |                                                   ^~~~
+70462,70465d70363
+< ../../../git/lib/ext2fs/tdb.c: In function 'ext2fs_tdb_transaction_recover':
+< ../../../git/lib/ext2fs/tdb.c:2252:32: warning: conversion to '__off_t' {aka 'long int'} from 'tdb_off_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+<  2252 |         if (ftruncate(tdb->fd, recovery_eof) != 0) {
+<       |                                ^~~~~~~~~~~~
+70657c70555
+< ../../../git/lib/ext2fs/tdb.c:3962:25: warning: conversion to 'tdb_len_t' {aka 'unsigned int'} from '__off_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../../../git/lib/ext2fs/tdb.c:3962:25: warning: conversion from '__off64_t' {aka 'long long int'} to 'tdb_len_t' {aka 'unsigned int'} may change value [-Wconversion]
+70669,70674d70566
+< ../../../git/lib/ext2fs/tdb.c:358:22: warning: conversion to '__off_t' {aka 'long int'} from 'tdb_off_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+<   358 |         fl.l_start = offset;
+<       |                      ^~~~~~
+< ../../../git/lib/ext2fs/tdb.c:359:20: warning: conversion to '__off_t' {aka 'long int'} from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+<   359 |         fl.l_len = len;
+<       |                    ^~~
+70782c70674
+< ../../../git/lib/ext2fs/tdb.c:877:25: warning: conversion to 'tdb_len_t' {aka 'unsigned int'} from '__off_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../../../git/lib/ext2fs/tdb.c:877:25: warning: conversion from '__off64_t' {aka 'long long int'} to 'tdb_len_t' {aka 'unsigned int'} may change value [-Wconversion]
+70785,70792d70676
+< ../../../git/lib/ext2fs/tdb.c: In function 'tdb_write':
+< ../../../git/lib/ext2fs/tdb.c:900:46: warning: conversion to '__off_t' {aka 'long int'} from 'tdb_off_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+<   900 |         } else if (pwrite(tdb->fd, buf, len, off) != (ssize_t)len) {
+<       |                                              ^~~
+< ../../../git/lib/ext2fs/tdb.c: In function 'tdb_read':
+< ../../../git/lib/ext2fs/tdb.c:931:56: warning: conversion to '__off_t' {aka 'long int'} from 'tdb_off_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+<   931 |                 ssize_t ret = pread(tdb->fd, buf, len, off);
+<       |                                                        ^~~
+70794,70799d70677
+< ../../../git/lib/ext2fs/tdb.c:1033:36: warning: conversion to '__off_t' {aka 'long int'} from 'tdb_off_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+<  1033 |         if (ftruncate(tdb->fd, size+addition) == -1) {
+<       |                                ~~~~^~~~~~~~~
+< ../../../git/lib/ext2fs/tdb.c:1035:61: warning: conversion to '__off_t' {aka 'long int'} from 'tdb_off_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+<  1035 |                 if (pwrite(tdb->fd,  &b, 1, (size+addition) - 1) != 1) {
+<       |                                             ~~~~~~~~~~~~~~~~^~~
+70806,70808d70683
+< ../../../git/lib/ext2fs/tdb.c:1048:51: warning: conversion to '__off_t' {aka 'long int'} from 'tdb_off_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+<  1048 |                 int ret = pwrite(tdb->fd, buf, n, size);
+<       |                                                   ^~~~
+70849,70852d70723
+< ../../../git/lib/ext2fs/tdb.c: In function 'ext2fs_tdb_transaction_recover':
+< ../../../git/lib/ext2fs/tdb.c:2252:32: warning: conversion to '__off_t' {aka 'long int'} from 'tdb_off_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+<  2252 |         if (ftruncate(tdb->fd, recovery_eof) != 0) {
+<       |                                ^~~~~~~~~~~~
+71044c70915
+< ../../../git/lib/ext2fs/tdb.c:3962:25: warning: conversion to 'tdb_len_t' {aka 'unsigned int'} from '__off_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../../../git/lib/ext2fs/tdb.c:3962:25: warning: conversion from '__off64_t' {aka 'long long int'} to 'tdb_len_t' {aka 'unsigned int'} may change value [-Wconversion]
+76299,76302c76170
+< ../../git/e2fsck/unix.c:372:21: warning: conversion to 'time_t' {aka 'long int'} from '__u32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+<   372 |         lastcheck = fs->super->s_lastcheck;
+<       |                     ^~
+< ../../git/e2fsck/unix.c:399:40: warning: conversion to 'long unsigned int' from 'time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../../git/e2fsck/unix.c:399:30: warning: conversion from 'time_t' {aka 'long long int'} to 'unsigned int' may change value [-Wconversion]
+76304,76310c76172
+<       |                                        ^
+< ../../git/e2fsck/unix.c:400:40: warning: conversion to 'long unsigned int' from 'time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+<   400 |                 if (batt && ((ctx->now - fs->super->s_lastcheck) <
+<       |                                        ^
+< ../../git/e2fsck/unix.c:459:24: warning: conversion to 'long unsigned int' from 'time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+<   459 |             ((ctx->now - fs->super->s_lastcheck) >= fs->super->s_checkinterval))
+<       |                        ^
+---
+>       |                              ^
+76319c76181
+< ../../git/e2fsck/unix.c:546:16: warning: conversion to 'unsigned int' from 'long int' may change the sign of the result [-Wsign-conversion]
+---
+> ../../git/e2fsck/unix.c:546:16: warning: conversion from 'long long int' to 'unsigned int' may change value [-Wconversion]
+76417c76279
+< ../../git/e2fsck/unix.c:2006:43: warning: conversion to '__u32' {aka 'unsigned int'} from 'time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../../git/e2fsck/unix.c:2006:43: warning: conversion from 'time_t' {aka 'long long int'} to '__u32' {aka 'unsigned int'} may change value [-Wconversion]
+77071c76933
+< ../../git/e2fsck/super.c:398:41: warning: conversion to '__u32' {aka 'unsigned int'} from 'time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../../git/e2fsck/super.c:398:41: warning: conversion from 'time_t' {aka 'long long int'} to '__u32' {aka 'unsigned int'} may change value [-Wconversion]
+77163,77166c77025
+< ../../git/e2fsck/super.c:1047:60: warning: conversion to 'long unsigned int' from 'time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+<  1047 |                 if (fs->super->s_mtime <= (__u32) ctx->now + ctx->time_fudge)
+<       |                                                            ^
+< ../../git/e2fsck/super.c:1050:46: warning: conversion to '__u32' {aka 'unsigned int'} from 'time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../../git/e2fsck/super.c:1050:46: warning: conversion from 'time_t' {aka 'long long int'} to '__u32' {aka 'unsigned int'} may change value [-Wconversion]
+77169,77172c77028
+< ../../git/e2fsck/super.c:1059:60: warning: conversion to 'long unsigned int' from 'time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+<  1059 |                 if (fs->super->s_wtime <= (__u32) ctx->now + ctx->time_fudge)
+<       |                                                            ^
+< ../../git/e2fsck/super.c:1062:46: warning: conversion to '__u32' {aka 'unsigned int'} from 'time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../../git/e2fsck/super.c:1062:46: warning: conversion from 'time_t' {aka 'long long int'} to '__u32' {aka 'unsigned int'} may change value [-Wconversion]
+77603c77459
+< ../../git/e2fsck/pass1.c:1453:50: warning: conversion to '__u32' {aka 'unsigned int'} from 'long int' may change the sign of the result [-Wsign-conversion]
+---
+> ../../git/e2fsck/pass1.c:1453:50: warning: conversion from 'time_t' {aka 'long long int'} to '__u32' {aka 'unsigned int'} may change value [-Wconversion]
+77606c77462
+< ../../git/e2fsck/pass1.c:1475:58: warning: conversion to '__u32' {aka 'unsigned int'} from 'time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../../git/e2fsck/pass1.c:1475:58: warning: conversion from 'time_t' {aka 'long long int'} to '__u32' {aka 'unsigned int'} may change value [-Wconversion]
+77630c77486
+< ../../git/e2fsck/pass1.c:2043:42: warning: conversion to '__u32' {aka 'unsigned int'} from 'time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../../git/e2fsck/pass1.c:2043:42: warning: conversion from 'time_t' {aka 'long long int'} to '__u32' {aka 'unsigned int'} may change value [-Wconversion]
+77646a77503,77510
+> ../../git/e2fsck/pass1.c: In function 'mark_inode_bad':
+> ../../git/e2fsck/pass1.c:2223:55: warning: conversion from 'ino_t' {aka 'long long unsigned int'} to 'ext2_ino_t' {aka 'unsigned int'} may change value [-Wconversion]
+>  2223 |         ext2fs_mark_inode_bitmap2(ctx->inode_bad_map, ino);
+>       |                                                       ^~~
+> ../../git/e2fsck/pass1.c: In function 'add_casefolded_dir':
+> ../../git/e2fsck/pass1.c:2235:66: warning: conversion from 'ino_t' {aka 'long long unsigned int'} to '__u32' {aka 'unsigned int'} may change value [-Wconversion]
+>  2235 |         pctx.errcode = ext2fs_u32_list_add(ctx->casefolded_dirs, ino);
+>       |                                                                  ^~~
+77672c77536
+< ../../git/e2fsck/pass1.c:2754:26: warning: conversion to '__u32' {aka 'unsigned int'} from 'time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../../git/e2fsck/pass1.c:2754:26: warning: conversion from 'time_t' {aka 'long long int'} to '__u32' {aka 'unsigned int'} may change value [-Wconversion]
+78970c78834
+< ../../git/e2fsck/pass3.c:215:57: warning: conversion to '__u32' {aka 'unsigned int'} from 'time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../../git/e2fsck/pass3.c:215:57: warning: conversion from 'time_t' {aka 'long long int'} to '__u32' {aka 'unsigned int'} may change value [-Wconversion]
+78977c78841
+< ../../git/e2fsck/pass3.c:526:57: warning: conversion to '__u32' {aka 'unsigned int'} from 'time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../../git/e2fsck/pass3.c:526:57: warning: conversion from 'time_t' {aka 'long long int'} to '__u32' {aka 'unsigned int'} may change value [-Wconversion]
+80163a80028,80031
+> ../../git/e2fsck/journal.c: In function 'ext4_fc_read_extents':
+> ../../git/e2fsck/journal.c:588:28: warning: conversion from 'ino_t' {aka 'long long unsigned int'} to 'ext2_ino_t' {aka 'unsigned int'} may change value [-Wconversion]
+>   588 |         extent_list->ino = ino;
+>       |                            ^~~
+80176a80045,80116
+> ../../git/e2fsck/journal.c:638:22: warning: format '%lu' expects argument of type 'long unsigned int', but argument 4 has type 'ino_t' {aka 'long long unsigned int'} [-Wformat=]
+>   638 |         jbd_debug(1, "%s: %s, ino %lu, parent %lu\n",
+>       |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+> ......
+>   642 |                 darg->dname, darg->ino, darg->parent_ino);
+>       |                              ~~~~~~~~~
+>       |                                  |
+>       |                                  ino_t {aka long long unsigned int}
+> ../../git/lib/ext2fs/kernel-jbd.h:47:33: note: in definition of macro 'jbd_debug'
+>    47 |                         printk (f, ## a);                               \
+>       |                                 ^
+> ../../git/e2fsck/journal.c:638:37: note: format string is defined here
+>   638 |         jbd_debug(1, "%s: %s, ino %lu, parent %lu\n",
+>       |                                   ~~^
+>       |                                     |
+>       |                                     long unsigned int
+>       |                                   %llu
+> ../../git/e2fsck/journal.c:638:22: warning: format '%lu' expects argument of type 'long unsigned int', but argument 5 has type 'ino_t' {aka 'long long unsigned int'} [-Wformat=]
+>   638 |         jbd_debug(1, "%s: %s, ino %lu, parent %lu\n",
+>       |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+> ......
+>   642 |                 darg->dname, darg->ino, darg->parent_ino);
+>       |                                         ~~~~~~~~~~~~~~~~
+>       |                                             |
+>       |                                             ino_t {aka long long unsigned int}
+> ../../git/lib/ext2fs/kernel-jbd.h:47:33: note: in definition of macro 'jbd_debug'
+>    47 |                         printk (f, ## a);                               \
+>       |                                 ^
+> ../../git/e2fsck/journal.c:638:49: note: format string is defined here
+>   638 |         jbd_debug(1, "%s: %s, ino %lu, parent %lu\n",
+>       |                                               ~~^
+>       |                                                 |
+>       |                                                 long unsigned int
+>       |                                               %llu
+> ../../git/e2fsck/journal.c: In function 'ext4_fc_handle_unlink':
+> ../../git/e2fsck/journal.c:656:51: warning: conversion from 'ino_t' {aka 'long long unsigned int'} to 'ext2_ino_t' {aka 'unsigned int'} may change value [-Wconversion]
+>   656 |                        ext2fs_unlink(ctx->fs, darg.parent_ino,
+>       |                                               ~~~~^~~~~~~~~~~
+> ../../git/e2fsck/journal.c:396:52: note: in definition of macro 'errcode_to_errno'
+>   396 | #define errcode_to_errno(err)   __errcode_to_errno(err, __func__, __LINE__)
+>       |                                                    ^~~
+> ../../git/e2fsck/journal.c:657:54: warning: conversion from 'ino_t' {aka 'long long unsigned int'} to 'ext2_ino_t' {aka 'unsigned int'} may change value [-Wconversion]
+>   657 |                                      darg.dname, darg.ino, 0));
+>       |                                                  ~~~~^~~~
+> ../../git/e2fsck/journal.c:396:52: note: in definition of macro 'errcode_to_errno'
+>   396 | #define errcode_to_errno(err)   __errcode_to_errno(err, __func__, __LINE__)
+>       |                                                    ^~~
+> ../../git/e2fsck/journal.c: In function 'ext4_fc_handle_link_and_create':
+> ../../git/e2fsck/journal.c:674:58: warning: conversion from 'ino_t' {aka 'long long unsigned int'} to 'ext2_ino_t' {aka 'unsigned int'} may change value [-Wconversion]
+>   674 |         ret = errcode_to_errno(ext2fs_read_inode(fs, darg.ino,
+>       |                                                      ~~~~^~~~
+> ../../git/e2fsck/journal.c:396:52: note: in definition of macro 'errcode_to_errno'
+>   396 | #define errcode_to_errno(err)   __errcode_to_errno(err, __func__, __LINE__)
+>       |                                                    ^~~
+> ../../git/e2fsck/journal.c:704:31: warning: conversion from 'ino_t' {aka 'long long unsigned int'} to 'ext2_ino_t' {aka 'unsigned int'} may change value [-Wconversion]
+>   704 |         ext2fs_unlink(fs, darg.parent_ino, darg.dname, darg.ino,
+>       |                           ~~~~^~~~~~~~~~~
+> ../../git/e2fsck/journal.c:704:60: warning: conversion from 'ino_t' {aka 'long long unsigned int'} to 'ext2_ino_t' {aka 'unsigned int'} may change value [-Wconversion]
+>   704 |         ext2fs_unlink(fs, darg.parent_ino, darg.dname, darg.ino,
+>       |                                                        ~~~~^~~~
+> ../../git/e2fsck/journal.c:708:44: warning: conversion from 'ino_t' {aka 'long long unsigned int'} to 'ext2_ino_t' {aka 'unsigned int'} may change value [-Wconversion]
+>   708 |                        ext2fs_link(fs, darg.parent_ino, darg.dname, darg.ino,
+>       |                                        ~~~~^~~~~~~~~~~
+> ../../git/e2fsck/journal.c:396:52: note: in definition of macro 'errcode_to_errno'
+>   396 | #define errcode_to_errno(err)   __errcode_to_errno(err, __func__, __LINE__)
+>       |                                                    ^~~
+> ../../git/e2fsck/journal.c:708:73: warning: conversion from 'ino_t' {aka 'long long unsigned int'} to 'ext2_ino_t' {aka 'unsigned int'} may change value [-Wconversion]
+>   708 |                        ext2fs_link(fs, darg.parent_ino, darg.dname, darg.ino,
+>       |                                                                     ~~~~^~~~
+> ../../git/e2fsck/journal.c:396:52: note: in definition of macro 'errcode_to_errno'
+>   396 | #define errcode_to_errno(err)   __errcode_to_errno(err, __func__, __LINE__)
+>       |                                                    ^~~
+80193c80133
+< ../../git/e2fsck/journal.c:760:36: warning: conversion to 'ino_t' {aka 'long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+---
+> ../../git/e2fsck/journal.c:760:36: warning: conversion to 'ino_t' {aka 'long long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+80230c80170
+< ../../git/e2fsck/journal.c:834:36: warning: conversion to 'ino_t' {aka 'long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+---
+> ../../git/e2fsck/journal.c:834:36: warning: conversion to 'ino_t' {aka 'long long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+80233c80173
+< ../../git/e2fsck/journal.c:839:41: warning: conversion to 'ino_t' {aka 'long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+---
+> ../../git/e2fsck/journal.c:839:41: warning: conversion to 'ino_t' {aka 'long long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+80305c80245
+< ../../git/e2fsck/journal.c:1827:25: warning: conversion to '__u32' {aka 'unsigned int'} from 'time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../../git/e2fsck/journal.c:1827:25: warning: conversion from 'time_t' {aka 'long long int'} to '__u32' {aka 'unsigned int'} may change value [-Wconversion]
+80960c80900
+< ../../git/e2fsck/util.c:410:45: warning: conversion from '__time_t' {aka 'long int'} to 'float' may change value [-Wconversion]
+---
+> ../../git/e2fsck/util.c:410:45: warning: conversion from '__time64_t' {aka 'long long int'} to 'float' may change value [-Wconversion]
+80987c80927
+< ../../git/e2fsck/util.c:766:28: warning: conversion from '__u64' {aka 'long long unsigned int'} to 'time_t' {aka 'long int'} may change value [-Wconversion]
+---
+> ../../git/e2fsck/util.c:766:28: warning: conversion to 'time_t' {aka 'long long int'} from '__u64' {aka 'long long unsigned int'} may change the sign of the result [-Wsign-conversion]
+82628,82631d82567
+< ../../git/e2fsck/message.c: In function 'expand_inode_expression':
+< ../../git/e2fsck/message.c:304:36: warning: conversion to 'time_t' {aka 'long int'} from '__u32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+<   304 |                 print_time(f, inode->i_mtime);
+<       |                               ~~~~~^~~~~~~~~
+84761c84697
+< ../../git/e2fsck/rehash.c:239:27: warning: conversion to 'int' from 'ino_t' {aka 'long unsigned int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../../git/e2fsck/rehash.c:239:27: warning: conversion from 'ino_t' {aka 'long long unsigned int'} to 'int' may change value [-Wconversion]
+86982c86918
+< ../../git/debugfs/debugfs.c:1868:29: warning: conversion to '__u32' {aka 'unsigned int'} from 'time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../../git/debugfs/debugfs.c:1868:29: warning: conversion from 'time_t' {aka 'long long int'} to '__u32' {aka 'unsigned int'} may change value [-Wconversion]
+86999,87002d86934
+< ../../git/debugfs/debugfs.c: In function 'do_set_current_time':
+< ../../git/debugfs/debugfs.c:2249:35: warning: conversion from '__s64' {aka 'long long int'} to 'time_t' {aka 'long int'} may change value [-Wconversion]
+<  2249 |                 current_fs->now = now;
+<       |                                   ^~~
+87012c86944
+< ../../git/debugfs/debugfs.c:2460:13: warning: conversion from '__u64' {aka 'long long unsigned int'} to 'time_t' {aka 'long int'} may change value [-Wconversion]
+---
+> ../../git/debugfs/debugfs.c:2460:13: warning: conversion to 'time_t' {aka 'long long int'} from '__u64' {aka 'long long unsigned int'} may change the sign of the result [-Wsign-conversion]
+88317,88319d88248
+< ../../git/debugfs/ls.c:128:35: warning: conversion to 'time_t' {aka 'long int'} from '__u32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+<   128 |                         modtime = inode.i_mtime;
+<       |                                   ^~~~~
+88643a88573,88576
+> ../../git/debugfs/lsdel.c: In function 'deleted_info_compare':
+> ../../git/debugfs/lsdel.c:48:28: warning: conversion from 'time_t' {aka 'long long int'} to 'int' may change value [-Wconversion]
+>    48 |         return arg1->dtime - arg2->dtime;
+>       |                ~~~~~~~~~~~~^~~~~~~~~~~~~
+88647a88581,88583
+> ../../git/debugfs/lsdel.c:137:40: warning: conversion from 'time_t' {aka 'long long int'} to 'long int' may change value [-Wconversion]
+>   137 |                     (secs && (labs(now - secs) > (long) inode.i_dtime)))
+>       |                                    ~~~~^~~~~~
+88972,88978d88907
+< ../../git/debugfs/dump.c: In function 'fix_perms':
+< ../../git/debugfs/dump.c:94:21: warning: conversion to '__time_t' {aka 'long int'} from '__u32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+<    94 |         ut.actime = inode->i_atime;
+<       |                     ^~~~~
+< ../../git/debugfs/dump.c:95:22: warning: conversion to '__time_t' {aka 'long int'} from '__u32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+<    95 |         ut.modtime = inode->i_mtime;
+<       |                      ^~~~~
+89750,89752d89678
+< ../../git/debugfs/logdump.c:304:39: warning: conversion from 'ext2_loff_t' {aka 'long long int'} to '__off_t' {aka 'long int'} may change value [-Wconversion]
+<   304 |                 if (lseek(source->fd, offset, SEEK_SET) < 0) {
+<       |                                       ^~~~~~
+89763c89689
+< ../../git/debugfs/logdump.c:444:48: warning: conversion to 'long unsigned int' from '__off_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../../git/debugfs/logdump.c:444:37: warning: conversion to '__u64' {aka 'long long unsigned int'} from '__off64_t' {aka 'long long int'} may change the sign of the result [-Wsign-conversion]
+89765c89691
+<       |                                                ^
+---
+>       |                                     ^~
+92196c92122
+< ../../git/debugfs/../misc/create_inode.c:128:25: warning: conversion to '__u32' {aka 'unsigned int'} from '__time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../../git/debugfs/../misc/create_inode.c:128:25: warning: conversion from '__time64_t' {aka 'long long int'} to '__u32' {aka 'unsigned int'} may change value [-Wconversion]
+92199c92125
+< ../../git/debugfs/../misc/create_inode.c:129:25: warning: conversion to '__u32' {aka 'unsigned int'} from '__time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../../git/debugfs/../misc/create_inode.c:129:25: warning: conversion from '__time64_t' {aka 'long long int'} to '__u32' {aka 'unsigned int'} may change value [-Wconversion]
+92202c92128
+< ../../git/debugfs/../misc/create_inode.c:130:25: warning: conversion to '__u32' {aka 'unsigned int'} from '__time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../../git/debugfs/../misc/create_inode.c:130:25: warning: conversion from '__time64_t' {aka 'long long int'} to '__u32' {aka 'unsigned int'} may change value [-Wconversion]
+92231c92157
+< ../../git/debugfs/../misc/create_inode.c:311:17: warning: conversion to '__u32' {aka 'unsigned int'} from 'time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../../git/debugfs/../misc/create_inode.c:311:17: warning: conversion from 'time_t' {aka 'long long int'} to '__u32' {aka 'unsigned int'} may change value [-Wconversion]
+92294c92220
+< ../../git/debugfs/../misc/create_inode.c:686:17: warning: conversion to '__u32' {aka 'unsigned int'} from 'time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../../git/debugfs/../misc/create_inode.c:686:17: warning: conversion from 'time_t' {aka 'long long int'} to '__u32' {aka 'unsigned int'} may change value [-Wconversion]
+95685c95611
+< ../../git/misc/util.c:318:28: warning: conversion from '__u64' {aka 'long long unsigned int'} to 'time_t' {aka 'long int'} may change value [-Wconversion]
+---
+> ../../git/misc/util.c:318:28: warning: conversion to 'time_t' {aka 'long long int'} from '__u64' {aka 'long long unsigned int'} may change the sign of the result [-Wsign-conversion]
+96488c96414
+< ../../git/misc/create_inode.c:128:25: warning: conversion to '__u32' {aka 'unsigned int'} from '__time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../../git/misc/create_inode.c:128:25: warning: conversion from '__time64_t' {aka 'long long int'} to '__u32' {aka 'unsigned int'} may change value [-Wconversion]
+96491c96417
+< ../../git/misc/create_inode.c:129:25: warning: conversion to '__u32' {aka 'unsigned int'} from '__time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../../git/misc/create_inode.c:129:25: warning: conversion from '__time64_t' {aka 'long long int'} to '__u32' {aka 'unsigned int'} may change value [-Wconversion]
+96494c96420
+< ../../git/misc/create_inode.c:130:25: warning: conversion to '__u32' {aka 'unsigned int'} from '__time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../../git/misc/create_inode.c:130:25: warning: conversion from '__time64_t' {aka 'long long int'} to '__u32' {aka 'unsigned int'} may change value [-Wconversion]
+96523c96449
+< ../../git/misc/create_inode.c:311:17: warning: conversion to '__u32' {aka 'unsigned int'} from 'time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../../git/misc/create_inode.c:311:17: warning: conversion from 'time_t' {aka 'long long int'} to '__u32' {aka 'unsigned int'} may change value [-Wconversion]
+96586c96512
+< ../../git/misc/create_inode.c:686:17: warning: conversion to '__u32' {aka 'unsigned int'} from 'time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../../git/misc/create_inode.c:686:17: warning: conversion from 'time_t' {aka 'long long int'} to '__u32' {aka 'unsigned int'} may change value [-Wconversion]
+96932a96859,96868
+> ../../git/misc/badblocks.c: In function 'time_diff_format':
+> ../../git/misc/badblocks.c:194:15: warning: conversion from 'time_t' {aka 'long long int'} to 'int' may change value [-Wconversion]
+>   194 |         sec = diff % 60;
+>       |               ^~~~
+> ../../git/misc/badblocks.c:196:15: warning: conversion from 'time_t' {aka 'long long int'} to 'int' may change value [-Wconversion]
+>   196 |         min = diff % 60;
+>       |               ^~~~
+> ../../git/misc/badblocks.c:197:14: warning: conversion from 'time_t' {aka 'long long int'} to 'int' may change value [-Wconversion]
+>   197 |         hr = diff / 60;
+>       |              ^~~~
+96955,96961c96891,96894
+< ../../git/misc/badblocks.c:410:39: warning: conversion to 'long unsigned int' from '__time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+<   410 |                 ts.tv_sec = ts.tv_sec * d_flag / 100;
+<       |                                       ^
+< ../../git/misc/badblocks.c:410:29: warning: conversion to '__time_t' {aka 'long int'} from 'long unsigned int' may change the sign of the result [-Wsign-conversion]
+<   410 |                 ts.tv_sec = ts.tv_sec * d_flag / 100;
+<       |                             ^~
+< ../../git/misc/badblocks.c:411:41: warning: conversion to 'long unsigned int' from '__syscall_slong_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../../git/misc/badblocks.c:404:30: warning: conversion from '__suseconds64_t' {aka 'long long int'} to 'long int' may change value [-Wconversion]
+>   404 |                 ts.tv_nsec = (tv2.tv_usec - tv1.tv_usec) * MILISEC;
+>       |                              ^
+> ../../git/misc/badblocks.c:411:41: warning: conversion to 'long unsigned int' from 'long int' may change the sign of the result [-Wsign-conversion]
+96964c96897
+< ../../git/misc/badblocks.c:411:30: warning: conversion to '__syscall_slong_t' {aka 'long int'} from 'long unsigned int' may change the sign of the result [-Wsign-conversion]
+---
+> ../../git/misc/badblocks.c:411:30: warning: conversion to 'long int' from 'long unsigned int' may change the sign of the result [-Wsign-conversion]
+97783c97716
+< ../../git/misc/tune2fs.c:3202:35: warning: conversion to '__u32' {aka 'unsigned int'} from 'time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../../git/misc/tune2fs.c:3202:35: warning: conversion from 'time_t' {aka 'long long int'} to '__u32' {aka 'unsigned int'} may change value [-Wconversion]
+99442c99375
+< ../../git/misc/dumpe2fs.c:445:51: warning: conversion from '__u64' {aka 'long long unsigned int'} to 'time_t' {aka 'long int'} may change value [-Wconversion]
+---
+> ../../git/misc/dumpe2fs.c:445:51: warning: conversion to 'time_t' {aka 'long long int'} from '__u64' {aka 'long long unsigned int'} may change the sign of the result [-Wsign-conversion]
+99446c99379
+< ../../git/misc/dumpe2fs.c:494:20: warning: conversion from '__u64' {aka 'long long unsigned int'} to 'time_t' {aka 'long int'} may change value [-Wconversion]
+---
+> ../../git/misc/dumpe2fs.c:494:20: warning: conversion to 'time_t' {aka 'long long int'} from '__u64' {aka 'long long unsigned int'} may change the sign of the result [-Wsign-conversion]
+99873c99806
+< ../../git/misc/e2image.c:660:56: warning: conversion to 'blk64_t' {aka 'long long unsigned int'} from 'time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../../git/misc/e2image.c:660:56: warning: conversion to 'long long unsigned int' from 'time_t' {aka 'long long int'} may change the sign of the result [-Wsign-conversion]
+99876c99809
+< ../../git/misc/e2image.c:661:62: warning: conversion to 'blk64_t' {aka 'long long unsigned int'} from 'time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../../git/misc/e2image.c:661:62: warning: conversion to 'long long unsigned int' from 'time_t' {aka 'long long int'} may change the sign of the result [-Wsign-conversion]
+99879c99812
+< ../../git/misc/e2image.c:660:46: warning: conversion from 'blk64_t' {aka 'long long unsigned int'} to 'time_t' {aka 'long int'} may change value [-Wconversion]
+---
+> ../../git/misc/e2image.c:660:46: warning: conversion to 'time_t' {aka 'long long int'} from 'long long unsigned int' may change the sign of the result [-Wsign-conversion]
+99888c99821
+< ../../git/misc/e2image.c:566:73: warning: conversion from 'time_t' {aka 'long int'} to 'float' may change value [-Wconversion]
+---
+> ../../git/misc/e2image.c:566:73: warning: conversion from 'time_t' {aka 'long long int'} to 'float' may change value [-Wconversion]
+99921c99854
+< ../../git/misc/e2image.c:566:73: warning: conversion from 'time_t' {aka 'long int'} to 'float' may change value [-Wconversion]
+---
+> ../../git/misc/e2image.c:566:73: warning: conversion from 'time_t' {aka 'long long int'} to 'float' may change value [-Wconversion]
+101734a101668,101670
+> ../../git/misc/filefrag.c:475:49: warning: conversion from '__fsblkcnt64_t' {aka 'long long unsigned int'} to 'unsigned int' may change value [-Wconversion]
+>   475 |                 long cylgroups = div_ceil(fsinfo.f_blocks, blksize * 8);
+>       |                                           ~~~~~~^~~~~~~~~
+101738c101674
+< ../../git/misc/filefrag.c:482:61: warning: conversion to 'long unsigned int' from 'long int' may change the sign of the result [-Wsign-conversion]
+---
+> ../../git/misc/filefrag.c:482:61: warning: conversion to '__fsfilcnt64_t' {aka 'long long unsigned int'} from 'long int' may change the sign of the result [-Wsign-conversion]
+101741c101677
+< ../../git/misc/filefrag.c:481:39: warning: conversion to 'int' from 'long unsigned int' may change the sign of the result [-Wsign-conversion]
+---
+> ../../git/misc/filefrag.c:481:39: warning: conversion from '__fsfilcnt64_t' {aka 'long long unsigned int'} to 'int' may change value [-Wconversion]
+102454,102456d102389
+< ../../git/misc/e4defrag.c:381:62: warning: conversion from 'ext2_loff_t' {aka 'long long int'} to '__off_t' {aka 'long int'} may change value [-Wconversion]
+<   381 |         page = mmap(NULL, length, PROT_READ, MAP_SHARED, fd, offset);
+<       |                                                              ^~~~~~
+104529c104462
+< ../../git/resize/resize2fs.c:2269:42: warning: conversion to '__u32' {aka 'unsigned int'} from 'time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../../git/resize/resize2fs.c:2269:42: warning: conversion from 'time_t' {aka 'long long int'} to '__u32' {aka 'unsigned int'} may change value [-Wconversion]
+104536c104469
+< ../../git/resize/resize2fs.c:2422:49: warning: conversion to '__u32' {aka 'unsigned int'} from 'time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../../git/resize/resize2fs.c:2422:49: warning: conversion from 'time_t' {aka 'long long int'} to '__u32' {aka 'unsigned int'} may change value [-Wconversion]
+105702c105635
+< ../../git/resize/resource_track.c:56:45: warning: conversion from '__time_t' {aka 'long int'} to 'float' may change value [-Wconversion]
+---
+> ../../git/resize/resource_track.c:56:45: warning: conversion from '__time64_t' {aka 'long long int'} to 'float' may change value [-Wconversion]
+107102d107034
+< make[2]: [Makefile:373: libext2fs.info] Error 1 (ignored)
+107103a107036
+> make[2]: [Makefile:373: libext2fs.info] Error 1 (ignored)

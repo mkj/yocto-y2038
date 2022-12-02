@@ -1,0 +1,279 @@
+DEBUG: Executing shell function do_compile
+NOTE: make -j 1 -e MAKEFLAGS=
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/recipe-sysroot   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/ed-1.18=/usr/src/debug/ed/1.18-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/ed-1.18=/usr/src/debug/ed/1.18-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/ed-1.18=/usr/src/debug/ed/1.18-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/ed-1.18=/usr/src/debug/ed/1.18-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o buffer.o buffer.c
+buffer.c: In function 'get_sbuf_line':
+buffer.c:279:41: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  279 |   if( !resize_buffer( &buf, &bufsz, len + 1 ) ) return 0;
+      |                                     ~~~~^~~
+buffer.c:280:27: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  280 |   if( (int)fread( buf, 1, len, sfp ) != len )
+      |                           ^~~
+buffer.c: In function 'join_lines':
+buffer.c:321:50: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  321 |     if( !s || !resize_buffer( &buf, &bufsz, size + bp->len ) ) return false;
+      |                                             ~~~~~^~~~~~~~~
+buffer.c:322:30: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  322 |     memcpy( buf + size, s, bp->len );
+      |                            ~~^~~~~
+buffer.c:326:42: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  326 |   if( !resize_buffer( &buf, &bufsz, size + 2 ) ) return false;
+      |                                     ~~~~~^~~
+buffer.c: In function 'put_sbuf_line':
+buffer.c:450:60: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  450 |   const char * const p = (const char *) memchr( buf, '\n', size );
+      |                                                            ^~~~
+buffer.c:468:28: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  468 |   if( (int)fwrite( buf, 1, len, sfp ) != len )  /* assert: interrupts disabled */
+      |                            ^~~
+buffer.c: In function 'push_undo_atom':
+buffer.c:588:43: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  588 |   const unsigned min_size = ( u_idx + 1 ) * sizeof (undo_t);
+      |                                           ^
+buffer.c:596:26: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  596 |     const int new_size = ( ( min_size < 512 ) ? 512 :
+      |                          ^
+buffer.c:599:45: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  599 |     if( ustack ) new_buf = realloc( ustack, new_size );
+      |                                             ^~~~~~~~
+buffer.c:600:28: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  600 |     else new_buf = malloc( new_size );
+      |                            ^~~~~~~~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/recipe-sysroot   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/ed-1.18=/usr/src/debug/ed/1.18-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/ed-1.18=/usr/src/debug/ed/1.18-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/ed-1.18=/usr/src/debug/ed/1.18-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/ed-1.18=/usr/src/debug/ed/1.18-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o carg_parser.o carg_parser.c
+carg_parser.c: In function 'ap_resize_buffer':
+carg_parser.c:29:33: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+   29 |   if( buf ) buf = realloc( buf, min_size );
+      |                                 ^~~~~~~~
+carg_parser.c:30:22: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+   30 |   else buf = malloc( min_size );
+      |                      ^~~~~~~~
+carg_parser.c: In function 'push_back_record':
+carg_parser.c:41:40: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+   41 |                  ( ap->data_size + 1 ) * sizeof (struct ap_Record) );
+      |                                        ^
+carg_parser.c:41:40: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+   41 |                  ( ap->data_size + 1 ) * sizeof (struct ap_Record) );
+      |                  ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+carg_parser.c:48:21: warning: conversion to 'int' from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+   48 |     const int len = strlen( long_name );
+      |                     ^~~~~~
+carg_parser.c:49:46: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+   49 |     p->parsed_name = (char *)malloc( len + 2 + 1 );
+      |                                      ~~~~~~~~^~~
+carg_parser.c:52:49: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+   52 |     strncpy( p->parsed_name + 2, long_name, len + 1 );
+      |                                             ~~~~^~~
+carg_parser.c:58:50: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+   58 |     p->parsed_name[0] = '-'; p->parsed_name[1] = code; p->parsed_name[2] = 0;
+      |                                                  ^~~~
+carg_parser.c:63:21: warning: conversion to 'int' from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+   63 |     const int len = strlen( argument );
+      |                     ^~~~~~
+carg_parser.c:64:39: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+   64 |     p->argument = (char *)malloc( len + 1 );
+      |                                   ~~~~^~~
+carg_parser.c:66:41: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+   66 |     strncpy( p->argument, argument, len + 1 );
+      |                                     ~~~~^~~
+carg_parser.c: In function 'add_error':
+carg_parser.c:76:19: warning: conversion to 'int' from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+   76 |   const int len = strlen( msg );
+      |                   ^~~~~~
+carg_parser.c:80:49: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+   80 |   strncpy( ap->error + ap->error_size, msg, len + 1 );
+      |                                             ~~~~^~~
+carg_parser.c: In function 'ap_init':
+carg_parser.c:263:49: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  263 |                        ( non_options_size + 1 ) * sizeof *non_options );
+      |                                                 ^
+carg_parser.c:263:49: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  263 |                        ( non_options_size + 1 ) * sizeof *non_options );
+      |                        ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/recipe-sysroot   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/ed-1.18=/usr/src/debug/ed/1.18-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/ed-1.18=/usr/src/debug/ed/1.18-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/ed-1.18=/usr/src/debug/ed/1.18-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/ed-1.18=/usr/src/debug/ed/1.18-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o global.o global.c
+global.c: In function 'set_active_node':
+global.c:59:48: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+   59 |   const unsigned min_size = ( active_len + 1 ) * sizeof (line_t **);
+      |                                                ^
+global.c:64:26: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+   64 |     const int new_size = ( ( min_size < 512 ) ? 512 :
+      |                          ^
+global.c:68:55: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+   68 |     if( active_list ) new_buf = realloc( active_list, new_size );
+      |                                                       ^~~~~~~~
+global.c:69:28: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+   69 |     else new_buf = malloc( new_size );
+      |                            ^~~~~~~~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/recipe-sysroot   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/ed-1.18=/usr/src/debug/ed/1.18-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/ed-1.18=/usr/src/debug/ed/1.18-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/ed-1.18=/usr/src/debug/ed/1.18-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/ed-1.18=/usr/src/debug/ed/1.18-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o io.o io.c
+io.c: In function 'get_extended_line':
+io.c:122:41: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  122 |   if( !resize_buffer( &buf, &bufsz, len + 1 ) ) return false;
+      |                                     ~~~~^~~
+io.c:123:25: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  123 |   memcpy( buf, *ibufpp, len );
+      |                         ^~~
+io.c:132:50: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  132 |     if( !resize_buffer( &buf, &bufsz, len + len2 + 1 ) ) return false;
+      |                                       ~~~~~~~~~~~^~~
+io.c:133:27: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  133 |     memcpy( buf + len, s, len2 );
+      |                           ^~~~
+io.c: In function 'get_stdin_line':
+io.c:160:41: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  160 |     if( !resize_buffer( &buf, &bufsz, i + 2 ) ) { *sizep = 0; return 0; }
+      |                                       ~~^~~
+io.c:180:18: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  180 |       buf[i++] = c; if( !c ) set_binary(); if( c != '\n' ) continue;
+      |                  ^
+io.c: In function 'read_stream_line':
+io.c:202:41: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  202 |     if( !resize_buffer( &buf, &bufsz, i + 2 ) ) return 0;
+      |                                       ~~^~~
+io.c:204:16: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  204 |     buf[i++] = c;
+      |                ^
+io.c: In function 'read_stream':
+io.c:253:33: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  253 |     if( !put_sbuf_line( s, size + newline_added ) )
+      |                                 ^
+io.c:253:33: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  253 |     if( !put_sbuf_line( s, size + newline_added ) )
+      |                            ~~~~~^~~~~~~~~~~~~~~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/recipe-sysroot   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/ed-1.18=/usr/src/debug/ed/1.18-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/ed-1.18=/usr/src/debug/ed/1.18-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/ed-1.18=/usr/src/debug/ed/1.18-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/ed-1.18=/usr/src/debug/ed/1.18-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/recipe-sysroot-native=   -Wconversion -Wno-error -DPROGVERSION=\"1.18\" -c -o main.o main.c
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/recipe-sysroot   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/ed-1.18=/usr/src/debug/ed/1.18-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/ed-1.18=/usr/src/debug/ed/1.18-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/ed-1.18=/usr/src/debug/ed/1.18-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/ed-1.18=/usr/src/debug/ed/1.18-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o main_loop.o main_loop.c
+main_loop.c: In function 'set_def_filename':
+main_loop.c:50:19: warning: conversion to 'int' from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+   50 |   const int len = strlen( s );
+      |                   ^~~~~~
+main_loop.c:51:41: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+   51 |   if( !resize_buffer( &buf, &bufsz, len + 1 ) ) return false;
+      |                                     ~~~~^~~
+main_loop.c:52:23: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+   52 |   memcpy( buf, s, len + 1 );
+      |                   ~~~~^~~
+main_loop.c: In function 'set_prompt':
+main_loop.c:67:19: warning: conversion to 'int' from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+   67 |   const int len = strlen( s );
+      |                   ^~~~~~
+main_loop.c:68:41: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+   68 |   if( !resize_buffer( &buf, &bufsz, len + 1 ) ) return false;
+      |                                     ~~~~^~~
+main_loop.c:69:23: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+   69 |   memcpy( buf, s, len + 1 );
+      |                   ~~~~^~~
+main_loop.c: In function 'get_shell_command':
+main_loop.c:122:41: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  122 |   if( !resize_buffer( &buf, &bufsz, len + 1 ) ) return 0;
+      |                                     ~~~~^~~
+main_loop.c:128:25: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  128 |     memcpy( buf, shcmd, shcmdlen );             /* bufsz >= shcmdlen */
+      |                         ^~~~~~~~
+main_loop.c:139:13: warning: conversion to 'int' from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  139 |       len = strlen( p );
+      |             ^~~~~~
+main_loop.c:140:43: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  140 |       if( !resize_buffer( &buf, &bufsz, i + len ) ) return 0;
+      |                                         ~~^~~~~
+main_loop.c:141:27: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  141 |       memcpy( buf + i, p, len );
+      |                           ^~~
+main_loop.c:147:43: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  147 |       if( !resize_buffer( &buf, &bufsz, i + 2 ) ) return 0;
+      |                                         ~~^~~
+main_loop.c:154:43: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  154 |   if( !resize_buffer( &shcmd, &shcmdsz, i + 1 ) ) return 0;
+      |                                         ~~^~~
+main_loop.c:155:23: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  155 |   memcpy( shcmd, buf, i );
+      |                       ^
+main_loop.c: In function 'get_filename':
+main_loop.c:190:42: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  190 |   if( !resize_buffer( &buf, &bufsz, pmax + 1 ) ) return 0;
+      |                                     ~~~~~^~~
+main_loop.c: In function 'exec_global':
+main_loop.c:739:47: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  739 |             !resize_buffer( &buf, &bufsz, len + 1 ) ) return ERR;
+      |                                           ~~~~^~~
+main_loop.c:740:35: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  740 |         memcpy( buf, *ibufpp, len + 1 );
+      |                               ~~~~^~~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/recipe-sysroot   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/ed-1.18=/usr/src/debug/ed/1.18-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/ed-1.18=/usr/src/debug/ed/1.18-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/ed-1.18=/usr/src/debug/ed/1.18-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/ed-1.18=/usr/src/debug/ed/1.18-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o regex.o regex.c
+regex.c: In function 'extract_pattern':
+regex.c:104:41: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  104 |   if( !resize_buffer( &buf, &bufsz, len + 1 ) ) return 0;
+      |                                     ~~~~^~~
+regex.c:105:25: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  105 |   memcpy( buf, *ibufpp, len );
+      |                         ^~~
+regex.c: In function 'extract_replacement':
+regex.c:291:41: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  291 |     if( !resize_buffer( &buf, &bufsz, i + 2 ) ) return false;
+      |                                       ~~^~~
+regex.c:303:39: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  303 |   if( !resize_buffer( &buf, &bufsz, i + 1 ) ) return false;
+      |                                     ~~^~~
+regex.c: In function 'replace_matched_text':
+regex.c:328:58: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  328 |       if( !resize_buffer( txtbufp, txtbufszp, offset - j + k ) ) return -1;
+      |                                               ~~~~~~~~~~~^~~
+regex.c:335:58: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  335 |       if( !resize_buffer( txtbufp, txtbufszp, offset - j + k ) ) return -1;
+      |                                               ~~~~~~~~~~~^~~
+regex.c:340:54: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  340 |       if( !resize_buffer( txtbufp, txtbufszp, offset + 1 ) ) return -1;
+      |                                               ~~~~~~~^~~
+regex.c:344:50: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  344 |   if( !resize_buffer( txtbufp, txtbufszp, offset + 1 ) ) return -1;
+      |                                           ~~~~~~~^~~
+regex.c: In function 'line_replace':
+regex.c:374:56: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  374 |         if( !resize_buffer( txtbufp, txtbufszp, offset + i ) ) return -1;
+      |                                                 ~~~~~~~^~~
+regex.c:376:41: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  376 |         memcpy( *txtbufp + offset, txt, i ); offset += i;
+      |                                         ^
+regex.c:378:52: warning: conversion to 'int' from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  378 |                                        subst_regexp->re_nsub );
+      |                                        ~~~~~~~~~~~~^~~~~~~~~
+regex.c:384:56: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  384 |         if( !resize_buffer( txtbufp, txtbufszp, offset + i ) ) return -1;
+      |                                                 ~~~~~~~^~~
+regex.c:386:41: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  386 |         memcpy( *txtbufp + offset, txt, i ); offset += i;
+      |                                         ^
+regex.c:396:56: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  396 |     if( !resize_buffer( txtbufp, txtbufszp, offset + i + 2 ) ) return -1;
+      |                                             ~~~~~~~~~~~^~~
+regex.c:398:37: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  398 |     memcpy( *txtbufp + offset, txt, i );                /* tail copy */
+      |                                     ^
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/recipe-sysroot   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/ed-1.18=/usr/src/debug/ed/1.18-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/ed-1.18=/usr/src/debug/ed/1.18-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/ed-1.18=/usr/src/debug/ed/1.18-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/ed-1.18=/usr/src/debug/ed/1.18-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o signal.o signal.c
+signal.c: In function 'sighup_handler':
+signal.c:52:19: warning: conversion to 'int' from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+   52 |   const int len = strlen( s );
+      |                   ^~~~~~
+signal.c:55:55: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+   55 |                      (char *)malloc( len + need_slash + sizeof hb ) : 0;
+      |                                                       ^
+signal.c:57:19: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+   57 |   memcpy( hup, s, len );
+      |                   ^~~
+signal.c: In function 'resize_buffer':
+signal.c:149:26: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  149 |     const int new_size = ( ( min_size < 512 ) ? 512 :
+      |                          ^
+signal.c:153:41: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  153 |     if( *buf ) new_buf = realloc( *buf, new_size );
+      |                                         ^~~~~~~~
+signal.c:154:28: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  154 |     else new_buf = malloc( new_size );
+      |                            ^~~~~~~~
+signal.c: In function 'strip_escapes':
+signal.c:171:19: warning: conversion to 'int' from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  171 |   const int len = strlen( p );
+      |                   ^~~~~~
+signal.c:174:41: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  174 |   if( !resize_buffer( &buf, &bufsz, len + 1 ) ) return 0;
+      |                                     ~~~~^~~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/recipe-sysroot   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/ed-1.18=/usr/src/debug/ed/1.18-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/ed-1.18=/usr/src/debug/ed/1.18-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/ed-1.18=/usr/src/debug/ed/1.18-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/ed-1.18=/usr/src/debug/ed/1.18-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/recipe-sysroot-native=   -Wconversion -Wno-error -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/ed-1.18=/usr/src/debug/ed/1.18-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/ed-1.18=/usr/src/debug/ed/1.18-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/ed-1.18=/usr/src/debug/ed/1.18-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/ed-1.18=/usr/src/debug/ed/1.18-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/recipe-sysroot-native=  -Wl,-z,relro,-z,now -o ed buffer.o carg_parser.o global.o io.o main.o main_loop.o regex.o signal.o
+cat ./red.in > red
+chmod a+x red
+DEBUG: Shell function do_compile finished

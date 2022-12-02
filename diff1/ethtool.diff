@@ -1,0 +1,10 @@
+156c156
+< ../ethtool-6.0/ethtool.c:3377:53: warning: conversion to 'long unsigned int' from '__off_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../ethtool-6.0/ethtool.c:3377:53: warning: conversion from '__off64_t' {aka 'long long int'} to 'size_t' {aka 'unsigned int'} may change value [-Wconversion]
+158,159c158,159
+<       |                                                     ^
+< ../ethtool-6.0/ethtool.c:3384:29: warning: conversion to '__u32' {aka 'unsigned int'} from '__off_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+>       |                                       ~~~~~~~~~~~~~~^~~~~~~~~~~~
+> ../ethtool-6.0/ethtool.c:3384:29: warning: conversion from '__off64_t' {aka 'long long int'} to '__u32' {aka 'unsigned int'} may change value [-Wconversion]

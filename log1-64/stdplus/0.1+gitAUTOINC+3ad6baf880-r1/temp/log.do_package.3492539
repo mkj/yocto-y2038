@@ -1,0 +1,136 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta-openembedded/meta-oe/recipes-support/fmt/fmt_9.1.0.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta-openembedded/meta-oe/recipes-support/function2/function2_4.2.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta-openembedded/meta-oe/recipes-support/liburing/liburing_2.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/qemu/qemu-native_7.1.0.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/dwarfsrcfiles/dwarfsrcfiles.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/meson/meson_0.63.3.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/ninja/ninja_1.11.1.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pkgconfig/pkgconfig_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/python/python3_3.11.0.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/rpm/rpm_4.18.0.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: ['dwarfsrcfiles-native', 'rpm-native', 'elfutils-native', 'file-native', 'libgcrypt-native', 'popt-native', 'lua-native', 'libgpg-error-native', 'libcap-native']
+NOTE: Skipping as already exists in sysroot: ['fmt', 'function2', 'liburing', 'glibc', 'gcc-cross-arm', 'gcc-runtime', 'qemu-native', 'quilt-native', 'meson-native', 'ninja-native', 'patch-native', 'pkgconfig-native', 'pseudo-native', 'python3-native', 'linux-libc-headers', 'libgcc', 'libtool-native', 'attr-native', 'glib-2.0-native', 'xz-native', 'zlib-native', 're2c-native', 'python3-setuptools-native', 'python3-installer-native', 'python3-wheel-native', 'python3-picobuild-native', 'flex-native', 'texinfo-dummy-native', 'zstd-native', 'binutils-cross-arm', 'mpfr-native', 'gnu-config-native', 'libmpc-native', 'gmp-native', 'readline-native', 'util-linux-libuuid-native', 'libtirpc-native', 'gdbm-native', 'libnsl2-native', 'libffi-native', 'bzip2-native', 'sqlite3-native', 'openssl-native', 'ncurses-native', 'gettext-minimal-native', 'gettext-native', 'libpcre-native', 'util-linux-native', 'python3-flit-core-native', 'm4-native', 'perl-native', 'libpcre2-native', 'libcap-ng-native', 'unzip-native', 'make-native']
+DEBUG: sed -e 's:^[^/]*/:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/stdplus/0.1+gitAUTOINC+3ad6baf880-r1/recipe-sysroot-native/:g' /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/rpm-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/elfutils-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/libgcrypt-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/lua-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/libgpg-error-native/fixmepath | xargs sed -i -e 's:FIXMESTAGINGDIRTARGET:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/stdplus/0.1+gitAUTOINC+3ad6baf880-r1/recipe-sysroot:g; s:FIXMESTAGINGDIRHOST:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/stdplus/0.1+gitAUTOINC+3ad6baf880-r1/recipe-sysroot-native:g' -e 's:FIXME_PSEUDO_SYSROOT:/home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/pseudo-native:g' -e 's:FIXME_HOSTTOOLS_DIR:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:g' -e 's:FIXME_PKGDATA_DIR:/home/matt/tmp/build/obmc-y2038/tmp/pkgdata/evb-ast2600:g' -e 's:FIXME_PSEUDO_LOCALSTATEDIR:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/stdplus/0.1+gitAUTOINC+3ad6baf880-r1/pseudo/:g' -e 's:FIXME_LOGFIFO:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/stdplus/0.1+gitAUTOINC+3ad6baf880-r1/temp/fifo.3492539:g'
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function sstate_task_prefunc
+DEBUG: Python function sstate_task_prefunc finished
+DEBUG: Executing python function do_package
+DEBUG: Executing python function package_convert_pr_autoinc
+DEBUG: Python function package_convert_pr_autoinc finished
+DEBUG: Executing python function package_prepare_pkgdata
+NOTE: Installed into pkgdata-sysroot: ['liburing', 'function2', 'glibc', 'gcc-runtime', 'fmt', 'linux-libc-headers', 'libgcc']
+DEBUG: Python function package_prepare_pkgdata finished
+DEBUG: Executing python function perform_packagecopy
+DEBUG: Python function perform_packagecopy finished
+DEBUG: Executing python function split_and_strip_files
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/stdplus/0.1+gitAUTOINC+3ad6baf880-r1/package/usr/lib/libstdplus.so.0.1']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/stdplus/0.1+gitAUTOINC+3ad6baf880-r1/package/usr/lib/libstdplus-io_uring.so.0.1']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/stdplus/0.1+gitAUTOINC+3ad6baf880-r1/package/usr/lib/libstdplus-dl.so.0.1']
+DEBUG: Python function split_and_strip_files finished
+DEBUG: Executing python function fixup_perms
+DEBUG: Python function fixup_perms finished
+DEBUG: Executing python function package_do_split_locales
+DEBUG: No locale files in this package
+DEBUG: Python function package_do_split_locales finished
+DEBUG: Executing python function populate_packages
+DEBUG: Python function populate_packages finished
+DEBUG: Executing python function package_fixsymlinks
+DEBUG: stdplus-dev contains dangling link /usr/lib/libstdplus-dl.so.0
+DEBUG: target found in libstdplus-dl
+DEBUG: stdplus-dev contains dangling link /usr/lib/libstdplus-io_uring.so.0
+DEBUG: target found in libstdplus-io_uring
+DEBUG: stdplus-dev contains dangling link /usr/lib/libstdplus.so.0
+DEBUG: target found in libstdplus
+DEBUG: Python function package_fixsymlinks finished
+DEBUG: Executing python function package_name_hook
+DEBUG: Executing python function debian_package_name_hook
+DEBUG: LIBNAMES: pkg stdplus-staticdev libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg stdplus-src libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg stdplus-locale libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg stdplus-doc libs 0 bins 0 sonames []
+arm-openbmc-linux-gnueabi-objdump: '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/stdplus/0.1+gitAUTOINC+3ad6baf880-r1/packages-split/stdplus-dev/usr/lib/libstdplus-dl.so': No such file
+arm-openbmc-linux-gnueabi-objdump: '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/stdplus/0.1+gitAUTOINC+3ad6baf880-r1/packages-split/stdplus-dev/usr/lib/libstdplus-io_uring.so': No such file
+arm-openbmc-linux-gnueabi-objdump: '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/stdplus/0.1+gitAUTOINC+3ad6baf880-r1/packages-split/stdplus-dev/usr/lib/libstdplus.so': No such file
+DEBUG: LIBNAMES: pkg stdplus-dev libs 1 bins 0 sonames []
+DEBUG: LIBNAMES: pkg stdplus-dbg libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg stdplus libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libstdplus-io_uring libs 1 bins 0 sonames ['libstdplus-io_uring.so.0']
+NOTE: debian: renaming libstdplus-io_uring to libstdplus-io-uring0
+DEBUG: LIBNAMES: pkg libstdplus-dl libs 1 bins 0 sonames ['libstdplus-dl.so.0']
+NOTE: debian: renaming libstdplus-dl to libstdplus-dl0
+DEBUG: LIBNAMES: pkg libstdplus libs 1 bins 0 sonames ['libstdplus.so.0']
+NOTE: debian: renaming libstdplus to libstdplus0
+DEBUG: Python function debian_package_name_hook finished
+DEBUG: Python function package_name_hook finished
+DEBUG: Executing python function package_do_filedeps
+DEBUG: Python function package_do_filedeps finished
+DEBUG: Executing python function package_do_shlibs
+DEBUG: Reading shlib providers in /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/stdplus/0.1+gitAUTOINC+3ad6baf880-r1/pkgdata-sysroot/shlibs2
+DEBUG: calculating shlib provides for stdplus-src
+DEBUG: LIBNAMES: pkg stdplus-src sonames set()
+DEBUG: calculating shlib provides for stdplus-dbg
+DEBUG: LIBNAMES: pkg stdplus-dbg sonames set()
+DEBUG: calculating shlib provides for libstdplus
+DEBUG: registering libstdplus-0.1+git@PRSERV_PV_AUTOINC@+3ad6baf880 as shlib provider for libstdplus.so.0
+DEBUG: adding ldconfig call to postinst for libstdplus
+DEBUG: LIBNAMES: pkg libstdplus sonames {('libstdplus.so.0', '/usr/lib', '0.1+git@PRSERV_PV_AUTOINC@+3ad6baf880')}
+DEBUG: calculating shlib provides for libstdplus-dl
+DEBUG: registering libstdplus-dl-0.1+git@PRSERV_PV_AUTOINC@+3ad6baf880 as shlib provider for libstdplus-dl.so.0
+DEBUG: adding ldconfig call to postinst for libstdplus-dl
+DEBUG: LIBNAMES: pkg libstdplus-dl sonames {('libstdplus-dl.so.0', '/usr/lib', '0.1+git@PRSERV_PV_AUTOINC@+3ad6baf880')}
+DEBUG: calculating shlib provides for libstdplus-io_uring
+DEBUG: registering libstdplus-io_uring-0.1+git@PRSERV_PV_AUTOINC@+3ad6baf880 as shlib provider for libstdplus-io_uring.so.0
+DEBUG: adding ldconfig call to postinst for libstdplus-io_uring
+DEBUG: LIBNAMES: pkg libstdplus-io_uring sonames {('libstdplus-io_uring.so.0', '/usr/lib', '0.1+git@PRSERV_PV_AUTOINC@+3ad6baf880')}
+DEBUG: calculating shlib provides for stdplus-staticdev
+DEBUG: LIBNAMES: pkg stdplus-staticdev sonames set()
+DEBUG: calculating shlib provides for stdplus-dev
+DEBUG: LIBNAMES: pkg stdplus-dev sonames set()
+DEBUG: calculating shlib provides for stdplus-doc
+DEBUG: LIBNAMES: pkg stdplus-doc sonames set()
+DEBUG: calculating shlib provides for stdplus-locale
+DEBUG: LIBNAMES: pkg stdplus-locale sonames set()
+DEBUG: calculating shlib provides for stdplus
+DEBUG: LIBNAMES: pkg stdplus sonames set()
+DEBUG: calculating shlib requirements for stdplus-src
+DEBUG: calculating shlib requirements for stdplus-dbg
+DEBUG: calculating shlib requirements for libstdplus
+DEBUG: libstdplus: Dependency libstdc++.so.6 requires package libstdc++ (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/stdplus/0.1+gitAUTOINC+3ad6baf880-r1/packages-split/libstdplus/usr/lib/libstdplus.so.0.1)
+DEBUG: libstdplus: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/stdplus/0.1+gitAUTOINC+3ad6baf880-r1/packages-split/libstdplus/usr/lib/libstdplus.so.0.1)
+DEBUG: libstdplus: Dependency libfmt.so.9 requires package fmt (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/stdplus/0.1+gitAUTOINC+3ad6baf880-r1/packages-split/libstdplus/usr/lib/libstdplus.so.0.1)
+DEBUG: libstdplus: Dependency libgcc_s.so.1 requires package libgcc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/stdplus/0.1+gitAUTOINC+3ad6baf880-r1/packages-split/libstdplus/usr/lib/libstdplus.so.0.1)
+DEBUG: libstdplus: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/stdplus/0.1+gitAUTOINC+3ad6baf880-r1/packages-split/libstdplus/usr/lib/libstdplus.so.0.1)
+DEBUG: calculating shlib requirements for libstdplus-dl
+DEBUG: libstdplus-dl: Dependency libgcc_s.so.1 requires package libgcc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/stdplus/0.1+gitAUTOINC+3ad6baf880-r1/packages-split/libstdplus-dl/usr/lib/libstdplus-dl.so.0.1)
+DEBUG: libstdplus-dl: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/stdplus/0.1+gitAUTOINC+3ad6baf880-r1/packages-split/libstdplus-dl/usr/lib/libstdplus-dl.so.0.1)
+DEBUG: libstdplus-dl: Dependency libstdc++.so.6 requires package libstdc++ (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/stdplus/0.1+gitAUTOINC+3ad6baf880-r1/packages-split/libstdplus-dl/usr/lib/libstdplus-dl.so.0.1)
+DEBUG: libstdplus-dl: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/stdplus/0.1+gitAUTOINC+3ad6baf880-r1/packages-split/libstdplus-dl/usr/lib/libstdplus-dl.so.0.1)
+DEBUG: libstdplus-dl: Dependency libfmt.so.9 requires package fmt (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/stdplus/0.1+gitAUTOINC+3ad6baf880-r1/packages-split/libstdplus-dl/usr/lib/libstdplus-dl.so.0.1)
+DEBUG: calculating shlib requirements for libstdplus-io_uring
+DEBUG: libstdplus-io_uring: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/stdplus/0.1+gitAUTOINC+3ad6baf880-r1/packages-split/libstdplus-io_uring/usr/lib/libstdplus-io_uring.so.0.1)
+DEBUG: libstdplus-io_uring: Dependency liburing.so.2 requires package liburing (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/stdplus/0.1+gitAUTOINC+3ad6baf880-r1/packages-split/libstdplus-io_uring/usr/lib/libstdplus-io_uring.so.0.1)
+DEBUG: libstdplus-io_uring: Dependency libstdc++.so.6 requires package libstdc++ (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/stdplus/0.1+gitAUTOINC+3ad6baf880-r1/packages-split/libstdplus-io_uring/usr/lib/libstdplus-io_uring.so.0.1)
+DEBUG: libstdplus-io_uring: Dependency libstdplus.so.0 requires package libstdplus (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/stdplus/0.1+gitAUTOINC+3ad6baf880-r1/packages-split/libstdplus-io_uring/usr/lib/libstdplus-io_uring.so.0.1)
+DEBUG: libstdplus-io_uring: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/stdplus/0.1+gitAUTOINC+3ad6baf880-r1/packages-split/libstdplus-io_uring/usr/lib/libstdplus-io_uring.so.0.1)
+DEBUG: libstdplus-io_uring: Dependency libgcc_s.so.1 requires package libgcc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/stdplus/0.1+gitAUTOINC+3ad6baf880-r1/packages-split/libstdplus-io_uring/usr/lib/libstdplus-io_uring.so.0.1)
+DEBUG: calculating shlib requirements for stdplus-staticdev
+DEBUG: calculating shlib requirements for stdplus-dev
+DEBUG: calculating shlib requirements for stdplus-doc
+DEBUG: calculating shlib requirements for stdplus-locale
+DEBUG: calculating shlib requirements for stdplus
+DEBUG: Python function package_do_shlibs finished
+DEBUG: Executing python function package_do_pkgconfig
+DEBUG: Python function package_do_pkgconfig finished
+DEBUG: Executing python function read_shlibdeps
+DEBUG: Python function read_shlibdeps finished
+DEBUG: Executing python function package_depchains
+DEBUG: Python function package_depchains finished
+DEBUG: Executing python function emit_pkgdata
+DEBUG: Python function emit_pkgdata finished
+DEBUG: Python function do_package finished
+DEBUG: Executing python function sstate_task_postfunc
+NOTE: Using umask 0o002 (not 22) for sstate packaging
+DEBUG: Executing python function target_add_sysroot_deps
+DEBUG: Python function target_add_sysroot_deps finished
+DEBUG: Executing python function sstate_hardcode_path
+NOTE: Removing hardcoded paths from sstate package: 'find /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/stdplus/0.1+gitAUTOINC+3ad6baf880-r1/sstate-build-package/ \( -name "*.la" -o -name "*-config" -o -name "*_config" -o -name "postinst-*" \) -type f | xargs grep -l -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/stdplus/0.1+gitAUTOINC+3ad6baf880-r1/recipe-sysroot' -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/stdplus/0.1+gitAUTOINC+3ad6baf880-r1/recipe-sysroot-native' -e '/home/matt/tmp/build/obmc-y2038/tmp/hosttools' | tee /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/stdplus/0.1+gitAUTOINC+3ad6baf880-r1/sstate-build-package/fixmepath | xargs --no-run-if-empty sed -i -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/stdplus/0.1+gitAUTOINC+3ad6baf880-r1/recipe-sysroot-native:FIXMESTAGINGDIRHOST:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/stdplus/0.1+gitAUTOINC+3ad6baf880-r1/recipe-sysroot:FIXMESTAGINGDIRTARGET:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:FIXME_HOSTTOOLS_DIR:g''
+DEBUG: Python function sstate_hardcode_path finished
+DEBUG: Executing python function sstate_report_unihash
+DEBUG: Python function sstate_report_unihash finished
+DEBUG: Executing shell function sstate_create_package
+DEBUG: Shell function sstate_create_package finished
+DEBUG: Executing python function sstate_hardcode_path_unpack
+DEBUG: Python function sstate_hardcode_path_unpack finished
+DEBUG: Python function sstate_task_postfunc finished

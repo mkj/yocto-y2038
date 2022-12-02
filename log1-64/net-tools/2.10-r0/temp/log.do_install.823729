@@ -1,0 +1,74 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/opkg-utils/opkg-utils_0.5.0.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-core/gettext/gettext_0.21.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: []
+NOTE: Skipping as already exists in sysroot: ['glibc', 'gcc-cross-arm', 'gcc-runtime', 'opkg-utils', 'quilt-native', 'gettext-native', 'patch-native', 'pseudo-native', 'mpfr-native', 'gmp-native', 'zstd-native', 'xz-native', 'binutils-cross-arm', 'libtool-native', 'texinfo-dummy-native', 'gnu-config-native', 'linux-libc-headers', 'libmpc-native', 'zlib-native', 'flex-native', 'attr-native', 'gettext-minimal-native', 'libgcc', 'm4-native']
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing shell function do_install
+NOTE: make COPTS=  -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/net-tools/2.10-r0/git=/usr/src/debug/net-tools/2.10-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/net-tools/2.10-r0/git=/usr/src/debug/net-tools/2.10-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/net-tools/2.10-r0/git=/usr/src/debug/net-tools/2.10-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/net-tools/2.10-r0/git=/usr/src/debug/net-tools/2.10-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/net-tools/2.10-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/net-tools/2.10-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/net-tools/2.10-r0/recipe-sysroot-native=   -Wconversion -Wno-error LOPTS=-Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/net-tools/2.10-r0/git=/usr/src/debug/net-tools/2.10-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/net-tools/2.10-r0/git=/usr/src/debug/net-tools/2.10-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/net-tools/2.10-r0/git=/usr/src/debug/net-tools/2.10-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/net-tools/2.10-r0/git=/usr/src/debug/net-tools/2.10-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/net-tools/2.10-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/net-tools/2.10-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/net-tools/2.10-r0/recipe-sysroot-native=  -Wl,-z,relro,-z,now BASEDIR=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/net-tools/2.10-r0/image INSTALLNLSDIR=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/net-tools/2.10-r0/image/usr/share/locale mandir=/usr/share/man install
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/net-tools/2.10-r0/git/lib'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/net-tools/2.10-r0/git/lib'
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/net-tools/2.10-r0/git/man'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/net-tools/2.10-r0/git/man'
+
+######################################################
+Notice: ifconfig and route are now installed into /bin
+######################################################
+
+install -m 0755 -d /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/net-tools/2.10-r0/image/sbin
+install -m 0755 -d /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/net-tools/2.10-r0/image/bin
+install -m 0755 ifconfig   /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/net-tools/2.10-r0/image/bin
+install -m 0755 nameif     /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/net-tools/2.10-r0/image/sbin
+install -m 0755 netstat    /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/net-tools/2.10-r0/image/bin
+install -m 0755 route      /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/net-tools/2.10-r0/image/bin
+install -m 0755 arp        /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/net-tools/2.10-r0/image/sbin
+install -m 0755 rarp       /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/net-tools/2.10-r0/image/sbin
+install -m 0755 hostname   /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/net-tools/2.10-r0/image/bin
+ln -fs hostname /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/net-tools/2.10-r0/image/bin/dnsdomainname
+ln -fs hostname /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/net-tools/2.10-r0/image/bin/ypdomainname
+ln -fs hostname /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/net-tools/2.10-r0/image/bin/nisdomainname
+ln -fs hostname /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/net-tools/2.10-r0/image/bin/domainname
+install -m 0755 ipmaddr    /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/net-tools/2.10-r0/image/sbin
+install -m 0755 iptunnel   /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/net-tools/2.10-r0/image/sbin
+install -m 0755 mii-tool   /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/net-tools/2.10-r0/image/sbin
+install -m 0755 plipconfig /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/net-tools/2.10-r0/image/sbin
+install -m 0755 slattach   /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/net-tools/2.10-r0/image/sbin
+make -C man install
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/net-tools/2.10-r0/git/man'
+LANGS='de_DE en_US fr_FR pt_BR' ; \
+	for LANG in $LANGS; do \
+		cd $LANG; \
+		for SECTION in 1 5 8; do \
+			if [ "$LANG" = "en_US" ] ; then \
+				MAN_DIR=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/net-tools/2.10-r0/image/usr/share/man/man$SECTION; \
+			else \
+				MAN_DIR=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/net-tools/2.10-r0/image/usr/share/man/$LANG/man$SECTION; \
+			fi ; \
+			install -d -m 755 $MAN_DIR; \
+			for CMD in *.$SECTION; do \
+				[ -e $CMD ] || continue; \
+				case $CMD in "" |nodename.?) continue;; esac; \
+				install -m 644 $CMD $MAN_DIR || exit 1; \
+			done; \
+		done; \
+		cd ..; \
+	done
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/net-tools/2.10-r0/git/man'
+make -C po install
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/net-tools/2.10-r0/git/po'
+msgfmt -o cs.mo cs.po
+msgfmt -o de.mo de.po
+msgfmt -o et.mo et.po
+msgfmt -o fr.mo fr.po
+msgfmt -o pt_BR.mo pt_BR.po
+langs='cs de et fr pt_BR'; \
+for l in $langs; do \
+    install -c -m 755 -d /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/net-tools/2.10-r0/image/usr/share/locale/$l; \
+    install -c -m 755 -d /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/net-tools/2.10-r0/image/usr/share/locale/$l/LC_MESSAGES; \
+    install -c -m 644 $l.mo /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/net-tools/2.10-r0/image/usr/share/locale/$l/LC_MESSAGES/net-tools.mo; \
+done
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/net-tools/2.10-r0/git/po'
+DEBUG: Shell function do_install finished
+DEBUG: Executing shell function remove_libtool_la
+DEBUG: Shell function remove_libtool_la finished

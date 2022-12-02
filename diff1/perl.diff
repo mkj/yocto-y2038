@@ -1,0 +1,278 @@
+5,7c5,7
+< test ! -f cnf/diffs/perl5-5.36.0/dynaloader.applied && (patch -p1 -i cnf/diffs/perl5-5.36.0/dynaloader.patch && touch cnf/diffs/perl5-5.36.0/dynaloader.applied) || echo "cnf/diffs/perl5-5.36.0/dynaloader.applied exist"
+< File ext/DynaLoader/hints/linux.pl is read-only; trying to patch anyway
+< patching file ext/DynaLoader/hints/linux.pl
+---
+> test ! -f cnf/diffs/perl5-5.36.0/makemaker.applied && (patch -p1 -i cnf/diffs/perl5-5.36.0/makemaker.patch && touch cnf/diffs/perl5-5.36.0/makemaker.applied) || echo "cnf/diffs/perl5-5.36.0/makemaker.applied exist"
+> File cpan/ExtUtils-MakeMaker/lib/ExtUtils/MM_Unix.pm is read-only; trying to patch anyway
+> patching file cpan/ExtUtils-MakeMaker/lib/ExtUtils/MM_Unix.pm
+11,15d10
+< test ! -f cnf/diffs/perl5-5.36.0/xconfig.applied && (patch -p1 -i cnf/diffs/perl5-5.36.0/xconfig.patch && touch cnf/diffs/perl5-5.36.0/xconfig.applied) || echo "cnf/diffs/perl5-5.36.0/xconfig.applied exist"
+< File perl.h is read-only; trying to patch anyway
+< patching file perl.h
+< File perl_langinfo.h is read-only; trying to patch anyway
+< patching file perl_langinfo.h
+23a19,32
+> test ! -f cnf/diffs/perl5-5.36.0/xconfig.applied && (patch -p1 -i cnf/diffs/perl5-5.36.0/xconfig.patch && touch cnf/diffs/perl5-5.36.0/xconfig.applied) || echo "cnf/diffs/perl5-5.36.0/xconfig.applied exist"
+> File perl.h is read-only; trying to patch anyway
+> patching file perl.h
+> File perl_langinfo.h is read-only; trying to patch anyway
+> patching file perl_langinfo.h
+> test ! -f cnf/diffs/perl5-5.36.0/dynaloader.applied && (patch -p1 -i cnf/diffs/perl5-5.36.0/dynaloader.patch && touch cnf/diffs/perl5-5.36.0/dynaloader.applied) || echo "cnf/diffs/perl5-5.36.0/dynaloader.applied exist"
+> File ext/DynaLoader/hints/linux.pl is read-only; trying to patch anyway
+> patching file ext/DynaLoader/hints/linux.pl
+> test ! -f cnf/diffs/perl5-5.36.0/test-makemaker.applied && (patch -p1 -i cnf/diffs/perl5-5.36.0/test-makemaker.patch && touch cnf/diffs/perl5-5.36.0/test-makemaker.applied) || echo "cnf/diffs/perl5-5.36.0/test-makemaker.applied exist"
+> File cpan/ExtUtils-MakeMaker/t/lib/MakeMaker/Test/Utils.pm is read-only; trying to patch anyway
+> patching file cpan/ExtUtils-MakeMaker/t/lib/MakeMaker/Test/Utils.pm
+> test ! -f cnf/diffs/perl5-5.36.0/liblist.applied && (patch -p1 -i cnf/diffs/perl5-5.36.0/liblist.patch && touch cnf/diffs/perl5-5.36.0/liblist.applied) || echo "cnf/diffs/perl5-5.36.0/liblist.applied exist"
+> File cpan/ExtUtils-MakeMaker/lib/ExtUtils/Liblist/Kid.pm is read-only; trying to patch anyway
+> patching file cpan/ExtUtils-MakeMaker/lib/ExtUtils/Liblist/Kid.pm
+30,38d38
+< test ! -f cnf/diffs/perl5-5.36.0/liblist.applied && (patch -p1 -i cnf/diffs/perl5-5.36.0/liblist.patch && touch cnf/diffs/perl5-5.36.0/liblist.applied) || echo "cnf/diffs/perl5-5.36.0/liblist.applied exist"
+< File cpan/ExtUtils-MakeMaker/lib/ExtUtils/Liblist/Kid.pm is read-only; trying to patch anyway
+< patching file cpan/ExtUtils-MakeMaker/lib/ExtUtils/Liblist/Kid.pm
+< test ! -f cnf/diffs/perl5-5.36.0/test-makemaker.applied && (patch -p1 -i cnf/diffs/perl5-5.36.0/test-makemaker.patch && touch cnf/diffs/perl5-5.36.0/test-makemaker.applied) || echo "cnf/diffs/perl5-5.36.0/test-makemaker.applied exist"
+< File cpan/ExtUtils-MakeMaker/t/lib/MakeMaker/Test/Utils.pm is read-only; trying to patch anyway
+< patching file cpan/ExtUtils-MakeMaker/t/lib/MakeMaker/Test/Utils.pm
+< test ! -f cnf/diffs/perl5-5.36.0/makemaker.applied && (patch -p1 -i cnf/diffs/perl5-5.36.0/makemaker.patch && touch cnf/diffs/perl5-5.36.0/makemaker.applied) || echo "cnf/diffs/perl5-5.36.0/makemaker.applied exist"
+< File cpan/ExtUtils-MakeMaker/lib/ExtUtils/MM_Unix.pm is read-only; trying to patch anyway
+< patching file cpan/ExtUtils-MakeMaker/lib/ExtUtils/MM_Unix.pm
+8521a8522,8540
+> pp_sys.c: In function 'Perl_pp_ftis':
+> pp_sys.c:3292:38: warning: conversion from '__time64_t' {aka 'long long int'} to 'double' may change value [-Wconversion]
+>  3292 |                     ((NV)PL_basetime - PL_statcache.st_mtime) / 86400.0 );
+>       |                                      ^
+> embed.h:683:55: note: in definition of macro 'sv_setnv'
+>   683 | #define sv_setnv(a,b)           Perl_sv_setnv(aTHX_ a,b)
+>       |                                                       ^
+> pp_sys.c:3296:38: warning: conversion from '__time64_t' {aka 'long long int'} to 'double' may change value [-Wconversion]
+>  3296 |                     ((NV)PL_basetime - PL_statcache.st_atime) / 86400.0 );
+>       |                                      ^
+> embed.h:683:55: note: in definition of macro 'sv_setnv'
+>   683 | #define sv_setnv(a,b)           Perl_sv_setnv(aTHX_ a,b)
+>       |                                                       ^
+> pp_sys.c:3300:38: warning: conversion from '__time64_t' {aka 'long long int'} to 'double' may change value [-Wconversion]
+>  3300 |                     ((NV)PL_basetime - PL_statcache.st_ctime) / 86400.0 );
+>       |                                      ^
+> embed.h:683:55: note: in definition of macro 'sv_setnv'
+>   683 | #define sv_setnv(a,b)           Perl_sv_setnv(aTHX_ a,b)
+>       |                                                       ^
+15584c15603
+< util.c:5035:22: warning: conversion to 'long unsigned int' from '__time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> util.c:5035:9: warning: conversion from 'long long int' to 'U32' {aka 'unsigned int'} may change value [-Wconversion]
+15586,15589c15605
+<       |                      ^
+< util.c:5035:51: warning: conversion to 'long unsigned int' from '__suseconds_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+<  5035 |     u = (U32)SEED_C1 * when.tv_sec + (U32)SEED_C2 * when.tv_usec;
+<       |                                                   ^
+---
+>       |         ^
+29596a29613,29648
+> SysV.xs:175:21: warning: conversion from '__time64_t' {aka 'long long int'} to 'IV' {aka 'const long int'} may change value [-Wconversion]
+>   175 |     AV_STORE_IV(data->msg_stime    , list,  9);
+>       |                 ~~~~^~~~~~~~~~~
+> ../../embed.h:71:57: note: in definition of macro 'av_store'
+>    71 | #define av_store(a,b,c)         Perl_av_store(aTHX_ a,b,c)
+>       |                                                         ^
+> SysV.xs:80:35: note: in expansion of macro 'newSViv'
+>    80 |           av_store((av), (index), newSViv(ident))
+>       |                                   ^~~~~~~
+> SysV.xs:175:5: note: in expansion of macro 'AV_STORE_IV'
+>   175 |     AV_STORE_IV(data->msg_stime    , list,  9);
+>       |     ^~~~~~~~~~~
+> SysV.xs:176:21: warning: conversion from '__time64_t' {aka 'long long int'} to 'IV' {aka 'const long int'} may change value [-Wconversion]
+>   176 |     AV_STORE_IV(data->msg_rtime    , list, 10);
+>       |                 ~~~~^~~~~~~~~~~
+> ../../embed.h:71:57: note: in definition of macro 'av_store'
+>    71 | #define av_store(a,b,c)         Perl_av_store(aTHX_ a,b,c)
+>       |                                                         ^
+> SysV.xs:80:35: note: in expansion of macro 'newSViv'
+>    80 |           av_store((av), (index), newSViv(ident))
+>       |                                   ^~~~~~~
+> SysV.xs:176:5: note: in expansion of macro 'AV_STORE_IV'
+>   176 |     AV_STORE_IV(data->msg_rtime    , list, 10);
+>       |     ^~~~~~~~~~~
+> SysV.xs:177:21: warning: conversion from '__time64_t' {aka 'long long int'} to 'IV' {aka 'const long int'} may change value [-Wconversion]
+>   177 |     AV_STORE_IV(data->msg_ctime    , list, 11);
+>       |                 ~~~~^~~~~~~~~~~
+> ../../embed.h:71:57: note: in definition of macro 'av_store'
+>    71 | #define av_store(a,b,c)         Perl_av_store(aTHX_ a,b,c)
+>       |                                                         ^
+> SysV.xs:80:35: note: in expansion of macro 'newSViv'
+>    80 |           av_store((av), (index), newSViv(ident))
+>       |                                   ^~~~~~~
+> SysV.xs:177:5: note: in expansion of macro 'AV_STORE_IV'
+>   177 |     AV_STORE_IV(data->msg_ctime    , list, 11);
+>       |     ^~~~~~~~~~~
+29715a29768,29791
+> SysV.xs:230:21: warning: conversion from '__time64_t' {aka 'long long int'} to 'IV' {aka 'const long int'} may change value [-Wconversion]
+>   230 |     AV_STORE_IV(data->sem_ctime    , list, 5);
+>       |                 ~~~~^~~~~~~~~~~
+> ../../embed.h:71:57: note: in definition of macro 'av_store'
+>    71 | #define av_store(a,b,c)         Perl_av_store(aTHX_ a,b,c)
+>       |                                                         ^
+> SysV.xs:80:35: note: in expansion of macro 'newSViv'
+>    80 |           av_store((av), (index), newSViv(ident))
+>       |                                   ^~~~~~~
+> SysV.xs:230:5: note: in expansion of macro 'AV_STORE_IV'
+>   230 |     AV_STORE_IV(data->sem_ctime    , list, 5);
+>       |     ^~~~~~~~~~~
+> SysV.xs:231:21: warning: conversion from '__time64_t' {aka 'long long int'} to 'IV' {aka 'const long int'} may change value [-Wconversion]
+>   231 |     AV_STORE_IV(data->sem_otime    , list, 6);
+>       |                 ~~~~^~~~~~~~~~~
+> ../../embed.h:71:57: note: in definition of macro 'av_store'
+>    71 | #define av_store(a,b,c)         Perl_av_store(aTHX_ a,b,c)
+>       |                                                         ^
+> SysV.xs:80:35: note: in expansion of macro 'newSViv'
+>    80 |           av_store((av), (index), newSViv(ident))
+>       |                                   ^~~~~~~
+> SysV.xs:231:5: note: in expansion of macro 'AV_STORE_IV'
+>   231 |     AV_STORE_IV(data->sem_otime    , list, 6);
+>       |     ^~~~~~~~~~~
+29879a29956,29991
+> SysV.xs:293:21: warning: conversion from '__time64_t' {aka 'long long int'} to 'IV' {aka 'const long int'} may change value [-Wconversion]
+>   293 |     AV_STORE_IV(data->shm_atime    , list,  9);
+>       |                 ~~~~^~~~~~~~~~~
+> ../../embed.h:71:57: note: in definition of macro 'av_store'
+>    71 | #define av_store(a,b,c)         Perl_av_store(aTHX_ a,b,c)
+>       |                                                         ^
+> SysV.xs:80:35: note: in expansion of macro 'newSViv'
+>    80 |           av_store((av), (index), newSViv(ident))
+>       |                                   ^~~~~~~
+> SysV.xs:293:5: note: in expansion of macro 'AV_STORE_IV'
+>   293 |     AV_STORE_IV(data->shm_atime    , list,  9);
+>       |     ^~~~~~~~~~~
+> SysV.xs:294:21: warning: conversion from '__time64_t' {aka 'long long int'} to 'IV' {aka 'const long int'} may change value [-Wconversion]
+>   294 |     AV_STORE_IV(data->shm_dtime    , list, 10);
+>       |                 ~~~~^~~~~~~~~~~
+> ../../embed.h:71:57: note: in definition of macro 'av_store'
+>    71 | #define av_store(a,b,c)         Perl_av_store(aTHX_ a,b,c)
+>       |                                                         ^
+> SysV.xs:80:35: note: in expansion of macro 'newSViv'
+>    80 |           av_store((av), (index), newSViv(ident))
+>       |                                   ^~~~~~~
+> SysV.xs:294:5: note: in expansion of macro 'AV_STORE_IV'
+>   294 |     AV_STORE_IV(data->shm_dtime    , list, 10);
+>       |     ^~~~~~~~~~~
+> SysV.xs:295:21: warning: conversion from '__time64_t' {aka 'long long int'} to 'IV' {aka 'const long int'} may change value [-Wconversion]
+>   295 |     AV_STORE_IV(data->shm_ctime    , list, 11);
+>       |                 ~~~~^~~~~~~~~~~
+> ../../embed.h:71:57: note: in definition of macro 'av_store'
+>    71 | #define av_store(a,b,c)         Perl_av_store(aTHX_ a,b,c)
+>       |                                                         ^
+> SysV.xs:80:35: note: in expansion of macro 'newSViv'
+>    80 |           av_store((av), (index), newSViv(ident))
+>       |                                   ^~~~~~~
+> SysV.xs:295:5: note: in expansion of macro 'AV_STORE_IV'
+>   295 |     AV_STORE_IV(data->shm_ctime    , list, 11);
+>       |     ^~~~~~~~~~~
+40739c40851
+< HiRes.xs:614:14: warning: conversion to 'UV' {aka 'long unsigned int'} from '__time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> HiRes.xs:614:14: warning: conversion from '__time64_t' {aka 'long long int'} to 'UV' {aka 'long unsigned int'} may change value [-Wconversion]
+40742c40854
+< HiRes.xs:615:14: warning: conversion to 'UV' {aka 'long unsigned int'} from '__suseconds_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> HiRes.xs:615:14: warning: conversion from '__suseconds64_t' {aka 'long long int'} to 'UV' {aka 'long unsigned int'} may change value [-Wconversion]
+40744a40857,40863
+> HiRes.xs: In function 'myNVtime':
+> HiRes.xs:628:50: warning: conversion from '__suseconds64_t' {aka 'long long int'} to 'double' may change value [-Wconversion]
+>   628 |     return status == 0 ? Tp.tv_sec + (Tp.tv_usec / NV_1E6) : -1.0;
+>       |                                                  ^
+> HiRes.xs:628:36: warning: conversion from '__time64_t' {aka 'long long int'} to 'double' may change value [-Wconversion]
+>   628 |     return status == 0 ? Tp.tv_sec + (Tp.tv_usec / NV_1E6) : -1.0;
+>       |                                    ^
+40747c40866
+< ../../embedvar.h:290:33: warning: conversion to 'UV' {aka 'long unsigned int'} from '__syscall_slong_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../../embedvar.h:290:33: warning: conversion to 'UV' {aka 'long unsigned int'} from 'long int' may change the sign of the result [-Wsign-conversion]
+40753c40872
+< ../../embedvar.h:290:33: warning: conversion to 'UV' {aka 'long unsigned int'} from '__syscall_slong_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../../embedvar.h:290:33: warning: conversion to 'UV' {aka 'long unsigned int'} from 'long int' may change the sign of the result [-Wsign-conversion]
+40759c40878
+< ../../embedvar.h:290:33: warning: conversion to 'UV' {aka 'long unsigned int'} from '__syscall_slong_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../../embedvar.h:290:33: warning: conversion to 'UV' {aka 'long unsigned int'} from 'long int' may change the sign of the result [-Wsign-conversion]
+40768a40888,40894
+> HiRes.xs:981:24: warning: conversion from '__time64_t' {aka 'long long int'} to 'double' may change value [-Wconversion]
+>   981 |         RETVAL = NV_1E6*(Tb.tv_sec-Ta.tv_sec)+(NV)((IV)Tb.tv_usec-(IV)Ta.tv_usec);
+>       |                        ^
+> HiRes.xs: In function 'XS_Time__HiRes_ualarm':
+> HiRes.xs:1093:26: warning: conversion from 'long long int' to 'IV' {aka 'long int'} may change value [-Wconversion]
+>  1093 |                 RETVAL = itv.it_value.tv_sec * IV_1E6 + itv.it_value.tv_usec;
+>       |                          ^~~
+40781a40908,40975
+> HiRes.xs:1142:51: warning: conversion from '__time64_t' {aka 'long long int'} to 'double' may change value [-Wconversion]
+>  1142 |                     RETVAL = oitv.it_value.tv_sec + ((NV)oitv.it_value.tv_usec) / NV_1E6;
+>       |                                                   ^
+> In file included from ../../perl.h:5782:
+> HiRes.xs: In function 'XS_Time__HiRes_gettimeofday':
+> HiRes.xs:1198:44: warning: conversion from '__time64_t' {aka 'long long int'} to 'IV' {aka 'const long int'} may change value [-Wconversion]
+>  1198 |                 PUSHs(sv_2mortal(newSViv(Tp.tv_sec)));
+>       |                                          ~~^~~~~~~
+> ../../pp.h:472:35: note: in definition of macro 'PUSHs'
+>   472 | #define PUSHs(s)        (*++sp = (s))
+>       |                                   ^
+> HiRes.xs:1198:23: note: in expansion of macro 'sv_2mortal'
+>  1198 |                 PUSHs(sv_2mortal(newSViv(Tp.tv_sec)));
+>       |                       ^~~~~~~~~~
+> HiRes.xs:1198:34: note: in expansion of macro 'newSViv'
+>  1198 |                 PUSHs(sv_2mortal(newSViv(Tp.tv_sec)));
+>       |                                  ^~~~~~~
+> HiRes.xs:1199:44: warning: conversion from '__suseconds64_t' {aka 'long long int'} to 'IV' {aka 'const long int'} may change value [-Wconversion]
+>  1199 |                 PUSHs(sv_2mortal(newSViv(Tp.tv_usec)));
+>       |                                          ~~^~~~~~~~
+> ../../pp.h:472:35: note: in definition of macro 'PUSHs'
+>   472 | #define PUSHs(s)        (*++sp = (s))
+>       |                                   ^
+> HiRes.xs:1199:23: note: in expansion of macro 'sv_2mortal'
+>  1199 |                 PUSHs(sv_2mortal(newSViv(Tp.tv_usec)));
+>       |                       ^~~~~~~~~~
+> HiRes.xs:1199:34: note: in expansion of macro 'newSViv'
+>  1199 |                 PUSHs(sv_2mortal(newSViv(Tp.tv_usec)));
+>       |                                  ^~~~~~~
+> HiRes.xs:1202:66: warning: conversion from '__suseconds64_t' {aka 'long long int'} to 'double' may change value [-Wconversion]
+>  1202 |                 PUSHs(sv_2mortal(newSVnv(Tp.tv_sec + (Tp.tv_usec / NV_1E6))));
+>       |                                                                  ^
+> ../../pp.h:472:35: note: in definition of macro 'PUSHs'
+>   472 | #define PUSHs(s)        (*++sp = (s))
+>       |                                   ^
+> HiRes.xs:1202:23: note: in expansion of macro 'sv_2mortal'
+>  1202 |                 PUSHs(sv_2mortal(newSVnv(Tp.tv_sec + (Tp.tv_usec / NV_1E6))));
+>       |                       ^~~~~~~~~~
+> HiRes.xs:1202:34: note: in expansion of macro 'newSVnv'
+>  1202 |                 PUSHs(sv_2mortal(newSVnv(Tp.tv_sec + (Tp.tv_usec / NV_1E6))));
+>       |                                  ^~~~~~~
+> HiRes.xs:1202:52: warning: conversion from '__time64_t' {aka 'long long int'} to 'double' may change value [-Wconversion]
+>  1202 |                 PUSHs(sv_2mortal(newSVnv(Tp.tv_sec + (Tp.tv_usec / NV_1E6))));
+>       |                                                    ^
+> ../../pp.h:472:35: note: in definition of macro 'PUSHs'
+>   472 | #define PUSHs(s)        (*++sp = (s))
+>       |                                   ^
+> HiRes.xs:1202:23: note: in expansion of macro 'sv_2mortal'
+>  1202 |                 PUSHs(sv_2mortal(newSVnv(Tp.tv_sec + (Tp.tv_usec / NV_1E6))));
+>       |                       ^~~~~~~~~~
+> HiRes.xs:1202:34: note: in expansion of macro 'newSVnv'
+>  1202 |                 PUSHs(sv_2mortal(newSVnv(Tp.tv_sec + (Tp.tv_usec / NV_1E6))));
+>       |                                  ^~~~~~~
+> HiRes.xs: In function 'XS_Time__HiRes_time':
+> HiRes.xs:1214:46: warning: conversion from '__suseconds64_t' {aka 'long long int'} to 'double' may change value [-Wconversion]
+>  1214 |             RETVAL = Tp.tv_sec + (Tp.tv_usec / NV_1E6);
+>       |                                              ^
+> HiRes.xs:1214:32: warning: conversion from '__time64_t' {aka 'long long int'} to 'double' may change value [-Wconversion]
+>  1214 |             RETVAL = Tp.tv_sec + (Tp.tv_usec / NV_1E6);
+>       |                                ^
+> HiRes.xs: In function 'XS_Time__HiRes_clock_gettime':
+> HiRes.xs:1392:42: warning: conversion from '__time64_t' {aka 'long long int'} to 'double' may change value [-Wconversion]
+>  1392 |         RETVAL = status == 0 ? ts.tv_sec + (NV) ts.tv_nsec / NV_1E9 : -1;
+>       |                                          ^
+> HiRes.xs: In function 'XS_Time__HiRes_clock_getres':
+> HiRes.xs:1425:42: warning: conversion from '__time64_t' {aka 'long long int'} to 'double' may change value [-Wconversion]
+>  1425 |         RETVAL = status == 0 ? ts.tv_sec + (NV) ts.tv_nsec / NV_1E9 : -1;
+>       |                                          ^
+49077c49271
+< re_comp.c:7966:9: warning: the comparison will always evaluate as 'true' for the pointer operand in '*__builtin_memcpy(&<U15a0>, &({...})) + (sizetype)Perl_ReANY((const REGEXP *)old_re)->pre_prefix' must not be NULL [-Waddress]
+---
+> re_comp.c:7966:9: warning: the comparison will always evaluate as 'true' for the pointer operand in '*__builtin_memcpy(&<U 480>, &({...})) + (sizetype)Perl_ReANY((const REGEXP *)old_re)->pre_prefix' must not be NULL [-Waddress]

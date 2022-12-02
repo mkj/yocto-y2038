@@ -1,0 +1,70 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-extended/xz/xz_5.2.7.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: ['quilt-native', 'patch-native', 'attr-native']
+NOTE: Skipping as already exists in sysroot: ['xz-native', 'libtool-native', 'gettext-minimal-native', 'texinfo-dummy-native']
+DEBUG: sed -e 's:^[^/]*/:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap/2.66-r0/recipe-sysroot-native/:g' /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/quilt-native/fixmepath | xargs sed -i -e 's:FIXMESTAGINGDIRTARGET:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap/2.66-r0/recipe-sysroot:g; s:FIXMESTAGINGDIRHOST:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap/2.66-r0/recipe-sysroot-native:g' -e 's:FIXME_PSEUDO_SYSROOT:/home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/pseudo-native:g' -e 's:FIXME_HOSTTOOLS_DIR:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:g' -e 's:FIXME_PKGDATA_DIR:/home/matt/tmp/build/obmc-y2038/tmp/pkgdata/evb-ast2600:g' -e 's:FIXME_PSEUDO_LOCALSTATEDIR:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap/2.66-r0/pseudo/:g' -e 's:FIXME_LOGFIFO:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap/2.66-r0/temp/fifo.1932788:g'
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function do_patch
+DEBUG: Executing python function patch_do_patch
+DEBUG: Searching for 0001-ensure-the-XATTR_NAME_CAPS-is-defined-when-it-is-use.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-support/libcap/libcap-2.66/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/libcap/libcap/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/libcap/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/libcap/libcap-2.66/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/libcap/libcap/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/libcap/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/libcap/libcap-2.66/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-support/libcap/libcap/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-support/libcap/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-support/libcap/libcap-2.66/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-support/libcap/libcap/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-support/libcap/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-support/libcap/libcap-2.66/aspeed
+    /home/matt/src/openbmc/meta/recipes-support/libcap/libcap/aspeed
+    /home/matt/src/openbmc/meta/recipes-support/libcap/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-support/libcap/libcap-2.66/armv7a
+    /home/matt/src/openbmc/meta/recipes-support/libcap/libcap/armv7a
+    /home/matt/src/openbmc/meta/recipes-support/libcap/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-support/libcap/libcap-2.66/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-support/libcap/libcap/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-support/libcap/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-support/libcap/libcap-2.66/arm
+    /home/matt/src/openbmc/meta/recipes-support/libcap/libcap/arm
+    /home/matt/src/openbmc/meta/recipes-support/libcap/files/arm
+    /home/matt/src/openbmc/meta/recipes-support/libcap/libcap-2.66/
+    /home/matt/src/openbmc/meta/recipes-support/libcap/libcap/
+    /home/matt/src/openbmc/meta/recipes-support/libcap/files/
+DEBUG: Searching for 0002-tests-do-not-run-target-executables.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-support/libcap/libcap-2.66/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/libcap/libcap/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/libcap/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/libcap/libcap-2.66/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/libcap/libcap/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/libcap/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/libcap/libcap-2.66/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-support/libcap/libcap/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-support/libcap/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-support/libcap/libcap-2.66/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-support/libcap/libcap/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-support/libcap/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-support/libcap/libcap-2.66/aspeed
+    /home/matt/src/openbmc/meta/recipes-support/libcap/libcap/aspeed
+    /home/matt/src/openbmc/meta/recipes-support/libcap/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-support/libcap/libcap-2.66/armv7a
+    /home/matt/src/openbmc/meta/recipes-support/libcap/libcap/armv7a
+    /home/matt/src/openbmc/meta/recipes-support/libcap/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-support/libcap/libcap-2.66/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-support/libcap/libcap/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-support/libcap/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-support/libcap/libcap-2.66/arm
+    /home/matt/src/openbmc/meta/recipes-support/libcap/libcap/arm
+    /home/matt/src/openbmc/meta/recipes-support/libcap/files/arm
+    /home/matt/src/openbmc/meta/recipes-support/libcap/libcap-2.66/
+    /home/matt/src/openbmc/meta/recipes-support/libcap/libcap/
+    /home/matt/src/openbmc/meta/recipes-support/libcap/files/
+NOTE: Applying patch '0001-ensure-the-XATTR_NAME_CAPS-is-defined-when-it-is-use.patch' (../../../src/openbmc/meta/recipes-support/libcap/files/0001-ensure-the-XATTR_NAME_CAPS-is-defined-when-it-is-use.patch)
+NOTE: Applying patch '0002-tests-do-not-run-target-executables.patch' (../../../src/openbmc/meta/recipes-support/libcap/files/0002-tests-do-not-run-target-executables.patch)
+DEBUG: Python function patch_do_patch finished
+DEBUG: Python function do_patch finished
+DEBUG: Executing python function do_qa_patch
+DEBUG: Python function do_qa_patch finished

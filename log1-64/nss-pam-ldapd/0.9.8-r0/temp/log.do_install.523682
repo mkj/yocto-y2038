@@ -1,0 +1,118 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta-openembedded/meta-oe/recipes-connectivity/krb5/krb5_1.17.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta-openembedded/meta-oe/recipes-support/openldap/openldap_2.5.13.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/systemd/systemd-systemctl-native.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-cross_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-native_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-extended/pam/libpam_1.3.1.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/autoconf/autoconf_2.71.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/automake/automake_1.16.5.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: []
+NOTE: Skipping as already exists in sysroot: ['krb5', 'openldap', 'glibc', 'systemd-systemctl-native', 'gcc-cross-arm', 'gcc-runtime', 'libtool-cross', 'libtool-native', 'quilt-native', 'libpam', 'autoconf-native', 'automake-native', 'patch-native', 'pseudo-native', 'texinfo-dummy-native', 'gmp-native', 'xz-native', 'flex-native', 'linux-libc-headers', 'libmpc-native', 'zstd-native', 'binutils-cross-arm', 'gnu-config-native', 'mpfr-native', 'zlib-native', 'attr-native', 'util-linux', 'openssl', 'libtool', 'libgcc', 'ncurses', 'e2fsprogs', 'flex', 'libxcrypt', 'cracklib', 'm4-native', 'gettext-minimal-native', 'bash-completion', 'util-linux-libuuid', 'zlib', 'libcap-ng', 'opkg-utils', 'attr', 'autoconf-archive']
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function autotools_aclocals
+DEBUG: SITE files ['endian-little', 'bit-32', 'arm-common', 'arm-32', 'common-linux', 'common-glibc', 'arm-linux', 'arm-linux-gnueabi', 'common']
+DEBUG: Python function autotools_aclocals finished
+DEBUG: Executing shell function do_install
+NOTE: make -j 1 DESTDIR=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/image install
+Making install in compat
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/build/compat'
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/build/compat'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/build/compat'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/build/compat'
+Making install in common
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/build/common'
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/build/common'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/build/common'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/build/common'
+Making install in nss
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/build/nss'
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/build/nss'
+rm -f /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/image/lib/libnss_ldap.so.2
+/bin/bash ../../nss-pam-ldapd-0.9.8/mkinstalldirs /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/image/lib
+mkdir -p -- /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/image/lib
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c nss_ldap.so /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/image/lib/libnss_ldap.so.2
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/build/nss'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/build/nss'
+Making install in pam
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/build/pam'
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/build/pam'
+rm -f /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/image/lib/security/pam_ldap.so
+/bin/bash ../../nss-pam-ldapd-0.9.8/mkinstalldirs /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/image/lib/security
+mkdir -p -- /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/image/lib/security
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c pam_ldap.so /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/image/lib/security/pam_ldap.so
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/build/pam'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/build/pam'
+Making install in nslcd
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/build/nslcd'
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/build/nslcd'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/image/usr/sbin'
+  /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c nslcd '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/image/usr/sbin'
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/build/nslcd'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/build/nslcd'
+Making install in utils
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/build/utils'
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/build/utils'
+make[2]: Nothing to be done for 'install-exec-am'.
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/image/usr/share/nslcd-utils'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 constants.py '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/image/usr/share/nslcd-utils'
+Byte-compiling python modules...
+constants.py
+Byte-compiling python modules (optimized versions) ...
+constants.py
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/image/usr/share/nslcd-utils'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../../nss-pam-ldapd-0.9.8/utils/cmdline.py ../../nss-pam-ldapd-0.9.8/utils/nslcd.py ../../nss-pam-ldapd-0.9.8/utils/getent.py ../../nss-pam-ldapd-0.9.8/utils/chsh.py ../../nss-pam-ldapd-0.9.8/utils/shells.py ../../nss-pam-ldapd-0.9.8/utils/users.py '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/image/usr/share/nslcd-utils'
+Byte-compiling python modules...
+cmdline.pynslcd.pygetent.pychsh.pyshells.pyusers.py
+Byte-compiling python modules (optimized versions) ...
+cmdline.pynslcd.pygetent.pychsh.pyshells.pyusers.py
+make  install-data-hook
+make[3]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/build/utils'
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/image/usr/bin
+set -ex; for cmd in getent chsh ; do \
+  chmod a+rx /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/image/usr/share/nslcd-utils/$cmd.py ; \
+  [ -L /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/image/usr/bin/$cmd.ldap ] || ln -s /usr/share/nslcd-utils/$cmd.py /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/image/usr/bin/$cmd.ldap ; \
+done
++ for cmd in getent chsh
++ chmod a+rx /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/image/usr/share/nslcd-utils/getent.py
++ '[' -L /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/image/usr/bin/getent.ldap ']'
++ ln -s /usr/share/nslcd-utils/getent.py /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/image/usr/bin/getent.ldap
++ for cmd in getent chsh
++ chmod a+rx /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/image/usr/share/nslcd-utils/chsh.py
++ '[' -L /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/image/usr/bin/chsh.ldap ']'
++ ln -s /usr/share/nslcd-utils/chsh.py /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/image/usr/bin/chsh.ldap
+make[3]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/build/utils'
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/build/utils'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/build/utils'
+Making install in man
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/build/man'
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/build/man'
+make[2]: Nothing to be done for 'install-exec-am'.
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/image/usr/share/man/man1'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../../nss-pam-ldapd-0.9.8/man/getent.ldap.1 ../../nss-pam-ldapd-0.9.8/man/chsh.ldap.1 '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/image/usr/share/man/man1'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/image/usr/share/man/man5'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../../nss-pam-ldapd-0.9.8/man/nslcd.conf.5 '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/image/usr/share/man/man5'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/image/usr/share/man/man8'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../../nss-pam-ldapd-0.9.8/man/pam_ldap.8 ../../nss-pam-ldapd-0.9.8/man/nslcd.8 '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/image/usr/share/man/man8'
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/build/man'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/build/man'
+Making install in tests
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/build/tests'
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/build/tests'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/build/tests'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/build/tests'
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/build'
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/build'
+make[2]: Nothing to be done for 'install-exec-am'.
+mkdir -p -- /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/image/etc
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/build'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/build'
+DEBUG: Shell function do_install finished
+DEBUG: Executing shell function remove_libtool_la
+DEBUG: Shell function remove_libtool_la finished
+DEBUG: Executing python function rm_sysvinit_initddir
+DEBUG: Python function rm_sysvinit_initddir finished
+DEBUG: Executing python function rm_systemd_unitdir
+DEBUG: Python function rm_systemd_unitdir finished

@@ -1,0 +1,417 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux_2.38.1.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/zlib/zlib_1.2.13.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs_1.46.5.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-cross_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-native_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/opkg-utils/opkg-utils_0.5.0.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-support/lzo/lzo_2.10.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/autoconf/autoconf_2.71.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/automake/automake_1.16.5.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/dwarfsrcfiles/dwarfsrcfiles.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pkgconfig/pkgconfig_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/rpm/rpm_4.18.0.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: ['dwarfsrcfiles-native', 'rpm-native', 'libgcrypt-native', 'bzip2-native', 'elfutils-native', 'lua-native', 'python3-native', 'popt-native', 'sqlite3-native', 'file-native', 'libgpg-error-native', 'libcap-native', 'readline-native', 'ncurses-native', 'gdbm-native', 'libnsl2-native', 'libffi-native', 'util-linux-libuuid-native', 'openssl-native', 'libtirpc-native', 'perl-native', 'make-native']
+NOTE: Skipping as already exists in sysroot: ['glibc', 'util-linux', 'zlib', 'e2fsprogs', 'gcc-cross-arm', 'gcc-runtime', 'libtool-cross', 'libtool-native', 'opkg-utils', 'quilt-native', 'lzo', 'autoconf-native', 'automake-native', 'patch-native', 'pkgconfig-native', 'pseudo-native', 'linux-libc-headers', 'texinfo-dummy-native', 'gnu-config-native', 'm4-native', 'attr-native', 'binutils-cross-arm', 'libgcc', 'libxcrypt', 'bash-completion', 'util-linux-libuuid', 'ncurses', 'libcap-ng', 'libpam', 'xz-native', 'gettext-minimal-native', 'zstd-native', 'gmp-native', 'flex-native', 'libmpc-native', 'mpfr-native', 'zlib-native', 'attr', 'autoconf-archive', 'flex', 'cracklib']
+DEBUG: sed -e 's:^[^/]*/:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/recipe-sysroot-native/:g' /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/rpm-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/libgcrypt-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/elfutils-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/lua-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/python3-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/libgpg-error-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/ncurses-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/openssl-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/perl-native/fixmepath | xargs sed -i -e 's:FIXMESTAGINGDIRTARGET:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/recipe-sysroot:g; s:FIXMESTAGINGDIRHOST:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/recipe-sysroot-native:g' -e 's:FIXME_PSEUDO_SYSROOT:/home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/pseudo-native:g' -e 's:FIXME_HOSTTOOLS_DIR:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:g' -e 's:FIXME_PKGDATA_DIR:/home/matt/tmp/build/obmc-y2038/tmp/pkgdata/evb-ast2600:g' -e 's:FIXME_PSEUDO_LOCALSTATEDIR:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/pseudo/:g' -e 's:FIXME_LOGFIFO:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/temp/fifo.442977:g'
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function sstate_task_prefunc
+DEBUG: Python function sstate_task_prefunc finished
+DEBUG: Executing python function do_package
+DEBUG: Executing python function package_convert_pr_autoinc
+DEBUG: Python function package_convert_pr_autoinc finished
+DEBUG: Executing python function package_prepare_pkgdata
+NOTE: Installed into pkgdata-sysroot: ['glibc', 'util-linux', 'lzo', 'gcc-runtime', 'zlib', 'opkg-utils', 'e2fsprogs', 'linux-libc-headers', 'util-linux-libuuid', 'libpam', 'libcap-ng', 'libxcrypt', 'ncurses', 'bash-completion', 'attr', 'autoconf-archive', 'libgcc', 'flex', 'cracklib']
+DEBUG: Python function package_prepare_pkgdata finished
+DEBUG: Executing python function perform_packagecopy
+DEBUG: Python function perform_packagecopy finished
+DEBUG: Executing python function apply_update_alternative_renames
+NOTE: mtd-utils: Rename /usr/sbin/ubiattach -> /usr/sbin/ubiattach.mtd-utils
+NOTE: mtd-utils: Rename /usr/sbin/ubidetach -> /usr/sbin/ubidetach.mtd-utils
+NOTE: mtd-utils: Rename /usr/sbin/ubimkvol -> /usr/sbin/ubimkvol.mtd-utils
+NOTE: mtd-utils: Rename /usr/sbin/ubirename -> /usr/sbin/ubirename.mtd-utils
+NOTE: mtd-utils: Rename /usr/sbin/ubirmvol -> /usr/sbin/ubirmvol.mtd-utils
+NOTE: mtd-utils: Rename /usr/sbin/ubirsvol -> /usr/sbin/ubirsvol.mtd-utils
+NOTE: mtd-utils: Rename /usr/sbin/ubiupdatevol -> /usr/sbin/ubiupdatevol.mtd-utils
+NOTE: mtd-utils: Rename /usr/sbin/flashcp -> /usr/sbin/flashcp.mtd-utils
+NOTE: mtd-utils: Rename /usr/sbin/flash_eraseall -> /usr/sbin/flash_eraseall.mtd-utils
+NOTE: mtd-utils: Rename /usr/sbin/flash_lock -> /usr/sbin/flash_lock.mtd-utils
+NOTE: mtd-utils: Rename /usr/sbin/flash_unlock -> /usr/sbin/flash_unlock.mtd-utils
+NOTE: mtd-utils: Rename /usr/sbin/nanddump -> /usr/sbin/nanddump.mtd-utils
+NOTE: mtd-utils: Rename /usr/sbin/nandwrite -> /usr/sbin/nandwrite.mtd-utils
+DEBUG: Python function apply_update_alternative_renames finished
+DEBUG: Executing python function split_and_strip_files
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/sbin/ubiupdatevol.mtd-utils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/sbin/ubiscan']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/sbin/ubirsvol.mtd-utils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/sbin/ubirmvol.mtd-utils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/sbin/ubirename.mtd-utils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/sbin/ubinize']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/sbin/ubinfo']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/sbin/ubimkvol.mtd-utils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/sbin/ubihealthd']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/sbin/ubiformat']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/sbin/ubidetach.mtd-utils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/sbin/ubicrc32']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/sbin/ubiblock']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/sbin/ubiattach.mtd-utils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/sbin/sumtool']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/sbin/serve_image']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/sbin/rfdformat']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/sbin/rfddump']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/sbin/recv_image']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/sbin/nftldump']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/sbin/nftl_format']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/sbin/nandwrite.mtd-utils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/sbin/nandtest']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/sbin/nandflipbits']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/sbin/nanddump.mtd-utils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/sbin/mtdpart']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/sbin/mtdinfo']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/sbin/mtd_debug']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/sbin/mkfs.ubifs']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/sbin/mkfs.jffs2']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/sbin/lsmtd']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/sbin/jffs2reader']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/sbin/jffs2dump']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/sbin/ftl_format']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/sbin/ftl_check']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/sbin/flashcp.mtd-utils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/sbin/flash_unlock.mtd-utils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/sbin/flash_otp_write']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/sbin/flash_otp_lock']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/sbin/flash_otp_info']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/sbin/flash_otp_erase']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/sbin/flash_otp_dump']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/sbin/flash_lock.mtd-utils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/sbin/flash_erase']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/sbin/fectest']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/sbin/docfdisk']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/sbin/doc_loadbios']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/libexec/mtd-utils/volrefcnt']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/libexec/mtd-utils/test_2']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/libexec/mtd-utils/test_1']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/libexec/mtd-utils/stress_3']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/libexec/mtd-utils/stress_2']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/libexec/mtd-utils/stress_1']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/libexec/mtd-utils/rsvol']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/libexec/mtd-utils/rndwrite00']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/libexec/mtd-utils/rndrm99']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/libexec/mtd-utils/rndrm00']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/libexec/mtd-utils/rmdir00']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/libexec/mtd-utils/plotJittervsFill']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/libexec/mtd-utils/perf']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/libexec/mtd-utils/pdfrun']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/libexec/mtd-utils/orph']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/libexec/mtd-utils/nandsubpagetest']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/libexec/mtd-utils/nandpagetest']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/libexec/mtd-utils/nandbiterrs']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/libexec/mtd-utils/mkvol_paral']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/libexec/mtd-utils/mkvol_basic']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/libexec/mtd-utils/mkvol_bad']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/libexec/mtd-utils/makefiles']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/libexec/mtd-utils/io_update']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/libexec/mtd-utils/io_read']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/libexec/mtd-utils/io_paral']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/libexec/mtd-utils/io_basic']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/libexec/mtd-utils/integck']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/libexec/mtd-utils/integ']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/libexec/mtd-utils/gcd_hupper']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/libexec/mtd-utils/fwrite00']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/libexec/mtd-utils/ftrunc']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/libexec/mtd-utils/fstest_monitor']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/libexec/mtd-utils/free_space']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/libexec/mtd-utils/flash_torture']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/libexec/mtd-utils/flash_stress']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/libexec/mtd-utils/flash_speed']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/libexec/mtd-utils/flash_readtest']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/libexec/mtd-utils/checkfs']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/package/usr/libexec/mtd-utils/JitterTest']
+DEBUG: Python function split_and_strip_files finished
+DEBUG: Executing python function fixup_perms
+DEBUG: Python function fixup_perms finished
+DEBUG: Executing python function populate_packages_updatealternatives
+NOTE: adding update-alternatives calls to postinst/prerm for mtd-utils-ubifs
+NOTE: 	update-alternatives --install /usr/sbin/ubiattach ubiattach /usr/sbin/ubiattach.mtd-utils 100
+	update-alternatives --install /usr/sbin/ubidetach ubidetach /usr/sbin/ubidetach.mtd-utils 100
+	update-alternatives --install /usr/sbin/ubimkvol ubimkvol /usr/sbin/ubimkvol.mtd-utils 100
+	update-alternatives --install /usr/sbin/ubirename ubirename /usr/sbin/ubirename.mtd-utils 100
+	update-alternatives --install /usr/sbin/ubirmvol ubirmvol /usr/sbin/ubirmvol.mtd-utils 100
+	update-alternatives --install /usr/sbin/ubirsvol ubirsvol /usr/sbin/ubirsvol.mtd-utils 100
+	update-alternatives --install /usr/sbin/ubiupdatevol ubiupdatevol /usr/sbin/ubiupdatevol.mtd-utils 100
+
+NOTE: 	update-alternatives --remove  ubiattach /usr/sbin/ubiattach.mtd-utils
+	update-alternatives --remove  ubidetach /usr/sbin/ubidetach.mtd-utils
+	update-alternatives --remove  ubimkvol /usr/sbin/ubimkvol.mtd-utils
+	update-alternatives --remove  ubirename /usr/sbin/ubirename.mtd-utils
+	update-alternatives --remove  ubirmvol /usr/sbin/ubirmvol.mtd-utils
+	update-alternatives --remove  ubirsvol /usr/sbin/ubirsvol.mtd-utils
+	update-alternatives --remove  ubiupdatevol /usr/sbin/ubiupdatevol.mtd-utils
+
+NOTE: adding update-alternatives calls to postinst/prerm for mtd-utils
+NOTE: 	update-alternatives --install /usr/sbin/flashcp flashcp /usr/sbin/flashcp.mtd-utils 100
+	update-alternatives --install /usr/sbin/flash_eraseall flash_eraseall /usr/sbin/flash_eraseall.mtd-utils 100
+	update-alternatives --install /usr/sbin/flash_lock flash_lock /usr/sbin/flash_lock.mtd-utils 100
+	update-alternatives --install /usr/sbin/flash_unlock flash_unlock /usr/sbin/flash_unlock.mtd-utils 100
+	update-alternatives --install /usr/sbin/nanddump nanddump /usr/sbin/nanddump.mtd-utils 100
+	update-alternatives --install /usr/sbin/nandwrite nandwrite /usr/sbin/nandwrite.mtd-utils 100
+
+NOTE: 	update-alternatives --remove  flashcp /usr/sbin/flashcp.mtd-utils
+	update-alternatives --remove  flash_eraseall /usr/sbin/flash_eraseall.mtd-utils
+	update-alternatives --remove  flash_lock /usr/sbin/flash_lock.mtd-utils
+	update-alternatives --remove  flash_unlock /usr/sbin/flash_unlock.mtd-utils
+	update-alternatives --remove  nanddump /usr/sbin/nanddump.mtd-utils
+	update-alternatives --remove  nandwrite /usr/sbin/nandwrite.mtd-utils
+
+DEBUG: Python function populate_packages_updatealternatives finished
+DEBUG: Executing python function package_do_split_locales
+DEBUG: No locale files in this package
+DEBUG: Python function package_do_split_locales finished
+DEBUG: Executing python function populate_packages
+DEBUG: Python function populate_packages finished
+DEBUG: Executing python function package_fixsymlinks
+DEBUG: Python function package_fixsymlinks finished
+DEBUG: Executing python function package_name_hook
+DEBUG: Executing python function debian_package_name_hook
+DEBUG: LIBNAMES: pkg mtd-utils-ubifs libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg mtd-utils-tests libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg mtd-utils-staticdev libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg mtd-utils-src libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg mtd-utils-misc libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg mtd-utils-locale libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg mtd-utils-jffs2 libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg mtd-utils-doc libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg mtd-utils-dev libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg mtd-utils-dbg libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg mtd-utils libs 0 bins 1 sonames []
+DEBUG: Python function debian_package_name_hook finished
+DEBUG: Python function package_name_hook finished
+DEBUG: Executing python function package_do_filedeps
+DEBUG: Python function package_do_filedeps finished
+DEBUG: Executing python function package_do_shlibs
+DEBUG: Reading shlib providers in /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/pkgdata-sysroot/shlibs2
+DEBUG: calculating shlib provides for mtd-utils-src
+DEBUG: LIBNAMES: pkg mtd-utils-src sonames set()
+DEBUG: calculating shlib provides for mtd-utils-dbg
+DEBUG: LIBNAMES: pkg mtd-utils-dbg sonames set()
+DEBUG: calculating shlib provides for mtd-utils-ubifs
+DEBUG: LIBNAMES: pkg mtd-utils-ubifs sonames set()
+DEBUG: calculating shlib provides for mtd-utils-jffs2
+DEBUG: LIBNAMES: pkg mtd-utils-jffs2 sonames set()
+DEBUG: calculating shlib provides for mtd-utils-misc
+DEBUG: LIBNAMES: pkg mtd-utils-misc sonames set()
+DEBUG: calculating shlib provides for mtd-utils-tests
+DEBUG: LIBNAMES: pkg mtd-utils-tests sonames set()
+DEBUG: calculating shlib provides for mtd-utils-staticdev
+DEBUG: LIBNAMES: pkg mtd-utils-staticdev sonames set()
+DEBUG: calculating shlib provides for mtd-utils-dev
+DEBUG: LIBNAMES: pkg mtd-utils-dev sonames set()
+DEBUG: calculating shlib provides for mtd-utils-doc
+DEBUG: LIBNAMES: pkg mtd-utils-doc sonames set()
+DEBUG: calculating shlib provides for mtd-utils-locale
+DEBUG: LIBNAMES: pkg mtd-utils-locale sonames set()
+DEBUG: calculating shlib provides for mtd-utils
+DEBUG: LIBNAMES: pkg mtd-utils sonames set()
+DEBUG: calculating shlib requirements for mtd-utils-src
+DEBUG: calculating shlib requirements for mtd-utils-dbg
+DEBUG: calculating shlib requirements for mtd-utils-ubifs
+DEBUG: mtd-utils-ubifs: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-ubifs/usr/sbin/ubicrc32)
+DEBUG: mtd-utils-ubifs: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-ubifs/usr/sbin/ubirsvol.mtd-utils)
+DEBUG: mtd-utils-ubifs: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-ubifs/usr/sbin/ubimkvol.mtd-utils)
+DEBUG: mtd-utils-ubifs: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-ubifs/usr/sbin/ubihealthd)
+DEBUG: mtd-utils-ubifs: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-ubifs/usr/sbin/ubirename.mtd-utils)
+DEBUG: mtd-utils-ubifs: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-ubifs/usr/sbin/ubirename.mtd-utils)
+DEBUG: mtd-utils-ubifs: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-ubifs/usr/sbin/ubicrc32)
+DEBUG: mtd-utils-ubifs: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-ubifs/usr/sbin/ubinize)
+DEBUG: mtd-utils-ubifs: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-ubifs/usr/sbin/ubinize)
+DEBUG: mtd-utils-ubifs: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-ubifs/usr/sbin/ubimkvol.mtd-utils)
+DEBUG: mtd-utils-ubifs: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-ubifs/usr/sbin/ubihealthd)
+DEBUG: mtd-utils-ubifs: Dependency libz.so.1 requires package zlib (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-ubifs/usr/sbin/mkfs.ubifs)
+DEBUG: mtd-utils-ubifs: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-ubifs/usr/sbin/ubidetach.mtd-utils)
+DEBUG: mtd-utils-ubifs: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-ubifs/usr/sbin/ubiattach.mtd-utils)
+DEBUG: mtd-utils-ubifs: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-ubifs/usr/sbin/ubiattach.mtd-utils)
+DEBUG: mtd-utils-ubifs: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-ubifs/usr/sbin/ubidetach.mtd-utils)
+DEBUG: mtd-utils-ubifs: Dependency liblzo2.so.2 requires package lzo (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-ubifs/usr/sbin/mkfs.ubifs)
+DEBUG: mtd-utils-ubifs: Dependency libuuid.so.1 requires package util-linux-libuuid (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-ubifs/usr/sbin/mkfs.ubifs)
+DEBUG: mtd-utils-ubifs: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-ubifs/usr/sbin/ubiupdatevol.mtd-utils)
+DEBUG: mtd-utils-ubifs: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-ubifs/usr/sbin/ubiformat)
+DEBUG: mtd-utils-ubifs: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-ubifs/usr/sbin/ubiformat)
+DEBUG: mtd-utils-ubifs: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-ubifs/usr/sbin/mkfs.ubifs)
+DEBUG: mtd-utils-ubifs: Dependency libm.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-ubifs/usr/sbin/mkfs.ubifs)
+DEBUG: mtd-utils-ubifs: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-ubifs/usr/sbin/ubinfo)
+DEBUG: mtd-utils-ubifs: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-ubifs/usr/sbin/ubiupdatevol.mtd-utils)
+DEBUG: mtd-utils-ubifs: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-ubifs/usr/sbin/ubiscan)
+DEBUG: mtd-utils-ubifs: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-ubifs/usr/sbin/mkfs.ubifs)
+DEBUG: mtd-utils-ubifs: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-ubifs/usr/sbin/ubinfo)
+DEBUG: mtd-utils-ubifs: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-ubifs/usr/sbin/ubiblock)
+DEBUG: mtd-utils-ubifs: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-ubifs/usr/sbin/ubirmvol.mtd-utils)
+DEBUG: mtd-utils-ubifs: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-ubifs/usr/sbin/ubirmvol.mtd-utils)
+DEBUG: mtd-utils-ubifs: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-ubifs/usr/sbin/ubirsvol.mtd-utils)
+DEBUG: mtd-utils-ubifs: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-ubifs/usr/sbin/ubiscan)
+DEBUG: mtd-utils-ubifs: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-ubifs/usr/sbin/ubiblock)
+DEBUG: calculating shlib requirements for mtd-utils-jffs2
+DEBUG: mtd-utils-jffs2: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-jffs2/usr/sbin/jffs2dump)
+DEBUG: mtd-utils-jffs2: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-jffs2/usr/sbin/sumtool)
+DEBUG: mtd-utils-jffs2: Dependency liblzo2.so.2 requires package lzo (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-jffs2/usr/sbin/mkfs.jffs2)
+DEBUG: mtd-utils-jffs2: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-jffs2/usr/sbin/jffs2dump)
+DEBUG: mtd-utils-jffs2: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-jffs2/usr/sbin/jffs2reader)
+DEBUG: mtd-utils-jffs2: Dependency libz.so.1 requires package zlib (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-jffs2/usr/sbin/jffs2reader)
+DEBUG: mtd-utils-jffs2: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-jffs2/usr/sbin/mkfs.jffs2)
+DEBUG: mtd-utils-jffs2: Dependency libz.so.1 requires package zlib (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-jffs2/usr/sbin/mkfs.jffs2)
+DEBUG: mtd-utils-jffs2: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-jffs2/usr/sbin/jffs2reader)
+DEBUG: mtd-utils-jffs2: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-jffs2/usr/sbin/mkfs.jffs2)
+DEBUG: mtd-utils-jffs2: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-jffs2/usr/sbin/sumtool)
+DEBUG: calculating shlib requirements for mtd-utils-misc
+DEBUG: mtd-utils-misc: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-misc/usr/sbin/recv_image)
+DEBUG: mtd-utils-misc: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-misc/usr/sbin/ftl_check)
+DEBUG: mtd-utils-misc: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-misc/usr/sbin/docfdisk)
+DEBUG: mtd-utils-misc: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-misc/usr/sbin/nftldump)
+DEBUG: mtd-utils-misc: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-misc/usr/sbin/recv_image)
+DEBUG: mtd-utils-misc: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-misc/usr/sbin/rfdformat)
+DEBUG: mtd-utils-misc: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-misc/usr/sbin/rfddump)
+DEBUG: mtd-utils-misc: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-misc/usr/sbin/ftl_format)
+DEBUG: mtd-utils-misc: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-misc/usr/sbin/nftl_format)
+DEBUG: mtd-utils-misc: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-misc/usr/sbin/rfdformat)
+DEBUG: mtd-utils-misc: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-misc/usr/sbin/rfddump)
+DEBUG: mtd-utils-misc: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-misc/usr/sbin/ftl_format)
+DEBUG: mtd-utils-misc: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-misc/usr/sbin/nftldump)
+DEBUG: mtd-utils-misc: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-misc/usr/sbin/nftl_format)
+DEBUG: mtd-utils-misc: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-misc/usr/sbin/docfdisk)
+DEBUG: mtd-utils-misc: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-misc/usr/sbin/doc_loadbios)
+DEBUG: mtd-utils-misc: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-misc/usr/sbin/doc_loadbios)
+DEBUG: mtd-utils-misc: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-misc/usr/sbin/serve_image)
+DEBUG: mtd-utils-misc: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-misc/usr/sbin/ftl_check)
+DEBUG: mtd-utils-misc: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-misc/usr/sbin/serve_image)
+DEBUG: calculating shlib requirements for mtd-utils-tests
+DEBUG: mtd-utils-tests: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-tests/usr/libexec/mtd-utils/test_2)
+DEBUG: mtd-utils-tests: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-tests/usr/libexec/mtd-utils/nandsubpagetest)
+DEBUG: mtd-utils-tests: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-tests/usr/libexec/mtd-utils/JitterTest)
+DEBUG: mtd-utils-tests: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-tests/usr/libexec/mtd-utils/io_update)
+DEBUG: mtd-utils-tests: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-tests/usr/libexec/mtd-utils/makefiles)
+DEBUG: mtd-utils-tests: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-tests/usr/libexec/mtd-utils/rsvol)
+DEBUG: mtd-utils-tests: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-tests/usr/libexec/mtd-utils/flash_stress)
+DEBUG: mtd-utils-tests: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-tests/usr/libexec/mtd-utils/flash_readtest)
+DEBUG: mtd-utils-tests: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-tests/usr/libexec/mtd-utils/gcd_hupper)
+DEBUG: mtd-utils-tests: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-tests/usr/libexec/mtd-utils/io_paral)
+DEBUG: mtd-utils-tests: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-tests/usr/libexec/mtd-utils/flash_stress)
+DEBUG: mtd-utils-tests: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-tests/usr/libexec/mtd-utils/io_paral)
+DEBUG: mtd-utils-tests: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-tests/usr/libexec/mtd-utils/io_basic)
+DEBUG: mtd-utils-tests: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-tests/usr/libexec/mtd-utils/mkvol_bad)
+DEBUG: mtd-utils-tests: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-tests/usr/libexec/mtd-utils/integck)
+DEBUG: mtd-utils-tests: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-tests/usr/libexec/mtd-utils/io_read)
+DEBUG: mtd-utils-tests: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-tests/usr/libexec/mtd-utils/io_read)
+DEBUG: mtd-utils-tests: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-tests/usr/libexec/mtd-utils/plotJittervsFill)
+DEBUG: mtd-utils-tests: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-tests/usr/libexec/mtd-utils/perf)
+DEBUG: mtd-utils-tests: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-tests/usr/libexec/mtd-utils/orph)
+DEBUG: mtd-utils-tests: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-tests/usr/libexec/mtd-utils/flash_torture)
+DEBUG: mtd-utils-tests: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-tests/usr/libexec/mtd-utils/stress_2)
+DEBUG: mtd-utils-tests: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-tests/usr/libexec/mtd-utils/rmdir00)
+DEBUG: mtd-utils-tests: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-tests/usr/libexec/mtd-utils/fstest_monitor)
+DEBUG: mtd-utils-tests: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-tests/usr/libexec/mtd-utils/flash_readtest)
+DEBUG: mtd-utils-tests: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-tests/usr/libexec/mtd-utils/flash_torture)
+DEBUG: mtd-utils-tests: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-tests/usr/libexec/mtd-utils/pdfrun)
+DEBUG: mtd-utils-tests: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-tests/usr/libexec/mtd-utils/rndwrite00)
+DEBUG: mtd-utils-tests: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-tests/usr/libexec/mtd-utils/stress_3)
+DEBUG: mtd-utils-tests: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-tests/usr/libexec/mtd-utils/stress_3)
+DEBUG: mtd-utils-tests: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-tests/usr/libexec/mtd-utils/free_space)
+DEBUG: mtd-utils-tests: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-tests/usr/libexec/mtd-utils/integ)
+DEBUG: mtd-utils-tests: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-tests/usr/libexec/mtd-utils/fwrite00)
+DEBUG: mtd-utils-tests: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-tests/usr/libexec/mtd-utils/mkvol_paral)
+DEBUG: mtd-utils-tests: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-tests/usr/libexec/mtd-utils/mkvol_paral)
+DEBUG: mtd-utils-tests: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-tests/usr/libexec/mtd-utils/ftrunc)
+DEBUG: mtd-utils-tests: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-tests/usr/libexec/mtd-utils/nandsubpagetest)
+DEBUG: mtd-utils-tests: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-tests/usr/libexec/mtd-utils/JitterTest)
+DEBUG: mtd-utils-tests: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-tests/usr/libexec/mtd-utils/rndrm00)
+DEBUG: mtd-utils-tests: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-tests/usr/libexec/mtd-utils/rndrm00)
+DEBUG: mtd-utils-tests: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-tests/usr/libexec/mtd-utils/integck)
+DEBUG: mtd-utils-tests: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-tests/usr/libexec/mtd-utils/makefiles)
+DEBUG: mtd-utils-tests: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-tests/usr/libexec/mtd-utils/gcd_hupper)
+DEBUG: mtd-utils-tests: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-tests/usr/libexec/mtd-utils/io_basic)
+DEBUG: mtd-utils-tests: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-tests/usr/libexec/mtd-utils/io_update)
+DEBUG: mtd-utils-tests: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-tests/usr/libexec/mtd-utils/rmdir00)
+DEBUG: mtd-utils-tests: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-tests/usr/libexec/mtd-utils/stress_2)
+DEBUG: mtd-utils-tests: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-tests/usr/libexec/mtd-utils/flash_speed)
+DEBUG: mtd-utils-tests: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-tests/usr/libexec/mtd-utils/rndrm99)
+DEBUG: mtd-utils-tests: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-tests/usr/libexec/mtd-utils/rsvol)
+DEBUG: mtd-utils-tests: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-tests/usr/libexec/mtd-utils/rndrm99)
+DEBUG: mtd-utils-tests: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-tests/usr/libexec/mtd-utils/checkfs)
+DEBUG: mtd-utils-tests: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-tests/usr/libexec/mtd-utils/checkfs)
+DEBUG: mtd-utils-tests: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-tests/usr/libexec/mtd-utils/fstest_monitor)
+DEBUG: mtd-utils-tests: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-tests/usr/libexec/mtd-utils/test_1)
+DEBUG: mtd-utils-tests: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-tests/usr/libexec/mtd-utils/test_1)
+DEBUG: mtd-utils-tests: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-tests/usr/libexec/mtd-utils/volrefcnt)
+DEBUG: mtd-utils-tests: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-tests/usr/libexec/mtd-utils/plotJittervsFill)
+DEBUG: mtd-utils-tests: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-tests/usr/libexec/mtd-utils/mkvol_bad)
+DEBUG: mtd-utils-tests: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-tests/usr/libexec/mtd-utils/volrefcnt)
+DEBUG: mtd-utils-tests: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-tests/usr/libexec/mtd-utils/free_space)
+DEBUG: mtd-utils-tests: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-tests/usr/libexec/mtd-utils/flash_speed)
+DEBUG: mtd-utils-tests: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-tests/usr/libexec/mtd-utils/perf)
+DEBUG: mtd-utils-tests: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-tests/usr/libexec/mtd-utils/orph)
+DEBUG: mtd-utils-tests: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-tests/usr/libexec/mtd-utils/stress_1)
+DEBUG: mtd-utils-tests: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-tests/usr/libexec/mtd-utils/stress_1)
+DEBUG: mtd-utils-tests: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-tests/usr/libexec/mtd-utils/fwrite00)
+DEBUG: mtd-utils-tests: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-tests/usr/libexec/mtd-utils/mkvol_basic)
+DEBUG: mtd-utils-tests: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-tests/usr/libexec/mtd-utils/mkvol_basic)
+DEBUG: mtd-utils-tests: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-tests/usr/libexec/mtd-utils/nandbiterrs)
+DEBUG: mtd-utils-tests: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-tests/usr/libexec/mtd-utils/pdfrun)
+DEBUG: mtd-utils-tests: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-tests/usr/libexec/mtd-utils/nandbiterrs)
+DEBUG: mtd-utils-tests: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-tests/usr/libexec/mtd-utils/rndwrite00)
+DEBUG: mtd-utils-tests: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-tests/usr/libexec/mtd-utils/ftrunc)
+DEBUG: mtd-utils-tests: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-tests/usr/libexec/mtd-utils/integ)
+DEBUG: mtd-utils-tests: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-tests/usr/libexec/mtd-utils/nandpagetest)
+DEBUG: mtd-utils-tests: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-tests/usr/libexec/mtd-utils/nandpagetest)
+DEBUG: mtd-utils-tests: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils-tests/usr/libexec/mtd-utils/test_2)
+DEBUG: calculating shlib requirements for mtd-utils-staticdev
+DEBUG: calculating shlib requirements for mtd-utils-dev
+DEBUG: calculating shlib requirements for mtd-utils-doc
+DEBUG: calculating shlib requirements for mtd-utils-locale
+DEBUG: calculating shlib requirements for mtd-utils
+DEBUG: mtd-utils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils/usr/sbin/mtdpart)
+DEBUG: mtd-utils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils/usr/sbin/lsmtd)
+DEBUG: mtd-utils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils/usr/sbin/fectest)
+DEBUG: mtd-utils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils/usr/sbin/flash_otp_write)
+DEBUG: mtd-utils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils/usr/sbin/flash_otp_lock)
+DEBUG: mtd-utils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils/usr/sbin/lsmtd)
+DEBUG: mtd-utils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils/usr/sbin/flash_erase)
+DEBUG: mtd-utils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils/usr/sbin/mtdinfo)
+DEBUG: mtd-utils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils/usr/sbin/flash_erase)
+DEBUG: mtd-utils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils/usr/sbin/nandtest)
+DEBUG: mtd-utils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils/usr/sbin/nanddump.mtd-utils)
+DEBUG: mtd-utils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils/usr/sbin/mtd_debug)
+DEBUG: mtd-utils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils/usr/sbin/mtdinfo)
+DEBUG: mtd-utils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils/usr/sbin/flash_lock.mtd-utils)
+DEBUG: mtd-utils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils/usr/sbin/flash_otp_info)
+DEBUG: mtd-utils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils/usr/sbin/nanddump.mtd-utils)
+DEBUG: mtd-utils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils/usr/sbin/fectest)
+DEBUG: mtd-utils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils/usr/sbin/mtd_debug)
+DEBUG: mtd-utils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils/usr/sbin/flash_otp_write)
+DEBUG: mtd-utils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils/usr/sbin/flash_lock.mtd-utils)
+DEBUG: mtd-utils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils/usr/sbin/nandwrite.mtd-utils)
+DEBUG: mtd-utils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils/usr/sbin/flash_unlock.mtd-utils)
+DEBUG: mtd-utils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils/usr/sbin/nandwrite.mtd-utils)
+DEBUG: mtd-utils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils/usr/sbin/nandtest)
+DEBUG: mtd-utils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils/usr/sbin/flash_otp_info)
+DEBUG: mtd-utils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils/usr/sbin/flashcp.mtd-utils)
+DEBUG: mtd-utils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils/usr/sbin/flash_otp_erase)
+DEBUG: mtd-utils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils/usr/sbin/flash_otp_dump)
+DEBUG: mtd-utils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils/usr/sbin/flash_otp_dump)
+DEBUG: mtd-utils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils/usr/sbin/flash_otp_erase)
+DEBUG: mtd-utils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils/usr/sbin/flashcp.mtd-utils)
+DEBUG: mtd-utils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils/usr/sbin/mtdpart)
+DEBUG: mtd-utils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils/usr/sbin/flash_unlock.mtd-utils)
+DEBUG: mtd-utils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils/usr/sbin/nandflipbits)
+DEBUG: mtd-utils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils/usr/sbin/nandflipbits)
+DEBUG: mtd-utils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/packages-split/mtd-utils/usr/sbin/flash_otp_lock)
+DEBUG: Python function package_do_shlibs finished
+DEBUG: Executing python function package_do_pkgconfig
+DEBUG: Python function package_do_pkgconfig finished
+DEBUG: Executing python function read_shlibdeps
+DEBUG: Python function read_shlibdeps finished
+DEBUG: Executing python function package_depchains
+DEBUG: Python function package_depchains finished
+DEBUG: Executing python function emit_pkgdata
+DEBUG: Python function emit_pkgdata finished
+DEBUG: Python function do_package finished
+DEBUG: Executing python function sstate_task_postfunc
+NOTE: Using umask 0o002 (not 22) for sstate packaging
+DEBUG: Executing python function target_add_sysroot_deps
+DEBUG: Python function target_add_sysroot_deps finished
+DEBUG: Executing python function sstate_hardcode_path
+NOTE: Removing hardcoded paths from sstate package: 'find /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/sstate-build-package/ \( -name "*.la" -o -name "*-config" -o -name "*_config" -o -name "postinst-*" \) -type f | xargs grep -l -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/recipe-sysroot' -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/recipe-sysroot-native' -e '/home/matt/tmp/build/obmc-y2038/tmp/hosttools' | tee /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/sstate-build-package/fixmepath | xargs --no-run-if-empty sed -i -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/recipe-sysroot-native:FIXMESTAGINGDIRHOST:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/mtd-utils/2.1.4-r0/recipe-sysroot:FIXMESTAGINGDIRTARGET:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:FIXME_HOSTTOOLS_DIR:g''
+DEBUG: Python function sstate_hardcode_path finished
+DEBUG: Executing python function sstate_report_unihash
+DEBUG: Python function sstate_report_unihash finished
+DEBUG: Executing shell function sstate_create_package
+DEBUG: Shell function sstate_create_package finished
+DEBUG: Executing python function sstate_hardcode_path_unpack
+DEBUG: Python function sstate_hardcode_path_unpack finished
+DEBUG: Python function sstate_task_postfunc finished

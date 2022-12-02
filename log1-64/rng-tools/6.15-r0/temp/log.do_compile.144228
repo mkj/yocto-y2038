@@ -1,0 +1,381 @@
+DEBUG: Executing python function autotools_aclocals
+DEBUG: SITE files ['endian-little', 'bit-32', 'arm-common', 'arm-32', 'common-linux', 'common-glibc', 'arm-linux', 'arm-linux-gnueabi', 'common']
+DEBUG: Python function autotools_aclocals finished
+DEBUG: Executing shell function do_compile
+NOTE: make -j 1
+make  all-recursive
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/build'
+Making all in contrib
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/build/contrib'
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../../git/contrib -I..   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64  -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/git=/usr/src/debug/rng-tools/6.15-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/git=/usr/src/debug/rng-tools/6.15-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/build=/usr/src/debug/rng-tools/6.15-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/build=/usr/src/debug/rng-tools/6.15-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot-native=   -Wconversion -Wno-error  -DJENT_CONF_ENABLE_INTERNAL_TIMER  -c -o randstat.o ../../git/contrib/randstat.c
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot  -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/git=/usr/src/debug/rng-tools/6.15-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/git=/usr/src/debug/rng-tools/6.15-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/build=/usr/src/debug/rng-tools/6.15-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/build=/usr/src/debug/rng-tools/6.15-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot-native=   -Wconversion -Wno-error  -DJENT_CONF_ENABLE_INTERNAL_TIMER   -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/git=/usr/src/debug/rng-tools/6.15-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/git=/usr/src/debug/rng-tools/6.15-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/build=/usr/src/debug/rng-tools/6.15-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/build=/usr/src/debug/rng-tools/6.15-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot-native=  -Wl,-z,relro,-z,now -o randstat randstat.o  
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/build/contrib'
+Making all in tests
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/build/tests'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/build/tests'
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/build'
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../git   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64  -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/git=/usr/src/debug/rng-tools/6.15-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/git=/usr/src/debug/rng-tools/6.15-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/build=/usr/src/debug/rng-tools/6.15-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/build=/usr/src/debug/rng-tools/6.15-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot-native=   -Wconversion -Wno-error  -DJENT_CONF_ENABLE_INTERNAL_TIMER  -c -o stats.o ../git/stats.c
+../git/stats.c: In function 'scale_mult_unit':
+../git/stats.c:66:32: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+   66 |                 snprintf(unit, unitsize, "%ci%s", multchar[mult-1], baseunit);
+      |                                ^~~~~~~~
+../git/stats.c:68:49: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+   68 |                 strncpy(unit, baseunit, unitsize-1);
+      |                                         ~~~~~~~~^~
+../git/stats.c: In function 'elapsed_time':
+../git/stats.c:79:47: warning: conversion to 'long long unsigned int' from '__time64_t' {aka 'long long int'} may change the sign of the result [-Wsign-conversion]
+   79 |         diff = (stop->tv_sec - start->tv_sec) * 1000000ULL;
+      |                                               ^
+../git/stats.c:81:22: warning: conversion to 'long long unsigned int' from '__suseconds64_t' {aka 'long long int'} may change the sign of the result [-Wsign-conversion]
+   81 |                 diff += stop->tv_usec - start->tv_usec;
+      |                      ^~
+../git/stats.c:83:22: warning: conversion to 'long long unsigned int' from '__suseconds64_t' {aka 'long long int'} may change the sign of the result [-Wsign-conversion]
+   83 |                 diff -= start->tv_usec - stop->tv_usec;
+      |                      ^~
+../git/stats.c: In function 'dump_stat_counter':
+../git/stats.c:108:27: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  108 |         snprintf(buf, size-1, "%s%s: %llu", stat_prefix, msg,
+      |                       ~~~~^~
+../git/stats.c: In function 'dump_stat_stat':
+../git/stats.c:120:41: warning: conversion from 'uint64_t' {aka 'long long unsigned int'} to 'double' may change value [-Wconversion]
+  120 |                 avg = (double)stat->sum / stat->num_samples;
+      |                                         ^
+../git/stats.c:123:27: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  123 |         snprintf(buf, size-1, "%s%s: (min=%llu; avg=%.3f; max=%llu)%s",
+      |                       ~~~~^~
+../git/stats.c: In function 'dump_stat_bw':
+../git/stats.c:139:37: warning: conversion from 'uint64_t' {aka 'long long unsigned int'} to 'double' may change value [-Wconversion]
+  139 |                 bw_min = (1000000.0 * blocksize) / stat->max;
+      |                                     ^
+../git/stats.c:139:50: warning: conversion from 'uint64_t' {aka 'long long unsigned int'} to 'double' may change value [-Wconversion]
+  139 |                 bw_min = (1000000.0 * blocksize) / stat->max;
+      |                                                  ^
+../git/stats.c:141:37: warning: conversion from 'uint64_t' {aka 'long long unsigned int'} to 'double' may change value [-Wconversion]
+  141 |                 bw_max = (1000000.0 * blocksize) / stat->min;
+      |                                     ^
+../git/stats.c:141:50: warning: conversion from 'uint64_t' {aka 'long long unsigned int'} to 'double' may change value [-Wconversion]
+  141 |                 bw_max = (1000000.0 * blocksize) / stat->min;
+      |                                                  ^
+../git/stats.c:143:37: warning: conversion from 'uint64_t' {aka 'long long unsigned int'} to 'double' may change value [-Wconversion]
+  143 |                 bw_avg = (1000000.0 * blocksize * stat->num_samples) / stat->sum;
+      |                                     ^
+../git/stats.c:143:49: warning: conversion from 'uint64_t' {aka 'long long unsigned int'} to 'double' may change value [-Wconversion]
+  143 |                 bw_avg = (1000000.0 * blocksize * stat->num_samples) / stat->sum;
+      |                                                 ^
+../git/stats.c:143:70: warning: conversion from 'uint64_t' {aka 'long long unsigned int'} to 'double' may change value [-Wconversion]
+  143 |                 bw_avg = (1000000.0 * blocksize * stat->num_samples) / stat->sum;
+      |                                                                      ^
+../git/stats.c:149:27: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  149 |         snprintf(buf, size-1, "%s%s: (min=%.3f; avg=%.3f; max=%.3f)%s/s",
+      |                       ~~~~^~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../git   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64  -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/git=/usr/src/debug/rng-tools/6.15-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/git=/usr/src/debug/rng-tools/6.15-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/build=/usr/src/debug/rng-tools/6.15-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/build=/usr/src/debug/rng-tools/6.15-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot-native=   -Wconversion -Wno-error  -DJENT_CONF_ENABLE_INTERNAL_TIMER  -c -o rngtest.o ../git/rngtest.c
+../git/rngtest.c: In function 'parse_opt':
+../git/rngtest.c:126:60: warning: conversion to 'long long unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  126 |                         arguments->timedstats = 1000000ULL * n;
+      |                                                            ^
+../git/rngtest.c: In function 'xread':
+../git/rngtest.c:229:21: warning: conversion to 'size_t' {aka 'unsigned int'} from 'ssize_t' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  229 |                 off += r;
+      |                     ^~
+../git/rngtest.c:230:22: warning: conversion to 'size_t' {aka 'unsigned int'} from 'ssize_t' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  230 |                 size -= r;
+      |                      ^~
+../git/rngtest.c:231:42: warning: conversion to 'uint64_t' {aka 'long long unsigned int'} from 'ssize_t' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  231 |                 rng_stats.bytes_received += r;
+      |                                          ^~
+../git/rngtest.c: In function 'xwrite':
+../git/rngtest.c:261:21: warning: conversion to 'size_t' {aka 'unsigned int'} from 'ssize_t' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  261 |                 off += r;
+      |                     ^~
+../git/rngtest.c:262:22: warning: conversion to 'size_t' {aka 'unsigned int'} from 'ssize_t' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  262 |                 size -= r;
+      |                      ^~
+../git/rngtest.c:263:38: warning: conversion to 'uint64_t' {aka 'long long unsigned int'} from 'ssize_t' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  263 |                 rng_stats.bytes_sent += r;
+      |                                      ^~
+../git/rngtest.c: In function 'do_rng_fips_test_loop':
+../git/rngtest.c:365:49: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  365 |                                 if (fips_result & fips_test_mask[j])
+      |                                                 ^
+../git/rngtest.c: In function 'main':
+../git/rngtest.c:413:29: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  413 |         fips_init(&fipsctx, discard_initial_data());
+      |                             ^~~~~~~~~~~~~~~~~~~~~~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../git   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64  -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/git=/usr/src/debug/rng-tools/6.15-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/git=/usr/src/debug/rng-tools/6.15-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/build=/usr/src/debug/rng-tools/6.15-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/build=/usr/src/debug/rng-tools/6.15-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot-native=   -Wconversion -Wno-error  -DJENT_CONF_ENABLE_INTERNAL_TIMER  -c -o fips.o ../git/fips.c
+../git/fips.c: In function 'fips_run_rng_test':
+../git/fips.c:130:31: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  130 |                 ctx->last32 = new32;
+      |                               ^~~~~
+rm -f librngd.a
+arm-openbmc-linux-gnueabi-gcc-ar crD librngd.a fips.o 
+arm-openbmc-linux-gnueabi-gcc-ranlib librngd.a
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot  -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/git=/usr/src/debug/rng-tools/6.15-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/git=/usr/src/debug/rng-tools/6.15-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/build=/usr/src/debug/rng-tools/6.15-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/build=/usr/src/debug/rng-tools/6.15-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot-native=   -Wconversion -Wno-error  -DJENT_CONF_ENABLE_INTERNAL_TIMER   -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/git=/usr/src/debug/rng-tools/6.15-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/git=/usr/src/debug/rng-tools/6.15-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/build=/usr/src/debug/rng-tools/6.15-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/build=/usr/src/debug/rng-tools/6.15-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot-native=  -Wl,-z,relro,-z,now -o rngtest stats.o rngtest.o librngd.a 
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../git   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64        -pthread -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/git=/usr/src/debug/rng-tools/6.15-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/git=/usr/src/debug/rng-tools/6.15-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/build=/usr/src/debug/rng-tools/6.15-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/build=/usr/src/debug/rng-tools/6.15-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot-native=   -Wconversion -Wno-error  -DJENT_CONF_ENABLE_INTERNAL_TIMER  -c -o rngd-rngd.o `test -f 'rngd.c' || echo '../git/'`rngd.c
+../git/rngd.c: In function 'find_ent_src_idx':
+../git/rngd.c:440:23: warning: conversion to 'int' from 'long unsigned int' may change the sign of the result [-Wsign-conversion]
+  440 |                 idx = strtoul(name_idx, NULL, 10);
+      |                       ^~~~~~~
+../git/rngd.c: In function 'parse_opt':
+../git/rngd.c:515:23: warning: conversion to 'long int' from 'long unsigned int' may change the sign of the result [-Wsign-conversion]
+  515 |                 val = strtoul(last_search, NULL, 10);
+      |                       ^~~~~~~
+../git/rngd.c: In function 'update_kernel_random':
+../git/rngd.c:638:40: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  638 |                         alarm(arguments->force_reseed);
+      |                               ~~~~~~~~~^~~~~~~~~~~~~~
+../git/rngd.c:640:44: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  640 |                 rc = random_add_entropy(p, random_step);
+      |                                            ^~~~~~~~~~~
+In file included from ../git/rngd.c:53:
+../git/rngd.c: In function 'close_all_entropy_sources':
+../git/rngd.h:184:32: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  184 |         size_t ____neededpfx = snprintf(NULL, 0, "[%-6s]: ", src->rng_sname); \
+      |                                ^~~~~~~~
+../git/rngd.c:831:25: note: in expansion of macro 'message_entsrc'
+  831 |                         message_entsrc(ent_src, LOG_DAEMON|LOG_INFO, "Shutting down\n");
+      |                         ^~~~~~~~~~~~~~
+../git/rngd.h:185:32: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  185 |         size_t ____neededmsg = snprintf(NULL, 0, fmt, ##args) + 1; \
+      |                                ^~~~~~~~
+../git/rngd.c:831:25: note: in expansion of macro 'message_entsrc'
+  831 |                         message_entsrc(ent_src, LOG_DAEMON|LOG_INFO, "Shutting down\n");
+      |                         ^~~~~~~~~~~~~~
+../git/rngd.c: In function 'main':
+../git/rngd.c:891:61: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  891 |                                 fips_init(ent_src->fipsctx, discard_initial_data(ent_src));
+      |                                                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../git/rngd.h:184:32: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  184 |         size_t ____neededpfx = snprintf(NULL, 0, "[%-6s]: ", src->rng_sname); \
+      |                                ^~~~~~~~
+../git/rngd.c:892:33: note: in expansion of macro 'message_entsrc'
+  892 |                                 message_entsrc(ent_src, LOG_DAEMON|LOG_INFO, "Initialized\n");
+      |                                 ^~~~~~~~~~~~~~
+../git/rngd.h:185:32: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  185 |         size_t ____neededmsg = snprintf(NULL, 0, fmt, ##args) + 1; \
+      |                                ^~~~~~~~
+../git/rngd.c:892:33: note: in expansion of macro 'message_entsrc'
+  892 |                                 message_entsrc(ent_src, LOG_DAEMON|LOG_INFO, "Initialized\n");
+      |                                 ^~~~~~~~~~~~~~
+../git/rngd.h:184:32: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  184 |         size_t ____neededpfx = snprintf(NULL, 0, "[%-6s]: ", src->rng_sname); \
+      |                                ^~~~~~~~
+../git/rngd.c:895:33: note: in expansion of macro 'message_entsrc'
+  895 |                                 message_entsrc(ent_src, LOG_DAEMON|LOG_ERR, "Initialization Failed\n");
+      |                                 ^~~~~~~~~~~~~~
+../git/rngd.h:185:32: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  185 |         size_t ____neededmsg = snprintf(NULL, 0, fmt, ##args) + 1; \
+      |                                ^~~~~~~~
+../git/rngd.c:895:33: note: in expansion of macro 'message_entsrc'
+  895 |                                 message_entsrc(ent_src, LOG_DAEMON|LOG_ERR, "Initialization Failed\n");
+      |                                 ^~~~~~~~~~~~~~
+../git/rngd.c:951:40: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  951 |                         alarm(arguments->force_reseed);
+      |                               ~~~~~~~~~^~~~~~~~~~~~~~
+../git/rngd.c:963:29: warning: conversion from '__time64_t' {aka 'long long int'} to 'double' may change value [-Wconversion]
+  963 |                 test_time = (end_test.tv_sec - start_test.tv_sec);
+      |                             ^
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../git   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64        -pthread -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/git=/usr/src/debug/rng-tools/6.15-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/git=/usr/src/debug/rng-tools/6.15-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/build=/usr/src/debug/rng-tools/6.15-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/build=/usr/src/debug/rng-tools/6.15-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot-native=   -Wconversion -Wno-error  -DJENT_CONF_ENABLE_INTERNAL_TIMER  -c -o rngd-rngd_entsource.o `test -f 'rngd_entsource.c' || echo '../git/'`rngd_entsource.c
+../git/rngd_entsource.c: In function 'xread':
+../git/rngd_entsource.c:62:21: warning: conversion to 'size_t' {aka 'unsigned int'} from 'ssize_t' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+   62 |                 off += r;
+      |                     ^~
+../git/rngd_entsource.c:63:22: warning: conversion to 'size_t' {aka 'unsigned int'} from 'ssize_t' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+   63 |                 size -= r;
+      |                      ^~
+In file included from ../git/rngd_entsource.c:40:
+../git/rngd.h:184:32: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  184 |         size_t ____neededpfx = snprintf(NULL, 0, "[%-6s]: ", src->rng_sname); \
+      |                                ^~~~~~~~
+../git/rngd_entsource.c:67:17: note: in expansion of macro 'message_entsrc'
+   67 |                 message_entsrc(ent_src,LOG_DAEMON|LOG_DEBUG, "read error\n");
+      |                 ^~~~~~~~~~~~~~
+../git/rngd.h:185:32: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  185 |         size_t ____neededmsg = snprintf(NULL, 0, fmt, ##args) + 1; \
+      |                                ^~~~~~~~
+../git/rngd_entsource.c:67:17: note: in expansion of macro 'message_entsrc'
+   67 |                 message_entsrc(ent_src,LOG_DAEMON|LOG_DEBUG, "read error\n");
+      |                 ^~~~~~~~~~~~~~
+../git/rngd_entsource.c: In function 'xread_tpm':
+../git/rngd.h:184:32: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  184 |         size_t ____neededpfx = snprintf(NULL, 0, "[%-6s]: ", src->rng_sname); \
+      |                                ^~~~~~~~
+../git/rngd_entsource.c:92:17: note: in expansion of macro 'message_entsrc'
+   92 |                 message_entsrc(ent_src,LOG_DAEMON|LOG_DEBUG,"Unable to open file: %s\n",ent_src->rng_fname);
+      |                 ^~~~~~~~~~~~~~
+../git/rngd.h:185:32: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  185 |         size_t ____neededmsg = snprintf(NULL, 0, fmt, ##args) + 1; \
+      |                                ^~~~~~~~
+../git/rngd_entsource.c:92:17: note: in expansion of macro 'message_entsrc'
+   92 |                 message_entsrc(ent_src,LOG_DAEMON|LOG_DEBUG,"Unable to open file: %s\n",ent_src->rng_fname);
+      |                 ^~~~~~~~~~~~~~
+../git/rngd.h:184:32: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  184 |         size_t ____neededpfx = snprintf(NULL, 0, "[%-6s]: ", src->rng_sname); \
+      |                                ^~~~~~~~
+../git/rngd_entsource.c:98:17: note: in expansion of macro 'message_entsrc'
+   98 |                 message_entsrc(ent_src,LOG_ERR|LOG_INFO,"No memory for TPM buffer\n");
+      |                 ^~~~~~~~~~~~~~
+../git/rngd.h:185:32: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  185 |         size_t ____neededmsg = snprintf(NULL, 0, fmt, ##args) + 1; \
+      |                                ^~~~~~~~
+../git/rngd_entsource.c:98:17: note: in expansion of macro 'message_entsrc'
+   98 |                 message_entsrc(ent_src,LOG_ERR|LOG_INFO,"No memory for TPM buffer\n");
+      |                 ^~~~~~~~~~~~~~
+../git/rngd_entsource.c:115:56: warning: conversion to 'unsigned int' from 'ssize_t' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  115 |                                        sizeof(rng_cmd) - r);
+      |                                                        ^
+../git/rngd.h:184:32: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  184 |         size_t ____neededpfx = snprintf(NULL, 0, "[%-6s]: ", src->rng_sname); \
+      |                                ^~~~~~~~
+../git/rngd_entsource.c:117:33: note: in expansion of macro 'message_entsrc'
+  117 |                                 message_entsrc(ent_src,LOG_ERR|LOG_INFO,
+      |                                 ^~~~~~~~~~~~~~
+../git/rngd.h:185:32: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  185 |         size_t ____neededmsg = snprintf(NULL, 0, fmt, ##args) + 1; \
+      |                                ^~~~~~~~
+../git/rngd_entsource.c:117:33: note: in expansion of macro 'message_entsrc'
+  117 |                                 message_entsrc(ent_src,LOG_ERR|LOG_INFO,
+      |                                 ^~~~~~~~~~~~~~
+../git/rngd.h:184:32: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  184 |         size_t ____neededpfx = snprintf(NULL, 0, "[%-6s]: ", src->rng_sname); \
+      |                                ^~~~~~~~
+../git/rngd_entsource.c:126:25: note: in expansion of macro 'message_entsrc'
+  126 |                         message_entsrc(ent_src,LOG_ERR|LOG_INFO,
+      |                         ^~~~~~~~~~~~~~
+../git/rngd.h:185:32: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  185 |         size_t ____neededmsg = snprintf(NULL, 0, fmt, ##args) + 1; \
+      |                                ^~~~~~~~
+../git/rngd_entsource.c:126:25: note: in expansion of macro 'message_entsrc'
+  126 |                         message_entsrc(ent_src,LOG_ERR|LOG_INFO,
+      |                         ^~~~~~~~~~~~~~
+../git/rngd.h:184:32: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  184 |         size_t ____neededpfx = snprintf(NULL, 0, "[%-6s]: ", src->rng_sname); \
+      |                                ^~~~~~~~
+../git/rngd_entsource.c:134:25: note: in expansion of macro 'message_entsrc'
+  134 |                         message_entsrc(ent_src,LOG_ERR|LOG_INFO,
+      |                         ^~~~~~~~~~~~~~
+../git/rngd.h:185:32: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  185 |         size_t ____neededmsg = snprintf(NULL, 0, fmt, ##args) + 1; \
+      |                                ^~~~~~~~
+../git/rngd_entsource.c:134:25: note: in expansion of macro 'message_entsrc'
+  134 |                         message_entsrc(ent_src,LOG_ERR|LOG_INFO,
+      |                         ^~~~~~~~~~~~~~
+../git/rngd_entsource.c:139:41: warning: conversion to 'size_t' {aka 'unsigned int'} from 'ssize_t' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  139 |                 bytes_read = bytes_read + r;
+      |                                         ^
+../git/rngd_entsource.c:142:35: warning: conversion to 'size_t' {aka 'unsigned int'} from 'ssize_t' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  142 |                                 r - (bytes_read - size));
+      |                                   ^
+../git/rngd_entsource.c:145:65: warning: conversion to 'size_t' {aka 'unsigned int'} from 'ssize_t' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  145 |                 memcpy(offset, temp_buf + TPM_GET_RNG_OVERHEAD, r);
+      |                                                                 ^
+../git/rngd_entsource.c: In function 'init_entropy_source':
+../git/rngd.h:184:32: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  184 |         size_t ____neededpfx = snprintf(NULL, 0, "[%-6s]: ", src->rng_sname); \
+      |                                ^~~~~~~~
+../git/rngd_entsource.c:167:17: note: in expansion of macro 'message_entsrc'
+  167 |                 message_entsrc(ent_src,LOG_DAEMON|LOG_DEBUG, "Unable to open file: %s\n", ent_src->rng_fname);
+      |                 ^~~~~~~~~~~~~~
+../git/rngd.h:185:32: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  185 |         size_t ____neededmsg = snprintf(NULL, 0, fmt, ##args) + 1; \
+      |                                ^~~~~~~~
+../git/rngd_entsource.c:167:17: note: in expansion of macro 'message_entsrc'
+  167 |                 message_entsrc(ent_src,LOG_DAEMON|LOG_DEBUG, "Unable to open file: %s\n", ent_src->rng_fname);
+      |                 ^~~~~~~~~~~~~~
+../git/rngd.h:184:32: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  184 |         size_t ____neededpfx = snprintf(NULL, 0, "[%-6s]: ", src->rng_sname); \
+      |                                ^~~~~~~~
+../git/rngd_entsource.c:182:17: note: in expansion of macro 'message_entsrc'
+  182 |                 message_entsrc(ent_src,LOG_DAEMON|LOG_DEBUG, "Unable to open sysfs file: %s\n", RNG_AVAIL);
+      |                 ^~~~~~~~~~~~~~
+../git/rngd.h:185:32: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  185 |         size_t ____neededmsg = snprintf(NULL, 0, fmt, ##args) + 1; \
+      |                                ^~~~~~~~
+../git/rngd_entsource.c:182:17: note: in expansion of macro 'message_entsrc'
+  182 |                 message_entsrc(ent_src,LOG_DAEMON|LOG_DEBUG, "Unable to open sysfs file: %s\n", RNG_AVAIL);
+      |                 ^~~~~~~~~~~~~~
+../git/rngd.h:184:32: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  184 |         size_t ____neededpfx = snprintf(NULL, 0, "[%-6s]: ", src->rng_sname); \
+      |                                ^~~~~~~~
+../git/rngd_entsource.c:188:17: note: in expansion of macro 'message_entsrc'
+  188 |                 message_entsrc(ent_src,LOG_DAEMON|LOG_DEBUG, "Error reading sysfs file: %s\n", RNG_AVAIL);
+      |                 ^~~~~~~~~~~~~~
+../git/rngd.h:185:32: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  185 |         size_t ____neededmsg = snprintf(NULL, 0, fmt, ##args) + 1; \
+      |                                ^~~~~~~~
+../git/rngd_entsource.c:188:17: note: in expansion of macro 'message_entsrc'
+  188 |                 message_entsrc(ent_src,LOG_DAEMON|LOG_DEBUG, "Error reading sysfs file: %s\n", RNG_AVAIL);
+      |                 ^~~~~~~~~~~~~~
+../git/rngd.h:184:32: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  184 |         size_t ____neededpfx = snprintf(NULL, 0, "[%-6s]: ", src->rng_sname); \
+      |                                ^~~~~~~~
+../git/rngd_entsource.c:194:17: note: in expansion of macro 'message_entsrc'
+  194 |                 message_entsrc(ent_src,LOG_DAEMON|LOG_DEBUG, "No available rng device\n");
+      |                 ^~~~~~~~~~~~~~
+../git/rngd.h:185:32: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  185 |         size_t ____neededmsg = snprintf(NULL, 0, fmt, ##args) + 1; \
+      |                                ^~~~~~~~
+../git/rngd_entsource.c:194:17: note: in expansion of macro 'message_entsrc'
+  194 |                 message_entsrc(ent_src,LOG_DAEMON|LOG_DEBUG, "No available rng device\n");
+      |                 ^~~~~~~~~~~~~~
+../git/rngd_entsource.c: In function 'init_tpm_entropy_source':
+../git/rngd.h:184:32: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  184 |         size_t ____neededpfx = snprintf(NULL, 0, "[%-6s]: ", src->rng_sname); \
+      |                                ^~~~~~~~
+../git/rngd_entsource.c:211:9: note: in expansion of macro 'message_entsrc'
+  211 |         message_entsrc(ent_src,LOG_CONS|LOG_INFO, "The TPM entropy source only supports TPM1.2 hardware and is "
+      |         ^~~~~~~~~~~~~~
+../git/rngd.h:185:32: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  185 |         size_t ____neededmsg = snprintf(NULL, 0, fmt, ##args) + 1; \
+      |                                ^~~~~~~~
+../git/rngd_entsource.c:211:9: note: in expansion of macro 'message_entsrc'
+  211 |         message_entsrc(ent_src,LOG_CONS|LOG_INFO, "The TPM entropy source only supports TPM1.2 hardware and is "
+      |         ^~~~~~~~~~~~~~
+../git/rngd.h:184:32: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  184 |         size_t ____neededpfx = snprintf(NULL, 0, "[%-6s]: ", src->rng_sname); \
+      |                                ^~~~~~~~
+../git/rngd_entsource.c:216:17: note: in expansion of macro 'message_entsrc'
+  216 |                 message_entsrc(ent_src,LOG_DAEMON|LOG_DEBUG,"Unable to open file: %s\n",ent_src->rng_fname);
+      |                 ^~~~~~~~~~~~~~
+../git/rngd.h:185:32: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  185 |         size_t ____neededmsg = snprintf(NULL, 0, fmt, ##args) + 1; \
+      |                                ^~~~~~~~
+../git/rngd_entsource.c:216:17: note: in expansion of macro 'message_entsrc'
+  216 |                 message_entsrc(ent_src,LOG_DAEMON|LOG_DEBUG,"Unable to open file: %s\n",ent_src->rng_fname);
+      |                 ^~~~~~~~~~~~~~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../git   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64        -pthread -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/git=/usr/src/debug/rng-tools/6.15-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/git=/usr/src/debug/rng-tools/6.15-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/build=/usr/src/debug/rng-tools/6.15-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/build=/usr/src/debug/rng-tools/6.15-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot-native=   -Wconversion -Wno-error  -DJENT_CONF_ENABLE_INTERNAL_TIMER  -c -o rngd-rngd_linux.o `test -f 'rngd_linux.c' || echo '../git/'`rngd_linux.c
+../git/rngd_linux.c: In function 'init_kernel_rng':
+../git/rngd_linux.c:92:26: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+   92 |         kent_pool_size = wm;
+      |                          ^~
+../git/rngd_linux.c:95:45: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+   95 |                 arguments->fill_watermark = wm;
+      |                                             ^~
+../git/rngd_linux.c: In function 'random_add_entropy':
+../git/rngd_linux.c:143:31: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  143 |         ent->ent_count = size * arguments->entropy_count;
+      |                               ^
+../git/rngd_linux.c:143:26: warning: conversion to 'int' from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  143 |         ent->ent_count = size * arguments->entropy_count;
+      |                          ^~~~
+../git/rngd_linux.c:144:21: warning: conversion to 'int' from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  144 |         ent->size = size;
+      |                     ^~~~
+../git/rngd_linux.c:169:17: warning: ignoring return value of 'write' declared with attribute 'warn_unused_result' [-Wunused-result]
+  169 |                 write(random_fd, buf, size);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../git   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64        -pthread -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/git=/usr/src/debug/rng-tools/6.15-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/git=/usr/src/debug/rng-tools/6.15-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/build=/usr/src/debug/rng-tools/6.15-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/build=/usr/src/debug/rng-tools/6.15-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot-native=   -Wconversion -Wno-error  -DJENT_CONF_ENABLE_INTERNAL_TIMER  -c -o rngd-util.o `test -f 'util.c' || echo '../git/'`util.c
+../git/util.c: In function 'write_pid_file':
+../git/util.c:86:23: warning: conversion to 'size_t' {aka 'unsigned int'} from 'ssize_t' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+   86 |                 bytes -= rc;
+      |                       ^~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../git   -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64        -pthread -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/git=/usr/src/debug/rng-tools/6.15-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/git=/usr/src/debug/rng-tools/6.15-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/build=/usr/src/debug/rng-tools/6.15-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/build=/usr/src/debug/rng-tools/6.15-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot-native=   -Wconversion -Wno-error  -DJENT_CONF_ENABLE_INTERNAL_TIMER  -c -o rngd-ossl_helpers.o `test -f 'ossl_helpers.c' || echo '../git/'`ossl_helpers.c
+In file included from ../git/ossl_helpers.c:26:
+../git/ossl_helpers.h: In function 'ossl_aes_mangle':
+../git/ossl_helpers.h:50:54: warning: conversion to 'int' from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+   50 |         ciphertext_len = ossl_aes_encrypt(ctx, data, size, ciphertext);
+      |                                                      ^~~~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot        -pthread -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/git=/usr/src/debug/rng-tools/6.15-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/git=/usr/src/debug/rng-tools/6.15-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/build=/usr/src/debug/rng-tools/6.15-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/build=/usr/src/debug/rng-tools/6.15-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot-native=   -Wconversion -Wno-error  -DJENT_CONF_ENABLE_INTERNAL_TIMER  -pthread  -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/git=/usr/src/debug/rng-tools/6.15-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/git=/usr/src/debug/rng-tools/6.15-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/build=/usr/src/debug/rng-tools/6.15-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/build=/usr/src/debug/rng-tools/6.15-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/recipe-sysroot-native=  -Wl,-z,relro,-z,now -o rngd rngd-rngd.o rngd-rngd_entsource.o rngd-rngd_linux.o rngd-util.o rngd-ossl_helpers.o        librngd.a        -lssl -lcrypto  
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/build'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rng-tools/6.15-r0/build'
+DEBUG: Shell function do_compile finished

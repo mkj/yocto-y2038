@@ -1,0 +1,272 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-extended/xz/xz_5.2.7.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: ['quilt-native', 'patch-native', 'attr-native']
+NOTE: Skipping as already exists in sysroot: ['xz-native', 'libtool-native', 'gettext-minimal-native', 'texinfo-dummy-native']
+DEBUG: sed -e 's:^[^/]*/:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libxml2/2.9.14-r0/recipe-sysroot-native/:g' /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/quilt-native/fixmepath | xargs sed -i -e 's:FIXMESTAGINGDIRTARGET:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libxml2/2.9.14-r0/recipe-sysroot:g; s:FIXMESTAGINGDIRHOST:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libxml2/2.9.14-r0/recipe-sysroot-native:g' -e 's:FIXME_PSEUDO_SYSROOT:/home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/pseudo-native:g' -e 's:FIXME_HOSTTOOLS_DIR:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:g' -e 's:FIXME_PKGDATA_DIR:/home/matt/tmp/build/obmc-y2038/tmp/pkgdata/evb-ast2600:g' -e 's:FIXME_PSEUDO_LOCALSTATEDIR:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libxml2/2.9.14-r0/pseudo/:g' -e 's:FIXME_LOGFIFO:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libxml2/2.9.14-r0/temp/fifo.1959963:g'
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function do_patch
+DEBUG: Executing python function patch_do_patch
+DEBUG: Searching for libxml-64bit.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/arm
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/arm
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/arm
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/
+DEBUG: Searching for runtest.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/arm
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/arm
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/arm
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/
+DEBUG: Searching for run-ptest in paths:
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/arm
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/arm
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/arm
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/
+DEBUG: Searching for python-sitepackages-dir.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/arm
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/arm
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/arm
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/
+DEBUG: Searching for 0001-Make-ptest-run-the-python-tests-if-python-is-enabled.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/arm
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/arm
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/arm
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/
+DEBUG: Searching for fix-execution-of-ptests.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/arm
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/arm
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/arm
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/
+DEBUG: Searching for remove-fuzz-from-ptests.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/arm
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/arm
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/arm
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/
+DEBUG: Searching for libxml-m4-use-pkgconfig.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/arm
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/arm
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/arm
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/
+DEBUG: Searching for 0001-Port-gentest.py-to-Python-3.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/arm
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/arm
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/arm
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2-2.9.14/
+    /home/matt/src/openbmc/meta/recipes-core/libxml/libxml2/
+    /home/matt/src/openbmc/meta/recipes-core/libxml/files/
+NOTE: Applying patch 'libxml-64bit.patch' (../../../src/openbmc/meta/recipes-core/libxml/libxml2/libxml-64bit.patch)
+NOTE: Applying patch 'runtest.patch' (../../../src/openbmc/meta/recipes-core/libxml/libxml2/runtest.patch)
+NOTE: Applying patch 'python-sitepackages-dir.patch' (../../../src/openbmc/meta/recipes-core/libxml/libxml2/python-sitepackages-dir.patch)
+NOTE: Applying patch '0001-Make-ptest-run-the-python-tests-if-python-is-enabled.patch' (../../../src/openbmc/meta/recipes-core/libxml/libxml2/0001-Make-ptest-run-the-python-tests-if-python-is-enabled.patch)
+NOTE: Applying patch 'fix-execution-of-ptests.patch' (../../../src/openbmc/meta/recipes-core/libxml/libxml2/fix-execution-of-ptests.patch)
+NOTE: Applying patch 'remove-fuzz-from-ptests.patch' (../../../src/openbmc/meta/recipes-core/libxml/libxml2/remove-fuzz-from-ptests.patch)
+NOTE: Applying patch 'libxml-m4-use-pkgconfig.patch' (../../../src/openbmc/meta/recipes-core/libxml/libxml2/libxml-m4-use-pkgconfig.patch)
+NOTE: Applying patch '0001-Port-gentest.py-to-Python-3.patch' (../../../src/openbmc/meta/recipes-core/libxml/libxml2/0001-Port-gentest.py-to-Python-3.patch)
+DEBUG: Python function patch_do_patch finished
+DEBUG: Python function do_patch finished
+DEBUG: Executing python function do_qa_patch
+DEBUG: Python function do_qa_patch finished

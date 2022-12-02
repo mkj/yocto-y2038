@@ -1,0 +1,158 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/opkg-utils/opkg-utils_0.5.0.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/dwarfsrcfiles/dwarfsrcfiles.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/perl/perl_5.36.0.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/rpm/rpm_4.18.0.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: ['dwarfsrcfiles-native', 'rpm-native', 'libgcrypt-native', 'bzip2-native', 'elfutils-native', 'lua-native', 'python3-native', 'popt-native', 'sqlite3-native', 'file-native', 'libgpg-error-native', 'libcap-native', 'readline-native', 'ncurses-native', 'libnsl2-native', 'libffi-native', 'util-linux-libuuid-native', 'openssl-native', 'libtirpc-native']
+NOTE: Skipping as already exists in sysroot: ['glibc', 'gcc-cross-arm', 'gcc-runtime', 'opkg-utils', 'quilt-native', 'patch-native', 'perl-native', 'pseudo-native', 'linux-libc-headers', 'libtool-native', 'attr-native', 'libgcc', 'gdbm-native', 'make-native', 'zlib-native', 'xz-native', 'gettext-minimal-native', 'zstd-native', 'texinfo-dummy-native', 'gmp-native', 'flex-native', 'libmpc-native', 'binutils-cross-arm', 'gnu-config-native', 'mpfr-native', 'm4-native']
+DEBUG: sed -e 's:^[^/]*/:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/recipe-sysroot-native/:g' /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/rpm-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/libgcrypt-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/elfutils-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/lua-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/python3-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/libgpg-error-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/ncurses-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/openssl-native/fixmepath | xargs sed -i -e 's:FIXMESTAGINGDIRTARGET:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/recipe-sysroot:g; s:FIXMESTAGINGDIRHOST:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/recipe-sysroot-native:g' -e 's:FIXME_PSEUDO_SYSROOT:/home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/pseudo-native:g' -e 's:FIXME_HOSTTOOLS_DIR:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:g' -e 's:FIXME_PKGDATA_DIR:/home/matt/tmp/build/obmc-y2038/tmp/pkgdata/evb-ast2600:g' -e 's:FIXME_PSEUDO_LOCALSTATEDIR:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/pseudo/:g' -e 's:FIXME_LOGFIFO:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/temp/fifo.122786:g'
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function sstate_task_prefunc
+DEBUG: Python function sstate_task_prefunc finished
+DEBUG: Executing python function do_package
+DEBUG: Executing python function package_convert_pr_autoinc
+DEBUG: Python function package_convert_pr_autoinc finished
+DEBUG: Executing python function package_prepare_pkgdata
+NOTE: Installed into pkgdata-sysroot: ['glibc', 'opkg-utils', 'gcc-runtime', 'linux-libc-headers', 'libgcc']
+DEBUG: Python function package_prepare_pkgdata finished
+DEBUG: Executing python function perform_packagecopy
+DEBUG: Python function perform_packagecopy finished
+DEBUG: Executing python function apply_update_alternative_renames
+DEBUG: Python function apply_update_alternative_renames finished
+DEBUG: Executing shell function multilibscript_rename
+DEBUG: Shell function multilibscript_rename finished
+DEBUG: Executing python function split_and_strip_files
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/package/usr/lib/ossl-modules/legacy.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/package/usr/lib/libssl.so.3']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/package/usr/lib/libcrypto.so.3']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/package/usr/lib/engines-3/loader_attic.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/package/usr/lib/engines-3/capi.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/package/usr/lib/engines-3/afalg.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/package/usr/bin/openssl']
+DEBUG: Python function split_and_strip_files finished
+DEBUG: Executing python function fixup_perms
+DEBUG: Python function fixup_perms finished
+DEBUG: Executing python function populate_packages_updatealternatives
+DEBUG: Python function populate_packages_updatealternatives finished
+DEBUG: Executing python function package_do_split_locales
+DEBUG: No locale files in this package
+DEBUG: Python function package_do_split_locales finished
+DEBUG: Executing python function populate_packages
+DEBUG: Python function populate_packages finished
+DEBUG: Executing python function package_fixsymlinks
+DEBUG: openssl-dev contains dangling link /usr/lib/libssl.so.3
+DEBUG: target found in libssl
+DEBUG: openssl-dev contains dangling link /usr/lib/libcrypto.so.3
+DEBUG: target found in libcrypto
+DEBUG: Python function package_fixsymlinks finished
+DEBUG: Executing python function package_name_hook
+DEBUG: Executing python function debian_package_name_hook
+DEBUG: LIBNAMES: pkg openssl-staticdev libs 1 bins 0 sonames []
+DEBUG: LIBNAMES: pkg openssl-src libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg openssl-ossl-module-legacy libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg openssl-misc libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg openssl-locale libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg openssl-engines libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg openssl-doc libs 0 bins 0 sonames []
+arm-openbmc-linux-gnueabi-objdump: '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/packages-split/openssl-dev/usr/lib/libssl.so': No such file
+arm-openbmc-linux-gnueabi-objdump: '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/packages-split/openssl-dev/usr/lib/libcrypto.so': No such file
+DEBUG: LIBNAMES: pkg openssl-dev libs 1 bins 0 sonames []
+DEBUG: LIBNAMES: pkg openssl-dbg libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg openssl-conf libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg openssl-bin libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg openssl libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libssl libs 1 bins 0 sonames ['libssl.so.3']
+NOTE: debian: renaming libssl to libssl3
+DEBUG: LIBNAMES: pkg libcrypto libs 1 bins 0 sonames ['libcrypto.so.3']
+NOTE: debian: renaming libcrypto to libcrypto3
+DEBUG: Python function debian_package_name_hook finished
+DEBUG: Python function package_name_hook finished
+DEBUG: Executing python function package_do_filedeps
+DEBUG: Python function package_do_filedeps finished
+DEBUG: Executing python function package_do_shlibs
+DEBUG: Reading shlib providers in /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/pkgdata-sysroot/shlibs2
+DEBUG: calculating shlib provides for openssl-src
+DEBUG: LIBNAMES: pkg openssl-src sonames set()
+DEBUG: calculating shlib provides for openssl-dbg
+DEBUG: LIBNAMES: pkg openssl-dbg sonames set()
+DEBUG: calculating shlib provides for libcrypto
+DEBUG: registering libcrypto-3.0.7 as shlib provider for libcrypto.so.3
+DEBUG: adding ldconfig call to postinst for libcrypto
+DEBUG: LIBNAMES: pkg libcrypto sonames {('libcrypto.so.3', '/usr/lib', '3.0.7')}
+DEBUG: calculating shlib provides for libssl
+DEBUG: registering libssl-3.0.7 as shlib provider for libssl.so.3
+DEBUG: adding ldconfig call to postinst for libssl
+DEBUG: LIBNAMES: pkg libssl sonames {('libssl.so.3', '/usr/lib', '3.0.7')}
+DEBUG: calculating shlib provides for openssl-conf
+DEBUG: LIBNAMES: pkg openssl-conf sonames set()
+DEBUG: calculating shlib provides for openssl-engines
+DEBUG: LIBNAMES: pkg openssl-engines sonames set()
+DEBUG: calculating shlib provides for openssl-misc
+DEBUG: LIBNAMES: pkg openssl-misc sonames set()
+DEBUG: calculating shlib provides for openssl-ossl-module-legacy
+DEBUG: LIBNAMES: pkg openssl-ossl-module-legacy sonames set()
+DEBUG: calculating shlib provides for openssl-staticdev
+DEBUG: LIBNAMES: pkg openssl-staticdev sonames set()
+DEBUG: calculating shlib provides for openssl-dev
+DEBUG: LIBNAMES: pkg openssl-dev sonames set()
+DEBUG: calculating shlib provides for openssl-doc
+DEBUG: LIBNAMES: pkg openssl-doc sonames set()
+DEBUG: calculating shlib provides for openssl-locale
+DEBUG: LIBNAMES: pkg openssl-locale sonames set()
+DEBUG: calculating shlib provides for openssl-bin
+DEBUG: LIBNAMES: pkg openssl-bin sonames set()
+DEBUG: calculating shlib provides for openssl
+DEBUG: LIBNAMES: pkg openssl sonames set()
+DEBUG: calculating shlib requirements for openssl-src
+DEBUG: calculating shlib requirements for openssl-dbg
+DEBUG: calculating shlib requirements for libcrypto
+DEBUG: libcrypto: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/packages-split/libcrypto/usr/lib/libcrypto.so.3)
+DEBUG: libcrypto: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/packages-split/libcrypto/usr/lib/libcrypto.so.3)
+DEBUG: calculating shlib requirements for libssl
+DEBUG: libssl: Dependency libcrypto.so.3 requires package libcrypto (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/packages-split/libssl/usr/lib/libssl.so.3)
+DEBUG: libssl: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/packages-split/libssl/usr/lib/libssl.so.3)
+DEBUG: libssl: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/packages-split/libssl/usr/lib/libssl.so.3)
+DEBUG: calculating shlib requirements for openssl-conf
+DEBUG: calculating shlib requirements for openssl-engines
+DEBUG: openssl-engines: Dependency libcrypto.so.3 requires package libcrypto (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/packages-split/openssl-engines/usr/lib/engines-3/loader_attic.so)
+DEBUG: openssl-engines: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/packages-split/openssl-engines/usr/lib/engines-3/loader_attic.so)
+DEBUG: openssl-engines: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/packages-split/openssl-engines/usr/lib/engines-3/loader_attic.so)
+DEBUG: openssl-engines: Dependency libcrypto.so.3 requires package libcrypto (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/packages-split/openssl-engines/usr/lib/engines-3/afalg.so)
+DEBUG: openssl-engines: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/packages-split/openssl-engines/usr/lib/engines-3/afalg.so)
+DEBUG: openssl-engines: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/packages-split/openssl-engines/usr/lib/engines-3/afalg.so)
+DEBUG: calculating shlib requirements for openssl-misc
+DEBUG: calculating shlib requirements for openssl-ossl-module-legacy
+DEBUG: openssl-ossl-module-legacy: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/packages-split/openssl-ossl-module-legacy/usr/lib/ossl-modules/legacy.so)
+DEBUG: openssl-ossl-module-legacy: Dependency libcrypto.so.3 requires package libcrypto (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/packages-split/openssl-ossl-module-legacy/usr/lib/ossl-modules/legacy.so)
+DEBUG: openssl-ossl-module-legacy: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/packages-split/openssl-ossl-module-legacy/usr/lib/ossl-modules/legacy.so)
+DEBUG: calculating shlib requirements for openssl-staticdev
+DEBUG: calculating shlib requirements for openssl-dev
+DEBUG: calculating shlib requirements for openssl-doc
+DEBUG: calculating shlib requirements for openssl-locale
+DEBUG: calculating shlib requirements for openssl-bin
+DEBUG: openssl-bin: Dependency libssl.so.3 requires package libssl (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/packages-split/openssl-bin/usr/bin/openssl)
+DEBUG: openssl-bin: Dependency libcrypto.so.3 requires package libcrypto (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/packages-split/openssl-bin/usr/bin/openssl)
+DEBUG: openssl-bin: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/packages-split/openssl-bin/usr/bin/openssl)
+DEBUG: openssl-bin: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/packages-split/openssl-bin/usr/bin/openssl)
+DEBUG: calculating shlib requirements for openssl
+DEBUG: Python function package_do_shlibs finished
+DEBUG: Executing python function package_do_pkgconfig
+DEBUG: Python function package_do_pkgconfig finished
+DEBUG: Executing python function read_shlibdeps
+DEBUG: Python function read_shlibdeps finished
+DEBUG: Executing python function package_depchains
+DEBUG: Python function package_depchains finished
+DEBUG: Executing python function emit_pkgdata
+DEBUG: Python function emit_pkgdata finished
+DEBUG: Python function do_package finished
+DEBUG: Executing python function sstate_task_postfunc
+NOTE: Using umask 0o002 (not 22) for sstate packaging
+DEBUG: Executing python function target_add_sysroot_deps
+DEBUG: Python function target_add_sysroot_deps finished
+DEBUG: Executing python function sstate_hardcode_path
+NOTE: Removing hardcoded paths from sstate package: 'find /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/sstate-build-package/ \( -name "*.la" -o -name "*-config" -o -name "*_config" -o -name "postinst-*" \) -type f | xargs grep -l -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/recipe-sysroot' -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/recipe-sysroot-native' -e '/home/matt/tmp/build/obmc-y2038/tmp/hosttools' | tee /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/sstate-build-package/fixmepath | xargs --no-run-if-empty sed -i -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/recipe-sysroot-native:FIXMESTAGINGDIRHOST:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssl/3.0.7-r0/recipe-sysroot:FIXMESTAGINGDIRTARGET:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:FIXME_HOSTTOOLS_DIR:g''
+DEBUG: Python function sstate_hardcode_path finished
+DEBUG: Executing python function sstate_report_unihash
+DEBUG: Python function sstate_report_unihash finished
+DEBUG: Executing shell function sstate_create_package
+DEBUG: Shell function sstate_create_package finished
+DEBUG: Executing python function sstate_hardcode_path_unpack
+DEBUG: Python function sstate_hardcode_path_unpack finished
+DEBUG: Python function sstate_task_postfunc finished

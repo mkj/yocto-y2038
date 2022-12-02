@@ -1,0 +1,9 @@
+DEBUG: Executing python function autotools_aclocals
+DEBUG: SITE files ['endian-little', 'bit-32', 'arm-common', 'arm-32', 'common-linux', 'common-glibc', 'arm-linux', 'arm-linux-gnueabi', 'common']
+DEBUG: Python function autotools_aclocals finished
+DEBUG: Executing shell function do_compile
+NOTE: make -j 1
+rm -f ../coreutils-9.1/src/single-binary.mk ../coreutils-9.1/src/single-binary.mk-t \
+  && /bin/bash ../coreutils-9.1/build-aux/gen-single-binary.sh ../coreutils-9.1/src/local.mk >../coreutils-9.1/src/single-binary.mk-t \
+  && chmod a-w ../coreutils-9.1/src/single-binary.mk-t && mv -f ../coreutils-9.1/src/single-binary.mk-t ../coreutils-9.1/src/single-binary.mk
+ cd ../coreutils-9.1 && /bin/bash /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/coreutils-9.1/build-aux/missing automake-1.16 --gnu Makefile

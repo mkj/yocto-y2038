@@ -1,0 +1,359 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['virtual:native:/home/matt/src/openbmc/meta/recipes-extended/xz/xz_5.2.7.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: ['xz-native', 'libtool-native', 'gettext-minimal-native', 'texinfo-dummy-native']
+NOTE: Skipping as already exists in sysroot: []
+DEBUG: sed -e 's:^[^/]*/:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux-libuuid/2.38.1-r0/recipe-sysroot-native/:g' /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/libtool-native/fixmepath | xargs sed -i -e 's:FIXMESTAGINGDIRTARGET:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux-libuuid/2.38.1-r0/recipe-sysroot:g; s:FIXMESTAGINGDIRHOST:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux-libuuid/2.38.1-r0/recipe-sysroot-native:g' -e 's:FIXME_PSEUDO_SYSROOT:/home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/pseudo-native:g' -e 's:FIXME_HOSTTOOLS_DIR:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:g' -e 's:FIXME_PKGDATA_DIR:/home/matt/tmp/build/obmc-y2038/tmp/pkgdata/evb-ast2600:g' -e 's:FIXME_PSEUDO_LOCALSTATEDIR:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux-libuuid/2.38.1-r0/pseudo/:g' -e 's:FIXME_LOGFIFO:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux-libuuid/2.38.1-r0/temp/fifo.1865760:g'
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function do_unpack
+DEBUG: Executing python function base_do_unpack
+NOTE: Unpacking /home/matt/tmp/build/obmc-y2038/downloads/util-linux-2.38.1.tar.xz to /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux-libuuid/2.38.1-r0/
+DEBUG: Searching for configure-sbindir.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/arm
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/arm
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/arm
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/arm
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/
+NOTE: Unpacking /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/configure-sbindir.patch to /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux-libuuid/2.38.1-r0/
+DEBUG: Searching for runuser.pamd in paths:
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/arm
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/arm
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/arm
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/arm
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/
+NOTE: Unpacking /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/runuser.pamd to /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux-libuuid/2.38.1-r0/
+DEBUG: Searching for runuser-l.pamd in paths:
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/arm
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/arm
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/arm
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/arm
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/
+NOTE: Unpacking /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/runuser-l.pamd to /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux-libuuid/2.38.1-r0/
+DEBUG: Searching for ptest.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/arm
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/arm
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/arm
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/arm
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/
+NOTE: Unpacking /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/ptest.patch to /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux-libuuid/2.38.1-r0/
+DEBUG: Searching for run-ptest in paths:
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/arm
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/arm
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/arm
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/arm
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/
+NOTE: Unpacking /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/run-ptest to /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux-libuuid/2.38.1-r0/
+DEBUG: Searching for display_testname_for_subtest.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/arm
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/arm
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/arm
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/arm
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/
+NOTE: Unpacking /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/display_testname_for_subtest.patch to /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux-libuuid/2.38.1-r0/
+DEBUG: Searching for avoid_parallel_tests.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/arm
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/arm
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/arm
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/arm
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/
+NOTE: Unpacking /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/avoid_parallel_tests.patch to /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux-libuuid/2.38.1-r0/
+DEBUG: Searching for 0001-check-for-sys-pidfd.h.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/arm
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/arm
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/arm
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/arm
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/
+NOTE: Unpacking /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/0001-check-for-sys-pidfd.h.patch to /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux-libuuid/2.38.1-r0/
+DEBUG: Searching for 0001-configure.ac-Improve-check-for-magic.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/arm
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/arm
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/arm
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/arm
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid-2.38.1/
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid/
+    /home/matt/src/openbmc/meta/recipes-core/util-linux/files/
+NOTE: Unpacking /home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux/0001-configure.ac-Improve-check-for-magic.patch to /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux-libuuid/2.38.1-r0/
+DEBUG: Python function base_do_unpack finished
+DEBUG: Python function do_unpack finished
+DEBUG: Executing python function create_source_date_epoch_stamp
+DEBUG: Newest file found: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux-libuuid/2.38.1-r0/util-linux-2.38.1/ChangeLog
+DEBUG: SOURCE_DATE_EPOCH: 1659604125
+DEBUG: Python function create_source_date_epoch_stamp finished
+DEBUG: Executing python function do_qa_unpack
+DEBUG: Python function do_qa_unpack finished

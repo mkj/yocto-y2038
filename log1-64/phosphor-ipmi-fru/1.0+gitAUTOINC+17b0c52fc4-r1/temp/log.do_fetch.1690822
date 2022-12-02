@@ -1,0 +1,66 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are []
+NOTE: Installed into sysroot: []
+NOTE: Skipping as already exists in sysroot: []
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function do_fetch
+DEBUG: Executing python function base_do_fetch
+DEBUG: Searching for of-name-to-eeprom.sh in paths:
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/ipmi/phosphor-ipmi-fru-1.0+gitAUTOINC+17b0c52fc4/openbmc-phosphor
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/ipmi/phosphor-ipmi-fru/openbmc-phosphor
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/ipmi/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/ipmi/phosphor-ipmi-fru-1.0+gitAUTOINC+17b0c52fc4/openbmc-phosphor
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/ipmi/phosphor-ipmi-fru/openbmc-phosphor
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/ipmi/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/ipmi/phosphor-ipmi-fru-1.0+gitAUTOINC+17b0c52fc4/evb-ast2600
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/ipmi/phosphor-ipmi-fru/evb-ast2600
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/ipmi/files/evb-ast2600
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/ipmi/phosphor-ipmi-fru-1.0+gitAUTOINC+17b0c52fc4/aspeed-g6
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/ipmi/phosphor-ipmi-fru/aspeed-g6
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/ipmi/files/aspeed-g6
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/ipmi/phosphor-ipmi-fru-1.0+gitAUTOINC+17b0c52fc4/aspeed
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/ipmi/phosphor-ipmi-fru/aspeed
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/ipmi/files/aspeed
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/ipmi/phosphor-ipmi-fru-1.0+gitAUTOINC+17b0c52fc4/armv7a
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/ipmi/phosphor-ipmi-fru/armv7a
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/ipmi/files/armv7a
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/ipmi/phosphor-ipmi-fru-1.0+gitAUTOINC+17b0c52fc4/phosphor-evb
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/ipmi/phosphor-ipmi-fru/phosphor-evb
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/ipmi/files/phosphor-evb
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/ipmi/phosphor-ipmi-fru-1.0+gitAUTOINC+17b0c52fc4/arm
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/ipmi/phosphor-ipmi-fru/arm
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/ipmi/files/arm
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/ipmi/phosphor-ipmi-fru-1.0+gitAUTOINC+17b0c52fc4/
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/ipmi/phosphor-ipmi-fru/
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/ipmi/files/
+DEBUG: Running 'export PSEUDO_DISABLED=1; export PATH="/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/phosphor-ipmi-fru/1.0+gitAUTOINC+17b0c52fc4-r1/recipe-sysroot-native/usr/bin/python3-native:/home/matt/src/openbmc/scripts:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/phosphor-ipmi-fru/1.0+gitAUTOINC+17b0c52fc4-r1/recipe-sysroot-native/usr/bin/arm-openbmc-linux-gnueabi:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/phosphor-ipmi-fru/1.0+gitAUTOINC+17b0c52fc4-r1/recipe-sysroot/usr/bin/crossscripts:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/phosphor-ipmi-fru/1.0+gitAUTOINC+17b0c52fc4-r1/recipe-sysroot-native/usr/sbin:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/phosphor-ipmi-fru/1.0+gitAUTOINC+17b0c52fc4-r1/recipe-sysroot-native/usr/bin:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/phosphor-ipmi-fru/1.0+gitAUTOINC+17b0c52fc4-r1/recipe-sysroot-native/sbin:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/phosphor-ipmi-fru/1.0+gitAUTOINC+17b0c52fc4-r1/recipe-sysroot-native/bin:/home/matt/src/openbmc/poky/bitbake/bin:/home/matt/tmp/build/obmc-y2038/tmp/hosttools"; export HOME="/home/matt"; git -c gc.autoDetach=false -c core.pager=cat branch --contains 17b0c52fc46a77b40f5b1b7acb031fe1ab353d32 --list master 2> /dev/null | wc -l' in /home/matt/tmp/build/obmc-y2038/downloads/git2/github.com.openbmc.ipmi-fru-parser
+DEBUG: Searching for obmc-read-eeprom@.service in paths:
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/ipmi/phosphor-ipmi-fru-1.0+gitAUTOINC+17b0c52fc4/openbmc-phosphor
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/ipmi/phosphor-ipmi-fru/openbmc-phosphor
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/ipmi/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/ipmi/phosphor-ipmi-fru-1.0+gitAUTOINC+17b0c52fc4/openbmc-phosphor
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/ipmi/phosphor-ipmi-fru/openbmc-phosphor
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/ipmi/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/ipmi/phosphor-ipmi-fru-1.0+gitAUTOINC+17b0c52fc4/evb-ast2600
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/ipmi/phosphor-ipmi-fru/evb-ast2600
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/ipmi/files/evb-ast2600
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/ipmi/phosphor-ipmi-fru-1.0+gitAUTOINC+17b0c52fc4/aspeed-g6
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/ipmi/phosphor-ipmi-fru/aspeed-g6
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/ipmi/files/aspeed-g6
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/ipmi/phosphor-ipmi-fru-1.0+gitAUTOINC+17b0c52fc4/aspeed
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/ipmi/phosphor-ipmi-fru/aspeed
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/ipmi/files/aspeed
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/ipmi/phosphor-ipmi-fru-1.0+gitAUTOINC+17b0c52fc4/armv7a
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/ipmi/phosphor-ipmi-fru/armv7a
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/ipmi/files/armv7a
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/ipmi/phosphor-ipmi-fru-1.0+gitAUTOINC+17b0c52fc4/phosphor-evb
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/ipmi/phosphor-ipmi-fru/phosphor-evb
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/ipmi/files/phosphor-evb
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/ipmi/phosphor-ipmi-fru-1.0+gitAUTOINC+17b0c52fc4/arm
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/ipmi/phosphor-ipmi-fru/arm
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/ipmi/files/arm
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/ipmi/phosphor-ipmi-fru-1.0+gitAUTOINC+17b0c52fc4/
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/ipmi/phosphor-ipmi-fru/
+    /home/matt/src/openbmc/meta-phosphor/recipes-phosphor/ipmi/files/
+DEBUG: Python function base_do_fetch finished
+DEBUG: Python function do_fetch finished

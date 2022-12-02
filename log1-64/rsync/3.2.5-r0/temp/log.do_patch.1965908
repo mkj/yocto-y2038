@@ -1,0 +1,156 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: ['quilt-native', 'patch-native', 'libtool-native', 'attr-native', 'texinfo-dummy-native', 'gettext-minimal-native']
+NOTE: Skipping as already exists in sysroot: []
+DEBUG: sed -e 's:^[^/]*/:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rsync/3.2.5-r0/recipe-sysroot-native/:g' /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/quilt-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/libtool-native/fixmepath | xargs sed -i -e 's:FIXMESTAGINGDIRTARGET:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rsync/3.2.5-r0/recipe-sysroot:g; s:FIXMESTAGINGDIRHOST:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rsync/3.2.5-r0/recipe-sysroot-native:g' -e 's:FIXME_PSEUDO_SYSROOT:/home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/pseudo-native:g' -e 's:FIXME_HOSTTOOLS_DIR:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:g' -e 's:FIXME_PKGDATA_DIR:/home/matt/tmp/build/obmc-y2038/tmp/pkgdata/evb-ast2600:g' -e 's:FIXME_PSEUDO_LOCALSTATEDIR:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rsync/3.2.5-r0/pseudo/:g' -e 's:FIXME_LOGFIFO:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/rsync/3.2.5-r0/temp/fifo.1965908:g'
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function do_patch
+DEBUG: Executing python function patch_do_patch
+DEBUG: Searching for rsyncd.conf in paths:
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync-3.2.5/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync-3.2.5/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync-3.2.5/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync-3.2.5/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync-3.2.5/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync-3.2.5/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync-3.2.5/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync-3.2.5/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/files/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync-3.2.5/
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync/
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/files/
+DEBUG: Searching for makefile-no-rebuild.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync-3.2.5/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync-3.2.5/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync-3.2.5/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync-3.2.5/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync-3.2.5/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync-3.2.5/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync-3.2.5/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync-3.2.5/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/files/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync-3.2.5/
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync/
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/files/
+DEBUG: Searching for determism.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync-3.2.5/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync-3.2.5/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync-3.2.5/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync-3.2.5/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync-3.2.5/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync-3.2.5/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync-3.2.5/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync-3.2.5/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/files/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync-3.2.5/
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync/
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/files/
+DEBUG: Searching for 0001-Add-missing-prototypes-to-function-declarations.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync-3.2.5/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync-3.2.5/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync-3.2.5/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync-3.2.5/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync-3.2.5/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync-3.2.5/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync-3.2.5/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync-3.2.5/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/files/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync-3.2.5/
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync/
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/files/
+DEBUG: Searching for 0001-Turn-on-pedantic-errors-at-the-end-of-configure.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync-3.2.5/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync-3.2.5/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync-3.2.5/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync-3.2.5/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync-3.2.5/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync-3.2.5/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync-3.2.5/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync-3.2.5/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/files/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync-3.2.5/
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/rsync/
+    /home/matt/src/openbmc/meta/recipes-devtools/rsync/files/
+NOTE: Applying patch 'makefile-no-rebuild.patch' (../../../src/openbmc/meta/recipes-devtools/rsync/files/makefile-no-rebuild.patch)
+NOTE: Applying patch 'determism.patch' (../../../src/openbmc/meta/recipes-devtools/rsync/files/determism.patch)
+NOTE: Applying patch '0001-Add-missing-prototypes-to-function-declarations.patch' (../../../src/openbmc/meta/recipes-devtools/rsync/files/0001-Add-missing-prototypes-to-function-declarations.patch)
+NOTE: Applying patch '0001-Turn-on-pedantic-errors-at-the-end-of-configure.patch' (../../../src/openbmc/meta/recipes-devtools/rsync/files/0001-Turn-on-pedantic-errors-at-the-end-of-configure.patch)
+DEBUG: Python function patch_do_patch finished
+DEBUG: Python function do_patch finished
+DEBUG: Executing python function do_qa_patch
+DEBUG: Python function do_qa_patch finished

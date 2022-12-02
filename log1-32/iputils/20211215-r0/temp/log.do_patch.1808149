@@ -1,0 +1,41 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: ['quilt-native', 'patch-native', 'libtool-native', 'attr-native', 'texinfo-dummy-native', 'gettext-minimal-native']
+NOTE: Skipping as already exists in sysroot: []
+DEBUG: sed -e 's:^[^/]*/:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot-native/:g' /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/quilt-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/libtool-native/fixmepath | xargs sed -i -e 's:FIXMESTAGINGDIRTARGET:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot:g; s:FIXMESTAGINGDIRHOST:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot-native:g' -e 's:FIXME_PSEUDO_SYSROOT:/home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/pseudo-native:g' -e 's:FIXME_HOSTTOOLS_DIR:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:g' -e 's:FIXME_PKGDATA_DIR:/home/matt/tmp/build/obmc-y2038/tmp/pkgdata/evb-ast2600:g' -e 's:FIXME_PSEUDO_LOCALSTATEDIR:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/pseudo/:g' -e 's:FIXME_LOGFIFO:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/temp/fifo.1808149:g'
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function do_patch
+DEBUG: Executing python function patch_do_patch
+DEBUG: Searching for 0001-rarpd-rdisc-Drop-PrivateUsers.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-extended/iputils/iputils-20211215/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/iputils/iputils/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/iputils/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/iputils/iputils-20211215/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/iputils/iputils/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/iputils/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/iputils/iputils-20211215/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/iputils/iputils/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/iputils/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/iputils/iputils-20211215/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/iputils/iputils/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/iputils/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/iputils/iputils-20211215/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/iputils/iputils/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/iputils/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/iputils/iputils-20211215/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/iputils/iputils/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/iputils/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/iputils/iputils-20211215/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/iputils/iputils/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/iputils/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/iputils/iputils-20211215/arm
+    /home/matt/src/openbmc/meta/recipes-extended/iputils/iputils/arm
+    /home/matt/src/openbmc/meta/recipes-extended/iputils/files/arm
+    /home/matt/src/openbmc/meta/recipes-extended/iputils/iputils-20211215/
+    /home/matt/src/openbmc/meta/recipes-extended/iputils/iputils/
+    /home/matt/src/openbmc/meta/recipes-extended/iputils/files/
+NOTE: Applying patch '0001-rarpd-rdisc-Drop-PrivateUsers.patch' (../../../src/openbmc/meta/recipes-extended/iputils/iputils/0001-rarpd-rdisc-Drop-PrivateUsers.patch)
+DEBUG: Python function patch_do_patch finished
+DEBUG: Python function do_patch finished
+DEBUG: Executing python function do_qa_patch
+DEBUG: Python function do_qa_patch finished

@@ -1,0 +1,53 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/cmake/cmake-native_3.24.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/ninja/ninja_1.11.1.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pkgconfig/pkgconfig_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: []
+NOTE: Skipping as already exists in sysroot: ['glibc', 'cmake-native', 'gcc-cross-arm', 'gcc-runtime', 'quilt-native', 'ninja-native', 'patch-native', 'pkgconfig-native', 'pseudo-native', 'linux-libc-headers', 'libgcc', 'libtool-native', 're2c-native', 'flex-native', 'texinfo-dummy-native', 'xz-native', 'zlib-native', 'zstd-native', 'binutils-cross-arm', 'mpfr-native', 'gnu-config-native', 'libmpc-native', 'gmp-native', 'curl-native', 'bzip2-native', 'ncurses-native', 'attr-native', 'm4-native', 'gettext-minimal-native', 'openssl-native', 'perl-native', 'make-native', 'gdbm-native']
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing shell function do_install
+NOTE: DESTDIR=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libjpeg-turbo/1_2.1.4-r0/image VERBOSE=1 cmake --build /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libjpeg-turbo/1_2.1.4-r0/build --target install --
+[0/1] cd /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libjpeg-turbo/1_2.1.4-r0/build && /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libjpeg-turbo/1_2.1.4-r0/recipe-sysroot-native/usr/bin/cmake -P cmake_install.cmake
+-- Install configuration: "Release"
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libjpeg-turbo/1_2.1.4-r0/image/usr/lib/libturbojpeg.so.0.2.0
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libjpeg-turbo/1_2.1.4-r0/image/usr/lib/libturbojpeg.so.0
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libjpeg-turbo/1_2.1.4-r0/image/usr/lib/libturbojpeg.so
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libjpeg-turbo/1_2.1.4-r0/image/usr/bin/tjbench
+-- Set runtime path of "/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libjpeg-turbo/1_2.1.4-r0/image/usr/bin/tjbench" to ""
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libjpeg-turbo/1_2.1.4-r0/image/usr/include/turbojpeg.h
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libjpeg-turbo/1_2.1.4-r0/image/usr/bin/rdjpgcom
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libjpeg-turbo/1_2.1.4-r0/image/usr/bin/wrjpgcom
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libjpeg-turbo/1_2.1.4-r0/image/usr/share/doc/libjpeg-turbo/README.ijg
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libjpeg-turbo/1_2.1.4-r0/image/usr/share/doc/libjpeg-turbo/README.md
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libjpeg-turbo/1_2.1.4-r0/image/usr/share/doc/libjpeg-turbo/example.txt
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libjpeg-turbo/1_2.1.4-r0/image/usr/share/doc/libjpeg-turbo/tjexample.c
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libjpeg-turbo/1_2.1.4-r0/image/usr/share/doc/libjpeg-turbo/libjpeg.txt
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libjpeg-turbo/1_2.1.4-r0/image/usr/share/doc/libjpeg-turbo/structure.txt
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libjpeg-turbo/1_2.1.4-r0/image/usr/share/doc/libjpeg-turbo/usage.txt
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libjpeg-turbo/1_2.1.4-r0/image/usr/share/doc/libjpeg-turbo/wizard.txt
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libjpeg-turbo/1_2.1.4-r0/image/usr/share/doc/libjpeg-turbo/LICENSE.md
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libjpeg-turbo/1_2.1.4-r0/image/usr/share/man/man1/cjpeg.1
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libjpeg-turbo/1_2.1.4-r0/image/usr/share/man/man1/djpeg.1
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libjpeg-turbo/1_2.1.4-r0/image/usr/share/man/man1/jpegtran.1
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libjpeg-turbo/1_2.1.4-r0/image/usr/share/man/man1/rdjpgcom.1
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libjpeg-turbo/1_2.1.4-r0/image/usr/share/man/man1/wrjpgcom.1
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libjpeg-turbo/1_2.1.4-r0/image/usr/lib/pkgconfig/libjpeg.pc
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libjpeg-turbo/1_2.1.4-r0/image/usr/lib/pkgconfig/libturbojpeg.pc
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libjpeg-turbo/1_2.1.4-r0/image/usr/lib/cmake/libjpeg-turbo/libjpeg-turboConfig.cmake
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libjpeg-turbo/1_2.1.4-r0/image/usr/lib/cmake/libjpeg-turbo/libjpeg-turboConfigVersion.cmake
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libjpeg-turbo/1_2.1.4-r0/image/usr/lib/cmake/libjpeg-turbo/libjpeg-turboTargets.cmake
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libjpeg-turbo/1_2.1.4-r0/image/usr/lib/cmake/libjpeg-turbo/libjpeg-turboTargets-release.cmake
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libjpeg-turbo/1_2.1.4-r0/image/usr/include/jconfig.h
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libjpeg-turbo/1_2.1.4-r0/image/usr/include/jerror.h
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libjpeg-turbo/1_2.1.4-r0/image/usr/include/jmorecfg.h
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libjpeg-turbo/1_2.1.4-r0/image/usr/include/jpeglib.h
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libjpeg-turbo/1_2.1.4-r0/image/usr/lib/libjpeg.so.62.3.0
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libjpeg-turbo/1_2.1.4-r0/image/usr/lib/libjpeg.so.62
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libjpeg-turbo/1_2.1.4-r0/image/usr/lib/libjpeg.so
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libjpeg-turbo/1_2.1.4-r0/image/usr/bin/cjpeg
+-- Set runtime path of "/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libjpeg-turbo/1_2.1.4-r0/image/usr/bin/cjpeg" to ""
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libjpeg-turbo/1_2.1.4-r0/image/usr/bin/djpeg
+-- Set runtime path of "/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libjpeg-turbo/1_2.1.4-r0/image/usr/bin/djpeg" to ""
+-- Installing: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libjpeg-turbo/1_2.1.4-r0/image/usr/bin/jpegtran
+-- Set runtime path of "/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libjpeg-turbo/1_2.1.4-r0/image/usr/bin/jpegtran" to ""
+DEBUG: Shell function do_install finished
+DEBUG: Executing shell function remove_libtool_la
+DEBUG: Shell function remove_libtool_la finished

@@ -1,0 +1,128 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: ['quilt-native', 'patch-native', 'libtool-native', 'attr-native', 'texinfo-dummy-native', 'gettext-minimal-native']
+NOTE: Skipping as already exists in sysroot: []
+DEBUG: sed -e 's:^[^/]*/:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/boost/1.80.0-r0/recipe-sysroot-native/:g' /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/quilt-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/libtool-native/fixmepath | xargs sed -i -e 's:FIXMESTAGINGDIRTARGET:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/boost/1.80.0-r0/recipe-sysroot:g; s:FIXMESTAGINGDIRHOST:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/boost/1.80.0-r0/recipe-sysroot-native:g' -e 's:FIXME_PSEUDO_SYSROOT:/home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/pseudo-native:g' -e 's:FIXME_HOSTTOOLS_DIR:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:g' -e 's:FIXME_PKGDATA_DIR:/home/matt/tmp/build/obmc-y2038/tmp/pkgdata/evb-ast2600:g' -e 's:FIXME_PSEUDO_LOCALSTATEDIR:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/boost/1.80.0-r0/pseudo/:g' -e 's:FIXME_LOGFIFO:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/boost/1.80.0-r0/temp/fifo.1938966:g'
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function do_patch
+DEBUG: Executing python function patch_do_patch
+DEBUG: Searching for boost-math-disable-pch-for-gcc.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-support/boost/boost-1.80.0/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/boost/boost/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/boost/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/boost/boost-1.80.0/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/boost/boost/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/boost/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/boost/boost-1.80.0/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-support/boost/boost/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-support/boost/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-support/boost/boost-1.80.0/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-support/boost/boost/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-support/boost/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-support/boost/boost-1.80.0/aspeed
+    /home/matt/src/openbmc/meta/recipes-support/boost/boost/aspeed
+    /home/matt/src/openbmc/meta/recipes-support/boost/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-support/boost/boost-1.80.0/armv7a
+    /home/matt/src/openbmc/meta/recipes-support/boost/boost/armv7a
+    /home/matt/src/openbmc/meta/recipes-support/boost/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-support/boost/boost-1.80.0/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-support/boost/boost/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-support/boost/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-support/boost/boost-1.80.0/arm
+    /home/matt/src/openbmc/meta/recipes-support/boost/boost/arm
+    /home/matt/src/openbmc/meta/recipes-support/boost/files/arm
+    /home/matt/src/openbmc/meta/recipes-support/boost/boost-1.80.0/
+    /home/matt/src/openbmc/meta/recipes-support/boost/boost/
+    /home/matt/src/openbmc/meta/recipes-support/boost/files/
+DEBUG: Searching for 0001-Don-t-set-up-arch-instruction-set-flags-we-do-that-o.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-support/boost/boost-1.80.0/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/boost/boost/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/boost/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/boost/boost-1.80.0/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/boost/boost/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/boost/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/boost/boost-1.80.0/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-support/boost/boost/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-support/boost/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-support/boost/boost-1.80.0/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-support/boost/boost/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-support/boost/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-support/boost/boost-1.80.0/aspeed
+    /home/matt/src/openbmc/meta/recipes-support/boost/boost/aspeed
+    /home/matt/src/openbmc/meta/recipes-support/boost/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-support/boost/boost-1.80.0/armv7a
+    /home/matt/src/openbmc/meta/recipes-support/boost/boost/armv7a
+    /home/matt/src/openbmc/meta/recipes-support/boost/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-support/boost/boost-1.80.0/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-support/boost/boost/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-support/boost/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-support/boost/boost-1.80.0/arm
+    /home/matt/src/openbmc/meta/recipes-support/boost/boost/arm
+    /home/matt/src/openbmc/meta/recipes-support/boost/files/arm
+    /home/matt/src/openbmc/meta/recipes-support/boost/boost-1.80.0/
+    /home/matt/src/openbmc/meta/recipes-support/boost/boost/
+    /home/matt/src/openbmc/meta/recipes-support/boost/files/
+DEBUG: Searching for 0001-dont-setup-compiler-flags-m32-m64.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-support/boost/boost-1.80.0/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/boost/boost/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/boost/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/boost/boost-1.80.0/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/boost/boost/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/boost/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/boost/boost-1.80.0/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-support/boost/boost/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-support/boost/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-support/boost/boost-1.80.0/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-support/boost/boost/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-support/boost/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-support/boost/boost-1.80.0/aspeed
+    /home/matt/src/openbmc/meta/recipes-support/boost/boost/aspeed
+    /home/matt/src/openbmc/meta/recipes-support/boost/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-support/boost/boost-1.80.0/armv7a
+    /home/matt/src/openbmc/meta/recipes-support/boost/boost/armv7a
+    /home/matt/src/openbmc/meta/recipes-support/boost/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-support/boost/boost-1.80.0/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-support/boost/boost/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-support/boost/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-support/boost/boost-1.80.0/arm
+    /home/matt/src/openbmc/meta/recipes-support/boost/boost/arm
+    /home/matt/src/openbmc/meta/recipes-support/boost/files/arm
+    /home/matt/src/openbmc/meta/recipes-support/boost/boost-1.80.0/
+    /home/matt/src/openbmc/meta/recipes-support/boost/boost/
+    /home/matt/src/openbmc/meta/recipes-support/boost/files/
+DEBUG: Searching for 0001-The-std-lib-unary-binary_function-base-classes-are-d.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-support/boost/boost-1.80.0/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/boost/boost/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/boost/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/boost/boost-1.80.0/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/boost/boost/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/boost/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/boost/boost-1.80.0/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-support/boost/boost/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-support/boost/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-support/boost/boost-1.80.0/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-support/boost/boost/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-support/boost/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-support/boost/boost-1.80.0/aspeed
+    /home/matt/src/openbmc/meta/recipes-support/boost/boost/aspeed
+    /home/matt/src/openbmc/meta/recipes-support/boost/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-support/boost/boost-1.80.0/armv7a
+    /home/matt/src/openbmc/meta/recipes-support/boost/boost/armv7a
+    /home/matt/src/openbmc/meta/recipes-support/boost/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-support/boost/boost-1.80.0/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-support/boost/boost/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-support/boost/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-support/boost/boost-1.80.0/arm
+    /home/matt/src/openbmc/meta/recipes-support/boost/boost/arm
+    /home/matt/src/openbmc/meta/recipes-support/boost/files/arm
+    /home/matt/src/openbmc/meta/recipes-support/boost/boost-1.80.0/
+    /home/matt/src/openbmc/meta/recipes-support/boost/boost/
+    /home/matt/src/openbmc/meta/recipes-support/boost/files/
+NOTE: Applying patch 'boost-math-disable-pch-for-gcc.patch' (../../../src/openbmc/meta/recipes-support/boost/boost/boost-math-disable-pch-for-gcc.patch)
+NOTE: Applying patch '0001-Don-t-set-up-arch-instruction-set-flags-we-do-that-o.patch' (../../../src/openbmc/meta/recipes-support/boost/boost/0001-Don-t-set-up-arch-instruction-set-flags-we-do-that-o.patch)
+NOTE: Applying patch '0001-dont-setup-compiler-flags-m32-m64.patch' (../../../src/openbmc/meta/recipes-support/boost/boost/0001-dont-setup-compiler-flags-m32-m64.patch)
+NOTE: Applying patch '0001-The-std-lib-unary-binary_function-base-classes-are-d.patch' (../../../src/openbmc/meta/recipes-support/boost/boost/0001-The-std-lib-unary-binary_function-base-classes-are-d.patch)
+DEBUG: Python function patch_do_patch finished
+DEBUG: Python function do_patch finished
+DEBUG: Executing python function do_qa_patch
+DEBUG: Python function do_qa_patch finished

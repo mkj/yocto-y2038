@@ -1,0 +1,991 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/libxcrypt/libxcrypt_4.4.28.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/systemd/systemd-systemctl-native.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/flex/flex_2.6.4.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-cross_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-native_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-extended/cracklib/cracklib_2.9.8.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-core/gettext/gettext_0.21.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-core/libxml/libxml2_2.9.14.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/autoconf/autoconf_2.71.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/automake/automake_1.16.5.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/bison/bison_3.8.2.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/dwarfsrcfiles/dwarfsrcfiles.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/flex/flex_2.6.4.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pkgconfig/pkgconfig_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/rpm/rpm_4.18.0.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-extended/xz/xz_5.2.7.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: ['dwarfsrcfiles-native', 'rpm-native', 'elfutils-native', 'file-native', 'libgcrypt-native', 'lua-native', 'popt-native', 'libgpg-error-native', 'libcap-native']
+NOTE: Skipping as already exists in sysroot: ['glibc', 'libxcrypt', 'systemd-systemctl-native', 'flex', 'gcc-cross-arm', 'gcc-runtime', 'libtool-cross', 'libtool-native', 'quilt-native', 'cracklib', 'gettext-native', 'libxml2-native', 'autoconf-native', 'automake-native', 'bison-native', 'flex-native', 'patch-native', 'pkgconfig-native', 'pseudo-native', 'xz-native', 'texinfo-dummy-native', 'binutils-cross-arm', 'zlib', 'libgcc', 'linux-libc-headers', 'gnu-config-native', 'm4-native', 'gettext-minimal-native', 'attr-native', 'zlib-native', 'python3-native', 'mpfr-native', 'libmpc-native', 'zstd-native', 'gmp-native', 'bzip2-native', 'sqlite3-native', 'libnsl2-native', 'gdbm-native', 'libtirpc-native', 'libffi-native', 'ncurses-native', 'readline-native', 'util-linux-libuuid-native', 'openssl-native', 'perl-native', 'make-native']
+DEBUG: sed -e 's:^[^/]*/:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/recipe-sysroot-native/:g' /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/rpm-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/elfutils-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/libgcrypt-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/lua-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/libgpg-error-native/fixmepath | xargs sed -i -e 's:FIXMESTAGINGDIRTARGET:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/recipe-sysroot:g; s:FIXMESTAGINGDIRHOST:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/recipe-sysroot-native:g' -e 's:FIXME_PSEUDO_SYSROOT:/home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/pseudo-native:g' -e 's:FIXME_HOSTTOOLS_DIR:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:g' -e 's:FIXME_PKGDATA_DIR:/home/matt/tmp/build/obmc-y2038/tmp/pkgdata/evb-ast2600:g' -e 's:FIXME_PSEUDO_LOCALSTATEDIR:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/pseudo/:g' -e 's:FIXME_LOGFIFO:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/temp/fifo.2674975:g'
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function sstate_task_prefunc
+DEBUG: Python function sstate_task_prefunc finished
+DEBUG: Executing python function do_package
+DEBUG: Executing python function package_convert_pr_autoinc
+DEBUG: Python function package_convert_pr_autoinc finished
+DEBUG: Executing python function package_prepare_pkgdata
+NOTE: Installed into pkgdata-sysroot: ['gcc-runtime', 'cracklib', 'flex', 'glibc', 'libxcrypt', 'libgcc', 'zlib', 'linux-libc-headers']
+DEBUG: Python function package_prepare_pkgdata finished
+DEBUG: Executing python function perform_packagecopy
+DEBUG: Python function perform_packagecopy finished
+DEBUG: Executing python function split_and_strip_files
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/package/usr/share/Linux-PAM/xtests/tst-pam_unix4']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/package/usr/share/Linux-PAM/xtests/tst-pam_unix3']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/package/usr/share/Linux-PAM/xtests/tst-pam_unix2']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/package/usr/share/Linux-PAM/xtests/tst-pam_unix1']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/package/usr/share/Linux-PAM/xtests/tst-pam_time1']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/package/usr/share/Linux-PAM/xtests/tst-pam_succeed_if1']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/package/usr/share/Linux-PAM/xtests/tst-pam_pwhistory1']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/package/usr/share/Linux-PAM/xtests/tst-pam_limits1']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/package/usr/share/Linux-PAM/xtests/tst-pam_group1']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/package/usr/share/Linux-PAM/xtests/tst-pam_dispatch5']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/package/usr/share/Linux-PAM/xtests/tst-pam_dispatch4']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/package/usr/share/Linux-PAM/xtests/tst-pam_dispatch3']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/package/usr/share/Linux-PAM/xtests/tst-pam_dispatch2']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/package/usr/share/Linux-PAM/xtests/tst-pam_dispatch1']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/package/usr/share/Linux-PAM/xtests/tst-pam_cracklib2']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/package/usr/share/Linux-PAM/xtests/tst-pam_cracklib1']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/package/usr/share/Linux-PAM/xtests/tst-pam_authsucceed']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/package/usr/share/Linux-PAM/xtests/tst-pam_authfail']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/package/usr/share/Linux-PAM/xtests/tst-pam_access4']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/package/usr/share/Linux-PAM/xtests/tst-pam_access3']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/package/usr/share/Linux-PAM/xtests/tst-pam_access2']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/package/usr/share/Linux-PAM/xtests/tst-pam_access1']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/package/usr/sbin/unix_update']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/package/usr/sbin/unix_chkpwd']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/package/usr/sbin/pam_timestamp_check']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/package/usr/sbin/pam_tally2']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/package/usr/sbin/pam_tally']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/package/usr/sbin/mkhomedir_helper']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/package/lib/security/pam_xauth.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/package/lib/security/pam_wheel.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/package/lib/security/pam_warn.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/package/lib/security/pam_unix.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/package/lib/security/pam_umask.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/package/lib/security/pam_timestamp.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/package/lib/security/pam_time.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/package/lib/security/pam_tally2.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/package/lib/security/pam_tally.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/package/lib/security/pam_succeed_if.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/package/lib/security/pam_stress.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/package/lib/security/pam_shells.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/package/lib/security/pam_securetty.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/package/lib/security/pam_rootok.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/package/lib/security/pam_rhosts.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/package/lib/security/pam_pwhistory.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/package/lib/security/pam_permit.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/package/lib/security/pam_nologin.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/package/lib/security/pam_namespace.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/package/lib/security/pam_motd.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/package/lib/security/pam_mkhomedir.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/package/lib/security/pam_mail.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/package/lib/security/pam_loginuid.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/package/lib/security/pam_localuser.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/package/lib/security/pam_listfile.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/package/lib/security/pam_limits.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/package/lib/security/pam_lastlog.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/package/lib/security/pam_keyinit.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/package/lib/security/pam_issue.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/package/lib/security/pam_group.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/package/lib/security/pam_ftp.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/package/lib/security/pam_filter/upperLOWER']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/package/lib/security/pam_filter.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/package/lib/security/pam_faildelay.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/package/lib/security/pam_exec.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/package/lib/security/pam_env.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/package/lib/security/pam_echo.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/package/lib/security/pam_deny.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/package/lib/security/pam_debug.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/package/lib/security/pam_cracklib.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/package/lib/security/pam_access.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/package/lib/libpamc.so.0.82.1']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/package/lib/libpam_misc.so.0.82.1']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/package/lib/libpam.so.0.84.2']
+DEBUG: Python function split_and_strip_files finished
+DEBUG: Executing python function fixup_perms
+DEBUG: Python function fixup_perms finished
+DEBUG: Executing python function systemd_populate_packages
+DEBUG: Python function systemd_populate_packages finished
+DEBUG: Executing python function package_do_split_locales
+DEBUG: Python function package_do_split_locales finished
+DEBUG: Executing python function populate_packages
+DEBUG: Python function populate_packages finished
+DEBUG: Executing python function package_fixsymlinks
+DEBUG: libpam-dev contains dangling link /lib/libpam_misc.so.0.82.1
+DEBUG: target found in libpam
+DEBUG: libpam-dev contains dangling link /lib/libpamc.so.0.82.1
+DEBUG: target found in libpam
+DEBUG: libpam-dev contains dangling link /lib/libpam.so.0.84.2
+DEBUG: target found in libpam
+DEBUG: Python function package_fixsymlinks finished
+DEBUG: Executing python function package_name_hook
+DEBUG: Executing python function debian_package_name_hook
+DEBUG: LIBNAMES: pkg pam-plugin-xauth libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg pam-plugin-wheel libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg pam-plugin-warn libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg pam-plugin-unix libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg pam-plugin-umask libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg pam-plugin-timestamp libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg pam-plugin-time libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg pam-plugin-tally2 libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg pam-plugin-tally libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg pam-plugin-succeed-if libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg pam-plugin-stress libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg pam-plugin-shells libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg pam-plugin-securetty libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg pam-plugin-rootok libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg pam-plugin-rhosts libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg pam-plugin-pwhistory libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg pam-plugin-permit libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg pam-plugin-nologin libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg pam-plugin-namespace libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg pam-plugin-motd libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg pam-plugin-mkhomedir libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg pam-plugin-mail libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg pam-plugin-loginuid libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg pam-plugin-localuser libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg pam-plugin-listfile libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg pam-plugin-limits libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg pam-plugin-lastlog libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg pam-plugin-keyinit libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg pam-plugin-issue libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg pam-plugin-group libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg pam-plugin-ftp libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg pam-plugin-filter libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg pam-plugin-faildelay libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg pam-plugin-exec libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg pam-plugin-env libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg pam-plugin-echo libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg pam-plugin-deny libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg pam-plugin-debug libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg pam-plugin-cracklib libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg pam-plugin-access libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg pam-filter-upperlower libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-xtests libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-staticdev libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-src libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-runtime libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-zu libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-zh-tw libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-zh-hk libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-zh-cn libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-yo libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-wba libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-vi libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-ur libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-uk libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-tw libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-tr libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-th libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-tg libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-te libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-ta libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-sv libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-sr+latin libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-sr libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-sq libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-sl libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-sk libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-si libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-ru libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-ro libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-pt-br libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-pt libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-pl libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-pa libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-or libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-nso libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-nn libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-nl libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-ne libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-nds libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-nb libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-my libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-ms libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-mr libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-mn libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-ml libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-mk libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-mai libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-lv libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-lt libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-ky libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-kw-gb libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-kw+uccor libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-kw+kkcor libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-kw libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-ko libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-kn libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-km libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-kk libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-ka libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-ja libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-it libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-is libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-ilo libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-id libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-ia libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-hu libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-hr libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-hi libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-he libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-gu libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-gl libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-ga libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-fr libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-fi libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-fa libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-eu libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-et libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-es libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-eo libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-en-gb libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-el libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-de-ch libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-de libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-da libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-cy libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-cs libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-ca libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-bs libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-brx libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-br libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-bo libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-bn-in libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-bn libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-bg libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-be libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-bal libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-ast libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-as libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-ar libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-anp libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-am libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-locale-af libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-doc libs 0 bins 0 sonames []
+arm-openbmc-linux-gnueabi-objdump: '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam-dev/lib/libpam_misc.so': No such file
+arm-openbmc-linux-gnueabi-objdump: '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam-dev/lib/libpamc.so': No such file
+arm-openbmc-linux-gnueabi-objdump: '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam-dev/lib/libpam.so': No such file
+DEBUG: LIBNAMES: pkg libpam-dev libs 1 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam-dbg libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libpam libs 1 bins 0 sonames ['libpamc.so.0', 'libpam_misc.so.0', 'libpam.so.0']
+NOTE: Multiple libraries (libpamc.so.0, libpam_misc.so.0, libpam.so.0) found and LEAD_SONAME not defined
+DEBUG: Python function debian_package_name_hook finished
+DEBUG: Python function package_name_hook finished
+DEBUG: Executing python function package_do_filedeps
+DEBUG: Python function package_do_filedeps finished
+DEBUG: Executing python function package_do_shlibs
+DEBUG: Reading shlib providers in /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/pkgdata-sysroot/shlibs2
+DEBUG: calculating shlib provides for libpam-src
+DEBUG: LIBNAMES: pkg libpam-src sonames set()
+DEBUG: calculating shlib provides for libpam-dbg
+DEBUG: LIBNAMES: pkg libpam-dbg sonames set()
+DEBUG: calculating shlib provides for libpam-staticdev
+DEBUG: LIBNAMES: pkg libpam-staticdev sonames set()
+DEBUG: calculating shlib provides for libpam-dev
+DEBUG: LIBNAMES: pkg libpam-dev sonames set()
+DEBUG: calculating shlib provides for libpam-doc
+DEBUG: LIBNAMES: pkg libpam-doc sonames set()
+DEBUG: calculating shlib provides for libpam
+DEBUG: registering libpam-1.3.1 as shlib provider for libpam.so.0
+DEBUG: registering libpam-1.3.1 as shlib provider for libpam_misc.so.0
+DEBUG: registering libpam-1.3.1 as shlib provider for libpamc.so.0
+DEBUG: adding ldconfig call to postinst for libpam
+DEBUG: LIBNAMES: pkg libpam sonames {('libpamc.so.0', '/lib', '1.3.1'), ('libpam.so.0', '/lib', '1.3.1'), ('libpam_misc.so.0', '/lib', '1.3.1')}
+DEBUG: calculating shlib provides for libpam-runtime
+DEBUG: LIBNAMES: pkg libpam-runtime sonames set()
+DEBUG: calculating shlib provides for libpam-xtests
+DEBUG: LIBNAMES: pkg libpam-xtests sonames set()
+DEBUG: calculating shlib provides for libpam-locale-af
+DEBUG: LIBNAMES: pkg libpam-locale-af sonames set()
+DEBUG: calculating shlib provides for libpam-locale-am
+DEBUG: LIBNAMES: pkg libpam-locale-am sonames set()
+DEBUG: calculating shlib provides for libpam-locale-anp
+DEBUG: LIBNAMES: pkg libpam-locale-anp sonames set()
+DEBUG: calculating shlib provides for libpam-locale-ar
+DEBUG: LIBNAMES: pkg libpam-locale-ar sonames set()
+DEBUG: calculating shlib provides for libpam-locale-as
+DEBUG: LIBNAMES: pkg libpam-locale-as sonames set()
+DEBUG: calculating shlib provides for libpam-locale-ast
+DEBUG: LIBNAMES: pkg libpam-locale-ast sonames set()
+DEBUG: calculating shlib provides for libpam-locale-bal
+DEBUG: LIBNAMES: pkg libpam-locale-bal sonames set()
+DEBUG: calculating shlib provides for libpam-locale-be
+DEBUG: LIBNAMES: pkg libpam-locale-be sonames set()
+DEBUG: calculating shlib provides for libpam-locale-bg
+DEBUG: LIBNAMES: pkg libpam-locale-bg sonames set()
+DEBUG: calculating shlib provides for libpam-locale-bn
+DEBUG: LIBNAMES: pkg libpam-locale-bn sonames set()
+DEBUG: calculating shlib provides for libpam-locale-bn-in
+DEBUG: LIBNAMES: pkg libpam-locale-bn-in sonames set()
+DEBUG: calculating shlib provides for libpam-locale-bo
+DEBUG: LIBNAMES: pkg libpam-locale-bo sonames set()
+DEBUG: calculating shlib provides for libpam-locale-br
+DEBUG: LIBNAMES: pkg libpam-locale-br sonames set()
+DEBUG: calculating shlib provides for libpam-locale-brx
+DEBUG: LIBNAMES: pkg libpam-locale-brx sonames set()
+DEBUG: calculating shlib provides for libpam-locale-bs
+DEBUG: LIBNAMES: pkg libpam-locale-bs sonames set()
+DEBUG: calculating shlib provides for libpam-locale-ca
+DEBUG: LIBNAMES: pkg libpam-locale-ca sonames set()
+DEBUG: calculating shlib provides for libpam-locale-cs
+DEBUG: LIBNAMES: pkg libpam-locale-cs sonames set()
+DEBUG: calculating shlib provides for libpam-locale-cy
+DEBUG: LIBNAMES: pkg libpam-locale-cy sonames set()
+DEBUG: calculating shlib provides for libpam-locale-da
+DEBUG: LIBNAMES: pkg libpam-locale-da sonames set()
+DEBUG: calculating shlib provides for libpam-locale-de
+DEBUG: LIBNAMES: pkg libpam-locale-de sonames set()
+DEBUG: calculating shlib provides for libpam-locale-de-ch
+DEBUG: LIBNAMES: pkg libpam-locale-de-ch sonames set()
+DEBUG: calculating shlib provides for libpam-locale-el
+DEBUG: LIBNAMES: pkg libpam-locale-el sonames set()
+DEBUG: calculating shlib provides for libpam-locale-en-gb
+DEBUG: LIBNAMES: pkg libpam-locale-en-gb sonames set()
+DEBUG: calculating shlib provides for libpam-locale-eo
+DEBUG: LIBNAMES: pkg libpam-locale-eo sonames set()
+DEBUG: calculating shlib provides for libpam-locale-es
+DEBUG: LIBNAMES: pkg libpam-locale-es sonames set()
+DEBUG: calculating shlib provides for libpam-locale-et
+DEBUG: LIBNAMES: pkg libpam-locale-et sonames set()
+DEBUG: calculating shlib provides for libpam-locale-eu
+DEBUG: LIBNAMES: pkg libpam-locale-eu sonames set()
+DEBUG: calculating shlib provides for libpam-locale-fa
+DEBUG: LIBNAMES: pkg libpam-locale-fa sonames set()
+DEBUG: calculating shlib provides for libpam-locale-fi
+DEBUG: LIBNAMES: pkg libpam-locale-fi sonames set()
+DEBUG: calculating shlib provides for libpam-locale-fr
+DEBUG: LIBNAMES: pkg libpam-locale-fr sonames set()
+DEBUG: calculating shlib provides for libpam-locale-ga
+DEBUG: LIBNAMES: pkg libpam-locale-ga sonames set()
+DEBUG: calculating shlib provides for libpam-locale-gl
+DEBUG: LIBNAMES: pkg libpam-locale-gl sonames set()
+DEBUG: calculating shlib provides for libpam-locale-gu
+DEBUG: LIBNAMES: pkg libpam-locale-gu sonames set()
+DEBUG: calculating shlib provides for libpam-locale-he
+DEBUG: LIBNAMES: pkg libpam-locale-he sonames set()
+DEBUG: calculating shlib provides for libpam-locale-hi
+DEBUG: LIBNAMES: pkg libpam-locale-hi sonames set()
+DEBUG: calculating shlib provides for libpam-locale-hr
+DEBUG: LIBNAMES: pkg libpam-locale-hr sonames set()
+DEBUG: calculating shlib provides for libpam-locale-hu
+DEBUG: LIBNAMES: pkg libpam-locale-hu sonames set()
+DEBUG: calculating shlib provides for libpam-locale-ia
+DEBUG: LIBNAMES: pkg libpam-locale-ia sonames set()
+DEBUG: calculating shlib provides for libpam-locale-id
+DEBUG: LIBNAMES: pkg libpam-locale-id sonames set()
+DEBUG: calculating shlib provides for libpam-locale-ilo
+DEBUG: LIBNAMES: pkg libpam-locale-ilo sonames set()
+DEBUG: calculating shlib provides for libpam-locale-is
+DEBUG: LIBNAMES: pkg libpam-locale-is sonames set()
+DEBUG: calculating shlib provides for libpam-locale-it
+DEBUG: LIBNAMES: pkg libpam-locale-it sonames set()
+DEBUG: calculating shlib provides for libpam-locale-ja
+DEBUG: LIBNAMES: pkg libpam-locale-ja sonames set()
+DEBUG: calculating shlib provides for libpam-locale-ka
+DEBUG: LIBNAMES: pkg libpam-locale-ka sonames set()
+DEBUG: calculating shlib provides for libpam-locale-kk
+DEBUG: LIBNAMES: pkg libpam-locale-kk sonames set()
+DEBUG: calculating shlib provides for libpam-locale-km
+DEBUG: LIBNAMES: pkg libpam-locale-km sonames set()
+DEBUG: calculating shlib provides for libpam-locale-kn
+DEBUG: LIBNAMES: pkg libpam-locale-kn sonames set()
+DEBUG: calculating shlib provides for libpam-locale-ko
+DEBUG: LIBNAMES: pkg libpam-locale-ko sonames set()
+DEBUG: calculating shlib provides for libpam-locale-kw
+DEBUG: LIBNAMES: pkg libpam-locale-kw sonames set()
+DEBUG: calculating shlib provides for libpam-locale-kw+kkcor
+DEBUG: LIBNAMES: pkg libpam-locale-kw+kkcor sonames set()
+DEBUG: calculating shlib provides for libpam-locale-kw+uccor
+DEBUG: LIBNAMES: pkg libpam-locale-kw+uccor sonames set()
+DEBUG: calculating shlib provides for libpam-locale-kw-gb
+DEBUG: LIBNAMES: pkg libpam-locale-kw-gb sonames set()
+DEBUG: calculating shlib provides for libpam-locale-ky
+DEBUG: LIBNAMES: pkg libpam-locale-ky sonames set()
+DEBUG: calculating shlib provides for libpam-locale-lt
+DEBUG: LIBNAMES: pkg libpam-locale-lt sonames set()
+DEBUG: calculating shlib provides for libpam-locale-lv
+DEBUG: LIBNAMES: pkg libpam-locale-lv sonames set()
+DEBUG: calculating shlib provides for libpam-locale-mai
+DEBUG: LIBNAMES: pkg libpam-locale-mai sonames set()
+DEBUG: calculating shlib provides for libpam-locale-mk
+DEBUG: LIBNAMES: pkg libpam-locale-mk sonames set()
+DEBUG: calculating shlib provides for libpam-locale-ml
+DEBUG: LIBNAMES: pkg libpam-locale-ml sonames set()
+DEBUG: calculating shlib provides for libpam-locale-mn
+DEBUG: LIBNAMES: pkg libpam-locale-mn sonames set()
+DEBUG: calculating shlib provides for libpam-locale-mr
+DEBUG: LIBNAMES: pkg libpam-locale-mr sonames set()
+DEBUG: calculating shlib provides for libpam-locale-ms
+DEBUG: LIBNAMES: pkg libpam-locale-ms sonames set()
+DEBUG: calculating shlib provides for libpam-locale-my
+DEBUG: LIBNAMES: pkg libpam-locale-my sonames set()
+DEBUG: calculating shlib provides for libpam-locale-nb
+DEBUG: LIBNAMES: pkg libpam-locale-nb sonames set()
+DEBUG: calculating shlib provides for libpam-locale-nds
+DEBUG: LIBNAMES: pkg libpam-locale-nds sonames set()
+DEBUG: calculating shlib provides for libpam-locale-ne
+DEBUG: LIBNAMES: pkg libpam-locale-ne sonames set()
+DEBUG: calculating shlib provides for libpam-locale-nl
+DEBUG: LIBNAMES: pkg libpam-locale-nl sonames set()
+DEBUG: calculating shlib provides for libpam-locale-nn
+DEBUG: LIBNAMES: pkg libpam-locale-nn sonames set()
+DEBUG: calculating shlib provides for libpam-locale-nso
+DEBUG: LIBNAMES: pkg libpam-locale-nso sonames set()
+DEBUG: calculating shlib provides for libpam-locale-or
+DEBUG: LIBNAMES: pkg libpam-locale-or sonames set()
+DEBUG: calculating shlib provides for libpam-locale-pa
+DEBUG: LIBNAMES: pkg libpam-locale-pa sonames set()
+DEBUG: calculating shlib provides for libpam-locale-pl
+DEBUG: LIBNAMES: pkg libpam-locale-pl sonames set()
+DEBUG: calculating shlib provides for libpam-locale-pt
+DEBUG: LIBNAMES: pkg libpam-locale-pt sonames set()
+DEBUG: calculating shlib provides for libpam-locale-pt-br
+DEBUG: LIBNAMES: pkg libpam-locale-pt-br sonames set()
+DEBUG: calculating shlib provides for libpam-locale-ro
+DEBUG: LIBNAMES: pkg libpam-locale-ro sonames set()
+DEBUG: calculating shlib provides for libpam-locale-ru
+DEBUG: LIBNAMES: pkg libpam-locale-ru sonames set()
+DEBUG: calculating shlib provides for libpam-locale-si
+DEBUG: LIBNAMES: pkg libpam-locale-si sonames set()
+DEBUG: calculating shlib provides for libpam-locale-sk
+DEBUG: LIBNAMES: pkg libpam-locale-sk sonames set()
+DEBUG: calculating shlib provides for libpam-locale-sl
+DEBUG: LIBNAMES: pkg libpam-locale-sl sonames set()
+DEBUG: calculating shlib provides for libpam-locale-sq
+DEBUG: LIBNAMES: pkg libpam-locale-sq sonames set()
+DEBUG: calculating shlib provides for libpam-locale-sr
+DEBUG: LIBNAMES: pkg libpam-locale-sr sonames set()
+DEBUG: calculating shlib provides for libpam-locale-sr+latin
+DEBUG: LIBNAMES: pkg libpam-locale-sr+latin sonames set()
+DEBUG: calculating shlib provides for libpam-locale-sv
+DEBUG: LIBNAMES: pkg libpam-locale-sv sonames set()
+DEBUG: calculating shlib provides for libpam-locale-ta
+DEBUG: LIBNAMES: pkg libpam-locale-ta sonames set()
+DEBUG: calculating shlib provides for libpam-locale-te
+DEBUG: LIBNAMES: pkg libpam-locale-te sonames set()
+DEBUG: calculating shlib provides for libpam-locale-tg
+DEBUG: LIBNAMES: pkg libpam-locale-tg sonames set()
+DEBUG: calculating shlib provides for libpam-locale-th
+DEBUG: LIBNAMES: pkg libpam-locale-th sonames set()
+DEBUG: calculating shlib provides for libpam-locale-tr
+DEBUG: LIBNAMES: pkg libpam-locale-tr sonames set()
+DEBUG: calculating shlib provides for libpam-locale-tw
+DEBUG: LIBNAMES: pkg libpam-locale-tw sonames set()
+DEBUG: calculating shlib provides for libpam-locale-uk
+DEBUG: LIBNAMES: pkg libpam-locale-uk sonames set()
+DEBUG: calculating shlib provides for libpam-locale-ur
+DEBUG: LIBNAMES: pkg libpam-locale-ur sonames set()
+DEBUG: calculating shlib provides for libpam-locale-vi
+DEBUG: LIBNAMES: pkg libpam-locale-vi sonames set()
+DEBUG: calculating shlib provides for libpam-locale-wba
+DEBUG: LIBNAMES: pkg libpam-locale-wba sonames set()
+DEBUG: calculating shlib provides for libpam-locale-yo
+DEBUG: LIBNAMES: pkg libpam-locale-yo sonames set()
+DEBUG: calculating shlib provides for libpam-locale-zh-cn
+DEBUG: LIBNAMES: pkg libpam-locale-zh-cn sonames set()
+DEBUG: calculating shlib provides for libpam-locale-zh-hk
+DEBUG: LIBNAMES: pkg libpam-locale-zh-hk sonames set()
+DEBUG: calculating shlib provides for libpam-locale-zh-tw
+DEBUG: LIBNAMES: pkg libpam-locale-zh-tw sonames set()
+DEBUG: calculating shlib provides for libpam-locale-zu
+DEBUG: LIBNAMES: pkg libpam-locale-zu sonames set()
+DEBUG: calculating shlib provides for pam-plugin-access
+DEBUG: registering pam-plugin-access-1.3.1 as shlib provider for pam_access.so
+DEBUG: LIBNAMES: pkg pam-plugin-access sonames {('pam_access.so', '/lib/security', '1.3.1')}
+DEBUG: calculating shlib provides for pam-plugin-cracklib
+DEBUG: registering pam-plugin-cracklib-1.3.1 as shlib provider for pam_cracklib.so
+DEBUG: LIBNAMES: pkg pam-plugin-cracklib sonames {('pam_cracklib.so', '/lib/security', '1.3.1')}
+DEBUG: calculating shlib provides for pam-plugin-debug
+DEBUG: registering pam-plugin-debug-1.3.1 as shlib provider for pam_debug.so
+DEBUG: LIBNAMES: pkg pam-plugin-debug sonames {('pam_debug.so', '/lib/security', '1.3.1')}
+DEBUG: calculating shlib provides for pam-plugin-deny
+DEBUG: registering pam-plugin-deny-1.3.1 as shlib provider for pam_deny.so
+DEBUG: LIBNAMES: pkg pam-plugin-deny sonames {('pam_deny.so', '/lib/security', '1.3.1')}
+DEBUG: calculating shlib provides for pam-plugin-echo
+DEBUG: registering pam-plugin-echo-1.3.1 as shlib provider for pam_echo.so
+DEBUG: LIBNAMES: pkg pam-plugin-echo sonames {('pam_echo.so', '/lib/security', '1.3.1')}
+DEBUG: calculating shlib provides for pam-plugin-env
+DEBUG: registering pam-plugin-env-1.3.1 as shlib provider for pam_env.so
+DEBUG: LIBNAMES: pkg pam-plugin-env sonames {('pam_env.so', '/lib/security', '1.3.1')}
+DEBUG: calculating shlib provides for pam-plugin-exec
+DEBUG: registering pam-plugin-exec-1.3.1 as shlib provider for pam_exec.so
+DEBUG: LIBNAMES: pkg pam-plugin-exec sonames {('pam_exec.so', '/lib/security', '1.3.1')}
+DEBUG: calculating shlib provides for pam-plugin-faildelay
+DEBUG: registering pam-plugin-faildelay-1.3.1 as shlib provider for pam_faildelay.so
+DEBUG: LIBNAMES: pkg pam-plugin-faildelay sonames {('pam_faildelay.so', '/lib/security', '1.3.1')}
+DEBUG: calculating shlib provides for pam-plugin-filter
+DEBUG: registering pam-plugin-filter-1.3.1 as shlib provider for pam_filter.so
+DEBUG: LIBNAMES: pkg pam-plugin-filter sonames {('pam_filter.so', '/lib/security', '1.3.1')}
+DEBUG: calculating shlib provides for pam-plugin-ftp
+DEBUG: registering pam-plugin-ftp-1.3.1 as shlib provider for pam_ftp.so
+DEBUG: LIBNAMES: pkg pam-plugin-ftp sonames {('pam_ftp.so', '/lib/security', '1.3.1')}
+DEBUG: calculating shlib provides for pam-plugin-group
+DEBUG: registering pam-plugin-group-1.3.1 as shlib provider for pam_group.so
+DEBUG: LIBNAMES: pkg pam-plugin-group sonames {('pam_group.so', '/lib/security', '1.3.1')}
+DEBUG: calculating shlib provides for pam-plugin-issue
+DEBUG: registering pam-plugin-issue-1.3.1 as shlib provider for pam_issue.so
+DEBUG: LIBNAMES: pkg pam-plugin-issue sonames {('pam_issue.so', '/lib/security', '1.3.1')}
+DEBUG: calculating shlib provides for pam-plugin-keyinit
+DEBUG: registering pam-plugin-keyinit-1.3.1 as shlib provider for pam_keyinit.so
+DEBUG: LIBNAMES: pkg pam-plugin-keyinit sonames {('pam_keyinit.so', '/lib/security', '1.3.1')}
+DEBUG: calculating shlib provides for pam-plugin-lastlog
+DEBUG: registering pam-plugin-lastlog-1.3.1 as shlib provider for pam_lastlog.so
+DEBUG: LIBNAMES: pkg pam-plugin-lastlog sonames {('pam_lastlog.so', '/lib/security', '1.3.1')}
+DEBUG: calculating shlib provides for pam-plugin-limits
+DEBUG: registering pam-plugin-limits-1.3.1 as shlib provider for pam_limits.so
+DEBUG: LIBNAMES: pkg pam-plugin-limits sonames {('pam_limits.so', '/lib/security', '1.3.1')}
+DEBUG: calculating shlib provides for pam-plugin-listfile
+DEBUG: registering pam-plugin-listfile-1.3.1 as shlib provider for pam_listfile.so
+DEBUG: LIBNAMES: pkg pam-plugin-listfile sonames {('pam_listfile.so', '/lib/security', '1.3.1')}
+DEBUG: calculating shlib provides for pam-plugin-localuser
+DEBUG: registering pam-plugin-localuser-1.3.1 as shlib provider for pam_localuser.so
+DEBUG: LIBNAMES: pkg pam-plugin-localuser sonames {('pam_localuser.so', '/lib/security', '1.3.1')}
+DEBUG: calculating shlib provides for pam-plugin-loginuid
+DEBUG: registering pam-plugin-loginuid-1.3.1 as shlib provider for pam_loginuid.so
+DEBUG: LIBNAMES: pkg pam-plugin-loginuid sonames {('pam_loginuid.so', '/lib/security', '1.3.1')}
+DEBUG: calculating shlib provides for pam-plugin-mail
+DEBUG: registering pam-plugin-mail-1.3.1 as shlib provider for pam_mail.so
+DEBUG: LIBNAMES: pkg pam-plugin-mail sonames {('pam_mail.so', '/lib/security', '1.3.1')}
+DEBUG: calculating shlib provides for pam-plugin-mkhomedir
+DEBUG: registering pam-plugin-mkhomedir-1.3.1 as shlib provider for pam_mkhomedir.so
+DEBUG: LIBNAMES: pkg pam-plugin-mkhomedir sonames {('pam_mkhomedir.so', '/lib/security', '1.3.1')}
+DEBUG: calculating shlib provides for pam-plugin-motd
+DEBUG: registering pam-plugin-motd-1.3.1 as shlib provider for pam_motd.so
+DEBUG: LIBNAMES: pkg pam-plugin-motd sonames {('pam_motd.so', '/lib/security', '1.3.1')}
+DEBUG: calculating shlib provides for pam-plugin-namespace
+DEBUG: registering pam-plugin-namespace-1.3.1 as shlib provider for pam_namespace.so
+DEBUG: LIBNAMES: pkg pam-plugin-namespace sonames {('pam_namespace.so', '/lib/security', '1.3.1')}
+DEBUG: calculating shlib provides for pam-plugin-nologin
+DEBUG: registering pam-plugin-nologin-1.3.1 as shlib provider for pam_nologin.so
+DEBUG: LIBNAMES: pkg pam-plugin-nologin sonames {('pam_nologin.so', '/lib/security', '1.3.1')}
+DEBUG: calculating shlib provides for pam-plugin-permit
+DEBUG: registering pam-plugin-permit-1.3.1 as shlib provider for pam_permit.so
+DEBUG: LIBNAMES: pkg pam-plugin-permit sonames {('pam_permit.so', '/lib/security', '1.3.1')}
+DEBUG: calculating shlib provides for pam-plugin-pwhistory
+DEBUG: registering pam-plugin-pwhistory-1.3.1 as shlib provider for pam_pwhistory.so
+DEBUG: LIBNAMES: pkg pam-plugin-pwhistory sonames {('pam_pwhistory.so', '/lib/security', '1.3.1')}
+DEBUG: calculating shlib provides for pam-plugin-rhosts
+DEBUG: registering pam-plugin-rhosts-1.3.1 as shlib provider for pam_rhosts.so
+DEBUG: LIBNAMES: pkg pam-plugin-rhosts sonames {('pam_rhosts.so', '/lib/security', '1.3.1')}
+DEBUG: calculating shlib provides for pam-plugin-rootok
+DEBUG: registering pam-plugin-rootok-1.3.1 as shlib provider for pam_rootok.so
+DEBUG: LIBNAMES: pkg pam-plugin-rootok sonames {('pam_rootok.so', '/lib/security', '1.3.1')}
+DEBUG: calculating shlib provides for pam-plugin-securetty
+DEBUG: registering pam-plugin-securetty-1.3.1 as shlib provider for pam_securetty.so
+DEBUG: LIBNAMES: pkg pam-plugin-securetty sonames {('pam_securetty.so', '/lib/security', '1.3.1')}
+DEBUG: calculating shlib provides for pam-plugin-shells
+DEBUG: registering pam-plugin-shells-1.3.1 as shlib provider for pam_shells.so
+DEBUG: LIBNAMES: pkg pam-plugin-shells sonames {('pam_shells.so', '/lib/security', '1.3.1')}
+DEBUG: calculating shlib provides for pam-plugin-stress
+DEBUG: registering pam-plugin-stress-1.3.1 as shlib provider for pam_stress.so
+DEBUG: LIBNAMES: pkg pam-plugin-stress sonames {('pam_stress.so', '/lib/security', '1.3.1')}
+DEBUG: calculating shlib provides for pam-plugin-succeed-if
+DEBUG: registering pam-plugin-succeed-if-1.3.1 as shlib provider for pam_succeed_if.so
+DEBUG: LIBNAMES: pkg pam-plugin-succeed-if sonames {('pam_succeed_if.so', '/lib/security', '1.3.1')}
+DEBUG: calculating shlib provides for pam-plugin-tally
+DEBUG: registering pam-plugin-tally-1.3.1 as shlib provider for pam_tally.so
+DEBUG: LIBNAMES: pkg pam-plugin-tally sonames {('pam_tally.so', '/lib/security', '1.3.1')}
+DEBUG: calculating shlib provides for pam-plugin-tally2
+DEBUG: registering pam-plugin-tally2-1.3.1 as shlib provider for pam_tally2.so
+DEBUG: LIBNAMES: pkg pam-plugin-tally2 sonames {('pam_tally2.so', '/lib/security', '1.3.1')}
+DEBUG: calculating shlib provides for pam-plugin-time
+DEBUG: registering pam-plugin-time-1.3.1 as shlib provider for pam_time.so
+DEBUG: LIBNAMES: pkg pam-plugin-time sonames {('pam_time.so', '/lib/security', '1.3.1')}
+DEBUG: calculating shlib provides for pam-plugin-timestamp
+DEBUG: registering pam-plugin-timestamp-1.3.1 as shlib provider for pam_timestamp.so
+DEBUG: LIBNAMES: pkg pam-plugin-timestamp sonames {('pam_timestamp.so', '/lib/security', '1.3.1')}
+DEBUG: calculating shlib provides for pam-plugin-umask
+DEBUG: registering pam-plugin-umask-1.3.1 as shlib provider for pam_umask.so
+DEBUG: LIBNAMES: pkg pam-plugin-umask sonames {('pam_umask.so', '/lib/security', '1.3.1')}
+DEBUG: calculating shlib provides for pam-plugin-unix
+DEBUG: registering pam-plugin-unix-1.3.1 as shlib provider for pam_unix.so
+DEBUG: LIBNAMES: pkg pam-plugin-unix sonames {('pam_unix.so', '/lib/security', '1.3.1')}
+DEBUG: calculating shlib provides for pam-plugin-warn
+DEBUG: registering pam-plugin-warn-1.3.1 as shlib provider for pam_warn.so
+DEBUG: LIBNAMES: pkg pam-plugin-warn sonames {('pam_warn.so', '/lib/security', '1.3.1')}
+DEBUG: calculating shlib provides for pam-plugin-wheel
+DEBUG: registering pam-plugin-wheel-1.3.1 as shlib provider for pam_wheel.so
+DEBUG: LIBNAMES: pkg pam-plugin-wheel sonames {('pam_wheel.so', '/lib/security', '1.3.1')}
+DEBUG: calculating shlib provides for pam-plugin-xauth
+DEBUG: registering pam-plugin-xauth-1.3.1 as shlib provider for pam_xauth.so
+DEBUG: LIBNAMES: pkg pam-plugin-xauth sonames {('pam_xauth.so', '/lib/security', '1.3.1')}
+DEBUG: calculating shlib provides for pam-filter-upperlower
+DEBUG: LIBNAMES: pkg pam-filter-upperlower sonames set()
+DEBUG: calculating shlib requirements for libpam-src
+DEBUG: calculating shlib requirements for libpam-dbg
+DEBUG: calculating shlib requirements for libpam-staticdev
+DEBUG: calculating shlib requirements for libpam-dev
+DEBUG: calculating shlib requirements for libpam-doc
+DEBUG: calculating shlib requirements for libpam
+DEBUG: libpam: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam/lib/libpam_misc.so.0.82.1)
+DEBUG: libpam: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam/lib/libpam.so.0.84.2)
+DEBUG: libpam: Dependency libpam.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam/lib/libpam_misc.so.0.82.1)
+DEBUG: libpam: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam/lib/libpamc.so.0.82.1)
+DEBUG: libpam: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam/lib/libpamc.so.0.82.1)
+DEBUG: libpam: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam/lib/libpam_misc.so.0.82.1)
+DEBUG: libpam: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam/lib/libpam.so.0.84.2)
+DEBUG: calculating shlib requirements for libpam-runtime
+DEBUG: calculating shlib requirements for libpam-xtests
+DEBUG: libpam-xtests: Dependency libpam.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam-xtests/usr/share/Linux-PAM/xtests/tst-pam_authsucceed)
+DEBUG: libpam-xtests: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam-xtests/usr/share/Linux-PAM/xtests/tst-pam_group1)
+DEBUG: libpam-xtests: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam-xtests/usr/share/Linux-PAM/xtests/tst-pam_dispatch2)
+DEBUG: libpam-xtests: Dependency libpam.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam-xtests/usr/share/Linux-PAM/xtests/tst-pam_group1)
+DEBUG: libpam-xtests: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam-xtests/usr/share/Linux-PAM/xtests/tst-pam_access3)
+DEBUG: libpam-xtests: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam-xtests/usr/share/Linux-PAM/xtests/tst-pam_dispatch5)
+DEBUG: libpam-xtests: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam-xtests/usr/share/Linux-PAM/xtests/tst-pam_dispatch3)
+DEBUG: libpam-xtests: Dependency libpam.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam-xtests/usr/share/Linux-PAM/xtests/tst-pam_authfail)
+DEBUG: libpam-xtests: Dependency libpam_misc.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam-xtests/usr/share/Linux-PAM/xtests/tst-pam_authfail)
+DEBUG: libpam-xtests: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam-xtests/usr/share/Linux-PAM/xtests/tst-pam_access1)
+DEBUG: libpam-xtests: Dependency libpam.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam-xtests/usr/share/Linux-PAM/xtests/tst-pam_limits1)
+DEBUG: libpam-xtests: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam-xtests/usr/share/Linux-PAM/xtests/tst-pam_dispatch2)
+DEBUG: libpam-xtests: Dependency libpam_misc.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam-xtests/usr/share/Linux-PAM/xtests/tst-pam_authsucceed)
+DEBUG: libpam-xtests: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam-xtests/usr/share/Linux-PAM/xtests/tst-pam_unix4)
+DEBUG: libpam-xtests: Dependency libpam.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam-xtests/usr/share/Linux-PAM/xtests/tst-pam_access1)
+DEBUG: libpam-xtests: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam-xtests/usr/share/Linux-PAM/xtests/tst-pam_cracklib1)
+DEBUG: libpam-xtests: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam-xtests/usr/share/Linux-PAM/xtests/tst-pam_pwhistory1)
+DEBUG: libpam-xtests: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam-xtests/usr/share/Linux-PAM/xtests/tst-pam_pwhistory1)
+DEBUG: libpam-xtests: Dependency libpam.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam-xtests/usr/share/Linux-PAM/xtests/tst-pam_access3)
+DEBUG: libpam-xtests: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam-xtests/usr/share/Linux-PAM/xtests/tst-pam_dispatch4)
+DEBUG: libpam-xtests: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam-xtests/usr/share/Linux-PAM/xtests/tst-pam_cracklib2)
+DEBUG: libpam-xtests: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam-xtests/usr/share/Linux-PAM/xtests/tst-pam_dispatch1)
+DEBUG: libpam-xtests: Dependency libpam.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam-xtests/usr/share/Linux-PAM/xtests/tst-pam_access2)
+DEBUG: libpam-xtests: Dependency libpam.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam-xtests/usr/share/Linux-PAM/xtests/tst-pam_cracklib1)
+DEBUG: libpam-xtests: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam-xtests/usr/share/Linux-PAM/xtests/tst-pam_access4)
+DEBUG: libpam-xtests: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam-xtests/usr/share/Linux-PAM/xtests/tst-pam_dispatch5)
+DEBUG: libpam-xtests: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam-xtests/usr/share/Linux-PAM/xtests/tst-pam_unix3)
+DEBUG: libpam-xtests: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam-xtests/usr/share/Linux-PAM/xtests/tst-pam_succeed_if1)
+DEBUG: libpam-xtests: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam-xtests/usr/share/Linux-PAM/xtests/tst-pam_access2)
+DEBUG: libpam-xtests: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam-xtests/usr/share/Linux-PAM/xtests/tst-pam_dispatch3)
+DEBUG: libpam-xtests: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam-xtests/usr/share/Linux-PAM/xtests/tst-pam_dispatch4)
+DEBUG: libpam-xtests: Dependency libpam.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam-xtests/usr/share/Linux-PAM/xtests/tst-pam_dispatch3)
+DEBUG: libpam-xtests: Dependency libpam.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam-xtests/usr/share/Linux-PAM/xtests/tst-pam_dispatch2)
+DEBUG: libpam-xtests: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam-xtests/usr/share/Linux-PAM/xtests/tst-pam_unix2)
+DEBUG: libpam-xtests: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam-xtests/usr/share/Linux-PAM/xtests/tst-pam_unix2)
+DEBUG: libpam-xtests: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam-xtests/usr/share/Linux-PAM/xtests/tst-pam_unix1)
+DEBUG: libpam-xtests: Dependency libpam_misc.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam-xtests/usr/share/Linux-PAM/xtests/tst-pam_dispatch2)
+DEBUG: libpam-xtests: Dependency libpam.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam-xtests/usr/share/Linux-PAM/xtests/tst-pam_dispatch5)
+DEBUG: libpam-xtests: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam-xtests/usr/share/Linux-PAM/xtests/tst-pam_unix1)
+DEBUG: libpam-xtests: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam-xtests/usr/share/Linux-PAM/xtests/tst-pam_time1)
+DEBUG: libpam-xtests: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam-xtests/usr/share/Linux-PAM/xtests/tst-pam_unix4)
+DEBUG: libpam-xtests: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam-xtests/usr/share/Linux-PAM/xtests/tst-pam_access2)
+DEBUG: libpam-xtests: Dependency libpam_misc.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam-xtests/usr/share/Linux-PAM/xtests/tst-pam_dispatch5)
+DEBUG: libpam-xtests: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam-xtests/usr/share/Linux-PAM/xtests/tst-pam_access4)
+DEBUG: libpam-xtests: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam-xtests/usr/share/Linux-PAM/xtests/tst-pam_cracklib2)
+DEBUG: libpam-xtests: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam-xtests/usr/share/Linux-PAM/xtests/tst-pam_time1)
+DEBUG: libpam-xtests: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam-xtests/usr/share/Linux-PAM/xtests/tst-pam_succeed_if1)
+DEBUG: libpam-xtests: Dependency libpam.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam-xtests/usr/share/Linux-PAM/xtests/tst-pam_pwhistory1)
+DEBUG: libpam-xtests: Dependency libpam_misc.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam-xtests/usr/share/Linux-PAM/xtests/tst-pam_dispatch3)
+DEBUG: libpam-xtests: Dependency libpam.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam-xtests/usr/share/Linux-PAM/xtests/tst-pam_access4)
+DEBUG: libpam-xtests: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam-xtests/usr/share/Linux-PAM/xtests/tst-pam_group1)
+DEBUG: libpam-xtests: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam-xtests/usr/share/Linux-PAM/xtests/tst-pam_unix3)
+DEBUG: libpam-xtests: Dependency libpam.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam-xtests/usr/share/Linux-PAM/xtests/tst-pam_dispatch4)
+DEBUG: libpam-xtests: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam-xtests/usr/share/Linux-PAM/xtests/tst-pam_dispatch1)
+DEBUG: libpam-xtests: Dependency libpam.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam-xtests/usr/share/Linux-PAM/xtests/tst-pam_succeed_if1)
+DEBUG: libpam-xtests: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam-xtests/usr/share/Linux-PAM/xtests/tst-pam_authsucceed)
+DEBUG: libpam-xtests: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam-xtests/usr/share/Linux-PAM/xtests/tst-pam_authfail)
+DEBUG: libpam-xtests: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam-xtests/usr/share/Linux-PAM/xtests/tst-pam_authfail)
+DEBUG: libpam-xtests: Dependency libpam.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam-xtests/usr/share/Linux-PAM/xtests/tst-pam_unix4)
+DEBUG: libpam-xtests: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam-xtests/usr/share/Linux-PAM/xtests/tst-pam_limits1)
+DEBUG: libpam-xtests: Dependency libpam.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam-xtests/usr/share/Linux-PAM/xtests/tst-pam_cracklib2)
+DEBUG: libpam-xtests: Dependency libpam.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam-xtests/usr/share/Linux-PAM/xtests/tst-pam_dispatch1)
+DEBUG: libpam-xtests: Dependency libpam.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam-xtests/usr/share/Linux-PAM/xtests/tst-pam_unix2)
+DEBUG: libpam-xtests: Dependency libpam_misc.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam-xtests/usr/share/Linux-PAM/xtests/tst-pam_dispatch4)
+DEBUG: libpam-xtests: Dependency libpam_misc.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam-xtests/usr/share/Linux-PAM/xtests/tst-pam_dispatch1)
+DEBUG: libpam-xtests: Dependency libpam.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam-xtests/usr/share/Linux-PAM/xtests/tst-pam_unix3)
+DEBUG: libpam-xtests: Dependency libpam.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam-xtests/usr/share/Linux-PAM/xtests/tst-pam_unix1)
+DEBUG: libpam-xtests: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam-xtests/usr/share/Linux-PAM/xtests/tst-pam_access1)
+DEBUG: libpam-xtests: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam-xtests/usr/share/Linux-PAM/xtests/tst-pam_cracklib1)
+DEBUG: libpam-xtests: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam-xtests/usr/share/Linux-PAM/xtests/tst-pam_access3)
+DEBUG: libpam-xtests: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam-xtests/usr/share/Linux-PAM/xtests/tst-pam_authsucceed)
+DEBUG: libpam-xtests: Dependency libpam.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam-xtests/usr/share/Linux-PAM/xtests/tst-pam_time1)
+DEBUG: libpam-xtests: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/libpam-xtests/usr/share/Linux-PAM/xtests/tst-pam_limits1)
+DEBUG: calculating shlib requirements for libpam-locale-af
+DEBUG: calculating shlib requirements for libpam-locale-am
+DEBUG: calculating shlib requirements for libpam-locale-anp
+DEBUG: calculating shlib requirements for libpam-locale-ar
+DEBUG: calculating shlib requirements for libpam-locale-as
+DEBUG: calculating shlib requirements for libpam-locale-ast
+DEBUG: calculating shlib requirements for libpam-locale-bal
+DEBUG: calculating shlib requirements for libpam-locale-be
+DEBUG: calculating shlib requirements for libpam-locale-bg
+DEBUG: calculating shlib requirements for libpam-locale-bn
+DEBUG: calculating shlib requirements for libpam-locale-bn-in
+DEBUG: calculating shlib requirements for libpam-locale-bo
+DEBUG: calculating shlib requirements for libpam-locale-br
+DEBUG: calculating shlib requirements for libpam-locale-brx
+DEBUG: calculating shlib requirements for libpam-locale-bs
+DEBUG: calculating shlib requirements for libpam-locale-ca
+DEBUG: calculating shlib requirements for libpam-locale-cs
+DEBUG: calculating shlib requirements for libpam-locale-cy
+DEBUG: calculating shlib requirements for libpam-locale-da
+DEBUG: calculating shlib requirements for libpam-locale-de
+DEBUG: calculating shlib requirements for libpam-locale-de-ch
+DEBUG: calculating shlib requirements for libpam-locale-el
+DEBUG: calculating shlib requirements for libpam-locale-en-gb
+DEBUG: calculating shlib requirements for libpam-locale-eo
+DEBUG: calculating shlib requirements for libpam-locale-es
+DEBUG: calculating shlib requirements for libpam-locale-et
+DEBUG: calculating shlib requirements for libpam-locale-eu
+DEBUG: calculating shlib requirements for libpam-locale-fa
+DEBUG: calculating shlib requirements for libpam-locale-fi
+DEBUG: calculating shlib requirements for libpam-locale-fr
+DEBUG: calculating shlib requirements for libpam-locale-ga
+DEBUG: calculating shlib requirements for libpam-locale-gl
+DEBUG: calculating shlib requirements for libpam-locale-gu
+DEBUG: calculating shlib requirements for libpam-locale-he
+DEBUG: calculating shlib requirements for libpam-locale-hi
+DEBUG: calculating shlib requirements for libpam-locale-hr
+DEBUG: calculating shlib requirements for libpam-locale-hu
+DEBUG: calculating shlib requirements for libpam-locale-ia
+DEBUG: calculating shlib requirements for libpam-locale-id
+DEBUG: calculating shlib requirements for libpam-locale-ilo
+DEBUG: calculating shlib requirements for libpam-locale-is
+DEBUG: calculating shlib requirements for libpam-locale-it
+DEBUG: calculating shlib requirements for libpam-locale-ja
+DEBUG: calculating shlib requirements for libpam-locale-ka
+DEBUG: calculating shlib requirements for libpam-locale-kk
+DEBUG: calculating shlib requirements for libpam-locale-km
+DEBUG: calculating shlib requirements for libpam-locale-kn
+DEBUG: calculating shlib requirements for libpam-locale-ko
+DEBUG: calculating shlib requirements for libpam-locale-kw
+DEBUG: calculating shlib requirements for libpam-locale-kw+kkcor
+DEBUG: calculating shlib requirements for libpam-locale-kw+uccor
+DEBUG: calculating shlib requirements for libpam-locale-kw-gb
+DEBUG: calculating shlib requirements for libpam-locale-ky
+DEBUG: calculating shlib requirements for libpam-locale-lt
+DEBUG: calculating shlib requirements for libpam-locale-lv
+DEBUG: calculating shlib requirements for libpam-locale-mai
+DEBUG: calculating shlib requirements for libpam-locale-mk
+DEBUG: calculating shlib requirements for libpam-locale-ml
+DEBUG: calculating shlib requirements for libpam-locale-mn
+DEBUG: calculating shlib requirements for libpam-locale-mr
+DEBUG: calculating shlib requirements for libpam-locale-ms
+DEBUG: calculating shlib requirements for libpam-locale-my
+DEBUG: calculating shlib requirements for libpam-locale-nb
+DEBUG: calculating shlib requirements for libpam-locale-nds
+DEBUG: calculating shlib requirements for libpam-locale-ne
+DEBUG: calculating shlib requirements for libpam-locale-nl
+DEBUG: calculating shlib requirements for libpam-locale-nn
+DEBUG: calculating shlib requirements for libpam-locale-nso
+DEBUG: calculating shlib requirements for libpam-locale-or
+DEBUG: calculating shlib requirements for libpam-locale-pa
+DEBUG: calculating shlib requirements for libpam-locale-pl
+DEBUG: calculating shlib requirements for libpam-locale-pt
+DEBUG: calculating shlib requirements for libpam-locale-pt-br
+DEBUG: calculating shlib requirements for libpam-locale-ro
+DEBUG: calculating shlib requirements for libpam-locale-ru
+DEBUG: calculating shlib requirements for libpam-locale-si
+DEBUG: calculating shlib requirements for libpam-locale-sk
+DEBUG: calculating shlib requirements for libpam-locale-sl
+DEBUG: calculating shlib requirements for libpam-locale-sq
+DEBUG: calculating shlib requirements for libpam-locale-sr
+DEBUG: calculating shlib requirements for libpam-locale-sr+latin
+DEBUG: calculating shlib requirements for libpam-locale-sv
+DEBUG: calculating shlib requirements for libpam-locale-ta
+DEBUG: calculating shlib requirements for libpam-locale-te
+DEBUG: calculating shlib requirements for libpam-locale-tg
+DEBUG: calculating shlib requirements for libpam-locale-th
+DEBUG: calculating shlib requirements for libpam-locale-tr
+DEBUG: calculating shlib requirements for libpam-locale-tw
+DEBUG: calculating shlib requirements for libpam-locale-uk
+DEBUG: calculating shlib requirements for libpam-locale-ur
+DEBUG: calculating shlib requirements for libpam-locale-vi
+DEBUG: calculating shlib requirements for libpam-locale-wba
+DEBUG: calculating shlib requirements for libpam-locale-yo
+DEBUG: calculating shlib requirements for libpam-locale-zh-cn
+DEBUG: calculating shlib requirements for libpam-locale-zh-hk
+DEBUG: calculating shlib requirements for libpam-locale-zh-tw
+DEBUG: calculating shlib requirements for libpam-locale-zu
+DEBUG: calculating shlib requirements for pam-plugin-access
+DEBUG: pam-plugin-access: Dependency libpam.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-access/lib/security/pam_access.so)
+DEBUG: pam-plugin-access: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-access/lib/security/pam_access.so)
+DEBUG: pam-plugin-access: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-access/lib/security/pam_access.so)
+DEBUG: calculating shlib requirements for pam-plugin-cracklib
+DEBUG: pam-plugin-cracklib: Dependency libcrack.so.2 requires package cracklib (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-cracklib/lib/security/pam_cracklib.so)
+DEBUG: pam-plugin-cracklib: Dependency libpam.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-cracklib/lib/security/pam_cracklib.so)
+DEBUG: pam-plugin-cracklib: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-cracklib/lib/security/pam_cracklib.so)
+DEBUG: pam-plugin-cracklib: Dependency libcrypt.so.2 requires package libxcrypt (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-cracklib/lib/security/pam_cracklib.so)
+DEBUG: pam-plugin-cracklib: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-cracklib/lib/security/pam_cracklib.so)
+DEBUG: calculating shlib requirements for pam-plugin-debug
+DEBUG: pam-plugin-debug: Dependency libpam.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-debug/lib/security/pam_debug.so)
+DEBUG: pam-plugin-debug: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-debug/lib/security/pam_debug.so)
+DEBUG: pam-plugin-debug: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-debug/lib/security/pam_debug.so)
+DEBUG: calculating shlib requirements for pam-plugin-deny
+DEBUG: pam-plugin-deny: Dependency libpam.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-deny/lib/security/pam_deny.so)
+DEBUG: calculating shlib requirements for pam-plugin-echo
+DEBUG: pam-plugin-echo: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-echo/lib/security/pam_echo.so)
+DEBUG: pam-plugin-echo: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-echo/lib/security/pam_echo.so)
+DEBUG: pam-plugin-echo: Dependency libpam.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-echo/lib/security/pam_echo.so)
+DEBUG: calculating shlib requirements for pam-plugin-env
+DEBUG: pam-plugin-env: Dependency libpam.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-env/lib/security/pam_env.so)
+DEBUG: pam-plugin-env: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-env/lib/security/pam_env.so)
+DEBUG: pam-plugin-env: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-env/lib/security/pam_env.so)
+DEBUG: calculating shlib requirements for pam-plugin-exec
+DEBUG: pam-plugin-exec: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-exec/lib/security/pam_exec.so)
+DEBUG: pam-plugin-exec: Dependency libpam.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-exec/lib/security/pam_exec.so)
+DEBUG: pam-plugin-exec: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-exec/lib/security/pam_exec.so)
+DEBUG: calculating shlib requirements for pam-plugin-faildelay
+DEBUG: pam-plugin-faildelay: Dependency libpam.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-faildelay/lib/security/pam_faildelay.so)
+DEBUG: pam-plugin-faildelay: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-faildelay/lib/security/pam_faildelay.so)
+DEBUG: pam-plugin-faildelay: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-faildelay/lib/security/pam_faildelay.so)
+DEBUG: calculating shlib requirements for pam-plugin-filter
+DEBUG: pam-plugin-filter: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-filter/lib/security/pam_filter.so)
+DEBUG: pam-plugin-filter: Dependency libpam.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-filter/lib/security/pam_filter.so)
+DEBUG: pam-plugin-filter: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-filter/lib/security/pam_filter.so)
+DEBUG: calculating shlib requirements for pam-plugin-ftp
+DEBUG: pam-plugin-ftp: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-ftp/lib/security/pam_ftp.so)
+DEBUG: pam-plugin-ftp: Dependency libpam.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-ftp/lib/security/pam_ftp.so)
+DEBUG: pam-plugin-ftp: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-ftp/lib/security/pam_ftp.so)
+DEBUG: calculating shlib requirements for pam-plugin-group
+DEBUG: pam-plugin-group: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-group/lib/security/pam_group.so)
+DEBUG: pam-plugin-group: Dependency libpam.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-group/lib/security/pam_group.so)
+DEBUG: pam-plugin-group: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-group/lib/security/pam_group.so)
+DEBUG: calculating shlib requirements for pam-plugin-issue
+DEBUG: pam-plugin-issue: Dependency libpam.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-issue/lib/security/pam_issue.so)
+DEBUG: pam-plugin-issue: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-issue/lib/security/pam_issue.so)
+DEBUG: pam-plugin-issue: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-issue/lib/security/pam_issue.so)
+DEBUG: calculating shlib requirements for pam-plugin-keyinit
+DEBUG: pam-plugin-keyinit: Dependency libpam.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-keyinit/lib/security/pam_keyinit.so)
+DEBUG: pam-plugin-keyinit: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-keyinit/lib/security/pam_keyinit.so)
+DEBUG: pam-plugin-keyinit: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-keyinit/lib/security/pam_keyinit.so)
+DEBUG: calculating shlib requirements for pam-plugin-lastlog
+DEBUG: pam-plugin-lastlog: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-lastlog/lib/security/pam_lastlog.so)
+DEBUG: pam-plugin-lastlog: Dependency libpam.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-lastlog/lib/security/pam_lastlog.so)
+DEBUG: pam-plugin-lastlog: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-lastlog/lib/security/pam_lastlog.so)
+DEBUG: calculating shlib requirements for pam-plugin-limits
+DEBUG: pam-plugin-limits: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-limits/lib/security/pam_limits.so)
+DEBUG: pam-plugin-limits: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-limits/lib/security/pam_limits.so)
+DEBUG: pam-plugin-limits: Dependency libpam.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-limits/lib/security/pam_limits.so)
+DEBUG: calculating shlib requirements for pam-plugin-listfile
+DEBUG: pam-plugin-listfile: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-listfile/lib/security/pam_listfile.so)
+DEBUG: pam-plugin-listfile: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-listfile/lib/security/pam_listfile.so)
+DEBUG: pam-plugin-listfile: Dependency libpam.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-listfile/lib/security/pam_listfile.so)
+DEBUG: calculating shlib requirements for pam-plugin-localuser
+DEBUG: pam-plugin-localuser: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-localuser/lib/security/pam_localuser.so)
+DEBUG: pam-plugin-localuser: Dependency libpam.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-localuser/lib/security/pam_localuser.so)
+DEBUG: pam-plugin-localuser: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-localuser/lib/security/pam_localuser.so)
+DEBUG: calculating shlib requirements for pam-plugin-loginuid
+DEBUG: pam-plugin-loginuid: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-loginuid/lib/security/pam_loginuid.so)
+DEBUG: pam-plugin-loginuid: Dependency libpam.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-loginuid/lib/security/pam_loginuid.so)
+DEBUG: pam-plugin-loginuid: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-loginuid/lib/security/pam_loginuid.so)
+DEBUG: calculating shlib requirements for pam-plugin-mail
+DEBUG: pam-plugin-mail: Dependency libpam.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-mail/lib/security/pam_mail.so)
+DEBUG: pam-plugin-mail: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-mail/lib/security/pam_mail.so)
+DEBUG: pam-plugin-mail: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-mail/lib/security/pam_mail.so)
+DEBUG: calculating shlib requirements for pam-plugin-mkhomedir
+DEBUG: pam-plugin-mkhomedir: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-mkhomedir/usr/sbin/mkhomedir_helper)
+DEBUG: pam-plugin-mkhomedir: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-mkhomedir/lib/security/pam_mkhomedir.so)
+DEBUG: pam-plugin-mkhomedir: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-mkhomedir/lib/security/pam_mkhomedir.so)
+DEBUG: pam-plugin-mkhomedir: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-mkhomedir/usr/sbin/mkhomedir_helper)
+DEBUG: pam-plugin-mkhomedir: Dependency libpam.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-mkhomedir/usr/sbin/mkhomedir_helper)
+DEBUG: pam-plugin-mkhomedir: Dependency libpam.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-mkhomedir/lib/security/pam_mkhomedir.so)
+DEBUG: calculating shlib requirements for pam-plugin-motd
+DEBUG: pam-plugin-motd: Dependency libpam.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-motd/lib/security/pam_motd.so)
+DEBUG: pam-plugin-motd: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-motd/lib/security/pam_motd.so)
+DEBUG: pam-plugin-motd: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-motd/lib/security/pam_motd.so)
+DEBUG: calculating shlib requirements for pam-plugin-namespace
+DEBUG: pam-plugin-namespace: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-namespace/lib/security/pam_namespace.so)
+DEBUG: pam-plugin-namespace: Dependency libpam.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-namespace/lib/security/pam_namespace.so)
+DEBUG: pam-plugin-namespace: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-namespace/lib/security/pam_namespace.so)
+DEBUG: calculating shlib requirements for pam-plugin-nologin
+DEBUG: pam-plugin-nologin: Dependency libpam.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-nologin/lib/security/pam_nologin.so)
+DEBUG: pam-plugin-nologin: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-nologin/lib/security/pam_nologin.so)
+DEBUG: pam-plugin-nologin: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-nologin/lib/security/pam_nologin.so)
+DEBUG: calculating shlib requirements for pam-plugin-permit
+DEBUG: pam-plugin-permit: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-permit/lib/security/pam_permit.so)
+DEBUG: pam-plugin-permit: Dependency libpam.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-permit/lib/security/pam_permit.so)
+DEBUG: pam-plugin-permit: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-permit/lib/security/pam_permit.so)
+DEBUG: calculating shlib requirements for pam-plugin-pwhistory
+DEBUG: pam-plugin-pwhistory: Dependency libcrypt.so.2 requires package libxcrypt (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-pwhistory/lib/security/pam_pwhistory.so)
+DEBUG: pam-plugin-pwhistory: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-pwhistory/lib/security/pam_pwhistory.so)
+DEBUG: pam-plugin-pwhistory: Dependency libpam.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-pwhistory/lib/security/pam_pwhistory.so)
+DEBUG: pam-plugin-pwhistory: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-pwhistory/lib/security/pam_pwhistory.so)
+DEBUG: calculating shlib requirements for pam-plugin-rhosts
+DEBUG: pam-plugin-rhosts: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-rhosts/lib/security/pam_rhosts.so)
+DEBUG: pam-plugin-rhosts: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-rhosts/lib/security/pam_rhosts.so)
+DEBUG: pam-plugin-rhosts: Dependency libpam.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-rhosts/lib/security/pam_rhosts.so)
+DEBUG: calculating shlib requirements for pam-plugin-rootok
+DEBUG: pam-plugin-rootok: Dependency libpam.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-rootok/lib/security/pam_rootok.so)
+DEBUG: pam-plugin-rootok: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-rootok/lib/security/pam_rootok.so)
+DEBUG: calculating shlib requirements for pam-plugin-securetty
+DEBUG: pam-plugin-securetty: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-securetty/lib/security/pam_securetty.so)
+DEBUG: pam-plugin-securetty: Dependency libpam.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-securetty/lib/security/pam_securetty.so)
+DEBUG: pam-plugin-securetty: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-securetty/lib/security/pam_securetty.so)
+DEBUG: calculating shlib requirements for pam-plugin-shells
+DEBUG: pam-plugin-shells: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-shells/lib/security/pam_shells.so)
+DEBUG: pam-plugin-shells: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-shells/lib/security/pam_shells.so)
+DEBUG: pam-plugin-shells: Dependency libpam.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-shells/lib/security/pam_shells.so)
+DEBUG: calculating shlib requirements for pam-plugin-stress
+DEBUG: pam-plugin-stress: Dependency libpam.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-stress/lib/security/pam_stress.so)
+DEBUG: pam-plugin-stress: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-stress/lib/security/pam_stress.so)
+DEBUG: pam-plugin-stress: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-stress/lib/security/pam_stress.so)
+DEBUG: calculating shlib requirements for pam-plugin-succeed-if
+DEBUG: pam-plugin-succeed-if: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-succeed-if/lib/security/pam_succeed_if.so)
+DEBUG: pam-plugin-succeed-if: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-succeed-if/lib/security/pam_succeed_if.so)
+DEBUG: pam-plugin-succeed-if: Dependency libpam.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-succeed-if/lib/security/pam_succeed_if.so)
+DEBUG: calculating shlib requirements for pam-plugin-tally
+DEBUG: pam-plugin-tally: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-tally/lib/security/pam_tally.so)
+DEBUG: pam-plugin-tally: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-tally/usr/sbin/pam_tally)
+DEBUG: pam-plugin-tally: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-tally/lib/security/pam_tally.so)
+DEBUG: pam-plugin-tally: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-tally/usr/sbin/pam_tally)
+DEBUG: pam-plugin-tally: Dependency libpam.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-tally/lib/security/pam_tally.so)
+DEBUG: calculating shlib requirements for pam-plugin-tally2
+DEBUG: pam-plugin-tally2: Dependency libpam.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-tally2/usr/sbin/pam_tally2)
+DEBUG: pam-plugin-tally2: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-tally2/lib/security/pam_tally2.so)
+DEBUG: pam-plugin-tally2: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-tally2/lib/security/pam_tally2.so)
+DEBUG: pam-plugin-tally2: Dependency libpam.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-tally2/lib/security/pam_tally2.so)
+DEBUG: pam-plugin-tally2: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-tally2/usr/sbin/pam_tally2)
+DEBUG: pam-plugin-tally2: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-tally2/usr/sbin/pam_tally2)
+DEBUG: calculating shlib requirements for pam-plugin-time
+DEBUG: pam-plugin-time: Dependency libpam.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-time/lib/security/pam_time.so)
+DEBUG: pam-plugin-time: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-time/lib/security/pam_time.so)
+DEBUG: pam-plugin-time: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-time/lib/security/pam_time.so)
+DEBUG: calculating shlib requirements for pam-plugin-timestamp
+DEBUG: pam-plugin-timestamp: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-timestamp/usr/sbin/pam_timestamp_check)
+DEBUG: pam-plugin-timestamp: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-timestamp/usr/sbin/pam_timestamp_check)
+DEBUG: pam-plugin-timestamp: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-timestamp/lib/security/pam_timestamp.so)
+DEBUG: pam-plugin-timestamp: Dependency libpam.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-timestamp/usr/sbin/pam_timestamp_check)
+DEBUG: pam-plugin-timestamp: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-timestamp/lib/security/pam_timestamp.so)
+DEBUG: pam-plugin-timestamp: Dependency libpam.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-timestamp/lib/security/pam_timestamp.so)
+DEBUG: calculating shlib requirements for pam-plugin-umask
+DEBUG: pam-plugin-umask: Dependency libpam.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-umask/lib/security/pam_umask.so)
+DEBUG: pam-plugin-umask: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-umask/lib/security/pam_umask.so)
+DEBUG: pam-plugin-umask: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-umask/lib/security/pam_umask.so)
+DEBUG: calculating shlib requirements for pam-plugin-unix
+DEBUG: pam-plugin-unix: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-unix/usr/sbin/unix_chkpwd)
+DEBUG: pam-plugin-unix: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-unix/usr/sbin/unix_chkpwd)
+DEBUG: pam-plugin-unix: Dependency libpam.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-unix/lib/security/pam_unix.so)
+DEBUG: pam-plugin-unix: Dependency libcrypt.so.2 requires package libxcrypt (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-unix/lib/security/pam_unix.so)
+DEBUG: pam-plugin-unix: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-unix/usr/sbin/unix_update)
+DEBUG: pam-plugin-unix: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-unix/lib/security/pam_unix.so)
+DEBUG: pam-plugin-unix: Dependency libcrypt.so.2 requires package libxcrypt (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-unix/usr/sbin/unix_update)
+DEBUG: pam-plugin-unix: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-unix/lib/security/pam_unix.so)
+DEBUG: pam-plugin-unix: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-unix/usr/sbin/unix_update)
+DEBUG: pam-plugin-unix: Dependency libcrypt.so.2 requires package libxcrypt (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-unix/usr/sbin/unix_chkpwd)
+DEBUG: calculating shlib requirements for pam-plugin-warn
+DEBUG: pam-plugin-warn: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-warn/lib/security/pam_warn.so)
+DEBUG: pam-plugin-warn: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-warn/lib/security/pam_warn.so)
+DEBUG: pam-plugin-warn: Dependency libpam.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-warn/lib/security/pam_warn.so)
+DEBUG: calculating shlib requirements for pam-plugin-wheel
+DEBUG: pam-plugin-wheel: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-wheel/lib/security/pam_wheel.so)
+DEBUG: pam-plugin-wheel: Dependency libpam.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-wheel/lib/security/pam_wheel.so)
+DEBUG: pam-plugin-wheel: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-wheel/lib/security/pam_wheel.so)
+DEBUG: calculating shlib requirements for pam-plugin-xauth
+DEBUG: pam-plugin-xauth: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-xauth/lib/security/pam_xauth.so)
+DEBUG: pam-plugin-xauth: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-xauth/lib/security/pam_xauth.so)
+DEBUG: pam-plugin-xauth: Dependency libpam.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-plugin-xauth/lib/security/pam_xauth.so)
+DEBUG: calculating shlib requirements for pam-filter-upperlower
+DEBUG: pam-filter-upperlower: Dependency libpam.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-filter-upperlower/lib/security/pam_filter/upperLOWER)
+DEBUG: pam-filter-upperlower: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-filter-upperlower/lib/security/pam_filter/upperLOWER)
+DEBUG: pam-filter-upperlower: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/packages-split/pam-filter-upperlower/lib/security/pam_filter/upperLOWER)
+DEBUG: Python function package_do_shlibs finished
+DEBUG: Executing python function package_do_pkgconfig
+DEBUG: Python function package_do_pkgconfig finished
+DEBUG: Executing python function read_shlibdeps
+DEBUG: Python function read_shlibdeps finished
+DEBUG: Executing python function package_depchains
+DEBUG: Python function package_depchains finished
+DEBUG: Executing python function emit_pkgdata
+DEBUG: Python function emit_pkgdata finished
+DEBUG: Python function do_package finished
+DEBUG: Executing python function sstate_task_postfunc
+NOTE: Using umask 0o002 (not 22) for sstate packaging
+DEBUG: Executing python function target_add_sysroot_deps
+DEBUG: Python function target_add_sysroot_deps finished
+DEBUG: Executing python function sstate_hardcode_path
+NOTE: Removing hardcoded paths from sstate package: 'find /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/sstate-build-package/ \( -name "*.la" -o -name "*-config" -o -name "*_config" -o -name "postinst-*" \) -type f | xargs grep -l -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/recipe-sysroot' -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/recipe-sysroot-native' -e '/home/matt/tmp/build/obmc-y2038/tmp/hosttools' | tee /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/sstate-build-package/fixmepath | xargs --no-run-if-empty sed -i -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/recipe-sysroot-native:FIXMESTAGINGDIRHOST:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libpam/1.3.1-r0/recipe-sysroot:FIXMESTAGINGDIRTARGET:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:FIXME_HOSTTOOLS_DIR:g''
+DEBUG: Python function sstate_hardcode_path finished
+DEBUG: Executing python function sstate_report_unihash
+DEBUG: Python function sstate_report_unihash finished
+DEBUG: Executing shell function sstate_create_package
+DEBUG: Shell function sstate_create_package finished
+DEBUG: Executing python function sstate_hardcode_path_unpack
+DEBUG: Python function sstate_hardcode_path_unpack finished
+DEBUG: Python function sstate_task_postfunc finished

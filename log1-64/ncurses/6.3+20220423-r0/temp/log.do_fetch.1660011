@@ -1,0 +1,122 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are []
+NOTE: Installed into sysroot: []
+NOTE: Skipping as already exists in sysroot: []
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function do_fetch
+DEBUG: Executing python function base_do_fetch
+DEBUG: Running 'export PSEUDO_DISABLED=1; export PATH="/home/matt/src/openbmc/scripts:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ncurses/6.3+20220423-r0/recipe-sysroot-native/usr/bin/arm-openbmc-linux-gnueabi:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ncurses/6.3+20220423-r0/recipe-sysroot/usr/bin/crossscripts:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ncurses/6.3+20220423-r0/recipe-sysroot-native/usr/sbin:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ncurses/6.3+20220423-r0/recipe-sysroot-native/usr/bin:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ncurses/6.3+20220423-r0/recipe-sysroot-native/sbin:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ncurses/6.3+20220423-r0/recipe-sysroot-native/bin:/home/matt/src/openbmc/poky/bitbake/bin:/home/matt/tmp/build/obmc-y2038/tmp/hosttools"; export HOME="/home/matt"; git -c gc.autoDetach=false -c core.pager=cat branch --contains 20db1fb41ec91cd8a1f528e770362092c5403378 --list master 2> /dev/null | wc -l' in /home/matt/tmp/build/obmc-y2038/downloads/git2/github.com.mirror.ncurses.git
+DEBUG: Searching for 0001-tic-hang.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses-6.3+20220423/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses-6.3+20220423/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses-6.3+20220423/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses-6.3+20220423/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses-6.3+20220423/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses-6.3+20220423/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses-6.3+20220423/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses-6.3+20220423/arm
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses/arm
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/files/arm
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses-6.3+20220423/
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses/
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/files/
+DEBUG: Searching for 0002-configure-reproducible.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses-6.3+20220423/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses-6.3+20220423/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses-6.3+20220423/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses-6.3+20220423/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses-6.3+20220423/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses-6.3+20220423/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses-6.3+20220423/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses-6.3+20220423/arm
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses/arm
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/files/arm
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses-6.3+20220423/
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses/
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/files/
+DEBUG: Searching for 0003-gen-pkgconfig.in-Do-not-include-LDFLAGS-in-generated.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses-6.3+20220423/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses-6.3+20220423/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses-6.3+20220423/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses-6.3+20220423/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses-6.3+20220423/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses-6.3+20220423/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses-6.3+20220423/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses-6.3+20220423/arm
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses/arm
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/files/arm
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses-6.3+20220423/
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses/
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/files/
+DEBUG: Searching for exit_prototype.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses-6.3+20220423/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses-6.3+20220423/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses-6.3+20220423/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses-6.3+20220423/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses-6.3+20220423/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses-6.3+20220423/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses-6.3+20220423/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses-6.3+20220423/arm
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses/arm
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/files/arm
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses-6.3+20220423/
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses/
+    /home/matt/src/openbmc/meta/recipes-core/ncurses/files/
+DEBUG: Python function base_do_fetch finished
+DEBUG: Python function do_fetch finished

@@ -1,0 +1,78 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/libxcrypt/libxcrypt_4.4.28.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses_6.3+20220423.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/systemd/systemd-systemctl-native.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux-libuuid_2.38.1.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/zlib/zlib_1.2.13.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/binutils/binutils-cross_2.39.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-cross_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-native_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/opkg-utils/opkg-utils_0.5.0.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-extended/pam/libpam_1.3.1.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-support/bash-completion/bash-completion_2.11.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-support/libcap-ng/libcap-ng_0.8.3.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-core/gettext/gettext_0.21.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/autoconf/autoconf_2.71.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/automake/automake_1.16.5.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pkgconfig/pkgconfig_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-extended/xz/xz_5.2.7.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: []
+NOTE: Skipping as already exists in sysroot: ['glibc', 'libxcrypt', 'ncurses', 'systemd-systemctl-native', 'util-linux-libuuid', 'zlib', 'binutils-cross-arm', 'gcc-cross-arm', 'gcc-runtime', 'libtool-cross', 'libtool-native', 'opkg-utils', 'quilt-native', 'libpam', 'bash-completion', 'libcap-ng', 'gettext-native', 'autoconf-native', 'automake-native', 'patch-native', 'pkgconfig-native', 'pseudo-native', 'xz-native', 'texinfo-dummy-native', 'gettext-minimal-native', 'libgcc', 'linux-libc-headers', 'cracklib', 'flex', 'flex-native', 'zlib-native', 'gnu-config-native', 'mpfr-native', 'gmp-native', 'libmpc-native', 'zstd-native', 'attr-native', 'm4-native']
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function sstate_task_prefunc
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/util-linux/usr/include/libsmartcols/libsmartcols.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/util-linux/usr/include/libfdisk/libfdisk.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/util-linux/usr/include/libmount/libmount.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/util-linux/usr/include/blkid/blkid.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/util-linux/usr/lib/libblkid.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/util-linux/usr/lib/libsmartcols.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/util-linux/usr/lib/libfdisk.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/util-linux/usr/lib/libmount.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/util-linux/usr/lib/pkgconfig/blkid.pc
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/util-linux/usr/lib/pkgconfig/smartcols.pc
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/util-linux/usr/lib/pkgconfig/mount.pc
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/util-linux/usr/lib/pkgconfig/fdisk.pc
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/util-linux/sysroot-providers/util-linux
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/util-linux/lib/libmount.so.1
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/util-linux/lib/libsmartcols.so.1
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/util-linux/lib/libsmartcols.so.1.1.0
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/util-linux/lib/libblkid.so.1
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/util-linux/lib/libfdisk.so.1
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/util-linux/lib/libfdisk.so.1.1.0
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/util-linux/lib/libblkid.so.1.1.0
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/util-linux/lib/libmount.so.1.1.0
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/util-linux/usr/include/libsmartcols/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/util-linux/usr/include/libmount/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/util-linux/usr/include/libfdisk/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/util-linux/usr/lib/pkgconfig/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/util-linux/usr/include/blkid/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/util-linux/sysroot-providers/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/util-linux/usr/include/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/util-linux/usr/share/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/util-linux/usr/lib/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/util-linux/lib/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/util-linux/usr/
+DEBUG: Python function sstate_task_prefunc finished
+DEBUG: Executing python function do_populate_sysroot
+DEBUG: Executing shell function sysroot_stage_all
+0 blocks
+0 blocks
+0 blocks
+0 blocks
+0 blocks
+DEBUG: Shell function sysroot_stage_all finished
+DEBUG: Executing python function sysroot_strip
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/sysroot-destdir/lib/libmount.so.1.1.0']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/sysroot-destdir/lib/libfdisk.so.1.1.0']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/sysroot-destdir/lib/libblkid.so.1.1.0']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/sysroot-destdir/lib/libsmartcols.so.1.1.0']
+DEBUG: Python function sysroot_strip finished
+DEBUG: Python function do_populate_sysroot finished
+DEBUG: Executing python function do_qa_sysroot
+NOTE: QA checking do_populate_sysroot
+DEBUG: Python function do_qa_sysroot finished
+DEBUG: Executing python function sstate_task_postfunc
+DEBUG: Executing python function do_siteconfig
+DEBUG: Executing python function siteconfig_do_siteconfig
+DEBUG: No site_config directory, skipping do_siteconfig
+DEBUG: Python function siteconfig_do_siteconfig finished
+DEBUG: Python function do_siteconfig finished
+NOTE: Using umask 0o002 (not 22) for sstate packaging
+DEBUG: Preparing tree /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/sysroot-destdir for packaging at /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/sstate-build-populate_sysroot/sysroot-destdir
+DEBUG: Executing python function target_add_sysroot_deps
+DEBUG: Python function target_add_sysroot_deps finished
+DEBUG: Executing python function sstate_hardcode_path
+NOTE: Removing hardcoded paths from sstate package: 'find /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/sstate-build-populate_sysroot/ \( -name "*.la" -o -name "*-config" -o -name "*_config" -o -name "postinst-*" \) -type f | xargs grep -l -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/recipe-sysroot' -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/recipe-sysroot-native' -e '/home/matt/tmp/build/obmc-y2038/tmp/hosttools' | tee /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/sstate-build-populate_sysroot/fixmepath | xargs --no-run-if-empty sed -i -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/recipe-sysroot-native:FIXMESTAGINGDIRHOST:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/recipe-sysroot:FIXMESTAGINGDIRTARGET:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:FIXME_HOSTTOOLS_DIR:g''
+DEBUG: Python function sstate_hardcode_path finished
+DEBUG: Executing python function sstate_report_unihash
+DEBUG: Python function sstate_report_unihash finished
+DEBUG: Executing shell function sstate_create_package
+DEBUG: Shell function sstate_create_package finished
+DEBUG: Executing python function sstate_hardcode_path_unpack
+DEBUG: Python function sstate_hardcode_path_unpack finished
+DEBUG: Staging files from /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/util-linux/2.38.1-r0/sysroot-destdir to /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/util-linux
+DEBUG: Python function sstate_task_postfunc finished

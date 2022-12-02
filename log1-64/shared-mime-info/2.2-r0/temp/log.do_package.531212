@@ -1,0 +1,392 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0_2.72.3.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/libxml/libxml2_2.9.14.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/qemu/qemu-native_7.1.0.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-core/gettext/gettext_0.21.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/dwarfsrcfiles/dwarfsrcfiles.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/meson/meson_0.63.3.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/ninja/ninja_1.11.1.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pkgconfig/pkgconfig_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/python/python3_3.11.0.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/rpm/rpm_4.18.0.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/xmlto/xmlto_0.0.28.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-support/itstool/itstool_2.0.7.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-support/shared-mime-info/shared-mime-info_git.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: ['dwarfsrcfiles-native', 'rpm-native', 'libgcrypt-native', 'elfutils-native', 'lua-native', 'popt-native', 'file-native', 'libgpg-error-native', 'libcap-native']
+NOTE: Skipping as already exists in sysroot: ['glib-2.0', 'glibc', 'libxml2', 'gcc-cross-arm', 'gcc-runtime', 'qemu-native', 'quilt-native', 'gettext-native', 'meson-native', 'ninja-native', 'patch-native', 'pkgconfig-native', 'pseudo-native', 'python3-native', 'xmlto-native', 'itstool-native', 'shared-mime-info-native', 'libtool-native', 'linux-libc-headers', 'docbook-xml-dtd4-native', 'docbook-xsl-stylesheets-native', 'flex-native', 'util-linux-native', 'libxml2-native', 'libxslt-native', 'texinfo-dummy-native', 'gmp-native', 'xz-native', 'libmpc-native', 'zstd-native', 'binutils-cross-arm', 'gnu-config-native', 'mpfr-native', 'zlib-native', 'glib-2.0-native', 're2c-native', 'attr-native', 'gettext-minimal-native', 'bzip2-native', 'readline-native', 'ncurses-native', 'gdbm-native', 'libnsl2-native', 'libffi-native', 'sqlite3-native', 'util-linux-libuuid-native', 'openssl-native', 'libtirpc-native', 'libpcre', 'bash-completion', 'zlib', 'util-linux', 'libffi', 'python3-picobuild-native', 'python3-installer-native', 'python3-wheel-native', 'python3-setuptools-native', 'libgcc', 'python3', 'perl-native', 'm4-native', 'libpcre2-native', 'libcap-ng-native', 'libpcre-native', 'bzip2', 'libxcrypt', 'util-linux-libuuid', 'ncurses', 'libcap-ng', 'libpam', 'opkg-utils', 'python3-flit-core-native', 'libnsl2', 'xz', 'sqlite3', 'gdbm', 'libtirpc', 'openssl', 'readline', 'make-native', 'flex', 'cracklib', 'unzip-native']
+DEBUG: sed -e 's:^[^/]*/:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shared-mime-info/2.2-r0/recipe-sysroot-native/:g' /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/rpm-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/libgcrypt-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/elfutils-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/lua-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/libgpg-error-native/fixmepath | xargs sed -i -e 's:FIXMESTAGINGDIRTARGET:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shared-mime-info/2.2-r0/recipe-sysroot:g; s:FIXMESTAGINGDIRHOST:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shared-mime-info/2.2-r0/recipe-sysroot-native:g' -e 's:FIXME_PSEUDO_SYSROOT:/home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/pseudo-native:g' -e 's:FIXME_HOSTTOOLS_DIR:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:g' -e 's:FIXME_PKGDATA_DIR:/home/matt/tmp/build/obmc-y2038/tmp/pkgdata/evb-ast2600:g' -e 's:FIXME_PSEUDO_LOCALSTATEDIR:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shared-mime-info/2.2-r0/pseudo/:g' -e 's:FIXME_LOGFIFO:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shared-mime-info/2.2-r0/temp/fifo.531212:g'
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function sstate_task_prefunc
+DEBUG: Python function sstate_task_prefunc finished
+DEBUG: Executing python function do_package
+DEBUG: Executing python function package_convert_pr_autoinc
+DEBUG: Python function package_convert_pr_autoinc finished
+DEBUG: Executing python function package_prepare_pkgdata
+NOTE: Installed into pkgdata-sysroot: ['glibc', 'libxml2', 'glib-2.0', 'gcc-runtime', 'linux-libc-headers', 'python3', 'zlib', 'util-linux', 'libffi', 'libpcre', 'bash-completion', 'libgcc', 'util-linux-libuuid', 'bzip2', 'libtirpc', 'opkg-utils', 'libnsl2', 'gdbm', 'libxcrypt', 'xz', 'sqlite3', 'ncurses', 'readline', 'openssl', 'libpam', 'libcap-ng', 'flex', 'cracklib']
+DEBUG: Python function package_prepare_pkgdata finished
+DEBUG: Executing python function perform_packagecopy
+DEBUG: Python function perform_packagecopy finished
+DEBUG: Executing python function split_and_strip_files
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shared-mime-info/2.2-r0/package/usr/bin/update-mime-database']
+DEBUG: Python function split_and_strip_files finished
+DEBUG: Executing python function fixup_perms
+DEBUG: Python function fixup_perms finished
+DEBUG: Executing python function package_do_split_locales
+DEBUG: Python function package_do_split_locales finished
+DEBUG: Executing python function populate_packages
+NOTE: adding mime postinst and postrm scripts to shared-mime-info-data
+DEBUG: Python function populate_packages finished
+DEBUG: Executing python function package_fixsymlinks
+DEBUG: Python function package_fixsymlinks finished
+DEBUG: Executing python function package_name_hook
+DEBUG: Executing python function debian_package_name_hook
+DEBUG: LIBNAMES: pkg shared-mime-info-staticdev libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-src libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-zh-tw libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-zh-hk libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-zh-cn libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-wa libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-vi libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-uk libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-tr libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-th libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-te libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-ta libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-sv libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-sr+latin libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-sr libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-sq libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-sl libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-sk libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-rw libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-ru libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-ro libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-pt-br libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-pt libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-pl libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-pa libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-or libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-oc libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-nn libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-nl libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-nb libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-ms libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-mr libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-ml libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-lv libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-lt libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-ky libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-ko libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-kn libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-kk libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-ka libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-ja libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-it libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-id libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-ia libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-hu libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-hr libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-hi libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-he libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-gu libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-gl libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-ga libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-fur libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-fr libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-fo libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-fi libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-fa libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-eu libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-et libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-es libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-eo libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-en-gb libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-el libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-de libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-da libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-cy libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-cs libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-ca+valencia libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-ca libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-bn-in libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-bg libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-be+latin libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-be libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-az libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-ast libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-as libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-ar libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-af libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-doc libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-dev libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-dbg libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info-data libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg shared-mime-info libs 0 bins 1 sonames []
+DEBUG: Python function debian_package_name_hook finished
+DEBUG: Python function package_name_hook finished
+DEBUG: Executing python function package_do_filedeps
+DEBUG: Python function package_do_filedeps finished
+DEBUG: Executing python function package_do_shlibs
+DEBUG: Reading shlib providers in /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shared-mime-info/2.2-r0/pkgdata-sysroot/shlibs2
+DEBUG: calculating shlib provides for shared-mime-info-src
+DEBUG: LIBNAMES: pkg shared-mime-info-src sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-dbg
+DEBUG: LIBNAMES: pkg shared-mime-info-dbg sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-data
+DEBUG: LIBNAMES: pkg shared-mime-info-data sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-staticdev
+DEBUG: LIBNAMES: pkg shared-mime-info-staticdev sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-dev
+DEBUG: LIBNAMES: pkg shared-mime-info-dev sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-doc
+DEBUG: LIBNAMES: pkg shared-mime-info-doc sonames set()
+DEBUG: calculating shlib provides for shared-mime-info
+DEBUG: LIBNAMES: pkg shared-mime-info sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-locale-af
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-af sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-locale-ar
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-ar sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-locale-as
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-as sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-locale-ast
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-ast sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-locale-az
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-az sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-locale-be
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-be sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-locale-be+latin
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-be+latin sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-locale-bg
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-bg sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-locale-bn-in
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-bn-in sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-locale-ca
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-ca sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-locale-ca+valencia
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-ca+valencia sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-locale-cs
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-cs sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-locale-cy
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-cy sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-locale-da
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-da sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-locale-de
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-de sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-locale-el
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-el sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-locale-en-gb
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-en-gb sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-locale-eo
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-eo sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-locale-es
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-es sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-locale-et
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-et sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-locale-eu
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-eu sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-locale-fa
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-fa sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-locale-fi
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-fi sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-locale-fo
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-fo sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-locale-fr
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-fr sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-locale-fur
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-fur sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-locale-ga
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-ga sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-locale-gl
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-gl sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-locale-gu
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-gu sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-locale-he
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-he sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-locale-hi
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-hi sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-locale-hr
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-hr sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-locale-hu
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-hu sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-locale-ia
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-ia sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-locale-id
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-id sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-locale-it
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-it sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-locale-ja
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-ja sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-locale-ka
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-ka sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-locale-kk
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-kk sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-locale-kn
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-kn sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-locale-ko
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-ko sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-locale-ky
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-ky sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-locale-lt
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-lt sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-locale-lv
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-lv sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-locale-ml
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-ml sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-locale-mr
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-mr sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-locale-ms
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-ms sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-locale-nb
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-nb sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-locale-nl
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-nl sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-locale-nn
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-nn sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-locale-oc
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-oc sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-locale-or
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-or sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-locale-pa
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-pa sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-locale-pl
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-pl sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-locale-pt
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-pt sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-locale-pt-br
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-pt-br sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-locale-ro
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-ro sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-locale-ru
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-ru sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-locale-rw
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-rw sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-locale-sk
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-sk sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-locale-sl
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-sl sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-locale-sq
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-sq sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-locale-sr
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-sr sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-locale-sr+latin
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-sr+latin sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-locale-sv
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-sv sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-locale-ta
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-ta sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-locale-te
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-te sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-locale-th
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-th sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-locale-tr
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-tr sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-locale-uk
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-uk sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-locale-vi
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-vi sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-locale-wa
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-wa sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-locale-zh-cn
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-zh-cn sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-locale-zh-hk
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-zh-hk sonames set()
+DEBUG: calculating shlib provides for shared-mime-info-locale-zh-tw
+DEBUG: LIBNAMES: pkg shared-mime-info-locale-zh-tw sonames set()
+DEBUG: calculating shlib requirements for shared-mime-info-src
+DEBUG: calculating shlib requirements for shared-mime-info-dbg
+DEBUG: calculating shlib requirements for shared-mime-info-data
+DEBUG: calculating shlib requirements for shared-mime-info-staticdev
+DEBUG: calculating shlib requirements for shared-mime-info-dev
+DEBUG: calculating shlib requirements for shared-mime-info-doc
+DEBUG: calculating shlib requirements for shared-mime-info
+DEBUG: shared-mime-info: Dependency libxml2.so.2 requires package libxml2 (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shared-mime-info/2.2-r0/packages-split/shared-mime-info/usr/bin/update-mime-database)
+DEBUG: shared-mime-info: Dependency libglib-2.0.so.0 requires package glib-2.0 (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shared-mime-info/2.2-r0/packages-split/shared-mime-info/usr/bin/update-mime-database)
+DEBUG: shared-mime-info: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shared-mime-info/2.2-r0/packages-split/shared-mime-info/usr/bin/update-mime-database)
+DEBUG: shared-mime-info: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shared-mime-info/2.2-r0/packages-split/shared-mime-info/usr/bin/update-mime-database)
+DEBUG: calculating shlib requirements for shared-mime-info-locale-af
+DEBUG: calculating shlib requirements for shared-mime-info-locale-ar
+DEBUG: calculating shlib requirements for shared-mime-info-locale-as
+DEBUG: calculating shlib requirements for shared-mime-info-locale-ast
+DEBUG: calculating shlib requirements for shared-mime-info-locale-az
+DEBUG: calculating shlib requirements for shared-mime-info-locale-be
+DEBUG: calculating shlib requirements for shared-mime-info-locale-be+latin
+DEBUG: calculating shlib requirements for shared-mime-info-locale-bg
+DEBUG: calculating shlib requirements for shared-mime-info-locale-bn-in
+DEBUG: calculating shlib requirements for shared-mime-info-locale-ca
+DEBUG: calculating shlib requirements for shared-mime-info-locale-ca+valencia
+DEBUG: calculating shlib requirements for shared-mime-info-locale-cs
+DEBUG: calculating shlib requirements for shared-mime-info-locale-cy
+DEBUG: calculating shlib requirements for shared-mime-info-locale-da
+DEBUG: calculating shlib requirements for shared-mime-info-locale-de
+DEBUG: calculating shlib requirements for shared-mime-info-locale-el
+DEBUG: calculating shlib requirements for shared-mime-info-locale-en-gb
+DEBUG: calculating shlib requirements for shared-mime-info-locale-eo
+DEBUG: calculating shlib requirements for shared-mime-info-locale-es
+DEBUG: calculating shlib requirements for shared-mime-info-locale-et
+DEBUG: calculating shlib requirements for shared-mime-info-locale-eu
+DEBUG: calculating shlib requirements for shared-mime-info-locale-fa
+DEBUG: calculating shlib requirements for shared-mime-info-locale-fi
+DEBUG: calculating shlib requirements for shared-mime-info-locale-fo
+DEBUG: calculating shlib requirements for shared-mime-info-locale-fr
+DEBUG: calculating shlib requirements for shared-mime-info-locale-fur
+DEBUG: calculating shlib requirements for shared-mime-info-locale-ga
+DEBUG: calculating shlib requirements for shared-mime-info-locale-gl
+DEBUG: calculating shlib requirements for shared-mime-info-locale-gu
+DEBUG: calculating shlib requirements for shared-mime-info-locale-he
+DEBUG: calculating shlib requirements for shared-mime-info-locale-hi
+DEBUG: calculating shlib requirements for shared-mime-info-locale-hr
+DEBUG: calculating shlib requirements for shared-mime-info-locale-hu
+DEBUG: calculating shlib requirements for shared-mime-info-locale-ia
+DEBUG: calculating shlib requirements for shared-mime-info-locale-id
+DEBUG: calculating shlib requirements for shared-mime-info-locale-it
+DEBUG: calculating shlib requirements for shared-mime-info-locale-ja
+DEBUG: calculating shlib requirements for shared-mime-info-locale-ka
+DEBUG: calculating shlib requirements for shared-mime-info-locale-kk
+DEBUG: calculating shlib requirements for shared-mime-info-locale-kn
+DEBUG: calculating shlib requirements for shared-mime-info-locale-ko
+DEBUG: calculating shlib requirements for shared-mime-info-locale-ky
+DEBUG: calculating shlib requirements for shared-mime-info-locale-lt
+DEBUG: calculating shlib requirements for shared-mime-info-locale-lv
+DEBUG: calculating shlib requirements for shared-mime-info-locale-ml
+DEBUG: calculating shlib requirements for shared-mime-info-locale-mr
+DEBUG: calculating shlib requirements for shared-mime-info-locale-ms
+DEBUG: calculating shlib requirements for shared-mime-info-locale-nb
+DEBUG: calculating shlib requirements for shared-mime-info-locale-nl
+DEBUG: calculating shlib requirements for shared-mime-info-locale-nn
+DEBUG: calculating shlib requirements for shared-mime-info-locale-oc
+DEBUG: calculating shlib requirements for shared-mime-info-locale-or
+DEBUG: calculating shlib requirements for shared-mime-info-locale-pa
+DEBUG: calculating shlib requirements for shared-mime-info-locale-pl
+DEBUG: calculating shlib requirements for shared-mime-info-locale-pt
+DEBUG: calculating shlib requirements for shared-mime-info-locale-pt-br
+DEBUG: calculating shlib requirements for shared-mime-info-locale-ro
+DEBUG: calculating shlib requirements for shared-mime-info-locale-ru
+DEBUG: calculating shlib requirements for shared-mime-info-locale-rw
+DEBUG: calculating shlib requirements for shared-mime-info-locale-sk
+DEBUG: calculating shlib requirements for shared-mime-info-locale-sl
+DEBUG: calculating shlib requirements for shared-mime-info-locale-sq
+DEBUG: calculating shlib requirements for shared-mime-info-locale-sr
+DEBUG: calculating shlib requirements for shared-mime-info-locale-sr+latin
+DEBUG: calculating shlib requirements for shared-mime-info-locale-sv
+DEBUG: calculating shlib requirements for shared-mime-info-locale-ta
+DEBUG: calculating shlib requirements for shared-mime-info-locale-te
+DEBUG: calculating shlib requirements for shared-mime-info-locale-th
+DEBUG: calculating shlib requirements for shared-mime-info-locale-tr
+DEBUG: calculating shlib requirements for shared-mime-info-locale-uk
+DEBUG: calculating shlib requirements for shared-mime-info-locale-vi
+DEBUG: calculating shlib requirements for shared-mime-info-locale-wa
+DEBUG: calculating shlib requirements for shared-mime-info-locale-zh-cn
+DEBUG: calculating shlib requirements for shared-mime-info-locale-zh-hk
+DEBUG: calculating shlib requirements for shared-mime-info-locale-zh-tw
+DEBUG: Python function package_do_shlibs finished
+DEBUG: Executing python function package_do_pkgconfig
+DEBUG: Python function package_do_pkgconfig finished
+DEBUG: Executing python function read_shlibdeps
+DEBUG: Python function read_shlibdeps finished
+DEBUG: Executing python function package_depchains
+DEBUG: Python function package_depchains finished
+DEBUG: Executing python function emit_pkgdata
+DEBUG: Python function emit_pkgdata finished
+DEBUG: Python function do_package finished
+DEBUG: Executing python function sstate_task_postfunc
+NOTE: Using umask 0o002 (not 22) for sstate packaging
+DEBUG: Executing python function target_add_sysroot_deps
+DEBUG: Python function target_add_sysroot_deps finished
+DEBUG: Executing python function sstate_hardcode_path
+NOTE: Removing hardcoded paths from sstate package: 'find /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shared-mime-info/2.2-r0/sstate-build-package/ \( -name "*.la" -o -name "*-config" -o -name "*_config" -o -name "postinst-*" \) -type f | xargs grep -l -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shared-mime-info/2.2-r0/recipe-sysroot' -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shared-mime-info/2.2-r0/recipe-sysroot-native' -e '/home/matt/tmp/build/obmc-y2038/tmp/hosttools' | tee /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shared-mime-info/2.2-r0/sstate-build-package/fixmepath | xargs --no-run-if-empty sed -i -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shared-mime-info/2.2-r0/recipe-sysroot-native:FIXMESTAGINGDIRHOST:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shared-mime-info/2.2-r0/recipe-sysroot:FIXMESTAGINGDIRTARGET:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:FIXME_HOSTTOOLS_DIR:g''
+DEBUG: Python function sstate_hardcode_path finished
+DEBUG: Executing python function sstate_report_unihash
+DEBUG: Python function sstate_report_unihash finished
+DEBUG: Executing shell function sstate_create_package
+DEBUG: Shell function sstate_create_package finished
+DEBUG: Executing python function sstate_hardcode_path_unpack
+DEBUG: Python function sstate_hardcode_path_unpack finished
+DEBUG: Python function sstate_task_postfunc finished

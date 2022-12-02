@@ -1,0 +1,93 @@
+def systemd_do_postinst(d):
+    def make_subs(d):
+        all_subs = {}
+        for spec in listvar_to_list(d, 'SYSTEMD_SUBSTITUTIONS'):
+            spec, file = spec.rsplit(':', 1)
+            all_subs.setdefault(file, []).append(spec)
+
+        for f, v in all_subs.items():
+            subs = dict([ x.split(':') for x in v])
+            if not subs:
+                continue
+
+            path = d.getVar('D', True)
+            path += d.getVar('systemd_system_unitdir', True)
+            path += '/%s' % f
+            with open(path, 'r') as fd:
+                content = fd.read()
+            with open(path, 'w+') as fd:
+                try:
+                    fd.write(content.format(**subs))
+                except KeyError as e:
+                    bb.fatal('No substitution found for %s in '
+                        'file \'%s\'' % (e, f))
+
+
+    def install_envs(d):
+        install_dir = d.getVar('D', True)
+        install_dir += d.getVar('envfiledir', True)
+        searchpaths = d.getVar('FILESPATH', True)
+
+        for f in listvar_to_list(d, '_INSTALL_ENV_FILES'):
+            src = bb.utils.which(searchpaths, f)
+            if not os.path.isfile(src):
+                bb.fatal('Did not find SYSTEMD_ENVIRONMENT_FILE:'
+                    '\'%s\'' % src)
+
+            dest = os.path.join(install_dir, f)
+            parent = os.path.dirname(dest)
+            if not os.path.exists(parent):
+                os.makedirs(parent)
+
+            with open(src, 'r') as fd:
+                content = fd.read()
+            with open(dest, 'w+') as fd:
+                fd.write(content)
+
+
+    def install_links(d):
+        install_dir = d.getVar('D', True)
+        install_dir += d.getVar('systemd_system_unitdir', True)
+
+        for spec in listvar_to_list(d, '_INSTALL_LINKS'):
+            tgt, dest = spec.split(':')
+            dest = os.path.join(install_dir, dest)
+            parent = os.path.dirname(dest)
+            if not os.path.exists(parent):
+                os.makedirs(parent)
+            os.symlink(tgt, dest)
+
+
+    def install_overrides(d):
+        install_dir = d.getVar('D', True)
+        install_dir += d.getVar('systemd_system_unitdir', True)
+        searchpaths = d.getVar('FILESPATH', True)
+
+        for spec in listvar_to_list(d, '_INSTALL_OVERRIDES'):
+            tmpl, dest = spec.split(':')
+            source = bb.utils.which(searchpaths, tmpl)
+            if not os.path.isfile(source):
+                bb.fatal('Did not find SYSTEMD_OVERRIDE '
+                    'template: \'%s\'' % source)
+
+            dest = os.path.join(install_dir, dest)
+            parent = os.path.dirname(dest)
+            if not os.path.exists(parent):
+                os.makedirs(parent)
+
+            with open(source, 'r') as fd:
+                content = fd.read()
+            with open('%s' % dest, 'w+') as fd:
+                fd.write(content)
+
+
+    install_links(d)
+    install_envs(d)
+    install_overrides(d)
+    make_subs(d)
+
+systemd_do_postinst(d)
+
+def listvar_to_list(d, list_var, sep=' '):
+    return list(filter(bool, (d.getVar(list_var, True) or '').split(sep)))
+

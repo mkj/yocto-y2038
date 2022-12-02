@@ -1,0 +1,36 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-devtools/binutils/binutils-cross_2.39.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-native_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-extended/texinfo-dummy-native/texinfo-dummy-native.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-kernel/linux-libc-headers/linux-libc-headers_5.19.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-core/zlib/zlib_1.2.13.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/autoconf/autoconf_2.71.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/automake/automake_1.16.5.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/flex/flex_2.6.4.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/gnu-config/gnu-config_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-extended/xz/xz_5.2.7.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-extended/zstd/zstd_1.5.2.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-support/gmp/gmp_6.2.1.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-support/libmpc/libmpc_1.2.1.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-support/mpfr/mpfr_4.1.0.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: []
+NOTE: Skipping as already exists in sysroot: ['binutils-cross-arm', 'gcc-cross-arm', 'libtool-native', 'quilt-native', 'texinfo-dummy-native', 'linux-libc-headers', 'zlib-native', 'autoconf-native', 'automake-native', 'flex-native', 'gnu-config-native', 'patch-native', 'pseudo-native', 'xz-native', 'zstd-native', 'gmp-native', 'libmpc-native', 'mpfr-native', 'm4-native', 'gettext-minimal-native', 'attr-native']
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function autotools_aclocals
+DEBUG: SITE files ['endian-little', 'bit-32', 'arm-common', 'arm-32', 'common-linux', 'common-glibc', 'arm-linux', 'arm-linux-gnueabi', 'common']
+DEBUG: Python function autotools_aclocals finished
+DEBUG: Executing shell function do_install
+NOTE: make -j 1 DESTDIR=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libgcc-initial/12.2.0-r0/image MULTIBUILDTOP=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libgcc-initial/12.2.0-r0/gcc-12.2.0/build.arm-openbmc-linux-gnueabi.arm-openbmc-linux-gnueabi/arm-openbmc-linux-gnueabi/libgcc/ install
+/bin/bash /home/matt/tmp/build/obmc-y2038/tmp/work-shared/gcc-12.2.0-r0/gcc-12.2.0/libgcc/../mkinstalldirs /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libgcc-initial/12.2.0-r0/image/usr/lib/gcc/arm-openbmc-linux-gnueabi/12.2.0
+mkdir -p -- /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libgcc-initial/12.2.0-r0/image/usr/lib/gcc/arm-openbmc-linux-gnueabi/12.2.0
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 libgcc.a /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libgcc-initial/12.2.0-r0/image/usr/lib/gcc/arm-openbmc-linux-gnueabi/12.2.0/
+chmod 644 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libgcc-initial/12.2.0-r0/image/usr/lib/gcc/arm-openbmc-linux-gnueabi/12.2.0/libgcc.a
+arm-openbmc-linux-gnueabi-gcc-ranlib /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libgcc-initial/12.2.0-r0/image/usr/lib/gcc/arm-openbmc-linux-gnueabi/12.2.0/libgcc.a
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 libgcov.a /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libgcc-initial/12.2.0-r0/image/usr/lib/gcc/arm-openbmc-linux-gnueabi/12.2.0/
+chmod 644 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libgcc-initial/12.2.0-r0/image/usr/lib/gcc/arm-openbmc-linux-gnueabi/12.2.0/libgcov.a
+arm-openbmc-linux-gnueabi-gcc-ranlib /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libgcc-initial/12.2.0-r0/image/usr/lib/gcc/arm-openbmc-linux-gnueabi/12.2.0/libgcov.a
+parts="crtbegin.o crtbeginS.o crtbeginT.o crtend.o crtendS.o crtfastmath.o";				\
+for file in $parts; do					\
+  rm -f /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libgcc-initial/12.2.0-r0/image/usr/lib/gcc/arm-openbmc-linux-gnueabi/12.2.0/$file;		\
+  /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 $file /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libgcc-initial/12.2.0-r0/image/usr/lib/gcc/arm-openbmc-linux-gnueabi/12.2.0/;	\
+  case $file in 					\
+    *.a)						\
+      arm-openbmc-linux-gnueabi-gcc-ranlib /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libgcc-initial/12.2.0-r0/gcc-12.2.0/build.arm-openbmc-linux-gnueabi.arm-openbmc-linux-gnueabi/arm-openbmc-linux-gnueabi/libgcc/../.././gcc/$file ;;	\
+  esac;							\
+done
+/bin/bash /home/matt/tmp/build/obmc-y2038/tmp/work-shared/gcc-12.2.0-r0/gcc-12.2.0/libgcc/../mkinstalldirs /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libgcc-initial/12.2.0-r0/image/usr/lib/gcc/arm-openbmc-linux-gnueabi/12.2.0/include
+mkdir -p -- /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libgcc-initial/12.2.0-r0/image/usr/lib/gcc/arm-openbmc-linux-gnueabi/12.2.0/include
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 unwind.h /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libgcc-initial/12.2.0-r0/image/usr/lib/gcc/arm-openbmc-linux-gnueabi/12.2.0/include
+/bin/bash /home/matt/tmp/build/obmc-y2038/tmp/work-shared/gcc-12.2.0-r0/gcc-12.2.0/libgcc/../mkinstalldirs /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libgcc-initial/12.2.0-r0/image/usr/lib/gcc/arm-openbmc-linux-gnueabi/12.2.0/include
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 /home/matt/tmp/build/obmc-y2038/tmp/work-shared/gcc-12.2.0-r0/gcc-12.2.0/libgcc/gcov.h /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libgcc-initial/12.2.0-r0/image/usr/lib/gcc/arm-openbmc-linux-gnueabi/12.2.0/include
+mv: cannot stat '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libgcc-initial/12.2.0-r0/image/usr/lib/libgcc*': No such file or directory
+DEBUG: Shell function do_install finished
+DEBUG: Executing shell function remove_libtool_la
+DEBUG: Shell function remove_libtool_la finished

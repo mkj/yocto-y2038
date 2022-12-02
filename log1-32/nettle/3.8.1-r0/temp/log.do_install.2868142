@@ -1,0 +1,70 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-cross_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-native_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-support/gmp/gmp_6.2.1.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/autoconf/autoconf_2.71.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/automake/automake_1.16.5.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: []
+NOTE: Skipping as already exists in sysroot: ['glibc', 'gcc-cross-arm', 'gcc-runtime', 'libtool-cross', 'libtool-native', 'quilt-native', 'gmp', 'autoconf-native', 'automake-native', 'patch-native', 'pseudo-native', 'texinfo-dummy-native', 'binutils-cross-arm', 'libgcc', 'linux-libc-headers', 'gnu-config-native', 'm4-native', 'attr-native', 'mpfr-native', 'libmpc-native', 'xz-native', 'flex-native', 'zstd-native', 'zlib-native', 'gmp-native', 'gettext-minimal-native']
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function autotools_aclocals
+DEBUG: SITE files ['endian-little', 'bit-32', 'arm-common', 'arm-32', 'common-linux', 'common-glibc', 'arm-linux', 'arm-linux-gnueabi', 'common']
+DEBUG: Python function autotools_aclocals finished
+DEBUG: Executing shell function do_install
+NOTE: make -j 1 DESTDIR=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nettle/3.8.1-r0/image install
+make install-here
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nettle/3.8.1-r0/build'
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nettle/3.8.1-r0/image/usr/share/info
+f=nettle.info ; \
+[ -f $f ] || f="../nettle-3.8.1/$f" ; \
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 "$f" /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nettle/3.8.1-r0/image/usr/share/info ; \
+if (install-info --version && \
+    install-info --version 2>&1 | sed 1q | grep -i -v debian) >/dev/null 2>&1; then \
+  install-info --info-dir="/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nettle/3.8.1-r0/image/usr/share/info" "$f" ; \
+else : ; fi
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nettle/3.8.1-r0/image/usr/include/nettle
+for f in aes.h arcfour.h arctwo.h asn1.h blowfish.h base16.h base64.h bignum.h buffer.h camellia.h cast128.h cbc.h ccm.h cfb.h chacha.h chacha-poly1305.h ctr.h curve25519.h curve448.h des.h dsa.h dsa-compat.h eax.h ecc-curve.h ecc.h ecdsa.h eddsa.h gcm.h gostdsa.h gosthash94.h hmac.h knuth-lfib.h hkdf.h macros.h cmac.h siv-cmac.h md2.h md4.h md5.h md5-compat.h memops.h memxor.h nettle-meta.h nettle-types.h pbkdf2.h pgp.h pkcs1.h pss.h pss-mgf1.h realloc.h ripemd160.h rsa.h salsa20.h sexp.h serpent.h sha.h sha1.h sha2.h sha3.h sm3.h streebog.h twofish.h umac.h yarrow.h xts.h poly1305.h nist-keywrap.h version.h  ; do \
+  if [ -f "$f" ] ; then \
+    /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 "$f" /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nettle/3.8.1-r0/image/usr/include/nettle ; \
+  else \
+    /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 "../nettle-3.8.1/$f" /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nettle/3.8.1-r0/image/usr/include/nettle ; \
+  fi ; done
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nettle/3.8.1-r0/image/usr/lib
+for f in ; do \
+  /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 $f /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nettle/3.8.1-r0/image/usr/lib ; \
+done
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nettle/3.8.1-r0/image/usr/lib/pkgconfig
+for f in nettle.pc  hogweed.pc ; do \
+  /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 "$f" /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nettle/3.8.1-r0/image/usr/lib/pkgconfig ; \
+done
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nettle/3.8.1-r0/image/usr/lib
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 libnettle.so /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nettle/3.8.1-r0/image/usr/lib/libnettle.so.8.6
+[ -z "libnettle.so.8" ] \
+                || (cd /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nettle/3.8.1-r0/image/usr/lib \
+	&& rm -f libnettle.so.8 libnettle.so \
+	&& ln -s libnettle.so.8.6 libnettle.so.8 \
+	&& ln -s libnettle.so.8.6 libnettle.so)
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nettle/3.8.1-r0/image/usr/lib
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 libhogweed.so /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nettle/3.8.1-r0/image/usr/lib/libhogweed.so.6.6
+[ -z "libhogweed.so.6" ] \
+                || (cd /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nettle/3.8.1-r0/image/usr/lib \
+	&& rm -f libhogweed.so.6 libhogweed.so \
+	&& ln -s libhogweed.so.6.6 libhogweed.so.6 \
+	&& ln -s libhogweed.so.6.6 libhogweed.so)
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nettle/3.8.1-r0/build'
+set -e; for d in tools testsuite examples; do \
+  echo "Making install in $d" ; (cd $d && make install); done
+Making install in tools
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nettle/3.8.1-r0/build/tools'
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nettle/3.8.1-r0/image/usr/bin
+for f in sexp-conv nettle-hash nettle-pbkdf2 nettle-lfib-stream pkcs1-conv ; do \
+  /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c $f /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nettle/3.8.1-r0/image/usr/bin ; \
+done
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nettle/3.8.1-r0/build/tools'
+Making install in testsuite
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nettle/3.8.1-r0/build/testsuite'
+true
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nettle/3.8.1-r0/build/testsuite'
+Making install in examples
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nettle/3.8.1-r0/build/examples'
+true
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nettle/3.8.1-r0/build/examples'
+DEBUG: Shell function do_install finished
+DEBUG: Executing shell function remove_libtool_la
+DEBUG: Shell function remove_libtool_la finished

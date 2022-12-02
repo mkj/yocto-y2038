@@ -1,0 +1,184 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: ['quilt-native', 'patch-native', 'libtool-native', 'attr-native', 'texinfo-dummy-native', 'gettext-minimal-native']
+NOTE: Skipping as already exists in sysroot: []
+DEBUG: sed -e 's:^[^/]*/:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/avahi/0.8-r0/recipe-sysroot-native/:g' /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/quilt-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/libtool-native/fixmepath | xargs sed -i -e 's:FIXMESTAGINGDIRTARGET:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/avahi/0.8-r0/recipe-sysroot:g; s:FIXMESTAGINGDIRHOST:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/avahi/0.8-r0/recipe-sysroot-native:g' -e 's:FIXME_PSEUDO_SYSROOT:/home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/pseudo-native:g' -e 's:FIXME_HOSTTOOLS_DIR:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:g' -e 's:FIXME_PKGDATA_DIR:/home/matt/tmp/build/obmc-y2038/tmp/pkgdata/evb-ast2600:g' -e 's:FIXME_PSEUDO_LOCALSTATEDIR:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/avahi/0.8-r0/pseudo/:g' -e 's:FIXME_LOGFIFO:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/avahi/0.8-r0/temp/fifo.1955429:g'
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function do_patch
+DEBUG: Executing python function patch_do_patch
+DEBUG: Searching for 00avahi-autoipd in paths:
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi-0.8/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi-0.8/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi-0.8/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi-0.8/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi-0.8/aspeed
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi/aspeed
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi-0.8/armv7a
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi/armv7a
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi-0.8/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi-0.8/arm
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi/arm
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/files/arm
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi-0.8/
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi/
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/files/
+DEBUG: Searching for 99avahi-autoipd in paths:
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi-0.8/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi-0.8/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi-0.8/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi-0.8/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi-0.8/aspeed
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi/aspeed
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi-0.8/armv7a
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi/armv7a
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi-0.8/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi-0.8/arm
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi/arm
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/files/arm
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi-0.8/
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi/
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/files/
+DEBUG: Searching for initscript.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi-0.8/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi-0.8/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi-0.8/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi-0.8/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi-0.8/aspeed
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi/aspeed
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi-0.8/armv7a
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi/armv7a
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi-0.8/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi-0.8/arm
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi/arm
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/files/arm
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi-0.8/
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi/
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/files/
+DEBUG: Searching for 0001-Fix-opening-etc-resolv.conf-error.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi-0.8/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi-0.8/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi-0.8/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi-0.8/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi-0.8/aspeed
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi/aspeed
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi-0.8/armv7a
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi/armv7a
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi-0.8/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi-0.8/arm
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi/arm
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/files/arm
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi-0.8/
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi/
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/files/
+DEBUG: Searching for handle-hup.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi-0.8/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi-0.8/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi-0.8/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi-0.8/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi-0.8/aspeed
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi/aspeed
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi-0.8/armv7a
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi/armv7a
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi-0.8/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi-0.8/arm
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi/arm
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/files/arm
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi-0.8/
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi/
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/files/
+DEBUG: Searching for local-ping.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi-0.8/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi-0.8/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi-0.8/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi-0.8/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi-0.8/aspeed
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi/aspeed
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi-0.8/armv7a
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi/armv7a
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi-0.8/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi-0.8/arm
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi/arm
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/files/arm
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi-0.8/
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/avahi/
+    /home/matt/src/openbmc/meta/recipes-connectivity/avahi/files/
+NOTE: Applying patch 'initscript.patch' (../../../src/openbmc/meta/recipes-connectivity/avahi/files/initscript.patch)
+NOTE: Applying patch '0001-Fix-opening-etc-resolv.conf-error.patch' (../../../src/openbmc/meta/recipes-connectivity/avahi/files/0001-Fix-opening-etc-resolv.conf-error.patch)
+NOTE: Applying patch 'handle-hup.patch' (../../../src/openbmc/meta/recipes-connectivity/avahi/files/handle-hup.patch)
+NOTE: Applying patch 'local-ping.patch' (../../../src/openbmc/meta/recipes-connectivity/avahi/files/local-ping.patch)
+DEBUG: Python function patch_do_patch finished
+DEBUG: Python function do_patch finished
+DEBUG: Executing python function do_qa_patch
+DEBUG: Python function do_qa_patch finished

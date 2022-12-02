@@ -1,0 +1,480 @@
+def package_do_split_gconvs(d):
+    import re
+    if (d.getVar('PACKAGE_NO_GCONV') == '1'):
+        bb.note("package requested not splitting gconvs")
+        return
+
+    if not d.getVar('PACKAGES'):
+        return
+
+    mlprefix = d.getVar("MLPREFIX") or ""
+
+    bpn = d.getVar('BPN')
+    libdir = d.getVar('libdir')
+    if not libdir:
+        bb.error("libdir not defined")
+        return
+    datadir = d.getVar('datadir')
+    if not datadir:
+        bb.error("datadir not defined")
+        return
+
+    gconv_libdir = oe.path.join(libdir, "gconv")
+    charmap_dir = oe.path.join(datadir, "i18n", "charmaps")
+    locales_dir = oe.path.join(datadir, "i18n", "locales")
+    binary_locales_dir = d.getVar('localedir')
+
+    def calc_gconv_deps(fn, pkg, file_regex, output_pattern, group):
+        deps = []
+        f = open(fn, "rb")
+        c_re = re.compile(r'^copy "(.*)"')
+        i_re = re.compile(r'^include "(\w+)".*')
+        for l in f.readlines():
+            l = l.decode("latin-1")
+            m = c_re.match(l) or i_re.match(l)
+            if m:
+                dp = legitimize_package_name('%s%s-gconv-%s' % (mlprefix, bpn, m.group(1)))
+                if not dp in deps:
+                    deps.append(dp)
+        f.close()
+        if deps != []:
+            d.setVar('RDEPENDS:%s' % pkg, " ".join(deps))
+        if bpn != 'glibc':
+            d.setVar('RPROVIDES:%s' % pkg, pkg.replace(bpn, 'glibc'))
+
+    do_split_packages(d, gconv_libdir, file_regex=r'^(.*)\.so$', output_pattern=bpn+'-gconv-%s', \
+        description='gconv module for character set %s', hook=calc_gconv_deps, \
+        extra_depends=bpn+'-gconv')
+
+    def calc_charmap_deps(fn, pkg, file_regex, output_pattern, group):
+        deps = []
+        f = open(fn, "rb")
+        c_re = re.compile(r'^copy "(.*)"')
+        i_re = re.compile(r'^include "(\w+)".*')
+        for l in f.readlines():
+            l = l.decode("latin-1")
+            m = c_re.match(l) or i_re.match(l)
+            if m:
+                dp = legitimize_package_name('%s%s-charmap-%s' % (mlprefix, bpn, m.group(1)))
+                if not dp in deps:
+                    deps.append(dp)
+        f.close()
+        if deps != []:
+            d.setVar('RDEPENDS:%s' % pkg, " ".join(deps))
+        if bpn != 'glibc':
+            d.setVar('RPROVIDES:%s' % pkg, pkg.replace(bpn, 'glibc'))
+
+    do_split_packages(d, charmap_dir, file_regex=r'^(.*)\.gz$', output_pattern=bpn+'-charmap-%s', \
+        description='character map for %s encoding', hook=calc_charmap_deps, extra_depends='')
+
+    def calc_locale_deps(fn, pkg, file_regex, output_pattern, group):
+        deps = []
+        f = open(fn, "rb")
+        c_re = re.compile(r'^copy "(.*)"')
+        i_re = re.compile(r'^include "(\w+)".*')
+        for l in f.readlines():
+            l = l.decode("latin-1")
+            m = c_re.match(l) or i_re.match(l)
+            if m:
+                dp = legitimize_package_name(mlprefix+bpn+'-localedata-%s' % m.group(1))
+                if not dp in deps:
+                    deps.append(dp)
+        f.close()
+        if deps != []:
+            d.setVar('RDEPENDS:%s' % pkg, " ".join(deps))
+        if bpn != 'glibc':
+            d.setVar('RPROVIDES:%s' % pkg, pkg.replace(bpn, 'glibc'))
+
+    do_split_packages(d, locales_dir, file_regex=r'(.*)', output_pattern=bpn+'-localedata-%s', \
+        description='locale definition for %s', hook=calc_locale_deps, extra_depends='')
+    d.setVar('PACKAGES', d.getVar('PACKAGES', False) + ' ' + d.getVar('MLPREFIX', False) + bpn + '-gconv')
+
+    use_bin = d.getVar("GLIBC_INTERNAL_USE_BINARY_LOCALE")
+
+    dot_re = re.compile(r"(.*)\.(.*)")
+
+    # Read in supported locales and associated encodings
+    supported = {}
+    with open(oe.path.join(d.getVar('WORKDIR'), "SUPPORTED")) as f:
+        for line in f.readlines():
+            try:
+                locale, charset = line.rstrip().split()
+            except ValueError:
+                continue
+            supported[locale] = charset
+
+    # GLIBC_GENERATE_LOCALES var specifies which locales to be generated. empty or "all" means all locales
+    to_generate = d.getVar('GLIBC_GENERATE_LOCALES')
+    if not to_generate or to_generate == 'all':
+        to_generate = sorted(supported.keys())
+    else:
+        to_generate = to_generate.split()
+        for locale in to_generate:
+            if locale not in supported:
+                if '.' in locale:
+                    charset = locale.split('.')[1]
+                else:
+                    charset = 'UTF-8'
+                    bb.warn("Unsupported locale '%s', assuming encoding '%s'" % (locale, charset))
+                supported[locale] = charset
+
+    def output_locale_source(name, pkgname, locale, encoding):
+        d.setVar('RDEPENDS:%s' % pkgname, '%slocaledef %s-localedata-%s %s-charmap-%s' % \
+        (mlprefix, mlprefix+bpn, legitimize_package_name(locale), mlprefix+bpn, legitimize_package_name(encoding)))
+        d.setVar('pkg_postinst_ontarget:%s' % pkgname, d.getVar('locale_base_postinst_ontarget') \
+        % (locale, encoding, locale))
+        d.setVar('pkg_postrm:%s' % pkgname, d.getVar('locale_base_postrm') % \
+        (locale, encoding, locale))
+
+    def output_locale_binary_rdepends(name, pkgname, locale, encoding):
+        dep = legitimize_package_name('%s-binary-localedata-%s' % (bpn, name))
+        lcsplit = d.getVar('GLIBC_SPLIT_LC_PACKAGES')
+        if lcsplit and int(lcsplit):
+            d.appendVar('PACKAGES', ' ' + dep)
+            d.setVar('ALLOW_EMPTY:%s' % dep, '1')
+        d.setVar('RDEPENDS:%s' % pkgname, mlprefix + dep)
+
+    commands = {}
+
+    def output_locale_binary(name, pkgname, locale, encoding):
+        treedir = oe.path.join(d.getVar("WORKDIR"), "locale-tree")
+        ldlibdir = oe.path.join(treedir, d.getVar("base_libdir"))
+        path = d.getVar("PATH")
+        i18npath = oe.path.join(treedir, datadir, "i18n")
+        gconvpath = oe.path.join(treedir, "iconvdata")
+        outputpath = oe.path.join(treedir, binary_locales_dir)
+
+        use_cross_localedef = d.getVar("LOCALE_GENERATION_WITH_CROSS-LOCALEDEF") or "0"
+        if use_cross_localedef == "1":
+            target_arch = d.getVar('TARGET_ARCH')
+            locale_arch_options = { \
+                "arc":     " --uint32-align=4 --little-endian ", \
+                "arceb":   " --uint32-align=4 --big-endian ",    \
+                "arm":     " --uint32-align=4 --little-endian ", \
+                "armeb":   " --uint32-align=4 --big-endian ",    \
+                "aarch64": " --uint32-align=4 --little-endian ",    \
+                "aarch64_be": " --uint32-align=4 --big-endian ",    \
+                "sh4":     " --uint32-align=4 --big-endian ",    \
+                "powerpc": " --uint32-align=4 --big-endian ",    \
+                "powerpc64": " --uint32-align=4 --big-endian ",  \
+                "powerpc64le": " --uint32-align=4 --little-endian ",  \
+                "mips":    " --uint32-align=4 --big-endian ",    \
+                "mipsisa32r6":    " --uint32-align=4 --big-endian ",    \
+                "mips64":  " --uint32-align=4 --big-endian ",    \
+                "mipsisa64r6":  " --uint32-align=4 --big-endian ",    \
+                "mipsel":  " --uint32-align=4 --little-endian ", \
+                "mipsisa32r6el":  " --uint32-align=4 --little-endian ", \
+                "mips64el":" --uint32-align=4 --little-endian ", \
+                "mipsisa64r6el":" --uint32-align=4 --little-endian ", \
+                "riscv64": " --uint32-align=4 --little-endian ", \
+                "riscv32": " --uint32-align=4 --little-endian ", \
+                "i586":    " --uint32-align=4 --little-endian ", \
+                "i686":    " --uint32-align=4 --little-endian ", \
+                "x86_64":  " --uint32-align=4 --little-endian "  }
+
+            if target_arch in locale_arch_options:
+                localedef_opts = locale_arch_options[target_arch]
+            else:
+                bb.error("locale_arch_options not found for target_arch=" + target_arch)
+                bb.fatal("unknown arch:" + target_arch + " for locale_arch_options")
+
+            localedef_opts += " --force --no-hard-links --no-archive --prefix=%s \
+                --inputfile=%s/%s/i18n/locales/%s --charmap=%s %s/%s" \
+                % (treedir, treedir, datadir, locale, encoding, outputpath, name)
+
+            cmd = "PATH=\"%s\" I18NPATH=\"%s\" GCONV_PATH=\"%s\" cross-localedef %s" % \
+                (path, i18npath, gconvpath, localedef_opts)
+        else: # earlier slower qemu way
+            qemu = qemu_target_binary(d)
+            localedef_opts = "--force --no-hard-links --no-archive --prefix=%s \
+                --inputfile=%s/i18n/locales/%s --charmap=%s %s" \
+                % (treedir, datadir, locale, encoding, name)
+
+            qemu_options = d.getVar('QEMU_OPTIONS')
+
+            cmd = "PSEUDO_RELOADED=YES PATH=\"%s\" I18NPATH=\"%s\" %s -L %s \
+                -E LD_LIBRARY_PATH=%s %s %s${base_bindir}/localedef %s" % \
+                (path, i18npath, qemu, treedir, ldlibdir, qemu_options, treedir, localedef_opts)
+
+        commands["%s/%s" % (outputpath, name)] = cmd
+
+        bb.note("generating locale %s (%s)" % (locale, encoding))
+
+    def output_locale(name, locale, encoding):
+        pkgname = d.getVar('MLPREFIX', False) + 'locale-base-' + legitimize_package_name(name)
+        d.setVar('ALLOW_EMPTY:%s' % pkgname, '1')
+        d.setVar('PACKAGES', '%s %s' % (pkgname, d.getVar('PACKAGES')))
+        rprovides = ' %svirtual-locale-%s' % (mlprefix, legitimize_package_name(name))
+        m = re.match(r"(.*)_(.*)", name)
+        if m:
+            rprovides += ' %svirtual-locale-%s' % (mlprefix, m.group(1))
+        d.setVar('RPROVIDES:%s' % pkgname, rprovides)
+
+        if use_bin == "compile":
+            output_locale_binary_rdepends(name, pkgname, locale, encoding)
+            output_locale_binary(name, pkgname, locale, encoding)
+        elif use_bin == "precompiled":
+            output_locale_binary_rdepends(name, pkgname, locale, encoding)
+        else:
+            output_locale_source(name, pkgname, locale, encoding)
+
+    if use_bin == "compile":
+        bb.note("preparing tree for binary locale generation")
+        bb.build.exec_func("do_prep_locale_tree", d)
+
+    utf8_only = int(d.getVar('LOCALE_UTF8_ONLY') or 0)
+    utf8_is_default = int(d.getVar('LOCALE_UTF8_IS_DEFAULT') or 0)
+
+    encodings = {}
+    for locale in to_generate:
+        charset = supported[locale]
+        if utf8_only and charset != 'UTF-8':
+            continue
+
+        m = dot_re.match(locale)
+        if m:
+            base = m.group(1)
+        else:
+            base = locale
+
+        # Non-precompiled locales may be renamed so that the default
+        # (non-suffixed) encoding is always UTF-8, i.e., instead of en_US and
+        # en_US.UTF-8, we have en_US and en_US.ISO-8859-1. This implicitly
+        # contradicts SUPPORTED.
+        if use_bin == "precompiled" or not utf8_is_default:
+            output_locale(locale, base, charset)
+        else:
+            if charset == 'UTF-8':
+                output_locale(base, base, charset)
+            else:
+                output_locale('%s.%s' % (base, charset), base, charset)
+
+    def metapkg_hook(file, pkg, pattern, format, basename):
+        name = basename.split('/', 1)[0]
+        metapkg = legitimize_package_name('%s-binary-localedata-%s' % (mlprefix+bpn, name))
+        d.appendVar('RDEPENDS:%s' % metapkg, ' ' + pkg)
+
+    if use_bin == "compile":
+        makefile = oe.path.join(d.getVar("WORKDIR"), "locale-tree", "Makefile")
+        with open(makefile, "w") as m:
+            m.write("all: %s\n\n" % " ".join(commands.keys()))
+            total = len(commands)
+            for i, (maketarget, makerecipe) in enumerate(commands.items()):
+                m.write(maketarget + ":\n")
+                m.write("\t@echo 'Progress %d/%d'\n" % (i, total))
+                m.write("\t" + makerecipe + "\n\n")
+        d.setVar("EXTRA_OEMAKE", "-C %s ${PARALLEL_MAKE}" % (os.path.dirname(makefile)))
+        d.setVarFlag("oe_runmake", "progress", r"outof:Progress\s(\d+)/(\d+)")
+        bb.note("Executing binary locale generation makefile")
+        bb.build.exec_func("oe_runmake", d)
+        bb.note("collecting binary locales from locale tree")
+        bb.build.exec_func("do_collect_bins_from_locale_tree", d)
+
+    if use_bin in ('compile', 'precompiled'):
+        lcsplit = d.getVar('GLIBC_SPLIT_LC_PACKAGES')
+        if lcsplit and int(lcsplit):
+            do_split_packages(d, binary_locales_dir, file_regex=r'^(.*/LC_\w+)', \
+                output_pattern=bpn+'-binary-localedata-%s', \
+                description='binary locale definition for %s', recursive=True,
+                hook=metapkg_hook, extra_depends='', allow_dirs=True, match_path=True)
+        else:
+            do_split_packages(d, binary_locales_dir, file_regex=r'(.*)', \
+                output_pattern=bpn+'-binary-localedata-%s', \
+                description='binary locale definition for %s', extra_depends='', allow_dirs=True)
+    else:
+        bb.note("generation of binary locales disabled. this may break i18n!")
+
+package_do_split_gconvs(d)
+
+def qemu_target_binary(data):
+    package_arch = data.getVar("PACKAGE_ARCH")
+    qemu_target_binary = (data.getVar("QEMU_TARGET_BINARY_%s" % package_arch) or "")
+    if qemu_target_binary:
+        return qemu_target_binary
+
+    target_arch = data.getVar("TARGET_ARCH")
+    if target_arch in ("i486", "i586", "i686"):
+        target_arch = "i386"
+    elif target_arch == "powerpc":
+        target_arch = "ppc"
+    elif target_arch == "powerpc64":
+        target_arch = "ppc64"
+    elif target_arch == "powerpc64le":
+        target_arch = "ppc64le"
+
+    return "qemu-" + target_arch
+
+def legitimize_package_name(s):
+    """
+    Make sure package names are legitimate strings
+    """
+    import re
+
+    def fixutf(m):
+        cp = m.group(1)
+        if cp:
+            return ('\\u%s' % cp).encode('latin-1').decode('unicode_escape')
+
+    # Handle unicode codepoints encoded as <U0123>, as in glibc locale files.
+    s = re.sub(r'<U([0-9A-Fa-f]{1,4})>', fixutf, s)
+
+    # Remaining package name validity fixes
+    return s.lower().replace('_', '-').replace('@', '+').replace(',', '+').replace('/', '-')
+
+def do_split_packages(d, root, file_regex, output_pattern, description, postinst=None, recursive=False, hook=None, extra_depends=None, aux_files_pattern=None, postrm=None, allow_dirs=False, prepend=False, match_path=False, aux_files_pattern_verbatim=None, allow_links=False, summary=None):
+    """
+    Used in .bb files to split up dynamically generated subpackages of a
+    given package, usually plugins or modules.
+
+    Arguments:
+    root           -- the path in which to search
+    file_regex     -- regular expression to match searched files. Use
+                      parentheses () to mark the part of this expression
+                      that should be used to derive the module name (to be
+                      substituted where %s is used in other function
+                      arguments as noted below)
+    output_pattern -- pattern to use for the package names. Must include %s.
+    description    -- description to set for each package. Must include %s.
+    postinst       -- postinstall script to use for all packages (as a
+                      string)
+    recursive      -- True to perform a recursive search - default False
+    hook           -- a hook function to be called for every match. The
+                      function will be called with the following arguments
+                      (in the order listed):
+                        f: full path to the file/directory match
+                        pkg: the package name
+                        file_regex: as above
+                        output_pattern: as above
+                        modulename: the module name derived using file_regex
+    extra_depends  -- extra runtime dependencies (RDEPENDS) to be set for
+                      all packages. The default value of None causes a
+                      dependency on the main package (${PN}) - if you do
+                      not want this, pass '' for this parameter.
+    aux_files_pattern -- extra item(s) to be added to FILES for each
+                      package. Can be a single string item or a list of
+                      strings for multiple items.  Must include %s.
+    postrm         -- postrm script to use for all packages (as a string)
+    allow_dirs     -- True allow directories to be matched - default False
+    prepend        -- if True, prepend created packages to PACKAGES instead
+                      of the default False which appends them
+    match_path     -- match file_regex on the whole relative path to the
+                      root rather than just the file name
+    aux_files_pattern_verbatim -- extra item(s) to be added to FILES for
+                      each package, using the actual derived module name
+                      rather than converting it to something legal for a
+                      package name. Can be a single string item or a list
+                      of strings for multiple items. Must include %s.
+    allow_links    -- True to allow symlinks to be matched - default False
+    summary        -- Summary to set for each package. Must include %s;
+                      defaults to description if not set.
+
+    """
+
+    dvar = d.getVar('PKGD')
+    root = d.expand(root)
+    output_pattern = d.expand(output_pattern)
+    extra_depends = d.expand(extra_depends)
+
+    # If the root directory doesn't exist, don't error out later but silently do
+    # no splitting.
+    if not os.path.exists(dvar + root):
+        return []
+
+    ml = d.getVar("MLPREFIX")
+    if ml:
+        if not output_pattern.startswith(ml):
+            output_pattern = ml + output_pattern
+
+        newdeps = []
+        for dep in (extra_depends or "").split():
+            if dep.startswith(ml):
+                newdeps.append(dep)
+            else:
+                newdeps.append(ml + dep)
+        if newdeps:
+            extra_depends = " ".join(newdeps)
+
+
+    packages = d.getVar('PACKAGES').split()
+    split_packages = set()
+
+    if postinst:
+        postinst = '#!/bin/sh\n' + postinst + '\n'
+    if postrm:
+        postrm = '#!/bin/sh\n' + postrm + '\n'
+    if not recursive:
+        objs = os.listdir(dvar + root)
+    else:
+        objs = []
+        for walkroot, dirs, files in os.walk(dvar + root):
+            for file in files:
+                relpath = os.path.join(walkroot, file).replace(dvar + root + '/', '', 1)
+                if relpath:
+                    objs.append(relpath)
+
+    if extra_depends == None:
+        extra_depends = d.getVar("PN")
+
+    if not summary:
+        summary = description
+
+    for o in sorted(objs):
+        import re, stat
+        if match_path:
+            m = re.match(file_regex, o)
+        else:
+            m = re.match(file_regex, os.path.basename(o))
+
+        if not m:
+            continue
+        f = os.path.join(dvar + root, o)
+        mode = os.lstat(f).st_mode
+        if not (stat.S_ISREG(mode) or (allow_links and stat.S_ISLNK(mode)) or (allow_dirs and stat.S_ISDIR(mode))):
+            continue
+        on = legitimize_package_name(m.group(1))
+        pkg = output_pattern % on
+        split_packages.add(pkg)
+        if not pkg in packages:
+            if prepend:
+                packages = [pkg] + packages
+            else:
+                packages.append(pkg)
+        oldfiles = d.getVar('FILES:' + pkg)
+        newfile = os.path.join(root, o)
+        # These names will be passed through glob() so if the filename actually
+        # contains * or ? (rare, but possible) we need to handle that specially
+        newfile = newfile.replace('*', '[*]')
+        newfile = newfile.replace('?', '[?]')
+        if not oldfiles:
+            the_files = [newfile]
+            if aux_files_pattern:
+                if type(aux_files_pattern) is list:
+                    for fp in aux_files_pattern:
+                        the_files.append(fp % on)
+                else:
+                    the_files.append(aux_files_pattern % on)
+            if aux_files_pattern_verbatim:
+                if type(aux_files_pattern_verbatim) is list:
+                    for fp in aux_files_pattern_verbatim:
+                        the_files.append(fp % m.group(1))
+                else:
+                    the_files.append(aux_files_pattern_verbatim % m.group(1))
+            d.setVar('FILES:' + pkg, " ".join(the_files))
+        else:
+            d.setVar('FILES:' + pkg, oldfiles + " " + newfile)
+        if extra_depends != '':
+            d.appendVar('RDEPENDS:' + pkg, ' ' + extra_depends)
+        if not d.getVar('DESCRIPTION:' + pkg):
+            d.setVar('DESCRIPTION:' + pkg, description % on)
+        if not d.getVar('SUMMARY:' + pkg):
+            d.setVar('SUMMARY:' + pkg, summary % on)
+        if postinst:
+            d.setVar('pkg_postinst:' + pkg, postinst)
+        if postrm:
+            d.setVar('pkg_postrm:' + pkg, postrm)
+        if callable(hook):
+            hook(f, pkg, file_regex, output_pattern, m.group(1))
+
+    d.setVar('PACKAGES', ' '.join(packages))
+    return list(split_packages)
+

@@ -1,0 +1,60 @@
+28,30d27
+< ../util-linux-2.38.1/include/c.h:395:30: warning: conversion to 'long int' from 'long unsigned int' may change the sign of the result [-Wsign-conversion]
+<   395 |                 .tv_sec   =  usec / 1000000L,
+<       |                              ^~~~
+62,68c59
+< ../util-linux-2.38.1/libuuid/src/gen_uuid.c:271:39: warning: conversion to '__time_t' {aka 'long int'} from 'long unsigned int' may change the sign of the result [-Wsign-conversion]
+<   271 |                         last.tv_sec = tv1;
+<       |                                       ^~~
+< ../util-linux-2.38.1/libuuid/src/gen_uuid.c:272:40: warning: conversion to '__suseconds_t' {aka 'long int'} from 'long unsigned int' may change the sign of the result [-Wsign-conversion]
+<   272 |                         last.tv_usec = tv2;
+<       |                                        ^~~
+< ../util-linux-2.38.1/libuuid/src/gen_uuid.c:302:21: warning: conversion to 'uint64_t' {aka 'long long unsigned int'} from 'long int' may change the sign of the result [-Wsign-conversion]
+---
+> ../util-linux-2.38.1/libuuid/src/gen_uuid.c:302:21: warning: conversion to 'uint64_t' {aka 'long long unsigned int'} from '__suseconds64_t' {aka 'long long int'} may change the sign of the result [-Wsign-conversion]
+89,91d79
+< ../util-linux-2.38.1/include/c.h:395:30: warning: conversion to 'long int' from 'long unsigned int' may change the sign of the result [-Wsign-conversion]
+<   395 |                 .tv_sec   =  usec / 1000000L,
+<       |                              ^~~~
+128,130d115
+< ../util-linux-2.38.1/include/c.h:395:30: warning: conversion to 'long int' from 'long unsigned int' may change the sign of the result [-Wsign-conversion]
+<   395 |                 .tv_sec   =  usec / 1000000L,
+<       |                              ^~~~
+137c122
+< ../util-linux-2.38.1/libuuid/src/uuid_time.c:69:21: warning: conversion from 'uint64_t' {aka 'long long unsigned int'} to '__time_t' {aka 'long int'} may change value [-Wconversion]
+---
+> ../util-linux-2.38.1/libuuid/src/uuid_time.c:69:21: warning: conversion to '__time64_t' {aka 'long long int'} from 'uint64_t' {aka 'long long unsigned int'} may change the sign of the result [-Wsign-conversion]
+140c125
+< ../util-linux-2.38.1/libuuid/src/uuid_time.c:70:22: warning: conversion from 'uint64_t' {aka 'long long unsigned int'} to '__suseconds_t' {aka 'long int'} may change value [-Wconversion]
+---
+> ../util-linux-2.38.1/libuuid/src/uuid_time.c:70:22: warning: conversion to '__suseconds64_t' {aka 'long long int'} from 'uint64_t' {aka 'long long unsigned int'} may change the sign of the result [-Wsign-conversion]
+153,155d137
+< ../util-linux-2.38.1/include/c.h:395:30: warning: conversion to 'long int' from 'long unsigned int' may change the sign of the result [-Wsign-conversion]
+<   395 |                 .tv_sec   =  usec / 1000000L,
+<       |                              ^~~~
+164c146
+< ../util-linux-2.38.1/lib/randutils.c:68:37: warning: conversion to 'long unsigned int' from '__time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../util-linux-2.38.1/lib/randutils.c:68:49: warning: conversion from 'long long int' to 'unsigned int' may change value [-Wconversion]
+166c148
+<       |                                     ^
+---
+>       |               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~
+170,176c152
+< ../util-linux-2.38.1/lib/randutils.c:68:49: warning: conversion to 'long unsigned int' from '__suseconds_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+<    68 |         srand((n_pid << 16) ^ n_uid ^ tv.tv_sec ^ tv.tv_usec);
+<       |                                                 ^
+< ../util-linux-2.38.1/include/randutils.h:5:33: note: in definition of macro 'srand'
+<     5 | #define srand(x)        srandom(x)
+<       |                                 ^
+< ../util-linux-2.38.1/lib/randutils.c:71:28: warning: conversion from 'long int' to 'short unsigned int' may change value [-Wconversion]
+---
+> ../util-linux-2.38.1/lib/randutils.c:71:28: warning: conversion from '__time64_t' {aka 'long long int'} to 'short unsigned int' may change value [-Wconversion]
+179c155
+< ../util-linux-2.38.1/lib/randutils.c:72:28: warning: conversion from 'long int' to 'short unsigned int' may change value [-Wconversion]
+---
+> ../util-linux-2.38.1/lib/randutils.c:72:28: warning: conversion from '__suseconds64_t' {aka 'long long int'} to 'short unsigned int' may change value [-Wconversion]
+182c158
+< ../util-linux-2.38.1/lib/randutils.c:73:28: warning: conversion from 'long int' to 'short unsigned int' may change value [-Wconversion]
+---
+> ../util-linux-2.38.1/lib/randutils.c:73:28: warning: conversion from 'long long int' to 'short unsigned int' may change value [-Wconversion]

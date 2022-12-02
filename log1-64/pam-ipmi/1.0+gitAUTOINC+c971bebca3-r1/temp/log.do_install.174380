@@ -1,0 +1,29 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-connectivity/openssl/openssl_3.0.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-cross_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-native_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-extended/pam/libpam_1.3.1.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/autoconf-archive/autoconf-archive_2022.09.03.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/autoconf/autoconf_2.71.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/automake/automake_1.16.5.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pkgconfig/pkgconfig_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: []
+NOTE: Skipping as already exists in sysroot: ['openssl', 'glibc', 'gcc-cross-arm', 'gcc-runtime', 'libtool-cross', 'libtool-native', 'quilt-native', 'libpam', 'autoconf-archive-native', 'autoconf-native', 'automake-native', 'patch-native', 'pkgconfig-native', 'pseudo-native', 'texinfo-dummy-native', 'gmp-native', 'xz-native', 'flex-native', 'linux-libc-headers', 'libmpc-native', 'zstd-native', 'binutils-cross-arm', 'gnu-config-native', 'mpfr-native', 'zlib-native', 'attr-native', 'libgcc', 'opkg-utils', 'flex', 'libxcrypt', 'cracklib', 'm4-native', 'gettext-minimal-native', 'zlib']
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function autotools_aclocals
+DEBUG: SITE files ['endian-little', 'bit-32', 'arm-common', 'arm-32', 'common-linux', 'common-glibc', 'arm-linux', 'arm-linux-gnueabi', 'common']
+DEBUG: Python function autotools_aclocals finished
+DEBUG: Executing shell function do_install
+NOTE: make -j 1 DESTDIR=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pam-ipmi/1.0+gitAUTOINC+c971bebca3-r1/image install
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pam-ipmi/1.0+gitAUTOINC+c971bebca3-r1/build'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pam-ipmi/1.0+gitAUTOINC+c971bebca3-r1/image/etc'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../git/key_file ../git/ipmi_pass '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pam-ipmi/1.0+gitAUTOINC+c971bebca3-r1/image/etc'
+make  install-exec-hook
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pam-ipmi/1.0+gitAUTOINC+c971bebca3-r1/build'
+chmod 0600 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pam-ipmi/1.0+gitAUTOINC+c971bebca3-r1/image/etc/key_file
+chmod 0600 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pam-ipmi/1.0+gitAUTOINC+c971bebca3-r1/image/etc/ipmi_pass
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pam-ipmi/1.0+gitAUTOINC+c971bebca3-r1/build'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pam-ipmi/1.0+gitAUTOINC+c971bebca3-r1/image/lib/security'
+ /bin/bash ./libtool   --mode=install /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c   pam_ipmicheck.la pam_ipmisave.la '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pam-ipmi/1.0+gitAUTOINC+c971bebca3-r1/image/lib/security'
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c .libs/pam_ipmicheck.so /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pam-ipmi/1.0+gitAUTOINC+c971bebca3-r1/image/lib/security/pam_ipmicheck.so
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c .libs/pam_ipmicheck.lai /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pam-ipmi/1.0+gitAUTOINC+c971bebca3-r1/image/lib/security/pam_ipmicheck.la
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c .libs/pam_ipmisave.so /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pam-ipmi/1.0+gitAUTOINC+c971bebca3-r1/image/lib/security/pam_ipmisave.so
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c .libs/pam_ipmisave.lai /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pam-ipmi/1.0+gitAUTOINC+c971bebca3-r1/image/lib/security/pam_ipmisave.la
+libtool: warning: remember to run 'libtool --finish /lib/security'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/pam-ipmi/1.0+gitAUTOINC+c971bebca3-r1/build'
+DEBUG: Shell function do_install finished
+DEBUG: Executing shell function remove_libtool_la
+DEBUG: Shell function remove_libtool_la finished

@@ -1,0 +1,288 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/systemd/systemd-systemctl-native.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/binutils/binutils-cross_2.39.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-cross_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-native_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/autoconf/autoconf_2.71.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/automake/automake_1.16.5.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pkgconfig/pkgconfig_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: []
+NOTE: Skipping as already exists in sysroot: ['glibc', 'systemd-systemctl-native', 'binutils-cross-arm', 'gcc-cross-arm', 'gcc-runtime', 'libtool-cross', 'libtool-native', 'quilt-native', 'autoconf-native', 'automake-native', 'patch-native', 'pkgconfig-native', 'pseudo-native', 'libgcc', 'linux-libc-headers', 'texinfo-dummy-native', 'flex-native', 'zlib-native', 'gnu-config-native', 'mpfr-native', 'gmp-native', 'xz-native', 'libmpc-native', 'zstd-native', 'm4-native', 'attr-native', 'gettext-minimal-native']
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function sstate_task_prefunc
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/lib/systemd/system/ip6tables.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/lib/systemd/system/iptables.service
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/libip4tc.so.2.0.0
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/libip6tc.so.2
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/libxtables.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/libip4tc.so.2
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/libip6tc.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/libip6tc.so.2.0.0
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/libip4tc.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/libxtables.so.12
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/libxtables.so.12.6.0
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libipt_REJECT.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libxt_TCPOPTSTRIP.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libipt_CLUSTERIP.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libipt_ah.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libxt_u32.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libxt_recent.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libxt_owner.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libip6t_MASQUERADE.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libxt_comment.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libxt_conntrack.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libip6t_LOG.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libxt_CT.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libxt_SYNPROXY.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libip6t_mh.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libxt_MARK.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libxt_hashlimit.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libip6t_SNAT.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libxt_TRACE.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libxt_osf.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libxt_AUDIT.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libxt_dscp.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libxt_SET.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libip6t_eui64.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libip6t_rt.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libipt_NETMAP.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libxt_time.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libxt_udp.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libxt_TOS.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libxt_policy.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libxt_standard.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libip6t_frag.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libxt_CLASSIFY.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libxt_TPROXY.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libxt_tcp.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libxt_statistic.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libxt_dccp.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libxt_state.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libxt_CONNMARK.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libxt_iprange.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libxt_DSCP.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libxt_tcpmss.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libxt_mark.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libipt_icmp.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libxt_helper.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libipt_TTL.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libxt_connlimit.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libxt_cgroup.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libxt_limit.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libxt_rpfilter.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libxt_NOTRACK.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libip6t_HL.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libxt_ecn.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libxt_nfacct.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libxt_ipvs.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libip6t_REJECT.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libipt_ULOG.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libipt_ttl.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libxt_cluster.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libxt_mac.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libxt_devgroup.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libxt_bpf.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libxt_socket.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libxt_cpu.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libipt_MASQUERADE.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libxt_SECMARK.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libxt_DNAT.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libip6t_DNPT.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libip6t_hbh.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libip6t_ah.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libip6t_NETMAP.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libxt_length.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libip6t_dst.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libxt_LED.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libxt_sctp.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libxt_set.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libip6t_icmp6.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libxt_physdev.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libxt_esp.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libxt_addrtype.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libxt_tos.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libxt_multiport.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libxt_IDLETIMER.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libxt_TEE.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libxt_RATEEST.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libip6t_hl.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libipt_LOG.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libipt_ECN.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libxt_NFQUEUE.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libip6t_ipv6header.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libip6t_SNPT.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libip6t_srh.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libxt_CONNSECMARK.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libxt_REDIRECT.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libxt_connmark.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libipt_realm.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libipt_SNAT.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libxt_TCPMSS.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libxt_ipcomp.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libxt_connbytes.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libxt_quota.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libxt_HMARK.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libxt_string.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libxt_rateest.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libxt_NFLOG.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libxt_pkttype.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/libxt_CHECKSUM.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/pkgconfig/libip4tc.pc
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/pkgconfig/xtables.pc
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/pkgconfig/libiptc.pc
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/pkgconfig/libip6tc.pc
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/include/xtables.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/include/xtables-version.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/include/libiptc/libiptc.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/include/libiptc/ipt_kernel_headers.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/include/libiptc/libip6tc.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/include/libiptc/libxtc.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/include/libiptc/xtcshared.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/sysroot-providers/iptables
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/include/libiptc/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/lib/systemd/system/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/pkgconfig/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/sysroot-providers/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/xtables/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/include/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/lib/systemd/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/share/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/lib/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/usr/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables/lib/
+DEBUG: Python function sstate_task_prefunc finished
+DEBUG: Executing python function do_populate_sysroot
+DEBUG: Executing shell function sysroot_stage_all
+0 blocks
+0 blocks
+0 blocks
+0 blocks
+0 blocks
+DEBUG: Shell function sysroot_stage_all finished
+DEBUG: Executing python function sysroot_strip
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/libxtables.so.12.6.0']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libxt_cgroup.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/libip4tc.so.2.0.0']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/libip6tc.so.2.0.0']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libxt_tcpmss.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libipt_ttl.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libip6t_HL.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libipt_MASQUERADE.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libip6t_ipv6header.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libxt_SECMARK.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libxt_addrtype.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libxt_ipvs.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libxt_helper.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libip6t_dst.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libip6t_hbh.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libxt_DNAT.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libipt_ULOG.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libxt_connbytes.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libip6t_frag.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libxt_connmark.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libxt_policy.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libip6t_ah.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libxt_CHECKSUM.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libxt_tcp.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libxt_TPROXY.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libxt_multiport.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libxt_sctp.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libxt_IDLETIMER.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libxt_cluster.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libip6t_REJECT.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libxt_osf.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libip6t_SNAT.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libipt_LOG.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libxt_quota.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libipt_SNAT.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libxt_rpfilter.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libip6t_hl.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libxt_udp.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libxt_pkttype.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libxt_TOS.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libxt_devgroup.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libxt_HMARK.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libxt_rateest.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libxt_SET.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libxt_NFLOG.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libipt_ECN.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libxt_u32.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libxt_CT.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libxt_recent.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libipt_ah.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libxt_CONNSECMARK.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libip6t_icmp6.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libxt_physdev.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libxt_RATEEST.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libxt_NFQUEUE.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libip6t_srh.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libip6t_NETMAP.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libxt_ipcomp.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libxt_TCPMSS.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libxt_TRACE.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libipt_realm.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libxt_standard.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libxt_connlimit.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libxt_AUDIT.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libxt_CLASSIFY.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libipt_NETMAP.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libxt_TCPOPTSTRIP.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libip6t_mh.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libxt_string.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libip6t_eui64.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libxt_tos.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libxt_MARK.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libipt_REJECT.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libxt_statistic.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libxt_esp.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libxt_CONNMARK.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libxt_set.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libxt_owner.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libxt_dscp.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libip6t_SNPT.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libip6t_rt.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libip6t_LOG.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libxt_TEE.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libxt_comment.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libip6t_DNPT.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libxt_iprange.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libxt_time.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libipt_CLUSTERIP.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libxt_SYNPROXY.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libipt_icmp.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libxt_hashlimit.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libxt_limit.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libip6t_MASQUERADE.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libxt_DSCP.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libxt_length.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libxt_conntrack.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libxt_LED.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libxt_dccp.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libxt_nfacct.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libxt_ecn.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libxt_cpu.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libxt_mark.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libxt_socket.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libxt_bpf.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libipt_TTL.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir/usr/lib/xtables/libxt_mac.so']
+DEBUG: Python function sysroot_strip finished
+DEBUG: Python function do_populate_sysroot finished
+DEBUG: Executing python function do_qa_sysroot
+NOTE: QA checking do_populate_sysroot
+DEBUG: Python function do_qa_sysroot finished
+DEBUG: Executing python function sstate_task_postfunc
+DEBUG: Executing python function do_siteconfig
+DEBUG: Executing python function siteconfig_do_siteconfig
+DEBUG: No site_config directory, skipping do_siteconfig
+DEBUG: Python function siteconfig_do_siteconfig finished
+DEBUG: Python function do_siteconfig finished
+NOTE: Using umask 0o002 (not 22) for sstate packaging
+DEBUG: Preparing tree /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir for packaging at /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sstate-build-populate_sysroot/sysroot-destdir
+DEBUG: Executing python function target_add_sysroot_deps
+DEBUG: Python function target_add_sysroot_deps finished
+DEBUG: Executing python function sstate_hardcode_path
+NOTE: Removing hardcoded paths from sstate package: 'find /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sstate-build-populate_sysroot/ \( -name "*.la" -o -name "*-config" -o -name "*_config" -o -name "postinst-*" \) -type f | xargs grep -l -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot' -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot-native' -e '/home/matt/tmp/build/obmc-y2038/tmp/hosttools' | tee /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sstate-build-populate_sysroot/fixmepath | xargs --no-run-if-empty sed -i -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot-native:FIXMESTAGINGDIRHOST:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot:FIXMESTAGINGDIRTARGET:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:FIXME_HOSTTOOLS_DIR:g''
+DEBUG: Python function sstate_hardcode_path finished
+DEBUG: Executing python function sstate_report_unihash
+DEBUG: Python function sstate_report_unihash finished
+DEBUG: Executing shell function sstate_create_package
+DEBUG: Shell function sstate_create_package finished
+DEBUG: Executing python function sstate_hardcode_path_unpack
+DEBUG: Python function sstate_hardcode_path_unpack finished
+DEBUG: Staging files from /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/sysroot-destdir to /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/iptables
+DEBUG: Python function sstate_task_postfunc finished

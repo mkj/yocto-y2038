@@ -1,0 +1,956 @@
+DEBUG: Executing python function autotools_aclocals
+DEBUG: SITE files ['endian-little', 'bit-32', 'arm-common', 'arm-32', 'common-linux', 'common-glibc', 'arm-linux', 'arm-linux-gnueabi', 'common']
+DEBUG: Python function autotools_aclocals finished
+DEBUG: Executing shell function do_compile
+NOTE: make -j 1
+make --no-print-directory all-recursive
+Making all in .
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../git  -include ./config.h -I../git -DSYSCONFDIR=\""/etc"\"  -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -pipe -DANOTHER_BRICK_IN_THE -Wall -W -Wextra -Wno-inline -Wvla -Wundef -Wformat=2 -Wlogical-op -Wsign-compare -Wformat-security -Wmissing-include-dirs -Wformat-nonliteral -Wold-style-definition -Wpointer-arith -Winit-self -Wdeclaration-after-statement -Wfloat-equal -Wmissing-prototypes -Wstrict-prototypes -Wredundant-decls -Wmissing-declarations -Wmissing-noreturn -Wshadow -Wendif-labels -Wstrict-aliasing=3 -Wwrite-strings -Wno-long-long -Wno-overlength-strings -Wno-unused-parameter -Wno-missing-field-initializers -Wno-unused-result -Wnested-externs -Wchar-subscripts -Wtype-limits -Wuninitialized -fno-common -fdiagnostics-show-option -fvisibility=hidden -ffunction-sections -fdata-sections  -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o tools/kmod.o ../git/tools/kmod.c
+In file included from ../git/tools/kmod.c:26:
+../git/shared/util.h: In function 'ALIGN_POWER2':
+../git/shared/util.h:84:38: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+   84 |         return 1 << ((sizeof(u) * 8) - __builtin_clz(u - 1));
+      |                                      ^
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../git  -include ./config.h -I../git -DSYSCONFDIR=\""/etc"\"  -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -pipe -DANOTHER_BRICK_IN_THE -Wall -W -Wextra -Wno-inline -Wvla -Wundef -Wformat=2 -Wlogical-op -Wsign-compare -Wformat-security -Wmissing-include-dirs -Wformat-nonliteral -Wold-style-definition -Wpointer-arith -Winit-self -Wdeclaration-after-statement -Wfloat-equal -Wmissing-prototypes -Wstrict-prototypes -Wredundant-decls -Wmissing-declarations -Wmissing-noreturn -Wshadow -Wendif-labels -Wstrict-aliasing=3 -Wwrite-strings -Wno-long-long -Wno-overlength-strings -Wno-unused-parameter -Wno-missing-field-initializers -Wno-unused-result -Wnested-externs -Wchar-subscripts -Wtype-limits -Wuninitialized -fno-common -fdiagnostics-show-option -fvisibility=hidden -ffunction-sections -fdata-sections  -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o tools/lsmod.o ../git/tools/lsmod.c
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../git  -include ./config.h -I../git -DSYSCONFDIR=\""/etc"\"  -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -pipe -DANOTHER_BRICK_IN_THE -Wall -W -Wextra -Wno-inline -Wvla -Wundef -Wformat=2 -Wlogical-op -Wsign-compare -Wformat-security -Wmissing-include-dirs -Wformat-nonliteral -Wold-style-definition -Wpointer-arith -Winit-self -Wdeclaration-after-statement -Wfloat-equal -Wmissing-prototypes -Wstrict-prototypes -Wredundant-decls -Wmissing-declarations -Wmissing-noreturn -Wshadow -Wendif-labels -Wstrict-aliasing=3 -Wwrite-strings -Wno-long-long -Wno-overlength-strings -Wno-unused-parameter -Wno-missing-field-initializers -Wno-unused-result -Wnested-externs -Wchar-subscripts -Wtype-limits -Wuninitialized -fno-common -fdiagnostics-show-option -fvisibility=hidden -ffunction-sections -fdata-sections  -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o tools/rmmod.o ../git/tools/rmmod.c
+../git/tools/rmmod.c: In function 'do_rmmod':
+../git/tools/rmmod.c:181:54: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  181 |                 err = kmod_module_remove_module(mod, flags);
+      |                                                      ^~~~~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../git  -include ./config.h -I../git -DSYSCONFDIR=\""/etc"\"  -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -pipe -DANOTHER_BRICK_IN_THE -Wall -W -Wextra -Wno-inline -Wvla -Wundef -Wformat=2 -Wlogical-op -Wsign-compare -Wformat-security -Wmissing-include-dirs -Wformat-nonliteral -Wold-style-definition -Wpointer-arith -Winit-self -Wdeclaration-after-statement -Wfloat-equal -Wmissing-prototypes -Wstrict-prototypes -Wredundant-decls -Wmissing-declarations -Wmissing-noreturn -Wshadow -Wendif-labels -Wstrict-aliasing=3 -Wwrite-strings -Wno-long-long -Wno-overlength-strings -Wno-unused-parameter -Wno-missing-field-initializers -Wno-unused-result -Wnested-externs -Wchar-subscripts -Wtype-limits -Wuninitialized -fno-common -fdiagnostics-show-option -fvisibility=hidden -ffunction-sections -fdata-sections  -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o tools/insmod.o ../git/tools/insmod.c
+In file included from ../git/tools/insmod.c:26:
+../git/shared/util.h: In function 'ALIGN_POWER2':
+../git/shared/util.h:84:38: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+   84 |         return 1 << ((sizeof(u) * 8) - __builtin_clz(u - 1));
+      |                                      ^
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../git  -include ./config.h -I../git -DSYSCONFDIR=\""/etc"\"  -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -pipe -DANOTHER_BRICK_IN_THE -Wall -W -Wextra -Wno-inline -Wvla -Wundef -Wformat=2 -Wlogical-op -Wsign-compare -Wformat-security -Wmissing-include-dirs -Wformat-nonliteral -Wold-style-definition -Wpointer-arith -Winit-self -Wdeclaration-after-statement -Wfloat-equal -Wmissing-prototypes -Wstrict-prototypes -Wredundant-decls -Wmissing-declarations -Wmissing-noreturn -Wshadow -Wendif-labels -Wstrict-aliasing=3 -Wwrite-strings -Wno-long-long -Wno-overlength-strings -Wno-unused-parameter -Wno-missing-field-initializers -Wno-unused-result -Wnested-externs -Wchar-subscripts -Wtype-limits -Wuninitialized -fno-common -fdiagnostics-show-option -fvisibility=hidden -ffunction-sections -fdata-sections  -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o tools/modinfo.o ../git/tools/modinfo.c
+In file included from ../git/tools/modinfo.c:30:
+../git/shared/util.h: In function 'ALIGN_POWER2':
+../git/shared/util.h:84:38: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+   84 |         return 1 << ((sizeof(u) * 8) - __builtin_clz(u - 1));
+      |                                      ^
+../git/tools/modinfo.c: In function 'add_param':
+../git/tools/modinfo.c:55:48: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+   55 |                         memcmp(it->name, name, namelen) == 0)
+      |                                                ^~~~~~~
+../git/tools/modinfo.c: In function 'process_parm':
+../git/tools/modinfo.c:102:28: warning: conversion to 'int' from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  102 |                 paramlen = strlen(param);
+      |                            ^~~~~~
+../git/tools/modinfo.c:109:27: warning: conversion to 'int' from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  109 |                 typelen = strlen(type);
+      |                           ^~~~~~
+../git/tools/modinfo.c: In function 'modinfo_do':
+../git/tools/modinfo.c:241:26: warning: conversion to 'int' from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  241 |                 keylen = strlen(key);
+      |                          ^~~~~~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../git  -include ./config.h -I../git -DSYSCONFDIR=\""/etc"\"  -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -pipe -DANOTHER_BRICK_IN_THE -Wall -W -Wextra -Wno-inline -Wvla -Wundef -Wformat=2 -Wlogical-op -Wsign-compare -Wformat-security -Wmissing-include-dirs -Wformat-nonliteral -Wold-style-definition -Wpointer-arith -Winit-self -Wdeclaration-after-statement -Wfloat-equal -Wmissing-prototypes -Wstrict-prototypes -Wredundant-decls -Wmissing-declarations -Wmissing-noreturn -Wshadow -Wendif-labels -Wstrict-aliasing=3 -Wwrite-strings -Wno-long-long -Wno-overlength-strings -Wno-unused-parameter -Wno-missing-field-initializers -Wno-unused-result -Wnested-externs -Wchar-subscripts -Wtype-limits -Wuninitialized -fno-common -fdiagnostics-show-option -fvisibility=hidden -ffunction-sections -fdata-sections  -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o tools/modprobe.o ../git/tools/modprobe.c
+In file included from ../git/tools/modprobe.c:35:
+../git/shared/util.h: In function 'ALIGN_POWER2':
+../git/shared/util.h:84:38: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+   84 |         return 1 << ((sizeof(u) * 8) - __builtin_clz(u - 1));
+      |                                      ^
+../git/tools/modprobe.c: In function 'command_do':
+../git/tools/modprobe.c:293:36: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  293 |                 size_t prefixlen = p - cmd;
+      |                                    ^
+../git/tools/modprobe.c:302:34: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  302 |                 memcpy(s, cmd, p - cmd);
+      |                                ~~^~~~~
+../git/tools/modprobe.c: In function 'rmmod_do_remove_module':
+../git/tools/modprobe.c:349:54: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  349 |                 err = kmod_module_remove_module(mod, flags);
+      |                                                      ^~~~~
+../git/tools/modprobe.c: In function 'insmod':
+../git/tools/modprobe.c:615:68: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  615 |                         err = kmod_module_probe_insert_module(mod, flags,
+      |                                                                    ^~~~~
+../git/tools/modprobe.c: In function 'options_from_array':
+../git/tools/modprobe.c:719:41: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  719 |                         size_t keylen = value - args[i];
+      |                                         ^~~~~
+../git/tools/modprobe.c: In function 'prepend_options_from_env':
+../git/tools/modprobe.c:752:18: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  752 |         envlen = p - env;
+      |                  ^
+../git/tools/modprobe.c:753:50: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  753 |         new_argv = malloc(sizeof(char *) * (argc + space_count + 3 + envlen));
+      |                                                  ^
+../git/tools/modprobe.c:799:60: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  799 |         memcpy(new_argv + i, orig_argv + 1, sizeof(char *) * (argc - 1));
+      |                                                            ^
+../git/tools/modprobe.c: In function 'do_modprobe':
+../git/tools/modprobe.c:894:55: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  894 |                         size_t bytes = sizeof(char *) * (n_config_paths + 2);
+      |                                                       ^
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../git  -include ./config.h -I../git -DSYSCONFDIR=\""/etc"\"  -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -pipe -DANOTHER_BRICK_IN_THE -Wall -W -Wextra -Wno-inline -Wvla -Wundef -Wformat=2 -Wlogical-op -Wsign-compare -Wformat-security -Wmissing-include-dirs -Wformat-nonliteral -Wold-style-definition -Wpointer-arith -Winit-self -Wdeclaration-after-statement -Wfloat-equal -Wmissing-prototypes -Wstrict-prototypes -Wredundant-decls -Wmissing-declarations -Wmissing-noreturn -Wshadow -Wendif-labels -Wstrict-aliasing=3 -Wwrite-strings -Wno-long-long -Wno-overlength-strings -Wno-unused-parameter -Wno-missing-field-initializers -Wno-unused-result -Wnested-externs -Wchar-subscripts -Wtype-limits -Wuninitialized -fno-common -fdiagnostics-show-option -fvisibility=hidden -ffunction-sections -fdata-sections  -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o tools/depmod.o ../git/tools/depmod.c
+In file included from ../git/tools/depmod.c:38:
+../git/shared/util.h: In function 'ALIGN_POWER2':
+../git/shared/util.h:84:38: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+   84 |         return 1 << ((sizeof(u) * 8) - __builtin_clz(u - 1));
+      |                                      ^
+../git/tools/depmod.c: In function 'index_add_value':
+../git/tools/depmod.c:252:15: warning: conversion to 'int' from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  252 |         len = strlen(value);
+      |               ^~~~~~
+In file included from ../git/tools/depmod.c:37:
+../git/tools/depmod.c:253:54: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  253 |         v = NOFAIL(calloc(sizeof(struct index_value) + len + 1, 1));
+      |                                                      ^
+../git/shared/macro.h:57:20: note: in definition of macro 'NOFAIL'
+   57 | #define NOFAIL(x) (x)
+      |                    ^
+../git/tools/depmod.c:256:37: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  256 |         memcpy(v->value, value, len + 1);
+      |                                 ~~~~^~~
+../git/tools/depmod.c: In function 'index_insert':
+../git/tools/depmod.c:292:47: warning: conversion from 'int' to 'unsigned char' may change value [-Wconversion]
+  292 |                                 node->first = ch;
+      |                                               ^~
+../git/tools/depmod.c:293:46: warning: conversion from 'int' to 'unsigned char' may change value [-Wconversion]
+  293 |                                 node->last = ch;
+      |                                              ^~
+../git/tools/depmod.c:310:47: warning: conversion from 'int' to 'unsigned char' may change value [-Wconversion]
+  310 |                                 node->first = ch;
+      |                                               ^~
+../git/tools/depmod.c:312:46: warning: conversion from 'int' to 'unsigned char' may change value [-Wconversion]
+  312 |                                 node->last = ch;
+      |                                              ^~
+../git/tools/depmod.c: In function 'index_write__node':
+../git/tools/depmod.c:356:56: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  356 |                 child_offs = NOFAIL(malloc(child_count * sizeof(uint32_t)));
+      |                                                        ^
+../git/shared/macro.h:57:20: note: in definition of macro 'NOFAIL'
+   57 | #define NOFAIL(x) (x)
+      |                    ^
+../git/tools/depmod.c:370:24: warning: conversion to 'long unsigned int' from 'long int' may change the sign of the result [-Wsign-conversion]
+  370 |                 offset |= INDEX_NODE_PREFIX;
+      |                        ^~
+../git/tools/depmod.c:370:27: warning: conversion to 'long int' from 'long unsigned int' may change the sign of the result [-Wsign-conversion]
+  370 |                 offset |= INDEX_NODE_PREFIX;
+      |                           ^~~~~~~~~~~~~~~~~
+../git/tools/depmod.c:376:54: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  376 |                 fwrite(child_offs, sizeof(uint32_t), child_count, out);
+      |                                                      ^~~~~~~~~~~
+../git/tools/depmod.c:402:16: warning: conversion to 'uint32_t' {aka 'unsigned int'} from 'long int' may change the sign of the result [-Wsign-conversion]
+  402 |         return offset;
+      |                ^~~~~~
+../git/tools/depmod.c: In function 'depmod_module_add':
+../git/tools/depmod.c:1050:25: warning: conversion to 'int' from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+ 1050 |         mod->sort_idx = depmod->modules.count + 1;
+      |                         ^~~~~~
+../git/tools/depmod.c:1059:24: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 1059 |         mod->baselen = lastslash - mod->path;
+      |                        ^~~~~~~~~
+../git/tools/depmod.c:1073:65: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 1073 |                 size_t uncrelpathlen = lastslash - mod->relpath + modnamesz
+      |                                                                 ^
+../git/tools/depmod.c: In function 'depmod_modules_build_array':
+../git/tools/depmod.c:1442:28: warning: conversion from 'size_t' {aka 'unsigned int'} to 'uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+ 1442 |                 mod->idx = depmod->modules.count;
+      |                            ^~~~~~
+../git/tools/depmod.c: In function 'depmod_modules_sort':
+../git/tools/depmod.c:1517:33: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+ 1517 |                 mod->sort_idx = idx - total;
+      |                                 ^~~
+../git/tools/depmod.c:1523:26: warning: conversion from 'unsigned int' to 'uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+ 1523 |                 m->idx = idx;
+      |                          ^~~
+../git/tools/depmod.c: In function 'depmod_report_one_cycle':
+../git/tools/depmod.c:1750:29: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 1750 |         buf = malloc(sz + n * strlen(sep) + 1);
+      |                             ^
+../git/tools/depmod.c:1753:18: warning: conversion to 'int' from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+ 1753 |         for (i = reverse.count - 1; i >= 0; i--) {
+      |                  ^~~~~~~
+../git/tools/depmod.c: In function 'depmod_report_cycles':
+../git/tools/depmod.c:1927:22: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+ 1927 |         num_cyclic = hash_get_count(loop_set);
+      |                      ^~~~~~~~~~~~~~
+../git/tools/depmod.c: In function 'depmod_calculate_dependencies':
+../git/tools/depmod.c:1943:57: warning: conversion from 'size_t' {aka 'unsigned int'} to 'uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+ 1943 |         uint16_t i, n_roots = 0, n_sorted = 0, n_mods = depmod->modules.count;
+      |                                                         ^~~~~~
+../git/tools/depmod.c: In function 'flush_stream':
+../git/tools/depmod.c:2417:33: warning: conversion to 'int' from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+ 2417 |         return c == endchar ? i : 0;
+      |                ~~~~~~~~~~~~~~~~~^~~
+../git/tools/depmod.c: In function 'flush_stream_to':
+../git/tools/depmod.c:2428:28: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+ 2428 |                 dst[i++] = c;
+      |                            ^
+../git/tools/depmod.c:2436:33: warning: conversion to 'int' from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+ 2436 |         return c == endchar ? i : 0;
+      |                ~~~~~~~~~~~~~~~~~^~~
+../git/tools/depmod.c: In function 'output_builtin_alias_bin':
+../git/tools/depmod.c:2465:23: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 2465 |                 len = flush_stream_to(in, '.', modname, sizeof(modname));
+      |                       ^~~~~~~~~~~~~~~
+../git/tools/depmod.c:2470:23: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 2470 |                 len = flush_stream_to(in, '=', value, sizeof(value));
+      |                       ^~~~~~~~~~~~~~~
+../git/tools/depmod.c:2477:23: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 2477 |                 len = flush_stream_to(in, '\0', value, sizeof(value));
+      |                       ^~~~~~~~~~~~~~~
+../git/tools/depmod.c: In function 'depmod_output':
+../git/tools/depmod.c:2606:61: warning: format '%li' expects argument of type 'long int', but argument 6 has type '__suseconds64_t' {aka 'long long int'} [-Wformat=]
+ 2606 |                         snprintf(tmp, sizeof(tmp), "%s.%i.%li.%li", itr->name, getpid(),
+      |                                                           ~~^
+      |                                                             |
+      |                                                             long int
+      |                                                           %lli
+ 2607 |                                         tv.tv_usec, tv.tv_sec);
+      |                                         ~~~~~~~~~~           
+      |                                           |
+      |                                           __suseconds64_t {aka long long int}
+../git/tools/depmod.c:2606:65: warning: format '%li' expects argument of type 'long int', but argument 7 has type '__time64_t' {aka 'long long int'} [-Wformat=]
+ 2606 |                         snprintf(tmp, sizeof(tmp), "%s.%i.%li.%li", itr->name, getpid(),
+      |                                                               ~~^
+      |                                                                 |
+      |                                                                 long int
+      |                                                               %lli
+ 2607 |                                         tv.tv_usec, tv.tv_sec);
+      |                                                     ~~~~~~~~~    
+      |                                                       |
+      |                                                       __time64_t {aka long long int}
+../git/tools/depmod.c: In function 'do_depmod':
+../git/tools/depmod.c:2931:55: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 2931 |                         size_t bytes = sizeof(char *) * (n_config_paths + 2);
+      |                                                       ^
+../git/tools/depmod.c:3010:26: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 3010 |         cfg.dirnamelen = snprintf(cfg.dirname, PATH_MAX,
+      |                          ^~~~~~~~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../git  -include ./config.h -I../git -DSYSCONFDIR=\""/etc"\"  -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -pipe -DANOTHER_BRICK_IN_THE -Wall -W -Wextra -Wno-inline -Wvla -Wundef -Wformat=2 -Wlogical-op -Wsign-compare -Wformat-security -Wmissing-include-dirs -Wformat-nonliteral -Wold-style-definition -Wpointer-arith -Winit-self -Wdeclaration-after-statement -Wfloat-equal -Wmissing-prototypes -Wstrict-prototypes -Wredundant-decls -Wmissing-declarations -Wmissing-noreturn -Wshadow -Wendif-labels -Wstrict-aliasing=3 -Wwrite-strings -Wno-long-long -Wno-overlength-strings -Wno-unused-parameter -Wno-missing-field-initializers -Wno-unused-result -Wnested-externs -Wchar-subscripts -Wtype-limits -Wuninitialized -fno-common -fdiagnostics-show-option -fvisibility=hidden -ffunction-sections -fdata-sections  -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o tools/log.o ../git/tools/log.c
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../git  -include ./config.h -I../git -DSYSCONFDIR=\""/etc"\"  -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -pipe -DANOTHER_BRICK_IN_THE -Wall -W -Wextra -Wno-inline -Wvla -Wundef -Wformat=2 -Wlogical-op -Wsign-compare -Wformat-security -Wmissing-include-dirs -Wformat-nonliteral -Wold-style-definition -Wpointer-arith -Winit-self -Wdeclaration-after-statement -Wfloat-equal -Wmissing-prototypes -Wstrict-prototypes -Wredundant-decls -Wmissing-declarations -Wmissing-noreturn -Wshadow -Wendif-labels -Wstrict-aliasing=3 -Wwrite-strings -Wno-long-long -Wno-overlength-strings -Wno-unused-parameter -Wno-missing-field-initializers -Wno-unused-result -Wnested-externs -Wchar-subscripts -Wtype-limits -Wuninitialized -fno-common -fdiagnostics-show-option -fvisibility=hidden -ffunction-sections -fdata-sections  -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o tools/static-nodes.o ../git/tools/static-nodes.c
+In file included from ../git/tools/static-nodes.c:34:
+../git/shared/util.h: In function 'ALIGN_POWER2':
+../git/shared/util.h:84:38: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+   84 |         return 1 << ((sizeof(u) * 8) - __builtin_clz(u - 1));
+      |                                      ^
+/bin/bash ./libtool  --tag=CC   --mode=compile arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../git  -include ./config.h -I../git -DSYSCONFDIR=\""/etc"\"  -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -pipe -DANOTHER_BRICK_IN_THE -Wall -W -Wextra -Wno-inline -Wvla -Wundef -Wformat=2 -Wlogical-op -Wsign-compare -Wformat-security -Wmissing-include-dirs -Wformat-nonliteral -Wold-style-definition -Wpointer-arith -Winit-self -Wdeclaration-after-statement -Wfloat-equal -Wmissing-prototypes -Wstrict-prototypes -Wredundant-decls -Wmissing-declarations -Wmissing-noreturn -Wshadow -Wendif-labels -Wstrict-aliasing=3 -Wwrite-strings -Wno-long-long -Wno-overlength-strings -Wno-unused-parameter -Wno-missing-field-initializers -Wno-unused-result -Wnested-externs -Wchar-subscripts -Wtype-limits -Wuninitialized -fno-common -fdiagnostics-show-option -fvisibility=hidden -ffunction-sections -fdata-sections  -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o shared/array.lo ../git/shared/array.c
+libtool: compile:  arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../git -include ./config.h -I../git -DSYSCONFDIR=\"/etc\" -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -pipe -DANOTHER_BRICK_IN_THE -Wall -W -Wextra -Wno-inline -Wvla -Wundef -Wformat=2 -Wlogical-op -Wsign-compare -Wformat-security -Wmissing-include-dirs -Wformat-nonliteral -Wold-style-definition -Wpointer-arith -Winit-self -Wdeclaration-after-statement -Wfloat-equal -Wmissing-prototypes -Wstrict-prototypes -Wredundant-decls -Wmissing-declarations -Wmissing-noreturn -Wshadow -Wendif-labels -Wstrict-aliasing=3 -Wwrite-strings -Wno-long-long -Wno-overlength-strings -Wno-unused-parameter -Wno-missing-field-initializers -Wno-unused-result -Wnested-externs -Wchar-subscripts -Wtype-limits -Wuninitialized -fno-common -fdiagnostics-show-option -fvisibility=hidden -ffunction-sections -fdata-sections -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot-native= -Wconversion -Wno-error -c ../git/shared/array.c  -fPIC -DPIC -o shared/.libs/array.o
+../git/shared/array.c: In function 'array_append':
+../git/shared/array.c:61:16: warning: conversion to 'int' from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+   61 |         return idx;
+      |                ^~~
+/bin/bash ./libtool  --tag=CC   --mode=compile arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../git  -include ./config.h -I../git -DSYSCONFDIR=\""/etc"\"  -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -pipe -DANOTHER_BRICK_IN_THE -Wall -W -Wextra -Wno-inline -Wvla -Wundef -Wformat=2 -Wlogical-op -Wsign-compare -Wformat-security -Wmissing-include-dirs -Wformat-nonliteral -Wold-style-definition -Wpointer-arith -Winit-self -Wdeclaration-after-statement -Wfloat-equal -Wmissing-prototypes -Wstrict-prototypes -Wredundant-decls -Wmissing-declarations -Wmissing-noreturn -Wshadow -Wendif-labels -Wstrict-aliasing=3 -Wwrite-strings -Wno-long-long -Wno-overlength-strings -Wno-unused-parameter -Wno-missing-field-initializers -Wno-unused-result -Wnested-externs -Wchar-subscripts -Wtype-limits -Wuninitialized -fno-common -fdiagnostics-show-option -fvisibility=hidden -ffunction-sections -fdata-sections  -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o shared/hash.lo ../git/shared/hash.c
+libtool: compile:  arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../git -include ./config.h -I../git -DSYSCONFDIR=\"/etc\" -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -pipe -DANOTHER_BRICK_IN_THE -Wall -W -Wextra -Wno-inline -Wvla -Wundef -Wformat=2 -Wlogical-op -Wsign-compare -Wformat-security -Wmissing-include-dirs -Wformat-nonliteral -Wold-style-definition -Wpointer-arith -Winit-self -Wdeclaration-after-statement -Wfloat-equal -Wmissing-prototypes -Wstrict-prototypes -Wredundant-decls -Wmissing-declarations -Wmissing-noreturn -Wshadow -Wendif-labels -Wstrict-aliasing=3 -Wwrite-strings -Wno-long-long -Wno-overlength-strings -Wno-unused-parameter -Wno-missing-field-initializers -Wno-unused-result -Wnested-externs -Wchar-subscripts -Wtype-limits -Wuninitialized -fno-common -fdiagnostics-show-option -fvisibility=hidden -ffunction-sections -fdata-sections -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot-native= -Wconversion -Wno-error -c ../git/shared/hash.c  -fPIC -DPIC -o shared/.libs/hash.o
+In file included from ../git/shared/hash.c:26:
+../git/shared/util.h: In function 'ALIGN_POWER2':
+../git/shared/util.h:84:38: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+   84 |         return 1 << ((sizeof(u) * 8) - __builtin_clz(u - 1));
+      |                                      ^
+../git/shared/hash.c: In function 'hash_add':
+../git/shared/hash.c:176:53: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  176 |                                 (entry_end - entry) * sizeof(struct hash_entry));
+      |                                                     ^
+../git/shared/hash.c: In function 'hash_add_unique':
+../git/shared/hash.c:215:53: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  215 |                                 (entry_end - entry) * sizeof(struct hash_entry));
+      |                                                     ^
+../git/shared/hash.c: In function 'hash_del':
+../git/shared/hash.c:275:37: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  275 |                 (entry_end - entry) * sizeof(struct hash_entry));
+      |                                     ^
+../git/shared/hash.c: In function 'hash_iter_init':
+../git/shared/hash.c:304:23: warning: unsigned conversion from 'int' to 'unsigned int' changes value from '-1' to '4294967295' [-Wsign-conversion]
+  304 |         iter->entry = -1;
+      |                       ^
+/bin/bash ./libtool  --tag=CC   --mode=compile arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../git  -include ./config.h -I../git -DSYSCONFDIR=\""/etc"\"  -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -pipe -DANOTHER_BRICK_IN_THE -Wall -W -Wextra -Wno-inline -Wvla -Wundef -Wformat=2 -Wlogical-op -Wsign-compare -Wformat-security -Wmissing-include-dirs -Wformat-nonliteral -Wold-style-definition -Wpointer-arith -Winit-self -Wdeclaration-after-statement -Wfloat-equal -Wmissing-prototypes -Wstrict-prototypes -Wredundant-decls -Wmissing-declarations -Wmissing-noreturn -Wshadow -Wendif-labels -Wstrict-aliasing=3 -Wwrite-strings -Wno-long-long -Wno-overlength-strings -Wno-unused-parameter -Wno-missing-field-initializers -Wno-unused-result -Wnested-externs -Wchar-subscripts -Wtype-limits -Wuninitialized -fno-common -fdiagnostics-show-option -fvisibility=hidden -ffunction-sections -fdata-sections  -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o shared/scratchbuf.lo ../git/shared/scratchbuf.c
+libtool: compile:  arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../git -include ./config.h -I../git -DSYSCONFDIR=\"/etc\" -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -pipe -DANOTHER_BRICK_IN_THE -Wall -W -Wextra -Wno-inline -Wvla -Wundef -Wformat=2 -Wlogical-op -Wsign-compare -Wformat-security -Wmissing-include-dirs -Wformat-nonliteral -Wold-style-definition -Wpointer-arith -Winit-self -Wdeclaration-after-statement -Wfloat-equal -Wmissing-prototypes -Wstrict-prototypes -Wredundant-decls -Wmissing-declarations -Wmissing-noreturn -Wshadow -Wendif-labels -Wstrict-aliasing=3 -Wwrite-strings -Wno-long-long -Wno-overlength-strings -Wno-unused-parameter -Wno-missing-field-initializers -Wno-unused-result -Wnested-externs -Wchar-subscripts -Wtype-limits -Wuninitialized -fno-common -fdiagnostics-show-option -fvisibility=hidden -ffunction-sections -fdata-sections -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot-native= -Wconversion -Wno-error -c ../git/shared/scratchbuf.c  -fPIC -DPIC -o shared/.libs/scratchbuf.o
+/bin/bash ./libtool  --tag=CC   --mode=compile arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../git  -include ./config.h -I../git -DSYSCONFDIR=\""/etc"\"  -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -pipe -DANOTHER_BRICK_IN_THE -Wall -W -Wextra -Wno-inline -Wvla -Wundef -Wformat=2 -Wlogical-op -Wsign-compare -Wformat-security -Wmissing-include-dirs -Wformat-nonliteral -Wold-style-definition -Wpointer-arith -Winit-self -Wdeclaration-after-statement -Wfloat-equal -Wmissing-prototypes -Wstrict-prototypes -Wredundant-decls -Wmissing-declarations -Wmissing-noreturn -Wshadow -Wendif-labels -Wstrict-aliasing=3 -Wwrite-strings -Wno-long-long -Wno-overlength-strings -Wno-unused-parameter -Wno-missing-field-initializers -Wno-unused-result -Wnested-externs -Wchar-subscripts -Wtype-limits -Wuninitialized -fno-common -fdiagnostics-show-option -fvisibility=hidden -ffunction-sections -fdata-sections  -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o shared/strbuf.lo ../git/shared/strbuf.c
+libtool: compile:  arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../git -include ./config.h -I../git -DSYSCONFDIR=\"/etc\" -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -pipe -DANOTHER_BRICK_IN_THE -Wall -W -Wextra -Wno-inline -Wvla -Wundef -Wformat=2 -Wlogical-op -Wsign-compare -Wformat-security -Wmissing-include-dirs -Wformat-nonliteral -Wold-style-definition -Wpointer-arith -Winit-self -Wdeclaration-after-statement -Wfloat-equal -Wmissing-prototypes -Wstrict-prototypes -Wredundant-decls -Wmissing-declarations -Wmissing-noreturn -Wshadow -Wendif-labels -Wstrict-aliasing=3 -Wwrite-strings -Wno-long-long -Wno-overlength-strings -Wno-unused-parameter -Wno-missing-field-initializers -Wno-unused-result -Wnested-externs -Wchar-subscripts -Wtype-limits -Wuninitialized -fno-common -fdiagnostics-show-option -fvisibility=hidden -ffunction-sections -fdata-sections -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot-native= -Wconversion -Wno-error -c ../git/shared/strbuf.c  -fPIC -DPIC -o shared/.libs/strbuf.o
+In file included from ../git/shared/strbuf.c:26:
+../git/shared/util.h: In function 'ALIGN_POWER2':
+../git/shared/util.h:84:38: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+   84 |         return 1 << ((sizeof(u) * 8) - __builtin_clz(u - 1));
+      |                                      ^
+/bin/bash ./libtool  --tag=CC   --mode=compile arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../git  -include ./config.h -I../git -DSYSCONFDIR=\""/etc"\"  -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -pipe -DANOTHER_BRICK_IN_THE -Wall -W -Wextra -Wno-inline -Wvla -Wundef -Wformat=2 -Wlogical-op -Wsign-compare -Wformat-security -Wmissing-include-dirs -Wformat-nonliteral -Wold-style-definition -Wpointer-arith -Winit-self -Wdeclaration-after-statement -Wfloat-equal -Wmissing-prototypes -Wstrict-prototypes -Wredundant-decls -Wmissing-declarations -Wmissing-noreturn -Wshadow -Wendif-labels -Wstrict-aliasing=3 -Wwrite-strings -Wno-long-long -Wno-overlength-strings -Wno-unused-parameter -Wno-missing-field-initializers -Wno-unused-result -Wnested-externs -Wchar-subscripts -Wtype-limits -Wuninitialized -fno-common -fdiagnostics-show-option -fvisibility=hidden -ffunction-sections -fdata-sections  -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o shared/util.lo ../git/shared/util.c
+libtool: compile:  arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../git -include ./config.h -I../git -DSYSCONFDIR=\"/etc\" -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -pipe -DANOTHER_BRICK_IN_THE -Wall -W -Wextra -Wno-inline -Wvla -Wundef -Wformat=2 -Wlogical-op -Wsign-compare -Wformat-security -Wmissing-include-dirs -Wformat-nonliteral -Wold-style-definition -Wpointer-arith -Winit-self -Wdeclaration-after-statement -Wfloat-equal -Wmissing-prototypes -Wstrict-prototypes -Wredundant-decls -Wmissing-declarations -Wmissing-noreturn -Wshadow -Wendif-labels -Wstrict-aliasing=3 -Wwrite-strings -Wno-long-long -Wno-overlength-strings -Wno-unused-parameter -Wno-missing-field-initializers -Wno-unused-result -Wnested-externs -Wchar-subscripts -Wtype-limits -Wuninitialized -fno-common -fdiagnostics-show-option -fvisibility=hidden -ffunction-sections -fdata-sections -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot-native= -Wconversion -Wno-error -c ../git/shared/util.c  -fPIC -DPIC -o shared/.libs/util.o
+In file included from ../git/shared/util.c:33:
+../git/shared/util.h: In function 'ALIGN_POWER2':
+../git/shared/util.h:84:38: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+   84 |         return 1 << ((sizeof(u) * 8) - __builtin_clz(u - 1));
+      |                                      ^
+../git/shared/util.c: In function 'read_str_safe':
+../git/shared/util.c:213:30: warning: conversion to 'size_t' {aka 'unsigned int'} from 'ssize_t' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  213 |                         todo -= r;
+      |                              ^~
+../git/shared/util.c:214:30: warning: conversion to 'size_t' {aka 'unsigned int'} from 'ssize_t' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  214 |                         done += r;
+      |                              ^~
+../git/shared/util.c:224:16: warning: conversion to 'ssize_t' {aka 'int'} from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  224 |         return done;
+      |                ^~~~
+../git/shared/util.c: In function 'write_str_safe':
+../git/shared/util.c:240:30: warning: conversion to 'size_t' {aka 'unsigned int'} from 'ssize_t' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  240 |                         todo -= r;
+      |                              ^~
+../git/shared/util.c:241:30: warning: conversion to 'size_t' {aka 'unsigned int'} from 'ssize_t' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  241 |                         done += r;
+      |                              ^~
+../git/shared/util.c:250:16: warning: conversion to 'ssize_t' {aka 'int'} from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  250 |         return done;
+      |                ^~~~
+../git/shared/util.c: In function 'read_str_ulong':
+../git/shared/util.c:283:13: warning: conversion to 'long int' from 'long unsigned int' may change the sign of the result [-Wsign-conversion]
+  283 |         v = strtoul(buf, &end, base);
+      |             ^~~~~~~
+../git/shared/util.c:286:18: warning: conversion to 'long unsigned int' from 'long int' may change the sign of the result [-Wsign-conversion]
+  286 |         *value = v;
+      |                  ^
+../git/shared/util.c: In function 'freadline_wrapped':
+../git/shared/util.c:304:43: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  304 |         _cleanup_free_ char *buf = malloc(size);
+      |                                           ^~~~
+../git/shared/util.c:326:50: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  326 |                                         *linenum += n;
+      |                                                  ^~
+../git/shared/util.c:340:36: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  340 |                         buf[i++] = ch;
+      |                                    ^~
+../git/shared/util.c:345:52: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  345 |                                 tmp = realloc(buf, size);
+      |                                                    ^~~~
+../git/shared/util.c: In function 'mkdir_p':
+../git/shared/util.c:406:17: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  406 |         start = strndupa(path, len);
+      |                 ^~~~~~~~
+../git/shared/util.c: In function 'msec_ts':
+../git/shared/util.c:478:27: warning: conversion to 'long long int' from 'long long unsigned int' may change the sign of the result [-Wsign-conversion]
+  478 |                 .tv_sec = msec / MSEC_PER_SEC,
+      |                           ^~~~
+../git/shared/util.c:479:28: warning: conversion from 'long long unsigned int' to 'long int' may change value [-Wconversion]
+  479 |                 .tv_nsec = (msec % MSEC_PER_SEC) * NSEC_PER_MSEC,
+      |                            ^
+/bin/bash ./libtool  --tag=CC   --mode=link arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot -pipe -DANOTHER_BRICK_IN_THE -Wall -W -Wextra -Wno-inline -Wvla -Wundef -Wformat=2 -Wlogical-op -Wsign-compare -Wformat-security -Wmissing-include-dirs -Wformat-nonliteral -Wold-style-definition -Wpointer-arith -Winit-self -Wdeclaration-after-statement -Wfloat-equal -Wmissing-prototypes -Wstrict-prototypes -Wredundant-decls -Wmissing-declarations -Wmissing-noreturn -Wshadow -Wendif-labels -Wstrict-aliasing=3 -Wwrite-strings -Wno-long-long -Wno-overlength-strings -Wno-unused-parameter -Wno-missing-field-initializers -Wno-unused-result -Wnested-externs -Wchar-subscripts -Wtype-limits -Wuninitialized -fno-common -fdiagnostics-show-option -fvisibility=hidden -ffunction-sections -fdata-sections  -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot-native=   -Wconversion -Wno-error -Wl,--as-needed -Wl,--no-undefined -Wl,--gc-sections -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot-native=  -Wl,-z,relro,-z,now -o shared/libshared.la  shared/array.lo shared/hash.lo shared/scratchbuf.lo shared/strbuf.lo shared/util.lo  
+libtool: link: arm-openbmc-linux-gnueabi-gcc-ar cr shared/.libs/libshared.a shared/.libs/array.o shared/.libs/hash.o shared/.libs/scratchbuf.o shared/.libs/strbuf.o shared/.libs/util.o 
+libtool: link: arm-openbmc-linux-gnueabi-gcc-ranlib shared/.libs/libshared.a
+libtool: link: ( cd "shared/.libs" && rm -f "libshared.la" && ln -s "../libshared.la" "libshared.la" )
+/bin/bash ./libtool  --tag=CC   --mode=compile arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../git  -include ./config.h -I../git -DSYSCONFDIR=\""/etc"\"  -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -pipe -DANOTHER_BRICK_IN_THE -Wall -W -Wextra -Wno-inline -Wvla -Wundef -Wformat=2 -Wlogical-op -Wsign-compare -Wformat-security -Wmissing-include-dirs -Wformat-nonliteral -Wold-style-definition -Wpointer-arith -Winit-self -Wdeclaration-after-statement -Wfloat-equal -Wmissing-prototypes -Wstrict-prototypes -Wredundant-decls -Wmissing-declarations -Wmissing-noreturn -Wshadow -Wendif-labels -Wstrict-aliasing=3 -Wwrite-strings -Wno-long-long -Wno-overlength-strings -Wno-unused-parameter -Wno-missing-field-initializers -Wno-unused-result -Wnested-externs -Wchar-subscripts -Wtype-limits -Wuninitialized -fno-common -fdiagnostics-show-option -fvisibility=hidden -ffunction-sections -fdata-sections  -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o libkmod/libkmod.lo ../git/libkmod/libkmod.c
+libtool: compile:  arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../git -include ./config.h -I../git -DSYSCONFDIR=\"/etc\" -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -pipe -DANOTHER_BRICK_IN_THE -Wall -W -Wextra -Wno-inline -Wvla -Wundef -Wformat=2 -Wlogical-op -Wsign-compare -Wformat-security -Wmissing-include-dirs -Wformat-nonliteral -Wold-style-definition -Wpointer-arith -Winit-self -Wdeclaration-after-statement -Wfloat-equal -Wmissing-prototypes -Wstrict-prototypes -Wredundant-decls -Wmissing-declarations -Wmissing-noreturn -Wshadow -Wendif-labels -Wstrict-aliasing=3 -Wwrite-strings -Wno-long-long -Wno-overlength-strings -Wno-unused-parameter -Wno-missing-field-initializers -Wno-unused-result -Wnested-externs -Wchar-subscripts -Wtype-limits -Wuninitialized -fno-common -fdiagnostics-show-option -fvisibility=hidden -ffunction-sections -fdata-sections -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot-native= -Wconversion -Wno-error -c ../git/libkmod/libkmod.c  -fPIC -DPIC -o libkmod/.libs/libkmod.o
+In file included from ../git/libkmod/libkmod.c:35:
+../git/shared/util.h: In function 'ALIGN_POWER2':
+../git/shared/util.h:84:38: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+   84 |         return 1 << ((sizeof(u) * 8) - __builtin_clz(u - 1));
+      |                                      ^
+../git/libkmod/libkmod.c: In function 'kmod_lookup_alias_from_alias_bin':
+../git/libkmod/libkmod.c:474:50: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  474 |         *list = kmod_list_remove_n_latest(*list, nmatch);
+      |                                                  ^~~~~~
+../git/libkmod/libkmod.c: In function 'kmod_lookup_alias_from_config':
+../git/libkmod/libkmod.c:684:50: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  684 |         *list = kmod_list_remove_n_latest(*list, nmatch);
+      |                                                  ^~~~~~
+/bin/bash ./libtool  --tag=CC   --mode=compile arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../git  -include ./config.h -I../git -DSYSCONFDIR=\""/etc"\"  -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -pipe -DANOTHER_BRICK_IN_THE -Wall -W -Wextra -Wno-inline -Wvla -Wundef -Wformat=2 -Wlogical-op -Wsign-compare -Wformat-security -Wmissing-include-dirs -Wformat-nonliteral -Wold-style-definition -Wpointer-arith -Winit-self -Wdeclaration-after-statement -Wfloat-equal -Wmissing-prototypes -Wstrict-prototypes -Wredundant-decls -Wmissing-declarations -Wmissing-noreturn -Wshadow -Wendif-labels -Wstrict-aliasing=3 -Wwrite-strings -Wno-long-long -Wno-overlength-strings -Wno-unused-parameter -Wno-missing-field-initializers -Wno-unused-result -Wnested-externs -Wchar-subscripts -Wtype-limits -Wuninitialized -fno-common -fdiagnostics-show-option -fvisibility=hidden -ffunction-sections -fdata-sections  -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o libkmod/libkmod-builtin.lo ../git/libkmod/libkmod-builtin.c
+libtool: compile:  arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../git -include ./config.h -I../git -DSYSCONFDIR=\"/etc\" -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -pipe -DANOTHER_BRICK_IN_THE -Wall -W -Wextra -Wno-inline -Wvla -Wundef -Wformat=2 -Wlogical-op -Wsign-compare -Wformat-security -Wmissing-include-dirs -Wformat-nonliteral -Wold-style-definition -Wpointer-arith -Winit-self -Wdeclaration-after-statement -Wfloat-equal -Wmissing-prototypes -Wstrict-prototypes -Wredundant-decls -Wmissing-declarations -Wmissing-noreturn -Wshadow -Wendif-labels -Wstrict-aliasing=3 -Wwrite-strings -Wno-long-long -Wno-overlength-strings -Wno-unused-parameter -Wno-missing-field-initializers -Wno-unused-result -Wnested-externs -Wchar-subscripts -Wtype-limits -Wuninitialized -fno-common -fdiagnostics-show-option -fvisibility=hidden -ffunction-sections -fdata-sections -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot-native= -Wconversion -Wno-error -c ../git/libkmod/libkmod-builtin.c  -fPIC -DPIC -o libkmod/.libs/libkmod-builtin.o
+../git/libkmod/libkmod-builtin.c: In function 'kmod_builtin_iter_new':
+../git/libkmod/libkmod-builtin.c:94:22: warning: conversion from '__off64_t' {aka 'long long int'} to 'ssize_t' {aka 'int'} may change value [-Wconversion]
+   94 |         iter->size = sb.st_size;
+      |                      ^~
+../git/libkmod/libkmod-builtin.c: In function 'kmod_builtin_iter_next':
+../git/libkmod/libkmod-builtin.c:203:68: warning: conversion from 'off_t' {aka 'long long int'} to 'size_t' {aka 'unsigned int'} may change value [-Wconversion]
+  203 |                 } else if (modlen != len || strncmp(modname, line, len)) {
+      |                                                                    ^~~
+../git/libkmod/libkmod-builtin.c: In function 'kmod_builtin_iter_get_modname':
+../git/libkmod/libkmod-builtin.c:247:15: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  247 |         len = dot - line;
+      |               ^~~
+../git/libkmod/libkmod-builtin.c: In function 'kmod_builtin_get_modinfo':
+../git/libkmod/libkmod-builtin.c:299:49: warning: conversion to 'size_t' {aka 'unsigned int'} from 'ssize_t' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  299 |         size = iter->next - iter->pos - (modlen * count);
+      |                                                 ^
+../git/libkmod/libkmod-builtin.c:299:16: warning: conversion from 'off_t' {aka 'long long int'} to 'size_t' {aka 'unsigned int'} may change value [-Wconversion]
+  299 |         size = iter->next - iter->pos - (modlen * count);
+      |                ^~~~
+../git/libkmod/libkmod-builtin.c:301:49: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  301 |         *modinfo = malloc(size + sizeof(char *) * (count + 1));
+      |                                                 ^
+/bin/bash ./libtool  --tag=CC   --mode=compile arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../git  -include ./config.h -I../git -DSYSCONFDIR=\""/etc"\"  -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -pipe -DANOTHER_BRICK_IN_THE -Wall -W -Wextra -Wno-inline -Wvla -Wundef -Wformat=2 -Wlogical-op -Wsign-compare -Wformat-security -Wmissing-include-dirs -Wformat-nonliteral -Wold-style-definition -Wpointer-arith -Winit-self -Wdeclaration-after-statement -Wfloat-equal -Wmissing-prototypes -Wstrict-prototypes -Wredundant-decls -Wmissing-declarations -Wmissing-noreturn -Wshadow -Wendif-labels -Wstrict-aliasing=3 -Wwrite-strings -Wno-long-long -Wno-overlength-strings -Wno-unused-parameter -Wno-missing-field-initializers -Wno-unused-result -Wnested-externs -Wchar-subscripts -Wtype-limits -Wuninitialized -fno-common -fdiagnostics-show-option -fvisibility=hidden -ffunction-sections -fdata-sections  -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o libkmod/libkmod-list.lo ../git/libkmod/libkmod-list.c
+libtool: compile:  arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../git -include ./config.h -I../git -DSYSCONFDIR=\"/etc\" -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -pipe -DANOTHER_BRICK_IN_THE -Wall -W -Wextra -Wno-inline -Wvla -Wundef -Wformat=2 -Wlogical-op -Wsign-compare -Wformat-security -Wmissing-include-dirs -Wformat-nonliteral -Wold-style-definition -Wpointer-arith -Winit-self -Wdeclaration-after-statement -Wfloat-equal -Wmissing-prototypes -Wstrict-prototypes -Wredundant-decls -Wmissing-declarations -Wmissing-noreturn -Wshadow -Wendif-labels -Wstrict-aliasing=3 -Wwrite-strings -Wno-long-long -Wno-overlength-strings -Wno-unused-parameter -Wno-missing-field-initializers -Wno-unused-result -Wnested-externs -Wchar-subscripts -Wtype-limits -Wuninitialized -fno-common -fdiagnostics-show-option -fvisibility=hidden -ffunction-sections -fdata-sections -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot-native= -Wconversion -Wno-error -c ../git/libkmod/libkmod-list.c  -fPIC -DPIC -o libkmod/.libs/libkmod-list.o
+/bin/bash ./libtool  --tag=CC   --mode=compile arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../git  -include ./config.h -I../git -DSYSCONFDIR=\""/etc"\"  -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -pipe -DANOTHER_BRICK_IN_THE -Wall -W -Wextra -Wno-inline -Wvla -Wundef -Wformat=2 -Wlogical-op -Wsign-compare -Wformat-security -Wmissing-include-dirs -Wformat-nonliteral -Wold-style-definition -Wpointer-arith -Winit-self -Wdeclaration-after-statement -Wfloat-equal -Wmissing-prototypes -Wstrict-prototypes -Wredundant-decls -Wmissing-declarations -Wmissing-noreturn -Wshadow -Wendif-labels -Wstrict-aliasing=3 -Wwrite-strings -Wno-long-long -Wno-overlength-strings -Wno-unused-parameter -Wno-missing-field-initializers -Wno-unused-result -Wnested-externs -Wchar-subscripts -Wtype-limits -Wuninitialized -fno-common -fdiagnostics-show-option -fvisibility=hidden -ffunction-sections -fdata-sections  -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o libkmod/libkmod-config.lo ../git/libkmod/libkmod-config.c
+libtool: compile:  arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../git -include ./config.h -I../git -DSYSCONFDIR=\"/etc\" -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -pipe -DANOTHER_BRICK_IN_THE -Wall -W -Wextra -Wno-inline -Wvla -Wundef -Wformat=2 -Wlogical-op -Wsign-compare -Wformat-security -Wmissing-include-dirs -Wformat-nonliteral -Wold-style-definition -Wpointer-arith -Winit-self -Wdeclaration-after-statement -Wfloat-equal -Wmissing-prototypes -Wstrict-prototypes -Wredundant-decls -Wmissing-declarations -Wmissing-noreturn -Wshadow -Wendif-labels -Wstrict-aliasing=3 -Wwrite-strings -Wno-long-long -Wno-overlength-strings -Wno-unused-parameter -Wno-missing-field-initializers -Wno-unused-result -Wnested-externs -Wchar-subscripts -Wtype-limits -Wuninitialized -fno-common -fdiagnostics-show-option -fvisibility=hidden -ffunction-sections -fdata-sections -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot-native= -Wconversion -Wno-error -c ../git/libkmod/libkmod-config.c  -fPIC -DPIC -o libkmod/.libs/libkmod-config.o
+In file included from ../git/libkmod/libkmod-config.c:33:
+../git/shared/util.h: In function 'ALIGN_POWER2':
+../git/shared/util.h:84:38: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+   84 |         return 1 << ((sizeof(u) * 8) - __builtin_clz(u - 1));
+      |                                      ^
+../git/libkmod/libkmod-config.c: In function 'kmod_config_add_softdep':
+../git/libkmod/libkmod-config.c:293:24: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  293 |                 plen = s - p;
+      |                        ^
+../git/libkmod/libkmod-config.c:357:24: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  357 |                 plen = s - p;
+      |                        ^
+../git/libkmod/libkmod-config.c: In function 'softdep_to_char':
+../git/libkmod/libkmod-config.c:411:26: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  411 |                 sz_pre = end - start;
+      |                          ^~~
+../git/libkmod/libkmod-config.c:420:27: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  420 |                 sz_post = end - start;
+      |                           ^~~
+../git/libkmod/libkmod-config.c: In function 'kmod_config_parse_kcmdline':
+../git/libkmod/libkmod-config.c:611:71: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  611 |                                 memmove(p_quote_start, modname, value - modname);
+      |                                                                 ~~~~~~^~~~~~~~~
+/bin/bash ./libtool  --tag=CC   --mode=compile arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../git  -include ./config.h -I../git -DSYSCONFDIR=\""/etc"\"  -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -pipe -DANOTHER_BRICK_IN_THE -Wall -W -Wextra -Wno-inline -Wvla -Wundef -Wformat=2 -Wlogical-op -Wsign-compare -Wformat-security -Wmissing-include-dirs -Wformat-nonliteral -Wold-style-definition -Wpointer-arith -Winit-self -Wdeclaration-after-statement -Wfloat-equal -Wmissing-prototypes -Wstrict-prototypes -Wredundant-decls -Wmissing-declarations -Wmissing-noreturn -Wshadow -Wendif-labels -Wstrict-aliasing=3 -Wwrite-strings -Wno-long-long -Wno-overlength-strings -Wno-unused-parameter -Wno-missing-field-initializers -Wno-unused-result -Wnested-externs -Wchar-subscripts -Wtype-limits -Wuninitialized -fno-common -fdiagnostics-show-option -fvisibility=hidden -ffunction-sections -fdata-sections  -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o libkmod/libkmod-index.lo ../git/libkmod/libkmod-index.c
+libtool: compile:  arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../git -include ./config.h -I../git -DSYSCONFDIR=\"/etc\" -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -pipe -DANOTHER_BRICK_IN_THE -Wall -W -Wextra -Wno-inline -Wvla -Wundef -Wformat=2 -Wlogical-op -Wsign-compare -Wformat-security -Wmissing-include-dirs -Wformat-nonliteral -Wold-style-definition -Wpointer-arith -Winit-self -Wdeclaration-after-statement -Wfloat-equal -Wmissing-prototypes -Wstrict-prototypes -Wredundant-decls -Wmissing-declarations -Wmissing-noreturn -Wshadow -Wendif-labels -Wstrict-aliasing=3 -Wwrite-strings -Wno-long-long -Wno-overlength-strings -Wno-unused-parameter -Wno-missing-field-initializers -Wno-unused-result -Wnested-externs -Wchar-subscripts -Wtype-limits -Wuninitialized -fno-common -fdiagnostics-show-option -fvisibility=hidden -ffunction-sections -fdata-sections -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot-native= -Wconversion -Wno-error -c ../git/libkmod/libkmod-index.c  -fPIC -DPIC -o libkmod/.libs/libkmod-index.o
+In file included from ../git/libkmod/libkmod-index.c:31:
+../git/shared/util.h: In function 'ALIGN_POWER2':
+../git/shared/util.h:84:38: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+   84 |         return 1 << ((sizeof(u) * 8) - __builtin_clz(u - 1));
+      |                                      ^
+../git/libkmod/libkmod-index.c: In function 'buf_freadchars':
+../git/libkmod/libkmod-index.c:216:43: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  216 |                 if (!strbuf_pushchar(buf, ch))
+      |                                           ^~
+../git/libkmod/libkmod-index.c: In function 'index_read':
+../git/libkmod/libkmod-index.c:257:30: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  257 |                 char first = read_char(in);
+      |                              ^~~~~~~~~
+../git/libkmod/libkmod-index.c:258:29: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  258 |                 char last = read_char(in);
+      |                             ^~~~~~~~~
+In file included from ../git/libkmod/libkmod-index.c:29:
+../git/libkmod/libkmod-index.c:262:55: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  262 |                                      sizeof(uint32_t) * child_count));
+      |                                                       ^
+../git/shared/macro.h:57:20: note: in definition of macro 'NOFAIL'
+   57 | #define NOFAIL(x) (x)
+      |                    ^
+../git/libkmod/libkmod-index.c:282:31: warning: conversion to 'int' from 'uint32_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  282 |                 value_count = read_long(in);
+      |                               ^~~~~~~~~
+../git/libkmod/libkmod-index.c: In function 'index_dump_node':
+../git/libkmod/libkmod-index.c:371:18: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  371 |         pushed = strbuf_pushchars(buf, node->prefix);
+      |                  ^~~~~~~~~~~~~~~~
+../git/libkmod/libkmod-index.c:386:38: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  386 |                 strbuf_pushchar(buf, ch);
+      |                                      ^~
+../git/libkmod/libkmod-index.c:391:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  391 |         strbuf_popchars(buf, pushed);
+      |                              ^~~~~~
+../git/libkmod/libkmod-index.c: In function 'index_searchwild__all':
+../git/libkmod/libkmod-index.c:495:38: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  495 |                 strbuf_pushchar(buf, ch);
+      |                                      ^~
+../git/libkmod/libkmod-index.c:506:38: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  506 |                 strbuf_pushchar(buf, ch);
+      |                                      ^~
+../git/libkmod/libkmod-index.c:520:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  520 |         strbuf_popchars(buf, pushed);
+      |                              ^~~~~~
+../git/libkmod/libkmod-index.c: In function 'index_mm_read_node':
+../git/libkmod/libkmod-index.c:701:47: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  701 |                             (sizeof(uint32_t) * child_count)) % sizeof(void *);
+      |                                               ^
+../git/libkmod/libkmod-index.c:704:31: warning: conversion to 'int' from 'uint32_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  704 |                 value_count = read_long_mm(&p);
+      |                               ^~~~~~~~~~~~
+../git/libkmod/libkmod-index.c:709:42: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  709 |                       + sizeof(uint32_t) * child_count + children_padding
+      |                                          ^
+../git/libkmod/libkmod-index.c:709:56: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  709 |                       + sizeof(uint32_t) * child_count + children_padding
+      |                                                        ^
+../git/libkmod/libkmod-index.c:710:55: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  710 |                       + sizeof(struct index_mm_value) * value_count);
+      |                                                       ^
+../git/libkmod/libkmod-index.c:721:43: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  721 |                          sizeof(uint32_t) * child_count + children_padding);
+      |                                           ^
+../git/libkmod/libkmod-index.c:723:28: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  723 |         node->values.len = value_count;
+      |                            ^~~~~~~~~~~
+../git/libkmod/libkmod-index.c:726:59: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  726 |         memcpy(node->children, children, sizeof(uint32_t) * child_count);
+      |                                                           ^
+../git/libkmod/libkmod-index.c: In function 'index_mm_open':
+../git/libkmod/libkmod-index.c:776:32: warning: conversion from '__off64_t' {aka 'long long int'} to 'size_t' {aka 'unsigned int'} may change value [-Wconversion]
+  776 |         idx->mm = mmap(NULL, st.st_size, PROT_READ, MAP_PRIVATE, fd, 0);
+      |                              ~~^~~~~~~~
+../git/libkmod/libkmod-index.c:804:21: warning: conversion from '__off64_t' {aka 'long long int'} to 'size_t' {aka 'unsigned int'} may change value [-Wconversion]
+  804 |         idx->size = st.st_size;
+      |                     ^~
+../git/libkmod/libkmod-index.c:814:27: warning: conversion from '__off64_t' {aka 'long long int'} to 'size_t' {aka 'unsigned int'} may change value [-Wconversion]
+  814 |         munmap(idx->mm, st.st_size);
+      |                         ~~^~~~~~~~
+../git/libkmod/libkmod-index.c: In function 'index_mm_dump_node':
+../git/libkmod/libkmod-index.c:850:18: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  850 |         pushed = strbuf_pushchars(buf, node->prefix);
+      |                  ^~~~~~~~~~~~~~~~
+../git/libkmod/libkmod-index.c:867:38: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  867 |                 strbuf_pushchar(buf, ch);
+      |                                      ^~
+../git/libkmod/libkmod-index.c:872:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  872 |         strbuf_popchars(buf, pushed);
+      |                              ^~~~~~
+../git/libkmod/libkmod-index.c: In function 'index_mm_searchwild_all':
+../git/libkmod/libkmod-index.c:977:38: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  977 |                 strbuf_pushchar(buf, ch);
+      |                                      ^~
+../git/libkmod/libkmod-index.c:988:38: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  988 |                 strbuf_pushchar(buf, ch);
+      |                                      ^~
+../git/libkmod/libkmod-index.c:1002:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 1002 |         strbuf_popchars(buf, pushed);
+      |                              ^~~~~~
+/bin/bash ./libtool  --tag=CC   --mode=compile arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../git  -include ./config.h -I../git -DSYSCONFDIR=\""/etc"\"  -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -pipe -DANOTHER_BRICK_IN_THE -Wall -W -Wextra -Wno-inline -Wvla -Wundef -Wformat=2 -Wlogical-op -Wsign-compare -Wformat-security -Wmissing-include-dirs -Wformat-nonliteral -Wold-style-definition -Wpointer-arith -Winit-self -Wdeclaration-after-statement -Wfloat-equal -Wmissing-prototypes -Wstrict-prototypes -Wredundant-decls -Wmissing-declarations -Wmissing-noreturn -Wshadow -Wendif-labels -Wstrict-aliasing=3 -Wwrite-strings -Wno-long-long -Wno-overlength-strings -Wno-unused-parameter -Wno-missing-field-initializers -Wno-unused-result -Wnested-externs -Wchar-subscripts -Wtype-limits -Wuninitialized -fno-common -fdiagnostics-show-option -fvisibility=hidden -ffunction-sections -fdata-sections  -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o libkmod/libkmod-module.lo ../git/libkmod/libkmod-module.c
+libtool: compile:  arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../git -include ./config.h -I../git -DSYSCONFDIR=\"/etc\" -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -pipe -DANOTHER_BRICK_IN_THE -Wall -W -Wextra -Wno-inline -Wvla -Wundef -Wformat=2 -Wlogical-op -Wsign-compare -Wformat-security -Wmissing-include-dirs -Wformat-nonliteral -Wold-style-definition -Wpointer-arith -Winit-self -Wdeclaration-after-statement -Wfloat-equal -Wmissing-prototypes -Wstrict-prototypes -Wredundant-decls -Wmissing-declarations -Wmissing-noreturn -Wshadow -Wendif-labels -Wstrict-aliasing=3 -Wwrite-strings -Wno-long-long -Wno-overlength-strings -Wno-unused-parameter -Wno-missing-field-initializers -Wno-unused-result -Wnested-externs -Wchar-subscripts -Wtype-limits -Wuninitialized -fno-common -fdiagnostics-show-option -fvisibility=hidden -ffunction-sections -fdata-sections -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot-native= -Wconversion -Wno-error -c ../git/libkmod/libkmod-module.c  -fPIC -DPIC -o libkmod/.libs/libkmod-module.o
+In file included from ../git/libkmod/libkmod-module.c:42:
+../git/shared/util.h: In function 'ALIGN_POWER2':
+../git/shared/util.h:84:38: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+   84 |         return 1 << ((sizeof(u) * 8) - __builtin_clz(u - 1));
+      |                                      ^
+../git/libkmod/libkmod-module.c: In function 'kmod_module_insert_module':
+../git/libkmod/libkmod-module.c:915:71: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  915 |                 err = finit_module(kmod_file_get_fd(mod->file), args, kernel_flags);
+      |                                                                       ^~~~~~~~~~~~
+../git/libkmod/libkmod-module.c:945:32: warning: conversion from 'off_t' {aka 'long long int'} to 'long unsigned int' may change value [-Wconversion]
+  945 |         err = init_module(mem, size, args);
+      |                                ^~~~
+../git/libkmod/libkmod-module.c: In function 'module_do_install_commands':
+../git/libkmod/libkmod-module.c:1084:36: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 1084 |                 size_t prefixlen = p - cmd;
+      |                                    ^
+../git/libkmod/libkmod-module.c:1092:34: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 1092 |                 memcpy(s, cmd, p - cmd);
+      |                                ~~^~~~~
+../git/libkmod/libkmod-module.c: In function 'kmod_module_get_initstate':
+../git/libkmod/libkmod-module.c:1822:38: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 1822 |                         path[pathlen - (sizeof("/initstate") - 1)] = '\0';
+      |                                      ^
+../git/libkmod/libkmod-module.c: In function 'kmod_module_hex_to_str':
+../git/libkmod/libkmod-module.c:2284:37: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 2284 |                         if ((i + 1) % line_limit == 0)
+      |                                     ^
+../git/libkmod/libkmod-module.c: In function 'kmod_module_get_info':
+../git/libkmod/libkmod-module.c:2380:34: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 2380 |                         keylen = value - key;
+      |                                  ^~~~~
+/bin/bash ./libtool  --tag=CC   --mode=compile arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../git  -include ./config.h -I../git -DSYSCONFDIR=\""/etc"\"  -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -pipe -DANOTHER_BRICK_IN_THE -Wall -W -Wextra -Wno-inline -Wvla -Wundef -Wformat=2 -Wlogical-op -Wsign-compare -Wformat-security -Wmissing-include-dirs -Wformat-nonliteral -Wold-style-definition -Wpointer-arith -Winit-self -Wdeclaration-after-statement -Wfloat-equal -Wmissing-prototypes -Wstrict-prototypes -Wredundant-decls -Wmissing-declarations -Wmissing-noreturn -Wshadow -Wendif-labels -Wstrict-aliasing=3 -Wwrite-strings -Wno-long-long -Wno-overlength-strings -Wno-unused-parameter -Wno-missing-field-initializers -Wno-unused-result -Wnested-externs -Wchar-subscripts -Wtype-limits -Wuninitialized -fno-common -fdiagnostics-show-option -fvisibility=hidden -ffunction-sections -fdata-sections  -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o libkmod/libkmod-file.lo ../git/libkmod/libkmod-file.c
+libtool: compile:  arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../git -include ./config.h -I../git -DSYSCONFDIR=\"/etc\" -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -pipe -DANOTHER_BRICK_IN_THE -Wall -W -Wextra -Wno-inline -Wvla -Wundef -Wformat=2 -Wlogical-op -Wsign-compare -Wformat-security -Wmissing-include-dirs -Wformat-nonliteral -Wold-style-definition -Wpointer-arith -Winit-self -Wdeclaration-after-statement -Wfloat-equal -Wmissing-prototypes -Wstrict-prototypes -Wredundant-decls -Wmissing-declarations -Wmissing-noreturn -Wshadow -Wendif-labels -Wstrict-aliasing=3 -Wwrite-strings -Wno-long-long -Wno-overlength-strings -Wno-unused-parameter -Wno-missing-field-initializers -Wno-unused-result -Wnested-externs -Wchar-subscripts -Wtype-limits -Wuninitialized -fno-common -fdiagnostics-show-option -fvisibility=hidden -ffunction-sections -fdata-sections -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot-native= -Wconversion -Wno-error -c ../git/libkmod/libkmod-file.c  -fPIC -DPIC -o libkmod/.libs/libkmod-file.o
+In file included from ../git/libkmod/libkmod-file.c:39:
+../git/shared/util.h: In function 'ALIGN_POWER2':
+../git/shared/util.h:84:38: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+   84 |         return 1 << ((sizeof(u) * 8) - __builtin_clz(u - 1));
+      |                                      ^
+../git/libkmod/libkmod-file.c: In function 'xz_uncompress':
+../git/libkmod/libkmod-file.c:249:42: warning: conversion to 'size_t' {aka 'unsigned int'} from 'ssize_t' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  249 |                         strm->avail_in = rdret;
+      |                                          ^~~~~
+../git/libkmod/libkmod-file.c: In function 'load_zlib':
+../git/libkmod/libkmod-file.c:331:54: warning: conversion from 'off_t' {aka 'long long int'} to 'size_t' {aka 'unsigned int'} may change value [-Wconversion]
+  331 |                         void *tmp = realloc(p, total + READ_STEP);
+      |                                                      ^
+../git/libkmod/libkmod-file.c:340:54: warning: conversion from 'off_t' {aka 'long long int'} to 'unsigned int' may change value [-Wconversion]
+  340 |                 r = gzread(file->gzf, p + did, total - did);
+      |                                                ~~~~~~^~~~~
+../git/libkmod/libkmod-file.c: In function 'load_reg':
+../git/libkmod/libkmod-file.c:402:39: warning: conversion from 'off_t' {aka 'long long int'} to 'size_t' {aka 'unsigned int'} may change value [-Wconversion]
+  402 |         file->memory = mmap(NULL, file->size, PROT_READ, MAP_PRIVATE,
+      |                                   ~~~~^~~~~~
+../git/libkmod/libkmod-file.c: In function 'unload_reg':
+../git/libkmod/libkmod-file.c:412:34: warning: conversion from 'off_t' {aka 'long long int'} to 'size_t' {aka 'unsigned int'} may change value [-Wconversion]
+  412 |         munmap(file->memory, file->size);
+      |                              ~~~~^~~~~~
+/bin/bash ./libtool  --tag=CC   --mode=compile arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../git  -include ./config.h -I../git -DSYSCONFDIR=\""/etc"\"  -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -pipe -DANOTHER_BRICK_IN_THE -Wall -W -Wextra -Wno-inline -Wvla -Wundef -Wformat=2 -Wlogical-op -Wsign-compare -Wformat-security -Wmissing-include-dirs -Wformat-nonliteral -Wold-style-definition -Wpointer-arith -Winit-self -Wdeclaration-after-statement -Wfloat-equal -Wmissing-prototypes -Wstrict-prototypes -Wredundant-decls -Wmissing-declarations -Wmissing-noreturn -Wshadow -Wendif-labels -Wstrict-aliasing=3 -Wwrite-strings -Wno-long-long -Wno-overlength-strings -Wno-unused-parameter -Wno-missing-field-initializers -Wno-unused-result -Wnested-externs -Wchar-subscripts -Wtype-limits -Wuninitialized -fno-common -fdiagnostics-show-option -fvisibility=hidden -ffunction-sections -fdata-sections  -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o libkmod/libkmod-elf.lo ../git/libkmod/libkmod-elf.c
+libtool: compile:  arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../git -include ./config.h -I../git -DSYSCONFDIR=\"/etc\" -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -pipe -DANOTHER_BRICK_IN_THE -Wall -W -Wextra -Wno-inline -Wvla -Wundef -Wformat=2 -Wlogical-op -Wsign-compare -Wformat-security -Wmissing-include-dirs -Wformat-nonliteral -Wold-style-definition -Wpointer-arith -Winit-self -Wdeclaration-after-statement -Wfloat-equal -Wmissing-prototypes -Wstrict-prototypes -Wredundant-decls -Wmissing-declarations -Wmissing-noreturn -Wshadow -Wendif-labels -Wstrict-aliasing=3 -Wwrite-strings -Wno-long-long -Wno-overlength-strings -Wno-unused-parameter -Wno-missing-field-initializers -Wno-unused-result -Wnested-externs -Wchar-subscripts -Wtype-limits -Wuninitialized -fno-common -fdiagnostics-show-option -fvisibility=hidden -ffunction-sections -fdata-sections -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot-native= -Wconversion -Wno-error -c ../git/libkmod/libkmod-elf.c  -fPIC -DPIC -o libkmod/.libs/libkmod-elf.o
+In file included from ../git/libkmod/libkmod-elf.c:26:
+../git/shared/util.h: In function 'ALIGN_POWER2':
+../git/shared/util.h:84:38: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+   84 |         return 1 << ((sizeof(u) * 8) - __builtin_clz(u - 1));
+      |                                      ^
+../git/libkmod/libkmod-elf.c: In function 'elf_set_uint':
+../git/libkmod/libkmod-elf.c:176:42: warning: conversion from 'uint64_t' {aka 'long long unsigned int'} to 'size_t' {aka 'unsigned int'} may change value [-Wconversion]
+  176 |                 elf->changed = malloc(elf->size);
+      |                                       ~~~^~~~~~
+../git/libkmod/libkmod-elf.c:179:54: warning: conversion from 'uint64_t' {aka 'long long unsigned int'} to 'size_t' {aka 'unsigned int'} may change value [-Wconversion]
+  179 |                 memcpy(elf->changed, elf->memory, elf->size);
+      |                                                   ~~~^~~~~~
+../git/libkmod/libkmod-elf.c: In function 'elf_get_section_info':
+../git/libkmod/libkmod-elf.c:227:34: warning: conversion to 'uint64_t' {aka 'long long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  227 |         uint64_t min_size, off = p - elf->memory;
+      |                                  ^
+../git/libkmod/libkmod-elf.c:238:9: warning: conversion from 'uint64_t' {aka 'long long unsigned int'} to 'uint32_t' {aka 'unsigned int'} may change value [-Wconversion]
+  238 |         elf_get_uint(elf, off + offsetof(typeof(*hdr), field), sizeof(hdr->field))
+      |         ^~~~~~~~~~~~
+../git/libkmod/libkmod-elf.c:244:28: note: in expansion of macro 'READV'
+  244 |                 *nameoff = READV(sh_name);
+      |                            ^~~~~
+../git/libkmod/libkmod-elf.c:238:9: warning: conversion from 'uint64_t' {aka 'long long unsigned int'} to 'uint32_t' {aka 'unsigned int'} may change value [-Wconversion]
+  238 |         elf_get_uint(elf, off + offsetof(typeof(*hdr), field), sizeof(hdr->field))
+      |         ^~~~~~~~~~~~
+../git/libkmod/libkmod-elf.c:249:28: note: in expansion of macro 'READV'
+  249 |                 *nameoff = READV(sh_name);
+      |                            ^~~~~
+../git/libkmod/libkmod-elf.c: In function 'kmod_elf_new':
+../git/libkmod/libkmod-elf.c:284:38: warning: conversion to 'uint64_t' {aka 'long long unsigned int'} from 'off_t' {aka 'long long int'} may change the sign of the result [-Wsign-conversion]
+  284 |         class = elf_identify(memory, size);
+      |                                      ^~~~
+../git/libkmod/libkmod-elf.c:297:21: warning: conversion to 'uint64_t' {aka 'long long unsigned int'} from 'off_t' {aka 'long long int'} may change the sign of the result [-Wsign-conversion]
+  297 |         elf->size = size;
+      |                     ^~~~
+../git/libkmod/libkmod-elf.c:301:9: warning: conversion from 'uint64_t' {aka 'long long unsigned int'} to 'uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+  301 |         elf_get_uint(elf, offsetof(typeof(*hdr), field), sizeof(hdr->field))
+      |         ^~~~~~~~~~~~
+../git/libkmod/libkmod-elf.c:305:37: note: in expansion of macro 'READV'
+  305 |         elf->header.section.count = READV(e_shnum);             \
+      |                                     ^~~~~
+../git/libkmod/libkmod-elf.c:311:17: note: in expansion of macro 'LOAD_HEADER'
+  311 |                 LOAD_HEADER;
+      |                 ^~~~~~~~~~~
+../git/libkmod/libkmod-elf.c:301:9: warning: conversion from 'uint64_t' {aka 'long long unsigned int'} to 'uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+  301 |         elf_get_uint(elf, offsetof(typeof(*hdr), field), sizeof(hdr->field))
+      |         ^~~~~~~~~~~~
+../git/libkmod/libkmod-elf.c:306:42: note: in expansion of macro 'READV'
+  306 |         elf->header.section.entry_size = READV(e_shentsize);    \
+      |                                          ^~~~~
+../git/libkmod/libkmod-elf.c:311:17: note: in expansion of macro 'LOAD_HEADER'
+  311 |                 LOAD_HEADER;
+      |                 ^~~~~~~~~~~
+../git/libkmod/libkmod-elf.c:301:9: warning: conversion from 'uint64_t' {aka 'long long unsigned int'} to 'uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+  301 |         elf_get_uint(elf, offsetof(typeof(*hdr), field), sizeof(hdr->field))
+      |         ^~~~~~~~~~~~
+../git/libkmod/libkmod-elf.c:307:39: note: in expansion of macro 'READV'
+  307 |         elf->header.strings.section = READV(e_shstrndx);        \
+      |                                       ^~~~~
+../git/libkmod/libkmod-elf.c:311:17: note: in expansion of macro 'LOAD_HEADER'
+  311 |                 LOAD_HEADER;
+      |                 ^~~~~~~~~~~
+../git/libkmod/libkmod-elf.c:301:9: warning: conversion from 'uint64_t' {aka 'long long unsigned int'} to 'uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+  301 |         elf_get_uint(elf, offsetof(typeof(*hdr), field), sizeof(hdr->field))
+      |         ^~~~~~~~~~~~
+../git/libkmod/libkmod-elf.c:308:31: note: in expansion of macro 'READV'
+  308 |         elf->header.machine = READV(e_machine)
+      |                               ^~~~~
+../git/libkmod/libkmod-elf.c:311:17: note: in expansion of macro 'LOAD_HEADER'
+  311 |                 LOAD_HEADER;
+      |                 ^~~~~~~~~~~
+../git/libkmod/libkmod-elf.c:301:9: warning: conversion from 'uint64_t' {aka 'long long unsigned int'} to 'uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+  301 |         elf_get_uint(elf, offsetof(typeof(*hdr), field), sizeof(hdr->field))
+      |         ^~~~~~~~~~~~
+../git/libkmod/libkmod-elf.c:305:37: note: in expansion of macro 'READV'
+  305 |         elf->header.section.count = READV(e_shnum);             \
+      |                                     ^~~~~
+../git/libkmod/libkmod-elf.c:315:17: note: in expansion of macro 'LOAD_HEADER'
+  315 |                 LOAD_HEADER;
+      |                 ^~~~~~~~~~~
+../git/libkmod/libkmod-elf.c:301:9: warning: conversion from 'uint64_t' {aka 'long long unsigned int'} to 'uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+  301 |         elf_get_uint(elf, offsetof(typeof(*hdr), field), sizeof(hdr->field))
+      |         ^~~~~~~~~~~~
+../git/libkmod/libkmod-elf.c:306:42: note: in expansion of macro 'READV'
+  306 |         elf->header.section.entry_size = READV(e_shentsize);    \
+      |                                          ^~~~~
+../git/libkmod/libkmod-elf.c:315:17: note: in expansion of macro 'LOAD_HEADER'
+  315 |                 LOAD_HEADER;
+      |                 ^~~~~~~~~~~
+../git/libkmod/libkmod-elf.c:301:9: warning: conversion from 'uint64_t' {aka 'long long unsigned int'} to 'uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+  301 |         elf_get_uint(elf, offsetof(typeof(*hdr), field), sizeof(hdr->field))
+      |         ^~~~~~~~~~~~
+../git/libkmod/libkmod-elf.c:307:39: note: in expansion of macro 'READV'
+  307 |         elf->header.strings.section = READV(e_shstrndx);        \
+      |                                       ^~~~~
+../git/libkmod/libkmod-elf.c:315:17: note: in expansion of macro 'LOAD_HEADER'
+  315 |                 LOAD_HEADER;
+      |                 ^~~~~~~~~~~
+../git/libkmod/libkmod-elf.c:301:9: warning: conversion from 'uint64_t' {aka 'long long unsigned int'} to 'uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+  301 |         elf_get_uint(elf, offsetof(typeof(*hdr), field), sizeof(hdr->field))
+      |         ^~~~~~~~~~~~
+../git/libkmod/libkmod-elf.c:308:31: note: in expansion of macro 'READV'
+  308 |         elf->header.machine = READV(e_machine)
+      |                               ^~~~~
+../git/libkmod/libkmod-elf.c:315:17: note: in expansion of macro 'LOAD_HEADER'
+  315 |                 LOAD_HEADER;
+      |                 ^~~~~~~~~~~
+../git/libkmod/libkmod-elf.c: In function 'kmod_elf_get_strings':
+../git/libkmod/libkmod-elf.c:472:38: warning: conversion from 'uint64_t' {aka 'long long unsigned int'} to 'size_t' {aka 'unsigned int'} may change value [-Wconversion]
+  472 |         *array = a = malloc(size + 1 + sizeof(char *) * (count + 1));
+      |                             ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../git/libkmod/libkmod-elf.c:477:28: warning: conversion from 'uint64_t' {aka 'long long unsigned int'} to 'size_t' {aka 'unsigned int'} may change value [-Wconversion]
+  477 |         memcpy(s, strings, size);
+      |                            ^~~~
+../git/libkmod/libkmod-elf.c:497:16: warning: conversion to 'int' from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  497 |         return count;
+      |                ^~~~~
+../git/libkmod/libkmod-elf.c: In function 'kmod_elf_get_modversions':
+../git/libkmod/libkmod-elf.c:531:17: warning: conversion from 'uint64_t' {aka 'long long unsigned int'} to 'int' may change value [-Wconversion]
+  531 |         count = size / MODVERSION_SEC_SIZE;
+      |                 ^~~~
+../git/libkmod/libkmod-elf.c:533:15: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  533 |         off = (const uint8_t *)buf - elf->memory;
+      |               ^
+../git/libkmod/libkmod-elf.c:545:60: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  545 |         *array = a = malloc(sizeof(struct kmod_modversion) * count + slen);
+      |                                                            ^
+../git/libkmod/libkmod-elf.c:550:15: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  550 |         off = (const uint8_t *)buf - elf->memory;
+      |               ^
+../git/libkmod/libkmod-elf.c:553:55: warning: conversion from 'size_t' {aka 'unsigned int'} to 'uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+  553 |                 uint64_t crc = elf_get_uint(elf, off, offcrc);
+      |                                                       ^~~~~~
+../git/libkmod/libkmod-elf.c: In function 'kmod_elf_strip_section':
+../git/libkmod/libkmod-elf.c:581:43: warning: conversion from 'int' to 'uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+  581 |         buf = elf_get_section_header(elf, idx);
+      |                                           ^~~
+../git/libkmod/libkmod-elf.c:582:15: warning: conversion to 'uint64_t' {aka 'long long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  582 |         off = (const uint8_t *)buf - elf->memory;
+      |               ^
+../git/libkmod/libkmod-elf.c:592:38: warning: conversion from 'uint64_t' {aka 'long long unsigned int'} to 'uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+  592 |         val = elf_get_uint(elf, off, size);
+      |                                      ^~~~
+../git/libkmod/libkmod-elf.c: In function 'kmod_elf_strip_vermagic':
+../git/libkmod/libkmod-elf.c:637:23: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  637 |                 off = (const uint8_t *)s - elf->memory;
+      |                       ^
+../git/libkmod/libkmod-elf.c:640:50: warning: conversion from 'uint64_t' {aka 'long long unsigned int'} to 'size_t' {aka 'unsigned int'} may change value [-Wconversion]
+  640 |                         elf->changed = malloc(elf->size);
+      |                                               ~~~^~~~~~
+../git/libkmod/libkmod-elf.c:643:62: warning: conversion from 'uint64_t' {aka 'long long unsigned int'} to 'size_t' {aka 'unsigned int'} may change value [-Wconversion]
+  643 |                         memcpy(elf->changed, elf->memory, elf->size);
+      |                                                           ~~~^~~~~~
+../git/libkmod/libkmod-elf.c: In function 'kmod_elf_get_symbols_symtab':
+../git/libkmod/libkmod-elf.c:700:71: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  700 |         *array = a = malloc(size + 1 + sizeof(struct kmod_modversion) * count);
+      |                                                                       ^
+../git/libkmod/libkmod-elf.c:700:38: warning: conversion from 'uint64_t' {aka 'long long unsigned int'} to 'size_t' {aka 'unsigned int'} may change value [-Wconversion]
+  700 |         *array = a = malloc(size + 1 + sizeof(struct kmod_modversion) * count);
+      |                             ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../git/libkmod/libkmod-elf.c:708:39: warning: conversion from 'uint64_t' {aka 'long long unsigned int'} to 'size_t' {aka 'unsigned int'} may change value [-Wconversion]
+  708 |                         size_t slen = i - last;
+      |                                       ^
+../git/libkmod/libkmod-elf.c:724:31: warning: conversion from 'uint64_t' {aka 'long long unsigned int'} to 'size_t' {aka 'unsigned int'} may change value [-Wconversion]
+  724 |                 size_t slen = i - last;
+      |                               ^
+../git/libkmod/libkmod-elf.c: In function 'kmod_elf_get_symbols':
+../git/libkmod/libkmod-elf.c:809:20: warning: conversion from 'uint64_t' {aka 'long long unsigned int'} to 'int' may change value [-Wconversion]
+  809 |         symcount = symtablen / symlen;
+      |                    ^~~~~~~~~
+../git/libkmod/libkmod-elf.c:812:19: warning: conversion to 'uint64_t' {aka 'long long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  812 |         str_off = (const uint8_t *)strtab - elf->memory;
+      |                   ^
+../git/libkmod/libkmod-elf.c:813:57: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  813 |         sym_off = (const uint8_t *)symtab - elf->memory + symlen;
+      |                                                         ^
+../git/libkmod/libkmod-elf.c:819:17: warning: conversion from 'uint64_t' {aka 'long long unsigned int'} to 'uint32_t' {aka 'unsigned int'} may change value [-Wconversion]
+  819 |                 elf_get_uint(elf, sym_off + offsetof(typeof(*s), field),\
+      |                 ^~~~~~~~~~~~
+../git/libkmod/libkmod-elf.c:823:36: note: in expansion of macro 'READV'
+  823 |                         name_off = READV(st_name);
+      |                                    ^~~~~
+../git/libkmod/libkmod-elf.c:819:17: warning: conversion from 'uint64_t' {aka 'long long unsigned int'} to 'uint32_t' {aka 'unsigned int'} may change value [-Wconversion]
+  819 |                 elf_get_uint(elf, sym_off + offsetof(typeof(*s), field),\
+      |                 ^~~~~~~~~~~~
+../git/libkmod/libkmod-elf.c:826:36: note: in expansion of macro 'READV'
+  826 |                         name_off = READV(st_name);
+      |                                    ^~~~~
+../git/libkmod/libkmod-elf.c:845:60: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  845 |         *array = a = malloc(sizeof(struct kmod_modversion) * count + slen);
+      |                                                            ^
+../git/libkmod/libkmod-elf.c:851:19: warning: conversion to 'uint64_t' {aka 'long long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  851 |         str_off = (const uint8_t *)strtab - elf->memory;
+      |                   ^
+../git/libkmod/libkmod-elf.c:852:57: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  852 |         sym_off = (const uint8_t *)symtab - elf->memory + symlen;
+      |                                                         ^
+../git/libkmod/libkmod-elf.c:861:17: warning: conversion from 'uint64_t' {aka 'long long unsigned int'} to 'uint32_t' {aka 'unsigned int'} may change value [-Wconversion]
+  861 |                 elf_get_uint(elf, sym_off + offsetof(typeof(*s), field),\
+      |                 ^~~~~~~~~~~~
+../git/libkmod/libkmod-elf.c:865:36: note: in expansion of macro 'READV'
+  865 |                         name_off = READV(st_name);
+      |                                    ^~~~~
+../git/libkmod/libkmod-elf.c:861:17: warning: conversion from 'uint64_t' {aka 'long long unsigned int'} to 'uint8_t' {aka 'unsigned char'} may change value [-Wconversion]
+  861 |                 elf_get_uint(elf, sym_off + offsetof(typeof(*s), field),\
+      |                 ^~~~~~~~~~~~
+../git/libkmod/libkmod-elf.c:867:32: note: in expansion of macro 'READV'
+  867 |                         info = READV(st_info);
+      |                                ^~~~~
+../git/libkmod/libkmod-elf.c:861:17: warning: conversion from 'uint64_t' {aka 'long long unsigned int'} to 'uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+  861 |                 elf_get_uint(elf, sym_off + offsetof(typeof(*s), field),\
+      |                 ^~~~~~~~~~~~
+../git/libkmod/libkmod-elf.c:868:33: note: in expansion of macro 'READV'
+  868 |                         shndx = READV(st_shndx);
+      |                                 ^~~~~
+../git/libkmod/libkmod-elf.c:861:17: warning: conversion from 'uint64_t' {aka 'long long unsigned int'} to 'uint32_t' {aka 'unsigned int'} may change value [-Wconversion]
+  861 |                 elf_get_uint(elf, sym_off + offsetof(typeof(*s), field),\
+      |                 ^~~~~~~~~~~~
+../git/libkmod/libkmod-elf.c:871:36: note: in expansion of macro 'READV'
+  871 |                         name_off = READV(st_name);
+      |                                    ^~~~~
+../git/libkmod/libkmod-elf.c:861:17: warning: conversion from 'uint64_t' {aka 'long long unsigned int'} to 'uint8_t' {aka 'unsigned char'} may change value [-Wconversion]
+  861 |                 elf_get_uint(elf, sym_off + offsetof(typeof(*s), field),\
+      |                 ^~~~~~~~~~~~
+../git/libkmod/libkmod-elf.c:873:32: note: in expansion of macro 'READV'
+  873 |                         info = READV(st_info);
+      |                                ^~~~~
+../git/libkmod/libkmod-elf.c:861:17: warning: conversion from 'uint64_t' {aka 'long long unsigned int'} to 'uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+  861 |                 elf_get_uint(elf, sym_off + offsetof(typeof(*s), field),\
+      |                 ^~~~~~~~~~~~
+../git/libkmod/libkmod-elf.c:874:33: note: in expansion of macro 'READV'
+  874 |                         shndx = READV(st_shndx);
+      |                                 ^~~~~
+../git/libkmod/libkmod-elf.c: In function 'kmod_elf_crc_find':
+../git/libkmod/libkmod-elf.c:918:15: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  918 |         off = (const uint8_t *)versions - elf->memory;
+      |               ^
+../git/libkmod/libkmod-elf.c:923:51: warning: conversion from 'size_t' {aka 'unsigned int'} to 'uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+  923 |                 *crc = elf_get_uint(elf, off + i, crclen);
+      |                                                   ^~~~~~
+../git/libkmod/libkmod-elf.c:924:26: warning: conversion from 'uint64_t' {aka 'long long unsigned int'} to 'int' may change value [-Wconversion]
+  924 |                 return i / verlen;
+      |                        ~~^~~~~~~~
+../git/libkmod/libkmod-elf.c: In function 'kmod_elf_get_dependency_symbols':
+../git/libkmod/libkmod-elf.c:999:28: warning: conversion from 'uint64_t' {aka 'long long unsigned int'} to 'int' may change value [-Wconversion]
+  999 |                 vercount = versionslen / verlen;
+      |                            ^~~~~~~~~~~
+../git/libkmod/libkmod-elf.c:1000:43: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 1000 |                 visited_versions = calloc(vercount, sizeof(uint8_t));
+      |                                           ^~~~~~~~
+../git/libkmod/libkmod-elf.c:1008:20: warning: conversion from 'uint64_t' {aka 'long long unsigned int'} to 'int' may change value [-Wconversion]
+ 1008 |         symcount = symtablen / symlen;
+      |                    ^~~~~~~~~
+../git/libkmod/libkmod-elf.c:1011:19: warning: conversion to 'uint64_t' {aka 'long long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 1011 |         str_off = (const uint8_t *)strtab - elf->memory;
+      |                   ^
+../git/libkmod/libkmod-elf.c:1012:57: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 1012 |         sym_off = (const uint8_t *)symtab - elf->memory + symlen;
+      |                                                         ^
+../git/libkmod/libkmod-elf.c:1014:26: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 1014 |         symcrcs = calloc(symcount, sizeof(uint64_t));
+      |                          ^~~~~~~~
+../git/libkmod/libkmod-elf.c:1029:17: warning: conversion from 'uint64_t' {aka 'long long unsigned int'} to 'uint32_t' {aka 'unsigned int'} may change value [-Wconversion]
+ 1029 |                 elf_get_uint(elf, sym_off + offsetof(typeof(*s), field),\
+      |                 ^~~~~~~~~~~~
+../git/libkmod/libkmod-elf.c:1033:36: note: in expansion of macro 'READV'
+ 1033 |                         name_off = READV(st_name);
+      |                                    ^~~~~
+../git/libkmod/libkmod-elf.c:1029:17: warning: conversion from 'uint64_t' {aka 'long long unsigned int'} to 'uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+ 1029 |                 elf_get_uint(elf, sym_off + offsetof(typeof(*s), field),\
+      |                 ^~~~~~~~~~~~
+../git/libkmod/libkmod-elf.c:1034:34: note: in expansion of macro 'READV'
+ 1034 |                         secidx = READV(st_shndx);
+      |                                  ^~~~~
+../git/libkmod/libkmod-elf.c:1029:17: warning: conversion from 'uint64_t' {aka 'long long unsigned int'} to 'uint8_t' {aka 'unsigned char'} may change value [-Wconversion]
+ 1029 |                 elf_get_uint(elf, sym_off + offsetof(typeof(*s), field),\
+      |                 ^~~~~~~~~~~~
+../git/libkmod/libkmod-elf.c:1035:32: note: in expansion of macro 'READV'
+ 1035 |                         info = READV(st_info);
+      |                                ^~~~~
+../git/libkmod/libkmod-elf.c:1029:17: warning: conversion from 'uint64_t' {aka 'long long unsigned int'} to 'uint32_t' {aka 'unsigned int'} may change value [-Wconversion]
+ 1029 |                 elf_get_uint(elf, sym_off + offsetof(typeof(*s), field),\
+      |                 ^~~~~~~~~~~~
+../git/libkmod/libkmod-elf.c:1038:36: note: in expansion of macro 'READV'
+ 1038 |                         name_off = READV(st_name);
+      |                                    ^~~~~
+../git/libkmod/libkmod-elf.c:1029:17: warning: conversion from 'uint64_t' {aka 'long long unsigned int'} to 'uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+ 1029 |                 elf_get_uint(elf, sym_off + offsetof(typeof(*s), field),\
+      |                 ^~~~~~~~~~~~
+../git/libkmod/libkmod-elf.c:1039:34: note: in expansion of macro 'READV'
+ 1039 |                         secidx = READV(st_shndx);
+      |                                  ^~~~~
+../git/libkmod/libkmod-elf.c:1029:17: warning: conversion from 'uint64_t' {aka 'long long unsigned int'} to 'uint8_t' {aka 'unsigned char'} may change value [-Wconversion]
+ 1029 |                 elf_get_uint(elf, sym_off + offsetof(typeof(*s), field),\
+      |                 ^~~~~~~~~~~~
+../git/libkmod/libkmod-elf.c:1040:32: note: in expansion of macro 'READV'
+ 1040 |                         info = READV(st_info);
+      |                                ^~~~~
+../git/libkmod/libkmod-elf.c:1086:27: warning: conversion to 'uint64_t' {aka 'long long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 1086 |                 ver_off = (const uint8_t *)versions - elf->memory;
+      |                           ^
+../git/libkmod/libkmod-elf.c:1090:69: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 1090 |                                 name = elf_get_mem(elf, ver_off + i * verlen + crclen);
+      |                                                                     ^
+../git/libkmod/libkmod-elf.c:1105:60: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 1105 |         *array = a = malloc(sizeof(struct kmod_modversion) * count + slen);
+      |                                                            ^
+../git/libkmod/libkmod-elf.c:1114:19: warning: conversion to 'uint64_t' {aka 'long long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 1114 |         str_off = (const uint8_t *)strtab - elf->memory;
+      |                   ^
+../git/libkmod/libkmod-elf.c:1115:57: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 1115 |         sym_off = (const uint8_t *)symtab - elf->memory + symlen;
+      |                                                         ^
+../git/libkmod/libkmod-elf.c:1124:17: warning: conversion from 'uint64_t' {aka 'long long unsigned int'} to 'uint32_t' {aka 'unsigned int'} may change value [-Wconversion]
+ 1124 |                 elf_get_uint(elf, sym_off + offsetof(typeof(*s), field),\
+      |                 ^~~~~~~~~~~~
+../git/libkmod/libkmod-elf.c:1128:36: note: in expansion of macro 'READV'
+ 1128 |                         name_off = READV(st_name);
+      |                                    ^~~~~
+../git/libkmod/libkmod-elf.c:1124:17: warning: conversion from 'uint64_t' {aka 'long long unsigned int'} to 'uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+ 1124 |                 elf_get_uint(elf, sym_off + offsetof(typeof(*s), field),\
+      |                 ^~~~~~~~~~~~
+../git/libkmod/libkmod-elf.c:1129:34: note: in expansion of macro 'READV'
+ 1129 |                         secidx = READV(st_shndx);
+      |                                  ^~~~~
+../git/libkmod/libkmod-elf.c:1124:17: warning: conversion from 'uint64_t' {aka 'long long unsigned int'} to 'uint8_t' {aka 'unsigned char'} may change value [-Wconversion]
+ 1124 |                 elf_get_uint(elf, sym_off + offsetof(typeof(*s), field),\
+      |                 ^~~~~~~~~~~~
+../git/libkmod/libkmod-elf.c:1130:32: note: in expansion of macro 'READV'
+ 1130 |                         info = READV(st_info);
+      |                                ^~~~~
+../git/libkmod/libkmod-elf.c:1124:17: warning: conversion from 'uint64_t' {aka 'long long unsigned int'} to 'uint32_t' {aka 'unsigned int'} may change value [-Wconversion]
+ 1124 |                 elf_get_uint(elf, sym_off + offsetof(typeof(*s), field),\
+      |                 ^~~~~~~~~~~~
+../git/libkmod/libkmod-elf.c:1133:36: note: in expansion of macro 'READV'
+ 1133 |                         name_off = READV(st_name);
+      |                                    ^~~~~
+../git/libkmod/libkmod-elf.c:1124:17: warning: conversion from 'uint64_t' {aka 'long long unsigned int'} to 'uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+ 1124 |                 elf_get_uint(elf, sym_off + offsetof(typeof(*s), field),\
+      |                 ^~~~~~~~~~~~
+../git/libkmod/libkmod-elf.c:1134:34: note: in expansion of macro 'READV'
+ 1134 |                         secidx = READV(st_shndx);
+      |                                  ^~~~~
+../git/libkmod/libkmod-elf.c:1124:17: warning: conversion from 'uint64_t' {aka 'long long unsigned int'} to 'uint8_t' {aka 'unsigned char'} may change value [-Wconversion]
+ 1124 |                 elf_get_uint(elf, sym_off + offsetof(typeof(*s), field),\
+      |                 ^~~~~~~~~~~~
+../git/libkmod/libkmod-elf.c:1135:32: note: in expansion of macro 'READV'
+ 1135 |                         info = READV(st_info);
+      |                                ^~~~~
+../git/libkmod/libkmod-elf.c:1191:19: warning: conversion to 'uint64_t' {aka 'long long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 1191 |         ver_off = (const uint8_t *)versions - elf->memory;
+      |                   ^
+../git/libkmod/libkmod-elf.c:1199:53: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 1199 |                 name = elf_get_mem(elf, ver_off + i * verlen + crclen);
+      |                                                     ^
+../git/libkmod/libkmod-elf.c:1201:53: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 1201 |                 crc = elf_get_uint(elf, ver_off + i * verlen, crclen);
+      |                                                     ^
+../git/libkmod/libkmod-elf.c:1201:63: warning: conversion from 'size_t' {aka 'unsigned int'} to 'uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+ 1201 |                 crc = elf_get_uint(elf, ver_off + i * verlen, crclen);
+      |                                                               ^~~~~~
+/bin/bash ./libtool  --tag=CC   --mode=compile arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../git  -include ./config.h -I../git -DSYSCONFDIR=\""/etc"\"  -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -pipe -DANOTHER_BRICK_IN_THE -Wall -W -Wextra -Wno-inline -Wvla -Wundef -Wformat=2 -Wlogical-op -Wsign-compare -Wformat-security -Wmissing-include-dirs -Wformat-nonliteral -Wold-style-definition -Wpointer-arith -Winit-self -Wdeclaration-after-statement -Wfloat-equal -Wmissing-prototypes -Wstrict-prototypes -Wredundant-decls -Wmissing-declarations -Wmissing-noreturn -Wshadow -Wendif-labels -Wstrict-aliasing=3 -Wwrite-strings -Wno-long-long -Wno-overlength-strings -Wno-unused-parameter -Wno-missing-field-initializers -Wno-unused-result -Wnested-externs -Wchar-subscripts -Wtype-limits -Wuninitialized -fno-common -fdiagnostics-show-option -fvisibility=hidden -ffunction-sections -fdata-sections  -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o libkmod/libkmod-signature.lo ../git/libkmod/libkmod-signature.c
+libtool: compile:  arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../git -include ./config.h -I../git -DSYSCONFDIR=\"/etc\" -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -pipe -DANOTHER_BRICK_IN_THE -Wall -W -Wextra -Wno-inline -Wvla -Wundef -Wformat=2 -Wlogical-op -Wsign-compare -Wformat-security -Wmissing-include-dirs -Wformat-nonliteral -Wold-style-definition -Wpointer-arith -Winit-self -Wdeclaration-after-statement -Wfloat-equal -Wmissing-prototypes -Wstrict-prototypes -Wredundant-decls -Wmissing-declarations -Wmissing-noreturn -Wshadow -Wendif-labels -Wstrict-aliasing=3 -Wwrite-strings -Wno-long-long -Wno-overlength-strings -Wno-unused-parameter -Wno-missing-field-initializers -Wno-unused-result -Wnested-externs -Wchar-subscripts -Wtype-limits -Wuninitialized -fno-common -fdiagnostics-show-option -fvisibility=hidden -ffunction-sections -fdata-sections -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot-native= -Wconversion -Wno-error -c ../git/libkmod/libkmod-signature.c  -fPIC -DPIC -o libkmod/.libs/libkmod-signature.o
+In file included from ../git/libkmod/libkmod-signature.c:31:
+../git/shared/util.h: In function 'ALIGN_POWER2':
+../git/shared/util.h:84:38: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+   84 |         return 1 << ((sizeof(u) * 8) - __builtin_clz(u - 1));
+      |                                      ^
+/bin/bash ./libtool  --tag=CC   --mode=link arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot -pipe -DANOTHER_BRICK_IN_THE -Wall -W -Wextra -Wno-inline -Wvla -Wundef -Wformat=2 -Wlogical-op -Wsign-compare -Wformat-security -Wmissing-include-dirs -Wformat-nonliteral -Wold-style-definition -Wpointer-arith -Winit-self -Wdeclaration-after-statement -Wfloat-equal -Wmissing-prototypes -Wstrict-prototypes -Wredundant-decls -Wmissing-declarations -Wmissing-noreturn -Wshadow -Wendif-labels -Wstrict-aliasing=3 -Wwrite-strings -Wno-long-long -Wno-overlength-strings -Wno-unused-parameter -Wno-missing-field-initializers -Wno-unused-result -Wnested-externs -Wchar-subscripts -Wtype-limits -Wuninitialized -fno-common -fdiagnostics-show-option -fvisibility=hidden -ffunction-sections -fdata-sections  -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot-native=   -Wconversion -Wno-error -Wl,--as-needed -Wl,--no-undefined -Wl,--gc-sections -Wl,--version-script=../git/libkmod/libkmod.sym -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot-native=  -Wl,-z,relro,-z,now -o libkmod/libkmod-internal.la  libkmod/libkmod.lo libkmod/libkmod-builtin.lo libkmod/libkmod-list.lo libkmod/libkmod-config.lo libkmod/libkmod-index.lo libkmod/libkmod-module.lo libkmod/libkmod-file.lo libkmod/libkmod-elf.lo libkmod/libkmod-signature.lo shared/libshared.la  -llzma -lz  
+libtool: link: (cd libkmod/.libs/libkmod-internal.lax/libshared.a && arm-openbmc-linux-gnueabi-gcc-ar x "/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build/shared/.libs/libshared.a")
+libtool: link: arm-openbmc-linux-gnueabi-gcc-ar cr libkmod/.libs/libkmod-internal.a libkmod/.libs/libkmod.o libkmod/.libs/libkmod-builtin.o libkmod/.libs/libkmod-list.o libkmod/.libs/libkmod-config.o libkmod/.libs/libkmod-index.o libkmod/.libs/libkmod-module.o libkmod/.libs/libkmod-file.o libkmod/.libs/libkmod-elf.o libkmod/.libs/libkmod-signature.o   libkmod/.libs/libkmod-internal.lax/libshared.a/array.o libkmod/.libs/libkmod-internal.lax/libshared.a/hash.o libkmod/.libs/libkmod-internal.lax/libshared.a/scratchbuf.o libkmod/.libs/libkmod-internal.lax/libshared.a/strbuf.o libkmod/.libs/libkmod-internal.lax/libshared.a/util.o 
+libtool: link: arm-openbmc-linux-gnueabi-gcc-ranlib libkmod/.libs/libkmod-internal.a
+libtool: link: rm -fr libkmod/.libs/libkmod-internal.lax
+libtool: link: ( cd "libkmod/.libs" && rm -f "libkmod-internal.la" && ln -s "../libkmod-internal.la" "libkmod-internal.la" )
+/bin/bash ./libtool  --tag=CC   --mode=link arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot -pipe -DANOTHER_BRICK_IN_THE -Wall -W -Wextra -Wno-inline -Wvla -Wundef -Wformat=2 -Wlogical-op -Wsign-compare -Wformat-security -Wmissing-include-dirs -Wformat-nonliteral -Wold-style-definition -Wpointer-arith -Winit-self -Wdeclaration-after-statement -Wfloat-equal -Wmissing-prototypes -Wstrict-prototypes -Wredundant-decls -Wmissing-declarations -Wmissing-noreturn -Wshadow -Wendif-labels -Wstrict-aliasing=3 -Wwrite-strings -Wno-long-long -Wno-overlength-strings -Wno-unused-parameter -Wno-missing-field-initializers -Wno-unused-result -Wnested-externs -Wchar-subscripts -Wtype-limits -Wuninitialized -fno-common -fdiagnostics-show-option -fvisibility=hidden -ffunction-sections -fdata-sections  -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot-native=   -Wconversion -Wno-error -Wl,--as-needed -Wl,--no-undefined -Wl,--gc-sections -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot-native=  -Wl,-z,relro,-z,now -o tools/kmod tools/kmod.o tools/lsmod.o tools/rmmod.o tools/insmod.o tools/modinfo.o tools/modprobe.o tools/depmod.o tools/log.o tools/static-nodes.o  shared/libshared.la libkmod/libkmod-internal.la 
+libtool: link: arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot -pipe -DANOTHER_BRICK_IN_THE -Wall -W -Wextra -Wno-inline -Wvla -Wundef -Wformat=2 -Wlogical-op -Wsign-compare -Wformat-security -Wmissing-include-dirs -Wformat-nonliteral -Wold-style-definition -Wpointer-arith -Winit-self -Wdeclaration-after-statement -Wfloat-equal -Wmissing-prototypes -Wstrict-prototypes -Wredundant-decls -Wmissing-declarations -Wmissing-noreturn -Wshadow -Wendif-labels -Wstrict-aliasing=3 -Wwrite-strings -Wno-long-long -Wno-overlength-strings -Wno-unused-parameter -Wno-missing-field-initializers -Wno-unused-result -Wnested-externs -Wchar-subscripts -Wtype-limits -Wuninitialized -fno-common -fdiagnostics-show-option -fvisibility=hidden -ffunction-sections -fdata-sections -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot-native= -Wconversion -Wno-error -Wl,--as-needed -Wl,--no-undefined -Wl,--gc-sections -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot-native= -Wl,-z -Wl,relro -Wl,-z -Wl,now -o tools/kmod tools/kmod.o tools/lsmod.o tools/rmmod.o tools/insmod.o tools/modinfo.o tools/modprobe.o tools/depmod.o tools/log.o tools/static-nodes.o  shared/.libs/libshared.a libkmod/.libs/libkmod-internal.a -llzma -lz
+/bin/bash ./libtool  --tag=CC   --mode=link arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot -pipe -DANOTHER_BRICK_IN_THE -Wall -W -Wextra -Wno-inline -Wvla -Wundef -Wformat=2 -Wlogical-op -Wsign-compare -Wformat-security -Wmissing-include-dirs -Wformat-nonliteral -Wold-style-definition -Wpointer-arith -Winit-self -Wdeclaration-after-statement -Wfloat-equal -Wmissing-prototypes -Wstrict-prototypes -Wredundant-decls -Wmissing-declarations -Wmissing-noreturn -Wshadow -Wendif-labels -Wstrict-aliasing=3 -Wwrite-strings -Wno-long-long -Wno-overlength-strings -Wno-unused-parameter -Wno-missing-field-initializers -Wno-unused-result -Wnested-externs -Wchar-subscripts -Wtype-limits -Wuninitialized -fno-common -fdiagnostics-show-option -fvisibility=hidden -ffunction-sections -fdata-sections  -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot-native=   -Wconversion -Wno-error -Wl,--as-needed -Wl,--no-undefined -Wl,--gc-sections -version-info 6:0:4 -Wl,--version-script=../git/libkmod/libkmod.sym -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot-native=  -Wl,-z,relro,-z,now -o libkmod/libkmod.la -rpath /usr/lib libkmod/libkmod.lo libkmod/libkmod-builtin.lo libkmod/libkmod-list.lo libkmod/libkmod-config.lo libkmod/libkmod-index.lo libkmod/libkmod-module.lo libkmod/libkmod-file.lo libkmod/libkmod-elf.lo libkmod/libkmod-signature.lo shared/libshared.la  -llzma -lz  
+libtool: link: arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot -shared  -fPIC -DPIC  libkmod/.libs/libkmod.o libkmod/.libs/libkmod-builtin.o libkmod/.libs/libkmod-list.o libkmod/.libs/libkmod-config.o libkmod/.libs/libkmod-index.o libkmod/.libs/libkmod-module.o libkmod/.libs/libkmod-file.o libkmod/.libs/libkmod-elf.o libkmod/.libs/libkmod-signature.o  -Wl,--whole-archive shared/.libs/libshared.a -Wl,--no-whole-archive  -llzma -lz  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot -O2 -g -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot-native= -Wl,--as-needed -Wl,--no-undefined -Wl,--gc-sections -Wl,--version-script=../git/libkmod/libkmod.sym -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/git=/usr/src/debug/kmod/30-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/build=/usr/src/debug/kmod/30-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/kmod/30-r0/recipe-sysroot-native= -Wl,-z -Wl,relro -Wl,-z -Wl,now   -Wl,-soname -Wl,libkmod.so.2 -o libkmod/.libs/libkmod.so.2.4.0
+libtool: link: (cd "libkmod/.libs" && rm -f "libkmod.so.2" && ln -s "libkmod.so.2.4.0" "libkmod.so.2")
+libtool: link: (cd "libkmod/.libs" && rm -f "libkmod.so" && ln -s "libkmod.so.2.4.0" "libkmod.so")
+libtool: link: ( cd "libkmod/.libs" && rm -f "libkmod.la" && ln -s "../libkmod.la" "libkmod.la" )
+(rm -f tools/insmod; \
+	ln -s kmod tools/insmod)
+(rm -f tools/rmmod; \
+	ln -s kmod tools/rmmod)
+(rm -f tools/lsmod; \
+	ln -s kmod tools/lsmod)
+(rm -f tools/modprobe; \
+	ln -s kmod tools/modprobe)
+(rm -f tools/modinfo; \
+	ln -s kmod tools/modinfo)
+(rm -f tools/depmod; \
+	ln -s kmod tools/depmod)
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p libkmod/ && sed -e 's,@VERSION\@,30,g' -e 's,@prefix\@,/usr,g' -e 's,@exec_prefix\@,/usr,g' -e 's,@libdir\@,/usr/lib,g' -e 's,@includedir\@,/usr/include,g' -e 's,@libzstd_CFLAGS\@,,g' -e 's,@libzstd_LIBS\@,,g' -e 's,@liblzma_CFLAGS\@,,g' -e 's,@liblzma_LIBS\@,-llzma,g' -e 's,@zlib_CFLAGS\@,,g' -e 's,@zlib_LIBS\@,-lz,g' -e 's,@libcrypto_CFLAGS\@,,g' -e 's,@libcrypto_LIBS\@,,g' < ../git/libkmod/libkmod.pc.in > libkmod/libkmod.pc || rm libkmod/libkmod.pc
+Making all in libkmod/docs
+make[2]: Nothing to be done for 'all'.
+DEBUG: Shell function do_compile finished

@@ -1,0 +1,329 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: ['quilt-native', 'patch-native', 'libtool-native', 'attr-native', 'texinfo-dummy-native', 'gettext-minimal-native']
+NOTE: Skipping as already exists in sysroot: []
+DEBUG: sed -e 's:^[^/]*/:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/perl/5.36.0-r0/recipe-sysroot-native/:g' /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/quilt-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/libtool-native/fixmepath | xargs sed -i -e 's:FIXMESTAGINGDIRTARGET:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/perl/5.36.0-r0/recipe-sysroot:g; s:FIXMESTAGINGDIRHOST:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/perl/5.36.0-r0/recipe-sysroot-native:g' -e 's:FIXME_PSEUDO_SYSROOT:/home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/pseudo-native:g' -e 's:FIXME_HOSTTOOLS_DIR:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:g' -e 's:FIXME_PKGDATA_DIR:/home/matt/tmp/build/obmc-y2038/tmp/pkgdata/evb-ast2600:g' -e 's:FIXME_PSEUDO_LOCALSTATEDIR:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/perl/5.36.0-r0/pseudo/:g' -e 's:FIXME_LOGFIFO:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/perl/5.36.0-r0/temp/fifo.1950152:g'
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function do_patch
+DEBUG: Executing python function patch_do_patch
+DEBUG: Searching for perl-rdepends.txt in paths:
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/
+DEBUG: Searching for 0001-Somehow-this-module-breaks-through-the-perl-wrapper-.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/
+DEBUG: Searching for errno_ver.diff in paths:
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/
+DEBUG: Searching for native-perlinc.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/
+DEBUG: Searching for perl-dynloader.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/
+DEBUG: Searching for 0002-Constant-Fix-up-shebang.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/
+DEBUG: Searching for determinism.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/
+DEBUG: Searching for 0001-cpan-Sys-Syslog-Makefile.PL-Fix-_PATH_LOG-for-determ.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/
+DEBUG: Searching for 0001-Fix-build-with-gcc-12.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/
+DEBUG: Searching for run-ptest in paths:
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/
+DEBUG: Searching for encodefix.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/arm
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl-5.36.0/
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/perl/
+    /home/matt/src/openbmc/meta/recipes-devtools/perl/files/
+NOTE: Applying patch '0001-Somehow-this-module-breaks-through-the-perl-wrapper-.patch' (../../../src/openbmc/meta/recipes-devtools/perl/files/0001-Somehow-this-module-breaks-through-the-perl-wrapper-.patch)
+NOTE: Applying patch 'errno_ver.diff' (../../../src/openbmc/meta/recipes-devtools/perl/files/errno_ver.diff)
+NOTE: Applying patch 'native-perlinc.patch' (../../../src/openbmc/meta/recipes-devtools/perl/files/native-perlinc.patch)
+NOTE: Applying patch 'perl-dynloader.patch' (../../../src/openbmc/meta/recipes-devtools/perl/files/perl-dynloader.patch)
+NOTE: Applying patch '0002-Constant-Fix-up-shebang.patch' (../../../src/openbmc/meta/recipes-devtools/perl/files/0002-Constant-Fix-up-shebang.patch)
+NOTE: Applying patch 'determinism.patch' (../../../src/openbmc/meta/recipes-devtools/perl/files/determinism.patch)
+NOTE: Applying patch '0001-cpan-Sys-Syslog-Makefile.PL-Fix-_PATH_LOG-for-determ.patch' (../../../src/openbmc/meta/recipes-devtools/perl/files/0001-cpan-Sys-Syslog-Makefile.PL-Fix-_PATH_LOG-for-determ.patch)
+NOTE: Applying patch '0001-Fix-build-with-gcc-12.patch' (../../../src/openbmc/meta/recipes-devtools/perl/files/0001-Fix-build-with-gcc-12.patch)
+NOTE: Applying patch 'encodefix.patch' (../../../src/openbmc/meta/recipes-devtools/perl/files/encodefix.patch)
+DEBUG: Python function patch_do_patch finished
+DEBUG: Python function do_patch finished
+DEBUG: Executing python function do_qa_patch
+DEBUG: Python function do_qa_patch finished

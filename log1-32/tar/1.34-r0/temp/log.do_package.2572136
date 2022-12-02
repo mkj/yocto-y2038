@@ -1,0 +1,262 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-cross_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-native_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/opkg-utils/opkg-utils_0.5.0.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-extended/texinfo-dummy-native/texinfo-dummy-native.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-core/gettext/gettext_0.21.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/autoconf/autoconf_2.71.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/automake/automake_1.16.5.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/dwarfsrcfiles/dwarfsrcfiles.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/rpm/rpm_4.18.0.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: ['dwarfsrcfiles-native', 'rpm-native', 'elfutils-native', 'file-native', 'libgcrypt-native', 'bzip2-native', 'lua-native', 'sqlite3-native', 'python3-native', 'popt-native', 'libgpg-error-native', 'libcap-native', 'readline-native', 'libnsl2-native', 'gdbm-native', 'libtirpc-native', 'libffi-native', 'ncurses-native', 'util-linux-libuuid-native', 'openssl-native', 'perl-native', 'make-native']
+NOTE: Skipping as already exists in sysroot: ['glibc', 'gcc-cross-arm', 'gcc-runtime', 'libtool-cross', 'libtool-native', 'opkg-utils', 'quilt-native', 'texinfo-dummy-native', 'gettext-native', 'autoconf-native', 'automake-native', 'patch-native', 'pseudo-native', 'binutils-cross-arm', 'libgcc', 'linux-libc-headers', 'gnu-config-native', 'm4-native', 'attr-native', 'gettext-minimal-native', 'mpfr-native', 'libmpc-native', 'xz-native', 'flex-native', 'zstd-native', 'zlib-native', 'gmp-native']
+DEBUG: sed -e 's:^[^/]*/:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/tar/1.34-r0/recipe-sysroot-native/:g' /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/rpm-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/elfutils-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/libgcrypt-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/lua-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/python3-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/libgpg-error-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/ncurses-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/openssl-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/perl-native/fixmepath | xargs sed -i -e 's:FIXMESTAGINGDIRTARGET:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/tar/1.34-r0/recipe-sysroot:g; s:FIXMESTAGINGDIRHOST:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/tar/1.34-r0/recipe-sysroot-native:g' -e 's:FIXME_PSEUDO_SYSROOT:/home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/pseudo-native:g' -e 's:FIXME_HOSTTOOLS_DIR:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:g' -e 's:FIXME_PKGDATA_DIR:/home/matt/tmp/build/obmc-y2038/tmp/pkgdata/evb-ast2600:g' -e 's:FIXME_PSEUDO_LOCALSTATEDIR:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/tar/1.34-r0/pseudo/:g' -e 's:FIXME_LOGFIFO:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/tar/1.34-r0/temp/fifo.2572136:g'
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function sstate_task_prefunc
+DEBUG: Python function sstate_task_prefunc finished
+DEBUG: Executing python function do_package
+DEBUG: Executing python function package_convert_pr_autoinc
+DEBUG: Python function package_convert_pr_autoinc finished
+DEBUG: Executing python function package_prepare_pkgdata
+NOTE: Installed into pkgdata-sysroot: ['gcc-runtime', 'glibc', 'opkg-utils', 'libgcc', 'linux-libc-headers']
+DEBUG: Python function package_prepare_pkgdata finished
+DEBUG: Executing python function perform_packagecopy
+DEBUG: Python function perform_packagecopy finished
+DEBUG: Executing python function apply_update_alternative_renames
+NOTE: tar: Rename /usr/sbin/rmt -> /usr/sbin/rmt.tar
+NOTE: tar: Rename /bin/tar -> /bin/tar.tar
+DEBUG: Python function apply_update_alternative_renames finished
+DEBUG: Executing python function split_and_strip_files
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/tar/1.34-r0/package/usr/sbin/rmt.tar']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/tar/1.34-r0/package/bin/tar.tar']
+DEBUG: Python function split_and_strip_files finished
+DEBUG: Executing python function fixup_perms
+DEBUG: Python function fixup_perms finished
+DEBUG: Executing python function populate_packages_updatealternatives
+NOTE: adding update-alternatives calls to postinst/prerm for tar-rmt
+NOTE: 	update-alternatives --install /usr/sbin/rmt rmt /usr/sbin/rmt.tar 100
+
+NOTE: 	update-alternatives --remove  rmt /usr/sbin/rmt.tar
+
+NOTE: adding update-alternatives calls to postinst/prerm for tar
+NOTE: 	update-alternatives --install /bin/tar tar /bin/tar.tar 100
+
+NOTE: 	update-alternatives --remove  tar /bin/tar.tar
+
+DEBUG: Python function populate_packages_updatealternatives finished
+DEBUG: Executing python function package_do_split_locales
+DEBUG: Python function package_do_split_locales finished
+DEBUG: Executing python function populate_packages
+DEBUG: Python function populate_packages finished
+DEBUG: Executing python function package_fixsymlinks
+DEBUG: tar contains dangling link /bin/tar
+NOTE: tar contains dangling symlink to /bin/tar
+DEBUG: Python function package_fixsymlinks finished
+DEBUG: Executing python function package_name_hook
+DEBUG: Executing python function debian_package_name_hook
+DEBUG: LIBNAMES: pkg tar-staticdev libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg tar-src libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg tar-rmt libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg tar-locale-zh-tw libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg tar-locale-zh-cn libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg tar-locale-vi libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg tar-locale-uk libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg tar-locale-tr libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg tar-locale-sv libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg tar-locale-sr libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg tar-locale-sl libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg tar-locale-sk libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg tar-locale-ru libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg tar-locale-ro libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg tar-locale-pt-br libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg tar-locale-pt libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg tar-locale-pl libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg tar-locale-nl libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg tar-locale-nb libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg tar-locale-ms libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg tar-locale-ky libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg tar-locale-ko libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg tar-locale-ja libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg tar-locale-it libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg tar-locale-id libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg tar-locale-hu libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg tar-locale-hr libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg tar-locale-gl libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg tar-locale-ga libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg tar-locale-fr libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg tar-locale-fi libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg tar-locale-eu libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg tar-locale-et libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg tar-locale-es libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg tar-locale-eo libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg tar-locale-el libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg tar-locale-de libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg tar-locale-da libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg tar-locale-cs libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg tar-locale-ca libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg tar-locale-bg libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg tar-doc libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg tar-dev libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg tar-dbg libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg tar libs 0 bins 1 sonames []
+DEBUG: Python function debian_package_name_hook finished
+DEBUG: Python function package_name_hook finished
+DEBUG: Executing python function package_do_filedeps
+DEBUG: Python function package_do_filedeps finished
+DEBUG: Executing python function package_do_shlibs
+DEBUG: Reading shlib providers in /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/tar/1.34-r0/pkgdata-sysroot/shlibs2
+DEBUG: calculating shlib provides for tar-src
+DEBUG: LIBNAMES: pkg tar-src sonames set()
+DEBUG: calculating shlib provides for tar-dbg
+DEBUG: LIBNAMES: pkg tar-dbg sonames set()
+DEBUG: calculating shlib provides for tar-rmt
+DEBUG: LIBNAMES: pkg tar-rmt sonames set()
+DEBUG: calculating shlib provides for tar-staticdev
+DEBUG: LIBNAMES: pkg tar-staticdev sonames set()
+DEBUG: calculating shlib provides for tar-dev
+DEBUG: LIBNAMES: pkg tar-dev sonames set()
+DEBUG: calculating shlib provides for tar-doc
+DEBUG: LIBNAMES: pkg tar-doc sonames set()
+DEBUG: calculating shlib provides for tar
+DEBUG: LIBNAMES: pkg tar sonames set()
+DEBUG: calculating shlib provides for tar-locale-bg
+DEBUG: LIBNAMES: pkg tar-locale-bg sonames set()
+DEBUG: calculating shlib provides for tar-locale-ca
+DEBUG: LIBNAMES: pkg tar-locale-ca sonames set()
+DEBUG: calculating shlib provides for tar-locale-cs
+DEBUG: LIBNAMES: pkg tar-locale-cs sonames set()
+DEBUG: calculating shlib provides for tar-locale-da
+DEBUG: LIBNAMES: pkg tar-locale-da sonames set()
+DEBUG: calculating shlib provides for tar-locale-de
+DEBUG: LIBNAMES: pkg tar-locale-de sonames set()
+DEBUG: calculating shlib provides for tar-locale-el
+DEBUG: LIBNAMES: pkg tar-locale-el sonames set()
+DEBUG: calculating shlib provides for tar-locale-eo
+DEBUG: LIBNAMES: pkg tar-locale-eo sonames set()
+DEBUG: calculating shlib provides for tar-locale-es
+DEBUG: LIBNAMES: pkg tar-locale-es sonames set()
+DEBUG: calculating shlib provides for tar-locale-et
+DEBUG: LIBNAMES: pkg tar-locale-et sonames set()
+DEBUG: calculating shlib provides for tar-locale-eu
+DEBUG: LIBNAMES: pkg tar-locale-eu sonames set()
+DEBUG: calculating shlib provides for tar-locale-fi
+DEBUG: LIBNAMES: pkg tar-locale-fi sonames set()
+DEBUG: calculating shlib provides for tar-locale-fr
+DEBUG: LIBNAMES: pkg tar-locale-fr sonames set()
+DEBUG: calculating shlib provides for tar-locale-ga
+DEBUG: LIBNAMES: pkg tar-locale-ga sonames set()
+DEBUG: calculating shlib provides for tar-locale-gl
+DEBUG: LIBNAMES: pkg tar-locale-gl sonames set()
+DEBUG: calculating shlib provides for tar-locale-hr
+DEBUG: LIBNAMES: pkg tar-locale-hr sonames set()
+DEBUG: calculating shlib provides for tar-locale-hu
+DEBUG: LIBNAMES: pkg tar-locale-hu sonames set()
+DEBUG: calculating shlib provides for tar-locale-id
+DEBUG: LIBNAMES: pkg tar-locale-id sonames set()
+DEBUG: calculating shlib provides for tar-locale-it
+DEBUG: LIBNAMES: pkg tar-locale-it sonames set()
+DEBUG: calculating shlib provides for tar-locale-ja
+DEBUG: LIBNAMES: pkg tar-locale-ja sonames set()
+DEBUG: calculating shlib provides for tar-locale-ko
+DEBUG: LIBNAMES: pkg tar-locale-ko sonames set()
+DEBUG: calculating shlib provides for tar-locale-ky
+DEBUG: LIBNAMES: pkg tar-locale-ky sonames set()
+DEBUG: calculating shlib provides for tar-locale-ms
+DEBUG: LIBNAMES: pkg tar-locale-ms sonames set()
+DEBUG: calculating shlib provides for tar-locale-nb
+DEBUG: LIBNAMES: pkg tar-locale-nb sonames set()
+DEBUG: calculating shlib provides for tar-locale-nl
+DEBUG: LIBNAMES: pkg tar-locale-nl sonames set()
+DEBUG: calculating shlib provides for tar-locale-pl
+DEBUG: LIBNAMES: pkg tar-locale-pl sonames set()
+DEBUG: calculating shlib provides for tar-locale-pt
+DEBUG: LIBNAMES: pkg tar-locale-pt sonames set()
+DEBUG: calculating shlib provides for tar-locale-pt-br
+DEBUG: LIBNAMES: pkg tar-locale-pt-br sonames set()
+DEBUG: calculating shlib provides for tar-locale-ro
+DEBUG: LIBNAMES: pkg tar-locale-ro sonames set()
+DEBUG: calculating shlib provides for tar-locale-ru
+DEBUG: LIBNAMES: pkg tar-locale-ru sonames set()
+DEBUG: calculating shlib provides for tar-locale-sk
+DEBUG: LIBNAMES: pkg tar-locale-sk sonames set()
+DEBUG: calculating shlib provides for tar-locale-sl
+DEBUG: LIBNAMES: pkg tar-locale-sl sonames set()
+DEBUG: calculating shlib provides for tar-locale-sr
+DEBUG: LIBNAMES: pkg tar-locale-sr sonames set()
+DEBUG: calculating shlib provides for tar-locale-sv
+DEBUG: LIBNAMES: pkg tar-locale-sv sonames set()
+DEBUG: calculating shlib provides for tar-locale-tr
+DEBUG: LIBNAMES: pkg tar-locale-tr sonames set()
+DEBUG: calculating shlib provides for tar-locale-uk
+DEBUG: LIBNAMES: pkg tar-locale-uk sonames set()
+DEBUG: calculating shlib provides for tar-locale-vi
+DEBUG: LIBNAMES: pkg tar-locale-vi sonames set()
+DEBUG: calculating shlib provides for tar-locale-zh-cn
+DEBUG: LIBNAMES: pkg tar-locale-zh-cn sonames set()
+DEBUG: calculating shlib provides for tar-locale-zh-tw
+DEBUG: LIBNAMES: pkg tar-locale-zh-tw sonames set()
+DEBUG: calculating shlib requirements for tar-src
+DEBUG: calculating shlib requirements for tar-dbg
+DEBUG: calculating shlib requirements for tar-rmt
+DEBUG: tar-rmt: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/tar/1.34-r0/packages-split/tar-rmt/usr/sbin/rmt.tar)
+DEBUG: tar-rmt: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/tar/1.34-r0/packages-split/tar-rmt/usr/sbin/rmt.tar)
+DEBUG: calculating shlib requirements for tar-staticdev
+DEBUG: calculating shlib requirements for tar-dev
+DEBUG: calculating shlib requirements for tar-doc
+DEBUG: calculating shlib requirements for tar
+DEBUG: tar: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/tar/1.34-r0/packages-split/tar/bin/tar.tar)
+DEBUG: tar: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/tar/1.34-r0/packages-split/tar/bin/tar.tar)
+DEBUG: calculating shlib requirements for tar-locale-bg
+DEBUG: calculating shlib requirements for tar-locale-ca
+DEBUG: calculating shlib requirements for tar-locale-cs
+DEBUG: calculating shlib requirements for tar-locale-da
+DEBUG: calculating shlib requirements for tar-locale-de
+DEBUG: calculating shlib requirements for tar-locale-el
+DEBUG: calculating shlib requirements for tar-locale-eo
+DEBUG: calculating shlib requirements for tar-locale-es
+DEBUG: calculating shlib requirements for tar-locale-et
+DEBUG: calculating shlib requirements for tar-locale-eu
+DEBUG: calculating shlib requirements for tar-locale-fi
+DEBUG: calculating shlib requirements for tar-locale-fr
+DEBUG: calculating shlib requirements for tar-locale-ga
+DEBUG: calculating shlib requirements for tar-locale-gl
+DEBUG: calculating shlib requirements for tar-locale-hr
+DEBUG: calculating shlib requirements for tar-locale-hu
+DEBUG: calculating shlib requirements for tar-locale-id
+DEBUG: calculating shlib requirements for tar-locale-it
+DEBUG: calculating shlib requirements for tar-locale-ja
+DEBUG: calculating shlib requirements for tar-locale-ko
+DEBUG: calculating shlib requirements for tar-locale-ky
+DEBUG: calculating shlib requirements for tar-locale-ms
+DEBUG: calculating shlib requirements for tar-locale-nb
+DEBUG: calculating shlib requirements for tar-locale-nl
+DEBUG: calculating shlib requirements for tar-locale-pl
+DEBUG: calculating shlib requirements for tar-locale-pt
+DEBUG: calculating shlib requirements for tar-locale-pt-br
+DEBUG: calculating shlib requirements for tar-locale-ro
+DEBUG: calculating shlib requirements for tar-locale-ru
+DEBUG: calculating shlib requirements for tar-locale-sk
+DEBUG: calculating shlib requirements for tar-locale-sl
+DEBUG: calculating shlib requirements for tar-locale-sr
+DEBUG: calculating shlib requirements for tar-locale-sv
+DEBUG: calculating shlib requirements for tar-locale-tr
+DEBUG: calculating shlib requirements for tar-locale-uk
+DEBUG: calculating shlib requirements for tar-locale-vi
+DEBUG: calculating shlib requirements for tar-locale-zh-cn
+DEBUG: calculating shlib requirements for tar-locale-zh-tw
+DEBUG: Python function package_do_shlibs finished
+DEBUG: Executing python function package_do_pkgconfig
+DEBUG: Python function package_do_pkgconfig finished
+DEBUG: Executing python function read_shlibdeps
+DEBUG: Python function read_shlibdeps finished
+DEBUG: Executing python function package_depchains
+DEBUG: Python function package_depchains finished
+DEBUG: Executing python function emit_pkgdata
+DEBUG: Python function emit_pkgdata finished
+DEBUG: Python function do_package finished
+DEBUG: Executing python function sstate_task_postfunc
+NOTE: Using umask 0o002 (not 22) for sstate packaging
+DEBUG: Executing python function target_add_sysroot_deps
+DEBUG: Python function target_add_sysroot_deps finished
+DEBUG: Executing python function sstate_hardcode_path
+NOTE: Removing hardcoded paths from sstate package: 'find /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/tar/1.34-r0/sstate-build-package/ \( -name "*.la" -o -name "*-config" -o -name "*_config" -o -name "postinst-*" \) -type f | xargs grep -l -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/tar/1.34-r0/recipe-sysroot' -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/tar/1.34-r0/recipe-sysroot-native' -e '/home/matt/tmp/build/obmc-y2038/tmp/hosttools' | tee /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/tar/1.34-r0/sstate-build-package/fixmepath | xargs --no-run-if-empty sed -i -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/tar/1.34-r0/recipe-sysroot-native:FIXMESTAGINGDIRHOST:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/tar/1.34-r0/recipe-sysroot:FIXMESTAGINGDIRTARGET:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:FIXME_HOSTTOOLS_DIR:g''
+DEBUG: Python function sstate_hardcode_path finished
+DEBUG: Executing python function sstate_report_unihash
+DEBUG: Python function sstate_report_unihash finished
+DEBUG: Executing shell function sstate_create_package
+DEBUG: Shell function sstate_create_package finished
+DEBUG: Executing python function sstate_hardcode_path_unpack
+DEBUG: Python function sstate_hardcode_path_unpack finished
+DEBUG: Python function sstate_task_postfunc finished

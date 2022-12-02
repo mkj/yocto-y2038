@@ -1,0 +1,269 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: ['quilt-native', 'patch-native', 'attr-native']
+NOTE: Skipping as already exists in sysroot: ['libtool-native', 'gettext-minimal-native', 'texinfo-dummy-native']
+DEBUG: sed -e 's:^[^/]*/:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot-native/:g' /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/quilt-native/fixmepath | xargs sed -i -e 's:FIXMESTAGINGDIRTARGET:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot:g; s:FIXMESTAGINGDIRHOST:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot-native:g' -e 's:FIXME_PSEUDO_SYSROOT:/home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/pseudo-native:g' -e 's:FIXME_HOSTTOOLS_DIR:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:g' -e 's:FIXME_PKGDATA_DIR:/home/matt/tmp/build/obmc-y2038/tmp/pkgdata/evb-ast2600:g' -e 's:FIXME_PSEUDO_LOCALSTATEDIR:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/pseudo/:g' -e 's:FIXME_LOGFIFO:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/temp/fifo.785375:g'
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function do_patch
+DEBUG: Executing python function patch_do_patch
+DEBUG: Searching for 0001-configure-Add-option-to-enable-disable-libnfnetlink.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/arm
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/arm
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/arm
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/
+DEBUG: Searching for 0001-Makefile.am-do-not-install-etc-ethertypes.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/arm
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/arm
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/arm
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/
+DEBUG: Searching for 0002-configure.ac-only-check-conntrack-when-libnfnetlink-enabled.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/arm
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/arm
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/arm
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/
+DEBUG: Searching for format-security.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/arm
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/arm
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/arm
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/
+DEBUG: Searching for iptables.service in paths:
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/arm
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/arm
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/arm
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/
+DEBUG: Searching for iptables.rules in paths:
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/arm
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/arm
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/arm
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/
+DEBUG: Searching for ip6tables.service in paths:
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/arm
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/arm
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/arm
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/
+DEBUG: Searching for ip6tables.rules in paths:
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/arm
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/arm
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/arm
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/
+DEBUG: Searching for 0001-iptables-xshared.h-add-missing-sys.types.h-include.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/arm
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/arm
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/arm
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables-1.8.8/
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/iptables/
+    /home/matt/src/openbmc/meta/recipes-extended/iptables/files/
+NOTE: Applying patch '0001-configure-Add-option-to-enable-disable-libnfnetlink.patch' (../../../src/openbmc/meta/recipes-extended/iptables/iptables/0001-configure-Add-option-to-enable-disable-libnfnetlink.patch)
+NOTE: Applying patch '0001-Makefile.am-do-not-install-etc-ethertypes.patch' (../../../src/openbmc/meta/recipes-extended/iptables/iptables/0001-Makefile.am-do-not-install-etc-ethertypes.patch)
+NOTE: Applying patch '0002-configure.ac-only-check-conntrack-when-libnfnetlink-enabled.patch' (../../../src/openbmc/meta/recipes-extended/iptables/iptables/0002-configure.ac-only-check-conntrack-when-libnfnetlink-enabled.patch)
+NOTE: Applying patch 'format-security.patch' (../../../src/openbmc/meta/recipes-extended/iptables/iptables/format-security.patch)
+NOTE: Applying patch '0001-iptables-xshared.h-add-missing-sys.types.h-include.patch' (../../../src/openbmc/meta/recipes-extended/iptables/iptables/0001-iptables-xshared.h-add-missing-sys.types.h-include.patch)
+DEBUG: Python function patch_do_patch finished
+DEBUG: Python function do_patch finished
+DEBUG: Executing python function do_qa_patch
+DEBUG: Python function do_qa_patch finished

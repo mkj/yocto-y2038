@@ -1,0 +1,372 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta-openembedded/meta-oe/recipes-connectivity/krb5/krb5_1.17.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta-openembedded/meta-oe/recipes-support/openldap/openldap_2.5.13.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/systemd/systemd-systemctl-native.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-cross_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-native_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-extended/pam/libpam_1.3.1.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/autoconf/autoconf_2.71.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/automake/automake_1.16.5.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: []
+NOTE: Skipping as already exists in sysroot: ['krb5', 'openldap', 'glibc', 'systemd-systemctl-native', 'gcc-cross-arm', 'gcc-runtime', 'libtool-cross', 'libtool-native', 'quilt-native', 'libpam', 'autoconf-native', 'automake-native', 'patch-native', 'pseudo-native', 'util-linux', 'libtool', 'openssl', 'linux-libc-headers', 'texinfo-dummy-native', 'libgcc', 'ncurses', 'e2fsprogs', 'attr-native', 'binutils-cross-arm', 'cracklib', 'libxcrypt', 'flex', 'm4-native', 'gnu-config-native', 'zstd-native', 'libmpc-native', 'flex-native', 'xz-native', 'zlib-native', 'gmp-native', 'mpfr-native', 'zlib', 'opkg-utils', 'util-linux-libuuid', 'libcap-ng', 'bash-completion', 'autoconf-archive', 'attr', 'gettext-minimal-native']
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing shell function autotools_preconfigure
+DEBUG: Shell function autotools_preconfigure finished
+DEBUG: Executing python function autotools_aclocals
+DEBUG: SITE files ['endian-little', 'bit-32', 'arm-common', 'arm-32', 'common-linux', 'common-glibc', 'arm-linux', 'arm-linux-gnueabi', 'common']
+DEBUG: Python function autotools_aclocals finished
+DEBUG: Executing shell function do_configure
+automake (GNU automake) 1.16.5
+Copyright (C) 2021 Free Software Foundation, Inc.
+License GPLv2+: GNU GPL version 2 or later <https://gnu.org/licenses/gpl-2.0.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Written by Tom Tromey <tromey@redhat.com>
+       and Alexandre Duret-Lutz <adl@gnu.org>.
+AUTOV is 1.16
+NOTE: Executing ACLOCAL="aclocal --system-acdir=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/recipe-sysroot/usr/share/aclocal/ --automake-acdir=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/recipe-sysroot-native/usr/share/aclocal-1.16" autoreconf -Wcross --verbose --install --force --exclude=autopoint --exclude=gtkdocize -I /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/nss-pam-ldapd-0.9.8/m4/ -I /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/recipe-sysroot-native/usr/share/aclocal/
+autoreconf: export WARNINGS=cross,no-obsolete
+autoreconf: Entering directory '.'
+autoreconf: configure.ac: not using Gettext
+autoreconf: running: aclocal --system-acdir=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/recipe-sysroot/usr/share/aclocal/ --automake-acdir=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/recipe-sysroot-native/usr/share/aclocal-1.16 -I /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/nss-pam-ldapd-0.9.8/m4/ -I /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/recipe-sysroot-native/usr/share/aclocal/ --force -I m4
+autoreconf: configure.ac: tracing
+autoreconf: configure.ac: not using Libtool
+autoreconf: configure.ac: not using Intltool
+autoreconf: configure.ac: not using Gtkdoc
+autoreconf: running: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/recipe-sysroot-native/usr/bin/autoconf --include=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/nss-pam-ldapd-0.9.8/m4/ --include=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/recipe-sysroot-native/usr/share/aclocal/ --force
+autoreconf: running: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/recipe-sysroot-native/usr/bin/autoheader --include=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/nss-pam-ldapd-0.9.8/m4/ --include=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/recipe-sysroot-native/usr/share/aclocal/ --force
+autoreconf: running: automake --add-missing --copy --force-missing
+Makefile.am:40: warning: wildcard ChangeLog-20??: non-POSIX variable name
+Makefile.am:40: (probably a GNU make extension)
+Makefile.am:40: warning: wildcard m4/*.m4: non-POSIX variable name
+Makefile.am:40: (probably a GNU make extension)
+autoreconf: './config.sub' is updated
+autoreconf: './config.guess' is updated
+autoreconf: Leaving directory '.'
+NOTE: Running ../nss-pam-ldapd-0.9.8/configure  --build=x86_64-linux 		  --host=arm-openbmc-linux-gnueabi 		  --target=arm-openbmc-linux-gnueabi 		  --prefix=/usr 		  --exec_prefix=/usr 		  --bindir=/usr/bin 		  --sbindir=/usr/sbin 		  --libexecdir=/usr/libexec 		  --datadir=/usr/share 		  --sysconfdir=/etc 		  --sharedstatedir=/com 		  --localstatedir=/var 		  --libdir=/usr/lib 		  --includedir=/usr/include 		  --oldincludedir=/usr/include 		  --infodir=/usr/share/info 		  --mandir=/usr/share/man 		  --disable-silent-rules 		  --disable-dependency-tracking 		  --with-libtool-sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/recipe-sysroot         --disable-pynslcd         --libdir=/lib         --with-pam-seclib-dir=/lib/security          --disable-static  
+configure: WARNING: unrecognized options: --with-libtool-sysroot, --disable-static
+configure: loading site script /home/matt/src/openbmc/meta/site/endian-little
+configure: loading site script /home/matt/src/openbmc/meta/site/arm-common
+configure: loading site script /home/matt/src/openbmc/meta/site/arm-32
+configure: loading site script /home/matt/src/openbmc/meta/site/common-linux
+configure: loading site script /home/matt/src/openbmc/meta/site/common-glibc
+configure: loading site script /home/matt/src/openbmc/meta/site/arm-linux
+configure: loading site script /home/matt/src/openbmc/meta/site/common
+configure: loading site script /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/recipe-sysroot/usr/share/arm-openbmc-linux-gnueabi_config_site.d/ncurses_config
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... arm-openbmc-linux-gnueabi
+checking target system type... arm-openbmc-linux-gnueabi
+configure: configuring nss-pam-ldapd 0.9.8
+checking for a BSD-compatible install... /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c
+checking whether build environment is sane... yes
+checking for arm-openbmc-linux-gnueabi-strip... arm-openbmc-linux-gnueabi-strip
+checking for a race-free mkdir -p... /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking for arm-openbmc-linux-gnueabi-gcc... arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/recipe-sysroot
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... yes
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/recipe-sysroot accepts -g... yes
+checking for arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/recipe-sysroot option to enable C11 features... none needed
+checking whether arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/recipe-sysroot understands -c and -o together... yes
+checking whether make supports the include directive... yes (GNU style)
+checking dependency style of arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/recipe-sysroot... none
+checking how to run the C preprocessor... arm-openbmc-linux-gnueabi-gcc -E --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/recipe-sysroot  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security
+checking for arm-openbmc-linux-gnueabi-ranlib... arm-openbmc-linux-gnueabi-gcc-ranlib
+checking for stdio.h... (cached) yes
+checking for stdlib.h... (cached) yes
+checking for string.h... (cached) yes
+checking for inttypes.h... (cached) yes
+checking for stdint.h... (cached) yes
+checking for strings.h... (cached) yes
+checking for sys/stat.h... (cached) yes
+checking for sys/types.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking for wchar.h... yes
+checking for minix/config.h... no
+checking for vfork.h... no
+checking whether it is safe to define __EXTENSIONS__... yes
+checking whether _XOPEN_SOURCE should be defined... no
+checking whether ln -s works... yes
+checking for arm-openbmc-linux-gnueabi-ar... arm-openbmc-linux-gnueabi-gcc-ar
+checking the archiver (arm-openbmc-linux-gnueabi-gcc-ar) interface... ar
+checking for docbook2x-man... no
+checking for tool to (re)generate man pages... no
+configure: WARNING: docbook2x-man not found: not (re)generating man pages
+checking whether to install man pages... yes
+checking for a Python interpreter with version >= 2.5... python3
+checking for python3... /home/matt/tmp/build/obmc-y2038/tmp/hosttools/python3
+checking for python3 version... 3.10
+checking for python3 platform... linux
+checking for GNU default python3 prefix... ${prefix}
+checking for GNU default python3 exec_prefix... ${exec_prefix}
+checking for python3 script directory (pythondir)... ${libdir}/python3.10/site-packages
+checking for python3 extension module directory (pyexecdir)... ${libdir}/python3.10/site-packages
+checking python3 module: argparse... yes
+checking whether to enable maintainer-specific portions of Makefiles... yes
+checking whether to build the NSS module... yes
+checking whether to build the PAM module... yes
+checking whether to build the command-line utilities... yes
+checking whether to build the nslcd daemon... yes
+checking whether to build the pynslcd daemon... no
+checking whether to enable SASL support... yes
+checking whether to enable Kerberos support... yes
+checking whether to check configfile options... yes
+checking location for PAM module... /lib/security
+checking name of NSS and PAM modules... ldap
+checking soname of NSS module... libnss_ldap.so.2
+checking soname of PAM module... pam_ldap.so
+checking for ctype.h... yes
+checking for strings.h... (cached) yes
+checking for pthread.h... yes
+checking for pthread_np.h... no
+checking for fcntl.h... yes
+checking for limits.h... yes
+checking for nss.h... yes
+checking for nss_common.h... no
+checking for grp.h... yes
+checking for shadow.h... yes
+checking for aliases.h... yes
+checking for netdb.h... yes
+checking for rpc/rpcent.h... no
+checking for netinet/ether.h... yes
+checking for arpa/inet.h... yes
+checking for netinet/in.h... yes
+checking for nsswitch.h... no
+checking for nss_dbdefs.h... no
+checking for sys/socket.h... yes
+checking for sys/un.h... yes
+checking for sys/ucred.h... no
+checking for ucred.h... no
+checking for sys/param.h... yes
+checking for sys/time.h... yes
+checking for getopt.h... yes
+checking for syslog.h... yes
+checking for stddef.h... yes
+checking for inline... inline
+checking for an ANSI C-conforming const... yes
+checking for sigaction... yes
+checking for snprintf... yes
+checking for library containing socket... none required
+checking for strcasecmp... yes
+checking for strncasecmp... yes
+checking for strchr... yes
+checking for strcspn... yes
+checking for strspn... yes
+checking for strtol... yes
+checking for strtoul... yes
+checking for strtoull... yes
+checking for strndup... yes
+checking for malloc... yes
+checking for realloc... yes
+checking for atexit... yes
+checking for pid_t... yes
+checking for fork... yes
+checking for vfork... yes
+checking for working fork... cross
+configure: WARNING: result yes guessed because of cross compilation
+checking for working vfork... (cached) yes
+checking for __assert_fail... yes
+checking for library containing clock_gettime... none required
+checking for setusershell... yes
+checking for getusershell... yes
+checking for endusershell... yes
+checking for getgrouplist... yes
+checking for arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nss-pam-ldapd/0.9.8-r0/recipe-sysroot options needed to detect all undeclared functions... none needed
+checking whether setusershell is declared... yes
+checking whether getusershell is declared... yes
+checking whether endusershell is declared... yes
+checking for mode_t... yes
+checking for size_t... yes
+checking for grep that handles long lines and -e... /home/matt/tmp/build/obmc-y2038/tmp/hosttools/grep
+checking for egrep... /home/matt/tmp/build/obmc-y2038/tmp/hosttools/grep -E
+checking for uid_t in sys/types.h... (cached) {ac_cv_type_uid_t=yes}
+checking for pid_t... (cached) yes
+checking for int32_t... yes
+checking for uint8_t... yes
+checking for uint16_t... yes
+checking for uint32_t... yes
+checking size of unsigned int... (cached) 4
+checking size of unsigned long int... 4
+checking size of unsigned long long int... 8
+checking size of uid_t... 4
+checking size of gid_t... 4
+checking for thread local storage (TLS) class... __thread
+checking for suseconds_t... yes
+checking for struct ether_addr... yes
+checking for ether_aton... yes
+checking for ether_ntoa... yes
+checking for ether_aton_r... yes
+checking for ether_ntoa_r... yes
+checking whether ether_aton is declared... yes
+checking whether ether_ntoa is declared... yes
+checking for socklen_t... yes
+checking return type of setnetgrent... int
+checking for struct aliasent... yes
+checking for struct etherent... no
+checking for struct passwd.pw_class... no
+checking for struct rpcent... yes
+checking for struct spwd... yes
+checking for enum nss_status... yes
+checking for nss_backend_t... no
+checking for struct nss_XbyY_args.returnlen... no
+checking which NSS flavour to build... glibc
+checking which NSS maps to build... aliases,ethers,group,hosts,netgroup,networks,passwd,protocols,rpc,services,shadow
+checking for security/pam_appl.h... yes
+checking for security/pam_modules.h... yes
+checking for pam/pam_modules.h... no
+checking for security/pam_ext.h... yes
+checking for security/pam_modutil.h... yes
+checking for library containing pam_get_data... -lpam
+checking for pam_get_authtok... yes
+checking for pam_prompt... yes
+checking for pam_modutil_getpwnam... yes
+checking for pam_syslog... yes
+checking whether pam_info is declared... yes
+checking whether pam_error is declared... yes
+checking argument type of pam_get_item... const void **
+checking whether /home/matt/tmp/build/obmc-y2038/tmp/hosttools/python3 version is >= 2.5... yes
+checking for /home/matt/tmp/build/obmc-y2038/tmp/hosttools/python3 version... (cached) 3.10
+checking for /home/matt/tmp/build/obmc-y2038/tmp/hosttools/python3 platform... (cached) linux
+checking for GNU default /home/matt/tmp/build/obmc-y2038/tmp/hosttools/python3 prefix... ${prefix}
+checking for GNU default /home/matt/tmp/build/obmc-y2038/tmp/hosttools/python3 exec_prefix... ${exec_prefix}
+checking for /home/matt/tmp/build/obmc-y2038/tmp/hosttools/python3 script directory (pythondir)... (cached) ${libdir}/python3.10/site-packages
+checking for /home/matt/tmp/build/obmc-y2038/tmp/hosttools/python3 extension module directory (pyexecdir)... (cached) ${libdir}/python3.10/site-packages
+checking python3 module: argparse... yes
+checking for lber.h... yes
+checking for ldap.h... yes
+checking for ldap_ssl.h... no
+checking for gssldap.h... no
+checking for sasl.h... no
+checking for sasl/sasl.h... no
+checking for gsssasl.h... no
+checking for gssapi/gssapi.h... yes
+checking for gssapi/gssapi_generic.h... yes
+checking for gssapi/gssapi_krb5.h... yes
+checking for gssapi.h... yes
+checking for krb5.h... yes
+checking for regex.h... yes
+checking for library containing gethostbyname... none required
+checking for library containing hstrerror... none required
+checking for library containing dlopen... none required
+checking for initgroups... yes
+checking for setgroups... yes
+checking for execvp... yes
+checking for execvpe... yes
+checking for getpeereid... no
+checking for getpeerucred... no
+checking for __nss_configure_lookup... yes
+checking for getenv... yes
+checking for putenv... yes
+checking for clearenv... yes
+checking for dlopen... yes
+checking for dlsym... yes
+checking for dlerror... yes
+checking for regcomp... yes
+checking for regexec... yes
+checking for regerror... yes
+checking for hstrerror... yes
+checking for getopt_long... yes
+checking for strndup... (cached) yes
+checking for ether_aton_r... (cached) yes
+checking for struct sockaddr_storage... yes
+checking for struct ucred... yes
+checking if compiler needs -Werror to reject unknown flags... no
+checking for the pthreads library -lpthreads... no
+checking whether pthreads work without any flags... yes
+checking for joinable pthread attribute... PTHREAD_CREATE_JOINABLE
+checking if more special flags are required for pthreads... no
+checking for PTHREAD_PRIO_INHERIT... yes
+checking for pthread_mutex_lock... yes
+checking for pthread_join... yes
+checking for pthread_timedjoin_np... yes
+checking for pthread_atfork... yes
+checking for library containing ldap_search_ext... -lldap
+checking for ldap_search_ext... yes
+checking for library containing ber_bvfree... -llber
+checking for sasl_interact_t... no
+checking for library containing ldap_sasl_interactive_bind_s... none required
+checking for ldap_sasl_interactive_bind_s... yes
+checking for library containing gss_krb5_ccache_name... -lgssapi_krb5
+checking for gss_krb5_ccache_name... yes
+checking for library containing krb5_sendauth... -lkrb5
+checking for krb5_is_thread_safe... yes
+checking krb5 thread safety... unknown
+checking for ber_bvfree... yes
+checking for ber_free... yes
+checking for ber_set_option... yes
+checking for ber_get_enum... yes
+checking for ldap_initialize... yes
+checking for ldap_start_tls_s... yes
+checking for ldap_get_option... yes
+checking for ldap_set_option... yes
+checking for ldap_set_rebind_proc... yes
+checking for ldap_simple_bind_s... yes
+checking for ldap_sasl_bind... yes
+checking for ldap_sasl_bind_s... yes
+checking for ldap_unbind... yes
+checking for ldap_search_ext... (cached) yes
+checking for ldap_modify_ext_s... yes
+checking for ldap_extended_operation_s... yes
+checking for ldap_explode_dn... yes
+checking for ldap_explode_rdn... yes
+checking for ldap_domain2hostlist... yes
+checking for ldap_domain2dn... yes
+checking for ldap_result... yes
+checking for ldap_parse_result... yes
+checking for ldap_msgfree... yes
+checking for ldap_memfree... yes
+checking for ldap_get_dn... yes
+checking for ldap_first_attribute... yes
+checking for ldap_next_attribute... yes
+checking for ldap_get_values... yes
+checking for ldap_value_free... yes
+checking for ldap_get_values_len... yes
+checking for ldap_count_values_len... yes
+checking for ldap_value_free_len... yes
+checking for ldap_err2string... yes
+checking for ldap_abandon... yes
+checking for ldap_control_create... yes
+checking for ldap_create_control... yes
+checking for ldap_control_find... yes
+checking for ldap_controls_free... yes
+checking for ldap_control_free... yes
+checking for ldap_get_entry_controls... yes
+checking for ldap_parse_passwordpolicy_control... yes
+checking for ldap_passwordpolicy_err2txt... yes
+checking for ldap_create_deref_control... yes
+checking for ldap_create_deref_control_value... yes
+checking for ldap_parse_deref_control... yes
+checking for ldap_derefresponse_free... yes
+checking for ldap_create_page_control... yes
+checking for ldap_parse_page_control... yes
+checking whether ldap_extended_operation_s is declared... yes
+checking for ldap_passwd_s... yes
+checking for ldap_initialize... (cached) yes
+checking for ldap_parse_passwordpolicy_control... (cached) yes
+checking for ldap_passwordpolicy_err2txt... (cached) yes
+checking number of arguments to ldap_set_rebind_proc... 3
+checking return type of ldap_set_rebind_proc... int
+checking ldap_create_deref_control() implementation... cross
+configure: using replacement ldap_create_deref_control()
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating compat/Makefile
+config.status: creating common/Makefile
+config.status: creating nss/Makefile
+config.status: creating pam/Makefile
+config.status: creating utils/Makefile
+config.status: creating nslcd/Makefile
+config.status: creating pynslcd/Makefile
+config.status: creating man/Makefile
+config.status: creating tests/Makefile
+config.status: creating pynslcd/constants.py
+config.status: creating config.h
+config.status: executing depfiles commands
+configure: WARNING: unrecognized options: --with-libtool-sysroot, --disable-static
+DEBUG: Shell function do_configure finished
+DEBUG: Executing python function do_qa_configure
+NOTE: Checking autotools environment for common misconfiguration
+NOTE: Checking configure output for unrecognised options
+DEBUG: Python function do_qa_configure finished
+DEBUG: Executing shell function autotools_postconfigure
+DEBUG: Shell function autotools_postconfigure finished

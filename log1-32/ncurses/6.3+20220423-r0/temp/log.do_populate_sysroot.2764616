@@ -1,0 +1,254 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/binutils/binutils-cross_2.39.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-cross_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-native_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/opkg-utils/opkg-utils_0.5.0.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses_6.3+20220423.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/autoconf/autoconf_2.71.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/automake/automake_1.16.5.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pkgconfig/pkgconfig_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: []
+NOTE: Skipping as already exists in sysroot: ['glibc', 'binutils-cross-arm', 'gcc-cross-arm', 'gcc-runtime', 'libtool-cross', 'libtool-native', 'opkg-utils', 'quilt-native', 'ncurses-native', 'autoconf-native', 'automake-native', 'patch-native', 'pkgconfig-native', 'pseudo-native', 'libgcc', 'linux-libc-headers', 'texinfo-dummy-native', 'flex-native', 'zlib-native', 'gnu-config-native', 'mpfr-native', 'gmp-native', 'xz-native', 'libmpc-native', 'zstd-native', 'attr-native', 'm4-native', 'gettext-minimal-native']
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function sstate_task_prefunc
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/bin/crossscripts/ncursesw6-config
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/bin/crossscripts/ncurses5-config
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/bin/crossscripts/ncurses6-config
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/bin/crossscripts/ncursesw5-config
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/share/arm-openbmc-linux-gnueabi_config_site.d/ncurses_config
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/libpanel.so.5.9
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/libform.so.5.9
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/libpanel.so.5
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/libformw.so.5.9
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/libncursesw.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/libtic.so.5.9
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/libtic.so.5
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/libpanelw.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/libncurses++w.a
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/libncurses.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/libmenu.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/libform.so.5
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/libcurses.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/libpanelw.so.5.9
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/libmenu.so.5
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/libticw.so.5.9
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/libtermcap.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/libmenuw.so.5
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/libtic.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/libticw.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/libmenuw.so.5.9
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/libformw.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/libticw.so.5
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/libncurses++.a
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/libform.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/libformw.so.5
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/libpanel.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/libmenu.so.5.9
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/libmenuw.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/libpanelw.so.5
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/libtinfo.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/pkgconfig/tic.pc
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/pkgconfig/ticw.pc
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/pkgconfig/panelw.pc
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/pkgconfig/ncurses.pc
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/pkgconfig/ncursesw.pc
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/pkgconfig/formw.pc
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/pkgconfig/tinfo.pc
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/pkgconfig/panel.pc
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/pkgconfig/menuw.pc
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/pkgconfig/form.pc
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/pkgconfig/ncurses++w.pc
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/pkgconfig/ncurses++.pc
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/pkgconfig/menu.pc
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/include/panel.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/include/curses-32.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/include/cursslk.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/include/curses.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/include/cursesapp.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/include/nc_tparm.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/include/tic.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/include/ncurses.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/include/termcap.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/include/cursesw.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/include/eti.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/include/etip.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/include/cursesf.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/include/cursesm.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/include/ncurses_dll.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/include/term.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/include/unctrl.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/include/menu.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/include/form.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/include/cursesp.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/include/term_entry.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/lib/libtinfo.so.5
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/lib/libtinfo.so.5.9
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/lib/libncurses.so.5.9
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/lib/libncursesw.so.5.9
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/lib/libncurses.so.5
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/lib/libncursesw.so.5
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/sysroot-providers/ncurses
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/share/arm-openbmc-linux-gnueabi_config_site.d/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/bin/crossscripts/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/pkgconfig/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/sysroot-providers/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/include/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/share/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/bin/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/lib/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/
+DEBUG: Python function sstate_task_prefunc finished
+DEBUG: Executing python function do_populate_sysroot
+DEBUG: Executing shell function sysroot_stage_all
+0 blocks
+0 blocks
+0 blocks
+0 blocks
+DEBUG: Shell function sysroot_stage_all finished
+DEBUG: Executing python function sysroot_strip
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ncurses/6.3+20220423-r0/sysroot-destdir/usr/lib/libticw.so.5.9']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ncurses/6.3+20220423-r0/sysroot-destdir/usr/lib/libpanelw.so.5.9']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ncurses/6.3+20220423-r0/sysroot-destdir/usr/lib/libmenu.so.5.9']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ncurses/6.3+20220423-r0/sysroot-destdir/usr/lib/libmenuw.so.5.9']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ncurses/6.3+20220423-r0/sysroot-destdir/usr/lib/libformw.so.5.9']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ncurses/6.3+20220423-r0/sysroot-destdir/usr/lib/libtic.so.5.9']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ncurses/6.3+20220423-r0/sysroot-destdir/usr/lib/libform.so.5.9']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ncurses/6.3+20220423-r0/sysroot-destdir/usr/lib/libpanel.so.5.9']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ncurses/6.3+20220423-r0/sysroot-destdir/lib/libncurses.so.5.9']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ncurses/6.3+20220423-r0/sysroot-destdir/lib/libtinfo.so.5.9']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ncurses/6.3+20220423-r0/sysroot-destdir/lib/libncursesw.so.5.9']
+DEBUG: Python function sysroot_strip finished
+DEBUG: Executing shell function binconfig_disabled_sysroot_preprocess
+DEBUG: Shell function binconfig_disabled_sysroot_preprocess finished
+DEBUG: Python function do_populate_sysroot finished
+DEBUG: Executing python function do_qa_sysroot
+NOTE: QA checking do_populate_sysroot
+DEBUG: Python function do_qa_sysroot finished
+DEBUG: Executing python function sstate_task_postfunc
+DEBUG: Executing python function do_siteconfig
+DEBUG: Executing python function siteconfig_do_siteconfig
+DEBUG: Staging files from /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ncurses/6.3+20220423-r0/sysroot-destdir to /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses
+DEBUG: Executing shell function do_siteconfig_gencache
+configure: WARNING: unrecognized options: --disable-silent-rules, --disable-dependency-tracking, --with-libtool-sysroot
+configure: creating cache ncurses_cache
+checking for arm-openbmc-linux-gnueabi-gcc... arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ncurses/6.3+20220423-r0/recipe-sysroot
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... yes
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ncurses/6.3+20220423-r0/recipe-sysroot accepts -g... yes
+checking for arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ncurses/6.3+20220423-r0/recipe-sysroot option to enable C11 features... none needed
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for curses.h... yes
+checking for ncurses/curses.h... no
+checking for ncurses.h... yes
+checking for ncurses/termcap.h... no
+configure: updating cache ncurses_cache
+configure: creating ./config.status
+configure: WARNING: unrecognized options: --disable-silent-rules, --disable-dependency-tracking, --with-libtool-sysroot
+DEBUG: Shell function do_siteconfig_gencache finished
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/libtermcap.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/libmenuw.so.5
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/libtic.so.5
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/libticw.so.5.9
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/libform.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/libmenu.so.5.9
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/libpanelw.so.5.9
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/libpanelw.so.5
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/libpanelw.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/libticw.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/libmenuw.so.5.9
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/libcurses.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/libform.so.5
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/libncurses++.a
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/libformw.so.5
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/libformw.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/libmenu.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/libformw.so.5.9
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/libmenu.so.5
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/libtic.so.5.9
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/libncursesw.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/libform.so.5.9
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/libpanel.so.5.9
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/libpanel.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/libmenuw.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/libtinfo.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/libpanel.so.5
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/libncurses++w.a
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/libtic.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/libncurses.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/libticw.so.5
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/pkgconfig/menu.pc
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/pkgconfig/ncurses.pc
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/pkgconfig/ncurses++.pc
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/pkgconfig/panelw.pc
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/pkgconfig/ncursesw.pc
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/pkgconfig/ncurses++w.pc
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/pkgconfig/tic.pc
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/pkgconfig/form.pc
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/pkgconfig/ticw.pc
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/pkgconfig/formw.pc
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/pkgconfig/tinfo.pc
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/pkgconfig/menuw.pc
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/pkgconfig/panel.pc
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/include/cursslk.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/include/curses.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/include/ncurses_dll.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/include/eti.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/include/cursesw.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/include/term_entry.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/include/tic.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/include/termcap.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/include/ncurses.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/include/unctrl.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/include/term.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/include/panel.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/include/cursesm.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/include/nc_tparm.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/include/curses-32.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/include/cursesapp.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/include/etip.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/include/cursesf.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/include/cursesp.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/include/form.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/include/menu.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/bin/crossscripts/ncursesw5-config
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/bin/crossscripts/ncurses5-config
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/bin/crossscripts/ncurses6-config
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/bin/crossscripts/ncursesw6-config
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/lib/libncurses.so.5
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/lib/libtinfo.so.5
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/lib/libncursesw.so.5
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/lib/libncurses.so.5.9
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/lib/libtinfo.so.5.9
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/lib/libncursesw.so.5.9
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/sysroot-providers/ncurses
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/bin/crossscripts/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/pkgconfig/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/sysroot-providers/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/include/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/bin/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/lib/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/lib/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses/usr/
+DEBUG: Python function siteconfig_do_siteconfig finished
+DEBUG: Python function do_siteconfig finished
+NOTE: Using umask 0o002 (not 22) for sstate packaging
+DEBUG: Preparing tree /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ncurses/6.3+20220423-r0/sysroot-destdir for packaging at /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ncurses/6.3+20220423-r0/sstate-build-populate_sysroot/sysroot-destdir
+DEBUG: Executing python function target_add_sysroot_deps
+DEBUG: Python function target_add_sysroot_deps finished
+DEBUG: Executing python function sstate_hardcode_path
+NOTE: Removing hardcoded paths from sstate package: 'find /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ncurses/6.3+20220423-r0/sstate-build-populate_sysroot/ \( -name "*.la" -o -name "*-config" -o -name "*_config" -o -name "postinst-*" \) -type f | xargs grep -l -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ncurses/6.3+20220423-r0/recipe-sysroot' -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ncurses/6.3+20220423-r0/recipe-sysroot-native' -e '/home/matt/tmp/build/obmc-y2038/tmp/hosttools' | tee /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ncurses/6.3+20220423-r0/sstate-build-populate_sysroot/fixmepath | xargs --no-run-if-empty sed -i -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ncurses/6.3+20220423-r0/recipe-sysroot-native:FIXMESTAGINGDIRHOST:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ncurses/6.3+20220423-r0/recipe-sysroot:FIXMESTAGINGDIRTARGET:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:FIXME_HOSTTOOLS_DIR:g''
+DEBUG: Python function sstate_hardcode_path finished
+DEBUG: Executing python function sstate_report_unihash
+DEBUG: Python function sstate_report_unihash finished
+DEBUG: Executing shell function sstate_create_package
+DEBUG: Shell function sstate_create_package finished
+DEBUG: Executing python function sstate_hardcode_path_unpack
+DEBUG: Python function sstate_hardcode_path_unpack finished
+DEBUG: Staging files from /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ncurses/6.3+20220423-r0/sysroot-destdir to /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/ncurses
+DEBUG: Python function sstate_task_postfunc finished

@@ -1,0 +1,307 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/libxcrypt/libxcrypt_4.4.28.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-cross_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-native_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-extended/pam/libpam_1.3.1.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/autoconf/autoconf_2.71.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/automake/automake_1.16.5.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/dwarfsrcfiles/dwarfsrcfiles.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/rpm/rpm_4.18.0.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: ['dwarfsrcfiles-native', 'rpm-native', 'file-native', 'python3-native', 'elfutils-native', 'lua-native', 'libgcrypt-native', 'popt-native', 'bzip2-native', 'sqlite3-native', 'libtirpc-native', 'gdbm-native', 'openssl-native', 'util-linux-libuuid-native', 'ncurses-native', 'libffi-native', 'libnsl2-native', 'readline-native', 'libcap-native', 'libgpg-error-native', 'perl-native', 'make-native']
+NOTE: Skipping as already exists in sysroot: ['glibc', 'libxcrypt', 'gcc-cross-arm', 'gcc-runtime', 'libtool-cross', 'libtool-native', 'quilt-native', 'libpam', 'autoconf-native', 'automake-native', 'patch-native', 'pseudo-native', 'gnu-config-native', 'm4-native', 'texinfo-dummy-native', 'mpfr-native', 'xz-native', 'gmp-native', 'zstd-native', 'binutils-cross-arm', 'linux-libc-headers', 'libmpc-native', 'zlib-native', 'flex-native', 'gettext-minimal-native', 'attr-native', 'flex', 'cracklib', 'libgcc', 'zlib']
+DEBUG: sed -e 's:^[^/]*/:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/recipe-sysroot-native/:g' /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/rpm-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/python3-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/elfutils-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/lua-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/libgcrypt-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/openssl-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/ncurses-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/libgpg-error-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/perl-native/fixmepath | xargs sed -i -e 's:FIXMESTAGINGDIRTARGET:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/recipe-sysroot:g; s:FIXMESTAGINGDIRHOST:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/recipe-sysroot-native:g' -e 's:FIXME_PSEUDO_SYSROOT:/home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/pseudo-native:g' -e 's:FIXME_HOSTTOOLS_DIR:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:g' -e 's:FIXME_PKGDATA_DIR:/home/matt/tmp/build/obmc-y2038/tmp/pkgdata/evb-ast2600:g' -e 's:FIXME_PSEUDO_LOCALSTATEDIR:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/pseudo/:g' -e 's:FIXME_LOGFIFO:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/temp/fifo.1053998:g'
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function sstate_task_prefunc
+DEBUG: Python function sstate_task_prefunc finished
+DEBUG: Executing python function do_package
+DEBUG: Executing python function package_convert_pr_autoinc
+DEBUG: Python function package_convert_pr_autoinc finished
+DEBUG: Executing python function package_prepare_pkgdata
+NOTE: Installed into pkgdata-sysroot: ['libpam', 'glibc', 'libxcrypt', 'gcc-runtime', 'flex', 'cracklib', 'linux-libc-headers', 'libgcc', 'zlib']
+DEBUG: Python function package_prepare_pkgdata finished
+DEBUG: Executing python function perform_packagecopy
+DEBUG: Python function perform_packagecopy finished
+DEBUG: Executing python function split_and_strip_files
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/package/usr/sbin/visudo']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/package/usr/sbin/sudo_sendlog']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/package/usr/sbin/sudo_logsrvd']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/package/usr/lib/sudo/system_group.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/package/usr/lib/sudo/sudoers.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/package/usr/lib/sudo/sudo_noexec.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/package/usr/lib/sudo/sudo_intercept.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/package/usr/lib/sudo/sample_approval.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/package/usr/lib/sudo/libsudo_util.so.0.0.0']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/package/usr/lib/sudo/group_file.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/package/usr/lib/sudo/audit_json.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/package/usr/bin/sudoreplay']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/package/usr/bin/sudo']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/package/usr/bin/cvtsudoers']
+DEBUG: Python function split_and_strip_files finished
+DEBUG: Executing python function fixup_perms
+DEBUG: Python function fixup_perms finished
+DEBUG: Executing python function package_do_split_locales
+DEBUG: Python function package_do_split_locales finished
+DEBUG: Executing python function populate_packages
+DEBUG: Python function populate_packages finished
+DEBUG: Executing python function package_fixsymlinks
+DEBUG: sudo-dev contains dangling link /usr/lib/sudo/libsudo_util.so.0.0.0
+DEBUG: target found in sudo-lib
+DEBUG: Python function package_fixsymlinks finished
+DEBUG: Executing python function package_name_hook
+DEBUG: Executing python function debian_package_name_hook
+DEBUG: LIBNAMES: pkg sudo-sudo libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg sudo-staticdev libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg sudo-src libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg sudo-locale-zh-tw libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg sudo-locale-zh-cn libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg sudo-locale-vi libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg sudo-locale-uk libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg sudo-locale-tr libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg sudo-locale-sv libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg sudo-locale-sr libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg sudo-locale-sl libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg sudo-locale-sk libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg sudo-locale-ru libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg sudo-locale-ro libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg sudo-locale-pt-br libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg sudo-locale-pt libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg sudo-locale-pl libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg sudo-locale-nn libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg sudo-locale-nl libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg sudo-locale-nb libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg sudo-locale-lt libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg sudo-locale-ko libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg sudo-locale-ka libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg sudo-locale-ja libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg sudo-locale-it libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg sudo-locale-hu libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg sudo-locale-hr libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg sudo-locale-gl libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg sudo-locale-fur libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg sudo-locale-fr libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg sudo-locale-fi libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg sudo-locale-fa libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg sudo-locale-eu libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg sudo-locale-es libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg sudo-locale-eo libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg sudo-locale-el libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg sudo-locale-de libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg sudo-locale-da libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg sudo-locale-cs libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg sudo-locale-ca libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg sudo-locale-ast libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg sudo-lib libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg sudo-doc libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg sudo-dev libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg sudo-dbg libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg sudo libs 0 bins 1 sonames []
+DEBUG: Python function debian_package_name_hook finished
+DEBUG: Python function package_name_hook finished
+DEBUG: Executing python function package_do_filedeps
+DEBUG: Python function package_do_filedeps finished
+DEBUG: Executing python function package_do_shlibs
+DEBUG: Reading shlib providers in /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/pkgdata-sysroot/shlibs2
+DEBUG: calculating shlib provides for sudo-src
+DEBUG: LIBNAMES: pkg sudo-src sonames set()
+DEBUG: calculating shlib provides for sudo-dbg
+DEBUG: LIBNAMES: pkg sudo-dbg sonames set()
+DEBUG: calculating shlib provides for sudo-staticdev
+DEBUG: LIBNAMES: pkg sudo-staticdev sonames set()
+DEBUG: calculating shlib provides for sudo-dev
+DEBUG: LIBNAMES: pkg sudo-dev sonames set()
+DEBUG: calculating shlib provides for sudo-doc
+DEBUG: LIBNAMES: pkg sudo-doc sonames set()
+DEBUG: calculating shlib provides for sudo-sudo
+DEBUG: LIBNAMES: pkg sudo-sudo sonames set()
+DEBUG: calculating shlib provides for sudo-lib
+DEBUG: registering sudo-lib-1.9.11p3 as shlib provider for audit_json.so
+DEBUG: registering sudo-lib-1.9.11p3 as shlib provider for group_file.so
+DEBUG: registering sudo-lib-1.9.11p3 as shlib provider for libsudo_util.so.0
+DEBUG: registering sudo-lib-1.9.11p3 as shlib provider for sample_approval.so
+DEBUG: registering sudo-lib-1.9.11p3 as shlib provider for sudo_intercept.so
+DEBUG: registering sudo-lib-1.9.11p3 as shlib provider for sudo_noexec.so
+DEBUG: registering sudo-lib-1.9.11p3 as shlib provider for sudoers.so
+DEBUG: registering sudo-lib-1.9.11p3 as shlib provider for system_group.so
+DEBUG: LIBNAMES: pkg sudo-lib sonames {('sample_approval.so', '/usr/lib/sudo', '1.9.11p3'), ('sudo_noexec.so', '/usr/lib/sudo', '1.9.11p3'), ('audit_json.so', '/usr/lib/sudo', '1.9.11p3'), ('group_file.so', '/usr/lib/sudo', '1.9.11p3'), ('sudo_intercept.so', '/usr/lib/sudo', '1.9.11p3'), ('system_group.so', '/usr/lib/sudo', '1.9.11p3'), ('libsudo_util.so.0', '/usr/lib/sudo', '1.9.11p3'), ('sudoers.so', '/usr/lib/sudo', '1.9.11p3')}
+DEBUG: calculating shlib provides for sudo
+DEBUG: LIBNAMES: pkg sudo sonames set()
+DEBUG: calculating shlib provides for sudo-locale-ast
+DEBUG: LIBNAMES: pkg sudo-locale-ast sonames set()
+DEBUG: calculating shlib provides for sudo-locale-ca
+DEBUG: LIBNAMES: pkg sudo-locale-ca sonames set()
+DEBUG: calculating shlib provides for sudo-locale-cs
+DEBUG: LIBNAMES: pkg sudo-locale-cs sonames set()
+DEBUG: calculating shlib provides for sudo-locale-da
+DEBUG: LIBNAMES: pkg sudo-locale-da sonames set()
+DEBUG: calculating shlib provides for sudo-locale-de
+DEBUG: LIBNAMES: pkg sudo-locale-de sonames set()
+DEBUG: calculating shlib provides for sudo-locale-el
+DEBUG: LIBNAMES: pkg sudo-locale-el sonames set()
+DEBUG: calculating shlib provides for sudo-locale-eo
+DEBUG: LIBNAMES: pkg sudo-locale-eo sonames set()
+DEBUG: calculating shlib provides for sudo-locale-es
+DEBUG: LIBNAMES: pkg sudo-locale-es sonames set()
+DEBUG: calculating shlib provides for sudo-locale-eu
+DEBUG: LIBNAMES: pkg sudo-locale-eu sonames set()
+DEBUG: calculating shlib provides for sudo-locale-fa
+DEBUG: LIBNAMES: pkg sudo-locale-fa sonames set()
+DEBUG: calculating shlib provides for sudo-locale-fi
+DEBUG: LIBNAMES: pkg sudo-locale-fi sonames set()
+DEBUG: calculating shlib provides for sudo-locale-fr
+DEBUG: LIBNAMES: pkg sudo-locale-fr sonames set()
+DEBUG: calculating shlib provides for sudo-locale-fur
+DEBUG: LIBNAMES: pkg sudo-locale-fur sonames set()
+DEBUG: calculating shlib provides for sudo-locale-gl
+DEBUG: LIBNAMES: pkg sudo-locale-gl sonames set()
+DEBUG: calculating shlib provides for sudo-locale-hr
+DEBUG: LIBNAMES: pkg sudo-locale-hr sonames set()
+DEBUG: calculating shlib provides for sudo-locale-hu
+DEBUG: LIBNAMES: pkg sudo-locale-hu sonames set()
+DEBUG: calculating shlib provides for sudo-locale-it
+DEBUG: LIBNAMES: pkg sudo-locale-it sonames set()
+DEBUG: calculating shlib provides for sudo-locale-ja
+DEBUG: LIBNAMES: pkg sudo-locale-ja sonames set()
+DEBUG: calculating shlib provides for sudo-locale-ka
+DEBUG: LIBNAMES: pkg sudo-locale-ka sonames set()
+DEBUG: calculating shlib provides for sudo-locale-ko
+DEBUG: LIBNAMES: pkg sudo-locale-ko sonames set()
+DEBUG: calculating shlib provides for sudo-locale-lt
+DEBUG: LIBNAMES: pkg sudo-locale-lt sonames set()
+DEBUG: calculating shlib provides for sudo-locale-nb
+DEBUG: LIBNAMES: pkg sudo-locale-nb sonames set()
+DEBUG: calculating shlib provides for sudo-locale-nl
+DEBUG: LIBNAMES: pkg sudo-locale-nl sonames set()
+DEBUG: calculating shlib provides for sudo-locale-nn
+DEBUG: LIBNAMES: pkg sudo-locale-nn sonames set()
+DEBUG: calculating shlib provides for sudo-locale-pl
+DEBUG: LIBNAMES: pkg sudo-locale-pl sonames set()
+DEBUG: calculating shlib provides for sudo-locale-pt
+DEBUG: LIBNAMES: pkg sudo-locale-pt sonames set()
+DEBUG: calculating shlib provides for sudo-locale-pt-br
+DEBUG: LIBNAMES: pkg sudo-locale-pt-br sonames set()
+DEBUG: calculating shlib provides for sudo-locale-ro
+DEBUG: LIBNAMES: pkg sudo-locale-ro sonames set()
+DEBUG: calculating shlib provides for sudo-locale-ru
+DEBUG: LIBNAMES: pkg sudo-locale-ru sonames set()
+DEBUG: calculating shlib provides for sudo-locale-sk
+DEBUG: LIBNAMES: pkg sudo-locale-sk sonames set()
+DEBUG: calculating shlib provides for sudo-locale-sl
+DEBUG: LIBNAMES: pkg sudo-locale-sl sonames set()
+DEBUG: calculating shlib provides for sudo-locale-sr
+DEBUG: LIBNAMES: pkg sudo-locale-sr sonames set()
+DEBUG: calculating shlib provides for sudo-locale-sv
+DEBUG: LIBNAMES: pkg sudo-locale-sv sonames set()
+DEBUG: calculating shlib provides for sudo-locale-tr
+DEBUG: LIBNAMES: pkg sudo-locale-tr sonames set()
+DEBUG: calculating shlib provides for sudo-locale-uk
+DEBUG: LIBNAMES: pkg sudo-locale-uk sonames set()
+DEBUG: calculating shlib provides for sudo-locale-vi
+DEBUG: LIBNAMES: pkg sudo-locale-vi sonames set()
+DEBUG: calculating shlib provides for sudo-locale-zh-cn
+DEBUG: LIBNAMES: pkg sudo-locale-zh-cn sonames set()
+DEBUG: calculating shlib provides for sudo-locale-zh-tw
+DEBUG: LIBNAMES: pkg sudo-locale-zh-tw sonames set()
+DEBUG: calculating shlib requirements for sudo-src
+DEBUG: calculating shlib requirements for sudo-dbg
+DEBUG: calculating shlib requirements for sudo-staticdev
+DEBUG: calculating shlib requirements for sudo-dev
+DEBUG: calculating shlib requirements for sudo-doc
+DEBUG: calculating shlib requirements for sudo-sudo
+DEBUG: sudo-sudo: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/packages-split/sudo-sudo/usr/bin/sudo)
+DEBUG: sudo-sudo: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/packages-split/sudo-sudo/usr/bin/sudo)
+DEBUG: sudo-sudo: Dependency libsudo_util.so.0 requires package sudo-lib (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/packages-split/sudo-sudo/usr/bin/sudo)
+DEBUG: calculating shlib requirements for sudo-lib
+DEBUG: sudo-lib: Dependency libsudo_util.so.0 requires package sudo-lib (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/packages-split/sudo-lib/usr/lib/sudo/audit_json.so)
+DEBUG: sudo-lib: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/packages-split/sudo-lib/usr/lib/sudo/system_group.so)
+DEBUG: sudo-lib: Dependency libsudo_util.so.0 requires package sudo-lib (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/packages-split/sudo-lib/usr/lib/sudo/group_file.so)
+DEBUG: sudo-lib: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/packages-split/sudo-lib/usr/lib/sudo/sample_approval.so)
+DEBUG: sudo-lib: Dependency libsudo_util.so.0 requires package sudo-lib (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/packages-split/sudo-lib/usr/lib/sudo/sudo_intercept.so)
+DEBUG: sudo-lib: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/packages-split/sudo-lib/usr/lib/sudo/libsudo_util.so.0.0.0)
+DEBUG: sudo-lib: Dependency libsudo_util.so.0 requires package sudo-lib (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/packages-split/sudo-lib/usr/lib/sudo/sudoers.so)
+DEBUG: sudo-lib: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/packages-split/sudo-lib/usr/lib/sudo/sudo_noexec.so)
+DEBUG: sudo-lib: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/packages-split/sudo-lib/usr/lib/sudo/audit_json.so)
+DEBUG: sudo-lib: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/packages-split/sudo-lib/usr/lib/sudo/sudoers.so)
+DEBUG: sudo-lib: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/packages-split/sudo-lib/usr/lib/sudo/group_file.so)
+DEBUG: sudo-lib: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/packages-split/sudo-lib/usr/lib/sudo/sudo_intercept.so)
+DEBUG: sudo-lib: Dependency libsudo_util.so.0 requires package sudo-lib (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/packages-split/sudo-lib/usr/lib/sudo/system_group.so)
+DEBUG: sudo-lib: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/packages-split/sudo-lib/usr/lib/sudo/system_group.so)
+DEBUG: sudo-lib: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/packages-split/sudo-lib/usr/lib/sudo/sudo_noexec.so)
+DEBUG: sudo-lib: Dependency libsudo_util.so.0 requires package sudo-lib (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/packages-split/sudo-lib/usr/lib/sudo/sample_approval.so)
+DEBUG: sudo-lib: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/packages-split/sudo-lib/usr/lib/sudo/sudo_intercept.so)
+DEBUG: sudo-lib: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/packages-split/sudo-lib/usr/lib/sudo/group_file.so)
+DEBUG: sudo-lib: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/packages-split/sudo-lib/usr/lib/sudo/audit_json.so)
+DEBUG: sudo-lib: Dependency libpam.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/packages-split/sudo-lib/usr/lib/sudo/sudoers.so)
+DEBUG: sudo-lib: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/packages-split/sudo-lib/usr/lib/sudo/sudoers.so)
+DEBUG: sudo-lib: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/packages-split/sudo-lib/usr/lib/sudo/libsudo_util.so.0.0.0)
+DEBUG: sudo-lib: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/packages-split/sudo-lib/usr/lib/sudo/sample_approval.so)
+DEBUG: calculating shlib requirements for sudo
+DEBUG: sudo: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/packages-split/sudo/usr/sbin/sudo_logsrvd)
+DEBUG: sudo: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/packages-split/sudo/usr/sbin/sudo_logsrvd)
+DEBUG: sudo: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/packages-split/sudo/usr/sbin/sudo_sendlog)
+DEBUG: sudo: Dependency libsudo_util.so.0 requires package sudo-lib (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/packages-split/sudo/usr/sbin/sudo_logsrvd)
+DEBUG: sudo: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/packages-split/sudo/usr/bin/cvtsudoers)
+DEBUG: sudo: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/packages-split/sudo/usr/sbin/visudo)
+DEBUG: sudo: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/packages-split/sudo/usr/sbin/sudo_sendlog)
+DEBUG: sudo: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/packages-split/sudo/usr/bin/sudoreplay)
+DEBUG: sudo: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/packages-split/sudo/usr/bin/sudoreplay)
+DEBUG: sudo: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/packages-split/sudo/usr/sbin/visudo)
+DEBUG: sudo: Dependency libsudo_util.so.0 requires package sudo-lib (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/packages-split/sudo/usr/sbin/sudo_sendlog)
+DEBUG: sudo: Dependency libsudo_util.so.0 requires package sudo-lib (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/packages-split/sudo/usr/bin/sudoreplay)
+DEBUG: sudo: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/packages-split/sudo/usr/bin/cvtsudoers)
+DEBUG: sudo: Dependency libsudo_util.so.0 requires package sudo-lib (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/packages-split/sudo/usr/bin/cvtsudoers)
+DEBUG: sudo: Dependency libsudo_util.so.0 requires package sudo-lib (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/packages-split/sudo/usr/sbin/visudo)
+DEBUG: calculating shlib requirements for sudo-locale-ast
+DEBUG: calculating shlib requirements for sudo-locale-ca
+DEBUG: calculating shlib requirements for sudo-locale-cs
+DEBUG: calculating shlib requirements for sudo-locale-da
+DEBUG: calculating shlib requirements for sudo-locale-de
+DEBUG: calculating shlib requirements for sudo-locale-el
+DEBUG: calculating shlib requirements for sudo-locale-eo
+DEBUG: calculating shlib requirements for sudo-locale-es
+DEBUG: calculating shlib requirements for sudo-locale-eu
+DEBUG: calculating shlib requirements for sudo-locale-fa
+DEBUG: calculating shlib requirements for sudo-locale-fi
+DEBUG: calculating shlib requirements for sudo-locale-fr
+DEBUG: calculating shlib requirements for sudo-locale-fur
+DEBUG: calculating shlib requirements for sudo-locale-gl
+DEBUG: calculating shlib requirements for sudo-locale-hr
+DEBUG: calculating shlib requirements for sudo-locale-hu
+DEBUG: calculating shlib requirements for sudo-locale-it
+DEBUG: calculating shlib requirements for sudo-locale-ja
+DEBUG: calculating shlib requirements for sudo-locale-ka
+DEBUG: calculating shlib requirements for sudo-locale-ko
+DEBUG: calculating shlib requirements for sudo-locale-lt
+DEBUG: calculating shlib requirements for sudo-locale-nb
+DEBUG: calculating shlib requirements for sudo-locale-nl
+DEBUG: calculating shlib requirements for sudo-locale-nn
+DEBUG: calculating shlib requirements for sudo-locale-pl
+DEBUG: calculating shlib requirements for sudo-locale-pt
+DEBUG: calculating shlib requirements for sudo-locale-pt-br
+DEBUG: calculating shlib requirements for sudo-locale-ro
+DEBUG: calculating shlib requirements for sudo-locale-ru
+DEBUG: calculating shlib requirements for sudo-locale-sk
+DEBUG: calculating shlib requirements for sudo-locale-sl
+DEBUG: calculating shlib requirements for sudo-locale-sr
+DEBUG: calculating shlib requirements for sudo-locale-sv
+DEBUG: calculating shlib requirements for sudo-locale-tr
+DEBUG: calculating shlib requirements for sudo-locale-uk
+DEBUG: calculating shlib requirements for sudo-locale-vi
+DEBUG: calculating shlib requirements for sudo-locale-zh-cn
+DEBUG: calculating shlib requirements for sudo-locale-zh-tw
+DEBUG: Python function package_do_shlibs finished
+DEBUG: Executing python function package_do_pkgconfig
+DEBUG: Python function package_do_pkgconfig finished
+DEBUG: Executing python function read_shlibdeps
+DEBUG: Python function read_shlibdeps finished
+DEBUG: Executing python function package_depchains
+DEBUG: Python function package_depchains finished
+DEBUG: Executing python function emit_pkgdata
+DEBUG: Python function emit_pkgdata finished
+DEBUG: Python function do_package finished
+DEBUG: Executing python function sstate_task_postfunc
+NOTE: Using umask 0o002 (not 22) for sstate packaging
+DEBUG: Executing python function target_add_sysroot_deps
+DEBUG: Python function target_add_sysroot_deps finished
+DEBUG: Executing python function sstate_hardcode_path
+NOTE: Removing hardcoded paths from sstate package: 'find /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/sstate-build-package/ \( -name "*.la" -o -name "*-config" -o -name "*_config" -o -name "postinst-*" \) -type f | xargs grep -l -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/recipe-sysroot' -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/recipe-sysroot-native' -e '/home/matt/tmp/build/obmc-y2038/tmp/hosttools' | tee /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/sstate-build-package/fixmepath | xargs --no-run-if-empty sed -i -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/recipe-sysroot-native:FIXMESTAGINGDIRHOST:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/recipe-sysroot:FIXMESTAGINGDIRTARGET:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:FIXME_HOSTTOOLS_DIR:g''
+DEBUG: Python function sstate_hardcode_path finished
+DEBUG: Executing python function sstate_report_unihash
+DEBUG: Python function sstate_report_unihash finished
+DEBUG: Executing shell function sstate_create_package
+DEBUG: Shell function sstate_create_package finished
+DEBUG: Executing python function sstate_hardcode_path_unpack
+DEBUG: Python function sstate_hardcode_path_unpack finished
+DEBUG: Python function sstate_task_postfunc finished

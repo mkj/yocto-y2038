@@ -1,0 +1,472 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-cross_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-native_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/autoconf/autoconf_2.71.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/automake/automake_1.16.5.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-extended/xz/xz_5.2.7.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: []
+NOTE: Skipping as already exists in sysroot: ['glibc', 'gcc-cross-arm', 'gcc-runtime', 'libtool-cross', 'libtool-native', 'quilt-native', 'autoconf-native', 'automake-native', 'patch-native', 'pseudo-native', 'xz-native', 'texinfo-dummy-native', 'linux-libc-headers', 'libgcc', 'gettext-minimal-native', 'flex-native', 'zlib-native', 'zstd-native', 'binutils-cross-arm', 'mpfr-native', 'gnu-config-native', 'libmpc-native', 'gmp-native', 'm4-native', 'attr-native']
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function autotools_aclocals
+DEBUG: SITE files ['endian-little', 'bit-32', 'arm-common', 'arm-32', 'common-linux', 'common-glibc', 'arm-linux', 'arm-linux-gnueabi', 'common']
+DEBUG: Python function autotools_aclocals finished
+DEBUG: Executing shell function do_install
+NOTE: make DESTDIR=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image install
+Making install in completions
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/build/completions'
+../../bash-completion-2.11/completions/../setup-symlinks.sh . 7z \
+	7za
+../../bash-completion-2.11/completions/../setup-symlinks.sh . aclocal \
+	aclocal-1.10 aclocal-1.11 aclocal-1.12 aclocal-1.13 \
+	aclocal-1.14 aclocal-1.15 aclocal-1.16
+../../bash-completion-2.11/completions/../setup-symlinks.sh . ant \
+	phing
+../../bash-completion-2.11/completions/../setup-symlinks.sh . aptitude \
+	aptitude-curses
+../../bash-completion-2.11/completions/../setup-symlinks.sh . asciidoc \
+	asciidoc.py
+../../bash-completion-2.11/completions/../setup-symlinks.sh . automake \
+	automake-1.10 automake-1.11 automake-1.12 automake-1.13 \
+	automake-1.14 automake-1.15 automake-1.16
+../../bash-completion-2.11/completions/../setup-symlinks.sh . autoreconf \
+	autoheader
+../../bash-completion-2.11/completions/../setup-symlinks.sh . autoscan \
+	autoupdate
+../../bash-completion-2.11/completions/../setup-symlinks.sh . btdownloadheadless.py \
+	btdownloadcurses.py btdownloadgui.py
+../../bash-completion-2.11/completions/../setup-symlinks.sh . bzip2 \
+	lbzip2 pbzip2
+../../bash-completion-2.11/completions/../setup-symlinks.sh . _cal \
+	ncal
+../../bash-completion-2.11/completions/../setup-symlinks.sh . cardctl \
+	pccardctl
+../../bash-completion-2.11/completions/../setup-symlinks.sh . chromium-browser \
+	chrome chromium google-chrome google-chrome-stable
+../../bash-completion-2.11/completions/../setup-symlinks.sh . complete \
+	compgen
+../../bash-completion-2.11/completions/../setup-symlinks.sh . convert \
+	animate compare composite conjure display identify import \
+	mogrify montage stream
+../../bash-completion-2.11/completions/../setup-symlinks.sh . cowsay \
+	cowthink
+../../bash-completion-2.11/completions/../setup-symlinks.sh . dict \
+	rdict
+../../bash-completion-2.11/completions/../setup-symlinks.sh . dpkg \
+	dpkg-deb dpkg-query dpkg-reconfigure
+../../bash-completion-2.11/completions/../setup-symlinks.sh . ether-wake \
+	etherwake
+../../bash-completion-2.11/completions/../setup-symlinks.sh . filesnarf \
+	mailsnarf msgsnarf
+../../bash-completion-2.11/completions/../setup-symlinks.sh . firefox \
+	iceweasel mozilla-firefox
+../../bash-completion-2.11/completions/../setup-symlinks.sh . freeciv \
+	civclient freeciv-gtk2 freeciv-gtk3 freeciv-sdl freeciv-xaw
+../../bash-completion-2.11/completions/../setup-symlinks.sh . freeciv-server \
+	civserver
+../../bash-completion-2.11/completions/../setup-symlinks.sh . function \
+	declare typeset
+../../bash-completion-2.11/completions/../setup-symlinks.sh . gcc \
+	c++ cc f77 f95 g++ g++-5 g++-6 g++-7 g++-8 g77 g95 gcc-5 \
+	gcc-6 gcc-7 gcc-8 gccgo gccgo-5 gccgo-6 gccgo-7 gccgo-8 gcj \
+	gfortran gfortran-5 gfortran-6 gfortran-7 gfortran-8 gpc
+../../bash-completion-2.11/completions/../setup-symlinks.sh . genisoimage \
+	mkisofs
+../../bash-completion-2.11/completions/../setup-symlinks.sh . geoiplookup \
+	geoiplookup6
+../../bash-completion-2.11/completions/../setup-symlinks.sh . gkrellm \
+	gkrellm2
+../../bash-completion-2.11/completions/../setup-symlinks.sh . gpgv \
+	gpgv2
+../../bash-completion-2.11/completions/../setup-symlinks.sh . gzip \
+	pigz
+../../bash-completion-2.11/completions/../setup-symlinks.sh . hcitool \
+	ciptool dfutool hciattach hciconfig l2ping rfcomm sdptool
+../../bash-completion-2.11/completions/../setup-symlinks.sh . _hexdump \
+	hd
+../../bash-completion-2.11/completions/../setup-symlinks.sh . hping2 \
+	hping hping3
+../../bash-completion-2.11/completions/../setup-symlinks.sh . ifup \
+	ifdown ifquery ifstatus
+../../bash-completion-2.11/completions/../setup-symlinks.sh . info \
+	pinfo
+../../bash-completion-2.11/completions/../setup-symlinks.sh . inotifywait \
+	inotifywatch
+../../bash-completion-2.11/completions/../setup-symlinks.sh . insmod \
+	insmod.static
+../../bash-completion-2.11/completions/../setup-symlinks.sh . iperf \
+	iperf3
+../../bash-completion-2.11/completions/../setup-symlinks.sh . java \
+	javac javadoc
+../../bash-completion-2.11/completions/../setup-symlinks.sh . koji \
+	arm-koji ppc-koji s390-koji sparc-koji
+../../bash-completion-2.11/completions/../setup-symlinks.sh . ldapsearch \
+	ldapadd ldapcompare ldapdelete ldapmodify ldapmodrdn \
+	ldappasswd ldapwhoami
+../../bash-completion-2.11/completions/../setup-symlinks.sh . links \
+	links2
+../../bash-completion-2.11/completions/../setup-symlinks.sh . lintian \
+	lintian-info
+../../bash-completion-2.11/completions/../setup-symlinks.sh . luseradd \
+	lusermod
+../../bash-completion-2.11/completions/../setup-symlinks.sh . lvm \
+	lvchange lvcreate lvdisplay lvextend lvmdiskscan lvreduce \
+	lvremove lvrename lvresize lvs lvscan pvchange pvcreate \
+	pvdisplay pvmove pvremove pvs pvscan vgcfgbackup vgcfgrestore \
+	vgchange vgck vgconvert vgcreate vgdisplay vgexport vgextend \
+	vgimport vgmerge vgmknodes vgreduce vgremove vgrename vgs \
+	vgscan vgsplit
+../../bash-completion-2.11/completions/../setup-symlinks.sh . lz4 \
+	lz4c
+../../bash-completion-2.11/completions/../setup-symlinks.sh . lzip \
+	clzip pdlzip plzip
+../../bash-completion-2.11/completions/../setup-symlinks.sh . make \
+	bmake colormake gmake gnumake pmake
+../../bash-completion-2.11/completions/../setup-symlinks.sh . man \
+	apropos whatis
+../../bash-completion-2.11/completions/../setup-symlinks.sh . mcrypt \
+	mdecrypt
+../../bash-completion-2.11/completions/../setup-symlinks.sh . mplayer \
+	gmplayer kplayer mencoder mplayer2
+../../bash-completion-2.11/completions/../setup-symlinks.sh . mutt \
+	muttng
+../../bash-completion-2.11/completions/../setup-symlinks.sh . nslookup \
+	host
+../../bash-completion-2.11/completions/../setup-symlinks.sh . p4 \
+	g4
+../../bash-completion-2.11/completions/../setup-symlinks.sh . perl \
+	perldoc
+../../bash-completion-2.11/completions/../setup-symlinks.sh . pine \
+	alpine
+../../bash-completion-2.11/completions/../setup-symlinks.sh . ping \
+	ping6
+../../bash-completion-2.11/completions/../setup-symlinks.sh . pkg_delete \
+	pkg_deinstall pkg_info
+../../bash-completion-2.11/completions/../setup-symlinks.sh . pgrep \
+	pkill
+../../bash-completion-2.11/completions/../setup-symlinks.sh . pm-hibernate \
+	pm-suspend pm-suspend-hybrid
+../../bash-completion-2.11/completions/../setup-symlinks.sh . psql \
+	createdb createuser dropdb dropuser
+../../bash-completion-2.11/completions/../setup-symlinks.sh . postmap \
+	postalias
+../../bash-completion-2.11/completions/../setup-symlinks.sh . povray \
+	spovray xpovray
+../../bash-completion-2.11/completions/../setup-symlinks.sh . puppet \
+	filebucket puppetca puppetd puppetdoc puppetmasterd puppetqd \
+	puppetrun ralsh
+../../bash-completion-2.11/completions/../setup-symlinks.sh . pytest \
+	py.test py.test-2 py.test-3 pytest-2 pytest-3
+../../bash-completion-2.11/completions/../setup-symlinks.sh . pydoc \
+	pydoc3
+../../bash-completion-2.11/completions/../setup-symlinks.sh . pylint \
+	pylint-2 pylint-3
+../../bash-completion-2.11/completions/../setup-symlinks.sh . python \
+	micropython pypy pypy3 python2 python2.7 python3 python3.3 python3.4 python3.5 python3.6 python3.7 python3.8
+../../bash-completion-2.11/completions/../setup-symlinks.sh . pyvenv \
+	pyvenv-3.4 pyvenv-3.5 pyvenv-3.6 pyvenv-3.7 pyvenv-3.8
+../../bash-completion-2.11/completions/../setup-symlinks.sh . qdbus \
+	dcop
+../../bash-completion-2.11/completions/../setup-symlinks.sh . qemu \
+	qemu-kvm qemu-system-i386 qemu-system-x86_64
+../../bash-completion-2.11/completions/../setup-symlinks.sh . quota \
+	edquota quotacheck quotaoff quotaon repquota setquota
+../../bash-completion-2.11/completions/../setup-symlinks.sh . rcs \
+	ci co rcsdiff rlog
+../../bash-completion-2.11/completions/../setup-symlinks.sh . rpm \
+	rpmbuild rpmbuild-md5
+../../bash-completion-2.11/completions/../setup-symlinks.sh . rpm2tgz \
+	rpm2targz rpm2txz
+../../bash-completion-2.11/completions/../setup-symlinks.sh . smbclient \
+	smbcacls smbcquotas smbget smbpasswd smbtar smbtree
+../../bash-completion-2.11/completions/../setup-symlinks.sh . sbcl \
+	sbcl-mt
+../../bash-completion-2.11/completions/../setup-symlinks.sh . ssh \
+	autossh scp sftp sidedoor slogin
+../../bash-completion-2.11/completions/../setup-symlinks.sh . sudo \
+	sudoedit
+../../bash-completion-2.11/completions/../setup-symlinks.sh . tar \
+	bsdtar gtar star
+../../bash-completion-2.11/completions/../setup-symlinks.sh . tracepath \
+	tracepath6
+../../bash-completion-2.11/completions/../setup-symlinks.sh . update-alternatives \
+	alternatives
+../../bash-completion-2.11/completions/../setup-symlinks.sh . vipw \
+	vigr
+../../bash-completion-2.11/completions/../setup-symlinks.sh . vncviewer \
+	tightvncviewer xvnc4viewer
+../../bash-completion-2.11/completions/../setup-symlinks.sh . wine \
+	wine-development wine-stable
+../../bash-completion-2.11/completions/../setup-symlinks.sh . wodim \
+	cdrecord
+../../bash-completion-2.11/completions/../setup-symlinks.sh . xz \
+	pxz
+../../bash-completion-2.11/completions/../setup-symlinks.sh . ypmatch \
+	ypcat
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/build/completions'
+make[2]: Nothing to be done for 'install-exec-am'.
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../../bash-completion-2.11/completions/2to3 ../../bash-completion-2.11/completions/7z ../../bash-completion-2.11/completions/a2x ../../bash-completion-2.11/completions/abook ../../bash-completion-2.11/completions/aclocal ../../bash-completion-2.11/completions/acpi ../../bash-completion-2.11/completions/_adb ../../bash-completion-2.11/completions/add_members ../../bash-completion-2.11/completions/alias ../../bash-completion-2.11/completions/ant ../../bash-completion-2.11/completions/apache2ctl ../../bash-completion-2.11/completions/appdata-validate ../../bash-completion-2.11/completions/apt-build ../../bash-completion-2.11/completions/apt-cache ../../bash-completion-2.11/completions/apt-get ../../bash-completion-2.11/completions/aptitude ../../bash-completion-2.11/completions/arch ../../bash-completion-2.11/completions/arp ../../bash-completion-2.11/completions/arping ../../bash-completion-2.11/completions/arpspoof ../../bash-completion-2.11/completions/asciidoc ../../bash-completion-2.11/completions/aspell ../../bash-completion-2.11/completions/autoconf ../../bash-completion-2.11/completions/automake ../../bash-completion-2.11/completions/autoreconf ../../bash-completion-2.11/completions/autorpm ../../bash-completion-2.11/completions/autoscan ../../bash-completion-2.11/completions/avctrl ../../bash-completion-2.11/completions/badblocks ../../bash-completion-2.11/completions/bind ../../bash-completion-2.11/completions/bk ../../bash-completion-2.11/completions/brctl ../../bash-completion-2.11/completions/btdownloadheadless.py ../../bash-completion-2.11/completions/bts ../../bash-completion-2.11/completions/bzip2 ../../bash-completion-2.11/completions/_cal ../../bash-completion-2.11/completions/cancel ../../bash-completion-2.11/completions/cardctl ../../bash-completion-2.11/completions/carton ../../bash-completion-2.11/completions/ccache '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../../bash-completion-2.11/completions/ccze ../../bash-completion-2.11/completions/cfagent ../../bash-completion-2.11/completions/cfrun ../../bash-completion-2.11/completions/chage ../../bash-completion-2.11/completions/change_pw ../../bash-completion-2.11/completions/check_db ../../bash-completion-2.11/completions/check_perms ../../bash-completion-2.11/completions/checksec ../../bash-completion-2.11/completions/_chfn ../../bash-completion-2.11/completions/chgrp ../../bash-completion-2.11/completions/chkconfig ../../bash-completion-2.11/completions/chmod ../../bash-completion-2.11/completions/chown ../../bash-completion-2.11/completions/chpasswd ../../bash-completion-2.11/completions/chromium-browser ../../bash-completion-2.11/completions/chronyc ../../bash-completion-2.11/completions/chrpath ../../bash-completion-2.11/completions/_chsh ../../bash-completion-2.11/completions/cksfv ../../bash-completion-2.11/completions/cleanarch ../../bash-completion-2.11/completions/clisp ../../bash-completion-2.11/completions/clone_member ../../bash-completion-2.11/completions/complete ../../bash-completion-2.11/completions/config_list ../../bash-completion-2.11/completions/configure ../../bash-completion-2.11/completions/convert ../../bash-completion-2.11/completions/cowsay ../../bash-completion-2.11/completions/cpan2dist ../../bash-completion-2.11/completions/cpio ../../bash-completion-2.11/completions/cppcheck ../../bash-completion-2.11/completions/crontab ../../bash-completion-2.11/completions/cryptsetup ../../bash-completion-2.11/completions/curl ../../bash-completion-2.11/completions/cvs ../../bash-completion-2.11/completions/cvsps ../../bash-completion-2.11/completions/dd ../../bash-completion-2.11/completions/deja-dup ../../bash-completion-2.11/completions/desktop-file-validate ../../bash-completion-2.11/completions/dhclient ../../bash-completion-2.11/completions/dict '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../../bash-completion-2.11/completions/_dmesg ../../bash-completion-2.11/completions/dmypy ../../bash-completion-2.11/completions/dnssec-keygen ../../bash-completion-2.11/completions/dnsspoof ../../bash-completion-2.11/completions/dot ../../bash-completion-2.11/completions/dpkg ../../bash-completion-2.11/completions/dpkg-source ../../bash-completion-2.11/completions/dselect ../../bash-completion-2.11/completions/dsniff ../../bash-completion-2.11/completions/dumpdb ../../bash-completion-2.11/completions/dumpe2fs ../../bash-completion-2.11/completions/e2freefrag ../../bash-completion-2.11/completions/e2label ../../bash-completion-2.11/completions/ebtables ../../bash-completion-2.11/completions/ecryptfs-migrate-home ../../bash-completion-2.11/completions/_eject ../../bash-completion-2.11/completions/eog ../../bash-completion-2.11/completions/ether-wake ../../bash-completion-2.11/completions/evince ../../bash-completion-2.11/completions/explodepkg ../../bash-completion-2.11/completions/export ../../bash-completion-2.11/completions/faillog ../../bash-completion-2.11/completions/fbgs ../../bash-completion-2.11/completions/fbi ../../bash-completion-2.11/completions/feh ../../bash-completion-2.11/completions/file ../../bash-completion-2.11/completions/file-roller ../../bash-completion-2.11/completions/filefrag ../../bash-completion-2.11/completions/filesnarf ../../bash-completion-2.11/completions/find ../../bash-completion-2.11/completions/find_member ../../bash-completion-2.11/completions/fio ../../bash-completion-2.11/completions/firefox ../../bash-completion-2.11/completions/flake8 ../../bash-completion-2.11/completions/freebsd-update ../../bash-completion-2.11/completions/freeciv ../../bash-completion-2.11/completions/freeciv-server ../../bash-completion-2.11/completions/function ../../bash-completion-2.11/completions/fusermount ../../bash-completion-2.11/completions/gcc '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../../bash-completion-2.11/completions/gcl ../../bash-completion-2.11/completions/gdb ../../bash-completion-2.11/completions/genaliases ../../bash-completion-2.11/completions/gendiff ../../bash-completion-2.11/completions/genisoimage ../../bash-completion-2.11/completions/geoiplookup ../../bash-completion-2.11/completions/getconf ../../bash-completion-2.11/completions/getent ../../bash-completion-2.11/completions/gkrellm ../../bash-completion-2.11/completions/gm ../../bash-completion-2.11/completions/gnatmake ../../bash-completion-2.11/completions/gnokii ../../bash-completion-2.11/completions/gnome-mplayer ../../bash-completion-2.11/completions/gnome-screenshot ../../bash-completion-2.11/completions/gpasswd ../../bash-completion-2.11/completions/gpg ../../bash-completion-2.11/completions/gpg2 ../../bash-completion-2.11/completions/gpgv ../../bash-completion-2.11/completions/gphoto2 ../../bash-completion-2.11/completions/gprof ../../bash-completion-2.11/completions/groupadd ../../bash-completion-2.11/completions/groupdel ../../bash-completion-2.11/completions/groupmems ../../bash-completion-2.11/completions/groupmod ../../bash-completion-2.11/completions/growisofs ../../bash-completion-2.11/completions/grpck ../../bash-completion-2.11/completions/gssdp-discover ../../bash-completion-2.11/completions/gzip ../../bash-completion-2.11/completions/hcitool ../../bash-completion-2.11/completions/hddtemp ../../bash-completion-2.11/completions/_hexdump ../../bash-completion-2.11/completions/hid2hci ../../bash-completion-2.11/completions/hostname ../../bash-completion-2.11/completions/hping2 ../../bash-completion-2.11/completions/htop ../../bash-completion-2.11/completions/htpasswd ../../bash-completion-2.11/completions/hunspell ../../bash-completion-2.11/completions/_hwclock ../../bash-completion-2.11/completions/iconv ../../bash-completion-2.11/completions/id '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../../bash-completion-2.11/completions/idn ../../bash-completion-2.11/completions/ifstat ../../bash-completion-2.11/completions/iftop ../../bash-completion-2.11/completions/ifup ../../bash-completion-2.11/completions/influx ../../bash-completion-2.11/completions/info ../../bash-completion-2.11/completions/inject ../../bash-completion-2.11/completions/inotifywait ../../bash-completion-2.11/completions/insmod ../../bash-completion-2.11/completions/installpkg ../../bash-completion-2.11/completions/interdiff ../../bash-completion-2.11/completions/invoke-rc.d ../../bash-completion-2.11/completions/_ionice ../../bash-completion-2.11/completions/ip ../../bash-completion-2.11/completions/ipcalc ../../bash-completion-2.11/completions/iperf ../../bash-completion-2.11/completions/ipmitool ../../bash-completion-2.11/completions/ipsec ../../bash-completion-2.11/completions/iptables ../../bash-completion-2.11/completions/ipv6calc ../../bash-completion-2.11/completions/iscsiadm ../../bash-completion-2.11/completions/isort ../../bash-completion-2.11/completions/isql ../../bash-completion-2.11/completions/iwconfig ../../bash-completion-2.11/completions/iwlist ../../bash-completion-2.11/completions/iwpriv ../../bash-completion-2.11/completions/iwspy ../../bash-completion-2.11/completions/jar ../../bash-completion-2.11/completions/jarsigner ../../bash-completion-2.11/completions/java ../../bash-completion-2.11/completions/javaws ../../bash-completion-2.11/completions/jq ../../bash-completion-2.11/completions/jpegoptim ../../bash-completion-2.11/completions/jps ../../bash-completion-2.11/completions/jshint ../../bash-completion-2.11/completions/json_xs ../../bash-completion-2.11/completions/jsonschema ../../bash-completion-2.11/completions/k3b ../../bash-completion-2.11/completions/kcov ../../bash-completion-2.11/completions/kill '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../../bash-completion-2.11/completions/killall ../../bash-completion-2.11/completions/kldload ../../bash-completion-2.11/completions/kldunload ../../bash-completion-2.11/completions/koji ../../bash-completion-2.11/completions/ktutil ../../bash-completion-2.11/completions/larch ../../bash-completion-2.11/completions/lastlog ../../bash-completion-2.11/completions/ldapsearch ../../bash-completion-2.11/completions/ldapvi ../../bash-completion-2.11/completions/lftp ../../bash-completion-2.11/completions/lftpget ../../bash-completion-2.11/completions/lilo ../../bash-completion-2.11/completions/links ../../bash-completion-2.11/completions/lintian ../../bash-completion-2.11/completions/lisp ../../bash-completion-2.11/completions/list_admins ../../bash-completion-2.11/completions/list_lists ../../bash-completion-2.11/completions/list_members ../../bash-completion-2.11/completions/list_owners ../../bash-completion-2.11/completions/_look ../../bash-completion-2.11/completions/locale-gen ../../bash-completion-2.11/completions/lpq ../../bash-completion-2.11/completions/lpr ../../bash-completion-2.11/completions/lrzip ../../bash-completion-2.11/completions/lsof ../../bash-completion-2.11/completions/lsscsi ../../bash-completion-2.11/completions/lsusb ../../bash-completion-2.11/completions/lua ../../bash-completion-2.11/completions/luac ../../bash-completion-2.11/completions/luseradd ../../bash-completion-2.11/completions/luserdel ../../bash-completion-2.11/completions/lvm ../../bash-completion-2.11/completions/lz4 ../../bash-completion-2.11/completions/lzip ../../bash-completion-2.11/completions/lzma ../../bash-completion-2.11/completions/lzop ../../bash-completion-2.11/completions/macof ../../bash-completion-2.11/completions/mailmanctl ../../bash-completion-2.11/completions/make ../../bash-completion-2.11/completions/makepkg '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../../bash-completion-2.11/completions/man ../../bash-completion-2.11/completions/mc ../../bash-completion-2.11/completions/mcrypt ../../bash-completion-2.11/completions/mdadm ../../bash-completion-2.11/completions/mdtool ../../bash-completion-2.11/completions/medusa ../../bash-completion-2.11/completions/mii-diag ../../bash-completion-2.11/completions/mii-tool ../../bash-completion-2.11/completions/minicom ../../bash-completion-2.11/completions/mkinitrd ../../bash-completion-2.11/completions/mktemp ../../bash-completion-2.11/completions/mmsitepass ../../bash-completion-2.11/completions/_mock ../../bash-completion-2.11/completions/modinfo ../../bash-completion-2.11/completions/modprobe ../../bash-completion-2.11/completions/_modules ../../bash-completion-2.11/completions/monodevelop ../../bash-completion-2.11/completions/_mount ../../bash-completion-2.11/completions/_mount.linux ../../bash-completion-2.11/completions/mplayer ../../bash-completion-2.11/completions/mr ../../bash-completion-2.11/completions/msynctool ../../bash-completion-2.11/completions/mtx ../../bash-completion-2.11/completions/munindoc ../../bash-completion-2.11/completions/munin-node-configure ../../bash-completion-2.11/completions/munin-run ../../bash-completion-2.11/completions/munin-update ../../bash-completion-2.11/completions/mussh ../../bash-completion-2.11/completions/mutt ../../bash-completion-2.11/completions/mypy ../../bash-completion-2.11/completions/mysql ../../bash-completion-2.11/completions/mysqladmin ../../bash-completion-2.11/completions/nc ../../bash-completion-2.11/completions/ncftp ../../bash-completion-2.11/completions/nethogs ../../bash-completion-2.11/completions/_newgrp ../../bash-completion-2.11/completions/newlist ../../bash-completion-2.11/completions/newusers ../../bash-completion-2.11/completions/ngrep ../../bash-completion-2.11/completions/nmap '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../../bash-completion-2.11/completions/_nmcli ../../bash-completion-2.11/completions/nproc ../../bash-completion-2.11/completions/nslookup ../../bash-completion-2.11/completions/nsupdate ../../bash-completion-2.11/completions/ntpdate ../../bash-completion-2.11/completions/oggdec ../../bash-completion-2.11/completions/op ../../bash-completion-2.11/completions/openssl ../../bash-completion-2.11/completions/opera ../../bash-completion-2.11/completions/optipng ../../bash-completion-2.11/completions/p4 ../../bash-completion-2.11/completions/pack200 ../../bash-completion-2.11/completions/passwd ../../bash-completion-2.11/completions/patch ../../bash-completion-2.11/completions/pdftotext ../../bash-completion-2.11/completions/perl ../../bash-completion-2.11/completions/perlcritic ../../bash-completion-2.11/completions/perltidy ../../bash-completion-2.11/completions/pgrep ../../bash-completion-2.11/completions/pidof ../../bash-completion-2.11/completions/pine ../../bash-completion-2.11/completions/ping ../../bash-completion-2.11/completions/pkg-config ../../bash-completion-2.11/completions/pkg-get ../../bash-completion-2.11/completions/pkg_delete ../../bash-completion-2.11/completions/pkgadd ../../bash-completion-2.11/completions/pkgrm ../../bash-completion-2.11/completions/pkgtool ../../bash-completion-2.11/completions/pkgutil ../../bash-completion-2.11/completions/plague-client ../../bash-completion-2.11/completions/pm-hibernate ../../bash-completion-2.11/completions/pm-is-supported ../../bash-completion-2.11/completions/pm-powersave ../../bash-completion-2.11/completions/pngfix ../../bash-completion-2.11/completions/portinstall ../../bash-completion-2.11/completions/portsnap ../../bash-completion-2.11/completions/portupgrade ../../bash-completion-2.11/completions/postcat ../../bash-completion-2.11/completions/postconf ../../bash-completion-2.11/completions/postfix '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../../bash-completion-2.11/completions/postmap ../../bash-completion-2.11/completions/postsuper ../../bash-completion-2.11/completions/povray ../../bash-completion-2.11/completions/prelink ../../bash-completion-2.11/completions/printenv ../../bash-completion-2.11/completions/protoc ../../bash-completion-2.11/completions/psql ../../bash-completion-2.11/completions/puppet ../../bash-completion-2.11/completions/pv ../../bash-completion-2.11/completions/pwck ../../bash-completion-2.11/completions/pwd ../../bash-completion-2.11/completions/pwdx ../../bash-completion-2.11/completions/pwgen ../../bash-completion-2.11/completions/pycodestyle ../../bash-completion-2.11/completions/pydoc ../../bash-completion-2.11/completions/pydocstyle ../../bash-completion-2.11/completions/pyflakes ../../bash-completion-2.11/completions/pylint ../../bash-completion-2.11/completions/pytest ../../bash-completion-2.11/completions/python ../../bash-completion-2.11/completions/pyvenv ../../bash-completion-2.11/completions/qdbus ../../bash-completion-2.11/completions/qemu ../../bash-completion-2.11/completions/qrunner ../../bash-completion-2.11/completions/querybts ../../bash-completion-2.11/completions/quota ../../bash-completion-2.11/completions/radvdump ../../bash-completion-2.11/completions/rcs ../../bash-completion-2.11/completions/rdesktop ../../bash-completion-2.11/completions/remove_members ../../bash-completion-2.11/completions/removepkg ../../bash-completion-2.11/completions/_renice ../../bash-completion-2.11/completions/_repomanage ../../bash-completion-2.11/completions/reportbug ../../bash-completion-2.11/completions/_reptyr ../../bash-completion-2.11/completions/resolvconf ../../bash-completion-2.11/completions/_rfkill ../../bash-completion-2.11/completions/ri ../../bash-completion-2.11/completions/rmlist ../../bash-completion-2.11/completions/rmmod '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../../bash-completion-2.11/completions/route ../../bash-completion-2.11/completions/rpcdebug ../../bash-completion-2.11/completions/rpm ../../bash-completion-2.11/completions/rpm2tgz ../../bash-completion-2.11/completions/rpmcheck ../../bash-completion-2.11/completions/rrdtool ../../bash-completion-2.11/completions/rsync ../../bash-completion-2.11/completions/_rtcwake ../../bash-completion-2.11/completions/_runuser ../../bash-completion-2.11/completions/sbcl ../../bash-completion-2.11/completions/sbopkg ../../bash-completion-2.11/completions/screen ../../bash-completion-2.11/completions/scrub ../../bash-completion-2.11/completions/secret-tool ../../bash-completion-2.11/completions/sh ../../bash-completion-2.11/completions/shellcheck ../../bash-completion-2.11/completions/sitecopy ../../bash-completion-2.11/completions/slackpkg ../../bash-completion-2.11/completions/slapt-get ../../bash-completion-2.11/completions/slapt-src ../../bash-completion-2.11/completions/smartctl ../../bash-completion-2.11/completions/smbclient ../../bash-completion-2.11/completions/snownews ../../bash-completion-2.11/completions/sqlite3 ../../bash-completion-2.11/completions/ss ../../bash-completion-2.11/completions/ssh ../../bash-completion-2.11/completions/ssh-add ../../bash-completion-2.11/completions/ssh-copy-id ../../bash-completion-2.11/completions/ssh-keygen ../../bash-completion-2.11/completions/sshfs ../../bash-completion-2.11/completions/sshmitm ../../bash-completion-2.11/completions/sshow ../../bash-completion-2.11/completions/strace ../../bash-completion-2.11/completions/strings ../../bash-completion-2.11/completions/_su ../../bash-completion-2.11/completions/sudo ../../bash-completion-2.11/completions/svcadm ../../bash-completion-2.11/completions/svk ../../bash-completion-2.11/completions/_svn ../../bash-completion-2.11/completions/_svnadmin '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../../bash-completion-2.11/completions/_svnlook ../../bash-completion-2.11/completions/sync_members ../../bash-completion-2.11/completions/synclient ../../bash-completion-2.11/completions/sysbench ../../bash-completion-2.11/completions/sysctl ../../bash-completion-2.11/completions/tar ../../bash-completion-2.11/completions/tcpdump ../../bash-completion-2.11/completions/tcpkill ../../bash-completion-2.11/completions/tcpnice ../../bash-completion-2.11/completions/timeout ../../bash-completion-2.11/completions/tipc ../../bash-completion-2.11/completions/tox ../../bash-completion-2.11/completions/tracepath ../../bash-completion-2.11/completions/tshark ../../bash-completion-2.11/completions/tsig-keygen ../../bash-completion-2.11/completions/tune2fs ../../bash-completion-2.11/completions/_udevadm ../../bash-completion-2.11/completions/ulimit ../../bash-completion-2.11/completions/_umount ../../bash-completion-2.11/completions/_umount.linux ../../bash-completion-2.11/completions/unace ../../bash-completion-2.11/completions/unpack200 ../../bash-completion-2.11/completions/unrar ../../bash-completion-2.11/completions/unshunt ../../bash-completion-2.11/completions/update-alternatives ../../bash-completion-2.11/completions/update-rc.d ../../bash-completion-2.11/completions/upgradepkg ../../bash-completion-2.11/completions/urlsnarf ../../bash-completion-2.11/completions/useradd ../../bash-completion-2.11/completions/userdel ../../bash-completion-2.11/completions/usermod ../../bash-completion-2.11/completions/valgrind ../../bash-completion-2.11/completions/vipw ../../bash-completion-2.11/completions/vmstat ../../bash-completion-2.11/completions/vncviewer ../../bash-completion-2.11/completions/vpnc ../../bash-completion-2.11/completions/watch ../../bash-completion-2.11/completions/webmitm ../../bash-completion-2.11/completions/wget ../../bash-completion-2.11/completions/wine '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../../bash-completion-2.11/completions/withlist ../../bash-completion-2.11/completions/wodim ../../bash-completion-2.11/completions/wol ../../bash-completion-2.11/completions/_write ../../bash-completion-2.11/completions/wsimport ../../bash-completion-2.11/completions/wtf ../../bash-completion-2.11/completions/wvdial ../../bash-completion-2.11/completions/xdg-mime ../../bash-completion-2.11/completions/xdg-settings ../../bash-completion-2.11/completions/xfreerdp ../../bash-completion-2.11/completions/xgamma ../../bash-completion-2.11/completions/xhost ../../bash-completion-2.11/completions/_xm ../../bash-completion-2.11/completions/xmllint ../../bash-completion-2.11/completions/xmlwf ../../bash-completion-2.11/completions/xmms ../../bash-completion-2.11/completions/xmodmap ../../bash-completion-2.11/completions/xrandr ../../bash-completion-2.11/completions/xrdb ../../bash-completion-2.11/completions/xsltproc ../../bash-completion-2.11/completions/xvfb-run ../../bash-completion-2.11/completions/xxd ../../bash-completion-2.11/completions/xz ../../bash-completion-2.11/completions/xzdec ../../bash-completion-2.11/completions/ypmatch ../../bash-completion-2.11/completions/_yum ../../bash-completion-2.11/completions/yum-arch ../../bash-completion-2.11/completions/zopfli ../../bash-completion-2.11/completions/zopflipng '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions'
+make  install-data-hook
+make[3]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/build/completions'
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions 7z \
+	7za
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions aclocal \
+	aclocal-1.10 aclocal-1.11 aclocal-1.12 aclocal-1.13 \
+	aclocal-1.14 aclocal-1.15 aclocal-1.16
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions ant \
+	phing
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions aptitude \
+	aptitude-curses
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions asciidoc \
+	asciidoc.py
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions automake \
+	automake-1.10 automake-1.11 automake-1.12 automake-1.13 \
+	automake-1.14 automake-1.15 automake-1.16
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions autoreconf \
+	autoheader
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions autoscan \
+	autoupdate
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions btdownloadheadless.py \
+	btdownloadcurses.py btdownloadgui.py
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions bzip2 \
+	lbzip2 pbzip2
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions _cal \
+	ncal
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions cardctl \
+	pccardctl
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions chromium-browser \
+	chrome chromium google-chrome google-chrome-stable
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions complete \
+	compgen
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions convert \
+	animate compare composite conjure display identify import \
+	mogrify montage stream
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions cowsay \
+	cowthink
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions dict \
+	rdict
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions dpkg \
+	dpkg-deb dpkg-query dpkg-reconfigure
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions ether-wake \
+	etherwake
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions filesnarf \
+	mailsnarf msgsnarf
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions firefox \
+	iceweasel mozilla-firefox
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions freeciv \
+	civclient freeciv-gtk2 freeciv-gtk3 freeciv-sdl freeciv-xaw
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions freeciv-server \
+	civserver
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions function \
+	declare typeset
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions gcc \
+	c++ cc f77 f95 g++ g++-5 g++-6 g++-7 g++-8 g77 g95 gcc-5 \
+	gcc-6 gcc-7 gcc-8 gccgo gccgo-5 gccgo-6 gccgo-7 gccgo-8 gcj \
+	gfortran gfortran-5 gfortran-6 gfortran-7 gfortran-8 gpc
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions genisoimage \
+	mkisofs
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions geoiplookup \
+	geoiplookup6
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions gkrellm \
+	gkrellm2
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions gpgv \
+	gpgv2
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions gzip \
+	pigz
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions hcitool \
+	ciptool dfutool hciattach hciconfig l2ping rfcomm sdptool
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions _hexdump \
+	hd
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions hping2 \
+	hping hping3
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions ifup \
+	ifdown ifquery ifstatus
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions info \
+	pinfo
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions inotifywait \
+	inotifywatch
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions insmod \
+	insmod.static
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions iperf \
+	iperf3
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions java \
+	javac javadoc
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions koji \
+	arm-koji ppc-koji s390-koji sparc-koji
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions ldapsearch \
+	ldapadd ldapcompare ldapdelete ldapmodify ldapmodrdn \
+	ldappasswd ldapwhoami
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions links \
+	links2
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions lintian \
+	lintian-info
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions luseradd \
+	lusermod
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions lvm \
+	lvchange lvcreate lvdisplay lvextend lvmdiskscan lvreduce \
+	lvremove lvrename lvresize lvs lvscan pvchange pvcreate \
+	pvdisplay pvmove pvremove pvs pvscan vgcfgbackup vgcfgrestore \
+	vgchange vgck vgconvert vgcreate vgdisplay vgexport vgextend \
+	vgimport vgmerge vgmknodes vgreduce vgremove vgrename vgs \
+	vgscan vgsplit
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions lz4 \
+	lz4c
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions lzip \
+	clzip pdlzip plzip
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions make \
+	bmake colormake gmake gnumake pmake
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions man \
+	apropos whatis
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions mcrypt \
+	mdecrypt
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions mplayer \
+	gmplayer kplayer mencoder mplayer2
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions mutt \
+	muttng
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions nslookup \
+	host
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions p4 \
+	g4
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions perl \
+	perldoc
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions pine \
+	alpine
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions ping \
+	ping6
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions pkg_delete \
+	pkg_deinstall pkg_info
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions pgrep \
+	pkill
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions pm-hibernate \
+	pm-suspend pm-suspend-hybrid
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions psql \
+	createdb createuser dropdb dropuser
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions postmap \
+	postalias
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions povray \
+	spovray xpovray
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions puppet \
+	filebucket puppetca puppetd puppetdoc puppetmasterd puppetqd \
+	puppetrun ralsh
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions pytest \
+	py.test py.test-2 py.test-3 pytest-2 pytest-3
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions pydoc \
+	pydoc3
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions pylint \
+	pylint-2 pylint-3
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions python \
+	micropython pypy pypy3 python2 python2.7 python3 python3.3 python3.4 python3.5 python3.6 python3.7 python3.8
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions pyvenv \
+	pyvenv-3.4 pyvenv-3.5 pyvenv-3.6 pyvenv-3.7 pyvenv-3.8
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions qdbus \
+	dcop
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions qemu \
+	qemu-kvm qemu-system-i386 qemu-system-x86_64
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions quota \
+	edquota quotacheck quotaoff quotaon repquota setquota
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions rcs \
+	ci co rcsdiff rlog
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions rpm \
+	rpmbuild rpmbuild-md5
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions rpm2tgz \
+	rpm2targz rpm2txz
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions smbclient \
+	smbcacls smbcquotas smbget smbpasswd smbtar smbtree
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions sbcl \
+	sbcl-mt
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions ssh \
+	autossh scp sftp sidedoor slogin
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions sudo \
+	sudoedit
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions tar \
+	bsdtar gtar star
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions tracepath \
+	tracepath6
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions update-alternatives \
+	alternatives
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions vipw \
+	vigr
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions vncviewer \
+	tightvncviewer xvnc4viewer
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions wine \
+	wine-development wine-stable
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions wodim \
+	cdrecord
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions xz \
+	pxz
+../../bash-completion-2.11/completions/../setup-symlinks.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/completions ypmatch \
+	ypcat
+make[3]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/build/completions'
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/build/completions'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/build/completions'
+Making install in doc
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/build/doc'
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/build/doc'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/build/doc'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/build/doc'
+Making install in helpers
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/build/helpers'
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/build/helpers'
+make[2]: Nothing to be done for 'install-exec-am'.
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/helpers'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../../bash-completion-2.11/helpers/perl ../../bash-completion-2.11/helpers/python '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/helpers'
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/build/helpers'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/build/helpers'
+Making install in test
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/build/test'
+Making install in t
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/build/test/t'
+Making install in unit
+make[3]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/build/test/t/unit'
+make[4]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/build/test/t/unit'
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/build/test/t/unit'
+make[3]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/build/test/t/unit'
+make[3]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/build/test/t'
+make[4]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/build/test/t'
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/build/test/t'
+make[3]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/build/test/t'
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/build/test/t'
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/build/test'
+make[3]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/build/test'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/build/test'
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/build/test'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/build/test'
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/build'
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/build'
+make[2]: Nothing to be done for 'install-exec-am'.
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/cmake/bash-completion/'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 bash-completion-config.cmake bash-completion-config-version.cmake '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/cmake/bash-completion/'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/pkgconfig'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 bash-completion.pc '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/pkgconfig'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../bash-completion-2.11/bash_completion '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/etc/profile.d'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 bash_completion.sh '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/etc/profile.d'
+make  install-data-hook
+make[3]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/build'
+tmpfile=`mktemp ${TMPDIR:-/tmp}/bash_completion.XXXXXX` && \
+sed -e 's|-/etc/bash_completion\.d|-/etc/bash_completion.d|' \
+    /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/bash_completion >$tmpfile && \
+cat $tmpfile >/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/image/usr/share/bash-completion/bash_completion && \
+rm $tmpfile
+make[3]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/build'
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/build'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash-completion/2.11-r0/build'
+DEBUG: Shell function do_install finished
+DEBUG: Executing shell function remove_libtool_la
+DEBUG: Shell function remove_libtool_la finished

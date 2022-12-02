@@ -1,0 +1,85 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-extended/pam/libpam_1.3.1.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-extended/gperf/gperf_3.1.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-extended/xz/xz_5.2.7.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: []
+NOTE: Skipping as already exists in sysroot: ['glibc', 'gcc-cross-arm', 'gcc-runtime', 'quilt-native', 'libpam', 'patch-native', 'pseudo-native', 'gperf-native', 'xz-native', 'flex', 'libxcrypt', 'cracklib', 'linux-libc-headers', 'libgcc', 'libtool-native', 'gettext-minimal-native', 'flex-native', 'texinfo-dummy-native', 'zlib-native', 'zstd-native', 'binutils-cross-arm', 'mpfr-native', 'gnu-config-native', 'libmpc-native', 'gmp-native', 'attr-native', 'zlib', 'm4-native']
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing shell function do_install
+NOTE: make -j 1 INDENT= lib=lib RAISE_SETFCAP=no DYNAMIC=yes USE_GPERF=yes SYSTEM_HEADERS=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap/2.66-r0/recipe-sysroot/usr/include install PAM_CAP=yes DESTDIR=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap/2.66-r0/image prefix=/usr SBINDIR=/usr/sbin
+make -C libcap install
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap/2.66-r0/libcap-2.66/libcap'
+mkdir -p -m 0755 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap/2.66-r0/image/usr/include/sys
+mkdir -p -m 0755 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap/2.66-r0/image/usr/lib/pkgconfig
+mkdir -p -m 0755 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap/2.66-r0/image/usr/lib
+install -m 0644 include/sys/capability.h /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap/2.66-r0/image/usr/include/sys
+install -m 0644 libcap.pc /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap/2.66-r0/image/usr/lib/pkgconfig/libcap.pc
+install -m 0644 libcap.a /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap/2.66-r0/image/usr/lib/libcap.a
+make install-static-psx
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap/2.66-r0/libcap-2.66/libcap'
+mkdir -p -m 0755 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap/2.66-r0/image/usr/include/sys
+mkdir -p -m 0755 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap/2.66-r0/image/usr/lib/pkgconfig
+mkdir -p -m 0755 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap/2.66-r0/image/usr/lib
+install -m 0644 include/sys/psx_syscall.h /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap/2.66-r0/image/usr/include/sys
+install -m 0644 libpsx.pc /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap/2.66-r0/image/usr/lib/pkgconfig/libpsx.pc
+install -m 0644 libpsx.a /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap/2.66-r0/image/usr/lib/libpsx.a
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap/2.66-r0/libcap-2.66/libcap'
+make install-shared
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap/2.66-r0/libcap-2.66/libcap'
+mkdir -p -m 0755 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap/2.66-r0/image/usr/include/sys
+mkdir -p -m 0755 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap/2.66-r0/image/usr/lib/pkgconfig
+mkdir -p -m 0755 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap/2.66-r0/image/usr/lib
+install -m 0644 include/sys/capability.h /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap/2.66-r0/image/usr/include/sys
+install -m 0644 libcap.pc /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap/2.66-r0/image/usr/lib/pkgconfig/libcap.pc
+install -m 0755 libcap.so.2.66 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap/2.66-r0/image/usr/lib/libcap.so.2.66
+ln -sf libcap.so.2.66 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap/2.66-r0/image/usr/lib/libcap.so.2
+ln -sf libcap.so.2 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap/2.66-r0/image/usr/lib/libcap.so
+make install-shared-psx
+make[3]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap/2.66-r0/libcap-2.66/libcap'
+mkdir -p -m 0755 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap/2.66-r0/image/usr/include/sys
+mkdir -p -m 0755 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap/2.66-r0/image/usr/lib/pkgconfig
+mkdir -p -m 0755 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap/2.66-r0/image/usr/lib
+install -m 0644 include/sys/psx_syscall.h /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap/2.66-r0/image/usr/include/sys
+install -m 0644 libpsx.pc /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap/2.66-r0/image/usr/lib/pkgconfig/libpsx.pc
+install -m 0755 libpsx.so.2.66 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap/2.66-r0/image/usr/lib/libpsx.so.2.66
+ln -sf libpsx.so.2.66 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap/2.66-r0/image/usr/lib/libpsx.so.2
+ln -sf libpsx.so.2 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap/2.66-r0/image/usr/lib/libpsx.so
+make[3]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap/2.66-r0/libcap-2.66/libcap'
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap/2.66-r0/libcap-2.66/libcap'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap/2.66-r0/libcap-2.66/libcap'
+make -C pam_cap install
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap/2.66-r0/libcap-2.66/pam_cap'
+make testlink
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap/2.66-r0/libcap-2.66/pam_cap'
+make[2]: 'testlink' is up to date.
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap/2.66-r0/libcap-2.66/pam_cap'
+mkdir -p -m 0755 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap/2.66-r0/image/usr/lib/security
+install -m 0755 pam_cap.so /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap/2.66-r0/image/usr/lib/security
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap/2.66-r0/libcap-2.66/pam_cap'
+make -C tests install
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap/2.66-r0/libcap-2.66/tests'
+nothing to install from tests
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap/2.66-r0/libcap-2.66/tests'
+make -C progs install
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap/2.66-r0/libcap-2.66/progs'
+mkdir -p -m 0755 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap/2.66-r0/image/usr/sbin
+for p in getpcaps getcap setcap capsh ; do \
+	install -m 0755 $p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap/2.66-r0/image/usr/sbin ; \
+done
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap/2.66-r0/libcap-2.66/progs'
+make -C doc install
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap/2.66-r0/libcap-2.66/doc'
+mkdir -p -m 755 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap/2.66-r0/image/usr/share/man/man1 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap/2.66-r0/image/usr/share/man/man3 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap/2.66-r0/image/usr/share/man/man8
+for man in \
+	/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap/2.66-r0/image/usr/share/man/man1 capsh.1 \
+	/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap/2.66-r0/image/usr/share/man/man3 cap_init.3 cap_free.3 cap_dup.3 cap_clear.3 cap_clear_flag.3 cap_get_flag.3 cap_set_flag.3 cap_fill.3 cap_fill_flag.3 cap_max_bits.3 cap_compare.3 cap_get_proc.3 cap_get_pid.3 cap_set_proc.3 cap_get_file.3 cap_get_fd.3 cap_set_file.3 cap_set_fd.3 cap_copy_ext.3 cap_size.3 cap_copy_int.3 cap_mode.3 cap_from_text.3 cap_to_text.3 cap_from_name.3 cap_to_name.3 capsetp.3 capgetp.3 libcap.3 cap_get_bound.3 cap_drop_bound.3 cap_get_mode.3 cap_set_mode.3 cap_mode_name.3 cap_get_secbits.3 cap_set_secbits.3 cap_setuid.3 cap_setgroups.3 cap_launch.3 cap_func_launcher.3 cap_launcher_callback.3 cap_launcher_set_chroot.3 cap_launcher_set_mode.3 cap_launcher_setgroups.3 cap_launcher_setuid.3 cap_launcher_set_iab.3 cap_new_launcher.3 cap_iab.3 cap_iab_init.3 cap_iab_dup.3 cap_iab_compare.3 cap_iab_get_proc.3 cap_iab_get_pid.3 cap_iab_set_proc.3 cap_iab_to_text.3 cap_iab_from_text.3 cap_iab_get_vector.3 cap_iab_set_vector.3 cap_iab_fill.3 psx_syscall.3 psx_syscall3.3 psx_syscall6.3 psx_set_sensitivity.3 libpsx.3 \
+	/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap/2.66-r0/image/usr/share/man/man8 getcap.8 setcap.8 getpcaps.8 captree.8 \
+	; \
+do \
+	case $man in \
+	/*)	sub=$man ; continue ;; \
+	esac; \
+	install -m 644 $man $sub ; \
+done
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libcap/2.66-r0/libcap-2.66/doc'
+DEBUG: Shell function do_install finished
+DEBUG: Executing shell function remove_libtool_la
+DEBUG: Shell function remove_libtool_la finished

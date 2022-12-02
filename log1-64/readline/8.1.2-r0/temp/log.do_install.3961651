@@ -1,0 +1,117 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses_6.3+20220423.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-cross_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-native_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/opkg-utils/opkg-utils_0.5.0.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-extended/texinfo-dummy-native/texinfo-dummy-native.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/autoconf/autoconf_2.71.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/automake/automake_1.16.5.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: []
+NOTE: Skipping as already exists in sysroot: ['glibc', 'ncurses', 'gcc-cross-arm', 'gcc-runtime', 'libtool-cross', 'libtool-native', 'opkg-utils', 'quilt-native', 'texinfo-dummy-native', 'autoconf-native', 'automake-native', 'patch-native', 'pseudo-native', 'gnu-config-native', 'm4-native', 'libgcc', 'linux-libc-headers', 'attr-native', 'binutils-cross-arm', 'zstd-native', 'mpfr-native', 'libmpc-native', 'flex-native', 'xz-native', 'zlib-native', 'gmp-native', 'gettext-minimal-native']
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function autotools_aclocals
+DEBUG: SITE files ['endian-little', 'bit-32', 'arm-common', 'arm-32', 'common-linux', 'common-glibc', 'arm-linux', 'arm-linux-gnueabi', 'common']
+DEBUG: Python function autotools_aclocals finished
+DEBUG: Executing shell function do_install
+NOTE: make -j 1 DESTDIR=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/image install
+/bin/sh ../readline-8.1.2/support/mkinstalldirs /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/image/usr/include \
+	/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/image/usr/include/readline /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/image/usr/lib \
+	/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/image/usr/share/info /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/image/usr/share/man/man3 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/image/usr/share/doc/readline \
+	/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/image/usr/lib/pkgconfig
+mkdir -p -- /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/image/usr/include /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/image/usr/include/readline /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/image/usr/lib /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/image/usr/share/info /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/image/usr/share/man/man3 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/image/usr/share/doc/readline /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/image/usr/lib/pkgconfig
+for f in readline.h chardefs.h keymaps.h history.h tilde.h rlstdc.h rlconf.h rltypedefs.h; do \
+	/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../readline-8.1.2/$f /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/image/usr/include/readline ; \
+done
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../readline-8.1.2/CHANGES ../readline-8.1.2/INSTALL ../readline-8.1.2/README /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/image/usr/share/doc/readline
+( if test -d doc ; then \
+	cd doc && \
+	make -j1 infodir=/usr/share/info DESTDIR=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/image install; \
+  fi )
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/build/doc'
+/bin/sh ../../readline-8.1.2/support/mkdirs /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/image/usr/share/info /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/image/usr/share/man/man3
+if test -n "" ; then \
+	/bin/sh ../../readline-8.1.2/support/mkdirs /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/image ; \
+fi
+if test -f readline.info; then \
+	/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 readline.info /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/image/usr/share/info/readline.info; \
+else \
+	/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../../readline-8.1.2/doc/readline.info /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/image/usr/share/info/readline.info; \
+fi
+if test -f rluserman.info; then \
+	/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 rluserman.info /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/image/usr/share/info/rluserman.info; \
+else \
+	/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../../readline-8.1.2/doc/rluserman.info /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/image/usr/share/info/rluserman.info; \
+fi
+if test -f history.info; then \
+	/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 history.info /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/image/usr/share/info/history.info; \
+else \
+	/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../../readline-8.1.2/doc/history.info /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/image/usr/share/info/history.info; \
+fi
+if /bin/sh -c 'install-info --version' >/dev/null 2>&1; then \
+	install-info --dir-file=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/image/usr/share/info/dir \
+		/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/image/usr/share/info/readline.info ; \
+	install-info --dir-file=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/image/usr/share/info/dir \
+		/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/image/usr/share/info/history.info ; \
+	install-info --dir-file=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/image/usr/share/info/dir \
+		/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/image/usr/share/info/rluserman.info ; \
+else true; fi
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../../readline-8.1.2/doc/readline.3 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/image/usr/share/man/man3/readline.3
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../../readline-8.1.2/doc/history.3 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/image/usr/share/man/man3/history.3
+if test -n "" ; then \
+	if test -f readline.html; then \
+		/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 readline.html /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/image/readline.html; \
+	else \
+		/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../../readline-8.1.2/doc/readline.html /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/image/readline.html; \
+	fi ; \
+	if test -f history.html; then \
+		/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 history.html /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/image/history.html; \
+	else \
+		/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../../readline-8.1.2/doc/history.html /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/image/history.html; \
+	fi ; \
+	if test -f rluserman.html; then \
+		/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 rluserman.html /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/image/rluserman.html; \
+	else \
+		/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../../readline-8.1.2/doc/rluserman.html /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/image/rluserman.html; \
+	fi ; \
+fi
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/build/doc'
+( cd examples ; make -j1 DESTDIR=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/image install )
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/build/examples'
+/bin/sh ../../readline-8.1.2/support/mkdirs /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/image/usr/share/readline
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/image/usr/share/readline
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install: cannot stat '../../readline-8.1.2/examples/rltest2.c': No such file or directory
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/build/examples'
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/build/readline.pc /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/image/usr/lib/pkgconfig/readline.pc
+mv /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/image/usr/lib/libreadline.a /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/image/usr/lib/libreadline.old
+mv: cannot stat '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/image/usr/lib/libreadline.a': No such file or directory
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 libreadline.a /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/image/usr/lib/libreadline.a
+make: [Makefile:254: install-static] Error 1 (ignored)
+test -n "arm-openbmc-linux-gnueabi-gcc-ranlib" && arm-openbmc-linux-gnueabi-gcc-ranlib /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/image/usr/lib/libreadline.a
+mv /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/image/usr/lib/libhistory.a /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/image/usr/lib/libhistory.old
+mv: cannot stat '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/image/usr/lib/libhistory.a': No such file or directory
+make: [Makefile:257: install-static] Error 1 (ignored)
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 libhistory.a /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/image/usr/lib/libhistory.a
+test -n "arm-openbmc-linux-gnueabi-gcc-ranlib" && arm-openbmc-linux-gnueabi-gcc-ranlib /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/image/usr/lib/libhistory.a
+test -d shlib || mkdir shlib
+( cd shlib ; make -j1 all )
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/build/shlib'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/build/shlib'
+( cd shlib ; make -j1 DESTDIR=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/image install )
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/build/shlib'
+/bin/sh ../../readline-8.1.2/support/mkdirs /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/image/usr/lib
+/bin/sh ../../readline-8.1.2/support/mkdirs /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/image/usr/bin
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/image/usr/bin
+/bin/sh ../../readline-8.1.2/support/shlib-install -O linux-gnueabi -V openbmc -d /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/image/usr/lib -b /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/image/usr/bin -i "/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644" libhistory.so.8.1
+/bin/sh ../../readline-8.1.2/support/shlib-install -O linux-gnueabi -V openbmc -d /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/image/usr/lib -b /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/image/usr/bin -i "/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644" libreadline.so.8.1
+install: you may need to run ldconfig
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/build/shlib'
+oe_libinstall: cd shlib
+oe_libinstall: install -d /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/image/usr/lib/
+oe_libinstall: install -m 0755 libhistory.so.8.1 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/image/usr/lib/
+oe_libinstall: ln -sf libhistory.so.8.1 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/image/usr/lib/libhistory.so.8
+oe_libinstall: ln -sf libhistory.so.8.1 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/image/usr/lib/libhistory.so
+oe_libinstall: cd /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/build
+oe_libinstall: cd shlib
+oe_libinstall: install -d /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/image/usr/lib/
+oe_libinstall: install -m 0755 libreadline.so.8.1 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/image/usr/lib/
+oe_libinstall: ln -sf libreadline.so.8.1 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/image/usr/lib/libreadline.so.8
+oe_libinstall: ln -sf libreadline.so.8.1 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/image/usr/lib/libreadline.so
+oe_libinstall: cd /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/readline/8.1.2-r0/build
+DEBUG: Shell function do_install finished
+DEBUG: Executing shell function remove_libtool_la
+DEBUG: Shell function remove_libtool_la finished

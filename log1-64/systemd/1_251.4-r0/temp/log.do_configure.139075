@@ -1,0 +1,555 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-core/base-files/base-files_3.0.14.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/base-passwd/base-passwd_3.6.1.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/systemd/systemd-systemctl-native.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux_2.38.1.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/opkg-utils/opkg-utils_0.5.0.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/qemu/qemu-native_7.1.0.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-extended/pam/libpam_1.3.1.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-extended/shadow/shadow-sysroot_4.6.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-extended/shadow/shadow_4.12.3.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-extended/zstd/zstd_1.5.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-support/bash-completion/bash-completion_2.11.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-support/libcap/libcap_2.66.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-support/libseccomp/libseccomp_2.5.4.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-core/gettext/gettext_0.21.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/intltool/intltool_0.51.0.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/meson/meson_0.63.3.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/ninja/ninja_1.11.1.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/perl/perl_5.36.0.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pkgconfig/pkgconfig_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/python/python3-jinja2_3.1.2.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/python/python3_3.11.0.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-extended/gperf/gperf_3.1.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-extended/shadow/shadow_4.12.3.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: []
+NOTE: Skipping as already exists in sysroot: ['base-files', 'base-passwd', 'glibc', 'systemd-systemctl-native', 'util-linux', 'gcc-cross-arm', 'gcc-runtime', 'opkg-utils', 'qemu-native', 'quilt-native', 'libpam', 'shadow-sysroot', 'shadow', 'zstd', 'bash-completion', 'libcap', 'libseccomp', 'gettext-native', 'intltool-native', 'meson-native', 'ninja-native', 'patch-native', 'perl-native', 'pkgconfig-native', 'pseudo-native', 'python3-jinja2-native', 'python3-native', 'gperf-native', 'shadow-native', 'libtool-native', 'libxcrypt', 'zlib', 'ncurses', 'util-linux-libuuid', 'libcap-ng', 'libxml-parser-perl-native', 'python3-setuptools-native', 'python3-installer-native', 'python3-wheel-native', 'python3-picobuild-native', 'texinfo-dummy-native', 'gettext-minimal-native', 'zlib-native', 'make-native', 'gdbm-native', 'linux-libc-headers', 'zstd-native', 'libmpc-native', 'binutils-cross-arm', 'flex-native', 'xz-native', 'gmp-native', 'gnu-config-native', 'mpfr-native', 'bzip2-native', 'readline-native', 'ncurses-native', 'libtirpc-native', 'util-linux-libuuid-native', 'libnsl2-native', 'libffi-native', 'openssl-native', 'sqlite3-native', 'python3-markupsafe-native', 'libgcc', 'attr-native', 're2c-native', 'glib-2.0-native', 'cracklib', 'flex', 'expat-native', 'python3-flit-core-native', 'm4-native', 'util-linux-native', 'libpcre-native', 'cmake-native', 'unzip-native', 'libcap-ng-native', 'libpcre2-native', 'curl-native']
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing shell function do_configure
+NOTE: Executing meson -Dnobody-user=nobody -Dnobody-group=nobody -Drootlibdir=/lib -Drootprefix= -Ddefault-locale=C -Dmode=release -Dsystem-alloc-uid-min=101 -Dsystem-uid-max=999 -Dsystem-alloc-gid-min=101 -Dsystem-gid-max=999 -Dkexec-path=/usr/sbin/kexec -Dkmod-path=/bin/kmod -Dmount-path=/bin/mount -Dquotacheck-path=/usr/sbin/quotacheck -Dquotaon-path=/usr/sbin/quotaon -Dsulogin-path=/sbin/sulogin -Dnologin-path=/sbin/nologin -Dumount-path=/bin/umount -Dwerror=false -Db_lto=true -Dacl=false -Daudit=false -Dbacklight=false -Dbinfmt=false -Dbzip2=false -Ddefault-hierarchy=hybrid -Dcoredump=true -Dlibcryptsetup=false -Ddbus=false -Defi=false -Delfutils=false -Dfirstboot=false -Dgcrypt=false -Dgnu-efi=false -Dgnutls=false -Dgshadow=false -Dhibernate=false -Dhomed=false -Dhostnamed=true -Didn=false -Dima=false -Dimportd=false -Dlibiptc=false -Dlibcurl=false -Dkmod=false -Dldconfig=false -Dlibidn=false -Dlibidn2=false -Dlink-udev-shared=false -Dlocaled=false -Dlogind=false -Dlz4=false -Dmachined=false -Dman=false -Dmicrohttpd=false -Dnss-myhostname=false -Dnetworkd=true -Dnss-systemd=true -Dnss-mymachines=false -Dnss-resolve=false -Doomd=false -Dopenssl=false -Dpam=true -Dpcre2=false -Dpolkit=false -Dportabled=false -Dqrencode=false -Dquotacheck=false -Drandomseed=true -Drepart=false -Dresolve=true -Drfkill=false -Dsplit-bin=true -Dseccomp=true -Dselinux=false -Dtime-epoch=0 -Dsmack=false -Dsysext=false -Dsysusers=true -Dsysvinit-path= -Dsysvrcnd-path= -Dtimedated=true -Dtimesyncd=true -Dtpm2=false -Duserdb=false -Dsplit-usr=true -Dutmp=false -Dvconsole=false -Dwheel-group=false -Dxdg-autostart=false -Dxkbcommon=false -Dxz=false -Dzlib=false -Dzstd=true -Ddns-servers=...
+The Meson build system
+Version: 0.63.3
+Source dir: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/git
+Build dir: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/build
+Build type: cross build
+Project name: systemd
+Project version: 251
+C compiler for the host machine: arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/recipe-sysroot (gcc 12.2.0 "arm-openbmc-linux-gnueabi-gcc (GCC) 12.2.0")
+C linker for the host machine: arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/recipe-sysroot ld.bfd 2.39.0.20220819
+C compiler for the build machine: gcc (gcc 12.2.0 "gcc (Ubuntu 12.2.0-3ubuntu1) 12.2.0")
+C linker for the build machine: gcc ld.bfd 2.39
+Build machine cpu family: x86_64
+Build machine cpu: x86_64
+Host machine cpu family: arm
+Host machine cpu: arm
+Target machine cpu family: arm
+Target machine cpu: arm
+Program tools/add-git-hook.sh found: YES (/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/git/tools/add-git-hook.sh)
+Message: Activated pre-commit hook
+../git/meson.build:82: WARNING: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+                    split-usr mode is going to be removed
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Program tools/meson-build.sh found: YES (/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/git/tools/meson-build.sh)
+C++ compiler for the build machine: g++ (gcc 12.2.0 "g++ (Ubuntu 12.2.0-3ubuntu1) 12.2.0")
+C++ linker for the build machine: g++ ld.bfd 2.39
+C++ compiler for the host machine: arm-openbmc-linux-gnueabi-g++ -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/recipe-sysroot (gcc 12.2.0 "arm-openbmc-linux-gnueabi-g++ (GCC) 12.2.0")
+C++ linker for the host machine: arm-openbmc-linux-gnueabi-g++ -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/recipe-sysroot ld.bfd 2.39.0.20220819
+Compiler for C supports arguments -Wno-format-signedness: YES 
+Compiler for C supports arguments -Wno-missing-field-initializers: YES 
+Compiler for C supports arguments -Wno-unused-parameter: YES 
+Compiler for C supports arguments -Wdate-time: YES 
+Compiler for C supports arguments -Wendif-labels: YES 
+Compiler for C supports arguments -Werror=format=2: YES 
+Compiler for C supports arguments -Werror=implicit-function-declaration: YES 
+Compiler for C supports arguments -Werror=incompatible-pointer-types: YES 
+Compiler for C supports arguments -Werror=int-conversion: YES 
+Compiler for C supports arguments -Werror=overflow: YES 
+Compiler for C supports arguments -Werror=override-init: YES 
+Compiler for C supports arguments -Werror=return-type: YES 
+Compiler for C supports arguments -Werror=shift-count-overflow: YES 
+Compiler for C supports arguments -Werror=shift-overflow=2: YES 
+Compiler for C supports arguments -Werror=undef: YES 
+Compiler for C supports arguments -Wfloat-equal: YES 
+Compiler for C supports arguments -Wimplicit-fallthrough=5: YES 
+Compiler for C supports arguments -Winit-self: YES 
+Compiler for C supports arguments -Wlogical-op: YES 
+Compiler for C supports arguments -Wmissing-include-dirs: YES 
+Compiler for C supports arguments -Wmissing-noreturn: YES 
+Compiler for C supports arguments -Wnested-externs: YES 
+Compiler for C supports arguments -Wold-style-definition: YES 
+Compiler for C supports arguments -Wpointer-arith: YES 
+Compiler for C supports arguments -Wredundant-decls: YES 
+Compiler for C supports arguments -Wshadow: YES 
+Compiler for C supports arguments -Wstrict-aliasing=2: YES 
+Compiler for C supports arguments -Wstrict-prototypes: YES 
+Compiler for C supports arguments -Wsuggest-attribute=noreturn: YES 
+Compiler for C supports arguments -Wunused-function: YES 
+Compiler for C supports arguments -Wwrite-strings: YES 
+Compiler for C supports arguments -Wno-error=#warnings: NO 
+Compiler for C supports arguments -Wno-string-plus-int: NO 
+Compiler for C supports arguments -Wno-unused-result: YES 
+Compiler for C supports arguments -Werror=missing-declarations: YES 
+Compiler for C supports arguments -Werror=missing-prototypes: YES 
+Compiler for C supports arguments -fdiagnostics-show-option: YES 
+Compiler for C supports arguments -fno-common: YES 
+Compiler for C supports arguments -fno-strict-aliasing: YES 
+Compiler for C supports arguments -fstack-protector: YES 
+Compiler for C supports arguments -fstack-protector-strong: YES 
+Compiler for C supports arguments -fvisibility=hidden: YES 
+Compiler for C supports arguments --param=ssp-buffer-size=4: YES 
+Compiler for C supports arguments -ffunction-sections: YES 
+Compiler for C supports arguments -fdata-sections: YES 
+Compiler for C supports link arguments -Wl,--fatal-warnings: YES 
+Compiler for C supports link arguments -Wl,-z,now: YES 
+Compiler for C supports link arguments -Wl,-z,relro: YES 
+Compiler for C supports link arguments -fstack-protector: YES 
+Compiler for C supports link arguments -Wl,--warn-common: YES 
+Compiler for C supports link arguments -Wl,--gc-sections: YES 
+Compiler for C supports arguments -Wzero-length-bounds: YES 
+Checking if "-Werror=shadow with local shadowing" compiles: YES 
+Compiler for C++ supports arguments -Wno-format-signedness: YES 
+Compiler for C++ supports arguments -Wno-missing-field-initializers: YES 
+Compiler for C++ supports arguments -Wno-unused-parameter: YES 
+Compiler for C supports arguments -Wstringop-truncation: YES 
+Checking for size of "dev_t" : 8
+Checking for size of "ino_t" : 8
+Checking for size of "time_t" : 8
+Checking for size of "rlim_t" : 8
+Checking for size of "typeof(((struct timex *)0)->freq)" : 8
+Checking for size of "char16_t" : 2
+Checking for size of "char32_t" : 4
+Checking for size of "struct mount_attr" : 32
+Checking for size of "struct statx" : 256
+Checking for function "secure_getenv" : YES 
+Checking for function "__secure_getenv" : NO 
+Checking for function "memfd_create" : YES 
+Checking for function "gettid" : YES 
+Checking for function "pivot_root" : NO 
+Checking for function "ioprio_get" : NO 
+Checking for function "ioprio_set" : NO 
+Checking for function "name_to_handle_at" : YES 
+Checking for function "setns" : YES 
+Checking for function "renameat2" : YES 
+Checking for function "kcmp" : NO 
+Checking for function "keyctl" : NO 
+Checking for function "copy_file_range" : YES 
+Checking for function "bpf" : NO 
+Checking for function "statx" : YES 
+Checking for function "explicit_bzero" : YES 
+Checking for function "reallocarray" : YES 
+Checking for function "set_mempolicy" : NO 
+Checking for function "get_mempolicy" : NO 
+Checking for function "pidfd_send_signal" : NO 
+Checking for function "pidfd_open" : NO 
+Checking for function "rt_sigqueueinfo" : NO 
+Checking for function "mallinfo" : YES 
+Checking for function "mallinfo2" : YES 
+Checking for function "execveat" : YES 
+Checking for function "close_range" : YES 
+Checking for function "epoll_pwait2" : YES 
+Checking for function "mount_setattr" : YES 
+Checking for function "move_mount" : YES 
+Checking for function "open_tree" : YES 
+Checking for function "getdents64" : YES 
+Checking for function "getrandom" : YES 
+Program sh found: YES (/home/matt/tmp/build/obmc-y2038/tmp/hosttools/sh)
+Program echo found: YES (/home/matt/tmp/build/obmc-y2038/tmp/hosttools/echo)
+Program sed found: YES (/home/matt/tmp/build/obmc-y2038/tmp/hosttools/sed)
+Program awk found: YES (/home/matt/tmp/build/obmc-y2038/tmp/hosttools/awk)
+Program stat found: YES (/home/matt/tmp/build/obmc-y2038/tmp/hosttools/stat)
+Program ln found: YES (/home/matt/tmp/build/obmc-y2038/tmp/hosttools/ln)
+Program git found: YES (/home/matt/src/openbmc/scripts/git)
+Program env found: YES (/home/matt/tmp/build/obmc-y2038/tmp/hosttools/env)
+Program perl found: YES (/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/recipe-sysroot-native/usr/bin/perl-native/perl)
+Program rsync found: NO
+Message: Using /usr/sbin/quotaon for quotaon
+Message: Using /usr/sbin/quotacheck for quotacheck
+Message: Using /bin/kmod for kmod
+Message: Using /usr/sbin/kexec for kexec
+Message: Using /sbin/sulogin for sulogin
+Message: Using /bin/mount for mount
+Message: Using /bin/umount for umount
+Program loadkeys /usr/sbin/loadkeys /sbin/loadkeys found: NO
+Program setfont /usr/sbin/setfont /sbin/setfont found: NO
+Message: Using /sbin/nologin for nologin
+Program python3 found: YES (/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/recipe-sysroot-native/usr/bin/python3-native/python3)
+Program gperf found: YES (/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/recipe-sysroot-native/usr/bin/gperf)
+Message: gperf len type is size_t
+Has header "sys/capability.h" : YES 
+Has header "crypt.h" : YES 
+Has header "linux/memfd.h" : YES 
+Has header "linux/vm_sockets.h" : YES 
+Has header "sys/auxv.h" : YES 
+Has header "valgrind/memcheck.h" : NO 
+Has header "valgrind/valgrind.h" : NO 
+Has header "linux/time_types.h" : YES 
+Has header "sys/sdt.h" : NO 
+Run-time dependency threads found: YES
+Library rt found: YES
+Library m found: YES
+Library dl found: YES
+Library crypt found: YES
+Checking for function "crypt_ra" with dependency -lcrypt: YES 
+Checking for function "crypt_preferred_method" with dependency -lcrypt: YES 
+Checking for function "crypt_gensalt_ra" with dependency -lcrypt: YES 
+Found pkg-config: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/recipe-sysroot-native/usr/bin/pkg-config (0.29.2)
+Run-time dependency libcap found: YES 2.66
+Found CMake: NO
+Run-time dependency libbpf found: NO (tried pkgconfig and cmake)
+Run-time dependency mount found: YES 2.38.1
+Run-time dependency fdisk found: YES 2.38.1
+Run-time dependency pwquality found: NO (tried pkgconfig and cmake)
+Run-time dependency libseccomp found: YES 2.5.4
+Run-time dependency libapparmor found: NO (tried pkgconfig and cmake)
+Run-time dependency blkid found: YES 2.38.1
+Checking for function "blkid_probe_set_hint" with dependency blkid: YES 
+Library pam found: YES
+Library pam_misc found: YES
+Checking for function "crypt_activate_by_token_pin" : NO 
+Run-time dependency p11-kit-1 found: NO (tried pkgconfig and cmake)
+Run-time dependency libfido2 found: NO (tried pkgconfig and cmake)
+Run-time dependency libzstd found: YES 1.5.2
+Run-time dependency glib-2.0 found: NO (tried pkgconfig and cmake)
+Run-time dependency gobject-2.0 found: NO (tried pkgconfig and cmake)
+Run-time dependency gio-2.0 found: NO (tried pkgconfig and cmake)
+../git/meson.build:1584: WARNING: Exporting D-Bus interface XML files is disabled during cross build. Pass path or "yes" to force enable.
+Message: default-dnssec cannot be set to yes or allow-downgrade openssl and gcrypt are disabled. Setting default-dnssec to no.
+Program tools/generate-gperfs.py found: YES (/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/git/tools/generate-gperfs.py)
+Program tools/make-autosuspend-rules.py found: YES (/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/git/tools/make-autosuspend-rules.py)
+Program tools/make-directive-index.py found: YES (/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/git/tools/make-directive-index.py)
+Program tools/make-man-index.py found: YES (/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/git/tools/make-man-index.py)
+Program tools/meson-render-jinja2.py found: YES (/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/git/tools/meson-render-jinja2.py)
+Program tools/update-dbus-docs.py found: YES (/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/git/tools/update-dbus-docs.py)
+Program tools/update-man-rules.py found: YES (/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/git/tools/update-man-rules.py)
+Program tools/update-hwdb.sh found: YES (/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/git/tools/update-hwdb.sh)
+Program tools/update-hwdb-autosuspend.sh found: YES (/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/git/tools/update-hwdb-autosuspend.sh)
+Program tools/update-syscall-tables.sh found: YES (/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/git/tools/update-syscall-tables.sh)
+Program tools/xml_helper.py found: YES (/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/git/tools/xml_helper.py)
+Program tools/dbus_exporter.py found: YES (/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/git/tools/dbus_exporter.py)
+Configuring config.h using configuration
+Program msgfmt found: YES (/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/recipe-sysroot-native/usr/bin/msgfmt)
+Program msginit found: YES (/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/recipe-sysroot-native/usr/bin/msginit)
+Program msgmerge found: YES (/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/recipe-sysroot-native/usr/bin/msgmerge)
+Program xgettext found: YES (/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/recipe-sysroot-native/usr/bin/xgettext)
+Program generate-af-list.sh found: YES (/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/git/src/basic/generate-af-list.sh)
+Program generate-arphrd-list.sh found: YES (/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/git/src/basic/generate-arphrd-list.sh)
+Program generate-cap-list.sh found: YES (/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/git/src/basic/generate-cap-list.sh)
+Program generate-errno-list.sh found: YES (/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/git/src/basic/generate-errno-list.sh)
+Program missing_syscalls.py found: YES (/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/recipe-sysroot-native/usr/bin/nativepython3 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/git/src/basic/missing_syscalls.py)
+Program check-filesystems.sh found: YES (/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/git/src/basic/check-filesystems.sh)
+Program generate-filesystem-list.py found: YES (/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/git/src/basic/generate-filesystem-list.py)
+Program generate-filesystem-switch-case.py found: YES (/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/git/src/basic/generate-filesystem-switch-case.py)
+Program sd-journal/generate-audit_type-list.sh found: YES (/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/git/src/libsystemd/sd-journal/generate-audit_type-list.sh)
+../git/src/libsystemd/meson.build:191: WARNING: Project targets '>= 0.53.2' but uses feature introduced in '0.60.0': install_tag arg in custom_target.
+Program generate-syscall-list.py found: YES (/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/git/src/shared/generate-syscall-list.py)
+Program generate-ip-protocol-list.sh found: YES (/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/git/src/shared/generate-ip-protocol-list.sh)
+Program generate-keyboard-keys-list.sh found: YES (/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/git/src/udev/generate-keyboard-keys-list.sh)
+Program generate-keyboard-keys-gperf.sh found: YES (/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/git/src/udev/generate-keyboard-keys-gperf.sh)
+../git/src/libudev/meson.build:44: WARNING: Project targets '>= 0.53.2' but uses feature introduced in '0.60.0': install_tag arg in custom_target.
+Program test-repart.sh found: YES (/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/git/src/partition/test-repart.sh)
+Program generate-dns_type-gperf.py found: YES (/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/git/src/resolve/generate-dns_type-gperf.py)
+Compiler for C supports arguments -std=iso9899:2017: YES 
+Compiler for C++ supports arguments -std=c++14: YES 
+Compiler for C++ supports arguments -std=c++17: YES 
+Compiler for C++ supports arguments -std=c++20: YES 
+Program generate-sym-test.py found: YES (/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/git/src/test/generate-sym-test.py)
+Program test-fstab-generator.sh found: YES (/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/git/test/test-fstab-generator.sh)
+Program test-network-generator-conversion.sh found: YES (/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/git/test/test-network-generator-conversion.sh)
+Program test-systemctl-enable.sh found: YES (/usr/bin/env bash /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/git/test/test-systemctl-enable.sh)
+Program test-systemd-tmpfiles.py found: YES (/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/git/test/test-systemd-tmpfiles.py)
+Program hwdb-test.sh found: YES (/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/git/test/hwdb-test.sh)
+Configuring test-sysusers.sh using configuration
+Program rule-syntax-check.py found: YES (/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/git/test/rule-syntax-check.py)
+Program sys-script.py found: YES (/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/git/test/sys-script.py)
+Program udev-test.pl found: YES (/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/git/test/udev-test.pl)
+Program rpm found: NO
+Program rpmspec found: NO
+Program test-rpm-macros.sh found: YES (/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/git/test/test-rpm-macros.sh)
+Message: Skipping test-rpm-macros since rpm and/or rpmspec are not available
+Program udev-dmi-memory-id-test.sh found: YES (/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/git/test/udev-dmi-memory-id-test.sh)
+../git/meson.build:2142: WARNING: Project targets '>= 0.53.2' but uses feature introduced in '0.60.0': install_tag arg in meson.add_install_script.
+Message: test-bus-benchmark is a manual test
+Message: test-ipv4ll-manual is a manual test
+Message: test-acd is a manual test
+Message: test-coredump-vacuum is a manual test
+Message: Not compiling test-qcow2 because HAVE_ZLIB is not true
+Message: test-inhibit is a manual test
+Message: test-patch-uid is a manual test
+Message: Not compiling test-dnssec because HAVE_OPENSSL_OR_GCRYPT is not true
+Message: test-dnssec-complex is a manual test
+Message: test-ns is a manual test
+Message: Not compiling test-boot-timestamps because ENABLE_EFI is not true
+Message: Not compiling test-acl-util because HAVE_ACL is not true
+Message: test-ask-password-api is a manual test
+Message: test-ipcrm is an unsafe test
+Message: test-btrfs is a manual test
+Message: Not compiling test-netlink-manual because HAVE_KMOD is not true
+Message: Not compiling test-sbat because HAVE_GNU_EFI is not true
+Message: test-chase-symlinks is a manual test
+Message: test-install is a manual test
+Message: test-watchdog is an unsafe test
+Message: test-udev is a manual test
+Message: Not compiling test-cryptolib because HAVE_OPENSSL_OR_GCRYPT is not true
+Message: test-nscd-flush is a manual test
+Message: Not compiling test-socket-bind because BPF_FRAMEWORK is not true
+Checking for size of "long" : 4
+Message: Not installing sysusers.d/systemd-oom.conf because ENABLE_OOMD is 0
+Message: Not installing tmpfiles.d/portables.conf because ENABLE_PORTABLED is 0
+Message: Not installing tmpfiles.d/systemd-nspawn.conf because ENABLE_MACHINED is 0
+Message: Not installing tmpfiles.d/legacy.conf because HAVE_SYSV_COMPAT is 0
+Program parse_hwdb.py found: YES (/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/git/hwdb.d/parse_hwdb.py)
+Program xsltproc found: NO
+Message: Skipping binfmt.d.5 because ENABLE_BINFMT is false
+Message: Skipping bootctl.1 because HAVE_GNU_EFI is false
+Message: Skipping crypttab.5 because HAVE_LIBCRYPTSETUP is false
+Message: Skipping homectl.1 because ENABLE_HOMED is false
+Message: Skipping homed.conf.5 because ENABLE_HOMED is false
+Message: Skipping integritytab.5 because HAVE_LIBCRYPTSETUP is false
+Message: Skipping journal-remote.conf.5 because HAVE_MICROHTTPD is false
+Message: Skipping journal-upload.conf.5 because HAVE_MICROHTTPD is false
+Message: Skipping loader.conf.5 because HAVE_GNU_EFI is false
+Message: Skipping localectl.1 because ENABLE_LOCALED is false
+Message: Skipping loginctl.1 because ENABLE_LOGIND is false
+Message: Skipping logind.conf.5 because ENABLE_LOGIND is false
+Message: Skipping machinectl.1 because ENABLE_MACHINED is false
+Message: Skipping modules-load.d.5 because HAVE_KMOD is false
+Message: Skipping nss-myhostname.8 because ENABLE_NSS_MYHOSTNAME is false
+Message: Skipping nss-mymachines.8 because ENABLE_NSS_MYMACHINES is false
+Message: Skipping nss-resolve.8 because ENABLE_NSS_RESOLVE is false
+Message: Skipping oomctl.1 because ENABLE_OOMD is false
+Message: Skipping oomd.conf.5 because ENABLE_OOMD is false
+Message: Skipping org.freedesktop.home1.5 because ENABLE_HOMED is false
+Message: Skipping org.freedesktop.import1.5 because ENABLE_IMPORTD is false
+Message: Skipping org.freedesktop.locale1.5 because ENABLE_LOCALED is false
+Message: Skipping org.freedesktop.login1.5 because ENABLE_LOGIND is false
+Message: Skipping org.freedesktop.machine1.5 because ENABLE_MACHINED is false
+Message: Skipping org.freedesktop.oom1.5 because ENABLE_OOMD is false
+Message: Skipping org.freedesktop.portable1.5 because ENABLE_PORTABLED is false
+Message: Skipping pam_systemd_home.8 because ENABLE_PAM_HOME is false
+Message: Skipping portablectl.1 because ENABLE_PORTABLED is false
+Message: Skipping repart.d.5 because ENABLE_REPART is false
+Message: Skipping runlevel.8 because HAVE_SYSV_COMPAT is false
+Message: Skipping systemd-backlight@.service.8 because ENABLE_BACKLIGHT is false
+Message: Skipping systemd-binfmt.service.8 because ENABLE_BINFMT is false
+Message: Skipping systemd-bless-boot-generator.8 because HAVE_GNU_EFI is false
+Message: Skipping systemd-bless-boot.service.8 because HAVE_GNU_EFI is false
+Message: Skipping systemd-boot-system-token.service.8 because HAVE_GNU_EFI is false
+Message: Skipping systemd-boot.7 because HAVE_GNU_EFI is false
+Message: Skipping systemd-cryptenroll.1 because HAVE_LIBCRYPTSETUP is false
+Message: Skipping systemd-cryptsetup-generator.8 because HAVE_LIBCRYPTSETUP is false
+Message: Skipping systemd-cryptsetup@.service.8 because HAVE_LIBCRYPTSETUP is false
+Message: Skipping systemd-firstboot.1 because ENABLE_FIRSTBOOT is false
+Message: Skipping systemd-hibernate-resume-generator.8 because ENABLE_HIBERNATE is false
+Message: Skipping systemd-hibernate-resume@.service.8 because ENABLE_HIBERNATE is false
+Message: Skipping systemd-homed.service.8 because ENABLE_HOMED is false
+Message: Skipping systemd-importd.service.8 because ENABLE_IMPORTD is false
+Message: Skipping systemd-initctl.service.8 because HAVE_SYSV_COMPAT is false
+Message: Skipping systemd-integritysetup-generator.8 because HAVE_LIBCRYPTSETUP is false
+Message: Skipping systemd-integritysetup@.service.8 because HAVE_LIBCRYPTSETUP is false
+Message: Skipping systemd-journal-gatewayd.service.8 because HAVE_MICROHTTPD is false
+Message: Skipping systemd-journal-remote.service.8 because HAVE_MICROHTTPD is false
+Message: Skipping systemd-journal-upload.service.8 because HAVE_MICROHTTPD is false
+Message: Skipping systemd-localed.service.8 because ENABLE_LOCALED is false
+Message: Skipping systemd-logind.service.8 because ENABLE_LOGIND is false
+Message: Skipping systemd-machined.service.8 because ENABLE_MACHINED is false
+Message: Skipping systemd-modules-load.service.8 because HAVE_KMOD is false
+Message: Skipping systemd-oomd.service.8 because ENABLE_OOMD is false
+Message: Skipping systemd-portabled.service.8 because ENABLE_PORTABLED is false
+Message: Skipping systemd-quotacheck.service.8 because ENABLE_QUOTACHECK is false
+Message: Skipping systemd-rc-local-generator.8 because HAVE_SYSV_COMPAT is false
+Message: Skipping systemd-repart.8 because ENABLE_REPART is false
+Message: Skipping systemd-rfkill.service.8 because ENABLE_RFKILL is false
+Message: Skipping systemd-stub.7 because HAVE_GNU_EFI is false
+Message: Skipping systemd-sysupdate.8 because ENABLE_SYSUPDATE is false
+Message: Skipping systemd-sysv-generator.8 because HAVE_SYSV_COMPAT is false
+Message: Skipping systemd-update-utmp.service.8 because ENABLE_UTMP is false
+Message: Skipping systemd-userdbd.service.8 because ENABLE_USERDB is false
+Message: Skipping systemd-vconsole-setup.service.8 because ENABLE_VCONSOLE is false
+Message: Skipping systemd-veritysetup-generator.8 because HAVE_LIBCRYPTSETUP is false
+Message: Skipping systemd-veritysetup@.service.8 because HAVE_LIBCRYPTSETUP is false
+Message: Skipping systemd-xdg-autostart-generator.8 because ENABLE_XDG_AUTOSTART is false
+Message: Skipping sysupdate.d.5 because ENABLE_SYSUPDATE is false
+Message: Skipping telinit.8 because HAVE_SYSV_COMPAT is false
+Message: Skipping userdbctl.1 because ENABLE_USERDB is false
+Message: Skipping vconsole.conf.5 because ENABLE_VCONSOLE is false
+Message: Skipping veritytab.5 because HAVE_LIBCRYPTSETUP is false
+Message: python-lxml not available, not making man page indices
+Configuring man using configuration
+Configuring html using configuration
+Run-time dependency bash-completion found: YES 2.11
+Program jekyll found: NO
+Program tools/check-help.sh found: YES (/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/git/tools/check-help.sh)
+Program tools/check-version.sh found: YES (/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/git/tools/check-version.sh)
+Program tools/check-directives.sh found: YES (/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/git/tools/check-directives.sh)
+Compiler for C supports link arguments -fsanitize=address,undefined: NO 
+Program tools/git-contrib.sh found: YES (/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/git/tools/git-contrib.sh)
+Program tools/check-api-docs.sh found: YES (/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/git/tools/check-api-docs.sh)
+Build targets in project: 640
+WARNING: Project specifies a minimum meson_version '>= 0.53.2' but uses features which were added in newer versions:
+ * 0.60.0: {'install_tag arg in meson.add_install_script', 'install_tag arg in custom_target'}
+NOTICE: Future-deprecated features used:
+ * 0.56.0: {'dependency.get_pkgconfig_variable'}
+
+systemd 251
+
+    build mode                     : release
+    split /usr                     : True
+    split bin-sbin                 : True
+    prefix directory               : /usr
+    rootprefix directory           : /
+    sysconf directory              : /etc
+    include directory              : /usr/include
+    lib directory                  : /usr/lib
+    rootlib directory              : /lib
+    SysV init scripts              : 
+    SysV rc?.d directories         : 
+    PAM modules directory          : /lib/security
+    PAM configuration directory    : /usr/lib/pam.d
+    libcryptsetup plugins directory: /lib/cryptsetup
+    RPM macros directory           : /usr/lib/rpm/macros.d
+    modprobe.d directory           : /lib/modprobe.d
+    D-Bus policy directory         : /usr/share/dbus-1/system.d
+    D-Bus session directory        : /usr/share/dbus-1/services
+    D-Bus system directory         : /usr/share/dbus-1/system-services
+    D-Bus interfaces directory     : no
+    bash completions directory     : /usr/share/bash-completion/completions
+    zsh completions directory      : /usr/share/zsh/site-functions
+    private shared lib version tag : 251
+    extra start script             : /etc/rc.local
+    debug shell                    : /bin/sh @ /dev/tty9
+    system UIDs                    : <=999 (alloc >=101)
+    system GIDs                    : <=999 (alloc >=101)
+    dynamic UIDs                   : 61184…65519
+    container UID bases            : 524288…1878982656
+    static UID/GID allocations     : tty-gid:5
+    /dev/kvm access mode           : 0666
+    render group access mode       : 0666
+    certificate root directory     : /etc/ssl
+    support URL                    : https://lists.freedesktop.org/mailman/listinfo/systemd-devel
+    nobody user name               : nobody
+    nobody group name              : nobody
+    fallback hostname              : localhost
+    default compression method     : zstd
+    default DNSSEC mode            : no
+    default DNS-over-TLS mode      : no
+    default mDNS mode              : yes
+    default LLMNR mode             : yes
+    default DNS servers            : 
+    default NTP servers            : time1.google.com
+                                     time2.google.com
+                                     time3.google.com
+                                     time4.google.com
+    default cgroup hierarchy       : hybrid
+    default net.naming-scheme value: latest
+    default KillUserProcesses value: True
+    default locale                 : C
+    default user $PATH             : (same as system services)
+    systemd service watchdog       : 3min
+    time epoch                     : 0 (1970-01-01T00:00:00+00:00)
+
+  Features
+    enabled                        : PAM, SECCOMP, blkid, libfdisk, zstd, coredump, environment.d, hostnamed, hwdb, initrd, kernel-install, networkd, nss-systemd, pstore, randomseed, resolve, systemd-analyze, sysusers, timedated, timesyncd, tmpfiles, nscd, tpm, adm group, link-systemctl-shared, link-networkd-shared, link-timesyncd-shared, link-boot-shared
+    disabled                       : ACL, AUDIT, AppArmor, IMA, SELinux, SMACK, elfutils, gcrypt, gnutls, libbpf, libcryptsetup, libcryptsetup-plugins, libcurl, libfido2, libidn, libidn2, libiptc, microhttpd, openssl, p11kit, pcre2, pwquality, qrencode, tpm2, xkbcommon, lz4, xz, zlib, bzip2, backlight, binfmt, bpf-framework, efi, gnu-efi, firstboot, hibernate, homed, importd, localed, logind, machined, nss-myhostname, nss-mymachines, nss-resolve, oomd, portabled, quotacheck, repart, rfkill, sysext, sysupdate, userdb, vconsole, xdg-autostart, idn, polkit, legacy-pkla, kmod, dbus, glib, man pages, html pages, man page indices, SysV compat, compat-mutable-uid-boundaries, utmp, ldconfig, wheel group, gshadow, debug hashmap, debug mmap cache, debug siphash, valgrind, trace logging, install tests, link-udev-shared, fexecve, standalone-binaries, coverage, static-libsystemd, static-libudev, cryptolib, DNS-over-TLS
+
+  User defined options
+    Cross files                    : /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/meson.cross
+    Native files                   : /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/meson.native
+    bindir                         : bin
+    buildtype                      : plain
+    datadir                        : share
+    includedir                     : include
+    infodir                        : share/info
+    libdir                         : lib
+    libexecdir                     : libexec
+    localstatedir                  : /var
+    mandir                         : share/man
+    prefix                         : /usr
+    sbindir                        : sbin
+    sharedstatedir                 : /com
+    sysconfdir                     : /etc
+    werror                         : false
+    wrap_mode                      : nodownload
+    b_lto                          : true
+    acl                            : false
+    audit                          : false
+    backlight                      : false
+    binfmt                         : false
+    bzip2                          : false
+    coredump                       : true
+    dbus                           : false
+    default-hierarchy              : hybrid
+    default-locale                 : C
+    dns-servers                    : 
+    efi                            : false
+    elfutils                       : false
+    firstboot                      : false
+    gcrypt                         : false
+    gnu-efi                        : false
+    gnutls                         : false
+    gshadow                        : false
+    hibernate                      : false
+    homed                          : false
+    hostnamed                      : true
+    idn                            : false
+    ima                            : false
+    importd                        : false
+    kexec-path                     : /usr/sbin/kexec
+    kmod                           : false
+    kmod-path                      : /bin/kmod
+    ldconfig                       : false
+    libcryptsetup                  : false
+    libcurl                        : false
+    libidn                         : false
+    libidn2                        : false
+    libiptc                        : false
+    link-udev-shared               : false
+    localed                        : false
+    logind                         : false
+    lz4                            : false
+    machined                       : false
+    man                            : false
+    microhttpd                     : false
+    mode                           : release
+    mount-path                     : /bin/mount
+    networkd                       : true
+    nobody-group                   : nobody
+    nobody-user                    : nobody
+    nologin-path                   : /sbin/nologin
+    nss-myhostname                 : false
+    nss-mymachines                 : false
+    nss-resolve                    : false
+    nss-systemd                    : true
+    oomd                           : false
+    openssl                        : false
+    pam                            : true
+    pcre2                          : false
+    polkit                         : false
+    portabled                      : false
+    qrencode                       : false
+    quotacheck                     : false
+    quotacheck-path                : /usr/sbin/quotacheck
+    quotaon-path                   : /usr/sbin/quotaon
+    randomseed                     : true
+    repart                         : false
+    resolve                        : true
+    rfkill                         : false
+    rootlibdir                     : /lib
+    rootprefix                     : 
+    seccomp                        : true
+    selinux                        : false
+    smack                          : false
+    split-bin                      : true
+    split-usr                      : true
+    sulogin-path                   : /sbin/sulogin
+    sysext                         : false
+    system-alloc-gid-min           : 101
+    system-alloc-uid-min           : 101
+    system-gid-max                 : 999
+    system-uid-max                 : 999
+    sysusers                       : true
+    sysvinit-path                  : 
+    sysvrcnd-path                  : 
+    time-epoch                     : 0
+    timedated                      : true
+    timesyncd                      : true
+    tpm2                           : false
+    umount-path                    : /bin/umount
+    userdb                         : false
+    utmp                           : false
+    vconsole                       : false
+    wheel-group                    : false
+    xdg-autostart                  : false
+    xkbcommon                      : false
+    xz                             : false
+    zlib                           : false
+    zstd                           : true
+
+Found ninja-1.11.1 at /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/systemd/1_251.4-r0/recipe-sysroot-native/usr/bin/ninja
+DEBUG: Shell function do_configure finished
+DEBUG: Executing python function do_qa_configure
+DEBUG: Python function do_qa_configure finished
+DEBUG: Executing python function meson_do_qa_configure
+DEBUG: Python function meson_do_qa_configure finished

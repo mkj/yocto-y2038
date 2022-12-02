@@ -1,0 +1,134 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0_2.72.3.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/zlib/zlib_1.2.13.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/autoconf-archive/autoconf-archive_2022.09.03.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/opkg-utils/opkg-utils_0.5.0.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/python/python3_3.11.0.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/qemu/qemu-native_7.1.0.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-support/libffi/libffi_3.4.2.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/bison/bison_3.8.2.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/dwarfsrcfiles/dwarfsrcfiles.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/flex/flex_2.6.4.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/meson/meson_0.63.3.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/ninja/ninja_1.11.1.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pkgconfig/pkgconfig_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/python/python3_3.11.0.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/rpm/rpm_4.18.0.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-extended/xz/xz_5.2.7.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-gnome/gobject-introspection/gobject-introspection_1.72.0.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-gnome/gtk-doc/gtk-doc_1.33.2.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: ['dwarfsrcfiles-native', 'rpm-native', 'elfutils-native', 'libgcrypt-native', 'lua-native', 'popt-native', 'file-native', 'libgpg-error-native', 'libcap-native']
+NOTE: Skipping as already exists in sysroot: ['glib-2.0', 'glibc', 'zlib', 'autoconf-archive', 'gcc-cross-arm', 'gcc-runtime', 'opkg-utils', 'python3', 'qemu-native', 'quilt-native', 'libffi', 'bison-native', 'flex-native', 'meson-native', 'ninja-native', 'patch-native', 'pkgconfig-native', 'pseudo-native', 'python3-native', 'xz-native', 'gobject-introspection-native', 'gtk-doc-native', 'libtool-native', 'glib-2.0-native', 'zlib-native', 're2c-native', 'attr-native', 'bzip2-native', 'readline-native', 'ncurses-native', 'gdbm-native', 'libnsl2-native', 'libffi-native', 'sqlite3-native', 'util-linux-libuuid-native', 'openssl-native', 'libtirpc-native', 'linux-libc-headers', 'libgcc', 'libnsl2', 'libxcrypt', 'bzip2', 'util-linux-libuuid', 'ncurses', 'xz', 'sqlite3', 'gdbm', 'libtirpc', 'openssl', 'readline', 'gettext-minimal-native', 'texinfo-dummy-native', 'm4-native', 'libpcre', 'bash-completion', 'util-linux', 'python3-picobuild-native', 'python3-installer-native', 'python3-wheel-native', 'python3-setuptools-native', 'zstd-native', 'gmp-native', 'libmpc-native', 'binutils-cross-arm', 'gnu-config-native', 'mpfr-native', 'util-linux-native', 'libpcre-native', 'gettext-native', 'perl-native', 'libcap-ng', 'libpam', 'python3-flit-core-native', 'libpcre2-native', 'libcap-ng-native', 'make-native', 'flex', 'cracklib', 'unzip-native']
+DEBUG: sed -e 's:^[^/]*/:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gobject-introspection/1.72.0-r0/recipe-sysroot-native/:g' /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/rpm-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/elfutils-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/libgcrypt-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/lua-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/libgpg-error-native/fixmepath | xargs sed -i -e 's:FIXMESTAGINGDIRTARGET:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gobject-introspection/1.72.0-r0/recipe-sysroot:g; s:FIXMESTAGINGDIRHOST:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gobject-introspection/1.72.0-r0/recipe-sysroot-native:g' -e 's:FIXME_PSEUDO_SYSROOT:/home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/pseudo-native:g' -e 's:FIXME_HOSTTOOLS_DIR:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:g' -e 's:FIXME_PKGDATA_DIR:/home/matt/tmp/build/obmc-y2038/tmp/pkgdata/evb-ast2600:g' -e 's:FIXME_PSEUDO_LOCALSTATEDIR:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gobject-introspection/1.72.0-r0/pseudo/:g' -e 's:FIXME_LOGFIFO:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gobject-introspection/1.72.0-r0/temp/fifo.554857:g'
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function sstate_task_prefunc
+DEBUG: Python function sstate_task_prefunc finished
+DEBUG: Executing python function do_package
+DEBUG: Executing python function package_convert_pr_autoinc
+DEBUG: Python function package_convert_pr_autoinc finished
+DEBUG: Executing python function package_prepare_pkgdata
+NOTE: Installed into pkgdata-sysroot: ['glibc', 'opkg-utils', 'autoconf-archive', 'glib-2.0', 'libffi', 'python3', 'zlib', 'gcc-runtime', 'linux-libc-headers', 'util-linux', 'libpcre', 'bash-completion', 'util-linux-libuuid', 'bzip2', 'libtirpc', 'libnsl2', 'gdbm', 'libxcrypt', 'xz', 'sqlite3', 'ncurses', 'readline', 'openssl', 'libgcc', 'libpam', 'libcap-ng', 'flex', 'cracklib']
+DEBUG: Python function package_prepare_pkgdata finished
+DEBUG: Executing python function perform_packagecopy
+DEBUG: Python function perform_packagecopy finished
+DEBUG: Executing python function apply_update_alternative_renames
+DEBUG: Python function apply_update_alternative_renames finished
+DEBUG: Executing shell function multilibscript_rename
+DEBUG: Shell function multilibscript_rename finished
+DEBUG: Executing shell function gi_package_preprocess
+DEBUG: Shell function gi_package_preprocess finished
+DEBUG: Executing python function split_and_strip_files
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gobject-introspection/1.72.0-r0/package/usr/lib/libgirepository-1.0.so.1.0.0']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gobject-introspection/1.72.0-r0/package/usr/lib/gobject-introspection/giscanner/_giscanner.cpython-311-x86_64-linux-gnu.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gobject-introspection/1.72.0-r0/package/usr/bin/g-ir-inspect']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gobject-introspection/1.72.0-r0/package/usr/bin/g-ir-generate']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gobject-introspection/1.72.0-r0/package/usr/bin/g-ir-compiler']
+DEBUG: Python function split_and_strip_files finished
+DEBUG: Executing python function fixup_perms
+DEBUG: Python function fixup_perms finished
+DEBUG: Executing python function populate_packages_updatealternatives
+DEBUG: Python function populate_packages_updatealternatives finished
+DEBUG: Executing python function package_do_split_locales
+DEBUG: No locale files in this package
+DEBUG: Python function package_do_split_locales finished
+DEBUG: Executing python function populate_packages
+DEBUG: Python function populate_packages finished
+DEBUG: Executing python function package_fixsymlinks
+DEBUG: gobject-introspection-dev contains dangling link /usr/lib/libgirepository-1.0.so.1
+DEBUG: target found in gobject-introspection
+DEBUG: Python function package_fixsymlinks finished
+DEBUG: Executing python function package_name_hook
+DEBUG: Executing python function debian_package_name_hook
+DEBUG: LIBNAMES: pkg gobject-introspection-staticdev libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg gobject-introspection-src libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg gobject-introspection-locale libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg gobject-introspection-doc libs 0 bins 0 sonames []
+arm-openbmc-linux-gnueabi-objdump: '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gobject-introspection/1.72.0-r0/packages-split/gobject-introspection-dev/usr/lib/libgirepository-1.0.so': No such file
+DEBUG: LIBNAMES: pkg gobject-introspection-dev libs 1 bins 0 sonames []
+DEBUG: LIBNAMES: pkg gobject-introspection-dbg libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg gobject-introspection libs 1 bins 1 sonames ['libgirepository-1.0.so.1']
+DEBUG: Python function debian_package_name_hook finished
+DEBUG: Python function package_name_hook finished
+DEBUG: Executing python function package_do_filedeps
+DEBUG: Python function package_do_filedeps finished
+DEBUG: Executing python function package_do_shlibs
+DEBUG: Reading shlib providers in /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gobject-introspection/1.72.0-r0/pkgdata-sysroot/shlibs2
+DEBUG: calculating shlib provides for gobject-introspection-src
+DEBUG: LIBNAMES: pkg gobject-introspection-src sonames set()
+DEBUG: calculating shlib provides for gobject-introspection-dbg
+DEBUG: LIBNAMES: pkg gobject-introspection-dbg sonames set()
+DEBUG: calculating shlib provides for gobject-introspection-staticdev
+DEBUG: LIBNAMES: pkg gobject-introspection-staticdev sonames set()
+DEBUG: calculating shlib provides for gobject-introspection-dev
+DEBUG: LIBNAMES: pkg gobject-introspection-dev sonames set()
+DEBUG: calculating shlib provides for gobject-introspection-doc
+DEBUG: LIBNAMES: pkg gobject-introspection-doc sonames set()
+DEBUG: calculating shlib provides for gobject-introspection-locale
+DEBUG: LIBNAMES: pkg gobject-introspection-locale sonames set()
+DEBUG: calculating shlib provides for gobject-introspection
+DEBUG: registering gobject-introspection-1.72.0 as shlib provider for libgirepository-1.0.so.1
+DEBUG: adding ldconfig call to postinst for gobject-introspection
+DEBUG: LIBNAMES: pkg gobject-introspection sonames {('libgirepository-1.0.so.1', '/usr/lib', '1.72.0')}
+DEBUG: calculating shlib requirements for gobject-introspection-src
+DEBUG: calculating shlib requirements for gobject-introspection-dbg
+DEBUG: calculating shlib requirements for gobject-introspection-staticdev
+DEBUG: calculating shlib requirements for gobject-introspection-dev
+DEBUG: calculating shlib requirements for gobject-introspection-doc
+DEBUG: calculating shlib requirements for gobject-introspection-locale
+DEBUG: calculating shlib requirements for gobject-introspection
+DEBUG: gobject-introspection: Dependency libgmodule-2.0.so.0 requires package glib-2.0 (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gobject-introspection/1.72.0-r0/packages-split/gobject-introspection/usr/lib/libgirepository-1.0.so.1.0.0)
+DEBUG: gobject-introspection: Dependency libffi.so.8 requires package libffi (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gobject-introspection/1.72.0-r0/packages-split/gobject-introspection/usr/bin/g-ir-compiler)
+DEBUG: gobject-introspection: Dependency libglib-2.0.so.0 requires package glib-2.0 (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gobject-introspection/1.72.0-r0/packages-split/gobject-introspection/usr/bin/g-ir-inspect)
+DEBUG: gobject-introspection: Dependency libgio-2.0.so.0 requires package glib-2.0 (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gobject-introspection/1.72.0-r0/packages-split/gobject-introspection/usr/lib/libgirepository-1.0.so.1.0.0)
+DEBUG: gobject-introspection: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gobject-introspection/1.72.0-r0/packages-split/gobject-introspection/usr/bin/g-ir-generate)
+DEBUG: gobject-introspection: Dependency libgobject-2.0.so.0 requires package glib-2.0 (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gobject-introspection/1.72.0-r0/packages-split/gobject-introspection/usr/bin/g-ir-compiler)
+DEBUG: gobject-introspection: Dependency libgobject-2.0.so.0 requires package glib-2.0 (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gobject-introspection/1.72.0-r0/packages-split/gobject-introspection/usr/lib/libgirepository-1.0.so.1.0.0)
+DEBUG: gobject-introspection: Dependency libm.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gobject-introspection/1.72.0-r0/packages-split/gobject-introspection/usr/lib/libgirepository-1.0.so.1.0.0)
+DEBUG: gobject-introspection: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gobject-introspection/1.72.0-r0/packages-split/gobject-introspection/usr/bin/g-ir-compiler)
+DEBUG: gobject-introspection: Dependency libgirepository-1.0.so.1 requires package gobject-introspection (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gobject-introspection/1.72.0-r0/packages-split/gobject-introspection/usr/bin/g-ir-inspect)
+DEBUG: gobject-introspection: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gobject-introspection/1.72.0-r0/packages-split/gobject-introspection/usr/bin/g-ir-inspect)
+DEBUG: gobject-introspection: Dependency libgobject-2.0.so.0 requires package glib-2.0 (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gobject-introspection/1.72.0-r0/packages-split/gobject-introspection/usr/lib/gobject-introspection/giscanner/_giscanner.cpython-311-x86_64-linux-gnu.so)
+DEBUG: gobject-introspection: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gobject-introspection/1.72.0-r0/packages-split/gobject-introspection/usr/lib/libgirepository-1.0.so.1.0.0)
+DEBUG: gobject-introspection: Dependency libgio-2.0.so.0 requires package glib-2.0 (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gobject-introspection/1.72.0-r0/packages-split/gobject-introspection/usr/lib/gobject-introspection/giscanner/_giscanner.cpython-311-x86_64-linux-gnu.so)
+DEBUG: gobject-introspection: Dependency libglib-2.0.so.0 requires package glib-2.0 (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gobject-introspection/1.72.0-r0/packages-split/gobject-introspection/usr/lib/libgirepository-1.0.so.1.0.0)
+DEBUG: gobject-introspection: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gobject-introspection/1.72.0-r0/packages-split/gobject-introspection/usr/lib/gobject-introspection/giscanner/_giscanner.cpython-311-x86_64-linux-gnu.so)
+DEBUG: gobject-introspection: Dependency libgirepository-1.0.so.1 requires package gobject-introspection (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gobject-introspection/1.72.0-r0/packages-split/gobject-introspection/usr/bin/g-ir-generate)
+DEBUG: gobject-introspection: Dependency libffi.so.8 requires package libffi (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gobject-introspection/1.72.0-r0/packages-split/gobject-introspection/usr/lib/libgirepository-1.0.so.1.0.0)
+DEBUG: gobject-introspection: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gobject-introspection/1.72.0-r0/packages-split/gobject-introspection/usr/bin/g-ir-generate)
+DEBUG: gobject-introspection: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gobject-introspection/1.72.0-r0/packages-split/gobject-introspection/usr/lib/gobject-introspection/giscanner/_giscanner.cpython-311-x86_64-linux-gnu.so)
+DEBUG: gobject-introspection: Dependency libglib-2.0.so.0 requires package glib-2.0 (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gobject-introspection/1.72.0-r0/packages-split/gobject-introspection/usr/bin/g-ir-generate)
+DEBUG: gobject-introspection: Dependency libglib-2.0.so.0 requires package glib-2.0 (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gobject-introspection/1.72.0-r0/packages-split/gobject-introspection/usr/lib/gobject-introspection/giscanner/_giscanner.cpython-311-x86_64-linux-gnu.so)
+DEBUG: gobject-introspection: Dependency libgio-2.0.so.0 requires package glib-2.0 (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gobject-introspection/1.72.0-r0/packages-split/gobject-introspection/usr/bin/g-ir-compiler)
+DEBUG: gobject-introspection: Dependency libm.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gobject-introspection/1.72.0-r0/packages-split/gobject-introspection/usr/bin/g-ir-compiler)
+DEBUG: gobject-introspection: Dependency libgirepository-1.0.so.1 requires package gobject-introspection (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gobject-introspection/1.72.0-r0/packages-split/gobject-introspection/usr/bin/g-ir-compiler)
+DEBUG: gobject-introspection: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gobject-introspection/1.72.0-r0/packages-split/gobject-introspection/usr/lib/libgirepository-1.0.so.1.0.0)
+DEBUG: gobject-introspection: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gobject-introspection/1.72.0-r0/packages-split/gobject-introspection/usr/bin/g-ir-compiler)
+DEBUG: gobject-introspection: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gobject-introspection/1.72.0-r0/packages-split/gobject-introspection/usr/bin/g-ir-inspect)
+DEBUG: gobject-introspection: Dependency libglib-2.0.so.0 requires package glib-2.0 (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gobject-introspection/1.72.0-r0/packages-split/gobject-introspection/usr/bin/g-ir-compiler)
+DEBUG: Python function package_do_shlibs finished
+DEBUG: Executing python function package_do_pkgconfig
+DEBUG: Python function package_do_pkgconfig finished
+DEBUG: Executing python function read_shlibdeps
+DEBUG: Python function read_shlibdeps finished
+DEBUG: Executing python function package_depchains
+DEBUG: Python function package_depchains finished
+DEBUG: Executing python function emit_pkgdata
+DEBUG: Python function emit_pkgdata finished
+DEBUG: Python function do_package finished
+DEBUG: Executing python function sstate_task_postfunc
+NOTE: Using umask 0o002 (not 22) for sstate packaging
+DEBUG: Executing python function target_add_sysroot_deps
+DEBUG: Python function target_add_sysroot_deps finished
+DEBUG: Executing python function sstate_hardcode_path
+NOTE: Removing hardcoded paths from sstate package: 'find /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gobject-introspection/1.72.0-r0/sstate-build-package/ \( -name "*.la" -o -name "*-config" -o -name "*_config" -o -name "postinst-*" -o -name "g-ir-scanner-qemuwrapper" -o -name "g-ir-scanner-wrapper" -o -name "g-ir-compiler-wrapper" -o -name "g-ir-scanner-lddwrapper" -o -name "Gio-2.0.gir" -o -name "postinst-ldsoconf-gobject-introspection" \) -type f | xargs grep -l -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gobject-introspection/1.72.0-r0/recipe-sysroot' -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gobject-introspection/1.72.0-r0/recipe-sysroot-native' -e '/home/matt/tmp/build/obmc-y2038/tmp/hosttools' | tee /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gobject-introspection/1.72.0-r0/sstate-build-package/fixmepath | xargs --no-run-if-empty sed -i -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gobject-introspection/1.72.0-r0/recipe-sysroot-native:FIXMESTAGINGDIRHOST:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gobject-introspection/1.72.0-r0/recipe-sysroot:FIXMESTAGINGDIRTARGET:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:FIXME_HOSTTOOLS_DIR:g''
+DEBUG: Python function sstate_hardcode_path finished
+DEBUG: Executing python function sstate_report_unihash
+DEBUG: Python function sstate_report_unihash finished
+DEBUG: Executing shell function sstate_create_package
+DEBUG: Shell function sstate_create_package finished
+DEBUG: Executing python function sstate_hardcode_path_unpack
+DEBUG: Python function sstate_hardcode_path_unpack finished
+DEBUG: Python function sstate_task_postfunc finished

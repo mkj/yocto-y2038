@@ -1,0 +1,285 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-core/systemd/systemd-systemctl-native.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/libgcc-initial_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-native_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-extended/texinfo-dummy-native/texinfo-dummy-native.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-kernel/linux-libc-headers/linux-libc-headers_5.19.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/autoconf/autoconf_2.71.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/automake/automake_1.16.5.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/bison/bison_3.8.2.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/dwarfsrcfiles/dwarfsrcfiles.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/rpm/rpm_4.18.0.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-extended/gperf/gperf_3.1.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: []
+NOTE: Skipping as already exists in sysroot: ['systemd-systemctl-native', 'gcc-cross-arm', 'libgcc-initial', 'libtool-native', 'texinfo-dummy-native', 'linux-libc-headers', 'autoconf-native', 'automake-native', 'bison-native', 'dwarfsrcfiles-native', 'pseudo-native', 'rpm-native', 'gperf-native', 'popt-native', 'zstd-native', 'xz-native', 'file-native', 'bzip2-native', 'python3-native', 'gettext-minimal-native', 'sqlite3-native', 'elfutils-native', 'libgcrypt-native', 'lua-native', 'gnu-config-native', 'm4-native', 'flex-native', 'mpfr-native', 'zlib-native', 'gmp-native', 'libmpc-native', 'binutils-cross-arm', 'libtirpc-native', 'libffi-native', 'gdbm-native', 'util-linux-libuuid-native', 'readline-native', 'libnsl2-native', 'openssl-native', 'ncurses-native', 'libgpg-error-native', 'libcap-native', 'perl-native', 'make-native']
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function sstate_task_prefunc
+DEBUG: Python function sstate_task_prefunc finished
+DEBUG: Executing python function do_package
+DEBUG: Executing python function package_convert_pr_autoinc
+DEBUG: Python function package_convert_pr_autoinc finished
+DEBUG: Executing python function package_prepare_pkgdata
+NOTE: Installed into pkgdata-sysroot: ['linux-libc-headers']
+DEBUG: Python function package_prepare_pkgdata finished
+DEBUG: Executing python function perform_packagecopy
+DEBUG: Python function perform_packagecopy finished
+DEBUG: Executing shell function stash_locale_package_cleanup
+DEBUG: Shell function stash_locale_package_cleanup finished
+DEBUG: Executing python function split_and_strip_files
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/package/usr/sbin/zic']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/package/usr/sbin/nscd']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/package/usr/sbin/iconvconfig']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/package/usr/lib/audit/sotruss-lib.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/package/usr/bin/zdump']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/package/usr/bin/sprof']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/package/usr/bin/pldd']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/package/usr/bin/pcprofiledump']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/package/usr/bin/makedb']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/package/usr/bin/locale']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/package/usr/bin/iconv']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/package/usr/bin/getent']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/package/usr/bin/getconf']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/package/usr/bin/gencat']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/package/sbin/sln']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/package/sbin/ldconfig']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/package/lib/libutil.so.1']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/package/lib/libthread_db.so.1']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/package/lib/librt.so.1']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/package/lib/libresolv.so.2']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/package/lib/libpthread.so.0']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/package/lib/libpcprofile.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/package/lib/libnss_hesiod.so.2']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/package/lib/libnss_files.so.2']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/package/lib/libnss_dns.so.2']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/package/lib/libnss_db.so.2']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/package/lib/libnss_compat.so.2']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/package/lib/libnsl.so.1']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/package/lib/libmemusage.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/package/lib/libm.so.6']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/package/lib/libdl.so.2']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/package/lib/libc_malloc_debug.so.0']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/package/lib/libc.so.6']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/package/lib/libanl.so.1']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/package/lib/libBrokenLocale.so.1']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/package/lib/ld-linux-armhf.so.3']
+DEBUG: Python function split_and_strip_files finished
+DEBUG: Executing python function fixup_perms
+DEBUG: Python function fixup_perms finished
+DEBUG: Executing python function systemd_populate_packages
+DEBUG: adding systemd calls to postinst/postrm for nscd
+DEBUG: Python function systemd_populate_packages finished
+DEBUG: Executing python function package_do_split_locales
+DEBUG: No locale files in this package
+DEBUG: Python function package_do_split_locales finished
+DEBUG: Executing python function populate_packages
+DEBUG: Python function populate_packages finished
+DEBUG: Executing python function package_fixsymlinks
+DEBUG: ldso contains dangling link /lib/ld-linux-armhf.so.3
+DEBUG: target found in glibc
+DEBUG: glibc-dev contains dangling link /lib/libanl.so.1
+DEBUG: target found in glibc
+DEBUG: glibc-dev contains dangling link /lib/libm.so.6
+DEBUG: target found in glibc
+DEBUG: glibc-dev contains dangling link /lib/libresolv.so.2
+DEBUG: target found in glibc
+DEBUG: glibc-dev contains dangling link /lib/libthread_db.so.1
+DEBUG: target found in glibc-thread-db
+DEBUG: glibc-dev contains dangling link /lib/libnss_hesiod.so.2
+DEBUG: target found in glibc-extra-nss
+DEBUG: glibc-dev contains dangling link /lib/libnss_db.so.2
+DEBUG: target found in libnss-db
+DEBUG: glibc-dev contains dangling link /lib/librt.so.1
+DEBUG: target found in glibc
+DEBUG: glibc-dev contains dangling link /lib/libnss_compat.so.2
+DEBUG: target found in glibc
+DEBUG: glibc-dev contains dangling link /lib/libc_malloc_debug.so.0
+DEBUG: target found in malloc-debug
+DEBUG: glibc-dev contains dangling link /lib/libpthread.so.0
+DEBUG: target found in glibc
+DEBUG: glibc-dev contains dangling link /lib/libBrokenLocale.so.1
+DEBUG: target found in glibc
+DEBUG: Python function package_fixsymlinks finished
+DEBUG: Executing python function package_name_hook
+DEBUG: Executing python function debian_package_name_hook
+DEBUG: LIBNAMES: pkg tzcode libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg sln libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg nscd libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg malloc-debug libs 1 bins 0 sonames ['libc_malloc_debug.so.0']
+NOTE: debian: renaming malloc-debug to libc-malloc-debug0
+DEBUG: LIBNAMES: pkg libsotruss libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libnss-db libs 1 bins 0 sonames ['libnss_db.so.2']
+NOTE: debian: renaming libnss-db to libnss-db2
+DEBUG: LIBNAMES: pkg libmemusage libs 1 bins 0 sonames ['libmemusage.so']
+DEBUG: LIBNAMES: pkg ldso libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg ldd libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg ldconfig libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg glibc-utils libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg glibc-thread-db libs 1 bins 0 sonames ['libthread_db.so.1']
+DEBUG: LIBNAMES: pkg glibc-staticdev libs 1 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glibc-src libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glibc-pic libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glibc-pcprofile libs 1 bins 0 sonames ['libpcprofile.so']
+DEBUG: LIBNAMES: pkg glibc-extra-nss libs 1 bins 0 sonames ['libnss_hesiod.so.2']
+DEBUG: LIBNAMES: pkg glibc-doc libs 0 bins 0 sonames []
+arm-openbmc-linux-gnueabi-objdump: '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/packages-split/glibc-dev/usr/lib/libanl.so': No such file
+arm-openbmc-linux-gnueabi-objdump: '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/packages-split/glibc-dev/usr/lib/libm.so': No such file
+arm-openbmc-linux-gnueabi-objdump: '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/packages-split/glibc-dev/usr/lib/libresolv.so': No such file
+arm-openbmc-linux-gnueabi-objdump: '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/packages-split/glibc-dev/usr/lib/libthread_db.so': No such file
+arm-openbmc-linux-gnueabi-objdump: '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/packages-split/glibc-dev/usr/lib/libnss_hesiod.so': No such file
+arm-openbmc-linux-gnueabi-objdump: '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/packages-split/glibc-dev/usr/lib/libnss_db.so': No such file
+arm-openbmc-linux-gnueabi-objdump: '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/packages-split/glibc-dev/usr/lib/librt.so': No such file
+arm-openbmc-linux-gnueabi-objdump: '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/packages-split/glibc-dev/usr/lib/libnss_compat.so': No such file
+arm-openbmc-linux-gnueabi-objdump: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/packages-split/glibc-dev/usr/lib/libc.so: file format not recognized
+arm-openbmc-linux-gnueabi-objdump: '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/packages-split/glibc-dev/usr/lib/libc_malloc_debug.so': No such file
+arm-openbmc-linux-gnueabi-objdump: '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/packages-split/glibc-dev/usr/lib/libpthread.so': No such file
+arm-openbmc-linux-gnueabi-objdump: '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/packages-split/glibc-dev/usr/lib/libBrokenLocale.so': No such file
+DEBUG: LIBNAMES: pkg glibc-dev libs 1 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glibc-dbg libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glibc libs 1 bins 0 sonames ['libpthread.so.0', 'libm.so.6', 'libnsl.so.1', 'libutil.so.1', 'libresolv.so.2', 'libdl.so.2', 'libnss_files.so.2', 'libBrokenLocale.so.1', 'libanl.so.1', 'librt.so.1', 'libc.so.6', 'libnss_dns.so.2', 'libnss_compat.so.2']
+DEBUG: Python function debian_package_name_hook finished
+DEBUG: Python function package_name_hook finished
+DEBUG: Executing python function package_do_filedeps
+DEBUG: Python function package_do_filedeps finished
+DEBUG: Executing python function package_do_shlibs
+DEBUG: Reading shlib providers in /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/pkgdata-sysroot/shlibs2
+DEBUG: calculating shlib provides for glibc-src
+DEBUG: LIBNAMES: pkg glibc-src sonames set()
+DEBUG: calculating shlib provides for glibc-dbg
+DEBUG: LIBNAMES: pkg glibc-dbg sonames set()
+DEBUG: calculating shlib provides for sln
+DEBUG: LIBNAMES: pkg sln sonames set()
+DEBUG: calculating shlib provides for nscd
+DEBUG: LIBNAMES: pkg nscd sonames set()
+DEBUG: calculating shlib provides for ldconfig
+DEBUG: LIBNAMES: pkg ldconfig sonames set()
+DEBUG: calculating shlib provides for ldd
+DEBUG: LIBNAMES: pkg ldd sonames set()
+DEBUG: calculating shlib provides for ldso
+DEBUG: LIBNAMES: pkg ldso sonames set()
+DEBUG: calculating shlib provides for tzcode
+DEBUG: LIBNAMES: pkg tzcode sonames set()
+DEBUG: calculating shlib provides for glibc-thread-db
+DEBUG: registering glibc-thread-db-2.36 as shlib provider for libthread_db.so.1
+DEBUG: adding ldconfig call to postinst for glibc-thread-db
+DEBUG: LIBNAMES: pkg glibc-thread-db sonames {('libthread_db.so.1', '/lib', '2.36')}
+DEBUG: calculating shlib provides for glibc-pic
+DEBUG: LIBNAMES: pkg glibc-pic sonames set()
+DEBUG: calculating shlib provides for libmemusage
+DEBUG: registering libmemusage-2.36 as shlib provider for libmemusage.so
+DEBUG: adding ldconfig call to postinst for libmemusage
+DEBUG: LIBNAMES: pkg libmemusage sonames {('libmemusage.so', '/lib', '2.36')}
+DEBUG: calculating shlib provides for malloc-debug
+DEBUG: registering malloc-debug-2.36 as shlib provider for libc_malloc_debug.so.0
+DEBUG: adding ldconfig call to postinst for malloc-debug
+DEBUG: LIBNAMES: pkg malloc-debug sonames {('libc_malloc_debug.so.0', '/lib', '2.36')}
+DEBUG: calculating shlib provides for libnss-db
+DEBUG: registering libnss-db-2.36 as shlib provider for libnss_db.so.2
+DEBUG: adding ldconfig call to postinst for libnss-db
+DEBUG: LIBNAMES: pkg libnss-db sonames {('libnss_db.so.2', '/lib', '2.36')}
+DEBUG: calculating shlib provides for glibc-pcprofile
+DEBUG: registering glibc-pcprofile-2.36 as shlib provider for libpcprofile.so
+DEBUG: adding ldconfig call to postinst for glibc-pcprofile
+DEBUG: LIBNAMES: pkg glibc-pcprofile sonames {('libpcprofile.so', '/lib', '2.36')}
+DEBUG: calculating shlib provides for libsotruss
+DEBUG: LIBNAMES: pkg libsotruss sonames set()
+DEBUG: calculating shlib provides for glibc
+DEBUG: registering glibc-2.36 as shlib provider for ld-linux-armhf.so.3
+DEBUG: registering glibc-2.36 as shlib provider for libBrokenLocale.so.1
+DEBUG: registering glibc-2.36 as shlib provider for libanl.so.1
+DEBUG: registering glibc-2.36 as shlib provider for libc.so.6
+DEBUG: registering glibc-2.36 as shlib provider for libdl.so.2
+DEBUG: registering glibc-2.36 as shlib provider for libm.so.6
+DEBUG: registering glibc-2.36 as shlib provider for libnsl.so.1
+DEBUG: registering glibc-2.36 as shlib provider for libnss_compat.so.2
+DEBUG: registering glibc-2.36 as shlib provider for libnss_dns.so.2
+DEBUG: registering glibc-2.36 as shlib provider for libnss_files.so.2
+DEBUG: registering glibc-2.36 as shlib provider for libpthread.so.0
+DEBUG: registering glibc-2.36 as shlib provider for libresolv.so.2
+DEBUG: registering glibc-2.36 as shlib provider for librt.so.1
+DEBUG: registering glibc-2.36 as shlib provider for libutil.so.1
+DEBUG: adding ldconfig call to postinst for glibc
+DEBUG: LIBNAMES: pkg glibc sonames {('libresolv.so.2', '/lib', '2.36'), ('libdl.so.2', '/lib', '2.36'), ('libnsl.so.1', '/lib', '2.36'), ('libm.so.6', '/lib', '2.36'), ('libpthread.so.0', '/lib', '2.36'), ('libBrokenLocale.so.1', '/lib', '2.36'), ('libnss_dns.so.2', '/lib', '2.36'), ('libnss_compat.so.2', '/lib', '2.36'), ('libnss_files.so.2', '/lib', '2.36'), ('libanl.so.1', '/lib', '2.36'), ('librt.so.1', '/lib', '2.36'), ('libutil.so.1', '/lib', '2.36'), ('libc.so.6', '/lib', '2.36'), ('ld-linux-armhf.so.3', '/lib', '2.36')}
+DEBUG: calculating shlib provides for glibc-utils
+DEBUG: LIBNAMES: pkg glibc-utils sonames set()
+DEBUG: calculating shlib provides for glibc-extra-nss
+DEBUG: registering glibc-extra-nss-2.36 as shlib provider for libnss_hesiod.so.2
+DEBUG: adding ldconfig call to postinst for glibc-extra-nss
+DEBUG: LIBNAMES: pkg glibc-extra-nss sonames {('libnss_hesiod.so.2', '/lib', '2.36')}
+DEBUG: calculating shlib provides for glibc-dev
+DEBUG: LIBNAMES: pkg glibc-dev sonames set()
+DEBUG: calculating shlib provides for glibc-staticdev
+DEBUG: LIBNAMES: pkg glibc-staticdev sonames set()
+DEBUG: calculating shlib provides for glibc-doc
+DEBUG: LIBNAMES: pkg glibc-doc sonames set()
+DEBUG: calculating shlib requirements for glibc-src
+DEBUG: calculating shlib requirements for glibc-dbg
+DEBUG: calculating shlib requirements for sln
+DEBUG: calculating shlib requirements for nscd
+DEBUG: nscd: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/packages-split/nscd/usr/sbin/nscd)
+DEBUG: calculating shlib requirements for ldconfig
+DEBUG: calculating shlib requirements for ldd
+DEBUG: calculating shlib requirements for ldso
+DEBUG: calculating shlib requirements for tzcode
+DEBUG: tzcode: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/packages-split/tzcode/usr/sbin/zic)
+DEBUG: tzcode: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/packages-split/tzcode/usr/bin/zdump)
+DEBUG: calculating shlib requirements for glibc-thread-db
+DEBUG: glibc-thread-db: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/packages-split/glibc-thread-db/lib/libthread_db.so.1)
+DEBUG: calculating shlib requirements for glibc-pic
+DEBUG: calculating shlib requirements for libmemusage
+DEBUG: libmemusage: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/packages-split/libmemusage/lib/libmemusage.so)
+DEBUG: libmemusage: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/packages-split/libmemusage/lib/libmemusage.so)
+DEBUG: calculating shlib requirements for malloc-debug
+DEBUG: malloc-debug: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/packages-split/malloc-debug/lib/libc_malloc_debug.so.0)
+DEBUG: malloc-debug: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/packages-split/malloc-debug/lib/libc_malloc_debug.so.0)
+DEBUG: calculating shlib requirements for libnss-db
+DEBUG: libnss-db: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/packages-split/libnss-db/lib/libnss_db.so.2)
+DEBUG: calculating shlib requirements for glibc-pcprofile
+DEBUG: glibc-pcprofile: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/packages-split/glibc-pcprofile/lib/libpcprofile.so)
+DEBUG: calculating shlib requirements for libsotruss
+DEBUG: libsotruss: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/packages-split/libsotruss/usr/lib/audit/sotruss-lib.so)
+DEBUG: calculating shlib requirements for glibc
+DEBUG: glibc: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/packages-split/glibc/lib/libdl.so.2)
+DEBUG: glibc: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/packages-split/glibc/lib/libpthread.so.0)
+DEBUG: glibc: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/packages-split/glibc/lib/librt.so.1)
+DEBUG: glibc: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/packages-split/glibc/lib/librt.so.1)
+DEBUG: glibc: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/packages-split/glibc/lib/libc.so.6)
+DEBUG: glibc: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/packages-split/glibc/lib/libnss_files.so.2)
+DEBUG: glibc: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/packages-split/glibc/lib/libBrokenLocale.so.1)
+DEBUG: glibc: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/packages-split/glibc/lib/libnss_dns.so.2)
+DEBUG: glibc: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/packages-split/glibc/lib/libnsl.so.1)
+DEBUG: glibc: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/packages-split/glibc/lib/libanl.so.1)
+DEBUG: glibc: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/packages-split/glibc/lib/libm.so.6)
+DEBUG: glibc: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/packages-split/glibc/lib/libutil.so.1)
+DEBUG: glibc: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/packages-split/glibc/lib/libnss_compat.so.2)
+DEBUG: glibc: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/packages-split/glibc/lib/libresolv.so.2)
+DEBUG: calculating shlib requirements for glibc-utils
+DEBUG: glibc-utils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/packages-split/glibc-utils/usr/bin/iconv)
+DEBUG: glibc-utils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/packages-split/glibc-utils/usr/bin/pcprofiledump)
+DEBUG: glibc-utils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/packages-split/glibc-utils/usr/bin/locale)
+DEBUG: glibc-utils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/packages-split/glibc-utils/usr/sbin/iconvconfig)
+DEBUG: glibc-utils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/packages-split/glibc-utils/usr/bin/gencat)
+DEBUG: glibc-utils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/packages-split/glibc-utils/usr/bin/sprof)
+DEBUG: glibc-utils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/packages-split/glibc-utils/usr/bin/pldd)
+DEBUG: glibc-utils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/packages-split/glibc-utils/usr/bin/makedb)
+DEBUG: glibc-utils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/packages-split/glibc-utils/usr/bin/getent)
+DEBUG: glibc-utils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/packages-split/glibc-utils/usr/bin/getconf)
+DEBUG: calculating shlib requirements for glibc-extra-nss
+DEBUG: glibc-extra-nss: Dependency libresolv.so.2 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/packages-split/glibc-extra-nss/lib/libnss_hesiod.so.2)
+DEBUG: glibc-extra-nss: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/packages-split/glibc-extra-nss/lib/libnss_hesiod.so.2)
+DEBUG: calculating shlib requirements for glibc-dev
+DEBUG: calculating shlib requirements for glibc-staticdev
+DEBUG: calculating shlib requirements for glibc-doc
+DEBUG: Python function package_do_shlibs finished
+DEBUG: Executing python function package_do_pkgconfig
+DEBUG: Python function package_do_pkgconfig finished
+DEBUG: Executing python function read_shlibdeps
+DEBUG: Python function read_shlibdeps finished
+DEBUG: Executing python function package_depchains
+DEBUG: Python function package_depchains finished
+DEBUG: Executing python function emit_pkgdata
+DEBUG: Python function emit_pkgdata finished
+DEBUG: Python function do_package finished
+DEBUG: Executing python function sstate_task_postfunc
+NOTE: Using umask 0o002 (not 22) for sstate packaging
+DEBUG: Executing python function target_add_sysroot_deps
+DEBUG: Python function target_add_sysroot_deps finished
+DEBUG: Executing python function sstate_hardcode_path
+NOTE: Removing hardcoded paths from sstate package: 'find /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/sstate-build-package/ \( -name "*.la" -o -name "*-config" -o -name "*_config" -o -name "postinst-*" \) -type f | xargs grep -l -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/recipe-sysroot' -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/recipe-sysroot-native' -e '/home/matt/tmp/build/obmc-y2038/tmp/hosttools' | tee /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/sstate-build-package/fixmepath | xargs --no-run-if-empty sed -i -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/recipe-sysroot-native:FIXMESTAGINGDIRHOST:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glibc/2.36-r0/recipe-sysroot:FIXMESTAGINGDIRTARGET:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:FIXME_HOSTTOOLS_DIR:g''
+DEBUG: Python function sstate_hardcode_path finished
+DEBUG: Executing python function sstate_report_unihash
+DEBUG: Python function sstate_report_unihash finished
+DEBUG: Executing shell function sstate_create_package
+DEBUG: Shell function sstate_create_package finished
+DEBUG: Executing python function sstate_hardcode_path_unpack
+DEBUG: Python function sstate_hardcode_path_unpack finished
+DEBUG: Python function sstate_task_postfunc finished

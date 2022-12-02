@@ -1,0 +1,26 @@
+194a195,215
+> ../git/tools/depmod.c: In function 'depmod_output':
+> ../git/tools/depmod.c:2606:61: warning: format '%li' expects argument of type 'long int', but argument 6 has type '__suseconds64_t' {aka 'long long int'} [-Wformat=]
+>  2606 |                         snprintf(tmp, sizeof(tmp), "%s.%i.%li.%li", itr->name, getpid(),
+>       |                                                           ~~^
+>       |                                                             |
+>       |                                                             long int
+>       |                                                           %lli
+>  2607 |                                         tv.tv_usec, tv.tv_sec);
+>       |                                         ~~~~~~~~~~           
+>       |                                           |
+>       |                                           __suseconds64_t {aka long long int}
+> ../git/tools/depmod.c:2606:65: warning: format '%li' expects argument of type 'long int', but argument 7 has type '__time64_t' {aka 'long long int'} [-Wformat=]
+>  2606 |                         snprintf(tmp, sizeof(tmp), "%s.%i.%li.%li", itr->name, getpid(),
+>       |                                                               ~~^
+>       |                                                                 |
+>       |                                                                 long int
+>       |                                                               %lli
+>  2607 |                                         tv.tv_usec, tv.tv_sec);
+>       |                                                     ~~~~~~~~~    
+>       |                                                       |
+>       |                                                       __time64_t {aka long long int}
+299c320
+< ../git/shared/util.c:478:27: warning: conversion from 'long long unsigned int' to 'long int' may change value [-Wconversion]
+---
+> ../git/shared/util.c:478:27: warning: conversion to 'long long int' from 'long long unsigned int' may change the sign of the result [-Wsign-conversion]

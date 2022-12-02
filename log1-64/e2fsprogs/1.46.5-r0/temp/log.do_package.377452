@@ -1,0 +1,437 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux_2.38.1.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/autoconf-archive/autoconf-archive_2022.09.03.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-cross_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-native_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/opkg-utils/opkg-utils_0.5.0.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-extended/texinfo-dummy-native/texinfo-dummy-native.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-support/attr/attr_2.5.1.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-core/gettext/gettext_0.21.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/autoconf/autoconf_2.71.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/automake/automake_1.16.5.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/dwarfsrcfiles/dwarfsrcfiles.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pkgconfig/pkgconfig_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/rpm/rpm_4.18.0.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: ['dwarfsrcfiles-native', 'rpm-native', 'libgcrypt-native', 'bzip2-native', 'elfutils-native', 'lua-native', 'python3-native', 'popt-native', 'sqlite3-native', 'file-native', 'libgpg-error-native', 'libcap-native', 'readline-native', 'ncurses-native', 'gdbm-native', 'libnsl2-native', 'libffi-native', 'util-linux-libuuid-native', 'openssl-native', 'libtirpc-native', 'perl-native', 'make-native']
+NOTE: Skipping as already exists in sysroot: ['glibc', 'util-linux', 'autoconf-archive', 'gcc-cross-arm', 'gcc-runtime', 'libtool-cross', 'libtool-native', 'opkg-utils', 'quilt-native', 'texinfo-dummy-native', 'attr', 'gettext-native', 'autoconf-native', 'automake-native', 'patch-native', 'pkgconfig-native', 'pseudo-native', 'linux-libc-headers', 'gmp-native', 'xz-native', 'flex-native', 'libmpc-native', 'zstd-native', 'binutils-cross-arm', 'gnu-config-native', 'mpfr-native', 'zlib-native', 'attr-native', 'libgcc', 'libxcrypt', 'bash-completion', 'util-linux-libuuid', 'zlib', 'ncurses', 'libcap-ng', 'libpam', 'gettext-minimal-native', 'm4-native', 'flex', 'cracklib']
+DEBUG: sed -e 's:^[^/]*/:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/recipe-sysroot-native/:g' /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/rpm-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/libgcrypt-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/elfutils-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/lua-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/python3-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/libgpg-error-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/ncurses-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/openssl-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/perl-native/fixmepath | xargs sed -i -e 's:FIXMESTAGINGDIRTARGET:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/recipe-sysroot:g; s:FIXMESTAGINGDIRHOST:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/recipe-sysroot-native:g' -e 's:FIXME_PSEUDO_SYSROOT:/home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/pseudo-native:g' -e 's:FIXME_HOSTTOOLS_DIR:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:g' -e 's:FIXME_PKGDATA_DIR:/home/matt/tmp/build/obmc-y2038/tmp/pkgdata/evb-ast2600:g' -e 's:FIXME_PSEUDO_LOCALSTATEDIR:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/pseudo/:g' -e 's:FIXME_LOGFIFO:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/temp/fifo.377452:g'
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function sstate_task_prefunc
+DEBUG: Python function sstate_task_prefunc finished
+DEBUG: Executing python function do_package
+DEBUG: Executing python function package_convert_pr_autoinc
+DEBUG: Python function package_convert_pr_autoinc finished
+DEBUG: Executing python function package_prepare_pkgdata
+NOTE: Installed into pkgdata-sysroot: ['glibc', 'util-linux', 'attr', 'gcc-runtime', 'opkg-utils', 'autoconf-archive', 'linux-libc-headers', 'util-linux-libuuid', 'libpam', 'libcap-ng', 'libxcrypt', 'zlib', 'ncurses', 'bash-completion', 'libgcc', 'flex', 'cracklib']
+DEBUG: Python function package_prepare_pkgdata finished
+DEBUG: Executing python function perform_packagecopy
+DEBUG: Python function perform_packagecopy finished
+DEBUG: Executing python function apply_update_alternative_renames
+NOTE: e2fsprogs: Already renamed: /sbin/mke2fs.e2fsprogs
+NOTE: e2fsprogs: Already renamed: /sbin/mkfs.ext2.e2fsprogs
+NOTE: e2fsprogs: Already renamed: /sbin/tune2fs.e2fsprogs
+NOTE: e2fsprogs: Rename /usr/share/man/man8/fsck.8 -> /usr/share/man/man8/fsck.8.e2fsprogs
+DEBUG: Python function apply_update_alternative_renames finished
+DEBUG: Executing python function split_and_strip_files
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/package/usr/lib/e2initrd_helper']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/package/sbin/resize2fs']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/package/sbin/mklost+found']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/package/sbin/mke2fs.e2fsprogs']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/package/sbin/logsave']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/package/sbin/filefrag']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/package/sbin/e4defrag']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/package/sbin/e4crypt']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/package/sbin/e2undo']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/package/sbin/e2label']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/package/sbin/e2image']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/package/sbin/e2fsck']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/package/sbin/e2freefrag']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/package/sbin/dumpe2fs']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/package/sbin/debugfs']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/package/sbin/badblocks']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/package/lib/libss.so.2.0']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/package/lib/libext2fs.so.2.4']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/package/lib/libe2p.so.2.3']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/package/lib/libcom_err.so.2.1']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/package/bin/lsattr.e2fsprogs']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/package/bin/chattr.e2fsprogs']
+DEBUG: Python function split_and_strip_files finished
+DEBUG: Executing python function fixup_perms
+DEBUG: Python function fixup_perms finished
+DEBUG: Executing python function populate_packages_updatealternatives
+NOTE: adding update-alternatives calls to postinst/prerm for e2fsprogs-mke2fs
+NOTE: 	update-alternatives --install /sbin/mke2fs mke2fs /sbin/mke2fs.e2fsprogs 100
+	update-alternatives --install /sbin/mkfs.ext2 mkfs.ext2 /sbin/mkfs.ext2.e2fsprogs 100
+
+NOTE: 	update-alternatives --remove  mke2fs /sbin/mke2fs.e2fsprogs
+	update-alternatives --remove  mkfs.ext2 /sbin/mkfs.ext2.e2fsprogs
+
+NOTE: adding update-alternatives calls to postinst/prerm for e2fsprogs-tune2fs
+NOTE: 	update-alternatives --install /sbin/tune2fs tune2fs /sbin/tune2fs.e2fsprogs 100
+
+NOTE: 	update-alternatives --remove  tune2fs /sbin/tune2fs.e2fsprogs
+
+NOTE: adding update-alternatives calls to postinst/prerm for e2fsprogs-doc
+NOTE: 	update-alternatives --install /usr/share/man/man8/fsck.8 fsck.8 /usr/share/man/man8/fsck.8.e2fsprogs 100
+
+NOTE: 	update-alternatives --remove  fsck.8 /usr/share/man/man8/fsck.8.e2fsprogs
+
+NOTE: adding update-alternatives calls to postinst/prerm for e2fsprogs
+NOTE: 	update-alternatives --install /bin/chattr chattr /bin/chattr.e2fsprogs 100
+	update-alternatives --install /bin/lsattr lsattr /bin/lsattr.e2fsprogs 100
+
+NOTE: 	update-alternatives --remove  chattr /bin/chattr.e2fsprogs
+	update-alternatives --remove  lsattr /bin/lsattr.e2fsprogs
+
+DEBUG: Python function populate_packages_updatealternatives finished
+DEBUG: Executing python function package_do_split_locales
+DEBUG: Python function package_do_split_locales finished
+DEBUG: Executing python function populate_packages
+DEBUG: Python function populate_packages finished
+DEBUG: Executing python function package_fixsymlinks
+DEBUG: e2fsprogs-dev contains dangling link /lib/libext2fs.so.2
+DEBUG: target found in libext2fs
+DEBUG: e2fsprogs-dev contains dangling link /lib/libss.so.2
+DEBUG: target found in libss
+DEBUG: e2fsprogs-dev contains dangling link /lib/libe2p.so.2
+DEBUG: target found in libe2p
+DEBUG: e2fsprogs-dev contains dangling link /lib/libcom_err.so.2
+DEBUG: target found in libcomerr
+DEBUG: Python function package_fixsymlinks finished
+DEBUG: Executing python function package_name_hook
+DEBUG: Executing python function debian_package_name_hook
+DEBUG: LIBNAMES: pkg libss libs 1 bins 0 sonames ['libss.so.2']
+NOTE: debian: renaming libss to libss2
+DEBUG: LIBNAMES: pkg libext2fs libs 1 bins 0 sonames ['libext2fs.so.2']
+NOTE: debian: renaming libext2fs to libext2fs2
+DEBUG: LIBNAMES: pkg libe2p libs 1 bins 0 sonames ['libe2p.so.2']
+NOTE: debian: renaming libe2p to libe2p2
+DEBUG: LIBNAMES: pkg libcomerr libs 1 bins 0 sonames ['libcom_err.so.2']
+NOTE: debian: renaming libcomerr to libcom-err2
+DEBUG: LIBNAMES: pkg e2fsprogs-tune2fs libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg e2fsprogs-staticdev libs 1 bins 0 sonames []
+DEBUG: LIBNAMES: pkg e2fsprogs-src libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg e2fsprogs-resize2fs libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg e2fsprogs-mke2fs libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg e2fsprogs-locale-zh-cn libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg e2fsprogs-locale-vi libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg e2fsprogs-locale-uk libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg e2fsprogs-locale-tr libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg e2fsprogs-locale-sv libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg e2fsprogs-locale-sr libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg e2fsprogs-locale-pt libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg e2fsprogs-locale-pl libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg e2fsprogs-locale-nl libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg e2fsprogs-locale-ms libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg e2fsprogs-locale-it libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg e2fsprogs-locale-id libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg e2fsprogs-locale-hu libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg e2fsprogs-locale-fr libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg e2fsprogs-locale-fi libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg e2fsprogs-locale-es libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg e2fsprogs-locale-eo libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg e2fsprogs-locale-de libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg e2fsprogs-locale-da libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg e2fsprogs-locale-cs libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg e2fsprogs-locale-ca libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg e2fsprogs-e2scrub libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg e2fsprogs-e2fsck libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg e2fsprogs-dumpe2fs libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg e2fsprogs-doc libs 0 bins 0 sonames []
+arm-openbmc-linux-gnueabi-objdump: '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-dev/lib/libext2fs.so': No such file
+arm-openbmc-linux-gnueabi-objdump: '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-dev/lib/libss.so': No such file
+arm-openbmc-linux-gnueabi-objdump: '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-dev/lib/libe2p.so': No such file
+arm-openbmc-linux-gnueabi-objdump: '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-dev/lib/libcom_err.so': No such file
+DEBUG: LIBNAMES: pkg e2fsprogs-dev libs 1 bins 1 sonames []
+DEBUG: LIBNAMES: pkg e2fsprogs-dbg libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg e2fsprogs-badblocks libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg e2fsprogs libs 0 bins 1 sonames []
+DEBUG: Python function debian_package_name_hook finished
+DEBUG: Python function package_name_hook finished
+DEBUG: Executing python function package_do_filedeps
+DEBUG: Python function package_do_filedeps finished
+DEBUG: Executing python function package_do_shlibs
+DEBUG: Reading shlib providers in /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/pkgdata-sysroot/shlibs2
+DEBUG: calculating shlib provides for e2fsprogs-src
+DEBUG: LIBNAMES: pkg e2fsprogs-src sonames set()
+DEBUG: calculating shlib provides for e2fsprogs-dbg
+DEBUG: LIBNAMES: pkg e2fsprogs-dbg sonames set()
+DEBUG: calculating shlib provides for libcomerr
+DEBUG: registering libcomerr-1.46.5 as shlib provider for libcom_err.so.2
+DEBUG: adding ldconfig call to postinst for libcomerr
+DEBUG: LIBNAMES: pkg libcomerr sonames {('libcom_err.so.2', '/lib', '1.46.5')}
+DEBUG: calculating shlib provides for libss
+DEBUG: registering libss-1.46.5 as shlib provider for libss.so.2
+DEBUG: adding ldconfig call to postinst for libss
+DEBUG: LIBNAMES: pkg libss sonames {('libss.so.2', '/lib', '1.46.5')}
+DEBUG: calculating shlib provides for libe2p
+DEBUG: registering libe2p-1.46.5 as shlib provider for libe2p.so.2
+DEBUG: adding ldconfig call to postinst for libe2p
+DEBUG: LIBNAMES: pkg libe2p sonames {('libe2p.so.2', '/lib', '1.46.5')}
+DEBUG: calculating shlib provides for libext2fs
+DEBUG: registering libext2fs-1.46.5 as shlib provider for libext2fs.so.2
+DEBUG: adding ldconfig call to postinst for libext2fs
+DEBUG: LIBNAMES: pkg libext2fs sonames {('libext2fs.so.2', '/lib', '1.46.5')}
+DEBUG: calculating shlib provides for e2fsprogs-badblocks
+DEBUG: LIBNAMES: pkg e2fsprogs-badblocks sonames set()
+DEBUG: calculating shlib provides for e2fsprogs-dumpe2fs
+DEBUG: LIBNAMES: pkg e2fsprogs-dumpe2fs sonames set()
+DEBUG: calculating shlib provides for e2fsprogs-e2fsck
+DEBUG: LIBNAMES: pkg e2fsprogs-e2fsck sonames set()
+DEBUG: calculating shlib provides for e2fsprogs-e2scrub
+DEBUG: LIBNAMES: pkg e2fsprogs-e2scrub sonames set()
+DEBUG: calculating shlib provides for e2fsprogs-mke2fs
+DEBUG: LIBNAMES: pkg e2fsprogs-mke2fs sonames set()
+DEBUG: calculating shlib provides for e2fsprogs-resize2fs
+DEBUG: LIBNAMES: pkg e2fsprogs-resize2fs sonames set()
+DEBUG: calculating shlib provides for e2fsprogs-tune2fs
+DEBUG: LIBNAMES: pkg e2fsprogs-tune2fs sonames set()
+DEBUG: calculating shlib provides for e2fsprogs-staticdev
+DEBUG: LIBNAMES: pkg e2fsprogs-staticdev sonames set()
+DEBUG: calculating shlib provides for e2fsprogs-dev
+DEBUG: LIBNAMES: pkg e2fsprogs-dev sonames set()
+DEBUG: calculating shlib provides for e2fsprogs-doc
+DEBUG: LIBNAMES: pkg e2fsprogs-doc sonames set()
+DEBUG: calculating shlib provides for e2fsprogs
+DEBUG: LIBNAMES: pkg e2fsprogs sonames set()
+DEBUG: calculating shlib provides for e2fsprogs-locale-ca
+DEBUG: LIBNAMES: pkg e2fsprogs-locale-ca sonames set()
+DEBUG: calculating shlib provides for e2fsprogs-locale-cs
+DEBUG: LIBNAMES: pkg e2fsprogs-locale-cs sonames set()
+DEBUG: calculating shlib provides for e2fsprogs-locale-da
+DEBUG: LIBNAMES: pkg e2fsprogs-locale-da sonames set()
+DEBUG: calculating shlib provides for e2fsprogs-locale-de
+DEBUG: LIBNAMES: pkg e2fsprogs-locale-de sonames set()
+DEBUG: calculating shlib provides for e2fsprogs-locale-eo
+DEBUG: LIBNAMES: pkg e2fsprogs-locale-eo sonames set()
+DEBUG: calculating shlib provides for e2fsprogs-locale-es
+DEBUG: LIBNAMES: pkg e2fsprogs-locale-es sonames set()
+DEBUG: calculating shlib provides for e2fsprogs-locale-fi
+DEBUG: LIBNAMES: pkg e2fsprogs-locale-fi sonames set()
+DEBUG: calculating shlib provides for e2fsprogs-locale-fr
+DEBUG: LIBNAMES: pkg e2fsprogs-locale-fr sonames set()
+DEBUG: calculating shlib provides for e2fsprogs-locale-hu
+DEBUG: LIBNAMES: pkg e2fsprogs-locale-hu sonames set()
+DEBUG: calculating shlib provides for e2fsprogs-locale-id
+DEBUG: LIBNAMES: pkg e2fsprogs-locale-id sonames set()
+DEBUG: calculating shlib provides for e2fsprogs-locale-it
+DEBUG: LIBNAMES: pkg e2fsprogs-locale-it sonames set()
+DEBUG: calculating shlib provides for e2fsprogs-locale-ms
+DEBUG: LIBNAMES: pkg e2fsprogs-locale-ms sonames set()
+DEBUG: calculating shlib provides for e2fsprogs-locale-nl
+DEBUG: LIBNAMES: pkg e2fsprogs-locale-nl sonames set()
+DEBUG: calculating shlib provides for e2fsprogs-locale-pl
+DEBUG: LIBNAMES: pkg e2fsprogs-locale-pl sonames set()
+DEBUG: calculating shlib provides for e2fsprogs-locale-pt
+DEBUG: LIBNAMES: pkg e2fsprogs-locale-pt sonames set()
+DEBUG: calculating shlib provides for e2fsprogs-locale-sr
+DEBUG: LIBNAMES: pkg e2fsprogs-locale-sr sonames set()
+DEBUG: calculating shlib provides for e2fsprogs-locale-sv
+DEBUG: LIBNAMES: pkg e2fsprogs-locale-sv sonames set()
+DEBUG: calculating shlib provides for e2fsprogs-locale-tr
+DEBUG: LIBNAMES: pkg e2fsprogs-locale-tr sonames set()
+DEBUG: calculating shlib provides for e2fsprogs-locale-uk
+DEBUG: LIBNAMES: pkg e2fsprogs-locale-uk sonames set()
+DEBUG: calculating shlib provides for e2fsprogs-locale-vi
+DEBUG: LIBNAMES: pkg e2fsprogs-locale-vi sonames set()
+DEBUG: calculating shlib provides for e2fsprogs-locale-zh-cn
+DEBUG: LIBNAMES: pkg e2fsprogs-locale-zh-cn sonames set()
+DEBUG: calculating shlib requirements for e2fsprogs-src
+DEBUG: calculating shlib requirements for e2fsprogs-dbg
+DEBUG: calculating shlib requirements for libcomerr
+DEBUG: libcomerr: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/libcomerr/lib/libcom_err.so.2.1)
+DEBUG: libcomerr: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/libcomerr/lib/libcom_err.so.2.1)
+DEBUG: calculating shlib requirements for libss
+DEBUG: libss: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/libss/lib/libss.so.2.0)
+DEBUG: libss: Dependency libcom_err.so.2 requires package libcomerr (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/libss/lib/libss.so.2.0)
+DEBUG: libss: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/libss/lib/libss.so.2.0)
+DEBUG: calculating shlib requirements for libe2p
+DEBUG: libe2p: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/libe2p/lib/libe2p.so.2.3)
+DEBUG: libe2p: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/libe2p/lib/libe2p.so.2.3)
+DEBUG: calculating shlib requirements for libext2fs
+DEBUG: libext2fs: Dependency libblkid.so.1 requires package util-linux-libblkid (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/libext2fs/usr/lib/e2initrd_helper)
+DEBUG: libext2fs: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/libext2fs/usr/lib/e2initrd_helper)
+DEBUG: libext2fs: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/libext2fs/lib/libext2fs.so.2.4)
+DEBUG: libext2fs: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/libext2fs/lib/libext2fs.so.2.4)
+DEBUG: libext2fs: Dependency libcom_err.so.2 requires package libcomerr (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/libext2fs/lib/libext2fs.so.2.4)
+DEBUG: libext2fs: Dependency libext2fs.so.2 requires package libext2fs (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/libext2fs/usr/lib/e2initrd_helper)
+DEBUG: libext2fs: Dependency libcom_err.so.2 requires package libcomerr (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/libext2fs/usr/lib/e2initrd_helper)
+DEBUG: libext2fs: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/libext2fs/usr/lib/e2initrd_helper)
+DEBUG: calculating shlib requirements for e2fsprogs-badblocks
+DEBUG: e2fsprogs-badblocks: Dependency libcom_err.so.2 requires package libcomerr (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-badblocks/sbin/badblocks)
+DEBUG: e2fsprogs-badblocks: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-badblocks/sbin/badblocks)
+DEBUG: e2fsprogs-badblocks: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-badblocks/sbin/badblocks)
+DEBUG: e2fsprogs-badblocks: Dependency libext2fs.so.2 requires package libext2fs (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-badblocks/sbin/badblocks)
+DEBUG: calculating shlib requirements for e2fsprogs-dumpe2fs
+DEBUG: e2fsprogs-dumpe2fs: Dependency libe2p.so.2 requires package libe2p (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-dumpe2fs/sbin/dumpe2fs)
+DEBUG: e2fsprogs-dumpe2fs: Dependency libblkid.so.1 requires package util-linux-libblkid (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-dumpe2fs/sbin/dumpe2fs)
+DEBUG: e2fsprogs-dumpe2fs: Dependency libext2fs.so.2 requires package libext2fs (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-dumpe2fs/sbin/dumpe2fs)
+DEBUG: e2fsprogs-dumpe2fs: Dependency libcom_err.so.2 requires package libcomerr (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-dumpe2fs/sbin/dumpe2fs)
+DEBUG: e2fsprogs-dumpe2fs: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-dumpe2fs/sbin/dumpe2fs)
+DEBUG: e2fsprogs-dumpe2fs: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-dumpe2fs/sbin/dumpe2fs)
+DEBUG: calculating shlib requirements for e2fsprogs-e2fsck
+DEBUG: e2fsprogs-e2fsck: Dependency libblkid.so.1 requires package util-linux-libblkid (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-e2fsck/sbin/fsck.ext2)
+DEBUG: e2fsprogs-e2fsck: Dependency libblkid.so.1 requires package util-linux-libblkid (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-e2fsck/sbin/fsck.ext3)
+DEBUG: e2fsprogs-e2fsck: Dependency libcom_err.so.2 requires package libcomerr (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-e2fsck/sbin/fsck.ext2)
+DEBUG: e2fsprogs-e2fsck: Dependency libblkid.so.1 requires package util-linux-libblkid (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-e2fsck/sbin/fsck.ext4)
+DEBUG: e2fsprogs-e2fsck: Dependency libext2fs.so.2 requires package libext2fs (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-e2fsck/sbin/e2fsck)
+DEBUG: e2fsprogs-e2fsck: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-e2fsck/sbin/e2fsck)
+DEBUG: e2fsprogs-e2fsck: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-e2fsck/sbin/e2fsck)
+DEBUG: e2fsprogs-e2fsck: Dependency libuuid.so.1 requires package util-linux-libuuid (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-e2fsck/sbin/fsck.ext2)
+DEBUG: e2fsprogs-e2fsck: Dependency libcom_err.so.2 requires package libcomerr (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-e2fsck/sbin/fsck.ext3)
+DEBUG: e2fsprogs-e2fsck: Dependency libe2p.so.2 requires package libe2p (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-e2fsck/sbin/e2fsck)
+DEBUG: e2fsprogs-e2fsck: Dependency libext2fs.so.2 requires package libext2fs (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-e2fsck/sbin/fsck.ext4)
+DEBUG: e2fsprogs-e2fsck: Dependency libuuid.so.1 requires package util-linux-libuuid (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-e2fsck/sbin/fsck.ext3)
+DEBUG: e2fsprogs-e2fsck: Dependency libcom_err.so.2 requires package libcomerr (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-e2fsck/sbin/fsck.ext4)
+DEBUG: e2fsprogs-e2fsck: Dependency libext2fs.so.2 requires package libext2fs (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-e2fsck/sbin/fsck.ext3)
+DEBUG: e2fsprogs-e2fsck: Dependency libe2p.so.2 requires package libe2p (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-e2fsck/sbin/fsck.ext2)
+DEBUG: e2fsprogs-e2fsck: Dependency libuuid.so.1 requires package util-linux-libuuid (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-e2fsck/sbin/fsck.ext4)
+DEBUG: e2fsprogs-e2fsck: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-e2fsck/sbin/fsck.ext2)
+DEBUG: e2fsprogs-e2fsck: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-e2fsck/sbin/fsck.ext4)
+DEBUG: e2fsprogs-e2fsck: Dependency libblkid.so.1 requires package util-linux-libblkid (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-e2fsck/sbin/e2fsck)
+DEBUG: e2fsprogs-e2fsck: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-e2fsck/sbin/fsck.ext3)
+DEBUG: e2fsprogs-e2fsck: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-e2fsck/sbin/fsck.ext3)
+DEBUG: e2fsprogs-e2fsck: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-e2fsck/sbin/fsck.ext4)
+DEBUG: e2fsprogs-e2fsck: Dependency libe2p.so.2 requires package libe2p (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-e2fsck/sbin/fsck.ext3)
+DEBUG: e2fsprogs-e2fsck: Dependency libext2fs.so.2 requires package libext2fs (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-e2fsck/sbin/fsck.ext2)
+DEBUG: e2fsprogs-e2fsck: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-e2fsck/sbin/fsck.ext2)
+DEBUG: e2fsprogs-e2fsck: Dependency libcom_err.so.2 requires package libcomerr (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-e2fsck/sbin/e2fsck)
+DEBUG: e2fsprogs-e2fsck: Dependency libuuid.so.1 requires package util-linux-libuuid (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-e2fsck/sbin/e2fsck)
+DEBUG: e2fsprogs-e2fsck: Dependency libe2p.so.2 requires package libe2p (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-e2fsck/sbin/fsck.ext4)
+DEBUG: calculating shlib requirements for e2fsprogs-e2scrub
+DEBUG: calculating shlib requirements for e2fsprogs-mke2fs
+DEBUG: e2fsprogs-mke2fs: Dependency libext2fs.so.2 requires package libext2fs (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-mke2fs/sbin/mkfs.ext4)
+DEBUG: e2fsprogs-mke2fs: Dependency libe2p.so.2 requires package libe2p (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-mke2fs/sbin/mkfs.ext3)
+DEBUG: e2fsprogs-mke2fs: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-mke2fs/sbin/mkfs.ext4)
+DEBUG: e2fsprogs-mke2fs: Dependency libblkid.so.1 requires package util-linux-libblkid (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-mke2fs/sbin/mke2fs.e2fsprogs)
+DEBUG: e2fsprogs-mke2fs: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-mke2fs/sbin/mkfs.ext3)
+DEBUG: e2fsprogs-mke2fs: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-mke2fs/sbin/mkfs.ext2.e2fsprogs)
+DEBUG: e2fsprogs-mke2fs: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-mke2fs/sbin/mkfs.ext4)
+DEBUG: e2fsprogs-mke2fs: Dependency libe2p.so.2 requires package libe2p (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-mke2fs/sbin/mkfs.ext2.e2fsprogs)
+DEBUG: e2fsprogs-mke2fs: Dependency libblkid.so.1 requires package util-linux-libblkid (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-mke2fs/sbin/mkfs.ext3)
+DEBUG: e2fsprogs-mke2fs: Dependency libblkid.so.1 requires package util-linux-libblkid (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-mke2fs/sbin/mkfs.ext2.e2fsprogs)
+DEBUG: e2fsprogs-mke2fs: Dependency libcom_err.so.2 requires package libcomerr (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-mke2fs/sbin/mkfs.ext4)
+DEBUG: e2fsprogs-mke2fs: Dependency libcom_err.so.2 requires package libcomerr (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-mke2fs/sbin/mkfs.ext3)
+DEBUG: e2fsprogs-mke2fs: Dependency libe2p.so.2 requires package libe2p (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-mke2fs/sbin/mkfs.ext4)
+DEBUG: e2fsprogs-mke2fs: Dependency libcom_err.so.2 requires package libcomerr (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-mke2fs/sbin/mke2fs.e2fsprogs)
+DEBUG: e2fsprogs-mke2fs: Dependency libcom_err.so.2 requires package libcomerr (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-mke2fs/sbin/mkfs.ext2.e2fsprogs)
+DEBUG: e2fsprogs-mke2fs: Dependency libuuid.so.1 requires package util-linux-libuuid (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-mke2fs/sbin/mke2fs.e2fsprogs)
+DEBUG: e2fsprogs-mke2fs: Dependency libblkid.so.1 requires package util-linux-libblkid (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-mke2fs/sbin/mkfs.ext4)
+DEBUG: e2fsprogs-mke2fs: Dependency libext2fs.so.2 requires package libext2fs (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-mke2fs/sbin/mke2fs.e2fsprogs)
+DEBUG: e2fsprogs-mke2fs: Dependency libuuid.so.1 requires package util-linux-libuuid (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-mke2fs/sbin/mkfs.ext2.e2fsprogs)
+DEBUG: e2fsprogs-mke2fs: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-mke2fs/sbin/mke2fs.e2fsprogs)
+DEBUG: e2fsprogs-mke2fs: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-mke2fs/sbin/mke2fs.e2fsprogs)
+DEBUG: e2fsprogs-mke2fs: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-mke2fs/sbin/mkfs.ext2.e2fsprogs)
+DEBUG: e2fsprogs-mke2fs: Dependency libext2fs.so.2 requires package libext2fs (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-mke2fs/sbin/mkfs.ext3)
+DEBUG: e2fsprogs-mke2fs: Dependency libe2p.so.2 requires package libe2p (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-mke2fs/sbin/mke2fs.e2fsprogs)
+DEBUG: e2fsprogs-mke2fs: Dependency libuuid.so.1 requires package util-linux-libuuid (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-mke2fs/sbin/mkfs.ext3)
+DEBUG: e2fsprogs-mke2fs: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-mke2fs/sbin/mkfs.ext3)
+DEBUG: e2fsprogs-mke2fs: Dependency libuuid.so.1 requires package util-linux-libuuid (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-mke2fs/sbin/mkfs.ext4)
+DEBUG: e2fsprogs-mke2fs: Dependency libext2fs.so.2 requires package libext2fs (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-mke2fs/sbin/mkfs.ext2.e2fsprogs)
+DEBUG: calculating shlib requirements for e2fsprogs-resize2fs
+DEBUG: e2fsprogs-resize2fs: Dependency libcom_err.so.2 requires package libcomerr (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-resize2fs/sbin/resize2fs)
+DEBUG: e2fsprogs-resize2fs: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-resize2fs/sbin/resize2fs)
+DEBUG: e2fsprogs-resize2fs: Dependency libe2p.so.2 requires package libe2p (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-resize2fs/sbin/resize2fs)
+DEBUG: e2fsprogs-resize2fs: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-resize2fs/sbin/resize2fs)
+DEBUG: e2fsprogs-resize2fs: Dependency libext2fs.so.2 requires package libext2fs (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-resize2fs/sbin/resize2fs)
+DEBUG: calculating shlib requirements for e2fsprogs-tune2fs
+DEBUG: e2fsprogs-tune2fs: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-tune2fs/sbin/tune2fs.e2fsprogs)
+DEBUG: e2fsprogs-tune2fs: Dependency libcom_err.so.2 requires package libcomerr (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-tune2fs/sbin/tune2fs.e2fsprogs)
+DEBUG: e2fsprogs-tune2fs: Dependency libe2p.so.2 requires package libe2p (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-tune2fs/sbin/tune2fs.e2fsprogs)
+DEBUG: e2fsprogs-tune2fs: Dependency libblkid.so.1 requires package util-linux-libblkid (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-tune2fs/sbin/tune2fs.e2fsprogs)
+DEBUG: e2fsprogs-tune2fs: Dependency libext2fs.so.2 requires package libext2fs (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-tune2fs/sbin/e2label)
+DEBUG: e2fsprogs-tune2fs: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-tune2fs/sbin/tune2fs.e2fsprogs)
+DEBUG: e2fsprogs-tune2fs: Dependency libuuid.so.1 requires package util-linux-libuuid (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-tune2fs/sbin/e2label)
+DEBUG: e2fsprogs-tune2fs: Dependency libext2fs.so.2 requires package libext2fs (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-tune2fs/sbin/tune2fs.e2fsprogs)
+DEBUG: e2fsprogs-tune2fs: Dependency libcom_err.so.2 requires package libcomerr (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-tune2fs/sbin/e2label)
+DEBUG: e2fsprogs-tune2fs: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-tune2fs/sbin/e2label)
+DEBUG: e2fsprogs-tune2fs: Dependency libuuid.so.1 requires package util-linux-libuuid (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-tune2fs/sbin/tune2fs.e2fsprogs)
+DEBUG: e2fsprogs-tune2fs: Dependency libe2p.so.2 requires package libe2p (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-tune2fs/sbin/e2label)
+DEBUG: e2fsprogs-tune2fs: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-tune2fs/sbin/e2label)
+DEBUG: e2fsprogs-tune2fs: Dependency libblkid.so.1 requires package util-linux-libblkid (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs-tune2fs/sbin/e2label)
+DEBUG: calculating shlib requirements for e2fsprogs-staticdev
+DEBUG: calculating shlib requirements for e2fsprogs-dev
+DEBUG: calculating shlib requirements for e2fsprogs-doc
+DEBUG: calculating shlib requirements for e2fsprogs
+DEBUG: e2fsprogs: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs/sbin/e2freefrag)
+DEBUG: e2fsprogs: Dependency libext2fs.so.2 requires package libext2fs (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs/sbin/debugfs)
+DEBUG: e2fsprogs: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs/sbin/debugfs)
+DEBUG: e2fsprogs: Dependency libuuid.so.1 requires package util-linux-libuuid (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs/sbin/e4crypt)
+DEBUG: e2fsprogs: Dependency libext2fs.so.2 requires package libext2fs (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs/sbin/e4crypt)
+DEBUG: e2fsprogs: Dependency libcom_err.so.2 requires package libcomerr (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs/sbin/e2mmpstatus)
+DEBUG: e2fsprogs: Dependency libuuid.so.1 requires package util-linux-libuuid (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs/sbin/debugfs)
+DEBUG: e2fsprogs: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs/sbin/e4crypt)
+DEBUG: e2fsprogs: Dependency libcom_err.so.2 requires package libcomerr (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs/bin/chattr.e2fsprogs)
+DEBUG: e2fsprogs: Dependency libcom_err.so.2 requires package libcomerr (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs/sbin/e2freefrag)
+DEBUG: e2fsprogs: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs/sbin/e4crypt)
+DEBUG: e2fsprogs: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs/sbin/debugfs)
+DEBUG: e2fsprogs: Dependency libblkid.so.1 requires package util-linux-libblkid (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs/sbin/e2image)
+DEBUG: e2fsprogs: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs/bin/lsattr.e2fsprogs)
+DEBUG: e2fsprogs: Dependency libss.so.2 requires package libss (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs/sbin/debugfs)
+DEBUG: e2fsprogs: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs/bin/lsattr.e2fsprogs)
+DEBUG: e2fsprogs: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs/sbin/filefrag)
+DEBUG: e2fsprogs: Dependency libext2fs.so.2 requires package libext2fs (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs/sbin/e4defrag)
+DEBUG: e2fsprogs: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs/sbin/e4defrag)
+DEBUG: e2fsprogs: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs/sbin/e2image)
+DEBUG: e2fsprogs: Dependency libext2fs.so.2 requires package libext2fs (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs/sbin/e2image)
+DEBUG: e2fsprogs: Dependency libe2p.so.2 requires package libe2p (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs/bin/chattr.e2fsprogs)
+DEBUG: e2fsprogs: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs/sbin/e4defrag)
+DEBUG: e2fsprogs: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs/sbin/e2image)
+DEBUG: e2fsprogs: Dependency libe2p.so.2 requires package libe2p (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs/sbin/e2mmpstatus)
+DEBUG: e2fsprogs: Dependency libext2fs.so.2 requires package libext2fs (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs/sbin/e2undo)
+DEBUG: e2fsprogs: Dependency libcom_err.so.2 requires package libcomerr (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs/bin/lsattr.e2fsprogs)
+DEBUG: e2fsprogs: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs/sbin/e2undo)
+DEBUG: e2fsprogs: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs/sbin/filefrag)
+DEBUG: e2fsprogs: Dependency libcom_err.so.2 requires package libcomerr (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs/sbin/debugfs)
+DEBUG: e2fsprogs: Dependency libblkid.so.1 requires package util-linux-libblkid (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs/sbin/e2mmpstatus)
+DEBUG: e2fsprogs: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs/sbin/mklost+found)
+DEBUG: e2fsprogs: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs/sbin/logsave)
+DEBUG: e2fsprogs: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs/sbin/mklost+found)
+DEBUG: e2fsprogs: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs/sbin/e2undo)
+DEBUG: e2fsprogs: Dependency libe2p.so.2 requires package libe2p (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs/sbin/debugfs)
+DEBUG: e2fsprogs: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs/sbin/logsave)
+DEBUG: e2fsprogs: Dependency libcom_err.so.2 requires package libcomerr (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs/sbin/e4defrag)
+DEBUG: e2fsprogs: Dependency libe2p.so.2 requires package libe2p (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs/bin/lsattr.e2fsprogs)
+DEBUG: e2fsprogs: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs/bin/chattr.e2fsprogs)
+DEBUG: e2fsprogs: Dependency libext2fs.so.2 requires package libext2fs (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs/sbin/e2mmpstatus)
+DEBUG: e2fsprogs: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs/sbin/e2freefrag)
+DEBUG: e2fsprogs: Dependency libcom_err.so.2 requires package libcomerr (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs/sbin/e2image)
+DEBUG: e2fsprogs: Dependency libblkid.so.1 requires package util-linux-libblkid (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs/sbin/debugfs)
+DEBUG: e2fsprogs: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs/sbin/e2mmpstatus)
+DEBUG: e2fsprogs: Dependency libcom_err.so.2 requires package libcomerr (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs/sbin/e2undo)
+DEBUG: e2fsprogs: Dependency libext2fs.so.2 requires package libext2fs (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs/sbin/e2freefrag)
+DEBUG: e2fsprogs: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs/sbin/e2mmpstatus)
+DEBUG: e2fsprogs: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/packages-split/e2fsprogs/bin/chattr.e2fsprogs)
+DEBUG: calculating shlib requirements for e2fsprogs-locale-ca
+DEBUG: calculating shlib requirements for e2fsprogs-locale-cs
+DEBUG: calculating shlib requirements for e2fsprogs-locale-da
+DEBUG: calculating shlib requirements for e2fsprogs-locale-de
+DEBUG: calculating shlib requirements for e2fsprogs-locale-eo
+DEBUG: calculating shlib requirements for e2fsprogs-locale-es
+DEBUG: calculating shlib requirements for e2fsprogs-locale-fi
+DEBUG: calculating shlib requirements for e2fsprogs-locale-fr
+DEBUG: calculating shlib requirements for e2fsprogs-locale-hu
+DEBUG: calculating shlib requirements for e2fsprogs-locale-id
+DEBUG: calculating shlib requirements for e2fsprogs-locale-it
+DEBUG: calculating shlib requirements for e2fsprogs-locale-ms
+DEBUG: calculating shlib requirements for e2fsprogs-locale-nl
+DEBUG: calculating shlib requirements for e2fsprogs-locale-pl
+DEBUG: calculating shlib requirements for e2fsprogs-locale-pt
+DEBUG: calculating shlib requirements for e2fsprogs-locale-sr
+DEBUG: calculating shlib requirements for e2fsprogs-locale-sv
+DEBUG: calculating shlib requirements for e2fsprogs-locale-tr
+DEBUG: calculating shlib requirements for e2fsprogs-locale-uk
+DEBUG: calculating shlib requirements for e2fsprogs-locale-vi
+DEBUG: calculating shlib requirements for e2fsprogs-locale-zh-cn
+DEBUG: Python function package_do_shlibs finished
+DEBUG: Executing python function package_do_pkgconfig
+DEBUG: Python function package_do_pkgconfig finished
+DEBUG: Executing python function read_shlibdeps
+DEBUG: Python function read_shlibdeps finished
+DEBUG: Executing python function package_depchains
+DEBUG: Python function package_depchains finished
+DEBUG: Executing python function emit_pkgdata
+DEBUG: Python function emit_pkgdata finished
+DEBUG: Python function do_package finished
+DEBUG: Executing python function sstate_task_postfunc
+NOTE: Using umask 0o002 (not 22) for sstate packaging
+DEBUG: Executing python function target_add_sysroot_deps
+DEBUG: Python function target_add_sysroot_deps finished
+DEBUG: Executing python function sstate_hardcode_path
+NOTE: Removing hardcoded paths from sstate package: 'find /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/sstate-build-package/ \( -name "*.la" -o -name "*-config" -o -name "*_config" -o -name "postinst-*" \) -type f | xargs grep -l -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/recipe-sysroot' -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/recipe-sysroot-native' -e '/home/matt/tmp/build/obmc-y2038/tmp/hosttools' | tee /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/sstate-build-package/fixmepath | xargs --no-run-if-empty sed -i -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/recipe-sysroot-native:FIXMESTAGINGDIRHOST:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/e2fsprogs/1.46.5-r0/recipe-sysroot:FIXMESTAGINGDIRTARGET:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:FIXME_HOSTTOOLS_DIR:g''
+DEBUG: Python function sstate_hardcode_path finished
+DEBUG: Executing python function sstate_report_unihash
+DEBUG: Python function sstate_report_unihash finished
+DEBUG: Executing shell function sstate_create_package
+DEBUG: Shell function sstate_create_package finished
+DEBUG: Executing python function sstate_hardcode_path_unpack
+DEBUG: Python function sstate_hardcode_path_unpack finished
+DEBUG: Python function sstate_task_postfunc finished

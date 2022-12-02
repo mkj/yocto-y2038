@@ -1,0 +1,128 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: ['quilt-native', 'patch-native', 'libtool-native', 'attr-native', 'texinfo-dummy-native', 'gettext-minimal-native']
+NOTE: Skipping as already exists in sysroot: []
+DEBUG: sed -e 's:^[^/]*/:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gmp/6.2.1-r0/recipe-sysroot-native/:g' /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/quilt-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/libtool-native/fixmepath | xargs sed -i -e 's:FIXMESTAGINGDIRTARGET:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gmp/6.2.1-r0/recipe-sysroot:g; s:FIXMESTAGINGDIRHOST:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gmp/6.2.1-r0/recipe-sysroot-native:g' -e 's:FIXME_PSEUDO_SYSROOT:/home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/pseudo-native:g' -e 's:FIXME_HOSTTOOLS_DIR:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:g' -e 's:FIXME_PKGDATA_DIR:/home/matt/tmp/build/obmc-y2038/tmp/pkgdata/evb-ast2600:g' -e 's:FIXME_PSEUDO_LOCALSTATEDIR:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gmp/6.2.1-r0/pseudo/:g' -e 's:FIXME_LOGFIFO:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gmp/6.2.1-r0/temp/fifo.1797668:g'
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function do_patch
+DEBUG: Executing python function patch_do_patch
+DEBUG: Searching for use-includedir.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-support/gmp/gmp-6.2.1/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/gmp/gmp/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/gmp/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/gmp/gmp-6.2.1/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/gmp/gmp/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/gmp/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/gmp/gmp-6.2.1/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-support/gmp/gmp/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-support/gmp/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-support/gmp/gmp-6.2.1/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-support/gmp/gmp/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-support/gmp/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-support/gmp/gmp-6.2.1/aspeed
+    /home/matt/src/openbmc/meta/recipes-support/gmp/gmp/aspeed
+    /home/matt/src/openbmc/meta/recipes-support/gmp/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-support/gmp/gmp-6.2.1/armv7a
+    /home/matt/src/openbmc/meta/recipes-support/gmp/gmp/armv7a
+    /home/matt/src/openbmc/meta/recipes-support/gmp/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-support/gmp/gmp-6.2.1/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-support/gmp/gmp/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-support/gmp/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-support/gmp/gmp-6.2.1/arm
+    /home/matt/src/openbmc/meta/recipes-support/gmp/gmp/arm
+    /home/matt/src/openbmc/meta/recipes-support/gmp/files/arm
+    /home/matt/src/openbmc/meta/recipes-support/gmp/gmp-6.2.1/
+    /home/matt/src/openbmc/meta/recipes-support/gmp/gmp/
+    /home/matt/src/openbmc/meta/recipes-support/gmp/files/
+DEBUG: Searching for 0001-Append-the-user-provided-flags-to-the-auto-detected-.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-support/gmp/gmp-6.2.1/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/gmp/gmp/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/gmp/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/gmp/gmp-6.2.1/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/gmp/gmp/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/gmp/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/gmp/gmp-6.2.1/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-support/gmp/gmp/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-support/gmp/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-support/gmp/gmp-6.2.1/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-support/gmp/gmp/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-support/gmp/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-support/gmp/gmp-6.2.1/aspeed
+    /home/matt/src/openbmc/meta/recipes-support/gmp/gmp/aspeed
+    /home/matt/src/openbmc/meta/recipes-support/gmp/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-support/gmp/gmp-6.2.1/armv7a
+    /home/matt/src/openbmc/meta/recipes-support/gmp/gmp/armv7a
+    /home/matt/src/openbmc/meta/recipes-support/gmp/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-support/gmp/gmp-6.2.1/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-support/gmp/gmp/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-support/gmp/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-support/gmp/gmp-6.2.1/arm
+    /home/matt/src/openbmc/meta/recipes-support/gmp/gmp/arm
+    /home/matt/src/openbmc/meta/recipes-support/gmp/files/arm
+    /home/matt/src/openbmc/meta/recipes-support/gmp/gmp-6.2.1/
+    /home/matt/src/openbmc/meta/recipes-support/gmp/gmp/
+    /home/matt/src/openbmc/meta/recipes-support/gmp/files/
+DEBUG: Searching for 0001-confiure.ac-Believe-the-cflags-from-environment.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-support/gmp/gmp-6.2.1/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/gmp/gmp/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/gmp/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/gmp/gmp-6.2.1/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/gmp/gmp/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/gmp/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/gmp/gmp-6.2.1/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-support/gmp/gmp/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-support/gmp/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-support/gmp/gmp-6.2.1/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-support/gmp/gmp/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-support/gmp/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-support/gmp/gmp-6.2.1/aspeed
+    /home/matt/src/openbmc/meta/recipes-support/gmp/gmp/aspeed
+    /home/matt/src/openbmc/meta/recipes-support/gmp/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-support/gmp/gmp-6.2.1/armv7a
+    /home/matt/src/openbmc/meta/recipes-support/gmp/gmp/armv7a
+    /home/matt/src/openbmc/meta/recipes-support/gmp/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-support/gmp/gmp-6.2.1/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-support/gmp/gmp/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-support/gmp/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-support/gmp/gmp-6.2.1/arm
+    /home/matt/src/openbmc/meta/recipes-support/gmp/gmp/arm
+    /home/matt/src/openbmc/meta/recipes-support/gmp/files/arm
+    /home/matt/src/openbmc/meta/recipes-support/gmp/gmp-6.2.1/
+    /home/matt/src/openbmc/meta/recipes-support/gmp/gmp/
+    /home/matt/src/openbmc/meta/recipes-support/gmp/files/
+DEBUG: Searching for cve-2021-43618.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-support/gmp/gmp-6.2.1/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/gmp/gmp/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/gmp/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/gmp/gmp-6.2.1/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/gmp/gmp/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/gmp/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/gmp/gmp-6.2.1/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-support/gmp/gmp/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-support/gmp/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-support/gmp/gmp-6.2.1/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-support/gmp/gmp/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-support/gmp/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-support/gmp/gmp-6.2.1/aspeed
+    /home/matt/src/openbmc/meta/recipes-support/gmp/gmp/aspeed
+    /home/matt/src/openbmc/meta/recipes-support/gmp/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-support/gmp/gmp-6.2.1/armv7a
+    /home/matt/src/openbmc/meta/recipes-support/gmp/gmp/armv7a
+    /home/matt/src/openbmc/meta/recipes-support/gmp/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-support/gmp/gmp-6.2.1/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-support/gmp/gmp/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-support/gmp/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-support/gmp/gmp-6.2.1/arm
+    /home/matt/src/openbmc/meta/recipes-support/gmp/gmp/arm
+    /home/matt/src/openbmc/meta/recipes-support/gmp/files/arm
+    /home/matt/src/openbmc/meta/recipes-support/gmp/gmp-6.2.1/
+    /home/matt/src/openbmc/meta/recipes-support/gmp/gmp/
+    /home/matt/src/openbmc/meta/recipes-support/gmp/files/
+NOTE: Applying patch 'use-includedir.patch' (../../../src/openbmc/meta/recipes-support/gmp/gmp/use-includedir.patch)
+NOTE: Applying patch '0001-Append-the-user-provided-flags-to-the-auto-detected-.patch' (../../../src/openbmc/meta/recipes-support/gmp/gmp/0001-Append-the-user-provided-flags-to-the-auto-detected-.patch)
+NOTE: Applying patch '0001-confiure.ac-Believe-the-cflags-from-environment.patch' (../../../src/openbmc/meta/recipes-support/gmp/gmp/0001-confiure.ac-Believe-the-cflags-from-environment.patch)
+NOTE: Applying patch 'cve-2021-43618.patch' (../../../src/openbmc/meta/recipes-support/gmp/gmp/cve-2021-43618.patch)
+DEBUG: Python function patch_do_patch finished
+DEBUG: Python function do_patch finished
+DEBUG: Executing python function do_qa_patch
+DEBUG: Python function do_qa_patch finished

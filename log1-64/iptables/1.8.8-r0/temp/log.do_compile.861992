@@ -1,0 +1,1537 @@
+DEBUG: Executing python function autotools_aclocals
+DEBUG: SITE files ['endian-little', 'bit-32', 'arm-common', 'arm-32', 'common-linux', 'common-glibc', 'arm-linux', 'arm-linux-gnueabi', 'common']
+DEBUG: Python function autotools_aclocals finished
+DEBUG: Executing shell function do_compile
+NOTE: make -j 1
+make  all-recursive
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build'
+Making all in libiptc
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build/libiptc'
+/bin/bash ../libtool  --tag=CC   --mode=compile arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../../iptables-1.8.8/libiptc -I..  -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib/xtables\" -DXTABLES_INTERNAL -I../include -I../../iptables-1.8.8/include -I/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/include/uapi -I/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/include -I/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/include/uapi -I/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/include -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/iptables-1.8.8=/usr/src/debug/iptables/1.8.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/iptables-1.8.8=/usr/src/debug/iptables/1.8.8-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build=/usr/src/debug/iptables/1.8.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build=/usr/src/debug/iptables/1.8.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o libip4tc.lo ../../iptables-1.8.8/libiptc/libip4tc.c
+libtool: compile:  arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../../iptables-1.8.8/libiptc -I.. -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT -DXTABLES_LIBDIR=\"/usr/lib/xtables\" -DXTABLES_INTERNAL -I../include -I../../iptables-1.8.8/include -I/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/include/uapi -I/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/include -I/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/include/uapi -I/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/include -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes -Wlogical-op -Winline -pipe -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/iptables-1.8.8=/usr/src/debug/iptables/1.8.8-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/iptables-1.8.8=/usr/src/debug/iptables/1.8.8-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build=/usr/src/debug/iptables/1.8.8-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build=/usr/src/debug/iptables/1.8.8-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot-native= -Wconversion -Wno-error -c ../../iptables-1.8.8/libiptc/libip4tc.c  -fPIC -DPIC -o .libs/libip4tc.o
+In file included from ../../iptables-1.8.8/libiptc/libip4tc.c:113:
+../../iptables-1.8.8/libiptc/libiptc.c: In function 'iptcc_alloc_chain_head':
+../../iptables-1.8.8/libiptc/libiptc.c:164:22: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  164 |         c->hooknum = hooknum;
+      |                      ^~~~~~~
+../../iptables-1.8.8/libiptc/libiptc.c: In function 'iptcb_entry2offset':
+../../iptables-1.8.8/libiptc/libiptc.c:250:26: warning: conversion to 'long unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  250 |         return (void *)e - (void *)h->entries->entrytable;
+      |                ~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../iptables-1.8.8/libiptc/libiptc.c: In function '__iptcc_bsearch_chain_index':
+../../iptables-1.8.8/libiptc/libiptc.c:363:23: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  363 |                 res = offset - handle->chain_index[pos]->head_offset;
+      |                       ^~~~~~
+../../iptables-1.8.8/libiptc/libiptc.c:405:31: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  405 |                         res = offset - handle->chain_index[pos+1]->head_offset;
+      |                               ^~~~~~
+../../iptables-1.8.8/libiptc/libiptc.c: In function 'cache_add_entry':
+../../iptables-1.8.8/libiptc/libiptc.c:926:31: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  926 |         unsigned int offset = (char *)e - (char *)h->entries->entrytable;
+      |                               ^
+../../iptables-1.8.8/libiptc/libiptc.c:960:49: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  960 |                                                 builtin);
+      |                                                 ^~~~~~~
+../../iptables-1.8.8/libiptc/libiptc.c: In function 'parse_table':
+../../iptables-1.8.8/libiptc/libiptc.c:1062:61: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 1062 |                         lc = iptcc_find_chain_by_offset(h, t->verdict);
+      |                                                            ~^~~~~~~~~
+../../iptables-1.8.8/libiptc/libiptc.c: In function 'iptcc_compile_rule':
+../../iptables-1.8.8/libiptc/libiptc.c:1115:30: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+ 1115 |                 t->verdict = r->jump->head_offset + IPTCB_CHAIN_START_SIZE;
+      |                              ^
+../../iptables-1.8.8/libiptc/libiptc.c:1119:30: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+ 1119 |                 t->verdict = r->offset + r->size;
+      |                              ^
+../../iptables-1.8.8/libiptc/libiptc.c: In function 'iptcc_compile_table_prep':
+../../iptables-1.8.8/libiptc/libiptc.c:1233:16: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+ 1233 |         return num;
+      |                ^~~
+../../iptables-1.8.8/libiptc/libiptc.c: In function 'iptc_builtin':
+../../iptables-1.8.8/libiptc/libiptc.c:1627:16: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+ 1627 |         return iptcc_is_builtin(c);
+      |                ^~~~~~~~~~~~~~~~~~~
+../../iptables-1.8.8/libiptc/libiptc.c: In function 'iptc_create_chain':
+../../iptables-1.8.8/libiptc/libiptc.c:2267:20: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+ 2267 |         capacity = handle->chain_index_sz * CHAIN_INDEX_BUCKET_LEN;
+      |                    ^~~~~~
+../../iptables-1.8.8/libiptc/libiptc.c:2268:39: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 2268 |         exceeded = handle->num_chains - capacity;
+      |                                       ^
+../../iptables-1.8.8/libiptc/libiptc.c:2268:20: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+ 2268 |         exceeded = handle->num_chains - capacity;
+      |                    ^~~~~~
+../../iptables-1.8.8/libiptc/libiptc.c: In function 'iptc_commit':
+../../iptables-1.8.8/libiptc/libiptc.c:2545:51: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 2545 |                         + sizeof(STRUCT_COUNTERS) * new_number;
+      |                                                   ^
+../../iptables-1.8.8/libiptc/libiptc.c:2563:29: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 2563 |         repl->num_entries = new_number;
+      |                             ^~~~~~~~~~
+../../iptables-1.8.8/libiptc/libiptc.c:2597:37: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 2597 |         newcounters->num_counters = new_number;
+      |                                     ^~~~~~~~~~
+/bin/bash ../libtool  --tag=CC   --mode=link arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/iptables-1.8.8=/usr/src/debug/iptables/1.8.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/iptables-1.8.8=/usr/src/debug/iptables/1.8.8-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build=/usr/src/debug/iptables/1.8.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build=/usr/src/debug/iptables/1.8.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot-native=   -Wconversion -Wno-error -version-info 2:0:0 -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/iptables-1.8.8=/usr/src/debug/iptables/1.8.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/iptables-1.8.8=/usr/src/debug/iptables/1.8.8-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build=/usr/src/debug/iptables/1.8.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build=/usr/src/debug/iptables/1.8.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot-native=  -Wl,-z,relro,-z,now -o libip4tc.la -rpath /usr/lib libip4tc.lo  
+libtool: link: arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot -shared  -fPIC -DPIC  .libs/libip4tc.o    -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot -O2 -g -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/iptables-1.8.8=/usr/src/debug/iptables/1.8.8-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/iptables-1.8.8=/usr/src/debug/iptables/1.8.8-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build=/usr/src/debug/iptables/1.8.8-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build=/usr/src/debug/iptables/1.8.8-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot-native= -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/iptables-1.8.8=/usr/src/debug/iptables/1.8.8-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/iptables-1.8.8=/usr/src/debug/iptables/1.8.8-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build=/usr/src/debug/iptables/1.8.8-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build=/usr/src/debug/iptables/1.8.8-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot-native= -Wl,-z -Wl,relro -Wl,-z -Wl,now   -Wl,-soname -Wl,libip4tc.so.2 -o .libs/libip4tc.so.2.0.0
+libtool: link: (cd ".libs" && rm -f "libip4tc.so.2" && ln -s "libip4tc.so.2.0.0" "libip4tc.so.2")
+libtool: link: (cd ".libs" && rm -f "libip4tc.so" && ln -s "libip4tc.so.2.0.0" "libip4tc.so")
+libtool: link: ( cd ".libs" && rm -f "libip4tc.la" && ln -s "../libip4tc.la" "libip4tc.la" )
+/bin/bash ../libtool  --tag=CC   --mode=compile arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../../iptables-1.8.8/libiptc -I..  -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib/xtables\" -DXTABLES_INTERNAL -I../include -I../../iptables-1.8.8/include -I/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/include/uapi -I/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/include -I/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/include/uapi -I/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/include -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/iptables-1.8.8=/usr/src/debug/iptables/1.8.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/iptables-1.8.8=/usr/src/debug/iptables/1.8.8-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build=/usr/src/debug/iptables/1.8.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build=/usr/src/debug/iptables/1.8.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o libip6tc.lo ../../iptables-1.8.8/libiptc/libip6tc.c
+libtool: compile:  arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../../iptables-1.8.8/libiptc -I.. -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT -DXTABLES_LIBDIR=\"/usr/lib/xtables\" -DXTABLES_INTERNAL -I../include -I../../iptables-1.8.8/include -I/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/include/uapi -I/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/include -I/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/include/uapi -I/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/include -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes -Wlogical-op -Winline -pipe -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/iptables-1.8.8=/usr/src/debug/iptables/1.8.8-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/iptables-1.8.8=/usr/src/debug/iptables/1.8.8-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build=/usr/src/debug/iptables/1.8.8-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build=/usr/src/debug/iptables/1.8.8-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot-native= -Wconversion -Wno-error -c ../../iptables-1.8.8/libiptc/libip6tc.c  -fPIC -DPIC -o .libs/libip6tc.o
+In file included from ../../iptables-1.8.8/libiptc/libip6tc.c:111:
+../../iptables-1.8.8/libiptc/libiptc.c: In function 'iptcc_alloc_chain_head':
+../../iptables-1.8.8/libiptc/libiptc.c:164:22: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  164 |         c->hooknum = hooknum;
+      |                      ^~~~~~~
+../../iptables-1.8.8/libiptc/libiptc.c: In function 'iptcb_entry2offset':
+../../iptables-1.8.8/libiptc/libiptc.c:250:26: warning: conversion to 'long unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  250 |         return (void *)e - (void *)h->entries->entrytable;
+      |                ~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../iptables-1.8.8/libiptc/libiptc.c: In function '__iptcc_bsearch_chain_index':
+../../iptables-1.8.8/libiptc/libiptc.c:363:23: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  363 |                 res = offset - handle->chain_index[pos]->head_offset;
+      |                       ^~~~~~
+../../iptables-1.8.8/libiptc/libiptc.c:405:31: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  405 |                         res = offset - handle->chain_index[pos+1]->head_offset;
+      |                               ^~~~~~
+../../iptables-1.8.8/libiptc/libiptc.c: In function 'cache_add_entry':
+../../iptables-1.8.8/libiptc/libiptc.c:926:31: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  926 |         unsigned int offset = (char *)e - (char *)h->entries->entrytable;
+      |                               ^
+../../iptables-1.8.8/libiptc/libiptc.c:960:49: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  960 |                                                 builtin);
+      |                                                 ^~~~~~~
+../../iptables-1.8.8/libiptc/libiptc.c: In function 'parse_table':
+../../iptables-1.8.8/libiptc/libiptc.c:1062:61: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 1062 |                         lc = iptcc_find_chain_by_offset(h, t->verdict);
+      |                                                            ~^~~~~~~~~
+../../iptables-1.8.8/libiptc/libiptc.c: In function 'iptcc_compile_rule':
+../../iptables-1.8.8/libiptc/libiptc.c:1115:30: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+ 1115 |                 t->verdict = r->jump->head_offset + IPTCB_CHAIN_START_SIZE;
+      |                              ^
+../../iptables-1.8.8/libiptc/libiptc.c:1119:30: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+ 1119 |                 t->verdict = r->offset + r->size;
+      |                              ^
+../../iptables-1.8.8/libiptc/libiptc.c: In function 'iptcc_compile_table_prep':
+../../iptables-1.8.8/libiptc/libiptc.c:1233:16: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+ 1233 |         return num;
+      |                ^~~
+../../iptables-1.8.8/libiptc/libiptc.c: In function 'ip6tc_builtin':
+../../iptables-1.8.8/libiptc/libiptc.c:1627:16: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+ 1627 |         return iptcc_is_builtin(c);
+      |                ^~~~~~~~~~~~~~~~~~~
+../../iptables-1.8.8/libiptc/libiptc.c: In function 'ip6tc_create_chain':
+../../iptables-1.8.8/libiptc/libiptc.c:2267:20: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+ 2267 |         capacity = handle->chain_index_sz * CHAIN_INDEX_BUCKET_LEN;
+      |                    ^~~~~~
+../../iptables-1.8.8/libiptc/libiptc.c:2268:39: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 2268 |         exceeded = handle->num_chains - capacity;
+      |                                       ^
+../../iptables-1.8.8/libiptc/libiptc.c:2268:20: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+ 2268 |         exceeded = handle->num_chains - capacity;
+      |                    ^~~~~~
+../../iptables-1.8.8/libiptc/libiptc.c: In function 'ip6tc_commit':
+../../iptables-1.8.8/libiptc/libiptc.c:2545:51: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 2545 |                         + sizeof(STRUCT_COUNTERS) * new_number;
+      |                                                   ^
+../../iptables-1.8.8/libiptc/libiptc.c:2563:29: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 2563 |         repl->num_entries = new_number;
+      |                             ^~~~~~~~~~
+../../iptables-1.8.8/libiptc/libiptc.c:2597:37: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 2597 |         newcounters->num_counters = new_number;
+      |                                     ^~~~~~~~~~
+/bin/bash ../libtool  --tag=CC   --mode=link arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/iptables-1.8.8=/usr/src/debug/iptables/1.8.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/iptables-1.8.8=/usr/src/debug/iptables/1.8.8-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build=/usr/src/debug/iptables/1.8.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build=/usr/src/debug/iptables/1.8.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot-native=   -Wconversion -Wno-error -version-info 2:0:0 -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/iptables-1.8.8=/usr/src/debug/iptables/1.8.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/iptables-1.8.8=/usr/src/debug/iptables/1.8.8-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build=/usr/src/debug/iptables/1.8.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build=/usr/src/debug/iptables/1.8.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot-native=  -Wl,-z,relro,-z,now -o libip6tc.la -rpath /usr/lib libip6tc.lo  
+libtool: link: arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot -shared  -fPIC -DPIC  .libs/libip6tc.o    -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot -O2 -g -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/iptables-1.8.8=/usr/src/debug/iptables/1.8.8-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/iptables-1.8.8=/usr/src/debug/iptables/1.8.8-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build=/usr/src/debug/iptables/1.8.8-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build=/usr/src/debug/iptables/1.8.8-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot-native= -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/iptables-1.8.8=/usr/src/debug/iptables/1.8.8-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/iptables-1.8.8=/usr/src/debug/iptables/1.8.8-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build=/usr/src/debug/iptables/1.8.8-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build=/usr/src/debug/iptables/1.8.8-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot-native= -Wl,-z -Wl,relro -Wl,-z -Wl,now   -Wl,-soname -Wl,libip6tc.so.2 -o .libs/libip6tc.so.2.0.0
+libtool: link: (cd ".libs" && rm -f "libip6tc.so.2" && ln -s "libip6tc.so.2.0.0" "libip6tc.so.2")
+libtool: link: (cd ".libs" && rm -f "libip6tc.so" && ln -s "libip6tc.so.2.0.0" "libip6tc.so")
+libtool: link: ( cd ".libs" && rm -f "libip6tc.la" && ln -s "../libip6tc.la" "libip6tc.la" )
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build/libiptc'
+Making all in libxtables
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build/libxtables'
+/bin/bash ../libtool  --tag=CC   --mode=compile arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../../iptables-1.8.8/libxtables -I..  -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib/xtables\" -DXTABLES_INTERNAL -I../include -I../../iptables-1.8.8/include -I../../iptables-1.8.8/iptables -I/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/include/uapi -I/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/include -I/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/include/uapi -I/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/include -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/iptables-1.8.8=/usr/src/debug/iptables/1.8.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/iptables-1.8.8=/usr/src/debug/iptables/1.8.8-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build=/usr/src/debug/iptables/1.8.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build=/usr/src/debug/iptables/1.8.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o libxtables_la-xtables.lo `test -f 'xtables.c' || echo '../../iptables-1.8.8/libxtables/'`xtables.c
+libtool: compile:  arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../../iptables-1.8.8/libxtables -I.. -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT -DXTABLES_LIBDIR=\"/usr/lib/xtables\" -DXTABLES_INTERNAL -I../include -I../../iptables-1.8.8/include -I../../iptables-1.8.8/iptables -I/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/include/uapi -I/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/include -I/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/include/uapi -I/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/include -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes -Wlogical-op -Winline -pipe -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/iptables-1.8.8=/usr/src/debug/iptables/1.8.8-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/iptables-1.8.8=/usr/src/debug/iptables/1.8.8-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build=/usr/src/debug/iptables/1.8.8-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build=/usr/src/debug/iptables/1.8.8-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot-native= -Wconversion -Wno-error -c ../../iptables-1.8.8/libxtables/xtables.c  -fPIC -DPIC -o .libs/libxtables_la-xtables.o
+../../iptables-1.8.8/libxtables/xtables.c: In function 'xtables_merge_options':
+../../iptables-1.8.8/libxtables/xtables.c:156:25: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  156 |                 mp->val += *option_offset;
+      |                         ^~
+../../iptables-1.8.8/libxtables/xtables.c:156:28: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  156 |                 mp->val += *option_offset;
+      |                            ^
+../../iptables-1.8.8/libxtables/xtables.c: In function 'xtables_strtoui':
+../../iptables-1.8.8/libxtables/xtables.c:638:26: warning: conversion from 'uintmax_t' {aka 'long long unsigned int'} to 'unsigned int' may change value [-Wconversion]
+  638 |                 *value = v;
+      |                          ^
+../../iptables-1.8.8/libxtables/xtables.c: In function 'xtables_parse_port':
+../../iptables-1.8.8/libxtables/xtables.c:657:24: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  657 |             (portnum = xtables_service_to_port(port, proto)) != (unsigned)-1)
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~
+../../iptables-1.8.8/libxtables/xtables.c:658:24: warning: conversion from 'unsigned int' to 'uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+  658 |                 return portnum;
+      |                        ^~~~~~~
+../../iptables-1.8.8/libxtables/xtables.c: In function 'xtables_ipmask_to_numeric':
+../../iptables-1.8.8/libxtables/xtables.c:1569:16: warning: conversion to 'uint32_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 1569 |         cidr = xtables_ipmask_to_cidr(mask);
+      |                ^~~~~~~~~~~~~~~~~~~~~~
+../../iptables-1.8.8/libxtables/xtables.c: In function '__numeric_to_ipaddr':
+../../iptables-1.8.8/libxtables/xtables.c:1606:36: warning: conversion from 'unsigned int' to 'unsigned char' may change value [-Wconversion]
+ 1606 |                         addrp[i] = onebyte;
+      |                                    ^~~~~~~
+../../iptables-1.8.8/libxtables/xtables.c:1617:28: warning: conversion from 'unsigned int' to 'unsigned char' may change value [-Wconversion]
+ 1617 |                 addrp[i] = onebyte;
+      |                            ^~~~~~~
+../../iptables-1.8.8/libxtables/xtables.c:1625:20: warning: conversion from 'unsigned int' to 'unsigned char' may change value [-Wconversion]
+ 1625 |         addrp[3] = onebyte;
+      |                    ^~~~~~~
+../../iptables-1.8.8/libxtables/xtables.c: In function 'xtables_ipparse_multiple':
+../../iptables-1.8.8/libxtables/xtables.c:1748:31: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 1748 |                         len = next - loop;
+      |                               ^~~~
+../../iptables-1.8.8/libxtables/xtables.c: In function 'xtables_ip6mask_to_cidr':
+../../iptables-1.8.8/libxtables/xtables.c:1907:16: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+ 1907 |         return bits;
+      |                ^~~~
+../../iptables-1.8.8/libxtables/xtables.c: In function 'xtables_ip6parse_multiple':
+../../iptables-1.8.8/libxtables/xtables.c:2048:31: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 2048 |                         len = next - loop;
+      |                               ^~~~
+../../iptables-1.8.8/libxtables/xtables.c: In function 'xtables_save_string':
+../../iptables-1.8.8/libxtables/xtables.c:2166:52: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 2166 |                                 fwrite(value, 1, p - value, stdout);
+      |                                                  ~~^~~~~~~
+../../iptables-1.8.8/libxtables/xtables.c: In function 'xtables_parse_protocol':
+../../iptables-1.8.8/libxtables/xtables.c:2203:24: warning: conversion from 'unsigned int' to 'uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+ 2203 |                 return proto;
+      |                        ^~~~~
+../../iptables-1.8.8/libxtables/xtables.c:2212:28: warning: conversion from 'int' to 'uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+ 2212 |                 return pent->p_proto;
+      |                        ~~~~^~~~~~~~~
+../../iptables-1.8.8/libxtables/xtables.c:2216:16: warning: unsigned conversion from 'int' to 'uint16_t' {aka 'short unsigned int'} changes value from '-1' to '65535' [-Wsign-conversion]
+ 2216 |         return -1;
+      |                ^
+../../iptables-1.8.8/libxtables/xtables.c: In function 'xtables_parse_val_mask':
+../../iptables-1.8.8/libxtables/xtables.c:2387:16: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 2387 |         *val = xtables_lmap_name2id(lmap, cb->arg);
+      |                ^~~~~~~~~~~~~~~~~~~~
+../../iptables-1.8.8/libxtables/xtables.c: In function 'xtables_print_val_mask':
+../../iptables-1.8.8/libxtables/xtables.c:2404:63: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+ 2404 |                 const char *name = xtables_lmap_id2name(lmap, val);
+      |                                                               ^~~
+../../iptables-1.8.8/libxtables/xtables.c: In function 'xt_xlate_alloc':
+../../iptables-1.8.8/libxtables/xtables.c:2457:50: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 2457 |                 xl->buf[i].data = xtables_malloc(size);
+      |                                                  ^~~~
+../../iptables-1.8.8/libxtables/xtables.c: In function '__xt_xlate_add':
+../../iptables-1.8.8/libxtables/xtables.c:2484:50: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 2484 |         len = vsnprintf(buf->data + buf->off, buf->rem, fmt, ap);
+      |                                               ~~~^~~~~
+../../iptables-1.8.8/libxtables/xtables.c: In function 'xt_xlate_get_family':
+../../iptables-1.8.8/libxtables/xtables.c:2528:18: warning: conversion from 'int' to 'uint8_t' {aka 'unsigned char'} may change value [-Wconversion]
+ 2528 |         return xl->family;
+      |                ~~^~~~~~~~
+/bin/bash ../libtool  --tag=CC   --mode=compile arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../../iptables-1.8.8/libxtables -I..  -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib/xtables\" -DXTABLES_INTERNAL -I../include -I../../iptables-1.8.8/include -I../../iptables-1.8.8/iptables -I/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/include/uapi -I/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/include -I/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/include/uapi -I/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/include -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/iptables-1.8.8=/usr/src/debug/iptables/1.8.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/iptables-1.8.8=/usr/src/debug/iptables/1.8.8-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build=/usr/src/debug/iptables/1.8.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build=/usr/src/debug/iptables/1.8.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o libxtables_la-xtoptions.lo `test -f 'xtoptions.c' || echo '../../iptables-1.8.8/libxtables/'`xtoptions.c
+libtool: compile:  arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../../iptables-1.8.8/libxtables -I.. -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT -DXTABLES_LIBDIR=\"/usr/lib/xtables\" -DXTABLES_INTERNAL -I../include -I../../iptables-1.8.8/include -I../../iptables-1.8.8/iptables -I/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/include/uapi -I/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/include -I/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/include/uapi -I/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/include -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes -Wlogical-op -Winline -pipe -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/iptables-1.8.8=/usr/src/debug/iptables/1.8.8-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/iptables-1.8.8=/usr/src/debug/iptables/1.8.8-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build=/usr/src/debug/iptables/1.8.8-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build=/usr/src/debug/iptables/1.8.8-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot-native= -Wconversion -Wno-error -c ../../iptables-1.8.8/libxtables/xtoptions.c  -fPIC -DPIC -o .libs/libxtables_la-xtoptions.o
+../../iptables-1.8.8/libxtables/xtoptions.c:58:32: warning: unsigned conversion from 'int' to 'unsigned int' changes value from '-1' to '4294967295' [-Wsign-conversion]
+   58 |         [XTTYPE_STRING]      = -1,
+      |                                ^
+../../iptables-1.8.8/libxtables/xtoptions.c: In function 'xtables_options_xfrm':
+../../iptables-1.8.8/libxtables/xtoptions.c:115:36: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  115 |                 mp->val          = entry->id + *offset;
+      |                                    ^~~~~
+../../iptables-1.8.8/libxtables/xtoptions.c: In function 'xtopt_parse_int':
+../../iptables-1.8.8/libxtables/xtoptions.c:194:30: warning: conversion from 'uintmax_t' {aka 'long long unsigned int'} to 'uint8_t' {aka 'unsigned char'} may change value [-Wconversion]
+  194 |                 cb->val.u8 = value;
+      |                              ^~~~~
+../../iptables-1.8.8/libxtables/xtoptions.c:198:31: warning: conversion from 'uintmax_t' {aka 'long long unsigned int'} to 'uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+  198 |                 cb->val.u16 = value;
+      |                               ^~~~~
+../../iptables-1.8.8/libxtables/xtoptions.c:202:31: warning: conversion from 'uintmax_t' {aka 'long long unsigned int'} to 'uint32_t' {aka 'unsigned int'} may change value [-Wconversion]
+  202 |                 cb->val.u32 = value;
+      |                               ^~~~~
+../../iptables-1.8.8/libxtables/xtoptions.c: In function 'xtopt_mint_value_to_cb':
+../../iptables-1.8.8/libxtables/xtoptions.c:245:47: warning: conversion from 'uintmax_t' {aka 'long long unsigned int'} to 'uint8_t' {aka 'unsigned char'} may change value [-Wconversion]
+  245 |                 cb->val.u8_range[cb->nvals] = value;
+      |                                               ^~~~~
+../../iptables-1.8.8/libxtables/xtoptions.c:247:48: warning: conversion from 'uintmax_t' {aka 'long long unsigned int'} to 'uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+  247 |                 cb->val.u16_range[cb->nvals] = value;
+      |                                                ^~~~~
+../../iptables-1.8.8/libxtables/xtoptions.c:249:48: warning: conversion from 'uintmax_t' {aka 'long long unsigned int'} to 'uint32_t' {aka 'unsigned int'} may change value [-Wconversion]
+  249 |                 cb->val.u32_range[cb->nvals] = value;
+      |                                                ^~~~~
+../../iptables-1.8.8/libxtables/xtoptions.c: In function 'xtopt_mint_value_to_ptr':
+../../iptables-1.8.8/libxtables/xtoptions.c:266:36: warning: conversion from 'uintmax_t' {aka 'long long unsigned int'} to 'uint8_t' {aka 'unsigned char'} may change value [-Wconversion]
+  266 |                 *(uint8_t *)data = value;
+      |                                    ^~~~~
+../../iptables-1.8.8/libxtables/xtoptions.c:268:37: warning: conversion from 'uintmax_t' {aka 'long long unsigned int'} to 'uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+  268 |                 *(uint16_t *)data = value;
+      |                                     ^~~~~
+../../iptables-1.8.8/libxtables/xtoptions.c:270:37: warning: conversion from 'uintmax_t' {aka 'long long unsigned int'} to 'uint32_t' {aka 'unsigned int'} may change value [-Wconversion]
+  270 |                 *(uint32_t *)data = value;
+      |                                     ^~~~~
+../../iptables-1.8.8/libxtables/xtoptions.c: In function 'tos_parse_numeric':
+../../iptables-1.8.8/libxtables/xtoptions.c:384:29: warning: conversion from 'unsigned int' to 'uint8_t' {aka 'unsigned char'} may change value [-Wconversion]
+  384 |         cb->val.tos_value = value;
+      |                             ^~~~~
+../../iptables-1.8.8/libxtables/xtoptions.c:385:29: warning: conversion from 'unsigned int' to 'uint8_t' {aka 'unsigned char'} may change value [-Wconversion]
+  385 |         cb->val.tos_mask  = max;
+      |                             ^~~
+../../iptables-1.8.8/libxtables/xtoptions.c:393:36: warning: conversion from 'unsigned int' to 'uint8_t' {aka 'unsigned char'} may change value [-Wconversion]
+  393 |                 cb->val.tos_mask = value;
+      |                                    ^~~~~
+../../iptables-1.8.8/libxtables/xtoptions.c: In function 'xtopt_parse_tosmask':
+../../iptables-1.8.8/libxtables/xtoptions.c:419:28: warning: conversion from 'unsigned int' to 'uint8_t' {aka 'unsigned char'} may change value [-Wconversion]
+  419 |         cb->val.tos_mask = cb->entry->max;
+      |                            ^~
+../../iptables-1.8.8/libxtables/xtoptions.c: In function 'xtopt_parse_sysloglevel':
+../../iptables-1.8.8/libxtables/xtoptions.c:470:32: warning: conversion from 'unsigned int' to 'uint8_t' {aka 'unsigned char'} may change value [-Wconversion]
+  470 |         cb->val.syslog_level = num;
+      |                                ^~~
+../../iptables-1.8.8/libxtables/xtoptions.c:472:47: warning: conversion from 'unsigned int' to 'uint8_t' {aka 'unsigned char'} may change value [-Wconversion]
+  472 |                 *(uint8_t *)XTOPT_MKPTR(cb) = num;
+      |                                               ^~~
+../../iptables-1.8.8/libxtables/xtoptions.c: In function 'xtopt_parse_host':
+../../iptables-1.8.8/libxtables/xtoptions.c:517:61: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  517 |                                xtables_sa_host(p->ai_addr, p->ai_family),
+      |                                                            ~^~~~~~~~~~~
+../../iptables-1.8.8/libxtables/xtoptions.c:518:52: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  518 |                                xtables_sa_hostlen(p->ai_family));
+      |                                                   ~^~~~~~~~~~~
+../../iptables-1.8.8/libxtables/xtoptions.c:523:50: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  523 |                     xtables_sa_host(p->ai_addr, p->ai_family),
+      |                                                 ~^~~~~~~~~~~
+../../iptables-1.8.8/libxtables/xtoptions.c:524:41: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  524 |                     xtables_sa_hostlen(p->ai_family)) != 0)
+      |                                        ~^~~~~~~~~~~
+In file included from /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/netdb.h:27,
+                 from ../../iptables-1.8.8/libxtables/xtoptions.c:14:
+../../iptables-1.8.8/libxtables/xtoptions.c: In function 'xtables_getportbyname':
+../../iptables-1.8.8/libxtables/xtoptions.c:564:22: warning: conversion from 'int' to '__uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+  564 |         return ntohs(ret);
+      |                      ^~~
+../../iptables-1.8.8/libxtables/xtoptions.c: In function 'xtopt_parse_protocol':
+../../iptables-1.8.8/libxtables/xtoptions.c:573:28: warning: conversion from 'uint16_t' {aka 'short unsigned int'} to 'uint8_t' {aka 'unsigned char'} may change value [-Wconversion]
+  573 |         cb->val.protocol = xtables_parse_protocol(cb->arg);
+      |                            ^~~~~~~~~~~~~~~~~~~~~~
+../../iptables-1.8.8/libxtables/xtoptions.c: In function 'xtopt_parse_port':
+../../iptables-1.8.8/libxtables/xtoptions.c:593:29: warning: conversion from 'int' to '__uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+  593 |                 ret = htons(ret);
+      |                             ^~~
+../../iptables-1.8.8/libxtables/xtoptions.c:594:24: warning: conversion from 'int' to 'uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+  594 |         cb->val.port = ret;
+      |                        ^~~
+../../iptables-1.8.8/libxtables/xtoptions.c: In function 'xtopt_parse_mport':
+../../iptables-1.8.8/libxtables/xtoptions.c:636:39: warning: conversion from 'int' to '__uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+  636 |                         value = htons(value);
+      |                                       ^~~~~
+../../iptables-1.8.8/libxtables/xtoptions.c:638:57: warning: conversion from 'int' to 'uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+  638 |                         cb->val.port_range[cb->nvals] = value;
+      |                                                         ^~~~~
+../../iptables-1.8.8/libxtables/xtoptions.c: In function 'xtopt_parse_mask':
+../../iptables-1.8.8/libxtables/xtoptions.c:663:65: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  663 |         memcpy(&cb->val.hmask, xtables_sa_host(res->ai_addr, res->ai_family),
+      |                                                              ~~~^~~~~~~~~~~
+../../iptables-1.8.8/libxtables/xtoptions.c:664:38: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  664 |                xtables_sa_hostlen(res->ai_family));
+      |                                   ~~~^~~~~~~~~~~
+../../iptables-1.8.8/libxtables/xtoptions.c:668:32: warning: conversion from 'int' to 'uint8_t' {aka 'unsigned char'} may change value [-Wconversion]
+  668 |                 cb->val.hlen = xtables_ipmask_to_cidr(&cb->val.hmask.in);
+      |                                ^~~~~~~~~~~~~~~~~~~~~~
+../../iptables-1.8.8/libxtables/xtoptions.c:671:32: warning: conversion from 'int' to 'uint8_t' {aka 'unsigned char'} may change value [-Wconversion]
+  671 |                 cb->val.hlen = xtables_ip6mask_to_cidr(&cb->val.hmask.in6);
+      |                                ^~~~~~~~~~~~~~~~~~~~~~~
+../../iptables-1.8.8/libxtables/xtoptions.c: In function 'xtopt_parse_plen':
+../../iptables-1.8.8/libxtables/xtoptions.c:700:24: warning: conversion from 'unsigned int' to 'uint8_t' {aka 'unsigned char'} may change value [-Wconversion]
+  700 |         cb->val.hlen = prefix_len;
+      |                        ^~~~~~~~~~
+../../iptables-1.8.8/libxtables/xtoptions.c: In function 'xtopt_parse_ethermac':
+../../iptables-1.8.8/libxtables/xtoptions.c:772:39: warning: conversion from 'long unsigned int' to 'uint8_t' {aka 'unsigned char'} may change value [-Wconversion]
+  772 |                 cb->val.ethermac[i] = strtoul(arg, &end, 16);
+      |                                       ^~~~~~~
+../../iptables-1.8.8/libxtables/xtoptions.c:778:31: warning: conversion from 'long unsigned int' to 'uint8_t' {aka 'unsigned char'} may change value [-Wconversion]
+  778 |         cb->val.ethermac[i] = strtoul(arg, &end, 16);
+      |                               ^~~~~~~
+../../iptables-1.8.8/libxtables/xtoptions.c: In function 'xtables_option_tpcall':
+../../iptables-1.8.8/libxtables/xtoptions.c:919:36: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  919 |                         t->parse(c - t->option_offset, argv, invert,
+      |                                  ~~^~~~~~~~~~~~~~~~~~
+../../iptables-1.8.8/libxtables/xtoptions.c: In function 'xtables_option_mpcall':
+../../iptables-1.8.8/libxtables/xtoptions.c:955:36: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  955 |                         m->parse(c - m->option_offset, argv, invert,
+      |                                  ~~^~~~~~~~~~~~~~~~~~
+../../iptables-1.8.8/libxtables/xtoptions.c: In function 'xtables_lmap_init':
+../../iptables-1.8.8/libxtables/xtoptions.c:1109:22: warning: conversion to 'int' from 'long unsigned int' may change the sign of the result [-Wsign-conversion]
+ 1109 |                 id = strtoul(cur, &nxt, strncmp(cur, "0x", 2) == 0 ? 16 : 10);
+      |                      ^~~~~~~
+/bin/bash ../libtool  --tag=CC   --mode=compile arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../../iptables-1.8.8/libxtables -I..  -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib/xtables\" -DXTABLES_INTERNAL -I../include -I../../iptables-1.8.8/include -I../../iptables-1.8.8/iptables -I/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/include/uapi -I/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/include -I/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/include/uapi -I/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/include -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/iptables-1.8.8=/usr/src/debug/iptables/1.8.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/iptables-1.8.8=/usr/src/debug/iptables/1.8.8-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build=/usr/src/debug/iptables/1.8.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build=/usr/src/debug/iptables/1.8.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o libxtables_la-getethertype.lo `test -f 'getethertype.c' || echo '../../iptables-1.8.8/libxtables/'`getethertype.c
+libtool: compile:  arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../../iptables-1.8.8/libxtables -I.. -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT -DXTABLES_LIBDIR=\"/usr/lib/xtables\" -DXTABLES_INTERNAL -I../include -I../../iptables-1.8.8/include -I../../iptables-1.8.8/iptables -I/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/include/uapi -I/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/include -I/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/include/uapi -I/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/include -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes -Wlogical-op -Winline -pipe -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/iptables-1.8.8=/usr/src/debug/iptables/1.8.8-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/iptables-1.8.8=/usr/src/debug/iptables/1.8.8-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build=/usr/src/debug/iptables/1.8.8-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build=/usr/src/debug/iptables/1.8.8-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot-native= -Wconversion -Wno-error -c ../../iptables-1.8.8/libxtables/getethertype.c  -fPIC -DPIC -o .libs/libxtables_la-getethertype.o
+/bin/bash ../libtool  --tag=CC   --mode=link arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/iptables-1.8.8=/usr/src/debug/iptables/1.8.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/iptables-1.8.8=/usr/src/debug/iptables/1.8.8-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build=/usr/src/debug/iptables/1.8.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build=/usr/src/debug/iptables/1.8.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot-native=   -Wconversion -Wno-error -version-info 18:0:6 -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/iptables-1.8.8=/usr/src/debug/iptables/1.8.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/iptables-1.8.8=/usr/src/debug/iptables/1.8.8-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build=/usr/src/debug/iptables/1.8.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build=/usr/src/debug/iptables/1.8.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot-native=  -Wl,-z,relro,-z,now -o libxtables.la -rpath /usr/lib libxtables_la-xtables.lo libxtables_la-xtoptions.lo libxtables_la-getethertype.lo  -ldl 
+libtool: link: arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot -shared  -fPIC -DPIC  .libs/libxtables_la-xtables.o .libs/libxtables_la-xtoptions.o .libs/libxtables_la-getethertype.o   -ldl  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot -O2 -g -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/iptables-1.8.8=/usr/src/debug/iptables/1.8.8-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/iptables-1.8.8=/usr/src/debug/iptables/1.8.8-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build=/usr/src/debug/iptables/1.8.8-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build=/usr/src/debug/iptables/1.8.8-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot-native= -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/iptables-1.8.8=/usr/src/debug/iptables/1.8.8-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/iptables-1.8.8=/usr/src/debug/iptables/1.8.8-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build=/usr/src/debug/iptables/1.8.8-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build=/usr/src/debug/iptables/1.8.8-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot-native= -Wl,-z -Wl,relro -Wl,-z -Wl,now   -Wl,-soname -Wl,libxtables.so.12 -o .libs/libxtables.so.12.6.0
+libtool: link: (cd ".libs" && rm -f "libxtables.so.12" && ln -s "libxtables.so.12.6.0" "libxtables.so.12")
+libtool: link: (cd ".libs" && rm -f "libxtables.so" && ln -s "libxtables.so.12.6.0" "libxtables.so")
+libtool: link: ( cd ".libs" && rm -f "libxtables.la" && ln -s "../libxtables.la" "libxtables.la" )
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build/libxtables'
+Making all in include
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build/include'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build/include'
+Making all in utils
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build/utils'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build/utils'
+Making all in extensions
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build/extensions'
+  GEN      initext.c
+  CC       initext.o
+  AR       libext.a
+  GEN      initext4.c
+  CC       initext4.o
+  AR       libext4.a
+  GEN      initext6.c
+  CC       initext6.o
+  AR       libext6.a
+  GEN      initextb.c
+  CC       initextb.o
+  AR       libext_ebt.a
+  GEN      initexta.c
+  CC       initexta.o
+  AR       libext_arpt.a
+  GEN      matches.man
+-e 	+ ../../iptables-1.8.8/extensions/libxt_addrtype.man
+-e 	+ ../../iptables-1.8.8/extensions/libip6t_ah.man
+-e 	+ ../../iptables-1.8.8/extensions/libipt_ah.man
+-e 	+ ../../iptables-1.8.8/extensions/libxt_bpf.man
+-e 	+ ../../iptables-1.8.8/extensions/libxt_cgroup.man
+-e 	+ ../../iptables-1.8.8/extensions/libxt_cluster.man
+-e 	+ ../../iptables-1.8.8/extensions/libxt_comment.man
+-e 	+ ../../iptables-1.8.8/extensions/libxt_connbytes.man
+-e 	+ ../../iptables-1.8.8/extensions/libxt_connlimit.man
+-e 	+ ../../iptables-1.8.8/extensions/libxt_connmark.man
+-e 	+ ../../iptables-1.8.8/extensions/libxt_conntrack.man
+-e 	+ ../../iptables-1.8.8/extensions/libxt_cpu.man
+-e 	+ ../../iptables-1.8.8/extensions/libxt_dccp.man
+-e 	+ ../../iptables-1.8.8/extensions/libxt_devgroup.man
+-e 	+ ../../iptables-1.8.8/extensions/libxt_dscp.man
+-e 	+ ../../iptables-1.8.8/extensions/libip6t_dst.man
+-e 	+ ../../iptables-1.8.8/extensions/libxt_ecn.man
+-e 	+ ../../iptables-1.8.8/extensions/libxt_esp.man
+-e 	+ ../../iptables-1.8.8/extensions/libip6t_eui64.man
+-e 	+ ../../iptables-1.8.8/extensions/libip6t_frag.man
+-e 	+ ../../iptables-1.8.8/extensions/libxt_hashlimit.man
+-e 	+ ../../iptables-1.8.8/extensions/libip6t_hbh.man
+-e 	+ ../../iptables-1.8.8/extensions/libxt_helper.man
+-e 	+ ../../iptables-1.8.8/extensions/libip6t_hl.man
+-e 	+ ../../iptables-1.8.8/extensions/libipt_icmp.man
+-e 	+ ../../iptables-1.8.8/extensions/libip6t_icmp6.man
+-e 	+ ../../iptables-1.8.8/extensions/libxt_iprange.man
+-e 	+ ../../iptables-1.8.8/extensions/libip6t_ipv6header.man
+-e 	+ ../../iptables-1.8.8/extensions/libxt_ipvs.man
+-e 	+ ../../iptables-1.8.8/extensions/libxt_length.man
+-e 	+ ../../iptables-1.8.8/extensions/libxt_limit.man
+-e 	+ ../../iptables-1.8.8/extensions/libxt_mac.man
+-e 	+ ../../iptables-1.8.8/extensions/libxt_mark.man
+-e 	+ ../../iptables-1.8.8/extensions/libip6t_mh.man
+-e 	+ ../../iptables-1.8.8/extensions/libxt_multiport.man
+-e 	+ ../../iptables-1.8.8/extensions/libxt_nfacct.man
+-e 	+ ../../iptables-1.8.8/extensions/libxt_osf.man
+-e 	+ ../../iptables-1.8.8/extensions/libxt_owner.man
+-e 	+ ../../iptables-1.8.8/extensions/libxt_physdev.man
+-e 	+ ../../iptables-1.8.8/extensions/libxt_pkttype.man
+-e 	+ ../../iptables-1.8.8/extensions/libxt_policy.man
+-e 	+ ../../iptables-1.8.8/extensions/libxt_quota.man
+-e 	+ ../../iptables-1.8.8/extensions/libxt_rateest.man
+-e 	+ ../../iptables-1.8.8/extensions/libipt_realm.man
+-e 	+ ../../iptables-1.8.8/extensions/libxt_recent.man
+-e 	+ ../../iptables-1.8.8/extensions/libxt_rpfilter.man
+-e 	+ ../../iptables-1.8.8/extensions/libip6t_rt.man
+-e 	+ ../../iptables-1.8.8/extensions/libxt_sctp.man
+-e 	+ ../../iptables-1.8.8/extensions/libxt_set.man
+-e 	+ ../../iptables-1.8.8/extensions/libxt_socket.man
+-e 	+ ../../iptables-1.8.8/extensions/libxt_state.man
+-e 	+ ../../iptables-1.8.8/extensions/libxt_statistic.man
+-e 	+ ../../iptables-1.8.8/extensions/libxt_string.man
+-e 	+ ../../iptables-1.8.8/extensions/libxt_tcp.man
+-e 	+ ../../iptables-1.8.8/extensions/libxt_tcpmss.man
+-e 	+ ../../iptables-1.8.8/extensions/libxt_time.man
+-e 	+ ../../iptables-1.8.8/extensions/libxt_tos.man
+-e 	+ ../../iptables-1.8.8/extensions/libipt_ttl.man
+-e 	+ ../../iptables-1.8.8/extensions/libxt_u32.man
+-e 	+ ../../iptables-1.8.8/extensions/libxt_udp.man
+  GEN      targets.man
+-e 	+ ../../iptables-1.8.8/extensions/libxt_AUDIT.man
+-e 	+ ../../iptables-1.8.8/extensions/libxt_CHECKSUM.man
+-e 	+ ../../iptables-1.8.8/extensions/libxt_CLASSIFY.man
+-e 	+ ../../iptables-1.8.8/extensions/libipt_CLUSTERIP.man
+-e 	+ ../../iptables-1.8.8/extensions/libxt_CONNMARK.man
+-e 	+ ../../iptables-1.8.8/extensions/libxt_CONNSECMARK.man
+-e 	+ ../../iptables-1.8.8/extensions/libxt_CT.man
+-e 	+ ../../iptables-1.8.8/extensions/libxt_DNAT.man
+-e 	+ ../../iptables-1.8.8/extensions/libip6t_DNPT.man
+-e 	+ ../../iptables-1.8.8/extensions/libxt_DSCP.man
+-e 	+ ../../iptables-1.8.8/extensions/libipt_ECN.man
+-e 	+ ../../iptables-1.8.8/extensions/libip6t_HL.man
+-e 	+ ../../iptables-1.8.8/extensions/libxt_HMARK.man
+-e 	+ ../../iptables-1.8.8/extensions/libxt_IDLETIMER.man
+-e 	+ ../../iptables-1.8.8/extensions/libxt_LED.man
+-e 	+ ../../iptables-1.8.8/extensions/libxt_LOG.man
+-e 	+ ../../iptables-1.8.8/extensions/libxt_MARK.man
+-e 	+ ../../iptables-1.8.8/extensions/libxt_MASQUERADE.man
+-e 	+ ../../iptables-1.8.8/extensions/libxt_NETMAP.man
+-e 	+ ../../iptables-1.8.8/extensions/libxt_NFLOG.man
+-e 	+ ../../iptables-1.8.8/extensions/libxt_NFQUEUE.man
+-e 	+ ../../iptables-1.8.8/extensions/libxt_NOTRACK.man
+-e 	+ ../../iptables-1.8.8/extensions/libxt_RATEEST.man
+-e 	+ ../../iptables-1.8.8/extensions/libxt_REDIRECT.man
+-e 	+ ../../iptables-1.8.8/extensions/libip6t_REJECT.man
+-e 	+ ../../iptables-1.8.8/extensions/libipt_REJECT.man
+-e 	+ ../../iptables-1.8.8/extensions/libxt_SECMARK.man
+-e 	+ ../../iptables-1.8.8/extensions/libxt_SET.man
+-e 	+ ../../iptables-1.8.8/extensions/libxt_SNAT.man
+-e 	+ ../../iptables-1.8.8/extensions/libip6t_SNPT.man
+-e 	+ ../../iptables-1.8.8/extensions/libxt_SYNPROXY.man
+-e 	+ ../../iptables-1.8.8/extensions/libxt_TCPMSS.man
+-e 	+ ../../iptables-1.8.8/extensions/libxt_TCPOPTSTRIP.man
+-e 	+ ../../iptables-1.8.8/extensions/libxt_TEE.man
+-e 	+ ../../iptables-1.8.8/extensions/libxt_TOS.man
+-e 	+ ../../iptables-1.8.8/extensions/libxt_TPROXY.man
+-e 	+ ../../iptables-1.8.8/extensions/libxt_TRACE.man
+-e 	+ ../../iptables-1.8.8/extensions/libipt_TTL.man
+-e 	+ ../../iptables-1.8.8/extensions/libipt_ULOG.man
+  CC       libxt_AUDIT.oo
+  CCLD     libxt_AUDIT.so
+  CC       libxt_CHECKSUM.oo
+  CCLD     libxt_CHECKSUM.so
+  CC       libxt_CLASSIFY.oo
+  CCLD     libxt_CLASSIFY.so
+  CC       libxt_CONNMARK.oo
+  CCLD     libxt_CONNMARK.so
+  CC       libxt_CONNSECMARK.oo
+  CCLD     libxt_CONNSECMARK.so
+  CC       libxt_CT.oo
+  CCLD     libxt_CT.so
+  CC       libxt_DNAT.oo
+../../iptables-1.8.8/extensions/libxt_DNAT.c: In function 'parse_ports':
+../../iptables-1.8.8/extensions/libxt_DNAT.c:94:24: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+   94 |                 port = xtables_service_to_port(arg, NULL);
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~
+In file included from /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/netdb.h:27,
+                 from ../../iptables-1.8.8/extensions/libxt_DNAT.c:9:
+../../iptables-1.8.8/extensions/libxt_DNAT.c:105:33: warning: conversion from 'unsigned int' to '__uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+  105 |                         = htons(port);
+      |                                 ^~~~
+../../iptables-1.8.8/extensions/libxt_DNAT.c:127:43: warning: conversion from 'unsigned int' to '__uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+  127 |         range->min_proto.tcp.port = htons(port);
+      |                                           ^~~~
+../../iptables-1.8.8/extensions/libxt_DNAT.c:128:43: warning: conversion from 'unsigned int' to '__uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+  128 |         range->max_proto.tcp.port = htons(maxport);
+      |                                           ^~~~~~~
+../../iptables-1.8.8/extensions/libxt_DNAT.c:142:28: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  142 |                 baseport = xtables_service_to_port(arg, NULL);
+      |                            ^~~~~~~~~~~~~~~~~~~~~~~
+../../iptables-1.8.8/extensions/libxt_DNAT.c:149:44: warning: conversion from 'unsigned int' to '__uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+  149 |         range->base_proto.tcp.port = htons(baseport);
+      |                                            ^~~~~~~~
+  CCLD     libxt_DNAT.so
+  CC       libxt_DSCP.oo
+../../iptables-1.8.8/extensions/libxt_DSCP.c: In function 'DSCP_parse':
+../../iptables-1.8.8/extensions/libxt_DSCP.c:60:31: warning: conversion from 'unsigned int' to '__u8' {aka 'unsigned char'} may change value [-Wconversion]
+   60 |                 dinfo->dscp = class_to_dscp(cb->arg);
+      |                               ^~~~~~~~~~~~~
+  CCLD     libxt_DSCP.so
+  CC       libxt_HMARK.oo
+../../iptables-1.8.8/extensions/libxt_HMARK.c: In function 'hmark_parse_type':
+../../iptables-1.8.8/extensions/libxt_HMARK.c:190:44: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  190 |                     !hmark_parse(arg, comma-arg, info, &cb->xflags))
+      |                                       ~~~~~^~~~
+  CCLD     libxt_HMARK.so
+  CC       libxt_IDLETIMER.oo
+  CCLD     libxt_IDLETIMER.so
+  CC       libxt_LED.oo
+../../iptables-1.8.8/extensions/libxt_LED.c: In function 'LED_parse':
+../../iptables-1.8.8/extensions/libxt_LED.c:60:38: warning: unsigned conversion from 'int' to '__u32' {aka 'unsigned int'} changes value from '-1' to '4294967295' [-Wsign-conversion]
+   60 |                         led->delay = -1;
+      |                                      ^
+  CCLD     libxt_LED.so
+  CC       libxt_MARK.oo
+../../iptables-1.8.8/extensions/libxt_MARK.c: In function 'mark_tg_arp_parse':
+../../iptables-1.8.8/extensions/libxt_MARK.c:292:30: warning: conversion to '__u32' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  292 |                 info->mark = i;
+      |                              ^
+../../iptables-1.8.8/extensions/libxt_MARK.c:305:30: warning: conversion to '__u32' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  305 |                 info->mask = ~i;
+      |                              ^
+../../iptables-1.8.8/extensions/libxt_MARK.c:317:43: warning: conversion to '__u32' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  317 |                 info->mark = info->mask = i;
+      |                                           ^
+  CCLD     libxt_MARK.so
+  CC       libxt_NFLOG.oo
+  CCLD     libxt_NFLOG.so
+  CC       libxt_NFQUEUE.oo
+../../iptables-1.8.8/extensions/libxt_NFQUEUE.c: In function 'NFQUEUE_parse_v1':
+../../iptables-1.8.8/extensions/libxt_NFQUEUE.c:99:38: warning: conversion from 'int' to '__u16' {aka 'short unsigned int'} may change value [-Wconversion]
+   99 |                 info->queues_total = r[1] - r[0] + 1;
+      |                                      ^
+../../iptables-1.8.8/extensions/libxt_NFQUEUE.c: In function 'NFQUEUE_parse_v2':
+../../iptables-1.8.8/extensions/libxt_NFQUEUE.c:120:38: warning: conversion from 'int' to '__u16' {aka 'short unsigned int'} may change value [-Wconversion]
+  120 |                 info->queues_total = r[1] - r[0] + 1;
+      |                                      ^
+../../iptables-1.8.8/extensions/libxt_NFQUEUE.c: In function 'NFQUEUE_parse_v3':
+../../iptables-1.8.8/extensions/libxt_NFQUEUE.c:144:38: warning: conversion from 'int' to '__u16' {aka 'short unsigned int'} may change value [-Wconversion]
+  144 |                 info->queues_total = r[1] - r[0] + 1;
+      |                                      ^
+  CCLD     libxt_NFQUEUE.so
+  CC       libxt_RATEEST.oo
+../../iptables-1.8.8/extensions/libxt_RATEEST.c: In function 'RATEEST_get_time':
+../../iptables-1.8.8/extensions/libxt_RATEEST.c:74:17: warning: conversion from 'double' to 'unsigned int' may change value [-Wfloat-conversion]
+   74 |         *time = t;
+      |                 ^
+../../iptables-1.8.8/extensions/libxt_RATEEST.c: In function '__RATEEST_print':
+../../iptables-1.8.8/extensions/libxt_RATEEST.c:146:26: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  146 |         local_interval = (TIME_UNITS_PER_SEC << (info->interval + 2)) / 4;
+      |                          ^
+  CCLD     libxt_RATEEST.so
+  CC       libxt_SECMARK.oo
+  CCLD     libxt_SECMARK.so
+  CC       libxt_SET.oo
+In file included from ../../iptables-1.8.8/extensions/libxt_SET.c:22:
+../../iptables-1.8.8/extensions/libxt_set.h: In function 'get_set_byname':
+../../iptables-1.8.8/extensions/libxt_set.h:106:19: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  106 |         version = req.version;
+      |                   ^~~
+../../iptables-1.8.8/extensions/libxt_set.h:114:67: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  114 |                 return get_set_byname_only(setname, info, sockfd, version);
+      |                                                                   ^~~~~~~
+  CCLD     libxt_SET.so
+  CC       libxt_SYNPROXY.oo
+../../iptables-1.8.8/extensions/libxt_SYNPROXY.c: In function 'SYNPROXY_parse':
+../../iptables-1.8.8/extensions/libxt_SYNPROXY.c:57:32: warning: conversion from 'uint32_t' {aka 'unsigned int'} to '__u8' {aka 'unsigned char'} may change value [-Wconversion]
+   57 |                 info->wscale = cb->val.u32;
+      |                                ^~
+../../iptables-1.8.8/extensions/libxt_SYNPROXY.c:61:29: warning: conversion from 'uint32_t' {aka 'unsigned int'} to '__u16' {aka 'short unsigned int'} may change value [-Wconversion]
+   61 |                 info->mss = cb->val.u32;
+      |                             ^~
+  CCLD     libxt_SYNPROXY.so
+  CC       libxt_TCPMSS.oo
+  CCLD     libxt_TCPMSS.so
+  CC       libxt_TCPOPTSTRIP.oo
+  CCLD     libxt_TCPOPTSTRIP.so
+  CC       libxt_TEE.oo
+  CCLD     libxt_TEE.so
+  CC       libxt_TOS.oo
+  CCLD     libxt_TOS.so
+  CC       libxt_TPROXY.oo
+  CCLD     libxt_TPROXY.so
+  CC       libxt_TRACE.oo
+  CCLD     libxt_TRACE.so
+  CC       libxt_addrtype.oo
+../../iptables-1.8.8/extensions/libxt_addrtype.c: In function 'parse_types':
+../../iptables-1.8.8/extensions/libxt_addrtype.c:92:59: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+   92 |                 if (comma == arg || !parse_type(arg, comma-arg, mask))
+      |                                                      ~~~~~^~~~
+  CCLD     libxt_addrtype.so
+  CC       libxt_bpf.oo
+../../iptables-1.8.8/extensions/libxt_bpf.c: In function 'bpf_obj_get_readonly':
+../../iptables-1.8.8/extensions/libxt_bpf.c:76:29: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+   76 |                 .pathname = (__u64)filepath,
+      |                             ^
+  CCLD     libxt_bpf.so
+  CC       libxt_cgroup.oo
+  CCLD     libxt_cgroup.so
+  CC       libxt_cluster.oo
+  CCLD     libxt_cluster.so
+  CC       libxt_comment.oo
+  CCLD     libxt_comment.so
+  CC       libxt_connbytes.oo
+  CCLD     libxt_connbytes.so
+  CC       libxt_connlimit.oo
+../../iptables-1.8.8/extensions/libxt_connlimit.c: In function 'connlimit_parse':
+../../iptables-1.8.8/extensions/libxt_connlimit.c:79:29: warning: unsigned conversion from 'int' to '__u32' {aka 'unsigned int'} changes value from '-3' to '4294967293' [-Wsign-conversion]
+   79 |                 info->flags &= ~XT_CONNLIMIT_DADDR;
+      |                             ^~
+  CCLD     libxt_connlimit.so
+  CC       libxt_connmark.oo
+  CCLD     libxt_connmark.so
+  CC       libxt_conntrack.oo
+../../iptables-1.8.8/extensions/libxt_conntrack.c: In function 'parse_states':
+../../iptables-1.8.8/extensions/libxt_conntrack.c:216:60: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  216 |                 if (comma == arg || !parse_state(arg, comma-arg, sinfo))
+      |                                                       ~~~~~^~~~
+../../iptables-1.8.8/extensions/libxt_conntrack.c: In function 'conntrack_ps_states':
+../../iptables-1.8.8/extensions/libxt_conntrack.c:257:74: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  257 |                 if (comma == arg || !conntrack_ps_state(info, arg, comma - arg))
+      |                                                                    ~~~~~~^~~~~
+../../iptables-1.8.8/extensions/libxt_conntrack.c: In function 'parse_statuses':
+../../iptables-1.8.8/extensions/libxt_conntrack.c:293:61: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  293 |                 if (comma == arg || !parse_status(arg, comma-arg, sinfo))
+      |                                                        ~~~~~^~~~
+../../iptables-1.8.8/extensions/libxt_conntrack.c: In function 'conntrack_ps_statuses':
+../../iptables-1.8.8/extensions/libxt_conntrack.c:327:75: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  327 |                 if (comma == arg || !conntrack_ps_status(info, arg, comma - arg))
+      |                                                                     ~~~~~~^~~~~
+../../iptables-1.8.8/extensions/libxt_conntrack.c: In function 'conntrack_mt_parse':
+../../iptables-1.8.8/extensions/libxt_conntrack.c:497:47: warning: unsigned conversion from 'int' to '__u16' {aka 'short unsigned int'} changes the value of '-4097' [-Wsign-conversion]
+  497 |                         info->invert_flags &= ~XT_CONNTRACK_DIRECTION;
+      |                                               ^
+../../iptables-1.8.8/extensions/libxt_conntrack.c: In function 'conntrack1_mt_parse':
+../../iptables-1.8.8/extensions/libxt_conntrack.c:511:36: warning: conversion from '__u16' {aka 'short unsigned int'} to '__u8' {aka 'unsigned char'} may change value [-Wconversion]
+  511 |                 (r)->state_mask  = (l)->state_mask; \
+      |                                    ^
+../../iptables-1.8.8/extensions/libxt_conntrack.c:534:9: note: in expansion of macro 'cinfo_transform'
+  534 |         cinfo_transform(info, &up);
+      |         ^~~~~~~~~~~~~~~
+../../iptables-1.8.8/extensions/libxt_conntrack.c:512:36: warning: conversion from '__u16' {aka 'short unsigned int'} to '__u8' {aka 'unsigned char'} may change value [-Wconversion]
+  512 |                 (r)->status_mask = (l)->status_mask; \
+      |                                    ^
+../../iptables-1.8.8/extensions/libxt_conntrack.c:534:9: note: in expansion of macro 'cinfo_transform'
+  534 |         cinfo_transform(info, &up);
+      |         ^~~~~~~~~~~~~~~
+../../iptables-1.8.8/extensions/libxt_conntrack.c: In function 'state_parse_states':
+../../iptables-1.8.8/extensions/libxt_conntrack.c:1053:52: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 1053 |                 flag = state_parse_state(arg, comma-arg);
+      |                                               ~~~~~^~~~
+../../iptables-1.8.8/extensions/libxt_conntrack.c: In function 'state_ct1_parse':
+../../iptables-1.8.8/extensions/libxt_conntrack.c:1090:29: warning: conversion from 'unsigned int' to '__u8' {aka 'unsigned char'} may change value [-Wconversion]
+ 1090 |         sinfo->state_mask = state_parse_states(cb->arg);
+      |                             ^~~~~~~~~~~~~~~~~~
+../../iptables-1.8.8/extensions/libxt_conntrack.c: In function 'state_ct23_parse':
+../../iptables-1.8.8/extensions/libxt_conntrack.c:1101:29: warning: conversion from 'unsigned int' to '__u16' {aka 'short unsigned int'} may change value [-Wconversion]
+ 1101 |         sinfo->state_mask = state_parse_states(cb->arg);
+      |                             ^~~~~~~~~~~~~~~~~~
+../../iptables-1.8.8/extensions/libxt_conntrack.c: In function '_conntrack3_mt_xlate':
+../../iptables-1.8.8/extensions/libxt_conntrack.c:1292:42: warning: the comparison will always evaluate as 'false' for the address of 'origsrc_addr' will never be NULL [-Waddress]
+ 1292 |                 if (&sinfo->origsrc_addr == 0L)
+      |                                          ^~
+In file included from ../../iptables-1.8.8/extensions/libxt_conntrack.c:15:
+../../iptables-1.8.8/include/linux/netfilter/xt_conntrack.h:63:28: note: 'origsrc_addr' declared here
+   63 |         union nf_inet_addr origsrc_addr, origsrc_mask;
+      |                            ^~~~~~~~~~~~
+../../iptables-1.8.8/extensions/libxt_conntrack.c:1299:56: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 1299 |                                  &sinfo->origsrc_mask, family);
+      |                                                        ^~~~~~
+../../iptables-1.8.8/extensions/libxt_conntrack.c:1304:42: warning: the comparison will always evaluate as 'false' for the address of 'origdst_addr' will never be NULL [-Waddress]
+ 1304 |                 if (&sinfo->origdst_addr == 0L)
+      |                                          ^~
+../../iptables-1.8.8/include/linux/netfilter/xt_conntrack.h:64:28: note: 'origdst_addr' declared here
+   64 |         union nf_inet_addr origdst_addr, origdst_mask;
+      |                            ^~~~~~~~~~~~
+../../iptables-1.8.8/extensions/libxt_conntrack.c:1311:56: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 1311 |                                  &sinfo->origdst_mask, family);
+      |                                                        ^~~~~~
+../../iptables-1.8.8/extensions/libxt_conntrack.c:1316:42: warning: the comparison will always evaluate as 'false' for the address of 'replsrc_addr' will never be NULL [-Waddress]
+ 1316 |                 if (&sinfo->replsrc_addr == 0L)
+      |                                          ^~
+../../iptables-1.8.8/include/linux/netfilter/xt_conntrack.h:65:28: note: 'replsrc_addr' declared here
+   65 |         union nf_inet_addr replsrc_addr, replsrc_mask;
+      |                            ^~~~~~~~~~~~
+../../iptables-1.8.8/extensions/libxt_conntrack.c:1323:56: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 1323 |                                  &sinfo->replsrc_mask, family);
+      |                                                        ^~~~~~
+../../iptables-1.8.8/extensions/libxt_conntrack.c:1328:42: warning: the comparison will always evaluate as 'false' for the address of 'repldst_addr' will never be NULL [-Waddress]
+ 1328 |                 if (&sinfo->repldst_addr == 0L)
+      |                                          ^~
+../../iptables-1.8.8/include/linux/netfilter/xt_conntrack.h:66:28: note: 'repldst_addr' declared here
+   66 |         union nf_inet_addr repldst_addr, repldst_mask;
+      |                            ^~~~~~~~~~~~
+../../iptables-1.8.8/extensions/libxt_conntrack.c:1335:56: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 1335 |                                  &sinfo->repldst_mask, family);
+      |                                                        ^~~~~~
+  CCLD     libxt_conntrack.so
+  CC       libxt_cpu.oo
+  CCLD     libxt_cpu.so
+  CC       libxt_dccp.oo
+In file included from /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/netdb.h:27,
+                 from ../../iptables-1.8.8/extensions/libxt_dccp.c:12:
+../../iptables-1.8.8/extensions/libxt_dccp.c: In function 'port_to_service':
+../../iptables-1.8.8/extensions/libxt_dccp.c:144:44: warning: conversion from 'int' to '__uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+  144 |         if ((service = getservbyport(htons(port), "dccp")))
+      |                                            ^~~~
+../../iptables-1.8.8/extensions/libxt_dccp.c: In function 'print_types':
+../../iptables-1.8.8/extensions/libxt_dccp.c:209:26: warning: conversion from 'int' to 'uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+  209 |                 types &= ~(1 << i);
+      |                          ^
+../../iptables-1.8.8/extensions/libxt_dccp.c: In function 'dccp_type_xlate':
+../../iptables-1.8.8/extensions/libxt_dccp.c:311:26: warning: unsigned conversion from 'int' to 'uint16_t' {aka 'short unsigned int'} changes the value of '-63489' [-Wsign-conversion]
+  311 |                 types &= ~INVALID_OTHER_TYPE_MASK;
+      |                          ^
+../../iptables-1.8.8/extensions/libxt_dccp.c:332:26: warning: conversion from 'int' to 'uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+  332 |                 types &= ~(1 << i);
+      |                          ^
+  CCLD     libxt_dccp.so
+  CC       libxt_devgroup.oo
+../../iptables-1.8.8/extensions/libxt_devgroup.c: In function 'print_devgroup_xlate':
+../../iptables-1.8.8/extensions/libxt_devgroup.c:118:64: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  118 |                         name = xtables_lmap_id2name(devgroups, id);
+      |                                                                ^~
+  CCLD     libxt_devgroup.so
+  CC       libxt_dscp.oo
+../../iptables-1.8.8/extensions/libxt_dscp.c: In function 'dscp_parse':
+../../iptables-1.8.8/extensions/libxt_dscp.c:64:31: warning: conversion from 'unsigned int' to '__u8' {aka 'unsigned char'} may change value [-Wconversion]
+   64 |                 dinfo->dscp = class_to_dscp(cb->arg);
+      |                               ^~~~~~~~~~~~~
+  CCLD     libxt_dscp.so
+  CC       libxt_ecn.oo
+  CCLD     libxt_ecn.so
+  CC       libxt_esp.oo
+  CCLD     libxt_esp.so
+  CC       libxt_hashlimit.oo
+../../iptables-1.8.8/extensions/libxt_hashlimit.c: In function 'bytes_to_cost':
+../../iptables-1.8.8/extensions/libxt_hashlimit.c:291:22: warning: conversion from 'uint64_t' {aka 'long long unsigned int'} to 'uint32_t' {aka 'unsigned int'} may change value [-Wconversion]
+  291 |         uint32_t r = bytes >> XT_HASHLIMIT_BYTE_SHIFT;
+      |                      ^~~~~
+../../iptables-1.8.8/extensions/libxt_hashlimit.c: In function 'parse_bytes':
+../../iptables-1.8.8/extensions/libxt_hashlimit.c:351:13: warning: conversion to 'uint64_t' {aka 'long long unsigned int'} from 'long long int' may change the sign of the result [-Wsign-conversion]
+  351 |         r = atoll(rate);
+      |             ^~~~~
+../../iptables-1.8.8/extensions/libxt_hashlimit.c:369:37: warning: conversion from 'uint64_t' {aka 'long long unsigned int'} to 'uint32_t' {aka 'unsigned int'} may change value [-Wconversion]
+  369 |                 *((uint32_t*)val) = tmp;
+      |                                     ^~~
+../../iptables-1.8.8/extensions/libxt_hashlimit.c: In function 'parse_rate':
+../../iptables-1.8.8/extensions/libxt_hashlimit.c:400:13: warning: conversion to 'uint64_t' {aka 'long long unsigned int'} from 'long long int' may change the sign of the result [-Wsign-conversion]
+  400 |         r = atoll(rate);
+      |             ^~~~~
+../../iptables-1.8.8/extensions/libxt_hashlimit.c:413:37: warning: conversion from 'uint64_t' {aka 'long long unsigned int'} to 'uint32_t' {aka 'unsigned int'} may change value [-Wconversion]
+  413 |                 *((uint32_t*)val) = tmp;
+      |                                     ^~~
+../../iptables-1.8.8/extensions/libxt_hashlimit.c: In function 'parse_interval':
+../../iptables-1.8.8/extensions/libxt_hashlimit.c:426:16: warning: conversion to 'uint32_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  426 |         *val = r;
+      |                ^
+../../iptables-1.8.8/extensions/libxt_hashlimit.c: In function 'hashlimit_mt_parse_v1':
+../../iptables-1.8.8/extensions/libxt_hashlimit.c:559:35: warning: conversion from 'uint64_t' {aka 'long long unsigned int'} to '__u32' {aka 'unsigned int'} may change value [-Wconversion]
+  559 |                 info->cfg.burst = parse_burst(cb->arg, 1);
+      |                                   ^~~~~~~~~~~
+../../iptables-1.8.8/extensions/libxt_hashlimit.c: In function 'hashlimit_mt_check_v1':
+../../iptables-1.8.8/extensions/libxt_hashlimit.c:714:34: warning: conversion from 'uint64_t' {aka 'long long unsigned int'} to 'uint32_t' {aka 'unsigned int'} may change value [-Wconversion]
+  714 |                         burst /= cost_to_bytes(info->cfg.avg);
+      |                                  ^~~~~~~~~~~~~
+../../iptables-1.8.8/extensions/libxt_hashlimit.c: In function 'hashlimit_mt_check_v2':
+../../iptables-1.8.8/extensions/libxt_hashlimit.c:744:33: warning: conversion from '__u64' {aka 'long long unsigned int'} to 'uint32_t' {aka 'unsigned int'} may change value [-Wconversion]
+  744 |                         burst = info->cfg.burst;
+      |                                 ^~~~
+../../iptables-1.8.8/extensions/libxt_hashlimit.c:745:34: warning: conversion from 'uint64_t' {aka 'long long unsigned int'} to 'uint32_t' {aka 'unsigned int'} may change value [-Wconversion]
+  745 |                         burst /= cost_to_bytes(info->cfg.avg);
+      |                                  ^~~~~~~~~~~~~
+../../iptables-1.8.8/extensions/libxt_hashlimit.c: In function 'hashlimit_mt_check':
+../../iptables-1.8.8/extensions/libxt_hashlimit.c:774:33: warning: conversion from '__u64' {aka 'long long unsigned int'} to 'uint32_t' {aka 'unsigned int'} may change value [-Wconversion]
+  774 |                         burst = info->cfg.burst;
+      |                                 ^~~~
+../../iptables-1.8.8/extensions/libxt_hashlimit.c:775:34: warning: conversion from 'uint64_t' {aka 'long long unsigned int'} to 'uint32_t' {aka 'unsigned int'} may change value [-Wconversion]
+  775 |                         burst /= cost_to_bytes(info->cfg.avg);
+      |                                  ^~~~~~~~~~~~~
+../../iptables-1.8.8/extensions/libxt_hashlimit.c: In function 'print_rate':
+../../iptables-1.8.8/extensions/libxt_hashlimit.c:830:41: warning: conversion from 'uint64_t' {aka 'long long unsigned int'} to 'uint32_t' {aka 'unsigned int'} may change value [-Wconversion]
+  830 |         return _rates[i-1].mult / scale * 1000;
+      |                ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+../../iptables-1.8.8/extensions/libxt_hashlimit.c: In function 'hashlimit_mode_xlate':
+../../iptables-1.8.8/extensions/libxt_hashlimit.c:1302:14: warning: unsigned conversion from 'int' to 'uint32_t' {aka 'unsigned int'} changes value from '-49' to '4294967247' [-Wsign-conversion]
+ 1302 |         mode &= ~XT_HASHLIMIT_INVERT & ~XT_HASHLIMIT_BYTES;
+      |              ^~
+  CCLD     libxt_hashlimit.so
+  CC       libxt_helper.oo
+  CCLD     libxt_helper.so
+  CC       libxt_ipcomp.oo
+  CCLD     libxt_ipcomp.so
+  CC       libxt_iprange.oo
+  CCLD     libxt_iprange.so
+  CC       libxt_ipvs.oo
+../../iptables-1.8.8/extensions/libxt_ipvs.c: In function 'ipvs_mt_parse':
+../../iptables-1.8.8/extensions/libxt_ipvs.c:79:43: warning: unsigned conversion from 'int' to '__u8' {aka 'unsigned char'} changes the value of '-17' [-Wsign-conversion]
+   79 |                         data->invert   &= ~XT_IPVS_DIR;
+      |                                           ^
+  CCLD     libxt_ipvs.so
+  CC       libxt_length.oo
+  CCLD     libxt_length.so
+  CC       libxt_limit.oo
+In file included from ../../iptables-1.8.8/extensions/libxt_limit.c:18:
+../../iptables-1.8.8/iptables/nft-bridge.h: In function 'ebt_fill_target':
+../../iptables-1.8.8/iptables/nft-bridge.h:92:58: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+   92 |                 if (!strcmp(str, nft_ebt_standard_target(i))) {
+      |                                                          ^
+../../iptables-1.8.8/iptables/nft-bridge.h:93:36: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+   93 |                         *verdict = -i - 1;
+      |                                    ^
+../../iptables-1.8.8/iptables/nft-bridge.h: In function 'nft_among_insert_pair':
+../../iptables-1.8.8/iptables/nft-bridge.h:176:69: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  176 |         memmove(&pairs[i + 1], &pairs[i], sizeof(*pairs) * (*pcount - i));
+      |                                                                     ^
+../../iptables-1.8.8/extensions/libxt_limit.c: In function 'parse_rate':
+../../iptables-1.8.8/extensions/libxt_limit.c:70:13: warning: conversion to 'uint32_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+   70 |         r = atoi(rate);
+      |             ^~~~
+../../iptables-1.8.8/extensions/libxt_limit.c: In function 'brlimit_parse':
+../../iptables-1.8.8/extensions/libxt_limit.c:234:28: warning: conversion from 'uintmax_t' {aka 'long long unsigned int'} to '__u32' {aka 'unsigned int'} may change value [-Wconversion]
+  234 |                 r->burst = num;
+      |                            ^~~
+  CCLD     libxt_limit.so
+  CC       libxt_mac.oo
+  CCLD     libxt_mac.so
+  CC       libxt_mark.oo
+  CCLD     libxt_mark.so
+  CC       libxt_multiport.oo
+../../iptables-1.8.8/extensions/libxt_multiport.c: In function 'parse_multi_ports_v1':
+../../iptables-1.8.8/extensions/libxt_multiport.c:135:28: warning: conversion from 'unsigned int' to '__u8' {aka 'unsigned char'} may change value [-Wconversion]
+  135 |         multiinfo->count = i;
+      |                            ^
+../../iptables-1.8.8/extensions/libxt_multiport.c: In function 'check_proto':
+../../iptables-1.8.8/extensions/libxt_multiport.c:149:36: warning: conversion from 'uint16_t' {aka 'short unsigned int'} to 'uint8_t' {aka 'unsigned char'} may change value [-Wconversion]
+  149 |         if ((proto = proto_to_name(pnum)) != NULL)
+      |                                    ^~~~
+../../iptables-1.8.8/extensions/libxt_multiport.c: In function '__multiport_parse':
+../../iptables-1.8.8/extensions/libxt_multiport.c:170:36: warning: conversion from 'unsigned int' to '__u8' {aka 'unsigned char'} may change value [-Wconversion]
+  170 |                 multiinfo->count = parse_multi_ports(cb->arg,
+      |                                    ^~~~~~~~~~~~~~~~~
+../../iptables-1.8.8/extensions/libxt_multiport.c:176:36: warning: conversion from 'unsigned int' to '__u8' {aka 'unsigned char'} may change value [-Wconversion]
+  176 |                 multiinfo->count = parse_multi_ports(cb->arg,
+      |                                    ^~~~~~~~~~~~~~~~~
+../../iptables-1.8.8/extensions/libxt_multiport.c:182:36: warning: conversion from 'unsigned int' to '__u8' {aka 'unsigned char'} may change value [-Wconversion]
+  182 |                 multiinfo->count = parse_multi_ports(cb->arg,
+      |                                    ^~~~~~~~~~~~~~~~~
+In file included from /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/netdb.h:27,
+                 from ../../iptables-1.8.8/extensions/libxt_multiport.c:2:
+../../iptables-1.8.8/extensions/libxt_multiport.c: In function 'port_to_service':
+../../iptables-1.8.8/extensions/libxt_multiport.c:259:44: warning: conversion from 'int' to '__uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+  259 |         if ((service = getservbyport(htons(port), proto_to_name(proto))))
+      |                                            ^~~~
+../../iptables-1.8.8/extensions/libxt_multiport.c: In function '__multiport_print':
+../../iptables-1.8.8/extensions/libxt_multiport.c:306:49: warning: conversion from 'uint16_t' {aka 'short unsigned int'} to 'uint8_t' {aka 'unsigned char'} may change value [-Wconversion]
+  306 |                 print_port(multiinfo->ports[i], proto, numeric);
+      |                                                 ^~~~~
+../../iptables-1.8.8/extensions/libxt_multiport.c: In function '__multiport_print_v1':
+../../iptables-1.8.8/extensions/libxt_multiport.c:356:49: warning: conversion from 'uint16_t' {aka 'short unsigned int'} to 'uint8_t' {aka 'unsigned char'} may change value [-Wconversion]
+  356 |                 print_port(multiinfo->ports[i], proto, numeric);
+      |                                                 ^~~~~
+../../iptables-1.8.8/extensions/libxt_multiport.c:359:59: warning: conversion from 'uint16_t' {aka 'short unsigned int'} to 'uint8_t' {aka 'unsigned char'} may change value [-Wconversion]
+  359 |                         print_port(multiinfo->ports[++i], proto, numeric);
+      |                                                           ^~~~~
+../../iptables-1.8.8/extensions/libxt_multiport.c: In function '__multiport_save':
+../../iptables-1.8.8/extensions/libxt_multiport.c:401:49: warning: conversion from 'uint16_t' {aka 'short unsigned int'} to 'uint8_t' {aka 'unsigned char'} may change value [-Wconversion]
+  401 |                 print_port(multiinfo->ports[i], proto, 1);
+      |                                                 ^~~~~
+../../iptables-1.8.8/extensions/libxt_multiport.c: In function '__multiport_save_v1':
+../../iptables-1.8.8/extensions/libxt_multiport.c:445:49: warning: conversion from 'uint16_t' {aka 'short unsigned int'} to 'uint8_t' {aka 'unsigned char'} may change value [-Wconversion]
+  445 |                 print_port(multiinfo->ports[i], proto, 1);
+      |                                                 ^~~~~
+../../iptables-1.8.8/extensions/libxt_multiport.c:448:59: warning: conversion from 'uint16_t' {aka 'short unsigned int'} to 'uint8_t' {aka 'unsigned char'} may change value [-Wconversion]
+  448 |                         print_port(multiinfo->ports[++i], proto, 1);
+      |                                                           ^~~~~
+../../iptables-1.8.8/extensions/libxt_multiport.c: In function 'multiport_xlate':
+../../iptables-1.8.8/extensions/libxt_multiport.c:511:25: warning: conversion from '__u16' {aka 'short unsigned int'} to 'uint8_t' {aka 'unsigned char'} may change value [-Wconversion]
+  511 |         uint8_t proto = ((const struct ipt_ip *)params->ip)->proto;
+      |                         ^
+../../iptables-1.8.8/extensions/libxt_multiport.c: In function 'multiport_xlate6':
+../../iptables-1.8.8/extensions/libxt_multiport.c:520:25: warning: conversion from '__u16' {aka 'short unsigned int'} to 'uint8_t' {aka 'unsigned char'} may change value [-Wconversion]
+  520 |         uint8_t proto = ((const struct ip6t_ip6 *)params->ip)->proto;
+      |                         ^
+../../iptables-1.8.8/extensions/libxt_multiport.c: In function 'multiport_xlate_v1':
+../../iptables-1.8.8/extensions/libxt_multiport.c:578:25: warning: conversion from '__u16' {aka 'short unsigned int'} to 'uint8_t' {aka 'unsigned char'} may change value [-Wconversion]
+  578 |         uint8_t proto = ((const struct ipt_ip *)params->ip)->proto;
+      |                         ^
+../../iptables-1.8.8/extensions/libxt_multiport.c: In function 'multiport_xlate6_v1':
+../../iptables-1.8.8/extensions/libxt_multiport.c:587:25: warning: conversion from '__u16' {aka 'short unsigned int'} to 'uint8_t' {aka 'unsigned char'} may change value [-Wconversion]
+  587 |         uint8_t proto = ((const struct ip6t_ip6 *)params->ip)->proto;
+      |                         ^
+  CCLD     libxt_multiport.so
+  CC       libxt_nfacct.oo
+  CCLD     libxt_nfacct.so
+  CC       libxt_osf.oo
+  CCLD     libxt_osf.so
+  CC       libxt_owner.oo
+  CCLD     libxt_owner.so
+  CC       libxt_physdev.oo
+  CCLD     libxt_physdev.so
+  CC       libxt_pkttype.oo
+  CCLD     libxt_pkttype.so
+  CC       libxt_policy.oo
+../../iptables-1.8.8/extensions/libxt_policy.c: In function 'policy_parse':
+../../iptables-1.8.8/extensions/libxt_policy.c:102:32: warning: conversion from 'int' to '__u16' {aka 'short unsigned int'} may change value [-Wconversion]
+  102 |                 info->flags |= parse_direction(cb->arg);
+      |                                ^~~~~~~~~~~~~~~
+../../iptables-1.8.8/extensions/libxt_policy.c:105:32: warning: conversion from 'int' to '__u16' {aka 'short unsigned int'} may change value [-Wconversion]
+  105 |                 info->flags |= parse_policy(cb->arg);
+      |                                ^~~~~~~~~~~~
+../../iptables-1.8.8/extensions/libxt_policy.c:163:27: warning: conversion from 'int' to '__u8' {aka 'unsigned char'} may change value [-Wconversion]
+  163 |                 e->mode = parse_mode(cb->arg);
+      |                           ^~~~~~~~~~
+  CCLD     libxt_policy.so
+  CC       libxt_quota.oo
+  CCLD     libxt_quota.so
+  CC       libxt_rateest.oo
+../../iptables-1.8.8/extensions/libxt_rateest.c: In function 'rateest_get_rate':
+../../iptables-1.8.8/extensions/libxt_rateest.c:98:25: warning: conversion from 'double' to 'uint32_t' {aka 'unsigned int'} may change value [-Wfloat-conversion]
+   98 |                 *rate = bps / 8.;       /* assume bytes/sec */
+      |                         ^~~
+../../iptables-1.8.8/extensions/libxt_rateest.c:104:33: warning: conversion from 'double' to 'uint32_t' {aka 'unsigned int'} may change value [-Wfloat-conversion]
+  104 |                         *rate = (bps * s->scale) / 8.;
+      |                                 ^
+  CCLD     libxt_rateest.so
+  CC       libxt_recent.oo
+  CCLD     libxt_recent.so
+  CC       libxt_rpfilter.oo
+  CCLD     libxt_rpfilter.so
+  CC       libxt_sctp.oo
+../../iptables-1.8.8/extensions/libxt_sctp.c: In function 'sctp_init':
+../../iptables-1.8.8/extensions/libxt_sctp.c:39:49: warning: unsigned conversion from 'int' to '__u8' {aka 'unsigned char'} changes value from '-1' to '255' [-Wsign-conversion]
+   39 |                 einfo->flag_info[i].chunktype = -1;
+      |                                                 ^
+../../iptables-1.8.8/extensions/libxt_sctp.c: In function 'save_chunk_flag_info':
+../../iptables-1.8.8/extensions/libxt_sctp.c:132:50: warning: conversion from 'int' to '__u8' {aka 'unsigned char'} may change value [-Wconversion]
+  132 |                         flag_info[i].chunktype = chunktype;
+      |                                                  ^~~~~~~~~
+../../iptables-1.8.8/extensions/libxt_sctp.c:149:44: warning: conversion from 'int' to '__u8' {aka 'unsigned char'} may change value [-Wconversion]
+  149 |         flag_info[*flag_count].chunktype = chunktype;
+      |                                            ^~~~~~~~~
+In file included from ../../iptables-1.8.8/extensions/libxt_sctp.c:21:
+../../iptables-1.8.8/extensions/libxt_sctp.c: In function 'parse_sctp_chunk':
+../../iptables-1.8.8/include/linux/netfilter/xt_sctp.h:62:28: warning: signed conversion from 'unsigned int' to 'int' changes value from '4294967295' to '-1' [-Wsign-conversion]
+   62 |         memset((chunkmap), ~0U, sizeof(chunkmap))
+      |                            ^~~
+../../iptables-1.8.8/extensions/libxt_sctp.c:173:17: note: in expansion of macro 'SCTP_CHUNKMAP_SET_ALL'
+  173 |                 SCTP_CHUNKMAP_SET_ALL(einfo->chunkmap);
+      |                 ^~~~~~~~~~~~~~~~~~~~~
+../../iptables-1.8.8/extensions/libxt_sctp.c:214:71: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  214 |                                                 &(einfo->flag_count), i, bit,
+      |                                                                       ^
+In file included from /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/netdb.h:27,
+                 from ../../iptables-1.8.8/extensions/libxt_sctp.c:15:
+../../iptables-1.8.8/extensions/libxt_sctp.c: In function 'port_to_service':
+../../iptables-1.8.8/extensions/libxt_sctp.c:303:44: warning: conversion from 'int' to '__uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+  303 |         if ((service = getservbyport(htons(port), "sctp")))
+      |                                            ^~~~
+../../iptables-1.8.8/extensions/libxt_sctp.c: In function 'print_chunks':
+../../iptables-1.8.8/include/linux/netfilter/xt_sctp.h:54:26: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+   54 |         ((chunkmap)[type / bytes (__u32)] &             \
+      |                          ^
+../../iptables-1.8.8/extensions/libxt_sctp.c:406:21: note: in expansion of macro 'SCTP_CHUNKMAP_IS_SET'
+  406 |                 if (SCTP_CHUNKMAP_IS_SET(einfo->chunkmap, i)) {
+      |                     ^~~~~~~~~~~~~~~~~~~~
+../../iptables-1.8.8/include/linux/netfilter/xt_sctp.h:55:30: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+   55 |                 (1u << (type % bytes (__u32)))) ? 1: 0; \
+      |                              ^
+../../iptables-1.8.8/extensions/libxt_sctp.c:406:21: note: in expansion of macro 'SCTP_CHUNKMAP_IS_SET'
+  406 |                 if (SCTP_CHUNKMAP_IS_SET(einfo->chunkmap, i)) {
+      |                     ^~~~~~~~~~~~~~~~~~~~
+../../iptables-1.8.8/extensions/libxt_sctp.c:412:37: warning: conversion to 'uint32_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  412 |                         print_chunk(i, numeric);
+      |                                     ^
+../../iptables-1.8.8/extensions/libxt_sctp.c:415:59: warning: conversion to 'uint32_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  415 |                                         print_chunk_flags(i, flag_info[j].flag,
+      |                                                           ^
+  CCLD     libxt_sctp.so
+  CC       libxt_set.oo
+In file included from ../../iptables-1.8.8/extensions/libxt_set.c:23:
+../../iptables-1.8.8/extensions/libxt_set.h: In function 'get_set_byname':
+../../iptables-1.8.8/extensions/libxt_set.h:106:19: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  106 |         version = req.version;
+      |                   ^~~
+../../iptables-1.8.8/extensions/libxt_set.h:114:67: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  114 |                 return get_set_byname_only(setname, info, sockfd, version);
+      |                                                                   ^~~~~~~
+  CCLD     libxt_set.so
+  CC       libxt_socket.oo
+  CCLD     libxt_socket.so
+  CC       libxt_standard.oo
+  CCLD     libxt_standard.so
+  CC       libxt_statistic.oo
+../../iptables-1.8.8/extensions/libxt_statistic.c: In function 'statistic_parse':
+../../iptables-1.8.8/extensions/libxt_statistic.c:69:46: warning: conversion to '__u32' {aka 'unsigned int'} from 'long int' may change the sign of the result [-Wsign-conversion]
+   69 |                 info->u.random.probability = lround(0x80000000 * cb->val.dbl);
+      |                                              ^~~~~~
+  CCLD     libxt_statistic.so
+  CC       libxt_string.oo
+../../iptables-1.8.8/extensions/libxt_string.c: In function 'parse_string':
+../../iptables-1.8.8/extensions/libxt_string.c:85:32: warning: conversion from 'size_t' {aka 'unsigned int'} to '__u8' {aka 'unsigned char'} may change value [-Wconversion]
+   85 |                 info->patlen = strnlen(s, XT_STRING_MAX_PATTERN_SIZE);
+      |                                ^~~~~~~
+../../iptables-1.8.8/extensions/libxt_string.c: In function 'parse_hex_string':
+../../iptables-1.8.8/extensions/libxt_string.c:98:16: warning: conversion to 'int' from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+   98 |         slen = strlen(s);
+      |                ^~~~~~
+../../iptables-1.8.8/extensions/libxt_string.c:167:24: warning: conversion from 'int' to '__u8' {aka 'unsigned char'} may change value [-Wconversion]
+  167 |         info->patlen = sindex;
+      |                        ^~~~~~
+  CCLD     libxt_string.so
+  CC       libxt_tcp.oo
+../../iptables-1.8.8/extensions/libxt_tcp.c: In function 'parse_tcp_flags':
+../../iptables-1.8.8/extensions/libxt_tcp.c:110:29: warning: conversion from 'unsigned int' to '__u8' {aka 'unsigned char'} may change value [-Wconversion]
+  110 |         tcpinfo->flg_mask = parse_tcp_flag(mask);
+      |                             ^~~~~~~~~~~~~~
+../../iptables-1.8.8/extensions/libxt_tcp.c:111:28: warning: conversion from 'unsigned int' to '__u8' {aka 'unsigned char'} may change value [-Wconversion]
+  111 |         tcpinfo->flg_cmp = parse_tcp_flag(cmp);
+      |                            ^~~~~~~~~~~~~~
+../../iptables-1.8.8/extensions/libxt_tcp.c: In function 'parse_tcp_option':
+../../iptables-1.8.8/extensions/libxt_tcp.c:125:19: warning: conversion from 'unsigned int' to 'uint8_t' {aka 'unsigned char'} may change value [-Wconversion]
+  125 |         *result = ret;
+      |                   ^~~
+In file included from /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/netdb.h:27,
+                 from ../../iptables-1.8.8/extensions/libxt_tcp.c:4:
+../../iptables-1.8.8/extensions/libxt_tcp.c: In function 'port_to_service':
+../../iptables-1.8.8/extensions/libxt_tcp.c:211:44: warning: conversion from 'int' to '__uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+  211 |         if ((service = getservbyport(htons(port), "tcp")))
+      |                                            ^~~~
+../../iptables-1.8.8/extensions/libxt_tcp.c: In function 'print_tcpf':
+../../iptables-1.8.8/extensions/libxt_tcp.c:270:26: warning: conversion from 'unsigned int' to 'uint8_t' {aka 'unsigned char'} may change value [-Wconversion]
+  270 |                 flags &= ~tcp_flag_names[i].flag;
+      |                          ^
+../../iptables-1.8.8/extensions/libxt_tcp.c: In function 'print_tcp_xlate':
+../../iptables-1.8.8/extensions/libxt_tcp.c:389:26: warning: conversion from 'unsigned int' to 'uint8_t' {aka 'unsigned char'} may change value [-Wconversion]
+  389 |                 flags &= ~tcp_flag_names_xlate[i].flag;
+      |                          ^
+  CCLD     libxt_tcp.so
+  CC       libxt_tcpmss.oo
+  CCLD     libxt_tcpmss.so
+  CC       libxt_time.oo
+../../iptables-1.8.8/extensions/libxt_time.c: In function 'time_parse_date':
+../../iptables-1.8.8/extensions/libxt_time.c:140:22: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  140 |         tm.tm_year = year - 1900;
+      |                      ^~~~
+../../iptables-1.8.8/extensions/libxt_time.c:141:22: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  141 |         tm.tm_mon  = month - 1;
+      |                      ^~~~~
+../../iptables-1.8.8/extensions/libxt_time.c:142:22: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  142 |         tm.tm_mday = day;
+      |                      ^~~
+../../iptables-1.8.8/extensions/libxt_time.c:143:22: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  143 |         tm.tm_hour = hour;
+      |                      ^~~~
+../../iptables-1.8.8/extensions/libxt_time.c:144:22: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  144 |         tm.tm_min  = minute;
+      |                      ^~~~~~
+../../iptables-1.8.8/extensions/libxt_time.c:145:22: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  145 |         tm.tm_sec  = second;
+      |                      ^~~~~~
+../../iptables-1.8.8/extensions/libxt_time.c: In function 'time_parse_minutes':
+../../iptables-1.8.8/extensions/libxt_time.c:192:16: warning: unsigned conversion from 'int' to 'unsigned int' changes value from '-1' to '4294967295' [-Wsign-conversion]
+  192 |         return -1;
+      |                ^
+../../iptables-1.8.8/extensions/libxt_time.c: In function 'time_parse':
+../../iptables-1.8.8/extensions/libxt_time.c:278:36: warning: conversion from 'time_t' {aka 'long long int'} to '__u32' {aka 'unsigned int'} may change value [-Wconversion]
+  278 |                 info->date_start = time_parse_date(cb->arg);
+      |                                    ^~~~~~~~~~~~~~~
+../../iptables-1.8.8/extensions/libxt_time.c:281:35: warning: conversion from 'time_t' {aka 'long long int'} to '__u32' {aka 'unsigned int'} may change value [-Wconversion]
+  281 |                 info->date_stop = time_parse_date(cb->arg);
+      |                                   ^~~~~~~~~~~~~~~
+../../iptables-1.8.8/extensions/libxt_time.c:307:40: warning: conversion from 'unsigned int' to '__u8' {aka 'unsigned char'} may change value [-Wconversion]
+  307 |                 info->weekdays_match = time_parse_weekdays(cb->arg);
+      |                                        ^~~~~~~~~~~~~~~~~~~
+  CCLD     libxt_time.so
+  CC       libxt_tos.oo
+  CCLD     libxt_tos.so
+  CC       libxt_u32.oo
+../../iptables-1.8.8/extensions/libxt_u32.c: In function 'u32_parse':
+../../iptables-1.8.8/extensions/libxt_u32.c:133:40: warning: conversion from 'unsigned int' to '__u8' {aka 'unsigned char'} may change value [-Wconversion]
+  133 |                         ct->nnums    = locind;
+      |                                        ^~~~~~
+../../iptables-1.8.8/extensions/libxt_u32.c:134:40: warning: conversion from 'unsigned int' to '__u8' {aka 'unsigned char'} may change value [-Wconversion]
+  134 |                         ct->nvalues  = valind;
+      |                                        ^~~~~~
+../../iptables-1.8.8/extensions/libxt_u32.c:135:40: warning: conversion from 'unsigned int' to '__u8' {aka 'unsigned char'} may change value [-Wconversion]
+  135 |                         data->ntests = ++testind;
+      |                                        ^~
+../../iptables-1.8.8/extensions/libxt_u32.c:203:55: warning: conversion from 'unsigned int' to '__u8' {aka 'unsigned char'} may change value [-Wconversion]
+  203 |                                         ct->nnums   = locind;
+      |                                                       ^~~~~~
+../../iptables-1.8.8/extensions/libxt_u32.c:204:55: warning: conversion from 'unsigned int' to '__u8' {aka 'unsigned char'} may change value [-Wconversion]
+  204 |                                         ct->nvalues = valind;
+      |                                                       ^~~~~~
+  CCLD     libxt_u32.so
+  CC       libxt_udp.oo
+In file included from /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/netdb.h:27,
+                 from ../../iptables-1.8.8/extensions/libxt_udp.c:3:
+../../iptables-1.8.8/extensions/libxt_udp.c: In function 'port_to_service':
+../../iptables-1.8.8/extensions/libxt_udp.c:68:44: warning: conversion from 'int' to '__uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+   68 |         if ((service = getservbyport(htons(port), "udp")))
+      |                                            ^~~~
+  CCLD     libxt_udp.so
+  CC       libipt_CLUSTERIP.oo
+  CCLD     libipt_CLUSTERIP.so
+  CC       libipt_ECN.oo
+../../iptables-1.8.8/extensions/libipt_ECN.c: In function 'ECN_parse':
+../../iptables-1.8.8/extensions/libipt_ECN.c:62:40: warning: conversion from 'uint8_t' {aka 'unsigned char'} to 'unsigned char:1' may change value [-Wconversion]
+   62 |                 einfo->proto.tcp.cwr = cb->val.u8;
+      |                                        ^~
+../../iptables-1.8.8/extensions/libipt_ECN.c:66:40: warning: conversion from 'uint8_t' {aka 'unsigned char'} to 'unsigned char:1' may change value [-Wconversion]
+   66 |                 einfo->proto.tcp.ece = cb->val.u8;
+      |                                        ^~
+  CCLD     libipt_ECN.so
+  CC       libipt_LOG.oo
+  CCLD     libipt_LOG.so
+  CC       libipt_MASQUERADE.oo
+In file included from /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/netdb.h:27,
+                 from ../../iptables-1.8.8/extensions/libipt_MASQUERADE.c:2:
+../../iptables-1.8.8/extensions/libipt_MASQUERADE.c: In function 'parse_ports':
+../../iptables-1.8.8/extensions/libipt_MASQUERADE.c:60:33: warning: conversion from 'unsigned int' to '__uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+   60 |                         = htons(port);
+      |                                 ^~~~
+../../iptables-1.8.8/extensions/libipt_MASQUERADE.c:69:51: warning: conversion from 'unsigned int' to '__uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+   69 |                 mr->range[0].min.tcp.port = htons(port);
+      |                                                   ^~~~
+../../iptables-1.8.8/extensions/libipt_MASQUERADE.c:70:51: warning: conversion from 'unsigned int' to '__uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+   70 |                 mr->range[0].max.tcp.port = htons(maxport);
+      |                                                   ^~~~~~~
+  CCLD     libipt_MASQUERADE.so
+  CC       libipt_NETMAP.oo
+  CCLD     libipt_NETMAP.so
+  CC       libipt_REJECT.oo
+  CCLD     libipt_REJECT.so
+  CC       libipt_SNAT.oo
+In file included from /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/netdb.h:27,
+                 from ../../iptables-1.8.8/extensions/libipt_SNAT.c:2:
+../../iptables-1.8.8/extensions/libipt_SNAT.c: In function 'parse_to':
+../../iptables-1.8.8/extensions/libipt_SNAT.c:72:41: warning: conversion from 'int' to '__uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+   72 |                                 = htons(port);
+      |                                         ^~~~
+../../iptables-1.8.8/extensions/libipt_SNAT.c:84:53: warning: conversion from 'int' to '__uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+   84 |                         range->min.tcp.port = htons(port);
+      |                                                     ^~~~
+../../iptables-1.8.8/extensions/libipt_SNAT.c:85:53: warning: conversion from 'int' to '__uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+   85 |                         range->max.tcp.port = htons(maxport);
+      |                                                     ^~~~~~~
+  CCLD     libipt_SNAT.so
+  CC       libipt_TTL.oo
+  CCLD     libipt_TTL.so
+  CC       libipt_ULOG.oo
+../../iptables-1.8.8/extensions/libipt_ULOG.c: In function 'ULOG_parse':
+../../iptables-1.8.8/extensions/libipt_ULOG.c:71:39: warning: conversion from 'uint64_t' {aka 'long long unsigned int'} to 'size_t' {aka 'unsigned int'} may change value [-Wconversion]
+   71 |                 loginfo->copy_range = cb->val.u64;
+      |                                       ^~
+../../iptables-1.8.8/extensions/libipt_ULOG.c:74:39: warning: conversion from 'uint64_t' {aka 'long long unsigned int'} to 'size_t' {aka 'unsigned int'} may change value [-Wconversion]
+   74 |                 loginfo->qthreshold = cb->val.u64;
+      |                                       ^~
+../../iptables-1.8.8/extensions/libipt_ULOG.c: In function 'ULOG_save':
+../../iptables-1.8.8/extensions/libipt_ULOG.c:90:57: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+   90 |                 printf(" --ulog-nlgroup %d", ffs(loginfo->nl_group));
+      |                                                  ~~~~~~~^~~~~~~~~~
+../../iptables-1.8.8/extensions/libipt_ULOG.c: In function 'ULOG_print':
+../../iptables-1.8.8/extensions/libipt_ULOG.c:106:27: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  106 |                ffs(loginfo->nl_group));
+      |                    ~~~~~~~^~~~~~~~~~
+  CCLD     libipt_ULOG.so
+  CC       libipt_ah.oo
+  CCLD     libipt_ah.so
+  CC       libipt_icmp.oo
+../../iptables-1.8.8/extensions/libipt_icmp.c: In function 'parse_icmp':
+../../iptables-1.8.8/extensions/libipt_icmp.c:132:25: warning: conversion from 'unsigned int' to 'uint8_t' {aka 'unsigned char'} may change value [-Wconversion]
+  132 |                 *type = number;
+      |                         ^~~~~~
+../../iptables-1.8.8/extensions/libipt_icmp.c:138:45: warning: conversion from 'unsigned int' to 'uint8_t' {aka 'unsigned char'} may change value [-Wconversion]
+  138 |                         code[0] = code[1] = number;
+      |                                             ^~~~~~
+  CCLD     libipt_icmp.so
+  CC       libipt_realm.oo
+../../iptables-1.8.8/extensions/libipt_realm.c: In function 'print_realm_xlate':
+../../iptables-1.8.8/extensions/libipt_realm.c:84:61: warning: conversion to 'int' from 'long unsigned int' may change the sign of the result [-Wsign-conversion]
+   84 |                         name = xtables_lmap_id2name(realms, id);
+      |                                                             ^~
+  CCLD     libipt_realm.so
+  CC       libipt_ttl.oo
+  CCLD     libipt_ttl.so
+  CC       libip6t_DNPT.oo
+  CCLD     libip6t_DNPT.so
+  CC       libip6t_HL.oo
+  CCLD     libip6t_HL.so
+  CC       libip6t_LOG.oo
+  CCLD     libip6t_LOG.so
+  CC       libip6t_MASQUERADE.oo
+In file included from /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/netdb.h:27,
+                 from ../../iptables-1.8.8/extensions/libip6t_MASQUERADE.c:9:
+../../iptables-1.8.8/extensions/libip6t_MASQUERADE.c: In function 'parse_ports':
+../../iptables-1.8.8/extensions/libip6t_MASQUERADE.c:59:33: warning: conversion from 'unsigned int' to '__uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+   59 |                         = htons(port);
+      |                                 ^~~~
+../../iptables-1.8.8/extensions/libip6t_MASQUERADE.c:68:47: warning: conversion from 'unsigned int' to '__uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+   68 |                 r->min_proto.tcp.port = htons(port);
+      |                                               ^~~~
+../../iptables-1.8.8/extensions/libip6t_MASQUERADE.c:69:47: warning: conversion from 'unsigned int' to '__uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+   69 |                 r->max_proto.tcp.port = htons(maxport);
+      |                                               ^~~~~~~
+  CCLD     libip6t_MASQUERADE.so
+  CC       libip6t_NETMAP.oo
+  CCLD     libip6t_NETMAP.so
+  CC       libip6t_REJECT.oo
+  CCLD     libip6t_REJECT.so
+  CC       libip6t_SNAT.oo
+In file included from /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/netdb.h:27,
+                 from ../../iptables-1.8.8/extensions/libip6t_SNAT.c:9:
+../../iptables-1.8.8/extensions/libip6t_SNAT.c: In function 'parse_to':
+../../iptables-1.8.8/extensions/libip6t_SNAT.c:97:41: warning: conversion from 'int' to '__uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+   97 |                                 = htons(port);
+      |                                         ^~~~
+../../iptables-1.8.8/extensions/libip6t_SNAT.c:109:59: warning: conversion from 'int' to '__uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+  109 |                         range->min_proto.tcp.port = htons(port);
+      |                                                           ^~~~
+../../iptables-1.8.8/extensions/libip6t_SNAT.c:110:59: warning: conversion from 'int' to '__uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+  110 |                         range->max_proto.tcp.port = htons(maxport);
+      |                                                           ^~~~~~~
+  CCLD     libip6t_SNAT.so
+  CC       libip6t_SNPT.oo
+  CCLD     libip6t_SNPT.so
+  CC       libip6t_ah.oo
+  CCLD     libip6t_ah.so
+  CC       libip6t_dst.oo
+../../iptables-1.8.8/extensions/libip6t_dst.c: In function 'parse_options':
+../../iptables-1.8.8/extensions/libip6t_dst.c:103:16: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  103 |         return i;
+      |                ^
+../../iptables-1.8.8/extensions/libip6t_dst.c: In function 'dst_parse':
+../../iptables-1.8.8/extensions/libip6t_dst.c:118:35: warning: conversion from 'int' to '__u8' {aka 'unsigned char'} may change value [-Wconversion]
+  118 |                 optinfo->optsnr = parse_options(cb->arg, optinfo->opts);
+      |                                   ^~~~~~~~~~~~~
+  CCLD     libip6t_dst.so
+  CC       libip6t_eui64.oo
+  CCLD     libip6t_eui64.so
+  CC       libip6t_frag.oo
+  CCLD     libip6t_frag.so
+  CC       libip6t_hbh.oo
+../../iptables-1.8.8/extensions/libip6t_hbh.c: In function 'parse_options':
+../../iptables-1.8.8/extensions/libip6t_hbh.c:96:16: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+   96 |         return i;
+      |                ^
+../../iptables-1.8.8/extensions/libip6t_hbh.c: In function 'hbh_parse':
+../../iptables-1.8.8/extensions/libip6t_hbh.c:111:35: warning: conversion from 'int' to '__u8' {aka 'unsigned char'} may change value [-Wconversion]
+  111 |                 optinfo->optsnr = parse_options(cb->arg, optinfo->opts);
+      |                                   ^~~~~~~~~~~~~
+  CCLD     libip6t_hbh.so
+  CC       libip6t_hl.oo
+  CCLD     libip6t_hl.so
+  CC       libip6t_icmp6.oo
+../../iptables-1.8.8/extensions/libip6t_icmp6.c: In function 'parse_icmpv6':
+../../iptables-1.8.8/extensions/libip6t_icmp6.c:112:25: warning: conversion from 'unsigned int' to 'uint8_t' {aka 'unsigned char'} may change value [-Wconversion]
+  112 |                 *type = number;
+      |                         ^~~~~~
+../../iptables-1.8.8/extensions/libip6t_icmp6.c:118:45: warning: conversion from 'unsigned int' to 'uint8_t' {aka 'unsigned char'} may change value [-Wconversion]
+  118 |                         code[0] = code[1] = number;
+      |                                             ^~~~~~
+  CCLD     libip6t_icmp6.so
+  CC       libip6t_ipv6header.oo
+../../iptables-1.8.8/extensions/libip6t_ipv6header.c: In function 'name_to_proto':
+../../iptables-1.8.8/extensions/libip6t_ipv6header.c:89:25: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+   89 |                 proto = pent->p_proto;
+      |                         ^~~~
+../../iptables-1.8.8/extensions/libip6t_ipv6header.c:104:16: warning: conversion from 'unsigned int' to 'uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+  104 |         return proto;
+      |                ^~~~~
+../../iptables-1.8.8/extensions/libip6t_ipv6header.c: In function 'ipv6header_parse':
+../../iptables-1.8.8/extensions/libip6t_ipv6header.c:166:42: warning: conversion from 'unsigned int' to '__u8' {aka 'unsigned char'} may change value [-Wconversion]
+  166 |                 if (!(info->matchflags = parse_header(cb->arg)))
+      |                                          ^~~~~~~~~~~~
+  CCLD     libip6t_ipv6header.so
+  CC       libip6t_mh.oo
+../../iptables-1.8.8/extensions/libip6t_mh.c: In function 'name_to_type':
+../../iptables-1.8.8/extensions/libip6t_mh.c:80:23: warning: conversion to 'int' from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+   80 |         int namelen = strlen(name);
+      |                       ^~~~~~
+../../iptables-1.8.8/extensions/libip6t_mh.c:86:57: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+   86 |                 if (strncasecmp(mh_names[i].name, name, namelen) == 0) {
+      |                                                         ^~~~~~~
+../../iptables-1.8.8/extensions/libip6t_mh.c:87:35: warning: conversion to 'int' from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+   87 |                         int len = strlen(mh_names[i].name);
+      |                                   ^~~~~~
+../../iptables-1.8.8/extensions/libip6t_mh.c: In function 'parse_mh_types':
+../../iptables-1.8.8/extensions/libip6t_mh.c:112:39: warning: conversion from 'unsigned int' to 'uint8_t' {aka 'unsigned char'} may change value [-Wconversion]
+  112 |                 types[0] = types[1] = name_to_type(buffer);
+      |                                       ^~~~~~~~~~~~
+../../iptables-1.8.8/extensions/libip6t_mh.c:117:28: warning: conversion from 'unsigned int' to 'uint8_t' {aka 'unsigned char'} may change value [-Wconversion]
+  117 |                 types[0] = buffer[0] ? name_to_type(buffer) : 0;
+      |                            ^~~~~~
+../../iptables-1.8.8/extensions/libip6t_mh.c:118:28: warning: conversion from 'unsigned int' to 'uint8_t' {aka 'unsigned char'} may change value [-Wconversion]
+  118 |                 types[1] = cp[0] ? name_to_type(cp) : 0xFF;
+      |                            ^~
+  CCLD     libip6t_mh.so
+  CC       libip6t_rt.oo
+../../iptables-1.8.8/extensions/libip6t_rt.c: In function 'parse_addresses':
+../../iptables-1.8.8/extensions/libip6t_rt.c:98:16: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+   98 |         return i;
+      |                ^
+../../iptables-1.8.8/extensions/libip6t_rt.c: In function 'rt_parse':
+../../iptables-1.8.8/extensions/libip6t_rt.c:143:34: warning: conversion from 'int' to '__u8' {aka 'unsigned char'} may change value [-Wconversion]
+  143 |                 rtinfo->addrnr = parse_addresses(cb->arg, rtinfo->addrs);
+      |                                  ^~~~~~~~~~~~~~~
+  CCLD     libip6t_rt.so
+  CC       libip6t_srh.oo
+  CCLD     libip6t_srh.so
+ln -fs libxt_CT.so libxt_NOTRACK.so
+ln -fs libxt_conntrack.so libxt_state.so
+ln -fs libxt_DNAT.so libxt_REDIRECT.so
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build/extensions'
+Making all in iptables
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build/iptables'
+make  all-am
+make[3]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build/iptables'
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../../iptables-1.8.8/iptables -I..  -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib/xtables\" -DXTABLES_INTERNAL -I../include -I../../iptables-1.8.8/include -I../../iptables-1.8.8 -I/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/include/uapi -I/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/include -I/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/include/uapi -I/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/include    -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe  -DENABLE_IPV4 -DENABLE_IPV6 -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/iptables-1.8.8=/usr/src/debug/iptables/1.8.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/iptables-1.8.8=/usr/src/debug/iptables/1.8.8-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build=/usr/src/debug/iptables/1.8.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build=/usr/src/debug/iptables/1.8.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o xtables_legacy_multi-xtables-legacy-multi.o `test -f 'xtables-legacy-multi.c' || echo '../../iptables-1.8.8/iptables/'`xtables-legacy-multi.c
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../../iptables-1.8.8/iptables -I..  -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib/xtables\" -DXTABLES_INTERNAL -I../include -I../../iptables-1.8.8/include -I../../iptables-1.8.8 -I/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/include/uapi -I/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/include -I/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/include/uapi -I/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/include    -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe  -DENABLE_IPV4 -DENABLE_IPV6 -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/iptables-1.8.8=/usr/src/debug/iptables/1.8.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/iptables-1.8.8=/usr/src/debug/iptables/1.8.8-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build=/usr/src/debug/iptables/1.8.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build=/usr/src/debug/iptables/1.8.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o xtables_legacy_multi-iptables-xml.o `test -f 'iptables-xml.c' || echo '../../iptables-1.8.8/iptables/'`iptables-xml.c
+../../iptables-1.8.8/iptables/iptables-xml.c: In function 'openChain':
+../../iptables-1.8.8/iptables/iptables-xml.c:166:34: warning: conversion to 'long long int' from 'long long unsigned int' may change the sign of the result [-Wsign-conversion]
+  166 |         xmlAttrI("packet-count", (unsigned long long) ctr->pcnt);
+      |                                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../iptables-1.8.8/iptables/iptables-xml.c:167:32: warning: conversion to 'long long int' from 'long long unsigned int' may change the sign of the result [-Wsign-conversion]
+  167 |         xmlAttrI("byte-count", (unsigned long long) ctr->bcnt);
+      |                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../../iptables-1.8.8/iptables -I..  -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib/xtables\" -DXTABLES_INTERNAL -I../include -I../../iptables-1.8.8/include -I../../iptables-1.8.8 -I/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/include/uapi -I/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/include -I/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/include/uapi -I/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/include    -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe  -DENABLE_IPV4 -DENABLE_IPV6 -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/iptables-1.8.8=/usr/src/debug/iptables/1.8.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/iptables-1.8.8=/usr/src/debug/iptables/1.8.8-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build=/usr/src/debug/iptables/1.8.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build=/usr/src/debug/iptables/1.8.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o xtables_legacy_multi-iptables-standalone.o `test -f 'iptables-standalone.c' || echo '../../iptables-1.8.8/iptables/'`iptables-standalone.c
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../../iptables-1.8.8/iptables -I..  -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib/xtables\" -DXTABLES_INTERNAL -I../include -I../../iptables-1.8.8/include -I../../iptables-1.8.8 -I/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/include/uapi -I/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/include -I/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/include/uapi -I/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/include    -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe  -DENABLE_IPV4 -DENABLE_IPV6 -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/iptables-1.8.8=/usr/src/debug/iptables/1.8.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/iptables-1.8.8=/usr/src/debug/iptables/1.8.8-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build=/usr/src/debug/iptables/1.8.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build=/usr/src/debug/iptables/1.8.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o xtables_legacy_multi-iptables.o `test -f 'iptables.c' || echo '../../iptables-1.8.8/iptables/'`iptables.c
+../../iptables-1.8.8/iptables/iptables.c: In function 'print_firewall':
+../../iptables-1.8.8/iptables/iptables.c:152:64: warning: conversion from '__u16' {aka 'short unsigned int'} to 'uint8_t' {aka 'unsigned char'} may change value [-Wconversion]
+  152 |         print_rule_details(num, &fw->counters, targname, fw->ip.proto,
+      |                                                          ~~~~~~^~~~~~
+../../iptables-1.8.8/iptables/iptables.c: In function 'list_entries':
+../../iptables-1.8.8/iptables/iptables.c:492:40: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  492 |                                 refs = urefs;
+      |                                        ^~~~~
+../../iptables-1.8.8/iptables/iptables.c: In function 'generate_entry':
+../../iptables-1.8.8/iptables/iptables.c:675:28: warning: conversion from 'unsigned int' to '__u16' {aka 'short unsigned int'} may change value [-Wconversion]
+  675 |         e->target_offset = size;
+      |                            ^~~~
+../../iptables-1.8.8/iptables/iptables.c:676:26: warning: conversion from 'unsigned int' to '__u16' {aka 'short unsigned int'} may change value [-Wconversion]
+  676 |         e->next_offset = size + target->u.target_size;
+      |                          ^~~~
+../../iptables-1.8.8/iptables/iptables.c: In function 'do_command4':
+../../iptables-1.8.8/iptables/iptables.c:782:55: warning: conversion from 'size_t' {aka 'unsigned int'} to '__u16' {aka 'short unsigned int'} may change value [-Wconversion]
+  782 |                         cs.target->t->u.target_size = size;
+      |                                                       ^~~~
+../../iptables-1.8.8/iptables/iptables.c:858:36: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  858 |                                    rulenum,
+      |                                    ^~~~~~~
+../../iptables-1.8.8/iptables/iptables.c:874:36: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  874 |                                    rulenum,
+      |                                    ^~~~~~~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../../iptables-1.8.8/iptables -I..  -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib/xtables\" -DXTABLES_INTERNAL -I../include -I../../iptables-1.8.8/include -I../../iptables-1.8.8 -I/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/include/uapi -I/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/include -I/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/include/uapi -I/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/include    -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe  -DENABLE_IPV4 -DENABLE_IPV6 -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/iptables-1.8.8=/usr/src/debug/iptables/1.8.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/iptables-1.8.8=/usr/src/debug/iptables/1.8.8-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build=/usr/src/debug/iptables/1.8.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build=/usr/src/debug/iptables/1.8.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o xtables_legacy_multi-ip6tables-standalone.o `test -f 'ip6tables-standalone.c' || echo '../../iptables-1.8.8/iptables/'`ip6tables-standalone.c
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../../iptables-1.8.8/iptables -I..  -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib/xtables\" -DXTABLES_INTERNAL -I../include -I../../iptables-1.8.8/include -I../../iptables-1.8.8 -I/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/include/uapi -I/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/include -I/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/include/uapi -I/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/include    -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe  -DENABLE_IPV4 -DENABLE_IPV6 -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/iptables-1.8.8=/usr/src/debug/iptables/1.8.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/iptables-1.8.8=/usr/src/debug/iptables/1.8.8-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build=/usr/src/debug/iptables/1.8.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build=/usr/src/debug/iptables/1.8.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o xtables_legacy_multi-ip6tables.o `test -f 'ip6tables.c' || echo '../../iptables-1.8.8/iptables/'`ip6tables.c
+../../iptables-1.8.8/iptables/ip6tables.c: In function 'print_firewall':
+../../iptables-1.8.8/iptables/ip6tables.c:152:66: warning: conversion from '__u16' {aka 'short unsigned int'} to 'uint8_t' {aka 'unsigned char'} may change value [-Wconversion]
+  152 |         print_rule_details(num, &fw->counters, targname, fw->ipv6.proto,
+      |                                                          ~~~~~~~~^~~~~~
+../../iptables-1.8.8/iptables/ip6tables.c: In function 'list_entries':
+../../iptables-1.8.8/iptables/ip6tables.c:493:40: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  493 |                                 refs = urefs;
+      |                                        ^~~~~
+../../iptables-1.8.8/iptables/ip6tables.c: In function 'generate_entry':
+../../iptables-1.8.8/iptables/ip6tables.c:681:28: warning: conversion from 'unsigned int' to '__u16' {aka 'short unsigned int'} may change value [-Wconversion]
+  681 |         e->target_offset = size;
+      |                            ^~~~
+../../iptables-1.8.8/iptables/ip6tables.c:682:26: warning: conversion from 'unsigned int' to '__u16' {aka 'short unsigned int'} may change value [-Wconversion]
+  682 |         e->next_offset = size + target->u.target_size;
+      |                          ^~~~
+../../iptables-1.8.8/iptables/ip6tables.c: In function 'do_command6':
+../../iptables-1.8.8/iptables/ip6tables.c:789:55: warning: conversion from 'size_t' {aka 'unsigned int'} to '__u16' {aka 'short unsigned int'} may change value [-Wconversion]
+  789 |                         cs.target->t->u.target_size = size;
+      |                                                       ^~~~
+../../iptables-1.8.8/iptables/ip6tables.c:863:36: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  863 |                                    rulenum,
+      |                                    ^~~~~~~
+../../iptables-1.8.8/iptables/ip6tables.c:879:36: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  879 |                                    rulenum,
+      |                                    ^~~~~~~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../../iptables-1.8.8/iptables -I..  -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib/xtables\" -DXTABLES_INTERNAL -I../include -I../../iptables-1.8.8/include -I../../iptables-1.8.8 -I/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/include/uapi -I/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/include -I/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/include/uapi -I/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/include    -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe  -DENABLE_IPV4 -DENABLE_IPV6 -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/iptables-1.8.8=/usr/src/debug/iptables/1.8.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/iptables-1.8.8=/usr/src/debug/iptables/1.8.8-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build=/usr/src/debug/iptables/1.8.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build=/usr/src/debug/iptables/1.8.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o xtables_legacy_multi-xshared.o `test -f 'xshared.c' || echo '../../iptables-1.8.8/iptables/'`xshared.c
+../../iptables-1.8.8/iptables/xshared.c: In function 'find_proto':
+../../iptables-1.8.8/iptables/xshared.c:90:55: warning: conversion from 'unsigned int' to 'uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+   90 |                 const char *protoname = proto_to_name(proto, nolookup);
+      |                                                       ^~~~~
+../../iptables-1.8.8/iptables/xshared.c: In function 'command_default':
+../../iptables-1.8.8/iptables/xshared.c:142:41: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  142 |                 xtables_option_tpcall(cs->c, cs->argv, invert,
+      |                                       ~~^~~
+../../iptables-1.8.8/iptables/xshared.c:156:41: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  156 |                 xtables_option_mpcall(cs->c, cs->argv, invert, m, &cs->fw);
+      |                                       ~~^~~
+../../iptables-1.8.8/iptables/xshared.c:170:38: warning: conversion from 'size_t' {aka 'unsigned int'} to '__u16' {aka 'short unsigned int'} may change value [-Wconversion]
+  170 |                 m->m->u.match_size = size;
+      |                                      ^~~~
+../../iptables-1.8.8/iptables/xshared.c: In function 'xtables_lock':
+../../iptables-1.8.8/iptables/xshared.c:282:41: warning: signed conversion from 'unsigned int' to 'int' changes value from '2147483648' to '-2147483648' [-Wsign-conversion]
+  282 |                 sigact_alarm.sa_flags = SA_RESETHAND;
+      |                                         ^~~~~~~~~~~~
+../../iptables-1.8.8/iptables/xshared.c:285:23: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  285 |                 alarm(wait);
+      |                       ^~~~
+../../iptables-1.8.8/iptables/xshared.c: In function 'command_match':
+../../iptables-1.8.8/iptables/xshared.c:805:30: warning: conversion from 'size_t' {aka 'unsigned int'} to '__u16' {aka 'short unsigned int'} may change value [-Wconversion]
+  805 |         m->m->u.match_size = size;
+      |                              ^~~~
+../../iptables-1.8.8/iptables/xshared.c: In function 'command_jump':
+../../iptables-1.8.8/iptables/xshared.c:865:40: warning: conversion from 'size_t' {aka 'unsigned int'} to '__u16' {aka 'short unsigned int'} may change value [-Wconversion]
+  865 |         cs->target->t->u.target_size = size;
+      |                                        ^~~~
+../../iptables-1.8.8/iptables/xshared.c: In function 'add_command':
+../../iptables-1.8.8/iptables/xshared.c:913:18: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  913 |         if (*cmd & (~othercmds))
+      |                  ^
+../../iptables-1.8.8/iptables/xshared.c:915:60: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  915 |                            cmd2char(newcmd), cmd2char(*cmd & (~othercmds)));
+      |                                                            ^
+../../iptables-1.8.8/iptables/xshared.c:915:60: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  915 |                            cmd2char(newcmd), cmd2char(*cmd & (~othercmds)));
+      |                                                       ~~~~~^~~~~~~~~~~~~~
+../../iptables-1.8.8/iptables/xshared.c:916:14: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  916 |         *cmd |= newcmd;
+      |              ^~
+../../iptables-1.8.8/iptables/xshared.c: In function 'parse_rulenumber':
+../../iptables-1.8.8/iptables/xshared.c:928:16: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  928 |         return rulenum;
+      |                ^~~~~~~
+../../iptables-1.8.8/iptables/xshared.c: In function 'set_option':
+../../iptables-1.8.8/iptables/xshared.c:1033:37: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+ 1033 |                            opt2char(option));
+      |                                     ^~~~~~
+../../iptables-1.8.8/iptables/xshared.c:1043:45: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+ 1043 |                                    opt2char(option));
+      |                                             ^~~~~~
+../../iptables-1.8.8/iptables/xshared.c:1044:28: warning: conversion from 'int' to 'u_int16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+ 1044 |                 *invflg |= inverse_for_options[i];
+      |                            ^~~~~~~~~~~~~~~~~~~
+../../iptables-1.8.8/iptables/xshared.c: In function 'do_parse':
+../../iptables-1.8.8/iptables/xshared.c:1408:46: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 1408 |                                 p->rulenum = parse_rulenumber(argv[optind++]);
+      |                                              ^~~~~~~~~~~~~~~~
+../../iptables-1.8.8/iptables/xshared.c:1417:46: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 1417 |                                 p->rulenum = parse_rulenumber(argv[optind++]);
+      |                                              ^~~~~~~~~~~~~~~~
+../../iptables-1.8.8/iptables/xshared.c:1428:46: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 1428 |                                 p->rulenum = parse_rulenumber(argv[optind++]);
+      |                                              ^~~~~~~~~~~~~~~~
+../../iptables-1.8.8/iptables/xshared.c:1441:46: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 1441 |                                 p->rulenum = parse_rulenumber(argv[optind++]);
+      |                                              ^~~~~~~~~~~~~~~~
+../../iptables-1.8.8/iptables/xshared.c:1452:46: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 1452 |                                 p->rulenum = parse_rulenumber(argv[optind++]);
+      |                                              ^~~~~~~~~~~~~~~~
+../../iptables-1.8.8/iptables/xshared.c:1471:46: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 1471 |                                 p->rulenum = parse_rulenumber(argv[optind++]);
+      |                                              ^~~~~~~~~~~~~~~~
+../../iptables-1.8.8/iptables/xshared.c:1540:49: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+ 1540 |                                 *cs->protocol = tolower(*cs->protocol);
+      |                                                 ^~~~~~~
+../../iptables-1.8.8/iptables/xshared.c:1825:37: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+ 1825 |                 p->ops->post_parse(p->command, cs, args);
+      |                                    ~^~~~~~~~~
+../../iptables-1.8.8/iptables/xshared.c:1832:28: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+ 1832 |         generic_opt_check(p->command, cs->options);
+      |                           ~^~~~~~~~~
+../../iptables-1.8.8/iptables/xshared.c:1832:41: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+ 1832 |         generic_opt_check(p->command, cs->options);
+      |                                       ~~^~~~~~~~~
+../../iptables-1.8.8/iptables/xshared.c: In function 'ipv4_proto_parse':
+../../iptables-1.8.8/iptables/xshared.c:1871:30: warning: conversion from 'uint16_t' {aka 'short unsigned int'} to '__u8' {aka 'unsigned char'} may change value [-Wconversion]
+ 1871 |         cs->fw.ip.invflags = args->invflags;
+      |                              ^~~~
+../../iptables-1.8.8/iptables/xshared.c: In function 'ipv6_proto_parse':
+../../iptables-1.8.8/iptables/xshared.c:1887:33: warning: conversion from 'uint16_t' {aka 'short unsigned int'} to '__u8' {aka 'unsigned char'} may change value [-Wconversion]
+ 1887 |         cs->fw6.ipv6.invflags = args->invflags;
+      |                                 ^~~~
+../../iptables-1.8.8/iptables/xshared.c: In function 'ipv4_post_parse':
+../../iptables-1.8.8/iptables/xshared.c:1908:30: warning: conversion from 'uint16_t' {aka 'short unsigned int'} to '__u8' {aka 'unsigned char'} may change value [-Wconversion]
+ 1908 |         cs->fw.ip.invflags = args->invflags;
+      |                              ^~~~
+../../iptables-1.8.8/iptables/xshared.c: In function 'ipv6_post_parse':
+../../iptables-1.8.8/iptables/xshared.c:1958:33: warning: conversion from 'uint16_t' {aka 'short unsigned int'} to '__u8' {aka 'unsigned char'} may change value [-Wconversion]
+ 1958 |         cs->fw6.ipv6.invflags = args->invflags;
+      |                                 ^~~~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../../iptables-1.8.8/iptables -I..  -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib/xtables\" -DXTABLES_INTERNAL -I../include -I../../iptables-1.8.8/include -I../../iptables-1.8.8 -I/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/include/uapi -I/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/include -I/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/include/uapi -I/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/include    -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe  -DENABLE_IPV4 -DENABLE_IPV6 -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/iptables-1.8.8=/usr/src/debug/iptables/1.8.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/iptables-1.8.8=/usr/src/debug/iptables/1.8.8-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build=/usr/src/debug/iptables/1.8.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build=/usr/src/debug/iptables/1.8.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o xtables_legacy_multi-iptables-restore.o `test -f 'iptables-restore.c' || echo '../../iptables-1.8.8/iptables/'`iptables-restore.c
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../../iptables-1.8.8/iptables -I..  -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib/xtables\" -DXTABLES_INTERNAL -I../include -I../../iptables-1.8.8/include -I../../iptables-1.8.8 -I/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/include/uapi -I/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/include -I/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/include/uapi -I/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot/usr/include/include    -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe  -DENABLE_IPV4 -DENABLE_IPV6 -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/iptables-1.8.8=/usr/src/debug/iptables/1.8.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/iptables-1.8.8=/usr/src/debug/iptables/1.8.8-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build=/usr/src/debug/iptables/1.8.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build=/usr/src/debug/iptables/1.8.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o xtables_legacy_multi-iptables-save.o `test -f 'iptables-save.c' || echo '../../iptables-1.8.8/iptables/'`iptables-save.c
+/bin/bash ../libtool  --tag=CC   --mode=link arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe  -DENABLE_IPV4 -DENABLE_IPV6 -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/iptables-1.8.8=/usr/src/debug/iptables/1.8.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/iptables-1.8.8=/usr/src/debug/iptables/1.8.8-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build=/usr/src/debug/iptables/1.8.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build=/usr/src/debug/iptables/1.8.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot-native=   -Wconversion -Wno-error  -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/iptables-1.8.8=/usr/src/debug/iptables/1.8.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/iptables-1.8.8=/usr/src/debug/iptables/1.8.8-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build=/usr/src/debug/iptables/1.8.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build=/usr/src/debug/iptables/1.8.8-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot-native=  -Wl,-z,relro,-z,now -o xtables-legacy-multi xtables_legacy_multi-xtables-legacy-multi.o xtables_legacy_multi-iptables-xml.o xtables_legacy_multi-iptables-standalone.o xtables_legacy_multi-iptables.o xtables_legacy_multi-ip6tables-standalone.o xtables_legacy_multi-ip6tables.o xtables_legacy_multi-xshared.o xtables_legacy_multi-iptables-restore.o xtables_legacy_multi-iptables-save.o ../extensions/libext.a ../libiptc/libip4tc.la ../extensions/libext4.a ../libiptc/libip6tc.la ../extensions/libext6.a ../libxtables/libxtables.la -lm 
+libtool: link: arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes -Wlogical-op -Winline -pipe -DENABLE_IPV4 -DENABLE_IPV6 -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/iptables-1.8.8=/usr/src/debug/iptables/1.8.8-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/iptables-1.8.8=/usr/src/debug/iptables/1.8.8-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build=/usr/src/debug/iptables/1.8.8-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build=/usr/src/debug/iptables/1.8.8-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot-native= -Wconversion -Wno-error -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/iptables-1.8.8=/usr/src/debug/iptables/1.8.8-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/iptables-1.8.8=/usr/src/debug/iptables/1.8.8-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build=/usr/src/debug/iptables/1.8.8-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build=/usr/src/debug/iptables/1.8.8-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/recipe-sysroot-native= -Wl,-z -Wl,relro -Wl,-z -Wl,now -o .libs/xtables-legacy-multi xtables_legacy_multi-xtables-legacy-multi.o xtables_legacy_multi-iptables-xml.o xtables_legacy_multi-iptables-standalone.o xtables_legacy_multi-iptables.o xtables_legacy_multi-ip6tables-standalone.o xtables_legacy_multi-ip6tables.o xtables_legacy_multi-xshared.o xtables_legacy_multi-iptables-restore.o xtables_legacy_multi-iptables-save.o  ../extensions/libext.a ../libiptc/.libs/libip4tc.so ../extensions/libext4.a ../libiptc/.libs/libip6tc.so ../extensions/libext6.a ../libxtables/.libs/libxtables.so -ldl -lm
+sed \
+	-e '/@MATCH@/ r ../extensions/matches.man' \
+	-e '/@TARGET@/ r ../extensions/targets.man' iptables-extensions.8.tmpl >iptables-extensions.8;
+make[3]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build/iptables'
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build/iptables'
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build'
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iptables/1.8.8-r0/build'
+DEBUG: Shell function do_compile finished

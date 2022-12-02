@@ -1,0 +1,84 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-devtools/binutils/binutils-cross_2.39.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: []
+NOTE: Skipping as already exists in sysroot: ['binutils-cross-arm', 'pseudo-native', 'gnu-config-native', 'flex-native', 'texinfo-dummy-native', 'zlib-native', 'm4-native', 'libtool-native', 'gettext-minimal-native']
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function sstate_task_prefunc
+DEBUG: Python function sstate_task_prefunc finished
+DEBUG: Executing python function do_package_qa
+NOTE: DO PACKAGE QA
+DEBUG: Executing python function read_subpackage_metadata
+DEBUG: Python function read_subpackage_metadata finished
+NOTE: Checking Package: cracklib-locale-de
+NOTE: Checking Package: cracklib-locale-es
+NOTE: Checking Package: cracklib-doc
+NOTE: Checking Package: cracklib-locale-lt
+NOTE: Checking Package: cracklib-src
+NOTE: Checking Package: cracklib-locale-pt
+NOTE: Checking Package: cracklib-locale-sk
+NOTE: Checking Package: cracklib-locale-ru
+NOTE: Checking Package: cracklib-locale-ja
+NOTE: Checking Package: cracklib-locale-ta
+NOTE: Checking Package: cracklib-locale-be
+NOTE: Checking Package: cracklib-locale-as
+NOTE: Checking Package: cracklib-locale-da
+NOTE: Checking Package: cracklib-dbg
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/cracklib/2.9.8-r0/packages-split/cracklib-dbg/lib/.debug/libcrack.so.2.9.0
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/cracklib/2.9.8-r0/packages-split/cracklib-dbg/usr/sbin/.debug/cracklib-check
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/cracklib/2.9.8-r0/packages-split/cracklib-dbg/usr/sbin/.debug/cracklib-unpacker
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/cracklib/2.9.8-r0/packages-split/cracklib-dbg/usr/sbin/.debug/cracklib-packer
+NOTE: Checking Package: cracklib-locale-cs
+NOTE: Checking Package: cracklib
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/cracklib/2.9.8-r0/packages-split/cracklib/usr/sbin/cracklib-unpacker
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/cracklib/2.9.8-r0/packages-split/cracklib/usr/sbin/cracklib-packer
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/cracklib/2.9.8-r0/packages-split/cracklib/usr/sbin/cracklib-check
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/cracklib/2.9.8-r0/packages-split/cracklib/lib/libcrack.so.2
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/cracklib/2.9.8-r0/packages-split/cracklib/lib/libcrack.so.2.9.0
+NOTE: Checking Package: cracklib-locale-zh-tw
+NOTE: Checking Package: cracklib-locale-gu
+NOTE: Checking Package: cracklib-locale-id
+NOTE: Checking Package: cracklib-dev
+NOTE: Checking Package: cracklib-locale-bn-in
+NOTE: Checking Package: cracklib-locale-fr
+NOTE: Checking Package: cracklib-locale-ml
+NOTE: Checking Package: cracklib-locale-sq
+NOTE: Checking Package: cracklib-locale-pl
+NOTE: Checking Package: cracklib-locale-ko
+NOTE: Checking Package: cracklib-locale-te
+NOTE: Checking Package: cracklib-locale-uk
+NOTE: Checking Package: cracklib-locale-nb
+NOTE: Checking Package: cracklib-locale-sv
+NOTE: Checking Package: cracklib-locale-hi
+NOTE: Checking Package: cracklib-locale-kk
+NOTE: Checking Package: cracklib-locale-pa
+NOTE: Checking Package: cracklib-locale-el
+NOTE: Checking Package: cracklib-locale-mr
+NOTE: Checking Package: cracklib-locale-tr
+NOTE: Checking Package: cracklib-locale-ca
+NOTE: Checking Package: cracklib-locale-eu
+NOTE: Checking Package: cracklib-locale-fi
+NOTE: Checking Package: cracklib-staticdev
+NOTE: Checking Package: cracklib-locale-he
+NOTE: Checking Package: cracklib-locale-nl
+NOTE: Checking Package: cracklib-locale-it
+NOTE: Checking Package: cracklib-locale-pt-br
+NOTE: Checking Package: cracklib-locale-kn
+NOTE: Checking Package: cracklib-locale-hu
+NOTE: Checking Package: cracklib-locale-or
+NOTE: Checking Package: cracklib-locale-sl
+NOTE: Checking Package: cracklib-locale-zh-cn
+DEBUG: Python function do_package_qa finished
+DEBUG: Executing python function sstate_task_postfunc
+NOTE: Using umask 0o002 (not 22) for sstate packaging
+DEBUG: Executing python function target_add_sysroot_deps
+DEBUG: Python function target_add_sysroot_deps finished
+DEBUG: Executing python function sstate_hardcode_path
+NOTE: Removing hardcoded paths from sstate package: 'find /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/cracklib/2.9.8-r0/sstate-build-package_qa/ \( -name "*.la" -o -name "*-config" -o -name "*_config" -o -name "postinst-*" \) -type f | xargs grep -l -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/cracklib/2.9.8-r0/recipe-sysroot' -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/cracklib/2.9.8-r0/recipe-sysroot-native' -e '/home/matt/tmp/build/obmc-y2038/tmp/hosttools' | tee /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/cracklib/2.9.8-r0/sstate-build-package_qa/fixmepath | xargs --no-run-if-empty sed -i -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/cracklib/2.9.8-r0/recipe-sysroot-native:FIXMESTAGINGDIRHOST:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/cracklib/2.9.8-r0/recipe-sysroot:FIXMESTAGINGDIRTARGET:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:FIXME_HOSTTOOLS_DIR:g''
+DEBUG: Python function sstate_hardcode_path finished
+DEBUG: Executing python function sstate_report_unihash
+DEBUG: Python function sstate_report_unihash finished
+DEBUG: Executing shell function sstate_create_package
+DEBUG: Shell function sstate_create_package finished
+DEBUG: Executing python function sstate_hardcode_path_unpack
+DEBUG: Python function sstate_hardcode_path_unpack finished
+DEBUG: Python function sstate_task_postfunc finished

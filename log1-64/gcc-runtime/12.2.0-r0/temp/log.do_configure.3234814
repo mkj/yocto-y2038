@@ -1,0 +1,1124 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/binutils/binutils-cross_2.39.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/libgcc_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-native_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-extended/texinfo-dummy-native/texinfo-dummy-native.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-kernel/linux-libc-headers/linux-libc-headers_5.19.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-core/zlib/zlib_1.2.13.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/autoconf/autoconf_2.71.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/automake/automake_1.16.5.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/flex/flex_2.6.4.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/gnu-config/gnu-config_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-extended/xz/xz_5.2.7.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-extended/zstd/zstd_1.5.2.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-support/gmp/gmp_6.2.1.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-support/libmpc/libmpc_1.2.1.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-support/mpfr/mpfr_4.1.0.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: []
+NOTE: Skipping as already exists in sysroot: ['glibc', 'binutils-cross-arm', 'gcc-cross-arm', 'libgcc', 'libtool-native', 'quilt-native', 'texinfo-dummy-native', 'linux-libc-headers', 'zlib-native', 'autoconf-native', 'automake-native', 'flex-native', 'gnu-config-native', 'patch-native', 'pseudo-native', 'xz-native', 'zstd-native', 'gmp-native', 'libmpc-native', 'mpfr-native', 'attr-native', 'm4-native', 'gettext-minimal-native']
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing shell function autotools_preconfigure
+Previously configured separate build directory detected, cleaning /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/gcc-12.2.0/build.arm-openbmc-linux-gnueabi.arm-openbmc-linux-gnueabi
+DEBUG: Shell function autotools_preconfigure finished
+DEBUG: Executing python function autotools_aclocals
+DEBUG: SITE files ['endian-little', 'bit-32', 'arm-common', 'arm-32', 'common-linux', 'common-glibc', 'arm-linux', 'arm-linux-gnueabi', 'common']
+DEBUG: Python function autotools_aclocals finished
+DEBUG: Executing python function gcc_multilib_setup
+DEBUG: Python function gcc_multilib_setup finished
+DEBUG: Executing python function extract_stashed_builddir
+DEBUG: sed -e 's:^[^/]*/:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/gcc-12.2.0/build.arm-openbmc-linux-gnueabi.arm-openbmc-linux-gnueabi/:g' /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/gcc-stashed-builddir-arm-openbmc-linux-gnueabi/fixmepath | xargs sed -i -e 's:FIXMESTAGINGDIRTARGET:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot:g; s:FIXMESTAGINGDIRHOST:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot-native:g' -e 's:FIXME_PSEUDO_SYSROOT:/home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/pseudo-native:g' -e 's:FIXME_HOSTTOOLS_DIR:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:g' -e 's:FIXME_PKGDATA_DIR:/home/matt/tmp/build/obmc-y2038/tmp/pkgdata/evb-ast2600:g' -e 's:FIXME_PSEUDO_LOCALSTATEDIR:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/pseudo/:g' -e 's:FIXME_LOGFIFO:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/temp/fifo.3234814:g'
+DEBUG: Python function extract_stashed_builddir finished
+DEBUG: Executing shell function do_configure
+Configuring libgcc
+configure: WARNING: unrecognized options: --disable-silent-rules, --disable-dependency-tracking, --with-libtool-sysroot, --with-gnu-ld, --enable-languages, --enable-threads, --disable-multilib, --enable-default-pie, --enable-c99, --enable-long-long, --enable-symvers, --enable-libstdcxx-pch, --without-local-prefix, --disable-install-libiberty, --disable-libssp, --enable-libitm, --enable-lto, --disable-bootstrap, --with-system-zlib, --with-linker-hash-style, --enable-linker-build-id, --with-ppl, --with-cloog, --enable-checking, --enable-cheaders, --without-isl, --with-gxx-include-dir, --with-sysroot, --with-build-sysroot, --enable-standard-branch-protection, --disable-nls, --enable-initfini-array
+configure: creating cache /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/gcc-12.2.0/build.arm-openbmc-linux-gnueabi.arm-openbmc-linux-gnueabi/config.cache
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... arm-openbmc-linux-gnueabi
+checking for --enable-version-specific-runtime-libs... no
+checking for a BSD-compatible install... /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c
+checking for gawk... gawk
+checking for arm-openbmc-linux-gnueabi-ar... arm-openbmc-linux-gnueabi-gcc-ar
+checking for arm-openbmc-linux-gnueabi-lipo... no
+checking for lipo... no
+checking for arm-openbmc-linux-gnueabi-nm... arm-openbmc-linux-gnueabi-gcc-nm
+checking for arm-openbmc-linux-gnueabi-ranlib... arm-openbmc-linux-gnueabi-gcc-ranlib
+checking for arm-openbmc-linux-gnueabi-strip... arm-openbmc-linux-gnueabi-strip
+checking whether ln -s works... yes
+checking for arm-openbmc-linux-gnueabi-gcc... arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... yes
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot accepts -g... yes
+checking for arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot option to accept ISO C89... none needed
+checking how to run the C preprocessor... arm-openbmc-linux-gnueabi-gcc -E --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard 
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... no
+checking size of double... 8
+checking size of long double... 8
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for stdlib.h... yes
+checking for ftw.h... yes
+checking for unistd.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for string.h... yes
+checking for strings.h... yes
+checking for memory.h... yes
+checking for sys/auxv.h... yes
+checking for sys/mman.h... yes
+checking for grep that handles long lines and -e... /home/matt/tmp/build/obmc-y2038/tmp/hosttools/grep
+checking for egrep... /home/matt/tmp/build/obmc-y2038/tmp/hosttools/grep -E
+checking for ANSI C header files... yes
+checking whether decimal floating point is supported... no
+configure: WARNING: decimal float is not supported for this target, ignored
+checking whether fixed-point is supported... yes
+checking whether the compiler is configured for setjmp/longjmp exceptions... no
+checking for CET support... no
+checking if the linker (arm-openbmc-linux-gnueabi-ld --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot ) is GNU ld... yes
+checking for thread model used by GCC... posix
+checking whether assembler supports CFI directives... yes
+checking for target glibc version... 2.28
+2.28
+checking for __attribute__((visibility("hidden")))... yes
+checking for .cfi_sections .debug_frame... yes
+checking whether the target assembler supports thread-local storage... yes
+checking whether the thread-local storage support is from emutls... no
+checking for init priority support... yes
+configure: updating cache /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/gcc-12.2.0/build.arm-openbmc-linux-gnueabi.arm-openbmc-linux-gnueabi/config.cache
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating auto-target.h
+config.status: executing default commands
+configure: WARNING: unrecognized options: --disable-silent-rules, --disable-dependency-tracking, --with-libtool-sysroot, --with-gnu-ld, --enable-languages, --enable-threads, --disable-multilib, --enable-default-pie, --enable-c99, --enable-long-long, --enable-symvers, --enable-libstdcxx-pch, --without-local-prefix, --disable-install-libiberty, --disable-libssp, --enable-libitm, --enable-lto, --disable-bootstrap, --with-system-zlib, --with-linker-hash-style, --enable-linker-build-id, --with-ppl, --with-cloog, --enable-checking, --enable-cheaders, --without-isl, --with-gxx-include-dir, --with-sysroot, --with-build-sysroot, --enable-standard-branch-protection, --disable-nls, --enable-initfini-array
+NOTE: make enable-execute-stack.c unwind.h md-unwind-support.h sfp-machine.h gthr-default.h
+ln -s /home/matt/tmp/build/obmc-y2038/tmp/work-shared/gcc-12.2.0-r0/gcc-12.2.0/libgcc/enable-execute-stack-empty.c enable-execute-stack.c
+ln -s /home/matt/tmp/build/obmc-y2038/tmp/work-shared/gcc-12.2.0-r0/gcc-12.2.0/libgcc/config/arm/unwind-arm.h unwind.h
+ln -s /home/matt/tmp/build/obmc-y2038/tmp/work-shared/gcc-12.2.0-r0/gcc-12.2.0/libgcc/config/no-unwind.h md-unwind-support.h
+ln -s /home/matt/tmp/build/obmc-y2038/tmp/work-shared/gcc-12.2.0-r0/gcc-12.2.0/libgcc/config/arm/sfp-machine.h sfp-machine.h
+ln -s /home/matt/tmp/build/obmc-y2038/tmp/work-shared/gcc-12.2.0-r0/gcc-12.2.0/libgcc/gthr-posix.h gthr-default.h
+Configuring libstdc++-v3
+configure: WARNING: unrecognized options: --disable-dependency-tracking, --with-libtool-sysroot, --enable-languages, --enable-threads, --enable-default-pie, --without-local-prefix, --disable-install-libiberty, --disable-libssp, --enable-libitm, --enable-lto, --disable-bootstrap, --with-system-zlib, --with-linker-hash-style, --enable-linker-build-id, --with-ppl, --with-cloog, --enable-checking, --without-isl, --with-sysroot, --with-build-sysroot, --enable-standard-branch-protection, --with-glibc-version, --enable-initfini-array
+configure: loading cache /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/gcc-12.2.0/build.arm-openbmc-linux-gnueabi.arm-openbmc-linux-gnueabi/config.cache
+checking build system type... (cached) x86_64-pc-linux-gnu
+checking host system type... (cached) arm-openbmc-linux-gnueabi
+checking target system type... arm-openbmc-linux-gnueabi
+checking for a BSD-compatible install... (cached) /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c
+checking whether build environment is sane... yes
+checking for arm-openbmc-linux-gnueabi-strip... (cached) arm-openbmc-linux-gnueabi-strip
+checking for a thread-safe mkdir -p... /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p
+checking for gawk... (cached) gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking for arm-openbmc-linux-gnueabi-gcc... (cached) arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... yes
+checking for suffix of object files... (cached) o
+checking whether we are using the GNU C compiler... (cached) yes
+checking whether arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot accepts -g... (cached) yes
+checking for arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot option to accept ISO C89... (cached) none needed
+checking whether arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot understands -c and -o together... yes
+checking whether we are using the GNU C++ compiler... yes
+checking whether arm-openbmc-linux-gnueabi-g++  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot -nostdinc++ -L/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/dummylib accepts -g... yes
+checking for special C compiler options needed for large files... (cached) no
+checking for _FILE_OFFSET_BITS value needed for large files... (cached) no
+checking how to run the C preprocessor... arm-openbmc-linux-gnueabi-gcc -E --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard 
+checking for grep that handles long lines and -e... (cached) /home/matt/tmp/build/obmc-y2038/tmp/hosttools/grep
+checking for egrep... (cached) /home/matt/tmp/build/obmc-y2038/tmp/hosttools/grep -E
+checking whether ln -s works... yes
+checking for arm-openbmc-linux-gnueabi-as... arm-openbmc-linux-gnueabi-as 
+checking for arm-openbmc-linux-gnueabi-ar... (cached) arm-openbmc-linux-gnueabi-gcc-ar
+checking for arm-openbmc-linux-gnueabi-ranlib... (cached) arm-openbmc-linux-gnueabi-gcc-ranlib
+checking whether to enable maintainer-specific portions of Makefiles... no
+configure: CPU config directory is cpu/arm
+configure: OS config directory is os/gnu-linux
+checking how to print strings... printf
+checking for a sed that does not truncate output... /home/matt/tmp/build/obmc-y2038/tmp/hosttools/sed
+checking for fgrep... /home/matt/tmp/build/obmc-y2038/tmp/hosttools/grep -F
+checking for ld used by arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot... arm-openbmc-linux-gnueabi-ld --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot 
+checking if the linker (arm-openbmc-linux-gnueabi-ld --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot ) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... arm-openbmc-linux-gnueabi-gcc-nm
+checking the name lister (arm-openbmc-linux-gnueabi-gcc-nm) interface... BSD nm
+checking the maximum length of command line arguments... 1572864
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands "+="... yes
+checking for arm-openbmc-linux-gnueabi-ld --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot  option to reload object files... -r
+checking for arm-openbmc-linux-gnueabi-objdump... arm-openbmc-linux-gnueabi-objdump
+checking how to recognize dependent libraries... pass_all
+checking for arm-openbmc-linux-gnueabi-ar... (cached) arm-openbmc-linux-gnueabi-gcc-ar
+checking for arm-openbmc-linux-gnueabi-strip... (cached) arm-openbmc-linux-gnueabi-strip
+checking for arm-openbmc-linux-gnueabi-ranlib... (cached) arm-openbmc-linux-gnueabi-gcc-ranlib
+checking command to parse arm-openbmc-linux-gnueabi-gcc-nm output from arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot object... ok
+checking for ANSI C header files... (cached) yes
+checking for sys/types.h... (cached) yes
+checking for sys/stat.h... (cached) yes
+checking for stdlib.h... (cached) yes
+checking for string.h... (cached) yes
+checking for memory.h... (cached) yes
+checking for strings.h... (cached) yes
+checking for inttypes.h... (cached) yes
+checking for stdint.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot supports -fno-rtti -fno-exceptions... no
+checking for arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot option to produce PIC... -fPIC -DPIC
+checking if arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot PIC flag -fPIC -DPIC works... yes
+checking if arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot static flag -static works... yes
+checking if arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot supports -c -o file.o... yes
+checking if arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot supports -c -o file.o... (cached) yes
+checking whether the arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot linker (arm-openbmc-linux-gnueabi-ld --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot ) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking for shl_load... no
+checking for shl_load in -ldld... no
+checking for dlopen... yes
+checking whether a program can dlopen itself... cross
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking how to run the C++ preprocessor... arm-openbmc-linux-gnueabi-g++  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot -nostdinc++ -L/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/dummylib -E
+checking for ld used by arm-openbmc-linux-gnueabi-g++  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot -nostdinc++ -L/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/dummylib... arm-openbmc-linux-gnueabi-ld --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot 
+checking if the linker (arm-openbmc-linux-gnueabi-ld --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot ) is GNU ld... yes
+checking whether the arm-openbmc-linux-gnueabi-g++  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot -nostdinc++ -L/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/dummylib linker (arm-openbmc-linux-gnueabi-ld --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot ) supports shared libraries... yes
+checking for arm-openbmc-linux-gnueabi-g++  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot -nostdinc++ -L/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/dummylib option to produce PIC... -fPIC -DPIC
+checking if arm-openbmc-linux-gnueabi-g++  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot -nostdinc++ -L/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/dummylib PIC flag -fPIC -DPIC works... yes
+checking if arm-openbmc-linux-gnueabi-g++  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot -nostdinc++ -L/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/dummylib static flag -static works... yes
+checking if arm-openbmc-linux-gnueabi-g++  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot -nostdinc++ -L/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/dummylib supports -c -o file.o... yes
+checking if arm-openbmc-linux-gnueabi-g++  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot -nostdinc++ -L/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/dummylib supports -c -o file.o... (cached) yes
+checking whether the arm-openbmc-linux-gnueabi-g++  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot -nostdinc++ -L/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/dummylib linker (arm-openbmc-linux-gnueabi-ld --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot ) supports shared libraries... yes
+checking dynamic linker characteristics... (cached) GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking for compiler with PCH support... yes
+checking for enabled PCH... yes
+checking for thread model used by GCC... posix
+checking for atomic builtins for bool... yes
+checking for atomic builtins for short... yes
+checking for atomic builtins for int... yes
+checking for atomic builtins for long long... yes
+checking for lock policy for shared_ptr reference counts... atomic
+checking for ISO/IEC TR 24733 ... no
+checking for __float128... no
+checking for g++ that supports -ffunction-sections -fdata-sections... yes
+checking for underlying I/O to use... stdio (with POSIX read/write)
+checking for C locale to use... gnu
+checking for msgfmt... no
+checking for std::allocator base class... new
+configure: "C" header strategy set to c_global
+checking for enabled long long specializations... yes
+checking wchar.h usability... yes
+checking wchar.h presence... yes
+checking for wchar.h... yes
+checking for mbstate_t... yes
+checking wctype.h usability... yes
+checking wctype.h presence... yes
+checking for wctype.h... yes
+checking for enabled wchar_t specializations... yes
+checking for sin in -lm... yes
+checking for ISO C99 support in <math.h> for C++98... yes
+checking tgmath.h usability... yes
+checking tgmath.h presence... yes
+checking for tgmath.h... yes
+checking complex.h usability... yes
+checking complex.h presence... yes
+checking for complex.h... yes
+checking for ISO C99 support in <complex.h> for C++98... yes
+checking for ISO C99 support in <stdio.h> for C++98... yes
+checking for ISO C99 support in <stdlib.h> for C++98... yes
+checking for ISO C99 support in <wchar.h> for C++98... yes
+checking for sin in -lm... (cached) yes
+checking for ISO C99 support in <math.h> for C++11... yes
+checking for tgmath.h... (cached) yes
+checking for complex.h... (cached) yes
+checking for ISO C99 support in <complex.h> for C++11... yes
+checking for ISO C99 support in <stdio.h> for C++11... yes
+checking for ISO C99 support in <stdlib.h> for C++11... yes
+checking for ISO C99 support in <wchar.h> for C++11... yes
+checking for fully enabled ISO C99 support... yes
+configure: Debug build flags set to -g3 -O0 -D_GLIBCXX_ASSERTIONS
+checking for additional debug build... no
+configure: target-libgomp not built
+checking for parallel mode support... no
+checking for extra compiler flags for building... 
+checking for extern template support... yes
+checking for custom python install directory... no
+checking for -Werror... no
+checking for vtable verify support... no
+checking for gets declaration... yes
+checking for obsolete isinf function in <math.h>... no
+checking for obsolete isnan function in <math.h>... no
+checking uchar.h usability... yes
+checking uchar.h presence... yes
+checking for uchar.h... yes
+checking for ISO C11 support for <uchar.h>... yes
+checking for c8rtomb and mbrtoc8 in <uchar.h> with -fchar8_t... yes
+checking for c8rtomb and mbrtoc8 in <uchar.h> with -std=c++20... yes
+checking for LFS support... yes
+checking sys/ioctl.h usability... yes
+checking sys/ioctl.h presence... yes
+checking for sys/ioctl.h... yes
+checking sys/filio.h usability... no
+checking sys/filio.h presence... no
+checking for sys/filio.h... no
+checking for poll... yes
+checking for S_ISREG or S_IFREG... S_ISREG
+checking sys/uio.h usability... yes
+checking sys/uio.h presence... yes
+checking for sys/uio.h... yes
+checking for writev... yes
+checking fenv.h usability... yes
+checking fenv.h presence... yes
+checking for fenv.h... yes
+checking for complex.h... (cached) yes
+checking for complex.h... (cached) yes
+checking for ISO C99 support to TR1 in <complex.h>... yes
+checking for ISO C99 support to TR1 in <ctype.h>... yes
+checking for fenv.h... (cached) yes
+checking for ISO C99 support to TR1 in <fenv.h>... yes
+checking for ISO C99 support to TR1 in <stdint.h>... yes
+checking for ISO C99 support to TR1 in <math.h>... yes
+checking for ISO C99 support to TR1 in <inttypes.h>... yes
+checking for wchar_t ISO C99 support to TR1 in <inttypes.h>... yes
+checking stdbool.h usability... yes
+checking stdbool.h presence... yes
+checking for stdbool.h... yes
+checking stdalign.h usability... yes
+checking stdalign.h presence... yes
+checking for stdalign.h... yes
+checking for the value of EOF... -1
+checking for the value of SEEK_CUR... 1
+checking for the value of SEEK_END... 2
+checking for gettimeofday... checking sys/time.h usability... yes
+checking sys/time.h presence... yes
+checking for sys/time.h... yes
+checking for gettimeofday... yes
+checking for library containing clock_gettime... none required
+checking for tmpnam... yes
+checking for pthread_cond_clockwait... yes
+checking for pthread_mutex_clocklock... yes
+checking for pthread_rwlock_clockrdlock, pthread_wlock_clockwrlock... yes
+checking locale.h usability... yes
+checking locale.h presence... yes
+checking for locale.h... yes
+checking for LC_MESSAGES... yes
+checking sys/sysinfo.h usability... yes
+checking sys/sysinfo.h presence... yes
+checking for sys/sysinfo.h... yes
+checking for get_nprocs... yes
+checking for unistd.h... (cached) yes
+checking for _SC_NPROCESSORS_ONLN... yes
+checking for _SC_NPROC_ONLN... no
+checking for pthreads_num_processors_np... no
+checking for hw.ncpu sysctl... no
+checking for suitable sys/sdt.h... no
+checking endian.h usability... yes
+checking endian.h presence... yes
+checking for endian.h... yes
+checking execinfo.h usability... yes
+checking execinfo.h presence... yes
+checking for execinfo.h... yes
+checking float.h usability... yes
+checking float.h presence... yes
+checking for float.h... yes
+checking fp.h usability... no
+checking fp.h presence... no
+checking for fp.h... no
+checking ieeefp.h usability... no
+checking ieeefp.h presence... no
+checking for ieeefp.h... no
+checking for inttypes.h... (cached) yes
+checking for locale.h... (cached) yes
+checking machine/endian.h usability... no
+checking machine/endian.h presence... no
+checking for machine/endian.h... no
+checking machine/param.h usability... no
+checking machine/param.h presence... no
+checking for machine/param.h... no
+checking nan.h usability... no
+checking nan.h presence... no
+checking for nan.h... no
+checking for stdint.h... (cached) yes
+checking for stdlib.h... (cached) yes
+checking for string.h... (cached) yes
+checking for strings.h... (cached) yes
+checking sys/ipc.h usability... yes
+checking sys/ipc.h presence... yes
+checking for sys/ipc.h... yes
+checking sys/isa_defs.h usability... no
+checking sys/isa_defs.h presence... no
+checking for sys/isa_defs.h... no
+checking sys/machine.h usability... no
+checking sys/machine.h presence... no
+checking for sys/machine.h... no
+checking sys/param.h usability... yes
+checking sys/param.h presence... yes
+checking for sys/param.h... yes
+checking sys/resource.h usability... yes
+checking sys/resource.h presence... yes
+checking for sys/resource.h... yes
+checking sys/sem.h usability... yes
+checking sys/sem.h presence... yes
+checking for sys/sem.h... yes
+checking for sys/stat.h... (cached) yes
+checking for sys/time.h... (cached) yes
+checking for sys/types.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking for wchar.h... (cached) yes
+checking for wctype.h... (cached) yes
+checking linux/types.h usability... yes
+checking linux/types.h presence... yes
+checking for linux/types.h... yes
+checking for linux/random.h... yes
+checking xlocale.h usability... no
+checking xlocale.h presence... no
+checking for xlocale.h... no
+checking for g++ that supports -ffunction-sections -fdata-sections... yes
+checking for ld version... 23900
+checking for ld that supports -Wl,--gc-sections... yes
+checking for ld that supports -Wl,-z,relro... yes
+checking for sin in -lm... (cached) yes
+checking for isinf declaration... no
+checking for _isinf declaration... no
+checking for isnan declaration... no
+checking for _isnan declaration... no
+checking for finite declaration... yes
+checking for finite... yes
+checking for sincos declaration... yes
+checking for sincos... yes
+checking for fpclass declaration... no
+checking for _fpclass declaration... no
+checking for qfpclass declaration... no
+checking for _qfpclass declaration... no
+checking for hypot declaration... yes
+checking for hypot... yes
+checking for float trig functions... yes
+checking for acosf... yes
+checking for asinf... yes
+checking for atanf... yes
+checking for cosf... yes
+checking for sinf... yes
+checking for tanf... yes
+checking for coshf... yes
+checking for sinhf... yes
+checking for tanhf... yes
+checking for float round functions... yes
+checking for ceilf... yes
+checking for floorf... yes
+checking for expf declaration... yes
+checking for expf... yes
+checking for isnanf declaration... yes
+checking for isnanf... yes
+checking for isinff declaration... yes
+checking for isinff... yes
+checking for atan2f declaration... yes
+checking for atan2f... yes
+checking for fabsf declaration... yes
+checking for fabsf... yes
+checking for fmodf declaration... yes
+checking for fmodf... yes
+checking for frexpf declaration... yes
+checking for frexpf... yes
+checking for hypotf declaration... yes
+checking for hypotf... yes
+checking for ldexpf declaration... yes
+checking for ldexpf... yes
+checking for logf declaration... yes
+checking for logf... yes
+checking for log10f declaration... yes
+checking for log10f... yes
+checking for modff declaration... yes
+checking for modff... yes
+checking for modf declaration... yes
+checking for modf... yes
+checking for powf declaration... yes
+checking for powf... yes
+checking for sqrtf declaration... yes
+checking for sqrtf... yes
+checking for sincosf declaration... yes
+checking for sincosf... yes
+checking for finitef declaration... yes
+checking for finitef... yes
+checking for long double trig functions... yes
+checking for acosl... yes
+checking for asinl... yes
+checking for atanl... yes
+checking for cosl... yes
+checking for sinl... yes
+checking for tanl... yes
+checking for coshl... yes
+checking for sinhl... yes
+checking for tanhl... yes
+checking for long double round functions... yes
+checking for ceill... yes
+checking for floorl... yes
+checking for isnanl declaration... yes
+checking for isnanl... yes
+checking for isinfl declaration... yes
+checking for isinfl... yes
+checking for atan2l declaration... yes
+checking for atan2l... yes
+checking for expl declaration... yes
+checking for expl... yes
+checking for fabsl declaration... yes
+checking for fabsl... yes
+checking for fmodl declaration... yes
+checking for fmodl... yes
+checking for frexpl declaration... yes
+checking for frexpl... yes
+checking for hypotl declaration... yes
+checking for hypotl... yes
+checking for ldexpl declaration... yes
+checking for ldexpl... yes
+checking for logl declaration... yes
+checking for logl... yes
+checking for log10l declaration... yes
+checking for log10l... yes
+checking for modfl declaration... yes
+checking for modfl... yes
+checking for powl declaration... yes
+checking for powl... yes
+checking for sqrtl declaration... yes
+checking for sqrtl... yes
+checking for sincosl declaration... yes
+checking for sincosl... yes
+checking for finitel declaration... yes
+checking for finitel... yes
+checking for at_quick_exit declaration... yes
+checking for at_quick_exit... yes
+checking for quick_exit declaration... yes
+checking for quick_exit... yes
+checking for strtold declaration... yes
+checking for strtold... yes
+checking for strtof declaration... yes
+checking for strtof... yes
+checking whether the target supports thread-local storage... yes
+checking for __cxa_thread_atexit_impl... yes
+checking for aligned_alloc... yes
+checking for posix_memalign... yes
+checking for memalign... yes
+checking for _aligned_malloc... no
+checking for timespec_get... yes
+checking for sockatmark... yes
+checking for uselocale... yes
+checking for iconv... yes
+checking for iconv declaration... 
+         extern size_t iconv (iconv_t cd, char * *inbuf, size_t *inbytesleft, char * *outbuf, size_t *outbytesleft);
+looking for a compliant stdint.h in stdint.h, checking for uintmax_t... yes
+checking for uintptr_t... yes
+checking for int_least32_t... yes
+checking for int_fast32_t... yes
+checking for uint64_t... yes
+checking what to include in include/gstdint.h... stdint.h (already complete)
+checking for GNU c++filt... 
+checking for shared libgcc... yes
+checking whether the target supports .symver directive... yes
+configure: versioning on shared library symbols is gnu
+checking for size_t as unsigned int... yes
+checking for ptrdiff_t as int... yes
+checking whether the target supports hidden visibility... yes
+configure: visibility supported: yes
+checking for default std::string ABI to use... new
+checking for rdrand support in assembler... no
+checking for rdseed support in assembler... no
+checking for getentropy... yes
+checking for arc4random... yes
+checking for unistd.h... (cached) yes
+checking for sys/time.h... (cached) yes
+checking for sys/resource.h... (cached) yes
+checking for RLIMIT_DATA... yes
+checking for RLIMIT_RSS... yes
+checking for RLIMIT_VMEM... no
+checking for RLIMIT_AS... yes
+checking for RLIMIT_FSIZE... yes
+checking for testsuite resource limits support... yes
+checking whether it can be safely assumed that mutex_timedlock is available... yes
+checking for gthreads library... yes
+checking for pthread_rwlock_t... yes
+checking semaphore.h usability... yes
+checking semaphore.h presence... yes
+checking for semaphore.h... yes
+checking for POSIX Semaphores and sem_timedwait... yes
+checking fcntl.h usability... yes
+checking fcntl.h presence... yes
+checking for fcntl.h... yes
+checking dirent.h usability... yes
+checking dirent.h presence... yes
+checking for dirent.h... yes
+checking sys/statvfs.h usability... yes
+checking sys/statvfs.h presence... yes
+checking for sys/statvfs.h... yes
+checking utime.h usability... yes
+checking utime.h presence... yes
+checking for utime.h... yes
+checking whether to build Filesystem TS support... yes
+checking for struct dirent.d_type... yes
+checking for realpath... yes
+checking for utimensat... yes
+checking for utime... yes
+checking for lstat... yes
+checking for struct stat.st_mtim.tv_nsec... yes
+checking for fchmod... yes
+checking for fchmodat... yes
+checking for sendfile that can copy files... yes
+checking for link... yes
+checking for readlink... yes
+checking for symlink... yes
+checking for truncate... yes
+checking for fdopendir... yes
+checking for dirfd... yes
+checking for openat... yes
+checking for unlinkat... yes
+checking __sync extensions... yes
+checking link.h usability... yes
+checking link.h presence... yes
+checking for link.h... yes
+checking for fcntl... yes
+checking whether strnlen is declared... yes
+checking for getexecname... no
+checking output filetype... elf32
+checking whether to build libbacktrace support... no
+checking for fcntl.h... (cached) yes
+checking for sys/ioctl.h... (cached) yes
+checking sys/socket.h usability... yes
+checking sys/socket.h presence... yes
+checking for sys/socket.h... yes
+checking for sys/uio.h... (cached) yes
+checking poll.h usability... yes
+checking poll.h presence... yes
+checking for poll.h... yes
+checking netdb.h usability... yes
+checking netdb.h presence... yes
+checking for netdb.h... yes
+checking arpa/inet.h usability... yes
+checking arpa/inet.h presence... yes
+checking for arpa/inet.h... yes
+checking netinet/in.h usability... yes
+checking netinet/in.h presence... yes
+checking for netinet/in.h... yes
+checking netinet/tcp.h usability... yes
+checking netinet/tcp.h presence... yes
+checking for netinet/tcp.h... yes
+checking whether F_GETFL is declared... yes
+checking whether F_SETFL is declared... yes
+checking whether O_NONBLOCK is declared... yes
+checking how size_t is mangled... j
+checking for first version to support std::exception_ptr... 4.6.0
+checking for makeinfo... ${SHELL} /home/matt/tmp/build/obmc-y2038/tmp/work-shared/gcc-12.2.0-r0/gcc-12.2.0/missing makeinfo
+checking for modern makeinfo... yes
+checking for doxygen... no
+checking for dot... no
+checking for xmlcatalog... no
+checking for xsltproc... no
+checking for xmllint... no
+checking for local stylesheet directory... no
+checking for epub3 stylesheets for documentation creation... no
+checking for dblatex... no
+checking for pdflatex... no
+checking for CET support... no
+configure: updating cache /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/gcc-12.2.0/build.arm-openbmc-linux-gnueabi.arm-openbmc-linux-gnueabi/config.cache
+checking for gxx-include-dir... /usr/include/c++/12.2.0
+checking for --enable-version-specific-runtime-libs... no
+checking for install location... /usr/include/c++/12.2.0
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating scripts/testsuite_flags
+config.status: creating scripts/extract_symvers
+config.status: creating doc/xsl/customization.xsl
+config.status: creating src/libbacktrace/backtrace-supported.h
+config.status: creating include/Makefile
+config.status: creating libsupc++/Makefile
+config.status: creating src/Makefile
+config.status: creating src/c++98/Makefile
+config.status: creating src/c++11/Makefile
+config.status: creating src/c++17/Makefile
+config.status: creating src/c++20/Makefile
+config.status: creating src/filesystem/Makefile
+config.status: creating src/libbacktrace/Makefile
+config.status: creating doc/Makefile
+config.status: creating po/Makefile
+config.status: creating testsuite/Makefile
+config.status: creating python/Makefile
+config.status: creating config.h
+config.status: executing default-1 commands
+config.status: executing libtool commands
+config.status: executing include/gstdint.h commands
+config.status: executing generate-headers commands
+echo timestamp > stamp-pb
+echo timestamp > stamp-host
+make: [Makefile:1785: arm-openbmc-linux-gnueabi/bits/largefile-config.h] Error 1 (ignored)
+make: [Makefile:1786: arm-openbmc-linux-gnueabi/bits/largefile-config.h] Error 1 (ignored)
+echo 0 > stamp-namespace-version
+echo 1 > stamp-visibility
+echo 1 > stamp-extern-template
+echo 1 > stamp-dual-abi
+echo 1 > stamp-cxx11-abi
+echo 1 > stamp-allocator-new
+echo 'undef _GLIBCXX_USE_FLOAT128' > stamp-float128
+sed -e '/^#pragma/b' \
+    -e '/^#/s/\([ABCDEFGHIJKLMNOPQRSTUVWXYZ_][ABCDEFGHIJKLMNOPQRSTUVWXYZ_]*\)/_GLIBCXX_\1/g' \
+    -e 's/_GLIBCXX_SUPPORTS_WEAK/__GXX_WEAK__/g' \
+    -e 's/_GLIBCXX___MINGW32_GLIBCXX___/__MINGW32__/g' \
+    -e 's,^#include "\(.*\)",#include <bits/\1>,g' \
+    < /home/matt/tmp/build/obmc-y2038/tmp/work-shared/gcc-12.2.0-r0/gcc-12.2.0/libstdc++-v3/../libgcc/gthr.h > arm-openbmc-linux-gnueabi/bits/gthr.h
+sed -e 's/\(UNUSED\)/_GLIBCXX_\1/g' \
+    -e 's/\(GCC[ABCDEFGHIJKLMNOPQRSTUVWXYZ_]*_H\)/_GLIBCXX_\1/g' \
+    < /home/matt/tmp/build/obmc-y2038/tmp/work-shared/gcc-12.2.0-r0/gcc-12.2.0/libstdc++-v3/../libgcc/gthr-single.h > arm-openbmc-linux-gnueabi/bits/gthr-single.h
+sed -e 's/\(UNUSED\)/_GLIBCXX_\1/g' \
+    -e 's/\(GCC[ABCDEFGHIJKLMNOPQRSTUVWXYZ_]*_H\)/_GLIBCXX_\1/g' \
+    -e 's/SUPPORTS_WEAK/__GXX_WEAK__/g' \
+    -e 's/\([ABCDEFGHIJKLMNOPQRSTUVWXYZ_]*USE_WEAK\)/_GLIBCXX_\1/g' \
+    < /home/matt/tmp/build/obmc-y2038/tmp/work-shared/gcc-12.2.0-r0/gcc-12.2.0/libstdc++-v3/../libgcc/gthr-posix.h > arm-openbmc-linux-gnueabi/bits/gthr-posix.h
+sed -e 's/\(UNUSED\)/_GLIBCXX_\1/g' \
+    -e 's/\(GCC[ABCDEFGHIJKLMNOPQRSTUVWXYZ_]*_H\)/_GLIBCXX_\1/g' \
+    -e 's/SUPPORTS_WEAK/__GXX_WEAK__/g' \
+    -e 's/\([ABCDEFGHIJKLMNOPQRSTUVWXYZ_]*USE_WEAK\)/_GLIBCXX_\1/g' \
+    -e 's,^#include "\(.*\)",#include <bits/\1>,g' \
+    < /home/matt/tmp/build/obmc-y2038/tmp/work-shared/gcc-12.2.0-r0/gcc-12.2.0/libstdc++-v3/../libgcc/gthr-posix.h > arm-openbmc-linux-gnueabi/bits/gthr-default.h
+configure: WARNING: unrecognized options: --disable-dependency-tracking, --with-libtool-sysroot, --enable-languages, --enable-threads, --enable-default-pie, --without-local-prefix, --disable-install-libiberty, --disable-libssp, --enable-libitm, --enable-lto, --disable-bootstrap, --with-system-zlib, --with-linker-hash-style, --enable-linker-build-id, --with-ppl, --with-cloog, --enable-checking, --without-isl, --with-sysroot, --with-build-sysroot, --enable-standard-branch-protection, --with-glibc-version, --enable-initfini-array
+Configuring libgomp
+configure: WARNING: unrecognized options: --with-libtool-sysroot, --enable-languages, --enable-threads, --enable-default-pie, --enable-c99, --enable-long-long, --enable-libstdcxx-pch, --without-local-prefix, --disable-install-libiberty, --disable-libssp, --enable-libitm, --enable-lto, --disable-bootstrap, --with-system-zlib, --with-linker-hash-style, --enable-linker-build-id, --with-ppl, --with-cloog, --enable-checking, --enable-cheaders, --without-isl, --with-gxx-include-dir, --with-sysroot, --with-build-sysroot, --enable-standard-branch-protection, --disable-nls, --with-glibc-version, --enable-initfini-array
+configure: loading cache /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/gcc-12.2.0/build.arm-openbmc-linux-gnueabi.arm-openbmc-linux-gnueabi/config.cache
+checking for --enable-version-specific-runtime-libs... no
+checking for --enable-generated-files-in-srcdir... no
+checking build system type... (cached) x86_64-pc-linux-gnu
+checking host system type... (cached) arm-openbmc-linux-gnueabi
+checking target system type... (cached) arm-openbmc-linux-gnueabi
+checking for a BSD-compatible install... (cached) /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c
+checking whether build environment is sane... yes
+checking for arm-openbmc-linux-gnueabi-strip... (cached) arm-openbmc-linux-gnueabi-strip
+checking for a thread-safe mkdir -p... (cached) /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p
+checking for gawk... (cached) gawk
+checking whether make sets $(MAKE)... (cached) yes
+checking whether make supports nested variables... (cached) yes
+checking for arm-openbmc-linux-gnueabi-gcc... (cached) arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... yes
+checking for suffix of object files... (cached) o
+checking whether we are using the GNU C compiler... (cached) yes
+checking whether arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot accepts -g... (cached) yes
+checking for arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot option to accept ISO C89... (cached) none needed
+checking whether arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot understands -c and -o together... (cached) yes
+checking for style of include used by make... GNU
+checking dependency style of arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot... none
+checking for arm-openbmc-linux-gnueabi-ar... (cached) arm-openbmc-linux-gnueabi-gcc-ar
+checking for arm-openbmc-linux-gnueabi-ranlib... (cached) arm-openbmc-linux-gnueabi-gcc-ranlib
+checking for perl... /home/matt/tmp/build/obmc-y2038/tmp/hosttools/perl
+checking whether make sets $(MAKE)... (cached) yes
+checking for makeinfo... (cached) ${SHELL} /home/matt/tmp/build/obmc-y2038/tmp/work-shared/gcc-12.2.0-r0/gcc-12.2.0/missing makeinfo
+checking for modern makeinfo... (cached) yes
+checking how to print strings... printf
+checking for a sed that does not truncate output... (cached) /home/matt/tmp/build/obmc-y2038/tmp/hosttools/sed
+checking for grep that handles long lines and -e... (cached) /home/matt/tmp/build/obmc-y2038/tmp/hosttools/grep
+checking for egrep... (cached) /home/matt/tmp/build/obmc-y2038/tmp/hosttools/grep -E
+checking for fgrep... (cached) /home/matt/tmp/build/obmc-y2038/tmp/hosttools/grep -F
+checking for ld used by arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot... (cached) arm-openbmc-linux-gnueabi-ld --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot 
+checking if the linker (arm-openbmc-linux-gnueabi-ld --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot ) is GNU ld... (cached) yes
+checking for BSD- or MS-compatible name lister (nm)... (cached) arm-openbmc-linux-gnueabi-gcc-nm
+checking the name lister (arm-openbmc-linux-gnueabi-gcc-nm) interface... (cached) BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... (cached) 1572864
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands "+="... yes
+checking for arm-openbmc-linux-gnueabi-ld --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot  option to reload object files... (cached) -r
+checking for arm-openbmc-linux-gnueabi-objdump... (cached) arm-openbmc-linux-gnueabi-objdump
+checking how to recognize dependent libraries... (cached) pass_all
+checking for arm-openbmc-linux-gnueabi-ar... (cached) arm-openbmc-linux-gnueabi-gcc-ar
+checking for arm-openbmc-linux-gnueabi-strip... (cached) arm-openbmc-linux-gnueabi-strip
+checking for arm-openbmc-linux-gnueabi-ranlib... (cached) arm-openbmc-linux-gnueabi-gcc-ranlib
+checking command to parse arm-openbmc-linux-gnueabi-gcc-nm output from arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot object... (cached) ok
+checking how to run the C preprocessor... arm-openbmc-linux-gnueabi-gcc -E --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard 
+checking for ANSI C header files... (cached) yes
+checking for sys/types.h... (cached) yes
+checking for sys/stat.h... (cached) yes
+checking for stdlib.h... (cached) yes
+checking for string.h... (cached) yes
+checking for memory.h... (cached) yes
+checking for strings.h... (cached) yes
+checking for inttypes.h... (cached) yes
+checking for stdint.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking for dlfcn.h... (cached) yes
+checking for objdir... (cached) .libs
+checking if arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot supports -fno-rtti -fno-exceptions... (cached) no
+checking for arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot option to produce PIC... -fPIC -DPIC
+checking if arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot PIC flag -fPIC -DPIC works... (cached) yes
+checking if arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot static flag -static works... (cached) yes
+checking if arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot supports -c -o file.o... (cached) yes
+checking if arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot supports -c -o file.o... (cached) yes
+checking whether the arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot linker (arm-openbmc-linux-gnueabi-ld --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot ) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... (cached) no
+checking dynamic linker characteristics... (cached) GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking whether to enable maintainer-specific portions of Makefiles... no
+checking for arm-openbmc-linux-gnueabi-gfortran... no
+checking whether we are using the GNU Fortran compiler... no
+checking whether no accepts -g... no
+checking for ANSI C header files... (cached) yes
+checking whether time.h and sys/time.h may both be included... yes
+checking whether string.h and strings.h may both be included... yes
+checking pthread.h usability... yes
+checking pthread.h presence... yes
+checking for pthread.h... yes
+checking for unistd.h... (cached) yes
+checking for semaphore.h... (cached) yes
+checking sys/loadavg.h usability... no
+checking sys/loadavg.h presence... no
+checking for sys/loadavg.h... no
+checking sys/sysctl.h usability... no
+checking sys/sysctl.h presence... no
+checking for sys/sysctl.h... no
+checking for sys/time.h... (cached) yes
+checking size of void *... 4
+checking for dlsym in -ldl... yes
+checking for unistd.h... (cached) yes
+checking for secure_getenv... yes
+checking for __secure_getenv... no
+checking for getuid... yes
+checking for geteuid... yes
+checking for getgid... yes
+checking for getegid... yes
+checking for getloadavg... yes
+checking for clock_gettime... yes
+checking for strtoull... yes
+checking for aligned_alloc... (cached) yes
+checking for posix_memalign... (cached) yes
+checking for memalign... (cached) yes
+checking for _aligned_malloc... (cached) no
+checking whether the target supports thread-local storage... (cached) yes
+checking whether the thread-local storage support is from emutls... (cached) no
+checking whether the target supports hidden visibility... yes
+checking whether the target supports dllexport... no
+checking whether the target supports symbol aliases... yes
+checking for ld used by arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot... (cached) arm-openbmc-linux-gnueabi-ld --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot 
+checking if the linker (arm-openbmc-linux-gnueabi-ld --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot ) is GNU ld... (cached) yes
+checking for shared libgcc... yes
+checking whether the target supports .symver directive... yes
+configure: versioning on shared library symbols is gnu
+checking the number of available CPUs... 24
+checking whether the target supports __sync_*_compare_and_swap... yes
+checking for CET support... no
+configure: updating cache /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/gcc-12.2.0/build.arm-openbmc-linux-gnueabi.arm-openbmc-linux-gnueabi/config.cache
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating omp.h
+config.status: creating omp_lib.h
+config.status: creating omp_lib.f90
+config.status: creating libgomp_f.h
+config.status: creating Makefile
+config.status: creating testsuite/Makefile
+config.status: creating libgomp.spec
+config.status: creating testsuite/libgomp-test-support.pt.exp
+config.status: creating testsuite/libgomp-site-extra.exp
+config.status: creating config.h
+config.status: executing default-1 commands
+config.status: executing depfiles commands
+config.status: executing libtool commands
+configure: WARNING: unrecognized options: --with-libtool-sysroot, --enable-languages, --enable-threads, --enable-default-pie, --enable-c99, --enable-long-long, --enable-libstdcxx-pch, --without-local-prefix, --disable-install-libiberty, --disable-libssp, --enable-libitm, --enable-lto, --disable-bootstrap, --with-system-zlib, --with-linker-hash-style, --enable-linker-build-id, --with-ppl, --with-cloog, --enable-checking, --enable-cheaders, --without-isl, --with-gxx-include-dir, --with-sysroot, --with-build-sysroot, --enable-standard-branch-protection, --disable-nls, --with-glibc-version, --enable-initfini-array
+Configuring libatomic
+configure: WARNING: unrecognized options: --with-libtool-sysroot, --enable-languages, --enable-threads, --enable-default-pie, --enable-c99, --enable-long-long, --enable-libstdcxx-pch, --without-local-prefix, --disable-install-libiberty, --disable-libssp, --enable-libitm, --enable-lto, --disable-bootstrap, --with-system-zlib, --with-linker-hash-style, --enable-linker-build-id, --with-ppl, --with-cloog, --enable-checking, --enable-cheaders, --without-isl, --with-gxx-include-dir, --with-sysroot, --with-build-sysroot, --enable-standard-branch-protection, --disable-nls, --with-glibc-version, --enable-initfini-array
+configure: loading cache /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/gcc-12.2.0/build.arm-openbmc-linux-gnueabi.arm-openbmc-linux-gnueabi/config.cache
+checking for --enable-version-specific-runtime-libs... no
+checking for --enable-generated-files-in-srcdir... no
+checking build system type... (cached) x86_64-pc-linux-gnu
+checking host system type... (cached) arm-openbmc-linux-gnueabi
+checking target system type... (cached) arm-openbmc-linux-gnueabi
+checking for a BSD-compatible install... (cached) /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c
+checking whether build environment is sane... yes
+checking for arm-openbmc-linux-gnueabi-strip... (cached) arm-openbmc-linux-gnueabi-strip
+checking for a thread-safe mkdir -p... (cached) /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p
+checking for gawk... (cached) gawk
+checking whether make sets $(MAKE)... (cached) yes
+checking whether make supports nested variables... (cached) yes
+checking for arm-openbmc-linux-gnueabi-gcc... (cached) arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... yes
+checking for suffix of object files... (cached) o
+checking whether we are using the GNU C compiler... (cached) yes
+checking whether arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot accepts -g... (cached) yes
+checking for arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot option to accept ISO C89... (cached) none needed
+checking whether arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot understands -c and -o together... (cached) yes
+checking for style of include used by make... GNU
+checking dependency style of arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot... (cached) none
+checking dependency style of arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot... none
+checking for arm-openbmc-linux-gnueabi-ar... (cached) arm-openbmc-linux-gnueabi-gcc-ar
+checking for arm-openbmc-linux-gnueabi-nm... (cached) arm-openbmc-linux-gnueabi-gcc-nm
+checking for arm-openbmc-linux-gnueabi-ranlib... (cached) arm-openbmc-linux-gnueabi-gcc-ranlib
+checking for perl... (cached) /home/matt/tmp/build/obmc-y2038/tmp/hosttools/perl
+checking how to print strings... printf
+checking for a sed that does not truncate output... (cached) /home/matt/tmp/build/obmc-y2038/tmp/hosttools/sed
+checking for grep that handles long lines and -e... (cached) /home/matt/tmp/build/obmc-y2038/tmp/hosttools/grep
+checking for egrep... (cached) /home/matt/tmp/build/obmc-y2038/tmp/hosttools/grep -E
+checking for fgrep... (cached) /home/matt/tmp/build/obmc-y2038/tmp/hosttools/grep -F
+checking for ld used by arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot... (cached) arm-openbmc-linux-gnueabi-ld --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot 
+checking if the linker (arm-openbmc-linux-gnueabi-ld --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot ) is GNU ld... (cached) yes
+checking for BSD- or MS-compatible name lister (nm)... (cached) arm-openbmc-linux-gnueabi-gcc-nm
+checking the name lister (arm-openbmc-linux-gnueabi-gcc-nm) interface... (cached) BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... (cached) 1572864
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands "+="... yes
+checking for arm-openbmc-linux-gnueabi-ld --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot  option to reload object files... (cached) -r
+checking for arm-openbmc-linux-gnueabi-objdump... (cached) arm-openbmc-linux-gnueabi-objdump
+checking how to recognize dependent libraries... (cached) pass_all
+checking for arm-openbmc-linux-gnueabi-ar... (cached) arm-openbmc-linux-gnueabi-gcc-ar
+checking for arm-openbmc-linux-gnueabi-strip... (cached) arm-openbmc-linux-gnueabi-strip
+checking for arm-openbmc-linux-gnueabi-ranlib... (cached) arm-openbmc-linux-gnueabi-gcc-ranlib
+checking command to parse arm-openbmc-linux-gnueabi-gcc-nm output from arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot object... (cached) ok
+checking how to run the C preprocessor... arm-openbmc-linux-gnueabi-gcc -E --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard 
+checking for ANSI C header files... (cached) yes
+checking for sys/types.h... (cached) yes
+checking for sys/stat.h... (cached) yes
+checking for stdlib.h... (cached) yes
+checking for string.h... (cached) yes
+checking for memory.h... (cached) yes
+checking for strings.h... (cached) yes
+checking for inttypes.h... (cached) yes
+checking for stdint.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking for dlfcn.h... (cached) yes
+checking for objdir... (cached) .libs
+checking if arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot supports -fno-rtti -fno-exceptions... (cached) no
+checking for arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot option to produce PIC... -fPIC -DPIC
+checking if arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot PIC flag -fPIC -DPIC works... (cached) yes
+checking if arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot static flag -static works... (cached) yes
+checking if arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot supports -c -o file.o... (cached) yes
+checking if arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot supports -c -o file.o... (cached) yes
+checking whether the arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot linker (arm-openbmc-linux-gnueabi-ld --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot ) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... (cached) no
+checking dynamic linker characteristics... (cached) GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking whether to enable maintainer-specific portions of Makefiles... no
+checking for thread model used by GCC... posix
+checking for ANSI C header files... (cached) yes
+checking whether string.h and strings.h may both be included... (cached) yes
+looking for a compliant stdint.h in stdint.h, checking for uintmax_t... yes
+checking for uintptr_t... yes
+checking for int_least32_t... yes
+checking for int_fast32_t... yes
+checking for uint64_t... yes
+checking what to include in gstdint.h... stdint.h (already complete)
+checking for fenv.h... (cached) yes
+checking for 1 byte integer... yes
+checking for 2 byte integer... yes
+checking for 4 byte integer... yes
+checking for 8 byte integer... yes
+checking for 16 byte integer... no
+checking for __atomic_load/store for size 1... yes
+checking for __atomic_load/store for size 2... yes
+checking for __atomic_load/store for size 4... yes
+checking for __atomic_load/store for size 8... yes
+checking for __atomic_load/store for size 16... no
+checking for __atomic_test_and_set for size 1... yes
+checking for __atomic_test_and_set for size 2... yes
+checking for __atomic_test_and_set for size 4... yes
+checking for __atomic_test_and_set for size 8... yes
+checking for __atomic_test_and_set for size 16... no
+checking for __atomic_exchange for size 1... yes
+checking for __atomic_exchange for size 2... yes
+checking for __atomic_exchange for size 4... yes
+checking for __atomic_exchange for size 8... yes
+checking for __atomic_exchange for size 16... no
+checking for __atomic_compare_exchange for size 1... yes
+checking for __atomic_compare_exchange for size 2... yes
+checking for __atomic_compare_exchange for size 4... yes
+checking for __atomic_compare_exchange for size 8... yes
+checking for __atomic_compare_exchange for size 16... no
+checking for __atomic_fetch_add for size 1... yes
+checking for __atomic_fetch_add for size 2... yes
+checking for __atomic_fetch_add for size 4... yes
+checking for __atomic_fetch_add for size 8... yes
+checking for __atomic_fetch_add for size 16... no
+checking for __atomic_fetch_op for size 1... yes
+checking for __atomic_fetch_op for size 2... yes
+checking for __atomic_fetch_op for size 4... yes
+checking for __atomic_fetch_op for size 8... yes
+checking for __atomic_fetch_op for size 16... no
+checking whether byte ordering is bigendian... no
+checking for the word size... 4
+checking whether the target supports hidden visibility... yes
+checking whether the target supports dllexport... no
+checking whether the target supports symbol aliases... yes
+checking whether the target supports the ifunc attribute... (cached) no
+checking for ld used by arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot... (cached) arm-openbmc-linux-gnueabi-ld --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot 
+checking if the linker (arm-openbmc-linux-gnueabi-ld --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot ) is GNU ld... (cached) yes
+checking for shared libgcc... yes
+configure: versioning on shared library symbols is gnu
+configure: updating cache /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/gcc-12.2.0/build.arm-openbmc-linux-gnueabi.arm-openbmc-linux-gnueabi/config.cache
+checking for CET support... no
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating testsuite/Makefile
+config.status: creating testsuite/libatomic-site-extra.exp
+config.status: creating auto-config.h
+config.status: executing default-1 commands
+config.status: executing depfiles commands
+config.status: executing libtool commands
+config.status: executing gstdint.h commands
+configure: WARNING: unrecognized options: --with-libtool-sysroot, --enable-languages, --enable-threads, --enable-default-pie, --enable-c99, --enable-long-long, --enable-libstdcxx-pch, --without-local-prefix, --disable-install-libiberty, --disable-libssp, --enable-libitm, --enable-lto, --disable-bootstrap, --with-system-zlib, --with-linker-hash-style, --enable-linker-build-id, --with-ppl, --with-cloog, --enable-checking, --enable-cheaders, --without-isl, --with-gxx-include-dir, --with-sysroot, --with-build-sysroot, --enable-standard-branch-protection, --disable-nls, --with-glibc-version, --enable-initfini-array
+Configuring libitm
+configure: WARNING: unrecognized options: --with-libtool-sysroot, --enable-languages, --enable-threads, --enable-default-pie, --enable-c99, --enable-long-long, --enable-libstdcxx-pch, --without-local-prefix, --disable-install-libiberty, --disable-libssp, --enable-libitm, --enable-lto, --disable-bootstrap, --with-system-zlib, --with-linker-hash-style, --enable-linker-build-id, --with-ppl, --with-cloog, --enable-checking, --enable-cheaders, --without-isl, --with-gxx-include-dir, --with-sysroot, --with-build-sysroot, --enable-standard-branch-protection, --disable-nls, --with-glibc-version, --enable-initfini-array
+configure: loading cache /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/gcc-12.2.0/build.arm-openbmc-linux-gnueabi.arm-openbmc-linux-gnueabi/config.cache
+checking for --enable-version-specific-runtime-libs... no
+checking for --enable-generated-files-in-srcdir... no
+checking build system type... (cached) x86_64-pc-linux-gnu
+checking host system type... (cached) arm-openbmc-linux-gnueabi
+checking target system type... (cached) arm-openbmc-linux-gnueabi
+checking for a BSD-compatible install... (cached) /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c
+checking whether build environment is sane... yes
+checking for arm-openbmc-linux-gnueabi-strip... (cached) arm-openbmc-linux-gnueabi-strip
+checking for a thread-safe mkdir -p... (cached) /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p
+checking for gawk... (cached) gawk
+checking whether make sets $(MAKE)... (cached) yes
+checking whether make supports nested variables... (cached) yes
+checking for arm-openbmc-linux-gnueabi-gcc... (cached) arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... yes
+checking for suffix of object files... (cached) o
+checking whether we are using the GNU C compiler... (cached) yes
+checking whether arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot accepts -g... (cached) yes
+checking for arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot option to accept ISO C89... (cached) none needed
+checking whether arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot understands -c and -o together... (cached) yes
+checking for style of include used by make... GNU
+checking dependency style of arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot... (cached) none
+checking whether we are using the GNU C++ compiler... (cached) yes
+checking whether arm-openbmc-linux-gnueabi-g++  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot -nostdinc++ -L/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/dummylib accepts -g... (cached) yes
+checking dependency style of arm-openbmc-linux-gnueabi-g++  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot -nostdinc++ -L/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/dummylib... none
+checking dependency style of arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot... (cached) none
+checking for arm-openbmc-linux-gnueabi-ar... (cached) arm-openbmc-linux-gnueabi-gcc-ar
+checking for arm-openbmc-linux-gnueabi-nm... (cached) arm-openbmc-linux-gnueabi-gcc-nm
+checking for arm-openbmc-linux-gnueabi-ranlib... (cached) arm-openbmc-linux-gnueabi-gcc-ranlib
+checking for perl... (cached) /home/matt/tmp/build/obmc-y2038/tmp/hosttools/perl
+checking whether make sets $(MAKE)... (cached) yes
+checking for makeinfo... (cached) ${SHELL} /home/matt/tmp/build/obmc-y2038/tmp/work-shared/gcc-12.2.0-r0/gcc-12.2.0/missing makeinfo
+checking for modern makeinfo... (cached) yes
+checking how to print strings... printf
+checking for a sed that does not truncate output... (cached) /home/matt/tmp/build/obmc-y2038/tmp/hosttools/sed
+checking for grep that handles long lines and -e... (cached) /home/matt/tmp/build/obmc-y2038/tmp/hosttools/grep
+checking for egrep... (cached) /home/matt/tmp/build/obmc-y2038/tmp/hosttools/grep -E
+checking for fgrep... (cached) /home/matt/tmp/build/obmc-y2038/tmp/hosttools/grep -F
+checking for ld used by arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot... (cached) arm-openbmc-linux-gnueabi-ld --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot 
+checking if the linker (arm-openbmc-linux-gnueabi-ld --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot ) is GNU ld... (cached) yes
+checking for BSD- or MS-compatible name lister (nm)... (cached) arm-openbmc-linux-gnueabi-gcc-nm
+checking the name lister (arm-openbmc-linux-gnueabi-gcc-nm) interface... (cached) BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... (cached) 1572864
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands "+="... yes
+checking for arm-openbmc-linux-gnueabi-ld --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot  option to reload object files... (cached) -r
+checking for arm-openbmc-linux-gnueabi-objdump... (cached) arm-openbmc-linux-gnueabi-objdump
+checking how to recognize dependent libraries... (cached) pass_all
+checking for arm-openbmc-linux-gnueabi-ar... (cached) arm-openbmc-linux-gnueabi-gcc-ar
+checking for arm-openbmc-linux-gnueabi-strip... (cached) arm-openbmc-linux-gnueabi-strip
+checking for arm-openbmc-linux-gnueabi-ranlib... (cached) arm-openbmc-linux-gnueabi-gcc-ranlib
+checking command to parse arm-openbmc-linux-gnueabi-gcc-nm output from arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot object... (cached) ok
+checking how to run the C preprocessor... arm-openbmc-linux-gnueabi-gcc -E --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard 
+checking for ANSI C header files... (cached) yes
+checking for sys/types.h... (cached) yes
+checking for sys/stat.h... (cached) yes
+checking for stdlib.h... (cached) yes
+checking for string.h... (cached) yes
+checking for memory.h... (cached) yes
+checking for strings.h... (cached) yes
+checking for inttypes.h... (cached) yes
+checking for stdint.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking for dlfcn.h... (cached) yes
+checking for objdir... (cached) .libs
+checking if arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot supports -fno-rtti -fno-exceptions... (cached) no
+checking for arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot option to produce PIC... -fPIC -DPIC
+checking if arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot PIC flag -fPIC -DPIC works... (cached) yes
+checking if arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot static flag -static works... (cached) yes
+checking if arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot supports -c -o file.o... (cached) yes
+checking if arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot supports -c -o file.o... (cached) yes
+checking whether the arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot linker (arm-openbmc-linux-gnueabi-ld --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot ) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... (cached) no
+checking dynamic linker characteristics... (cached) GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking how to run the C++ preprocessor... (cached) arm-openbmc-linux-gnueabi-g++  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot -nostdinc++ -L/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/dummylib -E
+checking for ld used by arm-openbmc-linux-gnueabi-g++  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot -nostdinc++ -L/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/dummylib... (cached) arm-openbmc-linux-gnueabi-ld --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot 
+checking if the linker (arm-openbmc-linux-gnueabi-ld --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot ) is GNU ld... (cached) yes
+checking whether the arm-openbmc-linux-gnueabi-g++  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot -nostdinc++ -L/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/dummylib linker (arm-openbmc-linux-gnueabi-ld --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot ) supports shared libraries... yes
+checking for arm-openbmc-linux-gnueabi-g++  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot -nostdinc++ -L/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/dummylib option to produce PIC... -fPIC -DPIC
+checking if arm-openbmc-linux-gnueabi-g++  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot -nostdinc++ -L/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/dummylib PIC flag -fPIC -DPIC works... (cached) yes
+checking if arm-openbmc-linux-gnueabi-g++  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot -nostdinc++ -L/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/dummylib static flag -static works... (cached) yes
+checking if arm-openbmc-linux-gnueabi-g++  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot -nostdinc++ -L/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/dummylib supports -c -o file.o... (cached) yes
+checking if arm-openbmc-linux-gnueabi-g++  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot -nostdinc++ -L/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/dummylib supports -c -o file.o... (cached) yes
+checking whether the arm-openbmc-linux-gnueabi-g++  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot -nostdinc++ -L/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/dummylib linker (arm-openbmc-linux-gnueabi-ld --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot ) supports shared libraries... yes
+checking dynamic linker characteristics... (cached) GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether to enable maintainer-specific portions of Makefiles... no
+checking for ANSI C header files... (cached) yes
+checking whether time.h and sys/time.h may both be included... (cached) yes
+checking whether string.h and strings.h may both be included... (cached) yes
+checking for unistd.h... (cached) yes
+checking for semaphore.h... (cached) yes
+checking for sys/time.h... (cached) yes
+checking for sys/auxv.h... (cached) yes
+checking malloc.h usability... yes
+checking malloc.h presence... yes
+checking for malloc.h... yes
+looking for a compliant stdint.h in stdint.h, checking for uintmax_t... yes
+checking for uintptr_t... yes
+checking for int_least32_t... yes
+checking for int_fast32_t... yes
+checking for uint64_t... yes
+checking what to include in gstdint.h... stdint.h (already complete)
+checking for sys/mman.h... (cached) yes
+checking for mmap... yes
+checking whether read-only mmap of a plain file works... yes
+checking whether mmap from /dev/zero works... yes
+checking for MAP_ANON(YMOUS)... yes
+checking whether mmap with MAP_ANON(YMOUS) works... yes
+checking whether byte ordering is bigendian... (cached) no
+checking for strtoull... (cached) yes
+checking for memalign... (cached) yes
+checking for posix_memalign... (cached) yes
+checking for getauxval... yes
+checking whether the target supports thread-local storage... (cached) yes
+checking whether the target supports hidden visibility... yes
+checking whether the target supports dllexport... no
+checking whether the target supports symbol aliases... yes
+checking for ld used by arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard  --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot... (cached) arm-openbmc-linux-gnueabi-ld --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot 
+checking if the linker (arm-openbmc-linux-gnueabi-ld --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/recipe-sysroot ) is GNU ld... (cached) yes
+checking for -mclear-hwcap... no
+checking whether __AVX__ is declared... no
+checking for shared libgcc... yes
+configure: versioning on shared library symbols is gnu
+checking assembler .cfi pseudo-op support... yes
+checking how size_t is mangled... j
+checking whether the target supports __sync_*_compare_and_swap... yes
+checking whether the target supports 64-bit __sync_*_compare_and_swap... yes
+checking whether weak refs work like ELF... yes
+configure: updating cache /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gcc-runtime/12.2.0-r0/gcc-12.2.0/build.arm-openbmc-linux-gnueabi.arm-openbmc-linux-gnueabi/config.cache
+checking for CET support... no
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating testsuite/Makefile
+config.status: creating libitm.spec
+config.status: creating config.h
+config.status: executing default-1 commands
+config.status: executing depfiles commands
+config.status: executing libtool commands
+config.status: executing gstdint.h commands
+configure: WARNING: unrecognized options: --with-libtool-sysroot, --enable-languages, --enable-threads, --enable-default-pie, --enable-c99, --enable-long-long, --enable-libstdcxx-pch, --without-local-prefix, --disable-install-libiberty, --disable-libssp, --enable-libitm, --enable-lto, --disable-bootstrap, --with-system-zlib, --with-linker-hash-style, --enable-linker-build-id, --with-ppl, --with-cloog, --enable-checking, --enable-cheaders, --without-isl, --with-gxx-include-dir, --with-sysroot, --with-build-sysroot, --enable-standard-branch-protection, --disable-nls, --with-glibc-version, --enable-initfini-array
+DEBUG: Shell function do_configure finished
+DEBUG: Executing python function do_qa_configure
+NOTE: Checking autotools environment for common misconfiguration
+NOTE: Checking configure output for unrecognised options
+DEBUG: Python function do_qa_configure finished
+DEBUG: Executing shell function autotools_postconfigure
+DEBUG: Shell function autotools_postconfigure finished

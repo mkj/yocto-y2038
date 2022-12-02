@@ -1,0 +1,69 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: ['quilt-native', 'patch-native', 'attr-native', 'libtool-native', 'gettext-minimal-native', 'texinfo-dummy-native']
+NOTE: Skipping as already exists in sysroot: []
+DEBUG: sed -e 's:^[^/]*/:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gzip/1.12-r0/recipe-sysroot-native/:g' /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/quilt-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/libtool-native/fixmepath | xargs sed -i -e 's:FIXMESTAGINGDIRTARGET:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gzip/1.12-r0/recipe-sysroot:g; s:FIXMESTAGINGDIRHOST:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gzip/1.12-r0/recipe-sysroot-native:g' -e 's:FIXME_PSEUDO_SYSROOT:/home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/pseudo-native:g' -e 's:FIXME_HOSTTOOLS_DIR:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:g' -e 's:FIXME_PKGDATA_DIR:/home/matt/tmp/build/obmc-y2038/tmp/pkgdata/evb-ast2600:g' -e 's:FIXME_PSEUDO_LOCALSTATEDIR:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gzip/1.12-r0/pseudo/:g' -e 's:FIXME_LOGFIFO:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/gzip/1.12-r0/temp/fifo.785115:g'
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function do_patch
+DEBUG: Executing python function patch_do_patch
+DEBUG: Searching for run-ptest in paths:
+    /home/matt/src/openbmc/meta/recipes-extended/gzip/gzip-1.12/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/gzip/gzip/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/gzip/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/gzip/gzip-1.12/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/gzip/gzip/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/gzip/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/gzip/gzip-1.12/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/gzip/gzip/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/gzip/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/gzip/gzip-1.12/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/gzip/gzip/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/gzip/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/gzip/gzip-1.12/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/gzip/gzip/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/gzip/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/gzip/gzip-1.12/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/gzip/gzip/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/gzip/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/gzip/gzip-1.12/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/gzip/gzip/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/gzip/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/gzip/gzip-1.12/arm
+    /home/matt/src/openbmc/meta/recipes-extended/gzip/gzip/arm
+    /home/matt/src/openbmc/meta/recipes-extended/gzip/files/arm
+    /home/matt/src/openbmc/meta/recipes-extended/gzip/gzip-1.12/
+    /home/matt/src/openbmc/meta/recipes-extended/gzip/gzip/
+    /home/matt/src/openbmc/meta/recipes-extended/gzip/files/
+DEBUG: Searching for wrong-path-fix.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-extended/gzip/gzip-1.12/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/gzip/gzip/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/gzip/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/gzip/gzip-1.12/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/gzip/gzip/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/gzip/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/gzip/gzip-1.12/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/gzip/gzip/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/gzip/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/gzip/gzip-1.12/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/gzip/gzip/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/gzip/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/gzip/gzip-1.12/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/gzip/gzip/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/gzip/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/gzip/gzip-1.12/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/gzip/gzip/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/gzip/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/gzip/gzip-1.12/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/gzip/gzip/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/gzip/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/gzip/gzip-1.12/arm
+    /home/matt/src/openbmc/meta/recipes-extended/gzip/gzip/arm
+    /home/matt/src/openbmc/meta/recipes-extended/gzip/files/arm
+    /home/matt/src/openbmc/meta/recipes-extended/gzip/gzip-1.12/
+    /home/matt/src/openbmc/meta/recipes-extended/gzip/gzip/
+    /home/matt/src/openbmc/meta/recipes-extended/gzip/files/
+NOTE: Applying patch 'wrong-path-fix.patch' (../../../src/openbmc/meta/recipes-extended/gzip/gzip-1.12/wrong-path-fix.patch)
+DEBUG: Python function patch_do_patch finished
+DEBUG: Python function do_patch finished
+DEBUG: Executing python function do_qa_patch
+DEBUG: Python function do_qa_patch finished

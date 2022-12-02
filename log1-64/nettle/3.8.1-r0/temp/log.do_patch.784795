@@ -1,0 +1,127 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: ['quilt-native', 'patch-native', 'attr-native']
+NOTE: Skipping as already exists in sysroot: ['libtool-native', 'gettext-minimal-native', 'texinfo-dummy-native']
+DEBUG: sed -e 's:^[^/]*/:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nettle/3.8.1-r0/recipe-sysroot-native/:g' /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/quilt-native/fixmepath | xargs sed -i -e 's:FIXMESTAGINGDIRTARGET:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nettle/3.8.1-r0/recipe-sysroot:g; s:FIXMESTAGINGDIRHOST:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nettle/3.8.1-r0/recipe-sysroot-native:g' -e 's:FIXME_PSEUDO_SYSROOT:/home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/pseudo-native:g' -e 's:FIXME_HOSTTOOLS_DIR:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:g' -e 's:FIXME_PKGDATA_DIR:/home/matt/tmp/build/obmc-y2038/tmp/pkgdata/evb-ast2600:g' -e 's:FIXME_PSEUDO_LOCALSTATEDIR:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nettle/3.8.1-r0/pseudo/:g' -e 's:FIXME_LOGFIFO:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/nettle/3.8.1-r0/temp/fifo.784795:g'
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function do_patch
+DEBUG: Executing python function patch_do_patch
+DEBUG: Searching for Add-target-to-only-build-tests-not-run-them.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-support/nettle/nettle-3.8.1/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/nettle/nettle/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/nettle/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/nettle/nettle-3.8.1/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/nettle/nettle/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/nettle/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/nettle/nettle-3.8.1/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-support/nettle/nettle/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-support/nettle/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-support/nettle/nettle-3.8.1/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-support/nettle/nettle/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-support/nettle/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-support/nettle/nettle-3.8.1/aspeed
+    /home/matt/src/openbmc/meta/recipes-support/nettle/nettle/aspeed
+    /home/matt/src/openbmc/meta/recipes-support/nettle/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-support/nettle/nettle-3.8.1/armv7a
+    /home/matt/src/openbmc/meta/recipes-support/nettle/nettle/armv7a
+    /home/matt/src/openbmc/meta/recipes-support/nettle/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-support/nettle/nettle-3.8.1/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-support/nettle/nettle/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-support/nettle/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-support/nettle/nettle-3.8.1/arm
+    /home/matt/src/openbmc/meta/recipes-support/nettle/nettle/arm
+    /home/matt/src/openbmc/meta/recipes-support/nettle/files/arm
+    /home/matt/src/openbmc/meta/recipes-support/nettle/nettle-3.8.1/
+    /home/matt/src/openbmc/meta/recipes-support/nettle/nettle/
+    /home/matt/src/openbmc/meta/recipes-support/nettle/files/
+DEBUG: Searching for run-ptest in paths:
+    /home/matt/src/openbmc/meta/recipes-support/nettle/nettle-3.8.1/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/nettle/nettle/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/nettle/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/nettle/nettle-3.8.1/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/nettle/nettle/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/nettle/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/nettle/nettle-3.8.1/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-support/nettle/nettle/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-support/nettle/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-support/nettle/nettle-3.8.1/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-support/nettle/nettle/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-support/nettle/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-support/nettle/nettle-3.8.1/aspeed
+    /home/matt/src/openbmc/meta/recipes-support/nettle/nettle/aspeed
+    /home/matt/src/openbmc/meta/recipes-support/nettle/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-support/nettle/nettle-3.8.1/armv7a
+    /home/matt/src/openbmc/meta/recipes-support/nettle/nettle/armv7a
+    /home/matt/src/openbmc/meta/recipes-support/nettle/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-support/nettle/nettle-3.8.1/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-support/nettle/nettle/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-support/nettle/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-support/nettle/nettle-3.8.1/arm
+    /home/matt/src/openbmc/meta/recipes-support/nettle/nettle/arm
+    /home/matt/src/openbmc/meta/recipes-support/nettle/files/arm
+    /home/matt/src/openbmc/meta/recipes-support/nettle/nettle-3.8.1/
+    /home/matt/src/openbmc/meta/recipes-support/nettle/nettle/
+    /home/matt/src/openbmc/meta/recipes-support/nettle/files/
+DEBUG: Searching for check-header-files-of-openssl-only-if-enable_.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-support/nettle/nettle-3.8.1/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/nettle/nettle/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/nettle/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/nettle/nettle-3.8.1/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/nettle/nettle/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/nettle/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/nettle/nettle-3.8.1/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-support/nettle/nettle/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-support/nettle/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-support/nettle/nettle-3.8.1/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-support/nettle/nettle/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-support/nettle/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-support/nettle/nettle-3.8.1/aspeed
+    /home/matt/src/openbmc/meta/recipes-support/nettle/nettle/aspeed
+    /home/matt/src/openbmc/meta/recipes-support/nettle/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-support/nettle/nettle-3.8.1/armv7a
+    /home/matt/src/openbmc/meta/recipes-support/nettle/nettle/armv7a
+    /home/matt/src/openbmc/meta/recipes-support/nettle/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-support/nettle/nettle-3.8.1/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-support/nettle/nettle/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-support/nettle/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-support/nettle/nettle-3.8.1/arm
+    /home/matt/src/openbmc/meta/recipes-support/nettle/nettle/arm
+    /home/matt/src/openbmc/meta/recipes-support/nettle/files/arm
+    /home/matt/src/openbmc/meta/recipes-support/nettle/nettle-3.8.1/
+    /home/matt/src/openbmc/meta/recipes-support/nettle/nettle/
+    /home/matt/src/openbmc/meta/recipes-support/nettle/files/
+DEBUG: Searching for dlopen-test.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-support/nettle/nettle-3.8.1/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/nettle/nettle/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/nettle/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/nettle/nettle-3.8.1/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/nettle/nettle/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/nettle/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-support/nettle/nettle-3.8.1/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-support/nettle/nettle/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-support/nettle/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-support/nettle/nettle-3.8.1/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-support/nettle/nettle/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-support/nettle/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-support/nettle/nettle-3.8.1/aspeed
+    /home/matt/src/openbmc/meta/recipes-support/nettle/nettle/aspeed
+    /home/matt/src/openbmc/meta/recipes-support/nettle/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-support/nettle/nettle-3.8.1/armv7a
+    /home/matt/src/openbmc/meta/recipes-support/nettle/nettle/armv7a
+    /home/matt/src/openbmc/meta/recipes-support/nettle/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-support/nettle/nettle-3.8.1/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-support/nettle/nettle/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-support/nettle/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-support/nettle/nettle-3.8.1/arm
+    /home/matt/src/openbmc/meta/recipes-support/nettle/nettle/arm
+    /home/matt/src/openbmc/meta/recipes-support/nettle/files/arm
+    /home/matt/src/openbmc/meta/recipes-support/nettle/nettle-3.8.1/
+    /home/matt/src/openbmc/meta/recipes-support/nettle/nettle/
+    /home/matt/src/openbmc/meta/recipes-support/nettle/files/
+NOTE: Applying patch 'Add-target-to-only-build-tests-not-run-them.patch' (../../../src/openbmc/meta/recipes-support/nettle/nettle/Add-target-to-only-build-tests-not-run-them.patch)
+NOTE: Applying patch 'check-header-files-of-openssl-only-if-enable_.patch' (../../../src/openbmc/meta/recipes-support/nettle/nettle/check-header-files-of-openssl-only-if-enable_.patch)
+NOTE: Applying patch 'dlopen-test.patch' (../../../src/openbmc/meta/recipes-support/nettle/nettle/dlopen-test.patch)
+DEBUG: Python function patch_do_patch finished
+DEBUG: Python function do_patch finished
+DEBUG: Executing python function do_qa_patch
+DEBUG: Python function do_qa_patch finished

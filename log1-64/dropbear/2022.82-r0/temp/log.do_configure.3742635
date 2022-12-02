@@ -1,0 +1,311 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/libxcrypt/libxcrypt_4.4.28.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/systemd/systemd-systemctl-native.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/zlib/zlib_1.2.13.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-cross_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-native_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/opkg-utils/opkg-utils_0.5.0.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-extended/pam/libpam_1.3.1.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/autoconf/autoconf_2.71.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/automake/automake_1.16.5.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: []
+NOTE: Skipping as already exists in sysroot: ['glibc', 'libxcrypt', 'systemd-systemctl-native', 'zlib', 'gcc-cross-arm', 'gcc-runtime', 'libtool-cross', 'libtool-native', 'opkg-utils', 'quilt-native', 'libpam', 'autoconf-native', 'automake-native', 'patch-native', 'pseudo-native', 'texinfo-dummy-native', 'm4-native', 'gnu-config-native', 'linux-libc-headers', 'binutils-cross-arm', 'attr-native', 'cracklib', 'flex', 'zstd-native', 'flex-native', 'zlib-native', 'gmp-native', 'mpfr-native', 'libmpc-native', 'xz-native', 'libgcc', 'gettext-minimal-native']
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing shell function autotools_preconfigure
+DEBUG: Shell function autotools_preconfigure finished
+DEBUG: Executing python function autotools_aclocals
+DEBUG: SITE files ['endian-little', 'bit-32', 'arm-common', 'arm-32', 'common-linux', 'common-glibc', 'arm-linux', 'arm-linux-gnueabi', 'common']
+DEBUG: Python function autotools_aclocals finished
+DEBUG: Executing shell function do_configure
+automake (GNU automake) 1.16.5
+Copyright (C) 2021 Free Software Foundation, Inc.
+License GPLv2+: GNU GPL version 2 or later <https://gnu.org/licenses/gpl-2.0.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Written by Tom Tromey <tromey@redhat.com>
+       and Alexandre Duret-Lutz <adl@gnu.org>.
+AUTOV is 1.16
+NOTE: Executing ACLOCAL="aclocal --system-acdir=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dropbear/2022.82-r0/recipe-sysroot/usr/share/aclocal/ --automake-acdir=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dropbear/2022.82-r0/recipe-sysroot-native/usr/share/aclocal-1.16" autoreconf -Wcross --verbose --install --force --exclude=autopoint --exclude=gtkdocize -I /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dropbear/2022.82-r0/recipe-sysroot-native/usr/share/aclocal/
+autoreconf: export WARNINGS=cross,no-obsolete
+autoreconf: Entering directory '.'
+autoreconf: configure.ac: not using Gettext
+autoreconf: running: aclocal --system-acdir=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dropbear/2022.82-r0/recipe-sysroot/usr/share/aclocal/ --automake-acdir=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dropbear/2022.82-r0/recipe-sysroot-native/usr/share/aclocal-1.16 -I /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dropbear/2022.82-r0/recipe-sysroot-native/usr/share/aclocal/ --force 
+configure.ac:28: warning: underquoted definition of DB_TRYADDCFLAGS
+configure.ac:28:   run info Automake 'Extending aclocal'
+configure.ac:28:   or see https://www.gnu.org/software/automake/manual/automake.html#Extending-aclocal
+autoreconf: configure.ac: tracing
+autoreconf: configure.ac: not using Libtool
+autoreconf: configure.ac: not using Intltool
+autoreconf: configure.ac: not using Gtkdoc
+autoreconf: running: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dropbear/2022.82-r0/recipe-sysroot-native/usr/bin/autoconf --include=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dropbear/2022.82-r0/recipe-sysroot-native/usr/share/aclocal/ --force
+autoreconf: running: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dropbear/2022.82-r0/recipe-sysroot-native/usr/bin/autoheader --include=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dropbear/2022.82-r0/recipe-sysroot-native/usr/share/aclocal/ --force
+autoreconf: configure.ac: not using Automake
+autoreconf: './config.sub' is updated
+autoreconf: './config.guess' is updated
+autoreconf: Leaving directory '.'
+NOTE: Running ../dropbear-2022.82/configure  --build=x86_64-linux 		  --host=arm-openbmc-linux-gnueabi 		  --target=arm-openbmc-linux-gnueabi 		  --prefix=/usr 		  --exec_prefix=/usr 		  --bindir=/usr/bin 		  --sbindir=/usr/sbin 		  --libexecdir=/usr/libexec 		  --datadir=/usr/share 		  --sysconfdir=/etc 		  --sharedstatedir=/com 		  --localstatedir=/var 		  --libdir=/usr/lib 		  --includedir=/usr/include 		  --oldincludedir=/usr/include 		  --infodir=/usr/share/info 		  --mandir=/usr/share/man 		  --disable-silent-rules 		  --disable-dependency-tracking 		  --with-libtool-sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dropbear/2022.82-r0/recipe-sysroot  --disable-harden --disable-static  --enable-pam --enable-bundled-libtom 
+configure: WARNING: unrecognized options: --disable-silent-rules, --disable-dependency-tracking, --with-libtool-sysroot
+configure: loading site script /home/matt/src/openbmc/meta/site/endian-little
+configure: loading site script /home/matt/src/openbmc/meta/site/arm-common
+configure: loading site script /home/matt/src/openbmc/meta/site/arm-32
+configure: loading site script /home/matt/src/openbmc/meta/site/common-linux
+configure: loading site script /home/matt/src/openbmc/meta/site/common-glibc
+configure: loading site script /home/matt/src/openbmc/meta/site/arm-linux
+configure: loading site script /home/matt/src/openbmc/meta/site/common
+checking for arm-openbmc-linux-gnueabi-gcc... arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dropbear/2022.82-r0/recipe-sysroot
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... yes
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dropbear/2022.82-r0/recipe-sysroot accepts -g... yes
+checking for arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dropbear/2022.82-r0/recipe-sysroot option to enable C11 features... none needed
+configure: Checking if compiler 'arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dropbear/2022.82-r0/recipe-sysroot' supports -Wno-pointer-sign
+configure: Setting -Wno-pointer-sign
+configure: Checking if compiler 'arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dropbear/2022.82-r0/recipe-sysroot' supports -fno-strict-overflow
+configure: Setting -fno-strict-overflow
+configure: Disabling hardened build flags
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... no
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... arm-openbmc-linux-gnueabi
+checking for arm-openbmc-linux-gnueabi-ar... arm-openbmc-linux-gnueabi-gcc-ar
+checking for arm-openbmc-linux-gnueabi-ranlib... arm-openbmc-linux-gnueabi-gcc-ranlib
+checking for arm-openbmc-linux-gnueabi-strip... arm-openbmc-linux-gnueabi-strip
+checking for arm-openbmc-linux-gnueabi-install... no
+checking for install... install
+configure: WARNING: using cross tools not prefixed with host triplet
+checking for arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dropbear/2022.82-r0/recipe-sysroot options needed to detect all undeclared functions... none needed
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for sys/select.h... yes
+checking for sys/socket.h... yes
+checking whether __UCLIBC__ is declared... no
+checking for crypt... no
+checking for crypt in -lcrypt... yes
+checking for deflate in -lz... yes
+configure: Enabling zlib
+checking for pam_authenticate in -lpam... yes
+configure: Enabling PAM
+checking for pam_fail_delay... yes
+configure: Using openpty if available
+checking for library containing openpty... none required
+configure: Enabling syslog
+checking for shadow.h... yes
+configure: Using shadow passwords if available
+configure: Disabling fuzzing
+checking for sys/wait.h that is POSIX.1 compatible... yes
+checking for netinet/in.h... yes
+checking for netinet/tcp.h... yes
+checking for crypt.h... yes
+checking for pty.h... yes
+checking for libutil.h... no
+checking for libgen.h... yes
+checking for inttypes.h... (cached) yes
+checking for stropts.h... no
+checking for utmp.h... yes
+checking for utmpx.h... yes
+checking for lastlog.h... yes
+checking for paths.h... yes
+checking for util.h... no
+checking for netdb.h... yes
+checking for security/pam_appl.h... yes
+checking for pam/pam_appl.h... no
+checking for netinet/in_systm.h... yes
+checking for sys/uio.h... yes
+checking for linux/pkt_sched.h... yes
+checking for sys/random.h... yes
+checking for sys/prctl.h... yes
+checking for an ANSI C-conforming const... yes
+checking how to run the C preprocessor... arm-openbmc-linux-gnueabi-gcc -E --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dropbear/2022.82-r0/recipe-sysroot  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security
+checking for grep that handles long lines and -e... /home/matt/tmp/build/obmc-y2038/tmp/hosttools/grep
+checking for egrep... /home/matt/tmp/build/obmc-y2038/tmp/hosttools/grep -E
+checking for uid_t in sys/types.h... (cached) {ac_cv_type_uid_t=yes}
+checking for mode_t... yes
+checking for pid_t... yes
+checking for size_t... yes
+checking for uint8_t... yes
+checking for u_int8_t... yes
+checking for uint16_t... yes
+checking for u_int16_t... yes
+checking for uint32_t... yes
+checking for u_int32_t... yes
+checking for struct sockaddr_storage... no
+checking for socklen_t... yes
+checking for struct sockaddr_storage... yes
+checking for struct sockaddr_in6... yes
+checking for struct in6_addr... yes
+checking for struct addrinfo... yes
+checking for gai_strerror... yes
+checking for struct utmp.ut_host... yes
+checking for struct utmp.ut_pid... yes
+checking for struct utmp.ut_type... yes
+checking for struct utmp.ut_tv... yes
+checking for struct utmp.ut_id... yes
+checking for struct utmp.ut_addr... yes
+checking for struct utmp.ut_addr_v6... yes
+checking for struct utmp.ut_exit... yes
+checking for struct utmp.ut_time... yes
+checking for struct utmpx.ut_host... yes
+checking for struct utmpx.ut_syslen... no
+checking for struct utmpx.ut_type... yes
+checking for struct utmpx.ut_id... yes
+checking for struct utmpx.ut_addr... no
+checking for struct utmpx.ut_addr_v6... yes
+checking for struct utmpx.ut_time... no
+checking for struct utmpx.ut_tv... yes
+checking for struct sockaddr_storage.ss_family... yes
+checking for endutent... yes
+checking for getutent... yes
+checking for getutid... yes
+checking for getutline... yes
+checking for pututline... yes
+checking for setutent... yes
+checking for utmpname... yes
+checking for endutxent... yes
+checking for getutxent... yes
+checking for getutxid... yes
+checking for getutxline... yes
+checking for pututxline... yes
+checking for setutxent... yes
+checking for utmpxname... yes
+checking for logout... yes
+checking for updwtmp... yes
+checking for logwtmp... yes
+checking for clock_gettime... yes
+checking for mach/mach_time.h... no
+checking for mach_absolute_time... no
+checking for explicit_bzero... yes
+checking for memset_s... no
+checking for getrandom... yes
+configure: Forcing bundled libtom*
+checking for library containing login... none required
+checking for logout... (cached) yes
+checking for updwtmp... (cached) yes
+checking for logwtmp... (cached) yes
+checking if your system defines LASTLOG_FILE... no
+checking if your system defines _PATH_LASTLOG... yes
+checking if your system defines UTMP_FILE... yes
+checking if your system defines WTMP_FILE... yes
+checking if your system defines UTMPX_FILE... yes
+checking if your system defines WTMPX_FILE... yes
+checking whether arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/dropbear/2022.82-r0/recipe-sysroot needs -traditional... no
+checking for working memcmp... (cached) yes
+checking types of arguments for select... int,fd_set *,struct timeval *
+checking for getpass... yes
+checking for getspnam... yes
+checking for getusershell... yes
+checking for putenv... yes
+checking for clearenv... yes
+checking for strlcpy... no
+checking for strlcat... no
+checking for daemon... yes
+checking for basename... yes
+checking for _getpty... no
+checking for getaddrinfo... (cached) yes
+checking for freeaddrinfo... yes
+checking for getnameinfo... yes
+checking for fork... yes
+checking for writev... yes
+checking for getgrouplist... yes
+checking for fexecve... yes
+checking for library containing basename... none required
+mkdir: created directory 'libtomcrypt'
+mkdir: created directory 'libtomcrypt/doc'
+mkdir: created directory 'libtomcrypt/tests'
+mkdir: created directory 'libtomcrypt/testprof'
+mkdir: created directory 'libtomcrypt/notes'
+mkdir: created directory 'libtomcrypt/notes/rsa-testvectors'
+mkdir: created directory 'libtomcrypt/notes/etc'
+mkdir: created directory 'libtomcrypt/src'
+mkdir: created directory 'libtomcrypt/src/hashes'
+mkdir: created directory 'libtomcrypt/src/hashes/sha2'
+mkdir: created directory 'libtomcrypt/src/hashes/chc'
+mkdir: created directory 'libtomcrypt/src/hashes/whirl'
+mkdir: created directory 'libtomcrypt/src/hashes/helper'
+mkdir: created directory 'libtomcrypt/src/ciphers'
+mkdir: created directory 'libtomcrypt/src/ciphers/twofish'
+mkdir: created directory 'libtomcrypt/src/ciphers/safer'
+mkdir: created directory 'libtomcrypt/src/ciphers/aes'
+mkdir: created directory 'libtomcrypt/src/mac'
+mkdir: created directory 'libtomcrypt/src/mac/pmac'
+mkdir: created directory 'libtomcrypt/src/mac/f9'
+mkdir: created directory 'libtomcrypt/src/mac/pelican'
+mkdir: created directory 'libtomcrypt/src/mac/hmac'
+mkdir: created directory 'libtomcrypt/src/mac/poly1305'
+mkdir: created directory 'libtomcrypt/src/mac/blake2'
+mkdir: created directory 'libtomcrypt/src/mac/omac'
+mkdir: created directory 'libtomcrypt/src/mac/xcbc'
+mkdir: created directory 'libtomcrypt/src/misc'
+mkdir: created directory 'libtomcrypt/src/misc/base64'
+mkdir: created directory 'libtomcrypt/src/misc/hkdf'
+mkdir: created directory 'libtomcrypt/src/misc/crypt'
+mkdir: created directory 'libtomcrypt/src/misc/pkcs5'
+mkdir: created directory 'libtomcrypt/src/stream'
+mkdir: created directory 'libtomcrypt/src/stream/chacha'
+mkdir: created directory 'libtomcrypt/src/stream/rc4'
+mkdir: created directory 'libtomcrypt/src/stream/sober128'
+mkdir: created directory 'libtomcrypt/src/headers'
+mkdir: created directory 'libtomcrypt/src/encauth'
+mkdir: created directory 'libtomcrypt/src/encauth/ocb'
+mkdir: created directory 'libtomcrypt/src/encauth/ccm'
+mkdir: created directory 'libtomcrypt/src/encauth/chachapoly'
+mkdir: created directory 'libtomcrypt/src/encauth/gcm'
+mkdir: created directory 'libtomcrypt/src/encauth/eax'
+mkdir: created directory 'libtomcrypt/src/encauth/ocb3'
+mkdir: created directory 'libtomcrypt/src/modes'
+mkdir: created directory 'libtomcrypt/src/modes/lrw'
+mkdir: created directory 'libtomcrypt/src/modes/ofb'
+mkdir: created directory 'libtomcrypt/src/modes/xts'
+mkdir: created directory 'libtomcrypt/src/modes/f8'
+mkdir: created directory 'libtomcrypt/src/modes/ctr'
+mkdir: created directory 'libtomcrypt/src/modes/cfb'
+mkdir: created directory 'libtomcrypt/src/modes/ecb'
+mkdir: created directory 'libtomcrypt/src/modes/cbc'
+mkdir: created directory 'libtomcrypt/src/math'
+mkdir: created directory 'libtomcrypt/src/math/fp'
+mkdir: created directory 'libtomcrypt/src/prngs'
+mkdir: created directory 'libtomcrypt/src/pk'
+mkdir: created directory 'libtomcrypt/src/pk/dh'
+mkdir: created directory 'libtomcrypt/src/pk/ecc'
+mkdir: created directory 'libtomcrypt/src/pk/pkcs1'
+mkdir: created directory 'libtomcrypt/src/pk/rsa'
+mkdir: created directory 'libtomcrypt/src/pk/katja'
+mkdir: created directory 'libtomcrypt/src/pk/asn1'
+mkdir: created directory 'libtomcrypt/src/pk/asn1/der'
+mkdir: created directory 'libtomcrypt/src/pk/asn1/der/teletex_string'
+mkdir: created directory 'libtomcrypt/src/pk/asn1/der/utf8'
+mkdir: created directory 'libtomcrypt/src/pk/asn1/der/printable_string'
+mkdir: created directory 'libtomcrypt/src/pk/asn1/der/ia5'
+mkdir: created directory 'libtomcrypt/src/pk/asn1/der/octet'
+mkdir: created directory 'libtomcrypt/src/pk/asn1/der/generalizedtime'
+mkdir: created directory 'libtomcrypt/src/pk/asn1/der/sequence'
+mkdir: created directory 'libtomcrypt/src/pk/asn1/der/short_integer'
+mkdir: created directory 'libtomcrypt/src/pk/asn1/der/set'
+mkdir: created directory 'libtomcrypt/src/pk/asn1/der/object_identifier'
+mkdir: created directory 'libtomcrypt/src/pk/asn1/der/integer'
+mkdir: created directory 'libtomcrypt/src/pk/asn1/der/boolean'
+mkdir: created directory 'libtomcrypt/src/pk/asn1/der/bit'
+mkdir: created directory 'libtomcrypt/src/pk/asn1/der/utctime'
+mkdir: created directory 'libtomcrypt/src/pk/asn1/der/choice'
+mkdir: created directory 'libtomcrypt/src/pk/dsa'
+mkdir: created directory 'libtomcrypt/demos'
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating libtomcrypt/Makefile
+config.status: creating libtommath/Makefile
+config.status: creating test/Makefile
+config.status: creating config.h
+configure: 
+configure: Using bundled libtomcrypt and libtommath
+configure: 
+configure: Now edit localoptions.h to choose features.
+configure: WARNING: unrecognized options: --disable-silent-rules, --disable-dependency-tracking, --with-libtool-sysroot
+DEBUG: Shell function do_configure finished
+DEBUG: Executing python function do_qa_configure
+NOTE: Checking autotools environment for common misconfiguration
+NOTE: Checking configure output for unrecognised options
+DEBUG: Python function do_qa_configure finished
+DEBUG: Executing shell function autotools_postconfigure
+DEBUG: Shell function autotools_postconfigure finished

@@ -1,0 +1,215 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: ['quilt-native', 'patch-native', 'libtool-native', 'attr-native', 'texinfo-dummy-native', 'gettext-minimal-native']
+NOTE: Skipping as already exists in sysroot: []
+DEBUG: sed -e 's:^[^/]*/:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/lrzsz/0.12.20-r6/recipe-sysroot-native/:g' /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/quilt-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/libtool-native/fixmepath | xargs sed -i -e 's:FIXMESTAGINGDIRTARGET:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/lrzsz/0.12.20-r6/recipe-sysroot:g; s:FIXMESTAGINGDIRHOST:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/lrzsz/0.12.20-r6/recipe-sysroot-native:g' -e 's:FIXME_PSEUDO_SYSROOT:/home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/pseudo-native:g' -e 's:FIXME_HOSTTOOLS_DIR:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:g' -e 's:FIXME_PKGDATA_DIR:/home/matt/tmp/build/obmc-y2038/tmp/pkgdata/evb-ast2600:g' -e 's:FIXME_PSEUDO_LOCALSTATEDIR:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/lrzsz/0.12.20-r6/pseudo/:g' -e 's:FIXME_LOGFIFO:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/lrzsz/0.12.20-r6/temp/fifo.1965902:g'
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function do_patch
+DEBUG: Executing python function patch_do_patch
+DEBUG: Searching for autotools-update.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz-0.12.20/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz-0.12.20/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz-0.12.20/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz-0.12.20/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz-0.12.20/aspeed
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz/aspeed
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz-0.12.20/armv7a
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz/armv7a
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz-0.12.20/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz-0.12.20/arm
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz/arm
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/files/arm
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz-0.12.20/
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz/
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/files/
+DEBUG: Searching for autotools.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz-0.12.20/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz-0.12.20/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz-0.12.20/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz-0.12.20/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz-0.12.20/aspeed
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz/aspeed
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz-0.12.20/armv7a
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz/armv7a
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz-0.12.20/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz-0.12.20/arm
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz/arm
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/files/arm
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz-0.12.20/
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz/
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/files/
+DEBUG: Searching for makefile.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz-0.12.20/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz-0.12.20/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz-0.12.20/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz-0.12.20/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz-0.12.20/aspeed
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz/aspeed
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz-0.12.20/armv7a
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz/armv7a
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz-0.12.20/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz-0.12.20/arm
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz/arm
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/files/arm
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz-0.12.20/
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz/
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/files/
+DEBUG: Searching for lrzsz-check-locale.h.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz-0.12.20/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz-0.12.20/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz-0.12.20/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz-0.12.20/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz-0.12.20/aspeed
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz/aspeed
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz-0.12.20/armv7a
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz/armv7a
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz-0.12.20/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz-0.12.20/arm
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz/arm
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/files/arm
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz-0.12.20/
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz/
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/files/
+DEBUG: Searching for cve-2018-10195.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz-0.12.20/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz-0.12.20/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz-0.12.20/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz-0.12.20/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz-0.12.20/aspeed
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz/aspeed
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz-0.12.20/armv7a
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz/armv7a
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz-0.12.20/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz-0.12.20/arm
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz/arm
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/files/arm
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz-0.12.20/
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz/
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/files/
+DEBUG: Searching for include.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz-0.12.20/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz-0.12.20/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz-0.12.20/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz-0.12.20/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz-0.12.20/aspeed
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz/aspeed
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz-0.12.20/armv7a
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz/armv7a
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz-0.12.20/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz-0.12.20/arm
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz/arm
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/files/arm
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz-0.12.20/
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz/
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/files/
+DEBUG: Searching for 0001-Fix-cross-compilation-using-autoconf-detected-AR.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz-0.12.20/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz-0.12.20/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz-0.12.20/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz-0.12.20/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz-0.12.20/aspeed
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz/aspeed
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz-0.12.20/armv7a
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz/armv7a
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz-0.12.20/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz-0.12.20/arm
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz/arm
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/files/arm
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz-0.12.20/
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/lrzsz/
+    /home/matt/src/openbmc/meta/recipes-bsp/lrzsz/files/
+NOTE: Applying patch 'autotools-update.patch' (../../../src/openbmc/meta/recipes-bsp/lrzsz/lrzsz-0.12.20/autotools-update.patch)
+NOTE: Applying patch 'autotools.patch' (../../../src/openbmc/meta/recipes-bsp/lrzsz/lrzsz-0.12.20/autotools.patch)
+NOTE: Applying patch 'makefile.patch' (../../../src/openbmc/meta/recipes-bsp/lrzsz/lrzsz-0.12.20/makefile.patch)
+NOTE: Applying patch 'lrzsz-check-locale.h.patch' (../../../src/openbmc/meta/recipes-bsp/lrzsz/lrzsz-0.12.20/lrzsz-check-locale.h.patch)
+NOTE: Applying patch 'cve-2018-10195.patch' (../../../src/openbmc/meta/recipes-bsp/lrzsz/lrzsz-0.12.20/cve-2018-10195.patch)
+NOTE: Applying patch 'include.patch' (../../../src/openbmc/meta/recipes-bsp/lrzsz/lrzsz-0.12.20/include.patch)
+NOTE: Applying patch '0001-Fix-cross-compilation-using-autoconf-detected-AR.patch' (../../../src/openbmc/meta/recipes-bsp/lrzsz/lrzsz-0.12.20/0001-Fix-cross-compilation-using-autoconf-detected-AR.patch)
+DEBUG: Python function patch_do_patch finished
+DEBUG: Python function do_patch finished
+DEBUG: Executing python function do_qa_patch
+DEBUG: Python function do_qa_patch finished

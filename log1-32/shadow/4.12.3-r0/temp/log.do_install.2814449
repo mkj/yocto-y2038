@@ -1,0 +1,191 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/libxcrypt/libxcrypt_4.4.28.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-cross_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-native_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/opkg-utils/opkg-utils_0.5.0.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-extended/pam/libpam_1.3.1.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-core/gettext/gettext_0.21.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/autoconf/autoconf_2.71.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/automake/automake_1.16.5.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: []
+NOTE: Skipping as already exists in sysroot: ['glibc', 'libxcrypt', 'gcc-cross-arm', 'gcc-runtime', 'libtool-cross', 'libtool-native', 'opkg-utils', 'quilt-native', 'libpam', 'gettext-native', 'autoconf-native', 'automake-native', 'patch-native', 'pseudo-native', 'texinfo-dummy-native', 'binutils-cross-arm', 'libgcc', 'linux-libc-headers', 'gnu-config-native', 'm4-native', 'attr-native', 'gettext-minimal-native', 'mpfr-native', 'libmpc-native', 'xz-native', 'flex-native', 'zstd-native', 'zlib-native', 'gmp-native', 'cracklib', 'flex', 'zlib']
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function autotools_aclocals
+DEBUG: SITE files ['endian-little', 'bit-32', 'arm-common', 'arm-32', 'common-linux', 'common-glibc', 'arm-linux', 'arm-linux-gnueabi', 'common']
+DEBUG: Python function autotools_aclocals finished
+DEBUG: Executing shell function do_install
+NOTE: make -j 1 DESTDIR=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image sbindir=/sbin usbindir=/usr/sbin install
+Making install in libmisc
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/build/libmisc'
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/build/libmisc'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/build/libmisc'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/build/libmisc'
+Making install in lib
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/build/lib'
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/build/lib'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/build/lib'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/build/lib'
+Making install in libsubid
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/build/libsubid'
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/build/libsubid'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/lib'
+ /bin/sh ../libtool   --mode=install /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c   libsubid.la '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/lib'
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c .libs/libsubid.so.4.0.0 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/lib/libsubid.so.4.0.0
+libtool: install: (cd /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/lib && { ln -s -f libsubid.so.4.0.0 libsubid.so.4 || { rm -f libsubid.so.4 && ln -s libsubid.so.4.0.0 libsubid.so.4; }; })
+libtool: install: (cd /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/lib && { ln -s -f libsubid.so.4.0.0 libsubid.so || { rm -f libsubid.so && ln -s libsubid.so.4.0.0 libsubid.so; }; })
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c .libs/libsubid.lai /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/lib/libsubid.la
+libtool: warning: remember to run 'libtool --finish /usr/lib'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/include/shadow'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 subid.h '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/include/shadow'
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/build/libsubid'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/build/libsubid'
+Making install in src
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/build/src'
+make  install-exec-am install-data-am
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/build/src'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/bin'
+  /bin/sh ../libtool   --mode=install /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c groups login su getsubids '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/bin'
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c groups /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/bin/groups
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c login /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/bin/login
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c su /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/bin/su
+libtool: warning: '../libsubid/libsubid.la' has not been installed in '/usr/lib'
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c .libs/getsubids /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/bin/getsubids
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/sbin'
+  /bin/sh ../libtool   --mode=install /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c nologin '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/sbin'
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c nologin /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/sbin/nologin
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/bin'
+  /bin/sh ../libtool   --mode=install /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c faillog lastlog chage chfn chsh expiry gpasswd newgrp passwd newgidmap newuidmap '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/bin'
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c faillog /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/bin/faillog
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c lastlog /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/bin/lastlog
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c chage /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/bin/chage
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c chfn /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/bin/chfn
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c chsh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/bin/chsh
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c expiry /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/bin/expiry
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c gpasswd /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/bin/gpasswd
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c newgrp /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/bin/newgrp
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c passwd /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/bin/passwd
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c newgidmap /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/bin/newgidmap
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c newuidmap /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/bin/newuidmap
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/sbin'
+  /bin/sh ../libtool   --mode=install /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c chgpasswd chpasswd groupadd groupdel groupmems groupmod grpck grpconv grpunconv logoutd newusers pwck pwconv pwunconv useradd userdel usermod vipw '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/sbin'
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c chgpasswd /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/sbin/chgpasswd
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c chpasswd /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/sbin/chpasswd
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c groupadd /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/sbin/groupadd
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c groupdel /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/sbin/groupdel
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c groupmems /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/sbin/groupmems
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c groupmod /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/sbin/groupmod
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c grpck /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/sbin/grpck
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c grpconv /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/sbin/grpconv
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c grpunconv /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/sbin/grpunconv
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c logoutd /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/sbin/logoutd
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c newusers /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/sbin/newusers
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c pwck /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/sbin/pwck
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c pwconv /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/sbin/pwconv
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c pwunconv /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/sbin/pwunconv
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c useradd /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/sbin/useradd
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c userdel /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/sbin/userdel
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c usermod /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/sbin/usermod
+libtool: install: /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c vipw /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/sbin/vipw
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/build/src'
+ln -sf newgrp	/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/bin/sg
+ln -sf vipw	/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/sbin/vigr
+set -e; for i in su; do \
+	chmod 4755 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/bin/$i; \
+done
+set -e; for i in chage chfn chsh expiry gpasswd newgrp passwd newgidmap newuidmap; do \
+	chmod 4755 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/bin/$i; \
+done
+set -e; for i in ; do \
+	chmod 4755 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/sbin/$i; \
+done
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/build/src'
+Making install in po
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/build/po'
+installing ../../shadow-4.12.3/po/bs.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/share/locale/bs/LC_MESSAGES/shadow.mo
+installing ../../shadow-4.12.3/po/ca.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/share/locale/ca/LC_MESSAGES/shadow.mo
+installing ../../shadow-4.12.3/po/cs.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/share/locale/cs/LC_MESSAGES/shadow.mo
+installing ../../shadow-4.12.3/po/da.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/share/locale/da/LC_MESSAGES/shadow.mo
+installing ../../shadow-4.12.3/po/de.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/share/locale/de/LC_MESSAGES/shadow.mo
+installing ../../shadow-4.12.3/po/dz.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/share/locale/dz/LC_MESSAGES/shadow.mo
+installing ../../shadow-4.12.3/po/el.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/share/locale/el/LC_MESSAGES/shadow.mo
+installing ../../shadow-4.12.3/po/es.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/share/locale/es/LC_MESSAGES/shadow.mo
+installing ../../shadow-4.12.3/po/eu.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/share/locale/eu/LC_MESSAGES/shadow.mo
+installing ../../shadow-4.12.3/po/fi.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/share/locale/fi/LC_MESSAGES/shadow.mo
+installing ../../shadow-4.12.3/po/fr.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/share/locale/fr/LC_MESSAGES/shadow.mo
+installing ../../shadow-4.12.3/po/gl.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/share/locale/gl/LC_MESSAGES/shadow.mo
+installing ../../shadow-4.12.3/po/he.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/share/locale/he/LC_MESSAGES/shadow.mo
+installing ../../shadow-4.12.3/po/hu.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/share/locale/hu/LC_MESSAGES/shadow.mo
+installing ../../shadow-4.12.3/po/id.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/share/locale/id/LC_MESSAGES/shadow.mo
+installing ../../shadow-4.12.3/po/it.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/share/locale/it/LC_MESSAGES/shadow.mo
+installing ../../shadow-4.12.3/po/ja.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/share/locale/ja/LC_MESSAGES/shadow.mo
+installing ../../shadow-4.12.3/po/kk.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/share/locale/kk/LC_MESSAGES/shadow.mo
+installing ../../shadow-4.12.3/po/km.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/share/locale/km/LC_MESSAGES/shadow.mo
+installing ../../shadow-4.12.3/po/ko.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/share/locale/ko/LC_MESSAGES/shadow.mo
+installing ../../shadow-4.12.3/po/nb.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/share/locale/nb/LC_MESSAGES/shadow.mo
+installing ../../shadow-4.12.3/po/ne.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/share/locale/ne/LC_MESSAGES/shadow.mo
+installing ../../shadow-4.12.3/po/nl.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/share/locale/nl/LC_MESSAGES/shadow.mo
+installing ../../shadow-4.12.3/po/nn.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/share/locale/nn/LC_MESSAGES/shadow.mo
+installing ../../shadow-4.12.3/po/pl.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/share/locale/pl/LC_MESSAGES/shadow.mo
+installing ../../shadow-4.12.3/po/pt.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/share/locale/pt/LC_MESSAGES/shadow.mo
+installing ../../shadow-4.12.3/po/pt_BR.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/share/locale/pt_BR/LC_MESSAGES/shadow.mo
+installing ../../shadow-4.12.3/po/ro.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/share/locale/ro/LC_MESSAGES/shadow.mo
+installing ../../shadow-4.12.3/po/ru.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/share/locale/ru/LC_MESSAGES/shadow.mo
+installing ../../shadow-4.12.3/po/sk.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/share/locale/sk/LC_MESSAGES/shadow.mo
+installing ../../shadow-4.12.3/po/sq.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/share/locale/sq/LC_MESSAGES/shadow.mo
+installing ../../shadow-4.12.3/po/sv.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/share/locale/sv/LC_MESSAGES/shadow.mo
+installing ../../shadow-4.12.3/po/tl.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/share/locale/tl/LC_MESSAGES/shadow.mo
+installing ../../shadow-4.12.3/po/tr.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/share/locale/tr/LC_MESSAGES/shadow.mo
+installing ../../shadow-4.12.3/po/uk.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/share/locale/uk/LC_MESSAGES/shadow.mo
+installing ../../shadow-4.12.3/po/vi.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/share/locale/vi/LC_MESSAGES/shadow.mo
+installing ../../shadow-4.12.3/po/zh_CN.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/share/locale/zh_CN/LC_MESSAGES/shadow.mo
+installing ../../shadow-4.12.3/po/zh_TW.gmo as /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/share/locale/zh_TW/LC_MESSAGES/shadow.mo
+if test "shadow" = "gettext-tools"; then \
+  /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/share/gettext/po; \
+  for file in Makefile.in.in remove-potcdate.sin quot.sed boldquot.sed en@quot.header en@boldquot.header insert-header.sin Rules-quot   Makevars.template; do \
+    /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../../shadow-4.12.3/po/$file \
+		    /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/share/gettext/po/$file; \
+  done; \
+  for file in Makevars; do \
+    rm -f /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/usr/share/gettext/po/$file; \
+  done; \
+else \
+  : ; \
+fi
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/build/po'
+Making install in contrib
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/build/contrib'
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/build/contrib'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/build/contrib'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/build/contrib'
+Making install in doc
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/build/doc'
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/build/doc'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/build/doc'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/build/doc'
+Making install in etc
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/build/etc'
+Making install in pam.d
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/build/etc/pam.d'
+make[3]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/build/etc/pam.d'
+make[3]: Nothing to be done for 'install-exec-am'.
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/etc/pam.d'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../../../shadow-4.12.3/etc/pam.d/chfn ../../../shadow-4.12.3/etc/pam.d/chsh ../../../shadow-4.12.3/etc/pam.d/groupmems ../../../shadow-4.12.3/etc/pam.d/login ../../../shadow-4.12.3/etc/pam.d/passwd ../../../shadow-4.12.3/etc/pam.d/su '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/etc/pam.d'
+make[3]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/build/etc/pam.d'
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/build/etc/pam.d'
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/build/etc'
+make[3]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/build/etc'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/etc'
+ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../../shadow-4.12.3/etc/login.defs '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/image/etc'
+make[3]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/build/etc'
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/build/etc'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/build/etc'
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/build'
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/build'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/build'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shadow/4.12.3-r0/build'
+DEBUG: Shell function do_install finished
+DEBUG: Executing shell function remove_libtool_la
+DEBUG: Shell function remove_libtool_la finished

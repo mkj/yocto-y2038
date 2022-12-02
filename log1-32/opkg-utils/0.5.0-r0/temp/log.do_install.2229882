@@ -1,0 +1,18 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/perl/perl_5.36.0.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: []
+NOTE: Skipping as already exists in sysroot: ['glibc', 'gcc-cross-arm', 'gcc-runtime', 'quilt-native', 'patch-native', 'perl-native', 'pseudo-native', 'attr-native', 'libtool-native', 'libgcc', 'linux-libc-headers', 'gnu-config-native', 'texinfo-dummy-native', 'mpfr-native', 'libmpc-native', 'xz-native', 'binutils-cross-arm', 'flex-native', 'zstd-native', 'zlib-native', 'gmp-native', 'gdbm-native', 'make-native', 'gettext-minimal-native', 'm4-native']
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing shell function do_install
+NOTE: make -j 1 PREFIX=/usr DESTDIR=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/opkg-utils/0.5.0-r0/image install
+install -d /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/opkg-utils/0.5.0-r0/image/usr/bin
+install -m 755 arfile.py opkg-build opkg-buildpackage opkg-compare-indexes opkg-diff opkg-extract-file opkg-feed opkg-list-fields opkg-make-index opkg-show-deps opkg-unbuild opkg.py update-alternatives /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/opkg-utils/0.5.0-r0/image/usr/bin
+install -d /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/opkg-utils/0.5.0-r0/image/usr/share/man
+for m in opkg-build.1; \
+do \
+	install -d /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/opkg-utils/0.5.0-r0/image/usr/share/man/man${m##*.}; \
+	install -m 644 "$m" /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/opkg-utils/0.5.0-r0/image/usr/share/man/man${m##*.}; \
+done
+DEBUG: Shell function do_install finished
+DEBUG: Executing shell function remove_libtool_la
+DEBUG: Shell function remove_libtool_la finished

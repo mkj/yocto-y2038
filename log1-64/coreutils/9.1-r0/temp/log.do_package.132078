@@ -1,0 +1,933 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-cross_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-native_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/opkg-utils/opkg-utils_0.5.0.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-extended/texinfo-dummy-native/texinfo-dummy-native.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-support/gmp/gmp_6.2.1.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-support/libcap/libcap_2.66.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-core/gettext/gettext_0.21.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/autoconf/autoconf_2.71.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/automake/automake_1.16.5.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/dwarfsrcfiles/dwarfsrcfiles.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/rpm/rpm_4.18.0.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-extended/xz/xz_5.2.7.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: ['dwarfsrcfiles-native', 'rpm-native', 'libgcrypt-native', 'bzip2-native', 'elfutils-native', 'lua-native', 'python3-native', 'popt-native', 'sqlite3-native', 'file-native', 'libgpg-error-native', 'libcap-native', 'readline-native', 'ncurses-native', 'gdbm-native', 'libnsl2-native', 'libffi-native', 'util-linux-libuuid-native', 'openssl-native', 'libtirpc-native', 'perl-native', 'make-native']
+NOTE: Skipping as already exists in sysroot: ['glibc', 'gcc-cross-arm', 'gcc-runtime', 'libtool-cross', 'libtool-native', 'opkg-utils', 'quilt-native', 'texinfo-dummy-native', 'gmp', 'libcap', 'gettext-native', 'autoconf-native', 'automake-native', 'patch-native', 'pseudo-native', 'xz-native', 'linux-libc-headers', 'gettext-minimal-native', 'gmp-native', 'flex-native', 'libmpc-native', 'zstd-native', 'binutils-cross-arm', 'gnu-config-native', 'mpfr-native', 'zlib-native', 'attr-native', 'libgcc', 'libpam', 'm4-native', 'flex', 'libxcrypt', 'cracklib', 'zlib']
+DEBUG: sed -e 's:^[^/]*/:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/recipe-sysroot-native/:g' /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/rpm-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/libgcrypt-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/elfutils-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/lua-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/python3-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/libgpg-error-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/ncurses-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/openssl-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/perl-native/fixmepath | xargs sed -i -e 's:FIXMESTAGINGDIRTARGET:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/recipe-sysroot:g; s:FIXMESTAGINGDIRHOST:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/recipe-sysroot-native:g' -e 's:FIXME_PSEUDO_SYSROOT:/home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/pseudo-native:g' -e 's:FIXME_HOSTTOOLS_DIR:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:g' -e 's:FIXME_PKGDATA_DIR:/home/matt/tmp/build/obmc-y2038/tmp/pkgdata/evb-ast2600:g' -e 's:FIXME_PSEUDO_LOCALSTATEDIR:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/pseudo/:g' -e 's:FIXME_LOGFIFO:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/temp/fifo.132078:g'
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function sstate_task_prefunc
+DEBUG: Python function sstate_task_prefunc finished
+DEBUG: Executing python function do_package
+DEBUG: Executing python function package_convert_pr_autoinc
+DEBUG: Python function package_convert_pr_autoinc finished
+DEBUG: Executing python function package_prepare_pkgdata
+NOTE: Installed into pkgdata-sysroot: ['glibc', 'libcap', 'gcc-runtime', 'opkg-utils', 'gmp', 'linux-libc-headers', 'libpam', 'libgcc', 'libxcrypt', 'flex', 'cracklib', 'zlib']
+DEBUG: Python function package_prepare_pkgdata finished
+DEBUG: Executing python function perform_packagecopy
+DEBUG: Python function perform_packagecopy finished
+DEBUG: Executing python function apply_update_alternative_renames
+NOTE: coreutils: Rename /usr/share/man/man1/base64.1 -> /usr/share/man/man1/base64.1.coreutils
+NOTE: coreutils: Rename /usr/share/man/man1/nice.1 -> /usr/share/man/man1/nice.1.coreutils
+NOTE: coreutils: Rename /usr/share/man/man1/mktemp.1 -> /usr/share/man/man1/mktemp.1.coreutils
+NOTE: coreutils: Rename /usr/share/man/man1/df.1 -> /usr/share/man/man1/df.1.coreutils
+NOTE: coreutils: Rename /usr/share/man/man1/groups.1 -> /usr/share/man/man1/groups.1.coreutils
+NOTE: coreutils: Rename /usr/share/man/man1/kill.1 -> /usr/share/man/man1/kill.1.coreutils
+NOTE: coreutils: Rename /usr/share/man/man1/uptime.1 -> /usr/share/man/man1/uptime.1.coreutils
+NOTE: coreutils: Rename /usr/share/man/man1/stat.1 -> /usr/share/man/man1/stat.1.coreutils
+NOTE: coreutils: Rename /usr/share/man/man1/hostname.1 -> /usr/share/man/man1/hostname.1.coreutils
+NOTE: coreutils: Rename /usr/bin/arch -> /usr/bin/arch.coreutils
+NOTE: coreutils: Rename /usr/bin/basename -> /usr/bin/basename.coreutils
+NOTE: coreutils: Rename /usr/bin/chcon -> /usr/bin/chcon.coreutils
+NOTE: coreutils: Rename /usr/bin/cksum -> /usr/bin/cksum.coreutils
+NOTE: coreutils: Rename /usr/bin/comm -> /usr/bin/comm.coreutils
+NOTE: coreutils: Rename /usr/bin/csplit -> /usr/bin/csplit.coreutils
+NOTE: coreutils: Rename /usr/bin/cut -> /usr/bin/cut.coreutils
+NOTE: coreutils: Rename /usr/bin/dir -> /usr/bin/dir.coreutils
+NOTE: coreutils: Rename /usr/bin/dircolors -> /usr/bin/dircolors.coreutils
+NOTE: coreutils: Rename /usr/bin/dirname -> /usr/bin/dirname.coreutils
+NOTE: coreutils: Rename /usr/bin/du -> /usr/bin/du.coreutils
+NOTE: coreutils: Rename /usr/bin/env -> /usr/bin/env.coreutils
+NOTE: coreutils: Rename /usr/bin/expand -> /usr/bin/expand.coreutils
+NOTE: coreutils: Rename /usr/bin/expr -> /usr/bin/expr.coreutils
+NOTE: coreutils: Rename /usr/bin/factor -> /usr/bin/factor.coreutils
+NOTE: coreutils: Rename /usr/bin/fmt -> /usr/bin/fmt.coreutils
+NOTE: coreutils: Rename /usr/bin/fold -> /usr/bin/fold.coreutils
+NOTE: coreutils: Rename /usr/bin/groups -> /usr/bin/groups.coreutils
+NOTE: coreutils: Rename /usr/bin/head -> /usr/bin/head.coreutils
+NOTE: coreutils: Rename /usr/bin/hostid -> /usr/bin/hostid.coreutils
+NOTE: coreutils: Rename /usr/bin/id -> /usr/bin/id.coreutils
+NOTE: coreutils: Rename /usr/bin/install -> /usr/bin/install.coreutils
+NOTE: coreutils: Rename /usr/bin/join -> /usr/bin/join.coreutils
+NOTE: coreutils: Rename /usr/bin/link -> /usr/bin/link.coreutils
+NOTE: coreutils: Rename /usr/bin/logname -> /usr/bin/logname.coreutils
+NOTE: coreutils: Rename /usr/bin/md5sum -> /usr/bin/md5sum.coreutils
+NOTE: coreutils: Rename /usr/bin/mkfifo -> /usr/bin/mkfifo.coreutils
+NOTE: coreutils: Rename /usr/bin/nl -> /usr/bin/nl.coreutils
+NOTE: coreutils: Rename /usr/bin/nohup -> /usr/bin/nohup.coreutils
+NOTE: coreutils: Rename /usr/bin/nproc -> /usr/bin/nproc.coreutils
+NOTE: coreutils: Rename /usr/bin/od -> /usr/bin/od.coreutils
+NOTE: coreutils: Rename /usr/bin/paste -> /usr/bin/paste.coreutils
+NOTE: coreutils: Rename /usr/bin/pathchk -> /usr/bin/pathchk.coreutils
+NOTE: coreutils: Rename /usr/bin/pinky -> /usr/bin/pinky.coreutils
+NOTE: coreutils: Rename /usr/bin/pr -> /usr/bin/pr.coreutils
+NOTE: coreutils: Rename /usr/bin/printf -> /usr/bin/printf.coreutils
+NOTE: coreutils: Rename /usr/bin/ptx -> /usr/bin/ptx.coreutils
+NOTE: coreutils: Rename /usr/bin/readlink -> /usr/bin/readlink.coreutils
+NOTE: coreutils: Rename /usr/bin/realpath -> /usr/bin/realpath.coreutils
+NOTE: coreutils: Rename /usr/bin/runcon -> /usr/bin/runcon.coreutils
+NOTE: coreutils: Rename /usr/bin/seq -> /usr/bin/seq.coreutils
+NOTE: coreutils: Rename /usr/bin/sha1sum -> /usr/bin/sha1sum.coreutils
+NOTE: coreutils: Rename /usr/bin/sha224sum -> /usr/bin/sha224sum.coreutils
+NOTE: coreutils: Rename /usr/bin/sha256sum -> /usr/bin/sha256sum.coreutils
+NOTE: coreutils: Rename /usr/bin/sha384sum -> /usr/bin/sha384sum.coreutils
+NOTE: coreutils: Rename /usr/bin/sha512sum -> /usr/bin/sha512sum.coreutils
+NOTE: coreutils: Rename /usr/bin/shred -> /usr/bin/shred.coreutils
+NOTE: coreutils: Rename /usr/bin/shuf -> /usr/bin/shuf.coreutils
+NOTE: coreutils: Rename /usr/bin/sort -> /usr/bin/sort.coreutils
+NOTE: coreutils: Rename /usr/bin/split -> /usr/bin/split.coreutils
+NOTE: coreutils: Rename /usr/bin/sum -> /usr/bin/sum.coreutils
+NOTE: coreutils: Rename /usr/bin/tac -> /usr/bin/tac.coreutils
+NOTE: coreutils: Rename /usr/bin/tail -> /usr/bin/tail.coreutils
+NOTE: coreutils: Rename /usr/bin/tee -> /usr/bin/tee.coreutils
+NOTE: coreutils: Rename /usr/bin/test -> /usr/bin/test.coreutils
+NOTE: coreutils: Rename /usr/bin/timeout -> /usr/bin/timeout.coreutils
+NOTE: coreutils: Rename /usr/bin/tr -> /usr/bin/tr.coreutils
+NOTE: coreutils: Rename /usr/bin/truncate -> /usr/bin/truncate.coreutils
+NOTE: coreutils: Rename /usr/bin/tsort -> /usr/bin/tsort.coreutils
+NOTE: coreutils: Rename /usr/bin/tty -> /usr/bin/tty.coreutils
+NOTE: coreutils: Rename /usr/bin/unexpand -> /usr/bin/unexpand.coreutils
+NOTE: coreutils: Rename /usr/bin/uniq -> /usr/bin/uniq.coreutils
+NOTE: coreutils: Rename /usr/bin/unlink -> /usr/bin/unlink.coreutils
+NOTE: coreutils: Rename /usr/bin/uptime -> /usr/bin/uptime.coreutils
+NOTE: coreutils: Rename /usr/bin/users -> /usr/bin/users.coreutils
+NOTE: coreutils: Rename /usr/bin/vdir -> /usr/bin/vdir.coreutils
+NOTE: coreutils: Rename /usr/bin/wc -> /usr/bin/wc.coreutils
+NOTE: coreutils: Rename /usr/bin/who -> /usr/bin/who.coreutils
+NOTE: coreutils: Rename /usr/bin/whoami -> /usr/bin/whoami.coreutils
+NOTE: coreutils: Rename /usr/bin/yes -> /usr/bin/yes.coreutils
+NOTE: coreutils: Already renamed: /bin/cat.coreutils
+NOTE: coreutils: Already renamed: /bin/chgrp.coreutils
+NOTE: coreutils: Already renamed: /bin/chmod.coreutils
+NOTE: coreutils: Already renamed: /bin/chown.coreutils
+NOTE: coreutils: Already renamed: /bin/cp.coreutils
+NOTE: coreutils: Already renamed: /bin/date.coreutils
+NOTE: coreutils: Already renamed: /bin/dd.coreutils
+NOTE: coreutils: Already renamed: /bin/echo.coreutils
+NOTE: coreutils: Already renamed: /bin/false.coreutils
+NOTE: coreutils: Already renamed: /bin/hostname.coreutils
+NOTE: coreutils: Already renamed: /bin/kill.coreutils
+NOTE: coreutils: Already renamed: /bin/ln.coreutils
+NOTE: coreutils: Already renamed: /bin/ls.coreutils
+NOTE: coreutils: Already renamed: /bin/mkdir.coreutils
+NOTE: coreutils: Already renamed: /bin/mknod.coreutils
+NOTE: coreutils: Already renamed: /bin/mv.coreutils
+NOTE: coreutils: Already renamed: /bin/pwd.coreutils
+NOTE: coreutils: Already renamed: /bin/rm.coreutils
+NOTE: coreutils: Already renamed: /bin/rmdir.coreutils
+NOTE: coreutils: Already renamed: /bin/sleep.coreutils
+NOTE: coreutils: Already renamed: /bin/stty.coreutils
+NOTE: coreutils: Already renamed: /bin/sync.coreutils
+NOTE: coreutils: Already renamed: /bin/touch.coreutils
+NOTE: coreutils: Already renamed: /bin/true.coreutils
+NOTE: coreutils: Already renamed: /bin/uname.coreutils
+NOTE: coreutils: Already renamed: /bin/stat.coreutils
+NOTE: coreutils: Already renamed: /usr/sbin/chroot.coreutils
+NOTE: coreutils: Rename /usr/bin/base32 -> /usr/bin/base32.coreutils
+DEBUG: Python function apply_update_alternative_renames finished
+DEBUG: Executing python function split_and_strip_files
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/lib/coreutils/libstdbuf.so']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/sbin/chroot.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/yes.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/whoami.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/who.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/wc.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/vdir.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/users.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/uptime.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/unlink.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/unexpand.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/uniq.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/tty.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/tsort.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/truncate.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/tr.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/timeout.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/test.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/tee.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/tail.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/tac.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/sum.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/split.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/sort.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/stdbuf']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/sha384sum.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/sha256sum.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/sha512sum.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/sha224sum.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/shred.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/shuf.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/sha1sum.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/seq.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/runcon.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/realpath.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/readlink.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/ptx.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/printf.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/pathchk.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/pr.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/pinky.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/printenv.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/nproc.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/paste.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/numfmt']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/od.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/nice.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/nohup.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/nl.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/mktemp.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/mkfifo.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/md5sum.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/link.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/logname.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/lbracket.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/id.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/join.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/install.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/hostid.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/groups.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/head.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/fold.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/fmt.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/expr.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/factor.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/expand.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/env.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/dirname.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/du.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/dircolors.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/cksum.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/dir.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/df.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/cut.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/csplit.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/comm.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/basenc']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/chcon.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/basename.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/base64.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/b2sum']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/base32.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/usr/bin/arch.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/bin/uname.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/bin/true.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/bin/touch.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/bin/sync.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/bin/stat.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/bin/stty.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/bin/rmdir.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/bin/pwd.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/bin/rm.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/bin/mv.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/bin/sleep.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/bin/mknod.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/bin/ln.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/bin/mkdir.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/bin/ls.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/bin/kill.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/bin/false.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/bin/echo.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/bin/hostname.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/bin/date.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/bin/dd.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/bin/cp.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/bin/chown.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/bin/chgrp.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/bin/chmod.coreutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/package/bin/cat.coreutils']
+DEBUG: Python function split_and_strip_files finished
+DEBUG: Executing python function fixup_perms
+DEBUG: Python function fixup_perms finished
+DEBUG: Executing python function populate_packages_updatealternatives
+NOTE: adding update-alternatives calls to postinst/prerm for coreutils-doc
+NOTE: 	update-alternatives --install /usr/share/man/man1/base64.1 base64.1 /usr/share/man/man1/base64.1.coreutils 100
+	update-alternatives --install /usr/share/man/man1/nice.1 nice.1 /usr/share/man/man1/nice.1.coreutils 100
+	update-alternatives --install /usr/share/man/man1/mktemp.1 mktemp.1 /usr/share/man/man1/mktemp.1.coreutils 100
+	update-alternatives --install /usr/share/man/man1/df.1 df.1 /usr/share/man/man1/df.1.coreutils 100
+	update-alternatives --install /usr/share/man/man1/groups.1 groups.1 /usr/share/man/man1/groups.1.coreutils 100
+	update-alternatives --install /usr/share/man/man1/kill.1 kill.1 /usr/share/man/man1/kill.1.coreutils 100
+	update-alternatives --install /usr/share/man/man1/uptime.1 uptime.1 /usr/share/man/man1/uptime.1.coreutils 100
+	update-alternatives --install /usr/share/man/man1/stat.1 stat.1 /usr/share/man/man1/stat.1.coreutils 100
+	update-alternatives --install /usr/share/man/man1/hostname.1 hostname.1 /usr/share/man/man1/hostname.1.coreutils 100
+
+NOTE: 	update-alternatives --remove  base64.1 /usr/share/man/man1/base64.1.coreutils
+	update-alternatives --remove  nice.1 /usr/share/man/man1/nice.1.coreutils
+	update-alternatives --remove  mktemp.1 /usr/share/man/man1/mktemp.1.coreutils
+	update-alternatives --remove  df.1 /usr/share/man/man1/df.1.coreutils
+	update-alternatives --remove  groups.1 /usr/share/man/man1/groups.1.coreutils
+	update-alternatives --remove  kill.1 /usr/share/man/man1/kill.1.coreutils
+	update-alternatives --remove  uptime.1 /usr/share/man/man1/uptime.1.coreutils
+	update-alternatives --remove  stat.1 /usr/share/man/man1/stat.1.coreutils
+	update-alternatives --remove  hostname.1 /usr/share/man/man1/hostname.1.coreutils
+
+NOTE: adding update-alternatives calls to postinst/prerm for coreutils
+NOTE: 	update-alternatives --install /usr/bin/[ lbracket /usr/bin/lbracket.coreutils 100
+	update-alternatives --install /usr/bin/arch arch /usr/bin/arch.coreutils 100
+	update-alternatives --install /usr/bin/basename basename /usr/bin/basename.coreutils 100
+	update-alternatives --install /usr/bin/chcon chcon /usr/bin/chcon.coreutils 100
+	update-alternatives --install /usr/bin/cksum cksum /usr/bin/cksum.coreutils 100
+	update-alternatives --install /usr/bin/comm comm /usr/bin/comm.coreutils 100
+	update-alternatives --install /usr/bin/csplit csplit /usr/bin/csplit.coreutils 100
+	update-alternatives --install /usr/bin/cut cut /usr/bin/cut.coreutils 100
+	update-alternatives --install /usr/bin/dir dir /usr/bin/dir.coreutils 100
+	update-alternatives --install /usr/bin/dircolors dircolors /usr/bin/dircolors.coreutils 100
+	update-alternatives --install /usr/bin/dirname dirname /usr/bin/dirname.coreutils 100
+	update-alternatives --install /usr/bin/du du /usr/bin/du.coreutils 100
+	update-alternatives --install /usr/bin/env env /usr/bin/env.coreutils 100
+	update-alternatives --install /usr/bin/expand expand /usr/bin/expand.coreutils 100
+	update-alternatives --install /usr/bin/expr expr /usr/bin/expr.coreutils 100
+	update-alternatives --install /usr/bin/factor factor /usr/bin/factor.coreutils 100
+	update-alternatives --install /usr/bin/fmt fmt /usr/bin/fmt.coreutils 100
+	update-alternatives --install /usr/bin/fold fold /usr/bin/fold.coreutils 100
+	update-alternatives --install /usr/bin/groups groups /usr/bin/groups.coreutils 100
+	update-alternatives --install /usr/bin/head head /usr/bin/head.coreutils 100
+	update-alternatives --install /usr/bin/hostid hostid /usr/bin/hostid.coreutils 100
+	update-alternatives --install /usr/bin/id id /usr/bin/id.coreutils 100
+	update-alternatives --install /usr/bin/install install /usr/bin/install.coreutils 100
+	update-alternatives --install /usr/bin/join join /usr/bin/join.coreutils 100
+	update-alternatives --install /usr/bin/link link /usr/bin/link.coreutils 100
+	update-alternatives --install /usr/bin/logname logname /usr/bin/logname.coreutils 100
+	update-alternatives --install /usr/bin/md5sum md5sum /usr/bin/md5sum.coreutils 100
+	update-alternatives --install /usr/bin/mkfifo mkfifo /usr/bin/mkfifo.coreutils 100
+	update-alternatives --install /usr/bin/nl nl /usr/bin/nl.coreutils 100
+	update-alternatives --install /usr/bin/nohup nohup /usr/bin/nohup.coreutils 100
+	update-alternatives --install /usr/bin/nproc nproc /usr/bin/nproc.coreutils 100
+	update-alternatives --install /usr/bin/od od /usr/bin/od.coreutils 100
+	update-alternatives --install /usr/bin/paste paste /usr/bin/paste.coreutils 100
+	update-alternatives --install /usr/bin/pathchk pathchk /usr/bin/pathchk.coreutils 100
+	update-alternatives --install /usr/bin/pinky pinky /usr/bin/pinky.coreutils 100
+	update-alternatives --install /usr/bin/pr pr /usr/bin/pr.coreutils 100
+	update-alternatives --install /usr/bin/printf printf /usr/bin/printf.coreutils 100
+	update-alternatives --install /usr/bin/ptx ptx /usr/bin/ptx.coreutils 100
+	update-alternatives --install /usr/bin/readlink readlink /usr/bin/readlink.coreutils 100
+	update-alternatives --install /usr/bin/realpath realpath /usr/bin/realpath.coreutils 100
+	update-alternatives --install /usr/bin/runcon runcon /usr/bin/runcon.coreutils 100
+	update-alternatives --install /usr/bin/seq seq /usr/bin/seq.coreutils 100
+	update-alternatives --install /usr/bin/sha1sum sha1sum /usr/bin/sha1sum.coreutils 100
+	update-alternatives --install /usr/bin/sha224sum sha224sum /usr/bin/sha224sum.coreutils 100
+	update-alternatives --install /usr/bin/sha256sum sha256sum /usr/bin/sha256sum.coreutils 100
+	update-alternatives --install /usr/bin/sha384sum sha384sum /usr/bin/sha384sum.coreutils 100
+	update-alternatives --install /usr/bin/sha512sum sha512sum /usr/bin/sha512sum.coreutils 100
+	update-alternatives --install /usr/bin/shred shred /usr/bin/shred.coreutils 100
+	update-alternatives --install /usr/bin/shuf shuf /usr/bin/shuf.coreutils 100
+	update-alternatives --install /usr/bin/sort sort /usr/bin/sort.coreutils 100
+	update-alternatives --install /usr/bin/split split /usr/bin/split.coreutils 100
+	update-alternatives --install /usr/bin/sum sum /usr/bin/sum.coreutils 100
+	update-alternatives --install /usr/bin/tac tac /usr/bin/tac.coreutils 100
+	update-alternatives --install /usr/bin/tail tail /usr/bin/tail.coreutils 100
+	update-alternatives --install /usr/bin/tee tee /usr/bin/tee.coreutils 100
+	update-alternatives --install /usr/bin/test test /usr/bin/test.coreutils 100
+	update-alternatives --install /usr/bin/timeout timeout /usr/bin/timeout.coreutils 100
+	update-alternatives --install /usr/bin/tr tr /usr/bin/tr.coreutils 100
+	update-alternatives --install /usr/bin/truncate truncate /usr/bin/truncate.coreutils 100
+	update-alternatives --install /usr/bin/tsort tsort /usr/bin/tsort.coreutils 100
+	update-alternatives --install /usr/bin/tty tty /usr/bin/tty.coreutils 100
+	update-alternatives --install /usr/bin/unexpand unexpand /usr/bin/unexpand.coreutils 100
+	update-alternatives --install /usr/bin/uniq uniq /usr/bin/uniq.coreutils 100
+	update-alternatives --install /usr/bin/unlink unlink /usr/bin/unlink.coreutils 100
+	update-alternatives --install /usr/bin/uptime uptime /usr/bin/uptime.coreutils 100
+	update-alternatives --install /usr/bin/users users /usr/bin/users.coreutils 100
+	update-alternatives --install /usr/bin/vdir vdir /usr/bin/vdir.coreutils 100
+	update-alternatives --install /usr/bin/wc wc /usr/bin/wc.coreutils 100
+	update-alternatives --install /usr/bin/who who /usr/bin/who.coreutils 100
+	update-alternatives --install /usr/bin/whoami whoami /usr/bin/whoami.coreutils 100
+	update-alternatives --install /usr/bin/yes yes /usr/bin/yes.coreutils 100
+	update-alternatives --install /bin/cat cat /bin/cat.coreutils 100
+	update-alternatives --install /bin/chgrp chgrp /bin/chgrp.coreutils 100
+	update-alternatives --install /bin/chmod chmod /bin/chmod.coreutils 100
+	update-alternatives --install /bin/chown chown /bin/chown.coreutils 100
+	update-alternatives --install /bin/cp cp /bin/cp.coreutils 100
+	update-alternatives --install /bin/date date /bin/date.coreutils 100
+	update-alternatives --install /bin/dd dd /bin/dd.coreutils 100
+	update-alternatives --install /bin/echo echo /bin/echo.coreutils 100
+	update-alternatives --install /bin/false false /bin/false.coreutils 100
+	update-alternatives --install /bin/hostname hostname /bin/hostname.coreutils 90
+	update-alternatives --install /bin/kill kill /bin/kill.coreutils 100
+	update-alternatives --install /bin/ln ln /bin/ln.coreutils 100
+	update-alternatives --install /bin/ls ls /bin/ls.coreutils 100
+	update-alternatives --install /bin/mkdir mkdir /bin/mkdir.coreutils 100
+	update-alternatives --install /bin/mknod mknod /bin/mknod.coreutils 100
+	update-alternatives --install /bin/mv mv /bin/mv.coreutils 100
+	update-alternatives --install /bin/pwd pwd /bin/pwd.coreutils 100
+	update-alternatives --install /bin/rm rm /bin/rm.coreutils 100
+	update-alternatives --install /bin/rmdir rmdir /bin/rmdir.coreutils 100
+	update-alternatives --install /bin/sleep sleep /bin/sleep.coreutils 100
+	update-alternatives --install /bin/stty stty /bin/stty.coreutils 100
+	update-alternatives --install /bin/sync sync /bin/sync.coreutils 100
+	update-alternatives --install /bin/touch touch /bin/touch.coreutils 100
+	update-alternatives --install /bin/true true /bin/true.coreutils 100
+	update-alternatives --install /bin/uname uname /bin/uname.coreutils 100
+	update-alternatives --install /bin/stat stat /bin/stat.coreutils 100
+	update-alternatives --install /usr/sbin/chroot chroot /usr/sbin/chroot.coreutils 100
+	update-alternatives --install /usr/bin/base32 base32 /usr/bin/base32.coreutils 100
+	update-alternatives --install /bin/base64 base64 /usr/bin/base64.coreutils 100
+	update-alternatives --install /bin/nice nice /usr/bin/nice.coreutils 100
+	update-alternatives --install /bin/printenv printenv /usr/bin/printenv.coreutils 100
+	update-alternatives --install /bin/mktemp mktemp /usr/bin/mktemp.coreutils 100
+	update-alternatives --install /bin/df df /usr/bin/df.coreutils 100
+
+NOTE: 	update-alternatives --remove  lbracket /usr/bin/lbracket.coreutils
+	update-alternatives --remove  arch /usr/bin/arch.coreutils
+	update-alternatives --remove  basename /usr/bin/basename.coreutils
+	update-alternatives --remove  chcon /usr/bin/chcon.coreutils
+	update-alternatives --remove  cksum /usr/bin/cksum.coreutils
+	update-alternatives --remove  comm /usr/bin/comm.coreutils
+	update-alternatives --remove  csplit /usr/bin/csplit.coreutils
+	update-alternatives --remove  cut /usr/bin/cut.coreutils
+	update-alternatives --remove  dir /usr/bin/dir.coreutils
+	update-alternatives --remove  dircolors /usr/bin/dircolors.coreutils
+	update-alternatives --remove  dirname /usr/bin/dirname.coreutils
+	update-alternatives --remove  du /usr/bin/du.coreutils
+	update-alternatives --remove  env /usr/bin/env.coreutils
+	update-alternatives --remove  expand /usr/bin/expand.coreutils
+	update-alternatives --remove  expr /usr/bin/expr.coreutils
+	update-alternatives --remove  factor /usr/bin/factor.coreutils
+	update-alternatives --remove  fmt /usr/bin/fmt.coreutils
+	update-alternatives --remove  fold /usr/bin/fold.coreutils
+	update-alternatives --remove  groups /usr/bin/groups.coreutils
+	update-alternatives --remove  head /usr/bin/head.coreutils
+	update-alternatives --remove  hostid /usr/bin/hostid.coreutils
+	update-alternatives --remove  id /usr/bin/id.coreutils
+	update-alternatives --remove  install /usr/bin/install.coreutils
+	update-alternatives --remove  join /usr/bin/join.coreutils
+	update-alternatives --remove  link /usr/bin/link.coreutils
+	update-alternatives --remove  logname /usr/bin/logname.coreutils
+	update-alternatives --remove  md5sum /usr/bin/md5sum.coreutils
+	update-alternatives --remove  mkfifo /usr/bin/mkfifo.coreutils
+	update-alternatives --remove  nl /usr/bin/nl.coreutils
+	update-alternatives --remove  nohup /usr/bin/nohup.coreutils
+	update-alternatives --remove  nproc /usr/bin/nproc.coreutils
+	update-alternatives --remove  od /usr/bin/od.coreutils
+	update-alternatives --remove  paste /usr/bin/paste.coreutils
+	update-alternatives --remove  pathchk /usr/bin/pathchk.coreutils
+	update-alternatives --remove  pinky /usr/bin/pinky.coreutils
+	update-alternatives --remove  pr /usr/bin/pr.coreutils
+	update-alternatives --remove  printf /usr/bin/printf.coreutils
+	update-alternatives --remove  ptx /usr/bin/ptx.coreutils
+	update-alternatives --remove  readlink /usr/bin/readlink.coreutils
+	update-alternatives --remove  realpath /usr/bin/realpath.coreutils
+	update-alternatives --remove  runcon /usr/bin/runcon.coreutils
+	update-alternatives --remove  seq /usr/bin/seq.coreutils
+	update-alternatives --remove  sha1sum /usr/bin/sha1sum.coreutils
+	update-alternatives --remove  sha224sum /usr/bin/sha224sum.coreutils
+	update-alternatives --remove  sha256sum /usr/bin/sha256sum.coreutils
+	update-alternatives --remove  sha384sum /usr/bin/sha384sum.coreutils
+	update-alternatives --remove  sha512sum /usr/bin/sha512sum.coreutils
+	update-alternatives --remove  shred /usr/bin/shred.coreutils
+	update-alternatives --remove  shuf /usr/bin/shuf.coreutils
+	update-alternatives --remove  sort /usr/bin/sort.coreutils
+	update-alternatives --remove  split /usr/bin/split.coreutils
+	update-alternatives --remove  sum /usr/bin/sum.coreutils
+	update-alternatives --remove  tac /usr/bin/tac.coreutils
+	update-alternatives --remove  tail /usr/bin/tail.coreutils
+	update-alternatives --remove  tee /usr/bin/tee.coreutils
+	update-alternatives --remove  test /usr/bin/test.coreutils
+	update-alternatives --remove  timeout /usr/bin/timeout.coreutils
+	update-alternatives --remove  tr /usr/bin/tr.coreutils
+	update-alternatives --remove  truncate /usr/bin/truncate.coreutils
+	update-alternatives --remove  tsort /usr/bin/tsort.coreutils
+	update-alternatives --remove  tty /usr/bin/tty.coreutils
+	update-alternatives --remove  unexpand /usr/bin/unexpand.coreutils
+	update-alternatives --remove  uniq /usr/bin/uniq.coreutils
+	update-alternatives --remove  unlink /usr/bin/unlink.coreutils
+	update-alternatives --remove  uptime /usr/bin/uptime.coreutils
+	update-alternatives --remove  users /usr/bin/users.coreutils
+	update-alternatives --remove  vdir /usr/bin/vdir.coreutils
+	update-alternatives --remove  wc /usr/bin/wc.coreutils
+	update-alternatives --remove  who /usr/bin/who.coreutils
+	update-alternatives --remove  whoami /usr/bin/whoami.coreutils
+	update-alternatives --remove  yes /usr/bin/yes.coreutils
+	update-alternatives --remove  cat /bin/cat.coreutils
+	update-alternatives --remove  chgrp /bin/chgrp.coreutils
+	update-alternatives --remove  chmod /bin/chmod.coreutils
+	update-alternatives --remove  chown /bin/chown.coreutils
+	update-alternatives --remove  cp /bin/cp.coreutils
+	update-alternatives --remove  date /bin/date.coreutils
+	update-alternatives --remove  dd /bin/dd.coreutils
+	update-alternatives --remove  echo /bin/echo.coreutils
+	update-alternatives --remove  false /bin/false.coreutils
+	update-alternatives --remove  hostname /bin/hostname.coreutils
+	update-alternatives --remove  kill /bin/kill.coreutils
+	update-alternatives --remove  ln /bin/ln.coreutils
+	update-alternatives --remove  ls /bin/ls.coreutils
+	update-alternatives --remove  mkdir /bin/mkdir.coreutils
+	update-alternatives --remove  mknod /bin/mknod.coreutils
+	update-alternatives --remove  mv /bin/mv.coreutils
+	update-alternatives --remove  pwd /bin/pwd.coreutils
+	update-alternatives --remove  rm /bin/rm.coreutils
+	update-alternatives --remove  rmdir /bin/rmdir.coreutils
+	update-alternatives --remove  sleep /bin/sleep.coreutils
+	update-alternatives --remove  stty /bin/stty.coreutils
+	update-alternatives --remove  sync /bin/sync.coreutils
+	update-alternatives --remove  touch /bin/touch.coreutils
+	update-alternatives --remove  true /bin/true.coreutils
+	update-alternatives --remove  uname /bin/uname.coreutils
+	update-alternatives --remove  stat /bin/stat.coreutils
+	update-alternatives --remove  chroot /usr/sbin/chroot.coreutils
+	update-alternatives --remove  base32 /usr/bin/base32.coreutils
+	update-alternatives --remove  base64 /usr/bin/base64.coreutils
+	update-alternatives --remove  nice /usr/bin/nice.coreutils
+	update-alternatives --remove  printenv /usr/bin/printenv.coreutils
+	update-alternatives --remove  mktemp /usr/bin/mktemp.coreutils
+	update-alternatives --remove  df /usr/bin/df.coreutils
+
+DEBUG: Python function populate_packages_updatealternatives finished
+DEBUG: Executing python function package_do_split_locales
+DEBUG: Python function package_do_split_locales finished
+DEBUG: Executing python function populate_packages
+DEBUG: Python function populate_packages finished
+DEBUG: Executing python function package_fixsymlinks
+DEBUG: Python function package_fixsymlinks finished
+DEBUG: Executing python function package_name_hook
+DEBUG: Executing python function debian_package_name_hook
+DEBUG: LIBNAMES: pkg coreutils-stdbuf libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg coreutils-staticdev libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg coreutils-src libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg coreutils-locale-zh-tw libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg coreutils-locale-zh-cn libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg coreutils-locale-vi libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg coreutils-locale-uk libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg coreutils-locale-tr libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg coreutils-locale-sv libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg coreutils-locale-sr libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg coreutils-locale-sl libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg coreutils-locale-sk libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg coreutils-locale-ru libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg coreutils-locale-ro libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg coreutils-locale-pt-br libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg coreutils-locale-pt libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg coreutils-locale-pl libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg coreutils-locale-nl libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg coreutils-locale-nb libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg coreutils-locale-ms libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg coreutils-locale-lt libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg coreutils-locale-lg libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg coreutils-locale-ko libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg coreutils-locale-kk libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg coreutils-locale-ja libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg coreutils-locale-it libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg coreutils-locale-id libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg coreutils-locale-ia libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg coreutils-locale-hu libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg coreutils-locale-hr libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg coreutils-locale-gl libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg coreutils-locale-ga libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg coreutils-locale-fr libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg coreutils-locale-fi libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg coreutils-locale-eu libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg coreutils-locale-et libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg coreutils-locale-es libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg coreutils-locale-eo libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg coreutils-locale-el libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg coreutils-locale-de libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg coreutils-locale-da libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg coreutils-locale-cs libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg coreutils-locale-ca libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg coreutils-locale-bg libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg coreutils-locale-be libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg coreutils-locale-af libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg coreutils-doc libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg coreutils-dev libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg coreutils-dbg libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg coreutils libs 0 bins 1 sonames []
+DEBUG: Python function debian_package_name_hook finished
+DEBUG: Python function package_name_hook finished
+DEBUG: Executing python function package_do_filedeps
+DEBUG: Python function package_do_filedeps finished
+DEBUG: Executing python function package_do_shlibs
+DEBUG: Reading shlib providers in /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/pkgdata-sysroot/shlibs2
+DEBUG: calculating shlib provides for coreutils-src
+DEBUG: LIBNAMES: pkg coreutils-src sonames set()
+DEBUG: calculating shlib provides for coreutils-dbg
+DEBUG: LIBNAMES: pkg coreutils-dbg sonames set()
+DEBUG: calculating shlib provides for coreutils-staticdev
+DEBUG: LIBNAMES: pkg coreutils-staticdev sonames set()
+DEBUG: calculating shlib provides for coreutils-dev
+DEBUG: LIBNAMES: pkg coreutils-dev sonames set()
+DEBUG: calculating shlib provides for coreutils-doc
+DEBUG: LIBNAMES: pkg coreutils-doc sonames set()
+DEBUG: calculating shlib provides for coreutils-stdbuf
+DEBUG: LIBNAMES: pkg coreutils-stdbuf sonames set()
+DEBUG: calculating shlib provides for coreutils
+DEBUG: LIBNAMES: pkg coreutils sonames set()
+DEBUG: calculating shlib provides for coreutils-locale-af
+DEBUG: LIBNAMES: pkg coreutils-locale-af sonames set()
+DEBUG: calculating shlib provides for coreutils-locale-be
+DEBUG: LIBNAMES: pkg coreutils-locale-be sonames set()
+DEBUG: calculating shlib provides for coreutils-locale-bg
+DEBUG: LIBNAMES: pkg coreutils-locale-bg sonames set()
+DEBUG: calculating shlib provides for coreutils-locale-ca
+DEBUG: LIBNAMES: pkg coreutils-locale-ca sonames set()
+DEBUG: calculating shlib provides for coreutils-locale-cs
+DEBUG: LIBNAMES: pkg coreutils-locale-cs sonames set()
+DEBUG: calculating shlib provides for coreutils-locale-da
+DEBUG: LIBNAMES: pkg coreutils-locale-da sonames set()
+DEBUG: calculating shlib provides for coreutils-locale-de
+DEBUG: LIBNAMES: pkg coreutils-locale-de sonames set()
+DEBUG: calculating shlib provides for coreutils-locale-el
+DEBUG: LIBNAMES: pkg coreutils-locale-el sonames set()
+DEBUG: calculating shlib provides for coreutils-locale-eo
+DEBUG: LIBNAMES: pkg coreutils-locale-eo sonames set()
+DEBUG: calculating shlib provides for coreutils-locale-es
+DEBUG: LIBNAMES: pkg coreutils-locale-es sonames set()
+DEBUG: calculating shlib provides for coreutils-locale-et
+DEBUG: LIBNAMES: pkg coreutils-locale-et sonames set()
+DEBUG: calculating shlib provides for coreutils-locale-eu
+DEBUG: LIBNAMES: pkg coreutils-locale-eu sonames set()
+DEBUG: calculating shlib provides for coreutils-locale-fi
+DEBUG: LIBNAMES: pkg coreutils-locale-fi sonames set()
+DEBUG: calculating shlib provides for coreutils-locale-fr
+DEBUG: LIBNAMES: pkg coreutils-locale-fr sonames set()
+DEBUG: calculating shlib provides for coreutils-locale-ga
+DEBUG: LIBNAMES: pkg coreutils-locale-ga sonames set()
+DEBUG: calculating shlib provides for coreutils-locale-gl
+DEBUG: LIBNAMES: pkg coreutils-locale-gl sonames set()
+DEBUG: calculating shlib provides for coreutils-locale-hr
+DEBUG: LIBNAMES: pkg coreutils-locale-hr sonames set()
+DEBUG: calculating shlib provides for coreutils-locale-hu
+DEBUG: LIBNAMES: pkg coreutils-locale-hu sonames set()
+DEBUG: calculating shlib provides for coreutils-locale-ia
+DEBUG: LIBNAMES: pkg coreutils-locale-ia sonames set()
+DEBUG: calculating shlib provides for coreutils-locale-id
+DEBUG: LIBNAMES: pkg coreutils-locale-id sonames set()
+DEBUG: calculating shlib provides for coreutils-locale-it
+DEBUG: LIBNAMES: pkg coreutils-locale-it sonames set()
+DEBUG: calculating shlib provides for coreutils-locale-ja
+DEBUG: LIBNAMES: pkg coreutils-locale-ja sonames set()
+DEBUG: calculating shlib provides for coreutils-locale-kk
+DEBUG: LIBNAMES: pkg coreutils-locale-kk sonames set()
+DEBUG: calculating shlib provides for coreutils-locale-ko
+DEBUG: LIBNAMES: pkg coreutils-locale-ko sonames set()
+DEBUG: calculating shlib provides for coreutils-locale-lg
+DEBUG: LIBNAMES: pkg coreutils-locale-lg sonames set()
+DEBUG: calculating shlib provides for coreutils-locale-lt
+DEBUG: LIBNAMES: pkg coreutils-locale-lt sonames set()
+DEBUG: calculating shlib provides for coreutils-locale-ms
+DEBUG: LIBNAMES: pkg coreutils-locale-ms sonames set()
+DEBUG: calculating shlib provides for coreutils-locale-nb
+DEBUG: LIBNAMES: pkg coreutils-locale-nb sonames set()
+DEBUG: calculating shlib provides for coreutils-locale-nl
+DEBUG: LIBNAMES: pkg coreutils-locale-nl sonames set()
+DEBUG: calculating shlib provides for coreutils-locale-pl
+DEBUG: LIBNAMES: pkg coreutils-locale-pl sonames set()
+DEBUG: calculating shlib provides for coreutils-locale-pt
+DEBUG: LIBNAMES: pkg coreutils-locale-pt sonames set()
+DEBUG: calculating shlib provides for coreutils-locale-pt-br
+DEBUG: LIBNAMES: pkg coreutils-locale-pt-br sonames set()
+DEBUG: calculating shlib provides for coreutils-locale-ro
+DEBUG: LIBNAMES: pkg coreutils-locale-ro sonames set()
+DEBUG: calculating shlib provides for coreutils-locale-ru
+DEBUG: LIBNAMES: pkg coreutils-locale-ru sonames set()
+DEBUG: calculating shlib provides for coreutils-locale-sk
+DEBUG: LIBNAMES: pkg coreutils-locale-sk sonames set()
+DEBUG: calculating shlib provides for coreutils-locale-sl
+DEBUG: LIBNAMES: pkg coreutils-locale-sl sonames set()
+DEBUG: calculating shlib provides for coreutils-locale-sr
+DEBUG: LIBNAMES: pkg coreutils-locale-sr sonames set()
+DEBUG: calculating shlib provides for coreutils-locale-sv
+DEBUG: LIBNAMES: pkg coreutils-locale-sv sonames set()
+DEBUG: calculating shlib provides for coreutils-locale-tr
+DEBUG: LIBNAMES: pkg coreutils-locale-tr sonames set()
+DEBUG: calculating shlib provides for coreutils-locale-uk
+DEBUG: LIBNAMES: pkg coreutils-locale-uk sonames set()
+DEBUG: calculating shlib provides for coreutils-locale-vi
+DEBUG: LIBNAMES: pkg coreutils-locale-vi sonames set()
+DEBUG: calculating shlib provides for coreutils-locale-zh-cn
+DEBUG: LIBNAMES: pkg coreutils-locale-zh-cn sonames set()
+DEBUG: calculating shlib provides for coreutils-locale-zh-tw
+DEBUG: LIBNAMES: pkg coreutils-locale-zh-tw sonames set()
+DEBUG: calculating shlib requirements for coreutils-src
+DEBUG: calculating shlib requirements for coreutils-dbg
+DEBUG: calculating shlib requirements for coreutils-staticdev
+DEBUG: calculating shlib requirements for coreutils-dev
+DEBUG: calculating shlib requirements for coreutils-doc
+DEBUG: calculating shlib requirements for coreutils-stdbuf
+DEBUG: coreutils-stdbuf: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils-stdbuf/usr/lib/coreutils/libstdbuf.so)
+DEBUG: coreutils-stdbuf: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils-stdbuf/usr/lib/coreutils/libstdbuf.so)
+DEBUG: coreutils-stdbuf: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils-stdbuf/usr/bin/stdbuf)
+DEBUG: coreutils-stdbuf: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils-stdbuf/usr/bin/stdbuf)
+DEBUG: calculating shlib requirements for coreutils
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/base64.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/base64.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/nohup.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/head.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/chcon.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/bin/sleep.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/cksum.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/nproc.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/bin/mknod.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/bin/mknod.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/comm.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/tsort.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/df.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/du.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/readlink.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/bin/cp.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/vdir.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/fold.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/bin/uname.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/tty.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/uptime.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/shuf.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/tee.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/dircolors.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/b2sum)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/dircolors.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/timeout.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/env.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/bin/dd.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/link.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/sha1sum.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/bin/stty.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/mkfifo.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/numfmt)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/printf.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/bin/chmod.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/pathchk.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/pathchk.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/truncate.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/ptx.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/ptx.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/cut.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/basenc)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/paste.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/users.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/tac.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/sha384sum.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/mktemp.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/shred.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/tail.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/install.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/bin/mkdir.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/base32.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/yes.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/sort.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/chcon.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/comm.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/tr.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/expr.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/bin/cp.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/fold.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/bin/uname.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/bin/chgrp.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/bin/chgrp.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/shuf.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/dir.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/dir.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/id.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/df.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/factor.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/sha512sum.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/sha512sum.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/bin/chown.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/basename.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/basename.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/pinky.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/bin/kill.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/b2sum)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/numfmt)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/bin/stty.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/nl.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/od.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/bin/echo.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/realpath.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/seq.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/sum.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/sha224sum.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/bin/sync.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/env.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/printenv.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/sha256sum.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/sha1sum.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/pr.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/bin/stat.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/uniq.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/arch.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/cut.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/bin/date.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/tail.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/basenc)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/fmt.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/fmt.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/bin/mv.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/bin/false.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/test.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/expand.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/unexpand.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/shred.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/logname.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/bin/ln.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/nice.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/nice.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/bin/rm.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/wc.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/bin/rm.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/bin/mkdir.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/install.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/unlink.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/sort.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/cksum.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/bin/ls.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/lbracket.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/hostid.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/nproc.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/tsort.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/id.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/join.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/split.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/bin/chown.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/groups.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/pinky.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/head.coreutils)
+DEBUG: coreutils: Dependency libcap.so.2 requires package libcap (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/dir.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/bin/pwd.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/runcon.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/runcon.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/tee.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/timeout.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/bin/rmdir.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/factor.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/realpath.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/vdir.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/bin/kill.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/readlink.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/printenv.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/dirname.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/pr.coreutils)
+DEBUG: coreutils: Dependency libgmp.so.10 requires package gmp (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/expr.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/bin/hostname.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/bin/hostname.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/bin/true.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/arch.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/sum.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/bin/date.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/bin/echo.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/sha384sum.coreutils)
+DEBUG: coreutils: Dependency libgmp.so.10 requires package gmp (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/factor.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/bin/false.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/expand.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/bin/sync.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/unexpand.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/tac.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/truncate.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/logname.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/printf.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/bin/ln.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/md5sum.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/sbin/chroot.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/base32.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/test.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/bin/cat.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/bin/cat.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/bin/ls.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/hostid.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/csplit.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/split.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/unlink.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/whoami.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/groups.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/whoami.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/lbracket.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/bin/touch.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/bin/touch.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/yes.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/nohup.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/join.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/bin/sleep.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/tty.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/uptime.coreutils)
+DEBUG: coreutils: Dependency libcap.so.2 requires package libcap (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/vdir.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/bin/pwd.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/bin/rmdir.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/du.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/seq.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/sha224sum.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/od.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/who.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/who.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/bin/true.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/nl.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/sha256sum.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/dirname.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/bin/chmod.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/paste.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/bin/dd.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/link.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/md5sum.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/mkfifo.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/uniq.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/bin/mv.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/bin/stat.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/csplit.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/wc.coreutils)
+DEBUG: coreutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/sbin/chroot.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/users.coreutils)
+DEBUG: coreutils: Dependency libcap.so.2 requires package libcap (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/bin/ls.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/mktemp.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/tr.coreutils)
+DEBUG: coreutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/packages-split/coreutils/usr/bin/expr.coreutils)
+DEBUG: calculating shlib requirements for coreutils-locale-af
+DEBUG: calculating shlib requirements for coreutils-locale-be
+DEBUG: calculating shlib requirements for coreutils-locale-bg
+DEBUG: calculating shlib requirements for coreutils-locale-ca
+DEBUG: calculating shlib requirements for coreutils-locale-cs
+DEBUG: calculating shlib requirements for coreutils-locale-da
+DEBUG: calculating shlib requirements for coreutils-locale-de
+DEBUG: calculating shlib requirements for coreutils-locale-el
+DEBUG: calculating shlib requirements for coreutils-locale-eo
+DEBUG: calculating shlib requirements for coreutils-locale-es
+DEBUG: calculating shlib requirements for coreutils-locale-et
+DEBUG: calculating shlib requirements for coreutils-locale-eu
+DEBUG: calculating shlib requirements for coreutils-locale-fi
+DEBUG: calculating shlib requirements for coreutils-locale-fr
+DEBUG: calculating shlib requirements for coreutils-locale-ga
+DEBUG: calculating shlib requirements for coreutils-locale-gl
+DEBUG: calculating shlib requirements for coreutils-locale-hr
+DEBUG: calculating shlib requirements for coreutils-locale-hu
+DEBUG: calculating shlib requirements for coreutils-locale-ia
+DEBUG: calculating shlib requirements for coreutils-locale-id
+DEBUG: calculating shlib requirements for coreutils-locale-it
+DEBUG: calculating shlib requirements for coreutils-locale-ja
+DEBUG: calculating shlib requirements for coreutils-locale-kk
+DEBUG: calculating shlib requirements for coreutils-locale-ko
+DEBUG: calculating shlib requirements for coreutils-locale-lg
+DEBUG: calculating shlib requirements for coreutils-locale-lt
+DEBUG: calculating shlib requirements for coreutils-locale-ms
+DEBUG: calculating shlib requirements for coreutils-locale-nb
+DEBUG: calculating shlib requirements for coreutils-locale-nl
+DEBUG: calculating shlib requirements for coreutils-locale-pl
+DEBUG: calculating shlib requirements for coreutils-locale-pt
+DEBUG: calculating shlib requirements for coreutils-locale-pt-br
+DEBUG: calculating shlib requirements for coreutils-locale-ro
+DEBUG: calculating shlib requirements for coreutils-locale-ru
+DEBUG: calculating shlib requirements for coreutils-locale-sk
+DEBUG: calculating shlib requirements for coreutils-locale-sl
+DEBUG: calculating shlib requirements for coreutils-locale-sr
+DEBUG: calculating shlib requirements for coreutils-locale-sv
+DEBUG: calculating shlib requirements for coreutils-locale-tr
+DEBUG: calculating shlib requirements for coreutils-locale-uk
+DEBUG: calculating shlib requirements for coreutils-locale-vi
+DEBUG: calculating shlib requirements for coreutils-locale-zh-cn
+DEBUG: calculating shlib requirements for coreutils-locale-zh-tw
+DEBUG: Python function package_do_shlibs finished
+DEBUG: Executing python function package_do_pkgconfig
+DEBUG: Python function package_do_pkgconfig finished
+DEBUG: Executing python function read_shlibdeps
+DEBUG: Python function read_shlibdeps finished
+DEBUG: Executing python function package_depchains
+DEBUG: Python function package_depchains finished
+DEBUG: Executing python function emit_pkgdata
+DEBUG: Python function emit_pkgdata finished
+DEBUG: Python function do_package finished
+DEBUG: Executing python function sstate_task_postfunc
+NOTE: Using umask 0o002 (not 22) for sstate packaging
+DEBUG: Executing python function target_add_sysroot_deps
+DEBUG: Python function target_add_sysroot_deps finished
+DEBUG: Executing python function sstate_hardcode_path
+NOTE: Removing hardcoded paths from sstate package: 'find /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/sstate-build-package/ \( -name "*.la" -o -name "*-config" -o -name "*_config" -o -name "postinst-*" \) -type f | xargs grep -l -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/recipe-sysroot' -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/recipe-sysroot-native' -e '/home/matt/tmp/build/obmc-y2038/tmp/hosttools' | tee /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/sstate-build-package/fixmepath | xargs --no-run-if-empty sed -i -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/recipe-sysroot-native:FIXMESTAGINGDIRHOST:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/coreutils/9.1-r0/recipe-sysroot:FIXMESTAGINGDIRTARGET:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:FIXME_HOSTTOOLS_DIR:g''
+DEBUG: Python function sstate_hardcode_path finished
+DEBUG: Executing python function sstate_report_unihash
+DEBUG: Python function sstate_report_unihash finished
+DEBUG: Executing shell function sstate_create_package
+DEBUG: Shell function sstate_create_package finished
+DEBUG: Executing python function sstate_hardcode_path_unpack
+DEBUG: Python function sstate_hardcode_path_unpack finished
+DEBUG: Python function sstate_task_postfunc finished

@@ -1,0 +1,264 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-cross_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-native_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/opkg-utils/opkg-utils_0.5.0.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-extended/texinfo-dummy-native/texinfo-dummy-native.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-core/gettext/gettext_0.21.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/autoconf/autoconf_2.71.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/automake/automake_1.16.5.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/bison/bison_3.8.2.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/dwarfsrcfiles/dwarfsrcfiles.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/rpm/rpm_4.18.0.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-extended/xz/xz_5.2.7.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: ['dwarfsrcfiles-native', 'rpm-native', 'elfutils-native', 'file-native', 'libgcrypt-native', 'popt-native', 'lua-native', 'bzip2-native', 'sqlite3-native', 'python3-native', 'libgpg-error-native', 'libcap-native', 'readline-native', 'util-linux-libuuid-native', 'libtirpc-native', 'gdbm-native', 'libnsl2-native', 'libffi-native', 'openssl-native', 'ncurses-native', 'perl-native', 'make-native']
+NOTE: Skipping as already exists in sysroot: ['glibc', 'gcc-cross-arm', 'gcc-runtime', 'libtool-cross', 'libtool-native', 'opkg-utils', 'quilt-native', 'texinfo-dummy-native', 'gettext-native', 'autoconf-native', 'automake-native', 'bison-native', 'patch-native', 'pseudo-native', 'xz-native', 'flex-native', 'gettext-minimal-native', 'linux-libc-headers', 'libgcc', 'gnu-config-native', 'm4-native', 'zlib-native', 'zstd-native', 'binutils-cross-arm', 'mpfr-native', 'libmpc-native', 'gmp-native', 'attr-native']
+DEBUG: sed -e 's:^[^/]*/:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/findutils/4.9.0-r0/recipe-sysroot-native/:g' /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/rpm-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/elfutils-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/libgcrypt-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/lua-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/python3-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/libgpg-error-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/openssl-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/ncurses-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/perl-native/fixmepath | xargs sed -i -e 's:FIXMESTAGINGDIRTARGET:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/findutils/4.9.0-r0/recipe-sysroot:g; s:FIXMESTAGINGDIRHOST:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/findutils/4.9.0-r0/recipe-sysroot-native:g' -e 's:FIXME_PSEUDO_SYSROOT:/home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/pseudo-native:g' -e 's:FIXME_HOSTTOOLS_DIR:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:g' -e 's:FIXME_PKGDATA_DIR:/home/matt/tmp/build/obmc-y2038/tmp/pkgdata/evb-ast2600:g' -e 's:FIXME_PSEUDO_LOCALSTATEDIR:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/findutils/4.9.0-r0/pseudo/:g' -e 's:FIXME_LOGFIFO:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/findutils/4.9.0-r0/temp/fifo.3720447:g'
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function sstate_task_prefunc
+DEBUG: Python function sstate_task_prefunc finished
+DEBUG: Executing python function do_package
+DEBUG: Executing python function package_convert_pr_autoinc
+DEBUG: Python function package_convert_pr_autoinc finished
+DEBUG: Executing python function package_prepare_pkgdata
+NOTE: Installed into pkgdata-sysroot: ['glibc', 'opkg-utils', 'gcc-runtime', 'linux-libc-headers', 'libgcc']
+DEBUG: Python function package_prepare_pkgdata finished
+DEBUG: Executing python function perform_packagecopy
+DEBUG: Python function perform_packagecopy finished
+DEBUG: Executing python function apply_update_alternative_renames
+NOTE: findutils: Rename /usr/bin/find -> /usr/bin/find.findutils
+NOTE: findutils: Rename /usr/bin/xargs -> /usr/bin/xargs.findutils
+DEBUG: Python function apply_update_alternative_renames finished
+DEBUG: Executing python function split_and_strip_files
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/findutils/4.9.0-r0/package/usr/libexec/frcode']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/findutils/4.9.0-r0/package/usr/bin/xargs.findutils']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/findutils/4.9.0-r0/package/usr/bin/locate']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/findutils/4.9.0-r0/package/usr/bin/find.findutils']
+DEBUG: Python function split_and_strip_files finished
+DEBUG: Executing python function fixup_perms
+DEBUG: Python function fixup_perms finished
+DEBUG: Executing python function populate_packages_updatealternatives
+NOTE: adding update-alternatives calls to postinst/prerm for findutils
+NOTE: 	update-alternatives --install /usr/bin/find find /usr/bin/find.findutils 100
+	update-alternatives --install /usr/bin/xargs xargs /usr/bin/xargs.findutils 100
+
+NOTE: 	update-alternatives --remove  find /usr/bin/find.findutils
+	update-alternatives --remove  xargs /usr/bin/xargs.findutils
+
+DEBUG: Python function populate_packages_updatealternatives finished
+DEBUG: Executing python function package_do_split_locales
+DEBUG: Python function package_do_split_locales finished
+DEBUG: Executing python function populate_packages
+DEBUG: Python function populate_packages finished
+DEBUG: Executing python function package_fixsymlinks
+DEBUG: Python function package_fixsymlinks finished
+DEBUG: Executing python function package_name_hook
+DEBUG: Executing python function debian_package_name_hook
+DEBUG: LIBNAMES: pkg findutils-staticdev libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg findutils-src libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg findutils-locale-zh-tw libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg findutils-locale-zh-cn libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg findutils-locale-vi libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg findutils-locale-uk libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg findutils-locale-tr libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg findutils-locale-sv libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg findutils-locale-sr libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg findutils-locale-sl libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg findutils-locale-sk libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg findutils-locale-ru libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg findutils-locale-ro libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg findutils-locale-pt-br libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg findutils-locale-pt libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg findutils-locale-pl libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg findutils-locale-nl libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg findutils-locale-nb libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg findutils-locale-ms libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg findutils-locale-lt libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg findutils-locale-lg libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg findutils-locale-ko libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg findutils-locale-ja libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg findutils-locale-it libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg findutils-locale-id libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg findutils-locale-hu libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg findutils-locale-hr libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg findutils-locale-gl libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg findutils-locale-ga libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg findutils-locale-fr libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg findutils-locale-fi libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg findutils-locale-et libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg findutils-locale-es libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg findutils-locale-eo libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg findutils-locale-el libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg findutils-locale-de libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg findutils-locale-da libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg findutils-locale-cs libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg findutils-locale-ca libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg findutils-locale-bg libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg findutils-locale-be libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg findutils-doc libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg findutils-dev libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg findutils-dbg libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg findutils libs 0 bins 1 sonames []
+DEBUG: Python function debian_package_name_hook finished
+DEBUG: Python function package_name_hook finished
+DEBUG: Executing python function package_do_filedeps
+DEBUG: Python function package_do_filedeps finished
+DEBUG: Executing python function package_do_shlibs
+DEBUG: Reading shlib providers in /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/findutils/4.9.0-r0/pkgdata-sysroot/shlibs2
+DEBUG: calculating shlib provides for findutils-src
+DEBUG: LIBNAMES: pkg findutils-src sonames set()
+DEBUG: calculating shlib provides for findutils-dbg
+DEBUG: LIBNAMES: pkg findutils-dbg sonames set()
+DEBUG: calculating shlib provides for findutils-staticdev
+DEBUG: LIBNAMES: pkg findutils-staticdev sonames set()
+DEBUG: calculating shlib provides for findutils-dev
+DEBUG: LIBNAMES: pkg findutils-dev sonames set()
+DEBUG: calculating shlib provides for findutils-doc
+DEBUG: LIBNAMES: pkg findutils-doc sonames set()
+DEBUG: calculating shlib provides for findutils
+DEBUG: LIBNAMES: pkg findutils sonames set()
+DEBUG: calculating shlib provides for findutils-locale-be
+DEBUG: LIBNAMES: pkg findutils-locale-be sonames set()
+DEBUG: calculating shlib provides for findutils-locale-bg
+DEBUG: LIBNAMES: pkg findutils-locale-bg sonames set()
+DEBUG: calculating shlib provides for findutils-locale-ca
+DEBUG: LIBNAMES: pkg findutils-locale-ca sonames set()
+DEBUG: calculating shlib provides for findutils-locale-cs
+DEBUG: LIBNAMES: pkg findutils-locale-cs sonames set()
+DEBUG: calculating shlib provides for findutils-locale-da
+DEBUG: LIBNAMES: pkg findutils-locale-da sonames set()
+DEBUG: calculating shlib provides for findutils-locale-de
+DEBUG: LIBNAMES: pkg findutils-locale-de sonames set()
+DEBUG: calculating shlib provides for findutils-locale-el
+DEBUG: LIBNAMES: pkg findutils-locale-el sonames set()
+DEBUG: calculating shlib provides for findutils-locale-eo
+DEBUG: LIBNAMES: pkg findutils-locale-eo sonames set()
+DEBUG: calculating shlib provides for findutils-locale-es
+DEBUG: LIBNAMES: pkg findutils-locale-es sonames set()
+DEBUG: calculating shlib provides for findutils-locale-et
+DEBUG: LIBNAMES: pkg findutils-locale-et sonames set()
+DEBUG: calculating shlib provides for findutils-locale-fi
+DEBUG: LIBNAMES: pkg findutils-locale-fi sonames set()
+DEBUG: calculating shlib provides for findutils-locale-fr
+DEBUG: LIBNAMES: pkg findutils-locale-fr sonames set()
+DEBUG: calculating shlib provides for findutils-locale-ga
+DEBUG: LIBNAMES: pkg findutils-locale-ga sonames set()
+DEBUG: calculating shlib provides for findutils-locale-gl
+DEBUG: LIBNAMES: pkg findutils-locale-gl sonames set()
+DEBUG: calculating shlib provides for findutils-locale-hr
+DEBUG: LIBNAMES: pkg findutils-locale-hr sonames set()
+DEBUG: calculating shlib provides for findutils-locale-hu
+DEBUG: LIBNAMES: pkg findutils-locale-hu sonames set()
+DEBUG: calculating shlib provides for findutils-locale-id
+DEBUG: LIBNAMES: pkg findutils-locale-id sonames set()
+DEBUG: calculating shlib provides for findutils-locale-it
+DEBUG: LIBNAMES: pkg findutils-locale-it sonames set()
+DEBUG: calculating shlib provides for findutils-locale-ja
+DEBUG: LIBNAMES: pkg findutils-locale-ja sonames set()
+DEBUG: calculating shlib provides for findutils-locale-ko
+DEBUG: LIBNAMES: pkg findutils-locale-ko sonames set()
+DEBUG: calculating shlib provides for findutils-locale-lg
+DEBUG: LIBNAMES: pkg findutils-locale-lg sonames set()
+DEBUG: calculating shlib provides for findutils-locale-lt
+DEBUG: LIBNAMES: pkg findutils-locale-lt sonames set()
+DEBUG: calculating shlib provides for findutils-locale-ms
+DEBUG: LIBNAMES: pkg findutils-locale-ms sonames set()
+DEBUG: calculating shlib provides for findutils-locale-nb
+DEBUG: LIBNAMES: pkg findutils-locale-nb sonames set()
+DEBUG: calculating shlib provides for findutils-locale-nl
+DEBUG: LIBNAMES: pkg findutils-locale-nl sonames set()
+DEBUG: calculating shlib provides for findutils-locale-pl
+DEBUG: LIBNAMES: pkg findutils-locale-pl sonames set()
+DEBUG: calculating shlib provides for findutils-locale-pt
+DEBUG: LIBNAMES: pkg findutils-locale-pt sonames set()
+DEBUG: calculating shlib provides for findutils-locale-pt-br
+DEBUG: LIBNAMES: pkg findutils-locale-pt-br sonames set()
+DEBUG: calculating shlib provides for findutils-locale-ro
+DEBUG: LIBNAMES: pkg findutils-locale-ro sonames set()
+DEBUG: calculating shlib provides for findutils-locale-ru
+DEBUG: LIBNAMES: pkg findutils-locale-ru sonames set()
+DEBUG: calculating shlib provides for findutils-locale-sk
+DEBUG: LIBNAMES: pkg findutils-locale-sk sonames set()
+DEBUG: calculating shlib provides for findutils-locale-sl
+DEBUG: LIBNAMES: pkg findutils-locale-sl sonames set()
+DEBUG: calculating shlib provides for findutils-locale-sr
+DEBUG: LIBNAMES: pkg findutils-locale-sr sonames set()
+DEBUG: calculating shlib provides for findutils-locale-sv
+DEBUG: LIBNAMES: pkg findutils-locale-sv sonames set()
+DEBUG: calculating shlib provides for findutils-locale-tr
+DEBUG: LIBNAMES: pkg findutils-locale-tr sonames set()
+DEBUG: calculating shlib provides for findutils-locale-uk
+DEBUG: LIBNAMES: pkg findutils-locale-uk sonames set()
+DEBUG: calculating shlib provides for findutils-locale-vi
+DEBUG: LIBNAMES: pkg findutils-locale-vi sonames set()
+DEBUG: calculating shlib provides for findutils-locale-zh-cn
+DEBUG: LIBNAMES: pkg findutils-locale-zh-cn sonames set()
+DEBUG: calculating shlib provides for findutils-locale-zh-tw
+DEBUG: LIBNAMES: pkg findutils-locale-zh-tw sonames set()
+DEBUG: calculating shlib requirements for findutils-src
+DEBUG: calculating shlib requirements for findutils-dbg
+DEBUG: calculating shlib requirements for findutils-staticdev
+DEBUG: calculating shlib requirements for findutils-dev
+DEBUG: calculating shlib requirements for findutils-doc
+DEBUG: calculating shlib requirements for findutils
+DEBUG: findutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/findutils/4.9.0-r0/packages-split/findutils/usr/libexec/frcode)
+DEBUG: findutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/findutils/4.9.0-r0/packages-split/findutils/usr/bin/locate)
+DEBUG: findutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/findutils/4.9.0-r0/packages-split/findutils/usr/bin/locate)
+DEBUG: findutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/findutils/4.9.0-r0/packages-split/findutils/usr/libexec/frcode)
+DEBUG: findutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/findutils/4.9.0-r0/packages-split/findutils/usr/bin/xargs.findutils)
+DEBUG: findutils: Dependency libm.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/findutils/4.9.0-r0/packages-split/findutils/usr/bin/find.findutils)
+DEBUG: findutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/findutils/4.9.0-r0/packages-split/findutils/usr/bin/xargs.findutils)
+DEBUG: findutils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/findutils/4.9.0-r0/packages-split/findutils/usr/bin/find.findutils)
+DEBUG: findutils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/findutils/4.9.0-r0/packages-split/findutils/usr/bin/find.findutils)
+DEBUG: calculating shlib requirements for findutils-locale-be
+DEBUG: calculating shlib requirements for findutils-locale-bg
+DEBUG: calculating shlib requirements for findutils-locale-ca
+DEBUG: calculating shlib requirements for findutils-locale-cs
+DEBUG: calculating shlib requirements for findutils-locale-da
+DEBUG: calculating shlib requirements for findutils-locale-de
+DEBUG: calculating shlib requirements for findutils-locale-el
+DEBUG: calculating shlib requirements for findutils-locale-eo
+DEBUG: calculating shlib requirements for findutils-locale-es
+DEBUG: calculating shlib requirements for findutils-locale-et
+DEBUG: calculating shlib requirements for findutils-locale-fi
+DEBUG: calculating shlib requirements for findutils-locale-fr
+DEBUG: calculating shlib requirements for findutils-locale-ga
+DEBUG: calculating shlib requirements for findutils-locale-gl
+DEBUG: calculating shlib requirements for findutils-locale-hr
+DEBUG: calculating shlib requirements for findutils-locale-hu
+DEBUG: calculating shlib requirements for findutils-locale-id
+DEBUG: calculating shlib requirements for findutils-locale-it
+DEBUG: calculating shlib requirements for findutils-locale-ja
+DEBUG: calculating shlib requirements for findutils-locale-ko
+DEBUG: calculating shlib requirements for findutils-locale-lg
+DEBUG: calculating shlib requirements for findutils-locale-lt
+DEBUG: calculating shlib requirements for findutils-locale-ms
+DEBUG: calculating shlib requirements for findutils-locale-nb
+DEBUG: calculating shlib requirements for findutils-locale-nl
+DEBUG: calculating shlib requirements for findutils-locale-pl
+DEBUG: calculating shlib requirements for findutils-locale-pt
+DEBUG: calculating shlib requirements for findutils-locale-pt-br
+DEBUG: calculating shlib requirements for findutils-locale-ro
+DEBUG: calculating shlib requirements for findutils-locale-ru
+DEBUG: calculating shlib requirements for findutils-locale-sk
+DEBUG: calculating shlib requirements for findutils-locale-sl
+DEBUG: calculating shlib requirements for findutils-locale-sr
+DEBUG: calculating shlib requirements for findutils-locale-sv
+DEBUG: calculating shlib requirements for findutils-locale-tr
+DEBUG: calculating shlib requirements for findutils-locale-uk
+DEBUG: calculating shlib requirements for findutils-locale-vi
+DEBUG: calculating shlib requirements for findutils-locale-zh-cn
+DEBUG: calculating shlib requirements for findutils-locale-zh-tw
+DEBUG: Python function package_do_shlibs finished
+DEBUG: Executing python function package_do_pkgconfig
+DEBUG: Python function package_do_pkgconfig finished
+DEBUG: Executing python function read_shlibdeps
+DEBUG: Python function read_shlibdeps finished
+DEBUG: Executing python function package_depchains
+DEBUG: Python function package_depchains finished
+DEBUG: Executing python function emit_pkgdata
+DEBUG: Python function emit_pkgdata finished
+DEBUG: Python function do_package finished
+DEBUG: Executing python function sstate_task_postfunc
+NOTE: Using umask 0o002 (not 22) for sstate packaging
+DEBUG: Executing python function target_add_sysroot_deps
+DEBUG: Python function target_add_sysroot_deps finished
+DEBUG: Executing python function sstate_hardcode_path
+NOTE: Removing hardcoded paths from sstate package: 'find /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/findutils/4.9.0-r0/sstate-build-package/ \( -name "*.la" -o -name "*-config" -o -name "*_config" -o -name "postinst-*" \) -type f | xargs grep -l -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/findutils/4.9.0-r0/recipe-sysroot' -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/findutils/4.9.0-r0/recipe-sysroot-native' -e '/home/matt/tmp/build/obmc-y2038/tmp/hosttools' | tee /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/findutils/4.9.0-r0/sstate-build-package/fixmepath | xargs --no-run-if-empty sed -i -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/findutils/4.9.0-r0/recipe-sysroot-native:FIXMESTAGINGDIRHOST:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/findutils/4.9.0-r0/recipe-sysroot:FIXMESTAGINGDIRTARGET:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:FIXME_HOSTTOOLS_DIR:g''
+DEBUG: Python function sstate_hardcode_path finished
+DEBUG: Executing python function sstate_report_unihash
+DEBUG: Python function sstate_report_unihash finished
+DEBUG: Executing shell function sstate_create_package
+DEBUG: Shell function sstate_create_package finished
+DEBUG: Executing python function sstate_hardcode_path_unpack
+DEBUG: Python function sstate_hardcode_path_unpack finished
+DEBUG: Python function sstate_task_postfunc finished

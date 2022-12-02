@@ -1,0 +1,742 @@
+DEBUG: Executing shell function do_compile
+[1/25] /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot-native/usr/bin/meson.real --internal vcstagger ../git/git-version.h.meson git-version.h 20211215 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/git @VCS_TAG@ '(.*)' git describe --dirty=+
+[2/25] arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot -Ilibcommon.a.p -I. -I../git -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -Wpedantic -std=c99 -O0 -include config.h -include git-version.h -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/git=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/git=/usr/src/debug/iputils/20211215-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/build=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/build=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot-native= -Wconversion -Wno-error -fPIC -MD -MQ libcommon.a.p/iputils_common.c.o -MF libcommon.a.p/iputils_common.c.o.d -o libcommon.a.p/iputils_common.c.o -c ../git/iputils_common.c
+../git/iputils_common.c: In function 'iputil_srand_fallback':
+../git/iputils_common.c:95:34: warning: conversion to '__uid_t' {aka 'unsigned int'} from '__pid_t' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+   95 |         return ((getpid() << 16) ^ getuid() ^ ts.tv_sec ^ ts.tv_nsec);
+      |                                  ^
+../git/iputils_common.c:95:45: warning: conversion to 'long unsigned int' from '__time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+   95 |         return ((getpid() << 16) ^ getuid() ^ ts.tv_sec ^ ts.tv_nsec);
+      |                                             ^
+../git/iputils_common.c:95:57: warning: conversion to 'long unsigned int' from '__syscall_slong_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+   95 |         return ((getpid() << 16) ^ getuid() ^ ts.tv_sec ^ ts.tv_nsec);
+      |                                                         ^
+[3/25] arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot -Ilibcommon.a.p -I. -I../git -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -Wpedantic -std=c99 -O0 -include config.h -include git-version.h -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/git=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/git=/usr/src/debug/iputils/20211215-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/build=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/build=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot-native= -Wconversion -Wno-error -fPIC -MD -MQ libcommon.a.p/md5.c.o -MF libcommon.a.p/md5.c.o.d -o libcommon.a.p/md5.c.o -c ../git/md5.c
+[4/25] rm -f libcommon.a && arm-openbmc-linux-gnueabi-gcc-ar csrDT libcommon.a libcommon.a.p/iputils_common.c.o libcommon.a.p/md5.c.o
+[5/25] arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot -Iping/ping.p -Iping -I../git/ping -I. -I../git -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -Wpedantic -std=c99 -O0 -include config.h -include git-version.h -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/git=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/git=/usr/src/debug/iputils/20211215-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/build=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/build=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot-native= -Wconversion -Wno-error -MD -MQ ping/ping.p/ping.c.o -MF ping/ping.p/ping.c.o.d -o ping/ping.p/ping.c.o -c ../git/ping/ping.c
+In file included from ../git/ping/ping.c:52:
+../git/ping/ping.h: In function 'write_stdout':
+../git/ping/ping.h:280:19: warning: conversion to 'size_t' {aka 'unsigned int'} from 'ssize_t' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  280 |                 o += cc;
+      |                   ^~
+../git/ping/ping.c: In function 'parseflow':
+../git/ping/ping.c:218:23: warning: conversion to 'long unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  218 |                 val = (int)strtoul(cp, &ep, 16);
+      |                       ^
+../git/ping/ping.c:220:23: warning: conversion to 'long unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  220 |                 val = (int)strtoul(str, &ep, 10);
+      |                       ^
+../git/ping/ping.c:226:17: warning: unsigned conversion from 'int' to 'long unsigned int' changes value from '-1048576' to '4293918720' [-Wsign-conversion]
+  226 |         if (val & ~IPV6_FLOWINFO_FLOWLABEL)
+      |                 ^
+../git/ping/ping.c:228:16: warning: conversion to 'int' from 'long unsigned int' may change the sign of the result [-Wsign-conversion]
+  228 |         return (val);
+      |                ^
+../git/ping/ping.c: In function 'main':
+../git/ping/ping.c:350:41: warning: conversion to 'uint32_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  350 |                         rts.flowlabel = parseflow(optarg);
+      |                                         ^~~~~~~~~
+../git/ping/ping.c:423:84: warning: signed conversion from 'unsigned int' to 'long int' changes value from '4294967295' to '-1' [-Wsign-conversion]
+  423 |                         rts.mark = strtol_or_err(optarg, _("invalid argument"), 0, UINT_MAX);
+      |                                                                                    ^~~~~~~~
+../git/ping/ping.c:423:36: warning: conversion to 'unsigned int' from 'long int' may change the sign of the result [-Wsign-conversion]
+  423 |                         rts.mark = strtol_or_err(optarg, _("invalid argument"), 0, UINT_MAX);
+      |                                    ^~~~~~~~~~~~~
+../git/ping/ping.c:459:38: warning: conversion to 'uint32_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  459 |                         rts.tclass = rts.settos; /* IPv6 */
+      |                                      ^~~
+../git/ping/ping.c:465:39: warning: conversion to 'size_t' {aka 'unsigned int'} from 'long int' may change the sign of the result [-Wsign-conversion]
+  465 |                         rts.datalen = strtol_or_err(optarg, _("invalid argument"), 0, INT_MAX);
+      |                                       ^~~~~~~~~~~~~
+../git/ping/ping.c: In function 'ping4_run':
+../git/ping/ping.c:804:29: warning: unsigned conversion from 'int' to 'uint32_t' {aka 'unsigned int'} changes value from '-6202' to '4294961094' [-Wsign-conversion]
+  804 |                 filt.data = ~((1 << ICMP_SOURCE_QUENCH) |
+      |                             ^
+../git/ping/ping.c:841:29: warning: conversion from 'int' to 'unsigned char' may change value [-Wconversion]
+  841 |                 rspace[3] = rts->ts_type;
+      |                             ^~~
+../git/ping/ping.c:844:37: warning: conversion from 'int' to 'unsigned char' may change value [-Wconversion]
+  844 |                         rspace[1] = 4 + rts->nroute * 8;
+      |                                     ^
+../git/ping/ping.c:862:42: warning: conversion from 'int' to 'unsigned char' may change value [-Wconversion]
+  862 |                 rspace[1 + IPOPT_OLEN] = 3 + rts->nroute * 4;
+      |                                          ^
+../git/ping/ping.c:869:76: warning: conversion to 'socklen_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  869 |                 if (setsockopt(sock->fd, IPPROTO_IP, IP_OPTIONS, rspace, 4 + rts->nroute * 4) < 0)
+      |                                                                          ~~^~~~~~~~~~~~~~~~~
+../git/ping/ping.c:876:16: warning: conversion to 'int' from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  876 |         hold = rts->datalen + 8;
+      |                ^~~
+../git/ping/ping.c:901:19: warning: conversion to 'int' from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  901 |         packlen = rts->datalen + MAXIPLEN + MAXICMPLEN;
+      |                   ^~~
+../git/ping/ping.c:908:79: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  908 |         printf(_("%zu(%zu) bytes of data.\n"), rts->datalen, rts->datalen + 8 + rts->optlen + 20);
+      |                                                                               ^
+../git/ping/ping.c: In function 'pr_options':
+../git/ping/ping.c:925:23: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  925 |         totlen = hlen - sizeof(struct iphdr);
+      |                       ^
+../git/ping/ping.c:925:18: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  925 |         totlen = hlen - sizeof(struct iphdr);
+      |                  ^~~~
+../git/ping/ping.c:981:52: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  981 |                             && !memcmp(cp, old_rr, i)
+      |                                                    ^
+../git/ping/ping.c:987:52: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  987 |                         memcpy(old_rr, (char *)cp, i);
+      |                                                    ^
+../git/ping/ping.c:1054:39: warning: conversion to 'long unsigned int' from 'long int' may change the sign of the result [-Wsign-conversion]
+ 1054 |                                 if (l & 0x80000000) {
+      |                                       ^
+../git/ping/ping.c: In function 'ping4_receive_error_msg':
+../git/ping/ping.c:1318:69: warning: conversion to 'int' from '__u32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+ 1318 |                         error(0, 0, _("local error: %s"), strerror(e->ee_errno));
+      |                                                                    ~^~~~~~~~~~
+../git/ping/ping.c:1339:37: warning: unsigned conversion from 'int' to 'uint32_t' {aka 'unsigned int'} changes value from '-50' to '4294967246' [-Wsign-conversion]
+ 1339 |                         filt.data = ~((1 << ICMP_SOURCE_QUENCH) |
+      |                                     ^
+../git/ping/ping.c: In function 'in_cksum':
+../git/ping/ping.c:1401:18: warning: conversion from 'int' to 'short unsigned int' may change value [-Wconversion]
+ 1401 |         answer = ~sum;                          /* truncate to 16 bits */
+      |                  ^
+In file included from /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot/usr/include/netdb.h:27,
+                 from ../git/ping/ping.h:23:
+../git/ping/ping.c: In function 'ping4_send_probe':
+../git/ping/ping.c:1424:57: warning: conversion from 'long int' to '__uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+ 1424 |         icp->un.echo.sequence = htons(rts->ntransmitted + 1);
+      |                                       ~~~~~~~~~~~~~~~~~~^~~
+../git/ping/ping.c:1425:27: warning: conversion from 'int' to 'uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+ 1425 |         icp->un.echo.id = rts->ident;                   /* ID */
+      |                           ^~~
+../git/ping/ping.c:1427:43: warning: conversion from 'long int' to 'uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+ 1427 |         rcvd_clear(rts, rts->ntransmitted + 1);
+      |                         ~~~~~~~~~~~~~~~~~~^~~
+../git/ping/ping.c:1439:14: warning: conversion to 'int' from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+ 1439 |         cc = rts->datalen + 8;                  /* skips ICMP portion */
+      |              ^~~
+../git/ping/ping.c:1451:35: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 1451 |         i = sendto(sock->fd, icp, cc, 0, (struct sockaddr *)&rts->whereto, sizeof(rts->whereto));
+      |                                   ^~
+../git/ping/ping.c: In function 'ping4_parse_reply':
+../git/ping/ping.c:1499:29: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 1499 |                 olen = hlen - sizeof(struct iphdr);
+      |                             ^
+../git/ping/ping.c:1499:24: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+ 1499 |                 olen = hlen - sizeof(struct iphdr);
+      |                        ^~~~
+../git/ping/ping.c:1515:40: warning: conversion to 'int' from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+ 1515 |                                 olen = cmsgh->cmsg_len;
+      |                                        ^~~~~
+../git/ping/ping.c:1612:44: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 1612 |                 pr_options(rts, opts, olen + sizeof(struct iphdr));
+      |                                            ^
+../git/ping/ping.c:1612:44: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+ 1612 |                 pr_options(rts, opts, olen + sizeof(struct iphdr));
+      |                                       ~~~~~^~~~~~~~~~~~~~~~~~~~~~
+In file included from ../git/ping/ping.h:33:
+../git/ping/ping.c: In function 'ping4_install_filter':
+../git/ping/ping.c:1679:85: warning: conversion from 'int' to '__uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+ 1679 |         insns[2] = (struct sock_filter)BPF_JUMP(BPF_JMP | BPF_JEQ | BPF_K, htons(rts->ident), 0, 1);
+      |                                                                                  ~~~^~~~~~~
+[6/25] arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot -Iping/ping.p -Iping -I../git/ping -I. -I../git -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -Wpedantic -std=c99 -O0 -include config.h -include git-version.h -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/git=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/git=/usr/src/debug/iputils/20211215-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/build=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/build=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot-native= -Wconversion -Wno-error -MD -MQ ping/ping.p/ping_common.c.o -MF ping/ping.p/ping_common.c.o.d -o ping/ping.p/ping_common.c.o -c ../git/ping/ping_common.c
+In file included from ../git/ping/ping_common.c:33:
+../git/ping/ping.h: In function 'write_stdout':
+../git/ping/ping.h:280:19: warning: conversion to 'size_t' {aka 'unsigned int'} from 'ssize_t' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  280 |                 o += cc;
+      |                   ^~
+../git/ping/ping_common.c: In function 'fill':
+../git/ping/ping_common.c:220:44: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  220 |                 for (kk = 0; kk <= max; kk += ii)
+      |                                            ^~
+../git/ping/ping_common.c:222:39: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  222 |                                 bp[jj + kk] = pat[jj];
+      |                                       ^
+../git/ping/ping_common.c:222:47: warning: conversion from 'unsigned int' to 'unsigned char' may change value [-Wconversion]
+  222 |                                 bp[jj + kk] = pat[jj];
+      |                                               ^~~
+../git/ping/ping_common.c: In function '__schedule_exit':
+../git/ping/ping_common.c:257:28: warning: conversion to 'long unsigned int' from 'long int' may change the sign of the result [-Wsign-conversion]
+  257 |                 waittime = 2 * global_rts->tmax;
+      |                            ^
+../git/ping/ping_common.c:259:36: warning: conversion to 'long unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  259 |                         waittime = 1000 * global_rts->interval;
+      |                                    ^~~~
+../git/ping/ping_common.c:261:28: warning: conversion to 'long unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  261 |                 waittime = global_rts->lingertime * 1000;
+      |                            ^~~~~~~~~~
+../git/ping/ping_common.c:264:24: warning: conversion to 'int' from 'long unsigned int' may change the sign of the result [-Wsign-conversion]
+  264 |                 next = waittime / 1000;
+      |                        ^~~~~~~~
+../git/ping/ping_common.c:268:30: warning: conversion to '__time_t' {aka 'long int'} from 'long unsigned int' may change the sign of the result [-Wsign-conversion]
+  268 |         it.it_value.tv_sec = waittime / 1000000;
+      |                              ^~~~~~~~
+../git/ping/ping_common.c:269:31: warning: conversion to '__suseconds_t' {aka 'long int'} from 'long unsigned int' may change the sign of the result [-Wsign-conversion]
+  269 |         it.it_value.tv_usec = waittime % 1000000;
+      |                               ^~~~~~~~
+../git/ping/ping_common.c: In function 'pinger':
+../git/ping/ping_common.c:343:65: warning: conversion from 'long int' to 'uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+  343 |                 if (rts->ntransmitted > 0 && !rcvd_test(rts, rts->ntransmitted)) {
+      |                                                              ~~~^~~~~~~~~~~~~~
+../git/ping/ping_common.c: In function 'setup':
+../git/ping/ping_common.c:527:32: warning: conversion from 'size_t' {aka 'unsigned int'} to 'unsigned char' may change value [-Wconversion]
+  527 |                         *p++ = i;
+      |                                ^
+../git/ping/ping_common.c: In function 'main_loop':
+../git/ping/ping_common.c:647:39: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  647 |                         iov.iov_len = packlen;
+      |                                       ^~~~~~~
+../git/ping/ping_common.c: In function 'finish':
+../git/ping/ping_common.c:894:30: warning: conversion from 'double' to 'long int' may change value [-Wfloat-conversion]
+  894 |                 long tmavg = rts->tsum / total;
+      |                              ^~~
+../git/ping/ping_common.c:900:33: warning: conversion from 'double' to 'long long int' may change value [-Wfloat-conversion]
+  900 |                         tmvar = (rts->tsum2 - ((rts->tsum * rts->tsum) / total)) / total;
+      |                                 ^
+../git/ping/ping_common.c:902:33: warning: conversion from 'double' to 'long long int' may change value [-Wfloat-conversion]
+  902 |                         tmvar = (rts->tsum2 / total) - (tmavg * tmavg);
+      |                                 ^
+../git/ping/ping_common.c:919:27: warning: conversion from 'long long int' to 'int' may change value [-Wconversion]
+  919 |                 int ipg = (1000000 * (long long)tv.tv_sec + tv.tv_nsec / 1000) / (rts->ntransmitted - 1);
+      |                           ^
+../git/ping/ping_common.c: In function 'status':
+../git/ping/ping_common.c:936:24: warning: conversion from 'long long int' to 'int' may change value [-Wconversion]
+  936 |                 loss = (((long long)(rts->ntransmitted - rts->nreceived)) * 100) / rts->ntransmitted;
+      |                        ^
+../git/ping/ping_common.c:942:24: warning: conversion from 'double' to 'long int' may change value [-Wfloat-conversion]
+  942 |                 tavg = rts->tsum / (rts->nreceived + rts->nrepeats);
+      |                        ^~~
+[7/25] arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot -Iping/ping.p -Iping -I../git/ping -I. -I../git -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -Wpedantic -std=c99 -O0 -include config.h -include git-version.h -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/git=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/git=/usr/src/debug/iputils/20211215-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/build=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/build=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot-native= -Wconversion -Wno-error -MD -MQ ping/ping.p/ping6_common.c.o -MF ping/ping.p/ping6_common.c.o.d -o ping/ping.p/ping6_common.c.o -c ../git/ping/ping6_common.c
+In file included from ../git/ping/ping6_common.c:65:
+../git/ping/ping.h: In function 'write_stdout':
+../git/ping/ping.h:280:19: warning: conversion to 'size_t' {aka 'unsigned int'} from 'ssize_t' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  280 |                 o += cc;
+      |                   ^~
+../git/ping/ping6_common.c: In function 'ping6_run':
+../git/ping/ping6_common.c:291:19: warning: conversion to 'int' from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  291 |         packlen = rts->datalen + 8 + 4096 + 40 + 8; /* 4096 for rthdr */
+      |                   ^~~
+../git/ping/ping6_common.c:301:16: warning: conversion to 'int' from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  301 |         hold = rts->datalen + 8;
+      |                ^~~
+../git/ping/ping6_common.c:310:82: warning: conversion to 'socklen_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  310 |                 err = setsockopt(sock->fd, SOL_RAW, IPV6_CHECKSUM, &csum_offset, sz_opt);
+      |                                                                                  ^~~~~~
+../git/ping/ping6_common.c:383:82: warning: conversion to 'socklen_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  383 |                 if (setsockopt(sock->fd, IPPROTO_IPV6, IPV6_FLOWLABEL_MGR, freq, freq_len) == -1)
+      |                                                                                  ^~~~~~~~
+../git/ping/ping6_common.c:399:36: warning: conversion from 'int' to 'unsigned char:1' may change value [-Wconversion]
+  399 |                 rts->opt_numeric = saved_opt_numeric;
+      |                                    ^~~~~~~~~~~~~~~~~
+../git/ping/ping6_common.c: In function 'ping6_receive_error_msg':
+../git/ping/ping6_common.c:534:35: warning: conversion to 'int' from '__u32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  534 |                         error(0, e->ee_errno, _("local error"));
+      |                                  ~^~~~~~~~~~
+In file included from /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot/usr/include/netdb.h:27,
+                 from ../git/ping/ping.h:23:
+../git/ping/ping6_common.c: In function 'build_echo':
+../git/ping/ping6_common.c:588:52: warning: conversion from 'long int' to '__uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+  588 |         icmph->icmp6_seq = htons(rts->ntransmitted + 1);
+      |                                  ~~~~~~~~~~~~~~~~~~^~~
+../git/ping/ping6_common.c:589:27: warning: conversion from 'int' to 'uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+  589 |         icmph->icmp6_id = rts->ident;
+      |                           ^~~
+../git/ping/ping6_common.c:595:14: warning: conversion to 'int' from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  595 |         cc = rts->datalen + 8;                  /* skips ICMP portion */
+      |              ^~~
+../git/ping/ping6_common.c: In function 'build_niquery':
+../git/ping/ping6_common.c:614:56: warning: conversion from 'long int' to 'uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+  614 |         niquery_fill_nonce(&rts->ni, rts->ntransmitted + 1, nih->ni_nonce);
+      |                                      ~~~~~~~~~~~~~~~~~~^~~
+../git/ping/ping6_common.c:615:24: warning: conversion from 'int' to 'uint8_t' {aka 'unsigned char'} may change value [-Wconversion]
+  615 |         nih->ni_code = rts->ni.subject_type;
+      |                        ^~~
+../git/ping/ping6_common.c:616:38: warning: conversion from 'int' to '__uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+  616 |         nih->ni_qtype = htons(rts->ni.query);
+      |                               ~~~~~~~^~~~~~
+../git/ping/ping6_common.c:617:25: warning: conversion from 'int' to 'uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+  617 |         nih->ni_flags = rts->ni.flag;
+      |                         ^~~
+../git/ping/ping6_common.c:618:49: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  618 |         memcpy(nih + 1, rts->ni.subject, rts->ni.subject_len);
+      |                                          ~~~~~~~^~~~~~~~~~~~
+../git/ping/ping6_common.c: In function 'ping6_send_probe':
+../git/ping/ping6_common.c:628:43: warning: conversion from 'long int' to 'uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+  628 |         rcvd_clear(rts, rts->ntransmitted + 1);
+      |                         ~~~~~~~~~~~~~~~~~~^~~
+../git/ping/ping6_common.c:636:55: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  636 |                 cc = sendto(sock->fd, (char *)packet, len, rts->confirm,
+      |                                                       ^~~
+../git/ping/ping6_common.c:643:31: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  643 |                 iov.iov_len = len;
+      |                               ^~~
+../git/ping/ping6_common.c: In function 'pr_niquery_reply_name':
+../git/ping/ping6_common.c:686:13: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  686 |         len -= sizeof(struct ni_hdr) + 4;
+      |             ^~
+../git/ping/ping6_common.c:686:16: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  686 |         len -= sizeof(struct ni_hdr) + 4;
+      |                ^~~~~~
+../git/ping/ping6_common.c: In function 'pr_niquery_reply_addr':
+../git/ping/ping6_common.c:767:39: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  767 |                 p += sizeof(uint32_t) + aflen;
+      |                                       ^
+../git/ping/ping6_common.c: In function 'ping6_parse_reply':
+../git/ping/ping6_common.c:870:39: warning: conversion from 'int' to 'uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+  870 |                                       seq,
+      |                                       ^~~
+In file included from ../git/ping/ping.h:33:
+../git/ping/ping6_common.c: In function 'ping6_install_filter':
+../git/ping/ping6_common.c:949:85: warning: conversion from 'int' to '__uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+  949 |         insns[1] = (struct sock_filter)BPF_JUMP(BPF_JMP | BPF_JEQ | BPF_K, htons(rts->ident), 0, 1);
+      |                                                                                  ~~~^~~~~~~
+[8/25] arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot -Iping/ping.p -Iping -I../git/ping -I. -I../git -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -Wpedantic -std=c99 -O0 -include config.h -include git-version.h -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/git=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/git=/usr/src/debug/iputils/20211215-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/build=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/build=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot-native= -Wconversion -Wno-error -MD -MQ ping/ping.p/node_info.c.o -MF ping/ping.p/node_info.c.o.d -o ping/ping.p/node_info.c.o -c ../git/ping/node_info.c
+In file included from ../git/ping/node_info.c:37:
+../git/ping/ping.h: In function 'write_stdout':
+../git/ping/ping.h:280:19: warning: conversion to 'size_t' {aka 'unsigned int'} from 'ssize_t' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  280 |                 o += cc;
+      |                   ^~
+../git/ping/node_info.c: In function 'niquery_option_subject_addr_handler':
+../git/ping/node_info.c:264:36: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  264 |                 void *p = malloc(ni->subject_len);
+      |                                  ~~^~~~~~~~~~~~~
+../git/ping/node_info.c:267:62: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  267 |                 memcpy(p, (uint8_t *)ai->ai_addr + offset, ni->subject_len);
+      |                                                            ~~^~~~~~~~~~~~~
+../git/ping/node_info.c: In function 'niquery_option_subject_name_handler':
+../git/ping/node_info.c:330:32: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  330 |                 canonname[i] = isupper(idn[i]) ? tolower(idn[i]) : idn[i];
+      |                                ^~~~~~~
+../git/ping/node_info.c:354:54: warning: conversion to 'int' from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  354 |         n = dn_comp(canonname, (unsigned char *)buf, buflen, dnptrs, lastdnptr);
+      |                                                      ^~~~~~
+../git/ping/node_info.c: In function 'niquery_option_handler':
+../git/ping/node_info.c:427:48: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  427 |                 if (strncmp(p->name, opt_arg, p->namelen))
+      |                                               ~^~~~~~~~~
+[9/25] arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot  -o ping/ping ping/ping.p/ping.c.o ping/ping.p/ping_common.c.o ping/ping.p/ping6_common.c.o ping/ping.p/node_info.c.o -flto -Wl,--as-needed -Wl,--no-undefined -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/git=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/git=/usr/src/debug/iputils/20211215-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/build=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/build=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot-native= -Wl,-z,relro,-z,now -Wl,--start-group libcommon.a -lcap -lm -lresolv -Wl,--end-group
+[10/25] arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot -Itracepath.p -I. -I../git -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -Wpedantic -std=c99 -O0 -include config.h -include git-version.h -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/git=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/git=/usr/src/debug/iputils/20211215-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/build=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/build=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot-native= -Wconversion -Wno-error -MD -MQ tracepath.p/tracepath.c.o -MF tracepath.p/tracepath.c.o.d -o tracepath.p/tracepath.c.o -c ../git/tracepath.c
+../git/tracepath.c: In function 'recverr':
+../git/tracepath.c:196:35: warning: conversion to 'int' from 'uint32_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  196 |                         sndhops = rcvbuf.ttl;
+      |                                   ^~~~~~
+../git/tracepath.c:303:28: warning: conversion to 'int' from '__u32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  303 |                 ctl->mtu = e->ee_info;
+      |                            ^
+../git/tracepath.c:341:27: warning: conversion to 'int' from '__u32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  341 |                 error(0, e->ee_errno, _("NET ERROR"));
+      |                          ~^~~~~~~~~~
+../git/tracepath.c: In function 'probe_ttl':
+../git/tracepath.c:352:35: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  352 |         memset(ctl->pktbuf, 0, ctl->mtu);
+      |                                ~~~^~~~~
+In file included from /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot/usr/include/arpa/inet.h:22,
+                 from ../git/tracepath.c:12:
+../git/tracepath.c:361:50: warning: conversion from 'int' to '__uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+  361 |                             htons(ctl->base_port + ctl->hisptr);
+      |                                   ~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+../git/tracepath.c:365:50: warning: conversion from 'int' to '__uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+  365 |                             htons(ctl->base_port + ctl->hisptr);
+      |                                   ~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+../git/tracepath.c:371:66: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  371 |                 if (sendto(ctl->socket_fd, ctl->pktbuf, ctl->mtu - ctl->overhead, 0,
+      |                                                         ~~~~~~~~~^~~~~~~~~~~~~~~
+../git/tracepath.c:385:58: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  385 |                 if (recv(ctl->socket_fd, ctl->pktbuf, ctl->mtu, MSG_DONTWAIT) > 0) {
+      |                                                       ~~~^~~~~
+../git/tracepath.c: In function 'main':
+../git/tracepath.c:478:41: warning: conversion from 'long int' to 'uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+  478 |                         ctl.base_port = strtol_or_err(optarg, _("invalid argument"), 0, UINT16_MAX);
+      |                                         ^~~~~~~~~~~~~
+../git/tracepath.c:499:41: warning: conversion from 'long int' to 'uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+  499 |                         ctl.base_port = strtol_or_err(p + 1, _("invalid argument"), 0, UINT16_MAX);
+      |                                         ^~~~~~~~~~~~~
+../git/tracepath.c:567:32: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  567 |         ctl.pktbuf = malloc(ctl.mtu);
+      |                             ~~~^~~~
+[11/25] arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot  -o tracepath tracepath.p/tracepath.c.o -flto -Wl,--as-needed -Wl,--no-undefined -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/git=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/git=/usr/src/debug/iputils/20211215-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/build=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/build=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot-native= -Wl,-z,relro,-z,now -Wl,--start-group libcommon.a -Wl,--end-group
+[12/25] arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot -Iclockdiff.p -I. -I../git -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -Wpedantic -std=c99 -O0 -include config.h -include git-version.h -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/git=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/git=/usr/src/debug/iputils/20211215-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/build=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/build=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot-native= -Wconversion -Wno-error -MD -MQ clockdiff.p/clockdiff.c.o -MF clockdiff.p/clockdiff.c.o.d -o clockdiff.p/clockdiff.c.o -c ../git/clockdiff.c
+../git/clockdiff.c: In function 'addcarry':
+../git/clockdiff.c:155:17: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  155 |         if (sum & 0xffff0000) {
+      |                 ^
+../git/clockdiff.c: In function 'measure_inner_loop':
+../git/clockdiff.c:256:52: warning: conversion to 'long int' from 'uint32_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  256 |                                         sendtime = t;
+      |                                                    ^
+../git/clockdiff.c:258:62: warning: conversion to 'long int' from 'uint32_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  258 |                                         histime = histime1 = t;
+      |                                                              ^
+../git/clockdiff.c:261:60: warning: conversion to 'long int' from 'uint32_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  261 |                                                 histime1 = t;
+      |                                                            ^
+../git/clockdiff.c:263:60: warning: conversion to 'long int' from 'uint32_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  263 |                                                 recvtime = t;
+      |                                                            ^
+../git/clockdiff.c:266:52: warning: conversion to 'long int' from 'uint32_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  266 |                                         recvtime = t;
+      |                                                    ^
+../git/clockdiff.c:276:36: warning: conversion to 'long int' from '__uint32_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  276 |                         sendtime = ntohl(*(uint32_t *) (mv->icp + 1));
+      |                                    ^~~~~
+../git/clockdiff.c:286:35: warning: conversion to 'long int' from '__uint32_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  286 |                         histime = ntohl(((uint32_t *) (mv->icp + 1))[1]);
+      |                                   ^~~~~
+../git/clockdiff.c:292:38: warning: conversion to 'long unsigned int' from 'long int' may change the sign of the result [-Wsign-conversion]
+  292 |                         if ((histime & 0x80000000) != 0)
+      |                                      ^
+In file included from /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot/usr/include/arpa/inet.h:22,
+                 from ../git/clockdiff.c:54:
+../git/clockdiff.c: In function 'measure':
+../git/clockdiff.c:405:67: warning: conversion to '__uint32_t' {aka 'unsigned int'} from 'long int' may change the sign of the result [-Wsign-conversion]
+  405 |                     htonl((mv.ts1.tv_sec % (24 * 60 * 60)) * 1000 + mv.ts1.tv_nsec / 1000000);
+      |                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~
+../git/clockdiff.c:406:34: warning: conversion from 'int' to 'uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+  406 |                 oicp->checksum = in_cksum((unsigned short *)oicp, sizeof(*oicp) + 12);
+      |                                  ^~~~~~~~
+../git/clockdiff.c: In function 'main':
+../git/clockdiff.c:544:18: warning: conversion from '__pid_t' {aka 'int'} to 'uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+  544 |         ctl.id = getpid();
+      |                  ^~~~~~
+../git/clockdiff.c:561:41: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  561 |                 if ((rspace = calloc(ctl.ip_opt_len, sizeof(uint8_t))) == NULL)
+      |                                      ~~~^~~~~~~~~~~
+../git/clockdiff.c:563:56: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  563 |                                         ctl.ip_opt_len * sizeof(uint8_t));
+      |                                                        ^
+../git/clockdiff.c:565:29: warning: conversion from 'int' to 'uint8_t' {aka 'unsigned char'} may change value [-Wconversion]
+  565 |                 rspace[1] = ctl.ip_opt_len;
+      |                             ^~~
+../git/clockdiff.c:578:81: warning: conversion to 'socklen_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  578 |                 if (setsockopt(ctl.sock_raw, IPPROTO_IP, IP_OPTIONS, rspace, ctl.ip_opt_len) < 0) {
+      |                                                                              ~~~^~~~~~~~~~~
+[13/25] arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot  -o clockdiff clockdiff.p/clockdiff.c.o -flto -Wl,--as-needed -Wl,--no-undefined -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/git=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/git=/usr/src/debug/iputils/20211215-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/build=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/build=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot-native= -Wl,-z,relro,-z,now -Wl,--start-group libcommon.a -lcap -Wl,--end-group
+[14/25] arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot -Irdisc.p -I. -I../git -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -Wpedantic -std=c99 -O0 -include config.h -include git-version.h -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/git=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/git=/usr/src/debug/iputils/20211215-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/build=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/build=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot-native= -Wconversion -Wno-error -MD -MQ rdisc.p/rdisc.c.o -MF rdisc.p/rdisc.c.o.d -o rdisc.p/rdisc.c.o -c ../git/rdisc.c
+../git/rdisc.c: In function 'main':
+../git/rdisc.c:466:55: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  466 |                 cc=recvfrom(socketfd, (char *)packet, len, 0,
+      |                                                       ^~~
+../git/rdisc.c: In function 'timer':
+../git/rdisc.c:521:46: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  521 |                         left_until_solicit = solicitation_interval;
+      |                                              ^~~~~~~~~~~~~~~~~~~~~
+../git/rdisc.c: In function 'solicitor':
+../git/rdisc.c:563:55: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  563 |                 i = sendto(socketfd, (char *)outpack, packetlen, 0,
+      |                                                       ^~~~~~~~~
+In file included from ../git/rdisc.c:49:
+../git/rdisc.c: In function 'advertise':
+../git/rdisc.c:601:44: warning: conversion from 'int' to '__uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+  601 |                 rap->icmp_lifetime = htons(lft);
+      |                                            ^~~
+../git/rdisc.c:611:57: warning: conversion to '__uint32_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  611 |                 ap->ira_preference = htonl(interfaces[i].preference);
+      |                                            ~~~~~~~~~~~~~^~~~~~~~~~~
+../git/rdisc.c:639:72: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  639 |                                 cc = sendto(socketfd, (char *)outpack, packetlen, 0,
+      |                                                                        ^~~~~~~~~
+../git/rdisc.c: In function 'pr_pack':
+../git/rdisc.c:811:47: warning: conversion to 'int' from '__uint32_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  811 |                                               ntohl(ap->ira_preference),
+      |                                               ^~~~~
+../git/rdisc.c: In function 'in_cksum':
+../git/rdisc.c:946:18: warning: conversion from 'int' to 'short unsigned int' may change value [-Wconversion]
+  946 |         answer = ~sum;                          /* truncate to 16 bits */
+      |                  ^
+../git/rdisc.c: In function 'sendbcastif':
+../git/rdisc.c:1024:37: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 1024 |         cc = sendto(socket, packet, packetlen, 0,
+      |                                     ^~~~~~~~~
+../git/rdisc.c: In function 'sendmcastif':
+../git/rdisc.c:1075:37: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 1075 |         cc = sendto(socket, packet, packetlen, 0,
+      |                                     ^~~~~~~~~
+../git/rdisc.c: In function 'initifs':
+../git/rdisc.c:1122:26: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 1122 |         bufsize = numifs * sizeof(struct ifreq);
+      |                          ^
+../git/rdisc.c:1131:63: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 1131 |         interfaces = (struct interface *)ALLIGN(malloc(numifs *
+      |                                                               ^
+../git/rdisc.c:87:26: note: in definition of macro 'ALLIGN'
+   87 | #define ALLIGN(ptr)     (ptr)
+      |                          ^~~
+../git/rdisc.c:1141:23: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+ 1141 |         ifc.ifc_len = bufsize;
+      |                       ^~~~~~~
+../git/rdisc.c:1150:36: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 1150 |         for (i = 0, n = ifc.ifc_len/sizeof (struct ifreq); n > 0; n--, ifr++) {
+      |                                    ^
+../git/rdisc.c:1150:25: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+ 1150 |         for (i = 0, n = ifc.ifc_len/sizeof (struct ifreq); n > 0; n--, ifr++) {
+      |                         ^~~
+../git/rdisc.c: In function 'join':
+../git/rdisc.c:1224:30: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 1224 |         if ((joined = calloc(num_interfaces, sizeof(int))) == NULL) {
+      |                              ^~~~~~~~~~~~~~
+../git/rdisc.c: In function 'record_router':
+../git/rdisc.c:147:41: warning: signed conversion from 'unsigned int' to 'int' changes value from '2147483648' to '-2147483648' [-Wsign-conversion]
+  147 | #define INELIGIBLE_PREF                 0x80000000      /* Maximum negative */
+      |                                         ^~~~~~~~~~
+../git/rdisc.c:1394:24: note: in expansion of macro 'INELIGIBLE_PREF'
+ 1394 |                 pref = INELIGIBLE_PREF;
+      |                        ^~~~~~~~~~~~~~~
+../git/rdisc.c: In function 'rtioctl':
+../git/rdisc.c:1500:25: warning: conversion to 'long unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 1500 |         if (ioctl(sock, op, (char *)&rt) < 0) {
+      |                         ^~
+[15/25] arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot  -o rdisc rdisc.p/rdisc.c.o -flto -Wl,--as-needed -Wl,--no-undefined -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/git=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/git=/usr/src/debug/iputils/20211215-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/build=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/build=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot-native= -Wl,-z,relro,-z,now -Wl,--start-group libcommon.a -Wl,--end-group
+[16/25] arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot -Iarping.p -I. -I../git -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -Wpedantic -std=c99 -O0 -include config.h -include git-version.h -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/git=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/git=/usr/src/debug/iputils/20211215-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/build=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/build=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot-native= -Wconversion -Wno-error -MD -MQ arping.p/arping.c.o -MF arping.p/arping.c.o.d -o arping.p/arping.c.o -c ../git/arping.c
+../git/arping.c: In function 'send_pack':
+../git/arping.c:290:44: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  290 |         err = sendto(ctl->socketfd, buf, p - buf, 0, (struct sockaddr *)HE, sll_len(ah->ar_hln));
+      |                                          ~~^~~~~
+../git/arping.c: In function 'outgoing_device':
+../git/arping.c:473:56: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  473 |                         if (!if_indextoname(ctl->device.ifindex, dev_name)) {
+      |                                             ~~~~~~~~~~~^~~~~~~~
+../git/arping.c: In function 'netlink_query':
+../git/arping.c:506:27: warning: conversion from 'int' to '__u16' {aka 'short unsigned int'} may change value [-Wconversion]
+  506 |         nh->nlmsg_flags = flags;
+      |                           ^~~~~
+../git/arping.c:507:26: warning: conversion from 'int' to '__u16' {aka 'short unsigned int'} may change value [-Wconversion]
+  507 |         nh->nlmsg_type = type;
+      |                          ^~~~
+../git/arping.c:527:61: warning: conversion to '__u32' {aka 'unsigned int'} from 'ssize_t' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  527 |         for (nh = iov.iov_base; NLMSG_OK(nh, msg_len); nh = NLMSG_NEXT(nh, msg_len)) {
+      |                                                             ^~~~~~~~~~
+../git/arping.c:527:61: warning: conversion to 'ssize_t' {aka 'int'} from '__u32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+../git/arping.c: In function 'guess_device':
+../git/arping.c:573:31: warning: conversion from 'int' to 'unsigned char' may change value [-Wconversion]
+  573 |         query.rm.rtm_family = ctl->gdst_family;
+      |                               ^~~
+../git/arping.c:574:28: warning: conversion from 'unsigned int' to 'short unsigned int' may change value [-Wconversion]
+  574 |         query.ra.rta_len = RTA_LENGTH(addr_len);
+      |                            ^~~~~~~~~~
+../git/arping.c: In function 'check_device':
+../git/arping.c:656:39: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  656 |                 ctl->device.ifindex = if_nametoindex(ctl->device.ifa->ifa_name);
+      |                                       ^~~~~~~~~~~~~~
+../git/arping.c: In function 'event_loop':
+../git/arping.c:711:39: warning: conversion to 'long int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  711 |                 .it_interval.tv_sec = ctl->interval,
+      |                                       ^~~
+../git/arping.c:713:36: warning: conversion to 'long int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  713 |                 .it_value.tv_sec = ctl->interval,
+      |                                    ^~~
+../git/arping.c: In function 'main':
+../git/arping.c:904:40: warning: conversion to 'unsigned int' from 'long int' may change the sign of the result [-Wsign-conversion]
+  904 |                         ctl.interval = strtol_or_err(optarg, _("invalid argument"), 0, INT_MAX);
+      |                                        ^~~~~~~~~~~~~
+[17/25] arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot  -o arping arping.p/arping.c.o -flto -Wl,--as-needed -Wl,--no-undefined -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/git=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/git=/usr/src/debug/iputils/20211215-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/build=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/build=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot-native= -Wl,-z,relro,-z,now -Wl,--start-group libcommon.a -lcap -Wl,--end-group
+[18/25] arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot -Irarpd.p -I. -I../git -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -Wpedantic -std=c99 -O0 -include config.h -include git-version.h -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/git=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/git=/usr/src/debug/iputils/20211215-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/build=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/build=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot-native= -Wconversion -Wno-error -MD -MQ rarpd.p/rarpd.c.o -MF rarpd.p/rarpd.c.o.d -o rarpd.p/rarpd.c.o -c ../git/rarpd.c
+../git/rarpd.c: In function 'rarp_lookup':
+../git/rarpd.c:306:47: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  306 |                 if (memcmp(r->lladdr, lladdr, halen) == 0)
+      |                                               ^~~~~
+../git/rarpd.c: In function 'put_mylladdr':
+../git/rarpd.c:370:37: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  370 |         memcpy(*ptr_p, ifl->lladdr, alen);
+      |                                     ^~~~
+../git/rarpd.c: In function 'arp_advise':
+../git/rarpd.c:419:32: warning: conversion from 'int' to 'sa_family_t' {aka 'short unsigned int'} may change value [-Wconversion]
+  419 |         req.arp_ha.sa_family = ifl->hatype;
+      |                                ^~~
+../git/rarpd.c:420:44: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  420 |         memcpy(req.arp_ha.sa_data, lladdr, lllen);
+      |                                            ^~~~~
+../git/rarpd.c: In function 'serve_it':
+../git/rarpd.c:551:29: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  551 |         sendto(fd, buf, ptr - buf, 0, (struct sockaddr*)&sll, sizeof(sll));
+      |                         ~~~~^~~~~
+../git/rarpd.c: In function 'main':
+../git/rarpd.c:699:32: warning: conversion to 'nfds_t' {aka 'long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  699 |                 i = poll(pset, psize, -1);
+      |                                ^~~~~
+[19/25] arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot  -o rarpd rarpd.p/rarpd.c.o -flto -Wl,--as-needed -Wl,--no-undefined -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/git=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/git=/usr/src/debug/iputils/20211215-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/build=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/build=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot-native= -Wl,-z,relro,-z,now -Wl,--start-group libcommon.a -Wl,--end-group
+[20/25] arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot -Ininfod/ninfod.p -Ininfod -I../git/ninfod -I. -I../git -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -Wpedantic -std=c99 -O0 -include config.h -include git-version.h -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/git=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/git=/usr/src/debug/iputils/20211215-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/build=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/build=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot-native= -Wconversion -Wno-error -pthread -MD -MQ ninfod/ninfod.p/ni_ifaddrs.c.o -MF ninfod/ninfod.p/ni_ifaddrs.c.o.d -o ninfod/ninfod.p/ni_ifaddrs.c.o -c ../git/ninfod/ni_ifaddrs.c
+../git/ninfod/ni_ifaddrs.c: In function 'nl_sendreq':
+../git/ninfod/ni_ifaddrs.c:113:24: warning: conversion to 'uint32_t' {aka 'unsigned int'} from 'time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+  113 |                 *seq = t;
+      |                        ^
+../git/ninfod/ni_ifaddrs.c:118:31: warning: conversion from 'int' to '__u16' {aka 'short unsigned int'} may change value [-Wconversion]
+  118 |         req_hdr->nlmsg_type = request;
+      |                               ^~~~~~~
+../git/ninfod/ni_ifaddrs.c:119:32: warning: conversion from 'int' to '__u16' {aka 'short unsigned int'} may change value [-Wconversion]
+  119 |         req_hdr->nlmsg_flags = flags | NLM_F_REQUEST;
+      |                                ^~~~~
+../git/ninfod/ni_ifaddrs.c:121:30: warning: conversion to '__u32' {aka 'unsigned int'} from 'time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+  121 |         req_hdr->nlmsg_seq = t;
+      |                              ^
+../git/ninfod/ni_ifaddrs.c: In function 'nl_getmsg':
+../git/ninfod/ni_ifaddrs.c:172:29: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  172 |                 read_size = abs(result);
+      |                             ^~~
+../git/ninfod/ni_ifaddrs.c: In function 'nl_getlist':
+../git/ninfod/ni_ifaddrs.c:220:23: warning: conversion to 'uint32_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  220 |                 seq = (int) time(NULL);
+      |                       ^
+../git/ninfod/ni_ifaddrs.c:236:49: warning: conversion to 'time_t' {aka 'long int'} from 'uint32_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  236 |                                 nlm_next->seq = seq;
+      |                                                 ^~~
+../git/ninfod/ni_ifaddrs.c: In function 'ni_ifaddrs':
+../git/ninfod/ni_ifaddrs.c:320:16: warning: conversion to 'int' from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  320 |         icnt = dlen = xlen = 0;
+      |                ^~~~
+../git/ninfod/ni_ifaddrs.c:334:39: warning: conversion to 'uint32_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  334 |         if ((seq = nl_getlist(sd, seq + 1, RTM_GETADDR, &nlmsg_list, &nlmsg_end)) < 0) {
+      |                                   ~~~~^~~
+In file included from ../git/ninfod/ni_ifaddrs.c:72:
+../git/ninfod/ni_ifaddrs.c:351:80: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  351 |                         data = calloc(1, NLMSG_ALIGN(sizeof(struct ni_ifaddrs) * icnt)
+      |                                                                                ^
+../git/ninfod/ni_ifaddrs.c:365:72: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  365 |                         data += NLMSG_ALIGN(sizeof(struct ni_ifaddrs)) * icnt;
+      |                                                                        ^
+../git/ninfod/ni_ifaddrs.c:370:41: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  370 |                         size_t nlmlen = nlm->size;
+      |                                         ^~~
+../git/ninfod/ni_ifaddrs.c:388:85: warning: comparison of integer expressions of different signedness: '__u32' {aka 'unsigned int'} and 'time_t' {aka 'long int'} [-Wsign-compare]
+  388 |                                 if ((pid_t) nlh->nlmsg_pid != pid || nlh->nlmsg_seq != nlm->seq)
+      |                                                                                     ^~
+../git/ninfod/ni_ifaddrs.c:404:66: warning: conversion from 'unsigned int' to 'short unsigned int' may change value [-Wconversion]
+  404 |                                                 ifa->ifa_flags = nlm_flags;
+      |                                                                  ^~~~~~~~~
+../git/ninfod/ni_ifaddrs.c:435:78: warning: conversion to 'int' from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  435 |                                                         ifamap.address_len = rtapayload;
+      |                                                                              ^~~~~~~~~~
+../git/ninfod/ni_ifaddrs.c:439:76: warning: conversion to 'int' from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  439 |                                                         ifamap.local_len = rtapayload;
+      |                                                                            ^~~~~~~~~~
+../git/ninfod/ni_ifaddrs.c:443:80: warning: conversion to 'int' from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  443 |                                                         ifamap.broadcast_len = rtapayload;
+      |                                                                                ^~~~~~~~~~
+../git/ninfod/ni_ifaddrs.c:484:89: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  484 |                                              memcmp(ifamap.address, ifamap.local, ifamap.address_len))) {
+      |                                                                                   ~~~~~~^~~~~~~~~~~~
+../git/ninfod/ni_ifaddrs.c:493:65: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  493 |                                                         dlen += NLMSG_ALIGN(ifamap.address_len);
+      |                                                                 ^~~~~~~~~~~
+../git/ninfod/ni_ifaddrs.c:496:101: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  496 |                                                         memcpy(ifa->ifa_addr, ifamap.address, ifamap.address_len);
+      |                                                                                               ~~~~~~^~~~~~~~~~~~
+../git/ninfod/ni_ifaddrs.c:497:65: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  497 |                                                         data += NLMSG_ALIGN(ifamap.address_len);
+      |                                                                 ^~~~~~~~~~~
+[21/25] arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot -Ininfod/ninfod.p -Ininfod -I../git/ninfod -I. -I../git -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -Wpedantic -std=c99 -O0 -include config.h -include git-version.h -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/git=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/git=/usr/src/debug/iputils/20211215-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/build=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/build=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot-native= -Wconversion -Wno-error -pthread -MD -MQ ninfod/ninfod.p/ninfod.c.o -MF ninfod/ninfod.p/ninfod.c.o.d -o ninfod/ninfod.p/ninfod.c.o -c ../git/ninfod/ninfod.c
+../git/ninfod/ninfod.c: In function 'ni_recv':
+../git/ninfod/ninfod.c:272:23: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  272 |         p->querylen = cc;
+      |                       ^~
+../git/ninfod/ninfod.c: In function 'ni_send':
+../git/ninfod/ninfod.c:306:26: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  306 |         iov[1].iov_len = p->replydatalen;
+      |                          ^
+../git/ninfod/ninfod.c:330:31: warning: conversion to '__time_t' {aka 'long int'} from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  330 |                 rts.tv_sec  = p->delay / 1000000;
+      |                               ^
+[22/25] arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot -Ininfod/ninfod.p -Ininfod -I../git/ninfod -I. -I../git -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -Wpedantic -std=c99 -O0 -include config.h -include git-version.h -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/git=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/git=/usr/src/debug/iputils/20211215-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/build=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/build=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot-native= -Wconversion -Wno-error -pthread -MD -MQ ninfod/ninfod.p/ninfod_addrs.c.o -MF ninfod/ninfod.p/ninfod_addrs.c.o.d -o ninfod/ninfod.p/ninfod_addrs.c.o -c ../git/ninfod/ninfod_addrs.c
+../git/ninfod/ninfod_addrs.c: In function 'pr_nodeinfo_ipv6addr':
+../git/ninfod/ninfod_addrs.c:210:23: warning: unsigned conversion from 'int' to 'unsigned int' changes value from '-257' to '4294967039' [-Wsign-conversion]
+  210 |                 flags &= ~IPUTILS_NI_IPV6_FLAG_TRUNCATE;
+      |                       ^~
+../git/ninfod/ninfod_addrs.c:225:39: warning: unsigned conversion from 'int' to 'unsigned int' changes value from '-257' to '4294967039' [-Wsign-conversion]
+  225 |                                 flags |= ~IPUTILS_NI_IPV6_FLAG_TRUNCATE;
+      |                                       ^~
+../git/ninfod/ninfod_addrs.c:244:35: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  244 |                 p->replydatalen = (sizeof(uint32_t)+sizeof(struct in6_addr)) * addrs0;
+      |                                   ^
+../git/ninfod/ninfod_addrs.c:245:58: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  245 |                 p->replydata = p->replydatalen ? malloc(p->replydatalen) : NULL;
+      |                                                         ~^~~~~~~~~~~~~~
+../git/ninfod/ninfod_addrs.c: In function 'pr_nodeinfo_ipv4addr':
+../git/ninfod/ninfod_addrs.c:353:23: warning: unsigned conversion from 'int' to 'unsigned int' changes value from '-257' to '4294967039' [-Wsign-conversion]
+  353 |                 flags &= ~IPUTILS_NI_IPV4_FLAG_TRUNCATE;
+      |                       ^~
+../git/ninfod/ninfod_addrs.c:385:35: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  385 |                 p->replydatalen = (sizeof(uint32_t)+sizeof(struct in_addr)) * addrs0;
+      |                                   ^
+../git/ninfod/ninfod_addrs.c:386:49: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  386 |                 p->replydata = addrs0 ? malloc(p->replydatalen) : NULL;
+      |                                                ~^~~~~~~~~~~~~~
+[23/25] arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot -Ininfod/ninfod.p -Ininfod -I../git/ninfod -I. -I../git -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -Wpedantic -std=c99 -O0 -include config.h -include git-version.h -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/git=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/git=/usr/src/debug/iputils/20211215-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/build=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/build=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot-native= -Wconversion -Wno-error -pthread -MD -MQ ninfod/ninfod.p/ninfod_core.c.o -MF ninfod/ninfod.p/ninfod_core.c.o.d -o ninfod/ninfod.p/ninfod_core.c.o -c ../git/ninfod/ninfod_core.c
+../git/ninfod/ninfod_core.c: In function 'pr_nodeinfo_noop':
+../git/ninfod/ninfod_core.c:233:37: warning: conversion from 'unsigned int' to 'uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+  233 |                 p->reply.ni_flags = flags;
+      |                                     ^~~~~
+../git/ninfod/ninfod_core.c: In function 'pr_nodeinfo_unknown':
+../git/ninfod/ninfod_core.c:252:29: warning: conversion from 'unsigned int' to 'uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+  252 |         p->reply.ni_flags = flags;
+      |                             ^~~~~
+../git/ninfod/ninfod_core.c: In function 'pr_nodeinfo_refused':
+../git/ninfod/ninfod_core.c:269:29: warning: conversion from 'unsigned int' to 'uint16_t' {aka 'short unsigned int'} may change value [-Wconversion]
+  269 |         p->reply.ni_flags = flags;
+      |                             ^~~~~
+../git/ninfod/ninfod_core.c: In function 'pr_nodeinfo':
+../git/ninfod/ninfod_core.c:554:28: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  554 |                 p->delay = (int) (MAX_ANYCAST_DELAY_TIME*rand()/(RAND_MAX+1.0));
+      |                            ^
+[24/25] arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot -Ininfod/ninfod.p -Ininfod -I../git/ninfod -I. -I../git -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -Wpedantic -std=c99 -O0 -include config.h -include git-version.h -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/git=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/git=/usr/src/debug/iputils/20211215-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/build=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/build=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot-native= -Wconversion -Wno-error -pthread -MD -MQ ninfod/ninfod.p/ninfod_name.c.o -MF ninfod/ninfod.p/ninfod_name.c.o.d -o ninfod/ninfod.p/ninfod_name.c.o -c ../git/ninfod/ninfod_name.c
+../git/ninfod/ninfod_name.c: In function 'encode_dnsname':
+../git/ninfod/ninfod_name.c:163:26: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  163 |                 buf[i] = llen;
+      |                          ^~~~
+In file included from ../git/ninfod/ninfod_name.c:42:
+../git/ninfod/ninfod_name.c:165:44: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  165 |                         if (!isascii(name[i+ii]))
+      |                                            ^
+../git/ninfod/ninfod_name.c:168:52: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  168 |                                 if (!isalpha(name[i+ii]) && !isdigit(name[i+ii]))
+      |                                                    ^
+../git/ninfod/ninfod_name.c:168:76: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  168 |                                 if (!isalpha(name[i+ii]) && !isdigit(name[i+ii]))
+      |                                                                            ^
+../git/ninfod/ninfod_name.c:170:51: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  170 |                         } else if (!isalnum(name[i+ii]) && name[i+ii] != '-')
+      |                                                   ^
+../git/ninfod/ninfod_name.c:170:66: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  170 |                         } else if (!isalnum(name[i+ii]) && name[i+ii] != '-')
+      |                                                                  ^
+../git/ninfod/ninfod_name.c:172:30: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  172 |                         buf[i+ii+1] = isupper(name[i+ii]) ? tolower(name[i+ii]) : name[i+ii];
+      |                              ^
+../git/ninfod/ninfod_name.c:172:53: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  172 |                         buf[i+ii+1] = isupper(name[i+ii]) ? tolower(name[i+ii]) : name[i+ii];
+      |                                                     ^
+../git/ninfod/ninfod_name.c:172:75: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  172 |                         buf[i+ii+1] = isupper(name[i+ii]) ? tolower(name[i+ii]) : name[i+ii];
+      |                                                                           ^
+../git/ninfod/ninfod_name.c:172:75: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  172 |                         buf[i+ii+1] = isupper(name[i+ii]) ? tolower(name[i+ii]) : name[i+ii];
+      |                                                                           ^
+../git/ninfod/ninfod_name.c:172:75: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  172 |                         buf[i+ii+1] = isupper(name[i+ii]) ? tolower(name[i+ii]) : name[i+ii];
+      |                                                                           ^
+../git/ninfod/ninfod_name.c:172:75: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  172 |                         buf[i+ii+1] = isupper(name[i+ii]) ? tolower(name[i+ii]) : name[i+ii];
+      |                                                                           ^
+../git/ninfod/ninfod_name.c:172:89: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  172 |                         buf[i+ii+1] = isupper(name[i+ii]) ? tolower(name[i+ii]) : name[i+ii];
+      |                                                                                         ^
+../git/ninfod/ninfod_name.c:172:39: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  172 |                         buf[i+ii+1] = isupper(name[i+ii]) ? tolower(name[i+ii]) : name[i+ii];
+      |                                       ^~~~~~~
+../git/ninfod/ninfod_name.c:174:19: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  174 |                 i += llen + 1;
+      |                   ^~
+../git/ninfod/ninfod_name.c:181:16: warning: conversion to 'int' from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  181 |         return i;
+      |                ^
+../git/ninfod/ninfod_name.c: In function 'init_nodeinfo_nodename':
+../git/ninfod/ninfod_name.c:302:23: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  302 |         nodenamelen = len > 0 ? len : 0;
+      |                       ^~~
+../git/ninfod/ninfod_name.c: In function 'pr_nodeinfo_nodename':
+../git/ninfod/ninfod_name.c:353:35: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  353 |                 p->replydatalen = nodenamelen ? sizeof(ttl)+nodenamelen : 0;
+      |                                   ^~~~~~~~~~~
+../git/ninfod/ninfod_name.c:354:54: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  354 |                 p->replydata = nodenamelen ? malloc(p->replydatalen) : NULL;
+      |                                                     ~^~~~~~~~~~~~~~
+[25/25] arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot  -o ninfod/ninfod ninfod/ninfod.p/ni_ifaddrs.c.o ninfod/ninfod.p/ninfod.c.o ninfod/ninfod.p/ninfod_addrs.c.o ninfod/ninfod.p/ninfod_core.c.o ninfod/ninfod.p/ninfod_name.c.o -flto -Wl,--as-needed -Wl,--no-undefined -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/git=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/git=/usr/src/debug/iputils/20211215-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/build=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/build=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot-native= -Wl,-z,relro,-z,now -Wl,--start-group libcommon.a -lcap -Wl,--end-group -pthread
+DEBUG: Shell function do_compile finished

@@ -1,0 +1,197 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-cross_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-native_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-extended/texinfo-dummy-native/texinfo-dummy-native.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-support/libunistring/libunistring_1.0.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-core/gettext/gettext_0.21.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/autoconf/autoconf_2.71.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/automake/automake_1.16.5.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/dwarfsrcfiles/dwarfsrcfiles.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pkgconfig/pkgconfig_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/python/python3_3.11.0.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/rpm/rpm_4.18.0.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-gnome/gtk-doc/gtk-doc_1.33.2.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: ['dwarfsrcfiles-native', 'rpm-native', 'file-native', 'elfutils-native', 'lua-native', 'libgcrypt-native', 'popt-native', 'libcap-native', 'libgpg-error-native']
+NOTE: Skipping as already exists in sysroot: ['glibc', 'gcc-cross-arm', 'gcc-runtime', 'libtool-cross', 'libtool-native', 'quilt-native', 'texinfo-dummy-native', 'libunistring', 'gettext-native', 'autoconf-native', 'automake-native', 'patch-native', 'pkgconfig-native', 'pseudo-native', 'python3-native', 'gtk-doc-native', 'gnu-config-native', 'm4-native', 'mpfr-native', 'xz-native', 'gmp-native', 'zstd-native', 'binutils-cross-arm', 'linux-libc-headers', 'libmpc-native', 'zlib-native', 'flex-native', 'gettext-minimal-native', 'bzip2-native', 'sqlite3-native', 'attr-native', 'libtirpc-native', 'gdbm-native', 'openssl-native', 'util-linux-libuuid-native', 'ncurses-native', 'libffi-native', 'libnsl2-native', 'readline-native', 'libgcc', 'perl-native', 'make-native']
+DEBUG: sed -e 's:^[^/]*/:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libidn2/2.3.3-r0/recipe-sysroot-native/:g' /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/rpm-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/elfutils-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/lua-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/libgcrypt-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/libgpg-error-native/fixmepath | xargs sed -i -e 's:FIXMESTAGINGDIRTARGET:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libidn2/2.3.3-r0/recipe-sysroot:g; s:FIXMESTAGINGDIRHOST:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libidn2/2.3.3-r0/recipe-sysroot-native:g' -e 's:FIXME_PSEUDO_SYSROOT:/home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/pseudo-native:g' -e 's:FIXME_HOSTTOOLS_DIR:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:g' -e 's:FIXME_PKGDATA_DIR:/home/matt/tmp/build/obmc-y2038/tmp/pkgdata/evb-ast2600:g' -e 's:FIXME_PSEUDO_LOCALSTATEDIR:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libidn2/2.3.3-r0/pseudo/:g' -e 's:FIXME_LOGFIFO:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libidn2/2.3.3-r0/temp/fifo.1109843:g'
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function sstate_task_prefunc
+DEBUG: Python function sstate_task_prefunc finished
+DEBUG: Executing python function do_package
+DEBUG: Executing python function package_convert_pr_autoinc
+DEBUG: Python function package_convert_pr_autoinc finished
+DEBUG: Executing python function package_prepare_pkgdata
+NOTE: Installed into pkgdata-sysroot: ['libunistring', 'glibc', 'gcc-runtime', 'linux-libc-headers', 'libgcc']
+DEBUG: Python function package_prepare_pkgdata finished
+DEBUG: Executing python function perform_packagecopy
+DEBUG: Python function perform_packagecopy finished
+DEBUG: Executing python function split_and_strip_files
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libidn2/2.3.3-r0/package/usr/lib/libidn2.so.0.3.8']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libidn2/2.3.3-r0/package/usr/bin/idn2']
+DEBUG: Python function split_and_strip_files finished
+DEBUG: Executing python function fixup_perms
+DEBUG: Python function fixup_perms finished
+DEBUG: Executing python function package_do_split_locales
+DEBUG: Python function package_do_split_locales finished
+DEBUG: Executing python function populate_packages
+DEBUG: Python function populate_packages finished
+DEBUG: Executing python function package_fixsymlinks
+DEBUG: libidn2-dev contains dangling link /usr/lib/libidn2.so.0.3.8
+DEBUG: target found in libidn2
+DEBUG: Python function package_fixsymlinks finished
+DEBUG: Executing python function package_name_hook
+DEBUG: Executing python function debian_package_name_hook
+DEBUG: LIBNAMES: pkg libidn2-staticdev libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libidn2-src libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libidn2-locale-zh-cn libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libidn2-locale-vi libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libidn2-locale-uk libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libidn2-locale-sv libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libidn2-locale-sr libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libidn2-locale-ru libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libidn2-locale-ro libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libidn2-locale-pt-br libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libidn2-locale-pl libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libidn2-locale-nl libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libidn2-locale-ka libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libidn2-locale-ja libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libidn2-locale-it libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libidn2-locale-id libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libidn2-locale-hu libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libidn2-locale-hr libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libidn2-locale-fur libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libidn2-locale-fr libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libidn2-locale-fi libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libidn2-locale-es libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libidn2-locale-eo libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libidn2-locale-de libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libidn2-locale-da libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libidn2-locale-cs libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libidn2-doc libs 0 bins 0 sonames []
+arm-openbmc-linux-gnueabi-objdump: '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libidn2/2.3.3-r0/packages-split/libidn2-dev/usr/lib/libidn2.so': No such file
+DEBUG: LIBNAMES: pkg libidn2-dev libs 1 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libidn2-dbg libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg libidn2-bin libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg libidn2 libs 1 bins 0 sonames ['libidn2.so.0']
+NOTE: debian: renaming libidn2 to libidn2-0
+DEBUG: Python function debian_package_name_hook finished
+DEBUG: Python function package_name_hook finished
+DEBUG: Executing python function package_do_filedeps
+DEBUG: Python function package_do_filedeps finished
+DEBUG: Executing python function package_do_shlibs
+DEBUG: Reading shlib providers in /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libidn2/2.3.3-r0/pkgdata-sysroot/shlibs2
+DEBUG: calculating shlib provides for libidn2-src
+DEBUG: LIBNAMES: pkg libidn2-src sonames set()
+DEBUG: calculating shlib provides for libidn2-dbg
+DEBUG: LIBNAMES: pkg libidn2-dbg sonames set()
+DEBUG: calculating shlib provides for libidn2-staticdev
+DEBUG: LIBNAMES: pkg libidn2-staticdev sonames set()
+DEBUG: calculating shlib provides for libidn2-dev
+DEBUG: LIBNAMES: pkg libidn2-dev sonames set()
+DEBUG: calculating shlib provides for libidn2-doc
+DEBUG: LIBNAMES: pkg libidn2-doc sonames set()
+DEBUG: calculating shlib provides for libidn2-bin
+DEBUG: LIBNAMES: pkg libidn2-bin sonames set()
+DEBUG: calculating shlib provides for libidn2
+DEBUG: registering libidn2-2.3.3 as shlib provider for libidn2.so.0
+DEBUG: adding ldconfig call to postinst for libidn2
+DEBUG: LIBNAMES: pkg libidn2 sonames {('libidn2.so.0', '/usr/lib', '2.3.3')}
+DEBUG: calculating shlib provides for libidn2-locale-cs
+DEBUG: LIBNAMES: pkg libidn2-locale-cs sonames set()
+DEBUG: calculating shlib provides for libidn2-locale-da
+DEBUG: LIBNAMES: pkg libidn2-locale-da sonames set()
+DEBUG: calculating shlib provides for libidn2-locale-de
+DEBUG: LIBNAMES: pkg libidn2-locale-de sonames set()
+DEBUG: calculating shlib provides for libidn2-locale-eo
+DEBUG: LIBNAMES: pkg libidn2-locale-eo sonames set()
+DEBUG: calculating shlib provides for libidn2-locale-es
+DEBUG: LIBNAMES: pkg libidn2-locale-es sonames set()
+DEBUG: calculating shlib provides for libidn2-locale-fi
+DEBUG: LIBNAMES: pkg libidn2-locale-fi sonames set()
+DEBUG: calculating shlib provides for libidn2-locale-fr
+DEBUG: LIBNAMES: pkg libidn2-locale-fr sonames set()
+DEBUG: calculating shlib provides for libidn2-locale-fur
+DEBUG: LIBNAMES: pkg libidn2-locale-fur sonames set()
+DEBUG: calculating shlib provides for libidn2-locale-hr
+DEBUG: LIBNAMES: pkg libidn2-locale-hr sonames set()
+DEBUG: calculating shlib provides for libidn2-locale-hu
+DEBUG: LIBNAMES: pkg libidn2-locale-hu sonames set()
+DEBUG: calculating shlib provides for libidn2-locale-id
+DEBUG: LIBNAMES: pkg libidn2-locale-id sonames set()
+DEBUG: calculating shlib provides for libidn2-locale-it
+DEBUG: LIBNAMES: pkg libidn2-locale-it sonames set()
+DEBUG: calculating shlib provides for libidn2-locale-ja
+DEBUG: LIBNAMES: pkg libidn2-locale-ja sonames set()
+DEBUG: calculating shlib provides for libidn2-locale-ka
+DEBUG: LIBNAMES: pkg libidn2-locale-ka sonames set()
+DEBUG: calculating shlib provides for libidn2-locale-nl
+DEBUG: LIBNAMES: pkg libidn2-locale-nl sonames set()
+DEBUG: calculating shlib provides for libidn2-locale-pl
+DEBUG: LIBNAMES: pkg libidn2-locale-pl sonames set()
+DEBUG: calculating shlib provides for libidn2-locale-pt-br
+DEBUG: LIBNAMES: pkg libidn2-locale-pt-br sonames set()
+DEBUG: calculating shlib provides for libidn2-locale-ro
+DEBUG: LIBNAMES: pkg libidn2-locale-ro sonames set()
+DEBUG: calculating shlib provides for libidn2-locale-ru
+DEBUG: LIBNAMES: pkg libidn2-locale-ru sonames set()
+DEBUG: calculating shlib provides for libidn2-locale-sr
+DEBUG: LIBNAMES: pkg libidn2-locale-sr sonames set()
+DEBUG: calculating shlib provides for libidn2-locale-sv
+DEBUG: LIBNAMES: pkg libidn2-locale-sv sonames set()
+DEBUG: calculating shlib provides for libidn2-locale-uk
+DEBUG: LIBNAMES: pkg libidn2-locale-uk sonames set()
+DEBUG: calculating shlib provides for libidn2-locale-vi
+DEBUG: LIBNAMES: pkg libidn2-locale-vi sonames set()
+DEBUG: calculating shlib provides for libidn2-locale-zh-cn
+DEBUG: LIBNAMES: pkg libidn2-locale-zh-cn sonames set()
+DEBUG: calculating shlib requirements for libidn2-src
+DEBUG: calculating shlib requirements for libidn2-dbg
+DEBUG: calculating shlib requirements for libidn2-staticdev
+DEBUG: calculating shlib requirements for libidn2-dev
+DEBUG: calculating shlib requirements for libidn2-doc
+DEBUG: calculating shlib requirements for libidn2-bin
+DEBUG: libidn2-bin: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libidn2/2.3.3-r0/packages-split/libidn2-bin/usr/bin/idn2)
+DEBUG: libidn2-bin: Dependency libidn2.so.0 requires package libidn2 (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libidn2/2.3.3-r0/packages-split/libidn2-bin/usr/bin/idn2)
+DEBUG: libidn2-bin: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libidn2/2.3.3-r0/packages-split/libidn2-bin/usr/bin/idn2)
+DEBUG: libidn2-bin: Dependency libunistring.so.2 requires package libunistring (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libidn2/2.3.3-r0/packages-split/libidn2-bin/usr/bin/idn2)
+DEBUG: calculating shlib requirements for libidn2
+DEBUG: libidn2: Dependency libunistring.so.2 requires package libunistring (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libidn2/2.3.3-r0/packages-split/libidn2/usr/lib/libidn2.so.0.3.8)
+DEBUG: libidn2: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libidn2/2.3.3-r0/packages-split/libidn2/usr/lib/libidn2.so.0.3.8)
+DEBUG: libidn2: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libidn2/2.3.3-r0/packages-split/libidn2/usr/lib/libidn2.so.0.3.8)
+DEBUG: calculating shlib requirements for libidn2-locale-cs
+DEBUG: calculating shlib requirements for libidn2-locale-da
+DEBUG: calculating shlib requirements for libidn2-locale-de
+DEBUG: calculating shlib requirements for libidn2-locale-eo
+DEBUG: calculating shlib requirements for libidn2-locale-es
+DEBUG: calculating shlib requirements for libidn2-locale-fi
+DEBUG: calculating shlib requirements for libidn2-locale-fr
+DEBUG: calculating shlib requirements for libidn2-locale-fur
+DEBUG: calculating shlib requirements for libidn2-locale-hr
+DEBUG: calculating shlib requirements for libidn2-locale-hu
+DEBUG: calculating shlib requirements for libidn2-locale-id
+DEBUG: calculating shlib requirements for libidn2-locale-it
+DEBUG: calculating shlib requirements for libidn2-locale-ja
+DEBUG: calculating shlib requirements for libidn2-locale-ka
+DEBUG: calculating shlib requirements for libidn2-locale-nl
+DEBUG: calculating shlib requirements for libidn2-locale-pl
+DEBUG: calculating shlib requirements for libidn2-locale-pt-br
+DEBUG: calculating shlib requirements for libidn2-locale-ro
+DEBUG: calculating shlib requirements for libidn2-locale-ru
+DEBUG: calculating shlib requirements for libidn2-locale-sr
+DEBUG: calculating shlib requirements for libidn2-locale-sv
+DEBUG: calculating shlib requirements for libidn2-locale-uk
+DEBUG: calculating shlib requirements for libidn2-locale-vi
+DEBUG: calculating shlib requirements for libidn2-locale-zh-cn
+DEBUG: Python function package_do_shlibs finished
+DEBUG: Executing python function package_do_pkgconfig
+DEBUG: Python function package_do_pkgconfig finished
+DEBUG: Executing python function read_shlibdeps
+DEBUG: Python function read_shlibdeps finished
+DEBUG: Executing python function package_depchains
+DEBUG: Python function package_depchains finished
+DEBUG: Executing python function emit_pkgdata
+DEBUG: Python function emit_pkgdata finished
+DEBUG: Python function do_package finished
+DEBUG: Executing python function sstate_task_postfunc
+NOTE: Using umask 0o002 (not 22) for sstate packaging
+DEBUG: Executing python function target_add_sysroot_deps
+DEBUG: Python function target_add_sysroot_deps finished
+DEBUG: Executing python function sstate_hardcode_path
+NOTE: Removing hardcoded paths from sstate package: 'find /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libidn2/2.3.3-r0/sstate-build-package/ \( -name "*.la" -o -name "*-config" -o -name "*_config" -o -name "postinst-*" \) -type f | xargs grep -l -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libidn2/2.3.3-r0/recipe-sysroot' -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libidn2/2.3.3-r0/recipe-sysroot-native' -e '/home/matt/tmp/build/obmc-y2038/tmp/hosttools' | tee /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libidn2/2.3.3-r0/sstate-build-package/fixmepath | xargs --no-run-if-empty sed -i -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libidn2/2.3.3-r0/recipe-sysroot-native:FIXMESTAGINGDIRHOST:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libidn2/2.3.3-r0/recipe-sysroot:FIXMESTAGINGDIRTARGET:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:FIXME_HOSTTOOLS_DIR:g''
+DEBUG: Python function sstate_hardcode_path finished
+DEBUG: Executing python function sstate_report_unihash
+DEBUG: Python function sstate_report_unihash finished
+DEBUG: Executing shell function sstate_create_package
+DEBUG: Shell function sstate_create_package finished
+DEBUG: Executing python function sstate_hardcode_path_unpack
+DEBUG: Python function sstate_hardcode_path_unpack finished
+DEBUG: Python function sstate_task_postfunc finished

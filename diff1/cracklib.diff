@@ -1,0 +1,8 @@
+112c112
+< ../../git/src/lib/packlib.c:692:38: warning: conversion to 'off_t' {aka 'long int'} from 'uint32_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../../git/src/lib/packlib.c:692:21: warning: conversion from 'off_t' {aka 'long long int'} to 'int' may change value [-Wconversion]
+114c114
+<       |                                      ^~~~~
+---
+>       |                     ^~~~~~

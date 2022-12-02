@@ -1,0 +1,16 @@
+683c683
+< ../time-1.9/src/time.c:453:7: warning: conversion to 'long unsigned int' from 'long int' may change the sign of the result [-Wsign-conversion]
+---
+> ../time-1.9/src/time.c:453:7: warning: conversion from 'long long int' to 'long unsigned int' may change value [-Wconversion]
+686c686
+< ../time-1.9/src/time.c:455:7: warning: conversion to 'long unsigned int' from 'long int' may change the sign of the result [-Wsign-conversion]
+---
+> ../time-1.9/src/time.c:455:7: warning: conversion from 'long long int' to 'long unsigned int' may change value [-Wconversion]
+689c689
+< ../time-1.9/src/time.c:458:10: warning: conversion to 'long unsigned int' from '__suseconds_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../time-1.9/src/time.c:458:10: warning: conversion from '__suseconds64_t' {aka 'long long int'} to 'long unsigned int' may change value [-Wconversion]
+692c692
+< ../time-1.9/src/time.c:459:10: warning: conversion to 'long unsigned int' from '__suseconds_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../time-1.9/src/time.c:459:10: warning: conversion from '__suseconds64_t' {aka 'long long int'} to 'long unsigned int' may change value [-Wconversion]

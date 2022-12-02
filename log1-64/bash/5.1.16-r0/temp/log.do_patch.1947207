@@ -1,0 +1,300 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: ['quilt-native', 'patch-native', 'libtool-native', 'attr-native', 'texinfo-dummy-native', 'gettext-minimal-native']
+NOTE: Skipping as already exists in sysroot: []
+DEBUG: sed -e 's:^[^/]*/:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash/5.1.16-r0/recipe-sysroot-native/:g' /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/quilt-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/libtool-native/fixmepath | xargs sed -i -e 's:FIXMESTAGINGDIRTARGET:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash/5.1.16-r0/recipe-sysroot:g; s:FIXMESTAGINGDIRHOST:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash/5.1.16-r0/recipe-sysroot-native:g' -e 's:FIXME_PSEUDO_SYSROOT:/home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/pseudo-native:g' -e 's:FIXME_HOSTTOOLS_DIR:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:g' -e 's:FIXME_PKGDATA_DIR:/home/matt/tmp/build/obmc-y2038/tmp/pkgdata/evb-ast2600:g' -e 's:FIXME_PSEUDO_LOCALSTATEDIR:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash/5.1.16-r0/pseudo/:g' -e 's:FIXME_LOGFIFO:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bash/5.1.16-r0/temp/fifo.1947207:g'
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function do_patch
+DEBUG: Executing python function patch_do_patch
+DEBUG: Searching for execute_cmd.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/arm
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/arm
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/arm
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/
+DEBUG: Searching for mkbuiltins_have_stringize.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/arm
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/arm
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/arm
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/
+DEBUG: Searching for build-tests.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/arm
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/arm
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/arm
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/
+DEBUG: Searching for test-output.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/arm
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/arm
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/arm
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/
+DEBUG: Searching for run-ptest in paths:
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/arm
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/arm
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/arm
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/
+DEBUG: Searching for run-bash-ptests in paths:
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/arm
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/arm
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/arm
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/
+DEBUG: Searching for fix-run-builtins.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/arm
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/arm
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/arm
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/
+DEBUG: Searching for use_aclocal.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/arm
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/arm
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/arm
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/
+DEBUG: Searching for makerace.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/arm
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/arm
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/arm
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/
+DEBUG: Searching for makerace2.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/arm
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/arm
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/arm
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash-5.1.16/
+    /home/matt/src/openbmc/meta/recipes-extended/bash/bash/
+    /home/matt/src/openbmc/meta/recipes-extended/bash/files/
+NOTE: Applying patch 'execute_cmd.patch' (../../../src/openbmc/meta/recipes-extended/bash/bash/execute_cmd.patch)
+NOTE: Applying patch 'mkbuiltins_have_stringize.patch' (../../../src/openbmc/meta/recipes-extended/bash/bash/mkbuiltins_have_stringize.patch)
+NOTE: Applying patch 'build-tests.patch' (../../../src/openbmc/meta/recipes-extended/bash/bash/build-tests.patch)
+NOTE: Applying patch 'test-output.patch' (../../../src/openbmc/meta/recipes-extended/bash/bash/test-output.patch)
+NOTE: Applying patch 'fix-run-builtins.patch' (../../../src/openbmc/meta/recipes-extended/bash/bash/fix-run-builtins.patch)
+NOTE: Applying patch 'use_aclocal.patch' (../../../src/openbmc/meta/recipes-extended/bash/bash/use_aclocal.patch)
+NOTE: Applying patch 'makerace.patch' (../../../src/openbmc/meta/recipes-extended/bash/bash/makerace.patch)
+NOTE: Applying patch 'makerace2.patch' (../../../src/openbmc/meta/recipes-extended/bash/bash/makerace2.patch)
+DEBUG: Python function patch_do_patch finished
+DEBUG: Python function do_patch finished
+DEBUG: Executing python function do_qa_patch
+DEBUG: Python function do_qa_patch finished

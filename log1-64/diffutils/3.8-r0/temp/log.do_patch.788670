@@ -1,0 +1,98 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-extended/xz/xz_5.2.7.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: ['quilt-native', 'patch-native', 'attr-native']
+NOTE: Skipping as already exists in sysroot: ['xz-native', 'libtool-native', 'gettext-minimal-native', 'texinfo-dummy-native']
+DEBUG: sed -e 's:^[^/]*/:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/diffutils/3.8-r0/recipe-sysroot-native/:g' /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/quilt-native/fixmepath | xargs sed -i -e 's:FIXMESTAGINGDIRTARGET:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/diffutils/3.8-r0/recipe-sysroot:g; s:FIXMESTAGINGDIRHOST:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/diffutils/3.8-r0/recipe-sysroot-native:g' -e 's:FIXME_PSEUDO_SYSROOT:/home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/pseudo-native:g' -e 's:FIXME_HOSTTOOLS_DIR:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:g' -e 's:FIXME_PKGDATA_DIR:/home/matt/tmp/build/obmc-y2038/tmp/pkgdata/evb-ast2600:g' -e 's:FIXME_PSEUDO_LOCALSTATEDIR:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/diffutils/3.8-r0/pseudo/:g' -e 's:FIXME_LOGFIFO:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/diffutils/3.8-r0/temp/fifo.788670:g'
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function do_patch
+DEBUG: Executing python function patch_do_patch
+DEBUG: Searching for run-ptest in paths:
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/diffutils-3.8/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/diffutils/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/diffutils-3.8/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/diffutils/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/diffutils-3.8/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/diffutils/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/diffutils-3.8/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/diffutils/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/diffutils-3.8/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/diffutils/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/diffutils-3.8/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/diffutils/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/diffutils-3.8/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/diffutils/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/diffutils-3.8/arm
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/diffutils/arm
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/files/arm
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/diffutils-3.8/
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/diffutils/
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/files/
+DEBUG: Searching for 0001-Skip-strip-trailing-cr-test-case.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/diffutils-3.8/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/diffutils/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/diffutils-3.8/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/diffutils/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/diffutils-3.8/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/diffutils/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/diffutils-3.8/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/diffutils/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/diffutils-3.8/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/diffutils/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/diffutils-3.8/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/diffutils/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/diffutils-3.8/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/diffutils/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/diffutils-3.8/arm
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/diffutils/arm
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/files/arm
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/diffutils-3.8/
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/diffutils/
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/files/
+DEBUG: Searching for 0001-mcontext-is-not-a-standard-layout-so-glibc-and-musl-.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/diffutils-3.8/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/diffutils/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/diffutils-3.8/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/diffutils/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/diffutils-3.8/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/diffutils/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/diffutils-3.8/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/diffutils/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/diffutils-3.8/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/diffutils/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/diffutils-3.8/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/diffutils/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/diffutils-3.8/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/diffutils/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/diffutils-3.8/arm
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/diffutils/arm
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/files/arm
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/diffutils-3.8/
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/diffutils/
+    /home/matt/src/openbmc/meta/recipes-extended/diffutils/files/
+NOTE: Applying patch '0001-Skip-strip-trailing-cr-test-case.patch' (../../../src/openbmc/meta/recipes-extended/diffutils/diffutils/0001-Skip-strip-trailing-cr-test-case.patch)
+NOTE: Applying patch '0001-mcontext-is-not-a-standard-layout-so-glibc-and-musl-.patch' (../../../src/openbmc/meta/recipes-extended/diffutils/diffutils/0001-mcontext-is-not-a-standard-layout-so-glibc-and-musl-.patch)
+DEBUG: Python function patch_do_patch finished
+DEBUG: Python function do_patch finished
+DEBUG: Executing python function do_qa_patch
+DEBUG: Python function do_qa_patch finished

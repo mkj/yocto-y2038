@@ -1,0 +1,865 @@
+DEBUG: Executing python function autotools_aclocals
+DEBUG: SITE files ['endian-little', 'bit-32', 'arm-common', 'arm-32', 'common-linux', 'common-glibc', 'arm-linux', 'arm-linux-gnueabi', 'common']
+DEBUG: Python function autotools_aclocals finished
+DEBUG: Executing shell function do_compile
+NOTE: make -j 1
+make  all-recursive
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build'
+Making all in lib
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build/lib'
+/bin/bash ../libtool  --tag=CC   --mode=compile arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot -DHAVE_CONFIG_H -I. -I../../sysfsutils-2.1.0/lib -I.. -I../../sysfsutils-2.1.0/lib/../include   -Wall -W -Wstrict-prototypes  -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot-native=   -Wconversion -Wno-error -c -o libsysfs_la-sysfs_utils.lo `test -f 'sysfs_utils.c' || echo '../../sysfsutils-2.1.0/lib/'`sysfs_utils.c
+libtool: compile:  arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot -DHAVE_CONFIG_H -I. -I../../sysfsutils-2.1.0/lib -I.. -I../../sysfsutils-2.1.0/lib/../include -Wall -W -Wstrict-prototypes -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot-native= -Wconversion -Wno-error -c ../../sysfsutils-2.1.0/lib/sysfs_utils.c  -fPIC -DPIC -o .libs/libsysfs_la-sysfs_utils.o
+In file included from ../../sysfsutils-2.1.0/lib/sysfs_utils.c:24:
+../../sysfsutils-2.1.0/lib/sysfs_utils.c: In function 'sysfs_get_link':
+../../sysfsutils-2.1.0/lib/sysfs.h:36:33: warning: '__builtin_strncpy' output may be truncated copying 255 bytes from a string of length 255 [-Wstringop-truncation]
+   36 | #define safestrcpy(to, from)    strncpy(to, from, sizeof(to)-1)
+      |                                 ^~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs_utils.c:149:25: note: in expansion of macro 'safestrcpy'
+  149 |                         safestrcpy(temp_path, devdir);
+      |                         ^~~~~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs.h:42:9: warning: '__builtin_strncpy' output may be truncated copying between 0 and 255 bytes from a string of length 255 [-Wstringop-truncation]
+   42 |         strncpy(to, from, max-1); \
+      |         ^~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs_utils.c:179:25: note: in expansion of macro 'safestrcpymax'
+  179 |                         safestrcpymax(s, d, (SYSFS_PATH_MAX-strlen(devdir)));
+      |                         ^~~~~~~~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs.h:36:33: warning: '__builtin_strncpy' output may be truncated copying 255 bytes from a string of length 255 [-Wstringop-truncation]
+   36 | #define safestrcpy(to, from)    strncpy(to, from, sizeof(to)-1)
+      |                                 ^~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs_utils.c:159:33: note: in expansion of macro 'safestrcpy'
+  159 |                                 safestrcpy(temp_path, d);
+      |                                 ^~~~~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs.h:37:33: warning: '__builtin___strncat_chk' output may be truncated copying between 0 and 255 bytes from a string of length 255 [-Wstringop-truncation]
+   37 | #define safestrcat(to, from)    strncat(to, from, sizeof(to) - strlen(to)-1)
+      |                                 ^~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs_utils.c:157:33: note: in expansion of macro 'safestrcat'
+  157 |                                 safestrcat(temp_path, d);
+      |                                 ^~~~~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs.h:36:33: warning: '__builtin_strncpy' output may be truncated copying 255 bytes from a string of length 255 [-Wstringop-truncation]
+   36 | #define safestrcpy(to, from)    strncpy(to, from, sizeof(to)-1)
+      |                                 ^~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs_utils.c:188:25: note: in expansion of macro 'safestrcpy'
+  188 |                         safestrcpy(temp_path, devdir);
+      |                         ^~~~~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs.h:36:33: warning: '__builtin_strncpy' output may be truncated copying 255 bytes from a string of length 255 [-Wstringop-truncation]
+   36 | #define safestrcpy(to, from)    strncpy(to, from, sizeof(to)-1)
+      |                                 ^~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs_utils.c:194:33: note: in expansion of macro 'safestrcpy'
+  194 |                                 safestrcpy(temp_path, linkpath);
+      |                                 ^~~~~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs.h:37:33: warning: '__builtin___strncat_chk' output may be truncated copying between 0 and 255 bytes from a string of length 255 [-Wstringop-truncation]
+   37 | #define safestrcat(to, from)    strncat(to, from, sizeof(to) - strlen(to)-1)
+      |                                 ^~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs_utils.c:192:33: note: in expansion of macro 'safestrcat'
+  192 |                                 safestrcat(temp_path, linkpath);
+      |                                 ^~~~~~~~~~
+/bin/bash ../libtool  --tag=CC   --mode=compile arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot -DHAVE_CONFIG_H -I. -I../../sysfsutils-2.1.0/lib -I.. -I../../sysfsutils-2.1.0/lib/../include   -Wall -W -Wstrict-prototypes  -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot-native=   -Wconversion -Wno-error -c -o libsysfs_la-sysfs_attr.lo `test -f 'sysfs_attr.c' || echo '../../sysfsutils-2.1.0/lib/'`sysfs_attr.c
+libtool: compile:  arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot -DHAVE_CONFIG_H -I. -I../../sysfsutils-2.1.0/lib -I.. -I../../sysfsutils-2.1.0/lib/../include -Wall -W -Wstrict-prototypes -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot-native= -Wconversion -Wno-error -c ../../sysfsutils-2.1.0/lib/sysfs_attr.c  -fPIC -DPIC -o .libs/libsysfs_la-sysfs_attr.o
+../../sysfsutils-2.1.0/lib/sysfs_attr.c: In function 'sysfs_read_attribute':
+../../sysfsutils-2.1.0/lib/sysfs_attr.c:154:40: warning: conversion to 'size_t' {aka 'unsigned int'} from 'long int' may change the sign of the result [-Wsign-conversion]
+  154 |         fbuf = (char *)calloc(1, pgsize+1);
+      |                                  ~~~~~~^~
+../../sysfsutils-2.1.0/lib/sysfs_attr.c:164:33: warning: conversion to 'size_t' {aka 'unsigned int'} from 'long int' may change the sign of the result [-Wsign-conversion]
+  164 |         length = read(fd, fbuf, pgsize);
+      |                                 ^~~~~~
+../../sysfsutils-2.1.0/lib/sysfs_attr.c:173:66: warning: conversion to 'size_t' {aka 'unsigned int'} from 'ssize_t' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  173 |                                 (!(strncmp(sysattr->value, fbuf, length)))) {
+      |                                                                  ^~~~~~
+../../sysfsutils-2.1.0/lib/sysfs_attr.c:180:24: warning: conversion from 'ssize_t' {aka 'int'} to 'short unsigned int' may change value [-Wconversion]
+  180 |         sysattr->len = length;
+      |                        ^~~~~~
+../../sysfsutils-2.1.0/lib/sysfs_attr.c:182:44: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  182 |         vbuf = (char *)realloc(fbuf, length+1);
+      |                                      ~~~~~~^~
+../../sysfsutils-2.1.0/lib/sysfs_attr.c: In function 'sysfs_write_attribute':
+../../sysfsutils-2.1.0/lib/sysfs_attr.c:269:50: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  269 |                                 (sysattr->value, length);
+      |                                                  ^~~~~~
+../../sysfsutils-2.1.0/lib/sysfs_attr.c:270:40: warning: conversion from 'int' to 'short unsigned int' may change value [-Wconversion]
+  270 |                         sysattr->len = length;
+      |                                        ^~~~~~
+In file included from ../../sysfsutils-2.1.0/lib/sysfs_attr.c:24:
+../../sysfsutils-2.1.0/lib/sysfs.h:42:30: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+   42 |         strncpy(to, from, max-1); \
+../../sysfsutils-2.1.0/lib/sysfs_attr.c:271:25: note: in expansion of macro 'safestrcpymax'
+  271 |                         safestrcpymax(sysattr->value, new_value, length);
+      |                         ^~~~~~~~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs.h:42:30: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+   42 |         strncpy(to, from, max-1); \
+../../sysfsutils-2.1.0/lib/sysfs_attr.c:274:25: note: in expansion of macro 'safestrcpymax'
+  274 |                         safestrcpymax(sysattr->value, new_value, length);
+      |                         ^~~~~~~~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs_attr.c: In function 'get_attribute':
+../../sysfsutils-2.1.0/lib/sysfs.h:42:9: warning: '__builtin_strncpy' output may be truncated copying 255 bytes from a string of length 255 [-Wstringop-truncation]
+   42 |         strncpy(to, from, max-1); \
+      |         ^~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs_attr.c:370:9: note: in expansion of macro 'safestrcpymax'
+  370 |         safestrcpymax(path, ((struct sysfs_device *)dev)->path,
+      |         ^~~~~~~~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs_attr.c: In function 'read_dir_links':
+../../sysfsutils-2.1.0/lib/sysfs.h:37:33: warning: '__builtin___strncat_chk' output may be truncated copying between 0 and 255 bytes from a string of length 255 [-Wstringop-truncation]
+   37 | #define safestrcat(to, from)    strncat(to, from, sizeof(to) - strlen(to)-1)
+      |                                 ^~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs_attr.c:408:17: note: in expansion of macro 'safestrcat'
+  408 |                 safestrcat(file_path, dirent->d_name);
+      |                 ^~~~~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs.h:42:9: warning: '__builtin_strncpy' output may be truncated copying 63 bytes from a string of length 255 [-Wstringop-truncation]
+   42 |         strncpy(to, from, max-1); \
+      |         ^~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs_attr.c:419:25: note: in expansion of macro 'safestrcpymax'
+  419 |                         safestrcpymax(linkname, dirent->d_name, SYSFS_NAME_LEN);
+      |                         ^~~~~~~~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs_attr.c: In function 'sysfs_read_dir_subdirs':
+../../sysfsutils-2.1.0/lib/sysfs.h:37:33: warning: '__builtin___strncat_chk' output may be truncated copying between 0 and 255 bytes from a string of length 255 [-Wstringop-truncation]
+   37 | #define safestrcat(to, from)    strncat(to, from, sizeof(to) - strlen(to)-1)
+      |                                 ^~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs_attr.c:480:17: note: in expansion of macro 'safestrcat'
+  480 |                 safestrcat(file_path, dirent->d_name);
+      |                 ^~~~~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs_attr.c: In function 'read_dir_subdirs':
+../../sysfsutils-2.1.0/lib/sysfs.h:37:33: warning: '__builtin___strncat_chk' output may be truncated copying between 0 and 255 bytes from a string of length 255 [-Wstringop-truncation]
+   37 | #define safestrcat(to, from)    strncat(to, from, sizeof(to) - strlen(to)-1)
+      |                                 ^~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs_attr.c:517:17: note: in expansion of macro 'safestrcat'
+  517 |                 safestrcat(file_path, dirent->d_name);
+      |                 ^~~~~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs.h:42:9: warning: '__builtin_strncpy' output may be truncated copying 63 bytes from a string of length 255 [-Wstringop-truncation]
+   42 |         strncpy(to, from, max-1); \
+      |         ^~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs_attr.c:528:25: note: in expansion of macro 'safestrcpymax'
+  528 |                         safestrcpymax(dir_name, dirent->d_name, SYSFS_NAME_LEN);
+      |                         ^~~~~~~~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs_attr.c: In function 'get_attributes_list':
+../../sysfsutils-2.1.0/lib/sysfs.h:37:33: warning: '__builtin___strncat_chk' output may be truncated copying between 0 and 255 bytes from a string of length 255 [-Wstringop-truncation]
+   37 | #define safestrcat(to, from)    strncat(to, from, sizeof(to) - strlen(to)-1)
+      |                                 ^~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs_attr.c:565:17: note: in expansion of macro 'safestrcat'
+  565 |                 safestrcat(file_path, dirent->d_name);
+      |                 ^~~~~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs_attr.c: In function 'get_dev_attributes_list':
+../../sysfsutils-2.1.0/lib/sysfs.h:36:33: warning: '__builtin_strncpy' output may be truncated copying 255 bytes from a string of length 255 [-Wstringop-truncation]
+   36 | #define safestrcpy(to, from)    strncpy(to, from, sizeof(to)-1)
+      |                                 ^~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs_attr.c:600:9: note: in expansion of macro 'safestrcpy'
+  600 |         safestrcpy(path, ((struct sysfs_device *)dev)->path);
+      |         ^~~~~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs.h:36:33: warning: '__builtin_strncpy' output may be truncated copying 255 bytes from a string of length 255 [-Wstringop-truncation]
+   36 | #define safestrcpy(to, from)    strncpy(to, from, sizeof(to)-1)
+      |                                 ^~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs_attr.c:612:17: note: in expansion of macro 'safestrcpy'
+  612 |                 safestrcpy(file_path, path);
+      |                 ^~~~~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs.h:37:33: warning: '__builtin___strncat_chk' output may be truncated copying between 0 and 255 bytes from a string of length 255 [-Wstringop-truncation]
+   37 | #define safestrcat(to, from)    strncat(to, from, sizeof(to) - strlen(to)-1)
+      |                                 ^~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs_attr.c:614:17: note: in expansion of macro 'safestrcat'
+  614 |                 safestrcat(file_path, dirent->d_name);
+      |                 ^~~~~~~~~~
+/bin/bash ../libtool  --tag=CC   --mode=compile arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot -DHAVE_CONFIG_H -I. -I../../sysfsutils-2.1.0/lib -I.. -I../../sysfsutils-2.1.0/lib/../include   -Wall -W -Wstrict-prototypes  -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot-native=   -Wconversion -Wno-error -c -o libsysfs_la-sysfs_class.lo `test -f 'sysfs_class.c' || echo '../../sysfsutils-2.1.0/lib/'`sysfs_class.c
+libtool: compile:  arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot -DHAVE_CONFIG_H -I. -I../../sysfsutils-2.1.0/lib -I.. -I../../sysfsutils-2.1.0/lib/../include -Wall -W -Wstrict-prototypes -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot-native= -Wconversion -Wno-error -c ../../sysfsutils-2.1.0/lib/sysfs_class.c  -fPIC -DPIC -o .libs/libsysfs_la-sysfs_class.o
+../../sysfsutils-2.1.0/lib/sysfs_class.c: In function 'set_classdev_classname':
+../../sysfsutils-2.1.0/lib/sysfs_class.c:132:45: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  132 |                 strncpy(cdev->classname, c, count);
+      |                                             ^~~~~
+In file included from ../../sysfsutils-2.1.0/lib/sysfs_class.c:24:
+../../sysfsutils-2.1.0/lib/sysfs_class.c: In function 'sysfs_open_class_device_path':
+../../sysfsutils-2.1.0/lib/sysfs.h:36:33: warning: '__builtin_strncpy' output may be truncated copying 255 bytes from a string of length 255 [-Wstringop-truncation]
+   36 | #define safestrcpy(to, from)    strncpy(to, from, sizeof(to)-1)
+      |                                 ^~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs_class.c:195:9: note: in expansion of macro 'safestrcpy'
+  195 |         safestrcpy(cdev->path, temp_path);
+      |         ^~~~~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs.h:36:33: warning: '__builtin_strncpy' output may be truncated copying 63 bytes from a string of length 255 [-Wstringop-truncation]
+   36 | #define safestrcpy(to, from)    strncpy(to, from, sizeof(to)-1)
+      |                                 ^~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs_class.c:114:17: note: in expansion of macro 'safestrcpy'
+  114 |                 safestrcpy(cdev->classname, name);
+      |                 ^~~~~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs_class.c: In function 'add_cdevs_to_classlist.part.0':
+../../sysfsutils-2.1.0/lib/sysfs.h:36:33: warning: '__builtin_strncpy' output may be truncated copying 255 bytes from a string of length 255 [-Wstringop-truncation]
+   36 | #define safestrcpy(to, from)    strncpy(to, from, sizeof(to)-1)
+      |                                 ^~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs_class.c:502:17: note: in expansion of macro 'safestrcpy'
+  502 |                 safestrcpy(path, cls->path);
+      |                 ^~~~~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs_class.c: In function 'sysfs_get_classdev_parent':
+../../sysfsutils-2.1.0/lib/sysfs.h:36:33: warning: '__builtin_strncpy' output may be truncated copying 255 bytes from a string of length 255 [-Wstringop-truncation]
+   36 | #define safestrcpy(to, from)    strncpy(to, from, sizeof(to)-1)
+      |                                 ^~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs_class.c:231:9: note: in expansion of macro 'safestrcpy'
+  231 |         safestrcpy(tmp_path, clsdev->path);
+      |         ^~~~~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs.h:36:33: warning: '__builtin_strncpy' output may be truncated copying 255 bytes from a string of length 255 [-Wstringop-truncation]
+   36 | #define safestrcpy(to, from)    strncpy(to, from, sizeof(to)-1)
+      |                                 ^~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs_class.c:236:9: note: in expansion of macro 'safestrcpy'
+  236 |         safestrcpy(abs_path, clsdev->path);
+      |         ^~~~~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs_class.c: In function 'sysfs_get_classdev_device':
+../../sysfsutils-2.1.0/lib/sysfs.h:36:33: warning: '__builtin_strncpy' output may be truncated copying 255 bytes from a string of length 255 [-Wstringop-truncation]
+   36 | #define safestrcpy(to, from)    strncpy(to, from, sizeof(to)-1)
+      |                                 ^~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs_class.c:378:9: note: in expansion of macro 'safestrcpy'
+  378 |         safestrcpy(linkpath, clsdev->path);
+      |         ^~~~~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs_class.c: In function 'sysfs_open_class':
+../../sysfsutils-2.1.0/lib/sysfs.h:36:33: warning: '__builtin_strncpy' output may be truncated copying 255 bytes from a string of length 255 [-Wstringop-truncation]
+   36 | #define safestrcpy(to, from)    strncpy(to, from, sizeof(to)-1)
+      |                                 ^~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs_class.c:431:9: note: in expansion of macro 'safestrcpy'
+  431 |         safestrcpy(cls->path, classpath);
+      |         ^~~~~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs_class.c: In function 'sysfs_get_class_device':
+../../sysfsutils-2.1.0/lib/sysfs.h:36:33: warning: '__builtin_strncpy' output may be truncated copying 255 bytes from a string of length 255 [-Wstringop-truncation]
+   36 | #define safestrcpy(to, from)    strncpy(to, from, sizeof(to)-1)
+      |                                 ^~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs_class.c:466:9: note: in expansion of macro 'safestrcpy'
+  466 |         safestrcpy(path, cls->path);
+      |         ^~~~~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs_class.c: In function 'sysfs_get_class_devices':
+../../sysfsutils-2.1.0/lib/sysfs.h:36:33: warning: '__builtin_strncpy' output may be truncated copying 255 bytes from a string of length 255 [-Wstringop-truncation]
+   36 | #define safestrcpy(to, from)    strncpy(to, from, sizeof(to)-1)
+      |                                 ^~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs_class.c:537:9: note: in expansion of macro 'safestrcpy'
+  537 |         safestrcpy(path, cls->path);
+      |         ^~~~~~~~~~
+/bin/bash ../libtool  --tag=CC   --mode=compile arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot -DHAVE_CONFIG_H -I. -I../../sysfsutils-2.1.0/lib -I.. -I../../sysfsutils-2.1.0/lib/../include   -Wall -W -Wstrict-prototypes  -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot-native=   -Wconversion -Wno-error -c -o libsysfs_la-dlist.lo `test -f 'dlist.c' || echo '../../sysfsutils-2.1.0/lib/'`dlist.c
+libtool: compile:  arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot -DHAVE_CONFIG_H -I. -I../../sysfsutils-2.1.0/lib -I.. -I../../sysfsutils-2.1.0/lib/../include -Wall -W -Wstrict-prototypes -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot-native= -Wconversion -Wno-error -c ../../sysfsutils-2.1.0/lib/dlist.c  -fPIC -DPIC -o .libs/libsysfs_la-dlist.o
+../../sysfsutils-2.1.0/lib/dlist.c: In function '_dlist_merge':
+../../sysfsutils-2.1.0/lib/dlist.c:535:9: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  535 |   return(mergecount);
+      |         ^
+../../sysfsutils-2.1.0/lib/dlist.c: In function 'dlist_sort_custom':
+../../sysfsutils-2.1.0/lib/dlist.c:568:22: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  568 |           mergecount=_dlist_merge(listsource, listdest, passcount, compare);
+      |                      ^~~~~~~~~~~~
+../../sysfsutils-2.1.0/lib/dlist.c: In function '_dlist_swap':
+../../sysfsutils-2.1.0/lib/dlist.c:649:32: warning: unused parameter 'list' [-Wunused-parameter]
+  649 | void _dlist_swap(struct dlist *list, struct dl_node *a, struct dl_node *b)
+      |                  ~~~~~~~~~~~~~~^~~~
+/bin/bash ../libtool  --tag=CC   --mode=compile arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot -DHAVE_CONFIG_H -I. -I../../sysfsutils-2.1.0/lib -I.. -I../../sysfsutils-2.1.0/lib/../include   -Wall -W -Wstrict-prototypes  -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot-native=   -Wconversion -Wno-error -c -o libsysfs_la-sysfs_device.lo `test -f 'sysfs_device.c' || echo '../../sysfsutils-2.1.0/lib/'`sysfs_device.c
+libtool: compile:  arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot -DHAVE_CONFIG_H -I. -I../../sysfsutils-2.1.0/lib -I.. -I../../sysfsutils-2.1.0/lib/../include -Wall -W -Wstrict-prototypes -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot-native= -Wconversion -Wno-error -c ../../sysfsutils-2.1.0/lib/sysfs_device.c  -fPIC -DPIC -o .libs/libsysfs_la-sysfs_device.o
+In file included from ../../sysfsutils-2.1.0/lib/sysfs_device.c:24:
+../../sysfsutils-2.1.0/lib/sysfs_device.c: In function 'get_dev_driver':
+../../sysfsutils-2.1.0/lib/sysfs.h:42:9: warning: '__builtin_strncpy' output may be truncated copying 255 bytes from a string of length 255 [-Wstringop-truncation]
+   42 |         strncpy(to, from, max-1); \
+      |         ^~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs_device.c:40:9: note: in expansion of macro 'safestrcpymax'
+   40 |         safestrcpymax(path, dev->path, SYSFS_PATH_MAX);
+      |         ^~~~~~~~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs_device.c: In function 'get_dev_subsystem':
+../../sysfsutils-2.1.0/lib/sysfs.h:42:9: warning: '__builtin_strncpy' output may be truncated copying 255 bytes from a string of length 255 [-Wstringop-truncation]
+   42 |         strncpy(to, from, max-1); \
+      |         ^~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs_device.c:95:9: note: in expansion of macro 'safestrcpymax'
+   95 |         safestrcpymax(path, dev->path, SYSFS_PATH_MAX);
+      |         ^~~~~~~~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs_device.c: In function 'sysfs_get_device_bus':
+../../sysfsutils-2.1.0/lib/sysfs.h:42:9: warning: '__builtin_strncpy' output may be truncated copying 255 bytes from a string of length 255 [-Wstringop-truncation]
+   42 |         strncpy(to, from, max-1); \
+      |         ^~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs_device.c:69:9: note: in expansion of macro 'safestrcpymax'
+   69 |         safestrcpymax(path, dev->path, SYSFS_PATH_MAX);
+      |         ^~~~~~~~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs_device.c: In function 'sysfs_open_device_path':
+../../sysfsutils-2.1.0/lib/sysfs.h:36:33: warning: '__builtin_strncpy' output may be truncated copying 63 bytes from a string of length 63 [-Wstringop-truncation]
+   36 | #define safestrcpy(to, from)    strncpy(to, from, sizeof(to)-1)
+      |                                 ^~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs_device.c:199:9: note: in expansion of macro 'safestrcpy'
+  199 |         safestrcpy(dev->name, dev->bus_id);
+      |         ^~~~~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs_device.c: In function 'sysfs_get_device_parent':
+../../sysfsutils-2.1.0/lib/sysfs.h:36:33: warning: '__builtin_strncpy' output may be truncated copying 255 bytes from a string of length 255 [-Wstringop-truncation]
+   36 | #define safestrcpy(to, from)    strncpy(to, from, sizeof(to)-1)
+      |                                 ^~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs_device.c:388:9: note: in expansion of macro 'safestrcpy'
+  388 |         safestrcpy(ppath, dev->path);
+      |         ^~~~~~~~~~
+/bin/bash ../libtool  --tag=CC   --mode=compile arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot -DHAVE_CONFIG_H -I. -I../../sysfsutils-2.1.0/lib -I.. -I../../sysfsutils-2.1.0/lib/../include   -Wall -W -Wstrict-prototypes  -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot-native=   -Wconversion -Wno-error -c -o libsysfs_la-sysfs_driver.lo `test -f 'sysfs_driver.c' || echo '../../sysfsutils-2.1.0/lib/'`sysfs_driver.c
+libtool: compile:  arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot -DHAVE_CONFIG_H -I. -I../../sysfsutils-2.1.0/lib -I.. -I../../sysfsutils-2.1.0/lib/../include -Wall -W -Wstrict-prototypes -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot-native= -Wconversion -Wno-error -c ../../sysfsutils-2.1.0/lib/sysfs_driver.c  -fPIC -DPIC -o .libs/libsysfs_la-sysfs_driver.o
+In file included from ../../sysfsutils-2.1.0/lib/sysfs_driver.c:24:
+../../sysfsutils-2.1.0/lib/sysfs_driver.c: In function 'sysfs_open_driver_path':
+../../sysfsutils-2.1.0/lib/sysfs.h:36:33: warning: '__builtin_strncpy' output may be truncated copying 255 bytes from a string of length 255 [-Wstringop-truncation]
+   36 | #define safestrcpy(to, from)    strncpy(to, from, sizeof(to)-1)
+      |                                 ^~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs_driver.c:70:9: note: in expansion of macro 'safestrcpy'
+   70 |         safestrcpy(drvpath, drv->path);
+      |         ^~~~~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs_driver.c: In function 'sysfs_get_driver_module':
+../../sysfsutils-2.1.0/lib/sysfs.h:36:33: warning: '__builtin_strncpy' output may be truncated copying 255 bytes from a string of length 255 [-Wstringop-truncation]
+   36 | #define safestrcpy(to, from)    strncpy(to, from, sizeof(to)-1)
+      |                                 ^~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs_driver.c:280:9: note: in expansion of macro 'safestrcpy'
+  280 |         safestrcpy(path, drv->path);
+      |         ^~~~~~~~~~
+/bin/bash ../libtool  --tag=CC   --mode=compile arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot -DHAVE_CONFIG_H -I. -I../../sysfsutils-2.1.0/lib -I.. -I../../sysfsutils-2.1.0/lib/../include   -Wall -W -Wstrict-prototypes  -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot-native=   -Wconversion -Wno-error -c -o libsysfs_la-sysfs_bus.lo `test -f 'sysfs_bus.c' || echo '../../sysfsutils-2.1.0/lib/'`sysfs_bus.c
+libtool: compile:  arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot -DHAVE_CONFIG_H -I. -I../../sysfsutils-2.1.0/lib -I.. -I../../sysfsutils-2.1.0/lib/../include -Wall -W -Wstrict-prototypes -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot-native= -Wconversion -Wno-error -c ../../sysfsutils-2.1.0/lib/sysfs_bus.c  -fPIC -DPIC -o .libs/libsysfs_la-sysfs_bus.o
+In file included from ../../sysfsutils-2.1.0/lib/sysfs_bus.c:24:
+../../sysfsutils-2.1.0/lib/sysfs_bus.c: In function 'sysfs_get_bus_devices':
+../../sysfsutils-2.1.0/lib/sysfs.h:36:33: warning: '__builtin_strncpy' output may be truncated copying 255 bytes from a string of length 255 [-Wstringop-truncation]
+   36 | #define safestrcpy(to, from)    strncpy(to, from, sizeof(to)-1)
+      |                                 ^~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs_bus.c:97:9: note: in expansion of macro 'safestrcpy'
+   97 |         safestrcpy(path, bus->path);
+      |         ^~~~~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs.h:36:33: warning: '__builtin_strncpy' output may be truncated copying 255 bytes from a string of length 255 [-Wstringop-truncation]
+   36 | #define safestrcpy(to, from)    strncpy(to, from, sizeof(to)-1)
+      |                                 ^~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs_bus.c:111:25: note: in expansion of macro 'safestrcpy'
+  111 |                         safestrcpy(devpath, path);
+      |                         ^~~~~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs_bus.c: In function 'sysfs_get_bus_drivers':
+../../sysfsutils-2.1.0/lib/sysfs.h:36:33: warning: '__builtin_strncpy' output may be truncated copying 255 bytes from a string of length 255 [-Wstringop-truncation]
+   36 | #define safestrcpy(to, from)    strncpy(to, from, sizeof(to)-1)
+      |                                 ^~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs_bus.c:152:9: note: in expansion of macro 'safestrcpy'
+  152 |         safestrcpy(path, bus->path);
+      |         ^~~~~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs.h:36:33: warning: '__builtin_strncpy' output may be truncated copying 255 bytes from a string of length 255 [-Wstringop-truncation]
+   36 | #define safestrcpy(to, from)    strncpy(to, from, sizeof(to)-1)
+      |                                 ^~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs_bus.c:166:25: note: in expansion of macro 'safestrcpy'
+  166 |                         safestrcpy(drvpath, path);
+      |                         ^~~~~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs_bus.c: In function 'sysfs_open_bus':
+../../sysfsutils-2.1.0/lib/sysfs.h:36:33: warning: '__builtin_strncpy' output may be truncated copying 255 bytes from a string of length 255 [-Wstringop-truncation]
+   36 | #define safestrcpy(to, from)    strncpy(to, from, sizeof(to)-1)
+      |                                 ^~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs_bus.c:220:9: note: in expansion of macro 'safestrcpy'
+  220 |         safestrcpy(bus->path, buspath);
+      |         ^~~~~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs_bus.c: In function 'sysfs_get_bus_device':
+../../sysfsutils-2.1.0/lib/sysfs.h:36:33: warning: '__builtin_strncpy' output may be truncated copying 255 bytes from a string of length 255 [-Wstringop-truncation]
+   36 | #define safestrcpy(to, from)    strncpy(to, from, sizeof(to)-1)
+      |                                 ^~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs_bus.c:253:9: note: in expansion of macro 'safestrcpy'
+  253 |         safestrcpy(devpath, bus->path);
+      |         ^~~~~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs_bus.c: In function 'sysfs_get_bus_driver':
+../../sysfsutils-2.1.0/lib/sysfs.h:36:33: warning: '__builtin_strncpy' output may be truncated copying 255 bytes from a string of length 255 [-Wstringop-truncation]
+   36 | #define safestrcpy(to, from)    strncpy(to, from, sizeof(to)-1)
+      |                                 ^~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs_bus.c:300:9: note: in expansion of macro 'safestrcpy'
+  300 |         safestrcpy(drvpath, bus->path);
+      |         ^~~~~~~~~~
+/bin/bash ../libtool  --tag=CC   --mode=compile arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot -DHAVE_CONFIG_H -I. -I../../sysfsutils-2.1.0/lib -I.. -I../../sysfsutils-2.1.0/lib/../include   -Wall -W -Wstrict-prototypes  -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot-native=   -Wconversion -Wno-error -c -o libsysfs_la-sysfs_module.lo `test -f 'sysfs_module.c' || echo '../../sysfsutils-2.1.0/lib/'`sysfs_module.c
+libtool: compile:  arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot -DHAVE_CONFIG_H -I. -I../../sysfsutils-2.1.0/lib -I.. -I../../sysfsutils-2.1.0/lib/../include -Wall -W -Wstrict-prototypes -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot-native= -Wconversion -Wno-error -c ../../sysfsutils-2.1.0/lib/sysfs_module.c  -fPIC -DPIC -o .libs/libsysfs_la-sysfs_module.o
+In file included from ../../sysfsutils-2.1.0/lib/sysfs_module.c:24:
+../../sysfsutils-2.1.0/lib/sysfs_module.c: In function 'sysfs_open_module':
+../../sysfsutils-2.1.0/lib/sysfs.h:36:33: warning: '__builtin_strncpy' output may be truncated copying 255 bytes from a string of length 255 [-Wstringop-truncation]
+   36 | #define safestrcpy(to, from)    strncpy(to, from, sizeof(to)-1)
+      |                                 ^~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs_module.c:148:9: note: in expansion of macro 'safestrcpy'
+  148 |         safestrcpy(mod->path, modpath);
+      |         ^~~~~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs_module.c: In function 'sysfs_get_module_parms':
+../../sysfsutils-2.1.0/lib/sysfs.h:36:33: warning: '__builtin_strncpy' output may be truncated copying 255 bytes from a string of length 255 [-Wstringop-truncation]
+   36 | #define safestrcpy(to, from)    strncpy(to, from, sizeof(to)-1)
+      |                                 ^~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs_module.c:204:9: note: in expansion of macro 'safestrcpy'
+  204 |         safestrcpy(ppath, module->path);
+      |         ^~~~~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs_module.c: In function 'sysfs_get_module_sections':
+../../sysfsutils-2.1.0/lib/sysfs.h:36:33: warning: '__builtin_strncpy' output may be truncated copying 255 bytes from a string of length 255 [-Wstringop-truncation]
+   36 | #define safestrcpy(to, from)    strncpy(to, from, sizeof(to)-1)
+      |                                 ^~~~~~~
+../../sysfsutils-2.1.0/lib/sysfs_module.c:226:9: note: in expansion of macro 'safestrcpy'
+  226 |         safestrcpy(ppath, module->path);
+      |         ^~~~~~~~~~
+/bin/bash ../libtool  --tag=CC   --mode=link arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot -Wall -W -Wstrict-prototypes  -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot-native=   -Wconversion -Wno-error -version-info 2:1:0 -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot-native=  -Wl,-z,relro,-z,now -o libsysfs.la -rpath /lib libsysfs_la-sysfs_utils.lo libsysfs_la-sysfs_attr.lo libsysfs_la-sysfs_class.lo libsysfs_la-dlist.lo libsysfs_la-sysfs_device.lo libsysfs_la-sysfs_driver.lo libsysfs_la-sysfs_bus.lo libsysfs_la-sysfs_module.lo  
+libtool: link: arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot -shared  -fPIC -DPIC  .libs/libsysfs_la-sysfs_utils.o .libs/libsysfs_la-sysfs_attr.o .libs/libsysfs_la-sysfs_class.o .libs/libsysfs_la-dlist.o .libs/libsysfs_la-sysfs_device.o .libs/libsysfs_la-sysfs_driver.o .libs/libsysfs_la-sysfs_bus.o .libs/libsysfs_la-sysfs_module.o    -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot -O2 -g -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot-native= -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot-native= -Wl,-z -Wl,relro -Wl,-z -Wl,now   -Wl,-soname -Wl,libsysfs.so.2 -o .libs/libsysfs.so.2.0.1
+libtool: link: (cd ".libs" && rm -f "libsysfs.so.2" && ln -s "libsysfs.so.2.0.1" "libsysfs.so.2")
+libtool: link: (cd ".libs" && rm -f "libsysfs.so" && ln -s "libsysfs.so.2.0.1" "libsysfs.so")
+libtool: link: ( cd ".libs" && rm -f "libsysfs.la" && ln -s "../libsysfs.la" "libsysfs.la" )
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build/lib'
+Making all in cmd
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build/cmd'
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot -DHAVE_CONFIG_H -I. -I../../sysfsutils-2.1.0/cmd -I.. -I../../sysfsutils-2.1.0/cmd/../include   -Wall -W -Wstrict-prototypes -Wshadow -Wmissing-prototypes -Wmissing-declarations -Wredundant-decls -Wnested-externs -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot-native=   -Wconversion -Wno-error -c -o systool.o ../../sysfsutils-2.1.0/cmd/systool.c
+../../sysfsutils-2.1.0/cmd/systool.c: In function 'show_device':
+../../sysfsutils-2.1.0/cmd/systool.c:271:69: warning: pointer targets in passing argument 2 of 'get_pciconfig_word' differ in signedness [-Wpointer-sign]
+  271 |                                                 (PCI_VENDOR_ID, attr->value);
+      |                                                                 ~~~~^~~~~~~
+      |                                                                     |
+      |                                                                     char *
+../../sysfsutils-2.1.0/cmd/systool.c:85:67: note: expected 'unsigned char *' but argument is of type 'char *'
+   85 | static unsigned int get_pciconfig_word(int offset, unsigned char *buf)
+      |                                                    ~~~~~~~~~~~~~~~^~~
+../../sysfsutils-2.1.0/cmd/systool.c:273:69: warning: pointer targets in passing argument 2 of 'get_pciconfig_word' differ in signedness [-Wpointer-sign]
+  273 |                                                 (PCI_DEVICE_ID, attr->value);
+      |                                                                 ~~~~^~~~~~~
+      |                                                                     |
+      |                                                                     char *
+../../sysfsutils-2.1.0/cmd/systool.c:85:67: note: expected 'unsigned char *' but argument is of type 'char *'
+   85 | static unsigned int get_pciconfig_word(int offset, unsigned char *buf)
+      |                                                    ~~~~~~~~~~~~~~~^~~
+../../sysfsutils-2.1.0/cmd/systool.c:275:71: warning: pointer targets in passing argument 2 of 'pci_lookup_name' differ in signedness [-Wpointer-sign]
+  275 |                                                 pci_lookup_name(pacc, buf, 128,
+      |                                                                       ^~~
+      |                                                                       |
+      |                                                                       char *
+In file included from ../../sysfsutils-2.1.0/cmd/systool.c:33:
+../../sysfsutils-2.1.0/cmd/names.h:31:76: note: expected 'unsigned char *' but argument is of type 'char *'
+   31 | extern unsigned char *pci_lookup_name(struct pci_access *a, unsigned char *buf,
+      |                                                             ~~~~~~~~~~~~~~~^~~
+../../sysfsutils-2.1.0/cmd/systool.c: In function 'main':
+../../sysfsutils-2.1.0/cmd/systool.c:751:48: warning: pointer targets in assignment from 'char *' to 'unsigned char *' differ in signedness [-Wpointer-sign]
+  751 |                         pacc->pci_id_file_name = pci_id_file;
+      |                                                ^
+../../sysfsutils-2.1.0/cmd/systool.c:692:37: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  692 |                         show_module = optarg;
+      |                         ~~~~~~~~~~~~^~~~~~~~
+../../sysfsutils-2.1.0/cmd/systool.c:693:17: note: here
+  693 |                 case 'p':
+      |                 ^~~~
+../../sysfsutils-2.1.0/cmd/systool.c: In function 'show_device.part.0':
+../../sysfsutils-2.1.0/cmd/systool.c:35:33: warning: '__builtin_strncpy' output may be truncated copying 255 bytes from a string of length 255 [-Wstringop-truncation]
+   35 | #define safestrcpy(to, from)    strncpy(to, from, sizeof(to)-1)
+      |                                 ^~~~~~~
+../../sysfsutils-2.1.0/cmd/systool.c:264:25: note: in expansion of macro 'safestrcpy'
+  264 |                         safestrcpy(path, device->path);
+      |                         ^~~~~~~~~~
+../../sysfsutils-2.1.0/cmd/systool.c: In function 'main':
+../../sysfsutils-2.1.0/cmd/systool.c:35:33: warning: '__builtin_strncpy' output may be truncated copying 63 bytes from a string of length 255 [-Wstringop-truncation]
+   35 | #define safestrcpy(to, from)    strncpy(to, from, sizeof(to)-1)
+      |                                 ^~~~~~~
+../../sysfsutils-2.1.0/cmd/systool.c:592:9: note: in expansion of macro 'safestrcpy'
+  592 |         safestrcpy(subsys, sysfs_mnt_path);
+      |         ^~~~~~~~~~
+../../sysfsutils-2.1.0/cmd/systool.c:35:33: warning: '__builtin_strncpy' output may be truncated copying 63 bytes from a string of length 255 [-Wstringop-truncation]
+   35 | #define safestrcpy(to, from)    strncpy(to, from, sizeof(to)-1)
+      |                                 ^~~~~~~
+../../sysfsutils-2.1.0/cmd/systool.c:603:9: note: in expansion of macro 'safestrcpy'
+  603 |         safestrcpy(subsys, sysfs_mnt_path);
+      |         ^~~~~~~~~~
+../../sysfsutils-2.1.0/cmd/systool.c:35:33: warning: '__builtin_strncpy' output may be truncated copying 63 bytes from a string of length 255 [-Wstringop-truncation]
+   35 | #define safestrcpy(to, from)    strncpy(to, from, sizeof(to)-1)
+      |                                 ^~~~~~~
+../../sysfsutils-2.1.0/cmd/systool.c:614:9: note: in expansion of macro 'safestrcpy'
+  614 |         safestrcpy(subsys, sysfs_mnt_path);
+      |         ^~~~~~~~~~
+../../sysfsutils-2.1.0/cmd/systool.c:35:33: warning: '__builtin_strncpy' output may be truncated copying 63 bytes from a string of length 255 [-Wstringop-truncation]
+   35 | #define safestrcpy(to, from)    strncpy(to, from, sizeof(to)-1)
+      |                                 ^~~~~~~
+../../sysfsutils-2.1.0/cmd/systool.c:625:9: note: in expansion of macro 'safestrcpy'
+  625 |         safestrcpy(subsys, sysfs_mnt_path);
+      |         ^~~~~~~~~~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot -DHAVE_CONFIG_H -I. -I../../sysfsutils-2.1.0/cmd -I.. -I../../sysfsutils-2.1.0/cmd/../include   -Wall -W -Wstrict-prototypes -Wshadow -Wmissing-prototypes -Wmissing-declarations -Wredundant-decls -Wnested-externs -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot-native=   -Wconversion -Wno-error -c -o names.o ../../sysfsutils-2.1.0/cmd/names.c
+../../sysfsutils-2.1.0/cmd/names.c: In function 'nl_calc_hash':
+../../sysfsutils-2.1.0/cmd/names.c:41:7: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+   41 |   h = id1 ^ id2 ^ id3 ^ id4 ^ (cat << 5);
+      |       ^~~
+../../sysfsutils-2.1.0/cmd/names.c: In function 'nl_add':
+../../sysfsutils-2.1.0/cmd/names.c:72:12: warning: conversion from 'int' to 'short unsigned int' may change value [-Wconversion]
+   72 |   n->id1 = id1;
+      |            ^~~
+../../sysfsutils-2.1.0/cmd/names.c:73:12: warning: conversion from 'int' to 'short unsigned int' may change value [-Wconversion]
+   73 |   n->id2 = id2;
+      |            ^~~
+../../sysfsutils-2.1.0/cmd/names.c:74:12: warning: conversion from 'int' to 'short unsigned int' may change value [-Wconversion]
+   74 |   n->id3 = id3;
+      |            ^~~
+../../sysfsutils-2.1.0/cmd/names.c:75:12: warning: conversion from 'int' to 'short unsigned int' may change value [-Wconversion]
+   75 |   n->id4 = id4;
+      |            ^~~
+../../sysfsutils-2.1.0/cmd/names.c: In function 'parse_name_list':
+../../sysfsutils-2.1.0/cmd/names.c:118:27: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  118 |               if (strlen(q+2) < 3 ||
+      |                          ~^~
+      |                           |
+      |                           unsigned char *
+In file included from ../../sysfsutils-2.1.0/cmd/names.c:13:
+/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot/usr/include/string.h:407:35: note: expected 'const char *' but argument is of type 'unsigned char *'
+  407 | extern size_t strlen (const char *__s)
+      |                       ~~~~~~~~~~~~^~~
+../../sysfsutils-2.1.0/cmd/names.c:120:27: warning: pointer targets in passing argument 1 of 'sscanf' differ in signedness [-Wpointer-sign]
+  120 |                   sscanf(q+2, "%x", &id1) != 1)
+      |                          ~^~
+      |                           |
+      |                           unsigned char *
+In file included from ../../sysfsutils-2.1.0/cmd/names.c:11:
+/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot/usr/include/stdio.h:423:43: note: expected 'const char * restrict' but argument is of type 'unsigned char *'
+  423 | extern int sscanf (const char *__restrict __s,
+      |                    ~~~~~~~~~~~~~~~~~~~~~~~^~~
+../../sysfsutils-2.1.0/cmd/names.c:126:26: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  126 |               if (strlen(q) < 5 ||
+      |                          ^
+      |                          |
+      |                          unsigned char *
+/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot/usr/include/string.h:407:35: note: expected 'const char *' but argument is of type 'unsigned char *'
+  407 | extern size_t strlen (const char *__s)
+      |                       ~~~~~~~~~~~~^~~
+../../sysfsutils-2.1.0/cmd/names.c:128:26: warning: pointer targets in passing argument 1 of 'sscanf' differ in signedness [-Wpointer-sign]
+  128 |                   sscanf(q, "%x", &id1) != 1)
+      |                          ^
+      |                          |
+      |                          unsigned char *
+/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot/usr/include/stdio.h:423:43: note: expected 'const char * restrict' but argument is of type 'unsigned char *'
+  423 | extern int sscanf (const char *__restrict __s,
+      |                    ~~~~~~~~~~~~~~~~~~~~~~~^~~
+../../sysfsutils-2.1.0/cmd/names.c:141:24: warning: pointer targets in passing argument 1 of 'sscanf' differ in signedness [-Wpointer-sign]
+  141 |             if (sscanf(q, "%x", &id2) != 1 || q[4] != ' ')
+      |                        ^
+      |                        |
+      |                        unsigned char *
+/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot/usr/include/stdio.h:423:43: note: expected 'const char * restrict' but argument is of type 'unsigned char *'
+  423 | extern int sscanf (const char *__restrict __s,
+      |                    ~~~~~~~~~~~~~~~~~~~~~~~^~~
+../../sysfsutils-2.1.0/cmd/names.c:150:24: warning: pointer targets in passing argument 1 of 'sscanf' differ in signedness [-Wpointer-sign]
+  150 |             if (sscanf(q, "%x", &id2) != 1 || q[2] != ' ')
+      |                        ^
+      |                        |
+      |                        unsigned char *
+/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot/usr/include/stdio.h:423:43: note: expected 'const char * restrict' but argument is of type 'unsigned char *'
+  423 | extern int sscanf (const char *__restrict __s,
+      |                    ~~~~~~~~~~~~~~~~~~~~~~~^~~
+../../sysfsutils-2.1.0/cmd/names.c:164:24: warning: pointer targets in passing argument 1 of 'sscanf' differ in signedness [-Wpointer-sign]
+  164 |             if (sscanf(q, "%x%x", &id3, &id4) != 2 || q[9] != ' ')
+      |                        ^
+      |                        |
+      |                        unsigned char *
+/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot/usr/include/stdio.h:423:43: note: expected 'const char * restrict' but argument is of type 'unsigned char *'
+  423 | extern int sscanf (const char *__restrict __s,
+      |                    ~~~~~~~~~~~~~~~~~~~~~~~^~~
+../../sysfsutils-2.1.0/cmd/names.c:172:24: warning: pointer targets in passing argument 1 of 'sscanf' differ in signedness [-Wpointer-sign]
+  172 |             if (sscanf(q, "%x", &id3) != 1 || q[2] != ' ')
+      |                        ^
+      |                        |
+      |                        unsigned char *
+/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot/usr/include/stdio.h:423:43: note: expected 'const char * restrict' but argument is of type 'unsigned char *'
+  423 | extern int sscanf (const char *__restrict __s,
+      |                    ~~~~~~~~~~~~~~~~~~~~~~~^~~
+../../sysfsutils-2.1.0/cmd/names.c:187:26: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  187 |       if (nl_add(a, cat, id1, id2, id3, id4, q))
+      |                          ^~~
+../../sysfsutils-2.1.0/cmd/names.c:187:31: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  187 |       if (nl_add(a, cat, id1, id2, id3, id4, q))
+      |                               ^~~
+../../sysfsutils-2.1.0/cmd/names.c:187:36: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  187 |       if (nl_add(a, cat, id1, id2, id3, id4, q))
+      |                                    ^~~
+../../sysfsutils-2.1.0/cmd/names.c:187:41: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  187 |       if (nl_add(a, cat, id1, id2, id3, id4, q))
+      |                                         ^~~
+../../sysfsutils-2.1.0/cmd/names.c: In function 'load_name_list':
+../../sysfsutils-2.1.0/cmd/names.c:202:14: warning: pointer targets in passing argument 1 of 'open' differ in signedness [-Wpointer-sign]
+  202 |   fd = open(a->pci_id_file_name, O_RDONLY);
+      |             ~^~~~~~~~~~~~~~~~~~
+      |              |
+      |              unsigned char *
+In file included from /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot/usr/include/fcntl.h:342,
+                 from ../../sysfsutils-2.1.0/cmd/names.c:14:
+/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot/usr/include/bits/fcntl2.h:41:19: note: expected 'const char *' but argument is of type 'unsigned char *'
+   41 | open (const char *__path, int __oflag, ...)
+      |       ~~~~~~~~~~~~^~~~~~
+../../sysfsutils-2.1.0/cmd/names.c:209:22: warning: pointer targets in passing argument 2 of 'err_name_list' differ in signedness [-Wpointer-sign]
+  209 |     err_name_list(a, "stat");
+      |                      ^~~~~~
+      |                      |
+      |                      char *
+../../sysfsutils-2.1.0/cmd/names.c:84:52: note: expected 'unsigned char *' but argument is of type 'char *'
+   84 | err_name_list(struct pci_access *a, unsigned char *msg)
+      |                                     ~~~~~~~~~~~~~~~^~~
+../../sysfsutils-2.1.0/cmd/names.c:210:34: warning: conversion to 'size_t' {aka 'unsigned int'} from 'long int' may change the sign of the result [-Wsign-conversion]
+  210 |   a->nl_list = malloc(st.st_size + 1);
+      |                       ~~~~~~~~~~~^~~
+../../sysfsutils-2.1.0/cmd/names.c:211:30: warning: conversion to 'size_t' {aka 'unsigned int'} from '__off_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+  211 |   if (read(fd, a->nl_list, st.st_size) != st.st_size)
+      |                            ~~^~~~~~~~
+../../sysfsutils-2.1.0/cmd/names.c:212:22: warning: pointer targets in passing argument 2 of 'err_name_list' differ in signedness [-Wpointer-sign]
+  212 |     err_name_list(a, "read");
+      |                      ^~~~~~
+      |                      |
+      |                      char *
+../../sysfsutils-2.1.0/cmd/names.c:84:52: note: expected 'unsigned char *' but argument is of type 'char *'
+   84 | err_name_list(struct pci_access *a, unsigned char *msg)
+      |                                     ~~~~~~~~~~~~~~~^~~
+../../sysfsutils-2.1.0/cmd/names.c: In function 'pci_lookup_name':
+../../sysfsutils-2.1.0/cmd/names.c:247:13: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  247 |   int num = a->numeric_ids;
+      |             ^
+../../sysfsutils-2.1.0/cmd/names.c:259:13: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  259 |       num = a->numeric_ids;
+      |             ^
+../../sysfsutils-2.1.0/cmd/names.c:264:45: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  264 |       if ((n = nl_lookup(a, num, NL_VENDOR, arg1, 0, 0, 0)))
+      |                                             ^~~~
+../../sysfsutils-2.1.0/cmd/names.c:267:24: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+  267 |         res = snprintf(buf, size, "%04x", arg1);
+      |                        ^~~
+      |                        |
+      |                        unsigned char *
+In file included from /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot/usr/include/features.h:490,
+                 from /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot/usr/include/bits/libc-header-start.h:33,
+                 from /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot/usr/include/stdio.h:27:
+/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot/usr/include/bits/stdio2.h:51:1: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+   51 | __NTH (snprintf (char *__restrict __s, size_t __n,
+      | ^~~~~
+../../sysfsutils-2.1.0/cmd/names.c:267:29: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  267 |         res = snprintf(buf, size, "%04x", arg1);
+      |                             ^~~~
+../../sysfsutils-2.1.0/cmd/names.c:270:45: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  270 |       if ((n = nl_lookup(a, num, NL_DEVICE, arg1, arg2, 0, 0)))
+      |                                             ^~~~
+../../sysfsutils-2.1.0/cmd/names.c:270:51: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  270 |       if ((n = nl_lookup(a, num, NL_DEVICE, arg1, arg2, 0, 0)))
+      |                                                   ^~~~
+../../sysfsutils-2.1.0/cmd/names.c:273:24: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+  273 |         res = snprintf(buf, size, "%04x", arg2);
+      |                        ^~~
+      |                        |
+      |                        unsigned char *
+/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot/usr/include/bits/stdio2.h:51:1: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+   51 | __NTH (snprintf (char *__restrict __s, size_t __n,
+      | ^~~~~
+../../sysfsutils-2.1.0/cmd/names.c:273:29: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  273 |         res = snprintf(buf, size, "%04x", arg2);
+      |                             ^~~~
+../../sysfsutils-2.1.0/cmd/names.c:279:42: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  279 |           e = nl_lookup(a, 0, NL_VENDOR, arg1, 0, 0, 0);
+      |                                          ^~~~
+../../sysfsutils-2.1.0/cmd/names.c:280:43: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  280 |           e2 = nl_lookup(a, 0, NL_DEVICE, arg1, arg2, 0, 0);
+      |                                           ^~~~
+../../sysfsutils-2.1.0/cmd/names.c:280:49: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  280 |           e2 = nl_lookup(a, 0, NL_DEVICE, arg1, arg2, 0, 0);
+      |                                                 ^~~~
+../../sysfsutils-2.1.0/cmd/names.c:282:28: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+  282 |             res = snprintf(buf, size, "Unknown device %04x:%04x", arg1, arg2);
+      |                            ^~~
+      |                            |
+      |                            unsigned char *
+/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot/usr/include/bits/stdio2.h:51:1: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+   51 | __NTH (snprintf (char *__restrict __s, size_t __n,
+      | ^~~~~
+../../sysfsutils-2.1.0/cmd/names.c:282:33: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  282 |             res = snprintf(buf, size, "Unknown device %04x:%04x", arg1, arg2);
+      |                                 ^~~~
+../../sysfsutils-2.1.0/cmd/names.c:284:28: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+  284 |             res = snprintf(buf, size, "%s: Unknown device %04x", e->name, arg2);
+      |                            ^~~
+      |                            |
+      |                            unsigned char *
+/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot/usr/include/bits/stdio2.h:51:1: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+   51 | __NTH (snprintf (char *__restrict __s, size_t __n,
+      | ^~~~~
+../../sysfsutils-2.1.0/cmd/names.c:284:33: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  284 |             res = snprintf(buf, size, "%s: Unknown device %04x", e->name, arg2);
+      |                                 ^~~~
+../../sysfsutils-2.1.0/cmd/names.c:286:28: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+  286 |             res = snprintf(buf, size, "%s %s", e->name, e2->name);
+      |                            ^~~
+      |                            |
+      |                            unsigned char *
+/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot/usr/include/bits/stdio2.h:51:1: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+   51 | __NTH (snprintf (char *__restrict __s, size_t __n,
+      | ^~~~~
+../../sysfsutils-2.1.0/cmd/names.c:286:33: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  286 |             res = snprintf(buf, size, "%s %s", e->name, e2->name);
+      |                                 ^~~~
+../../sysfsutils-2.1.0/cmd/names.c:289:24: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+  289 |         res = snprintf(buf, size, "%04x:%04x", arg1, arg2);
+      |                        ^~~
+      |                        |
+      |                        unsigned char *
+/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot/usr/include/bits/stdio2.h:51:1: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+   51 | __NTH (snprintf (char *__restrict __s, size_t __n,
+      | ^~~~~
+../../sysfsutils-2.1.0/cmd/names.c:289:29: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  289 |         res = snprintf(buf, size, "%04x:%04x", arg1, arg2);
+      |                             ^~~~
+../../sysfsutils-2.1.0/cmd/names.c:292:45: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  292 |       if ((n = nl_lookup(a, num, NL_VENDOR, arg3, 0, 0, 0)))
+      |                                             ^~~~
+../../sysfsutils-2.1.0/cmd/names.c:295:24: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+  295 |         res = snprintf(buf, size, "%04x", arg2);
+      |                        ^~~
+      |                        |
+      |                        unsigned char *
+/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot/usr/include/bits/stdio2.h:51:1: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+   51 | __NTH (snprintf (char *__restrict __s, size_t __n,
+      | ^~~~~
+../../sysfsutils-2.1.0/cmd/names.c:295:29: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  295 |         res = snprintf(buf, size, "%04x", arg2);
+      |                             ^~~~
+../../sysfsutils-2.1.0/cmd/names.c:298:48: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  298 |       if ((n = nl_lookup(a, num, NL_SUBSYSTEM, arg1, arg2, arg3, arg4)))
+      |                                                ^~~~
+../../sysfsutils-2.1.0/cmd/names.c:298:54: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  298 |       if ((n = nl_lookup(a, num, NL_SUBSYSTEM, arg1, arg2, arg3, arg4)))
+      |                                                      ^~~~
+../../sysfsutils-2.1.0/cmd/names.c:298:60: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  298 |       if ((n = nl_lookup(a, num, NL_SUBSYSTEM, arg1, arg2, arg3, arg4)))
+      |                                                            ^~~~
+../../sysfsutils-2.1.0/cmd/names.c:298:66: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  298 |       if ((n = nl_lookup(a, num, NL_SUBSYSTEM, arg1, arg2, arg3, arg4)))
+      |                                                                  ^~~~
+../../sysfsutils-2.1.0/cmd/names.c:300:82: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  300 |       else if (arg1 == arg3 && arg2 == arg4 && (n = nl_lookup(a, num, NL_DEVICE, arg1, arg2, 0, 0)))
+      |                                                                                  ^~~~
+../../sysfsutils-2.1.0/cmd/names.c:300:88: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  300 |       else if (arg1 == arg3 && arg2 == arg4 && (n = nl_lookup(a, num, NL_DEVICE, arg1, arg2, 0, 0)))
+      |                                                                                        ^~~~
+../../sysfsutils-2.1.0/cmd/names.c:303:24: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+  303 |         res = snprintf(buf, size, "%04x", arg4);
+      |                        ^~~
+      |                        |
+      |                        unsigned char *
+/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot/usr/include/bits/stdio2.h:51:1: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+   51 | __NTH (snprintf (char *__restrict __s, size_t __n,
+      | ^~~~~
+../../sysfsutils-2.1.0/cmd/names.c:303:29: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  303 |         res = snprintf(buf, size, "%04x", arg4);
+      |                             ^~~~
+../../sysfsutils-2.1.0/cmd/names.c:309:42: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  309 |           e = nl_lookup(a, 0, NL_VENDOR, arg3, 0, 0, 0);
+      |                                          ^~~~
+../../sysfsutils-2.1.0/cmd/names.c:310:46: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  310 |           e2 = nl_lookup(a, 0, NL_SUBSYSTEM, arg1, arg2, arg3, arg4);
+      |                                              ^~~~
+../../sysfsutils-2.1.0/cmd/names.c:310:52: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  310 |           e2 = nl_lookup(a, 0, NL_SUBSYSTEM, arg1, arg2, arg3, arg4);
+      |                                                    ^~~~
+../../sysfsutils-2.1.0/cmd/names.c:310:58: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  310 |           e2 = nl_lookup(a, 0, NL_SUBSYSTEM, arg1, arg2, arg3, arg4);
+      |                                                          ^~~~
+../../sysfsutils-2.1.0/cmd/names.c:310:64: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  310 |           e2 = nl_lookup(a, 0, NL_SUBSYSTEM, arg1, arg2, arg3, arg4);
+      |                                                                ^~~~
+../../sysfsutils-2.1.0/cmd/names.c:313:45: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  313 |             e2 = nl_lookup(a, 0, NL_DEVICE, arg1, arg2, 0, 0);
+      |                                             ^~~~
+../../sysfsutils-2.1.0/cmd/names.c:313:51: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  313 |             e2 = nl_lookup(a, 0, NL_DEVICE, arg1, arg2, 0, 0);
+      |                                                   ^~~~
+../../sysfsutils-2.1.0/cmd/names.c:315:28: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+  315 |             res = snprintf(buf, size, "Unknown device %04x:%04x", arg3, arg4);
+      |                            ^~~
+      |                            |
+      |                            unsigned char *
+/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot/usr/include/bits/stdio2.h:51:1: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+   51 | __NTH (snprintf (char *__restrict __s, size_t __n,
+      | ^~~~~
+../../sysfsutils-2.1.0/cmd/names.c:315:33: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  315 |             res = snprintf(buf, size, "Unknown device %04x:%04x", arg3, arg4);
+      |                                 ^~~~
+../../sysfsutils-2.1.0/cmd/names.c:317:28: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+  317 |             res = snprintf(buf, size, "%s: Unknown device %04x", e->name, arg4);
+      |                            ^~~
+      |                            |
+      |                            unsigned char *
+/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot/usr/include/bits/stdio2.h:51:1: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+   51 | __NTH (snprintf (char *__restrict __s, size_t __n,
+      | ^~~~~
+../../sysfsutils-2.1.0/cmd/names.c:317:33: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  317 |             res = snprintf(buf, size, "%s: Unknown device %04x", e->name, arg4);
+      |                                 ^~~~
+../../sysfsutils-2.1.0/cmd/names.c:319:28: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+  319 |             res = snprintf(buf, size, "%s %s", e->name, e2->name);
+      |                            ^~~
+      |                            |
+      |                            unsigned char *
+/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot/usr/include/bits/stdio2.h:51:1: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+   51 | __NTH (snprintf (char *__restrict __s, size_t __n,
+      | ^~~~~
+../../sysfsutils-2.1.0/cmd/names.c:319:33: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  319 |             res = snprintf(buf, size, "%s %s", e->name, e2->name);
+      |                                 ^~~~
+../../sysfsutils-2.1.0/cmd/names.c:322:24: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+  322 |         res = snprintf(buf, size, "%04x:%04x", arg3, arg4);
+      |                        ^~~
+      |                        |
+      |                        unsigned char *
+/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot/usr/include/bits/stdio2.h:51:1: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+   51 | __NTH (snprintf (char *__restrict __s, size_t __n,
+      | ^~~~~
+../../sysfsutils-2.1.0/cmd/names.c:322:29: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  322 |         res = snprintf(buf, size, "%04x:%04x", arg3, arg4);
+      |                             ^~~~
+../../sysfsutils-2.1.0/cmd/names.c:325:52: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  325 |       if ((n = nl_lookup(a, num, NL_SUBCLASS, arg1 >> 8, arg1 & 0xff, 0, 0)))
+      |                                               ~~~~~^~~~
+../../sysfsutils-2.1.0/cmd/names.c:327:49: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  327 |       else if ((n = nl_lookup(a, num, NL_CLASS, arg1, 0, 0, 0)))
+      |                                                 ^~~~
+../../sysfsutils-2.1.0/cmd/names.c:328:24: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+  328 |         res = snprintf(buf, size, "%s [%04x]", n->name, arg1);
+      |                        ^~~
+      |                        |
+      |                        unsigned char *
+/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot/usr/include/bits/stdio2.h:51:1: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+   51 | __NTH (snprintf (char *__restrict __s, size_t __n,
+      | ^~~~~
+../../sysfsutils-2.1.0/cmd/names.c:328:29: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  328 |         res = snprintf(buf, size, "%s [%04x]", n->name, arg1);
+      |                             ^~~~
+../../sysfsutils-2.1.0/cmd/names.c:330:24: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+  330 |         res = snprintf(buf, size, "Class %04x", arg1);
+      |                        ^~~
+      |                        |
+      |                        unsigned char *
+/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot/usr/include/bits/stdio2.h:51:1: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+   51 | __NTH (snprintf (char *__restrict __s, size_t __n,
+      | ^~~~~
+../../sysfsutils-2.1.0/cmd/names.c:330:29: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  330 |         res = snprintf(buf, size, "Class %04x", arg1);
+      |                             ^~~~
+../../sysfsutils-2.1.0/cmd/names.c:333:50: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  333 |       if ((n = nl_lookup(a, num, NL_PROGIF, arg1 >> 8, arg1 & 0xff, arg2, 0)))
+      |                                             ~~~~~^~~~
+../../sysfsutils-2.1.0/cmd/names.c:333:69: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  333 |       if ((n = nl_lookup(a, num, NL_PROGIF, arg1 >> 8, arg1 & 0xff, arg2, 0)))
+      |                                                                     ^~~~
+../../sysfsutils-2.1.0/cmd/names.c:340:26: warning: pointer targets in passing argument 1 of 'snprintf' differ in signedness [-Wpointer-sign]
+  340 |           res = snprintf(buf, size, "%s%s%s%s%s",
+      |                          ^~~
+      |                          |
+      |                          unsigned char *
+/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot/usr/include/bits/stdio2.h:51:1: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+   51 | __NTH (snprintf (char *__restrict __s, size_t __n,
+      | ^~~~~
+../../sysfsutils-2.1.0/cmd/names.c:340:31: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  340 |           res = snprintf(buf, size, "%s%s%s%s%s",
+      |                               ^~~~
+../../sysfsutils-2.1.0/cmd/names.c:352:14: warning: pointer targets in returning 'char *' from a function with return type 'unsigned char *' differ in signedness [-Wpointer-sign]
+  352 |       return "<pci_lookup_name: invalid request>";
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../sysfsutils-2.1.0/cmd/names.c:355:14: warning: pointer targets in returning 'char *' from a function with return type 'unsigned char *' differ in signedness [-Wpointer-sign]
+  355 |       return "<too-large>";
+      |              ^~~~~~~~~~~~~
+/bin/bash ../libtool  --tag=CC   --mode=link arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot -Wall -W -Wstrict-prototypes -Wshadow -Wmissing-prototypes -Wmissing-declarations -Wredundant-decls -Wnested-externs -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot-native=   -Wconversion -Wno-error  -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot-native=  -Wl,-z,relro,-z,now -o systool systool.o names.o ../lib/libsysfs.la 
+libtool: link: arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot -Wall -W -Wstrict-prototypes -Wshadow -Wmissing-prototypes -Wmissing-declarations -Wredundant-decls -Wnested-externs -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot-native= -Wconversion -Wno-error -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot-native= -Wl,-z -Wl,relro -Wl,-z -Wl,now -o .libs/systool systool.o names.o  ../lib/.libs/libsysfs.so
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build/cmd'
+Making all in test
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build/test'
+../../sysfsutils-2.1.0/test/create-test ../../sysfsutils-2.1.0/test/libsysfs.conf
+make  all-am
+make[3]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build/test'
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot -DHAVE_CONFIG_H -I. -I../../sysfsutils-2.1.0/test -I.. -I../../sysfsutils-2.1.0/test/../include   -Wall -W -Wstrict-prototypes  -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot-native=   -Wconversion -Wno-error -c -o dlist_test.o ../../sysfsutils-2.1.0/test/dlist_test.c
+../../sysfsutils-2.1.0/test/dlist_test.c: In function 'main':
+../../sysfsutils-2.1.0/test/dlist_test.c:63:15: warning: unused parameter 'argc' [-Wunused-parameter]
+   63 | int main (int argc,char *argv[])
+      |           ~~~~^~~~
+../../sysfsutils-2.1.0/test/dlist_test.c:63:26: warning: unused parameter 'argv' [-Wunused-parameter]
+   63 | int main (int argc,char *argv[])
+      |                    ~~~~~~^~~~~~
+/bin/bash ../libtool  --tag=CC   --mode=link arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot -Wall -W -Wstrict-prototypes  -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot-native=   -Wconversion -Wno-error  -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot-native=  -Wl,-z,relro,-z,now -o dlist_test dlist_test.o ../lib/libsysfs.la 
+libtool: link: arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot -Wall -W -Wstrict-prototypes -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot-native= -Wconversion -Wno-error -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot-native= -Wl,-z -Wl,relro -Wl,-z -Wl,now -o .libs/dlist_test dlist_test.o  ../lib/.libs/libsysfs.so
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot -DHAVE_CONFIG_H -I. -I../../sysfsutils-2.1.0/test -I.. -I../../sysfsutils-2.1.0/test/../include   -Wall -W -Wstrict-prototypes  -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot-native=   -Wconversion -Wno-error -c -o get_device.o ../../sysfsutils-2.1.0/test/get_device.c
+/bin/bash ../libtool  --tag=CC   --mode=link arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot -Wall -W -Wstrict-prototypes  -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot-native=   -Wconversion -Wno-error  -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot-native=  -Wl,-z,relro,-z,now -o get_device get_device.o ../lib/libsysfs.la 
+libtool: link: arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot -Wall -W -Wstrict-prototypes -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot-native= -Wconversion -Wno-error -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot-native= -Wl,-z -Wl,relro -Wl,-z -Wl,now -o .libs/get_device get_device.o  ../lib/.libs/libsysfs.so
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot -DHAVE_CONFIG_H -I. -I../../sysfsutils-2.1.0/test -I.. -I../../sysfsutils-2.1.0/test/../include   -Wall -W -Wstrict-prototypes  -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot-native=   -Wconversion -Wno-error -c -o get_driver.o ../../sysfsutils-2.1.0/test/get_driver.c
+../../sysfsutils-2.1.0/test/get_driver.c: In function 'main':
+../../sysfsutils-2.1.0/test/get_driver.c:40:33: warning: unused variable 'attr' [-Wunused-variable]
+   40 |         struct sysfs_attribute *attr = NULL;
+      |                                 ^~~~
+/bin/bash ../libtool  --tag=CC   --mode=link arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot -Wall -W -Wstrict-prototypes  -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot-native=   -Wconversion -Wno-error  -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot-native=  -Wl,-z,relro,-z,now -o get_driver get_driver.o ../lib/libsysfs.la 
+libtool: link: arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot -Wall -W -Wstrict-prototypes -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot-native= -Wconversion -Wno-error -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot-native= -Wl,-z -Wl,relro -Wl,-z -Wl,now -o .libs/get_driver get_driver.o  ../lib/.libs/libsysfs.so
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot -DHAVE_CONFIG_H -I. -I../../sysfsutils-2.1.0/test -I.. -I../../sysfsutils-2.1.0/test/../include   -Wall -W -Wstrict-prototypes  -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot-native=   -Wconversion -Wno-error -c -o get_module.o ../../sysfsutils-2.1.0/test/get_module.c
+/bin/bash ../libtool  --tag=CC   --mode=link arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot -Wall -W -Wstrict-prototypes  -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot-native=   -Wconversion -Wno-error  -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot-native=  -Wl,-z,relro,-z,now -o get_module get_module.o ../lib/libsysfs.la 
+libtool: link: arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot -Wall -W -Wstrict-prototypes -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot-native= -Wconversion -Wno-error -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/sysfsutils-2.1.0=/usr/src/debug/sysfsutils/2.1.0-r5 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build=/usr/src/debug/sysfsutils/2.1.0-r5 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/recipe-sysroot-native= -Wl,-z -Wl,relro -Wl,-z -Wl,now -o .libs/get_module get_module.o  ../lib/.libs/libsysfs.so
+make[3]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build/test'
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build/test'
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build'
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sysfsutils/2.1.0-r5/build'
+DEBUG: Shell function do_compile finished

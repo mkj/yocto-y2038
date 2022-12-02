@@ -1,0 +1,94 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are []
+NOTE: Installed into sysroot: []
+NOTE: Skipping as already exists in sysroot: []
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function do_fetch
+DEBUG: Executing python function base_do_fetch
+DEBUG: Running 'export PSEUDO_DISABLED=1; export DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/1000/bus"; export SSH_AUTH_SOCK="/run/user/1000/keyring/ssh"; export PATH="/home/matt/src/openbmc/scripts:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/recipe-sysroot-native/usr/bin/arm-openbmc-linux-gnueabi:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/recipe-sysroot/usr/bin/crossscripts:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/recipe-sysroot-native/usr/sbin:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/recipe-sysroot-native/usr/bin:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/recipe-sysroot-native/sbin:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/procps/3.3.17-r0/recipe-sysroot-native/bin:/home/matt/src/openbmc/poky/bitbake/bin:/home/matt/tmp/build/obmc-y2038/tmp/hosttools"; export HOME="/home/matt"; git -c gc.autoDetach=false -c core.pager=cat branch --contains 19a508ea121c0c4ac6d0224575a036de745eaaf8 --list master 2> /dev/null | wc -l' in /home/matt/tmp/build/obmc-y2038/downloads/git2/gitlab.com.procps-ng.procps.git
+DEBUG: Searching for sysctl.conf in paths:
+    /home/matt/src/openbmc/meta/recipes-extended/procps/procps-3.3.17/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/procps/procps/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/procps/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/procps/procps-3.3.17/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/procps/procps/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/procps/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/procps/procps-3.3.17/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/procps/procps/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/procps/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/procps/procps-3.3.17/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/procps/procps/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/procps/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/procps/procps-3.3.17/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/procps/procps/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/procps/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/procps/procps-3.3.17/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/procps/procps/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/procps/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/procps/procps-3.3.17/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/procps/procps/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/procps/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/procps/procps-3.3.17/arm
+    /home/matt/src/openbmc/meta/recipes-extended/procps/procps/arm
+    /home/matt/src/openbmc/meta/recipes-extended/procps/files/arm
+    /home/matt/src/openbmc/meta/recipes-extended/procps/procps-3.3.17/
+    /home/matt/src/openbmc/meta/recipes-extended/procps/procps/
+    /home/matt/src/openbmc/meta/recipes-extended/procps/files/
+DEBUG: Searching for 0001-w.c-correct-musl-builds.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-extended/procps/procps-3.3.17/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/procps/procps/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/procps/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/procps/procps-3.3.17/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/procps/procps/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/procps/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/procps/procps-3.3.17/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/procps/procps/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/procps/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/procps/procps-3.3.17/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/procps/procps/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/procps/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/procps/procps-3.3.17/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/procps/procps/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/procps/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/procps/procps-3.3.17/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/procps/procps/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/procps/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/procps/procps-3.3.17/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/procps/procps/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/procps/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/procps/procps-3.3.17/arm
+    /home/matt/src/openbmc/meta/recipes-extended/procps/procps/arm
+    /home/matt/src/openbmc/meta/recipes-extended/procps/files/arm
+    /home/matt/src/openbmc/meta/recipes-extended/procps/procps-3.3.17/
+    /home/matt/src/openbmc/meta/recipes-extended/procps/procps/
+    /home/matt/src/openbmc/meta/recipes-extended/procps/files/
+DEBUG: Searching for 0002-proc-escape.c-add-missing-include.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-extended/procps/procps-3.3.17/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/procps/procps/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/procps/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/procps/procps-3.3.17/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/procps/procps/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/procps/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/procps/procps-3.3.17/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/procps/procps/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/procps/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/procps/procps-3.3.17/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/procps/procps/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/procps/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/procps/procps-3.3.17/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/procps/procps/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/procps/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/procps/procps-3.3.17/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/procps/procps/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/procps/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/procps/procps-3.3.17/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/procps/procps/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/procps/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/procps/procps-3.3.17/arm
+    /home/matt/src/openbmc/meta/recipes-extended/procps/procps/arm
+    /home/matt/src/openbmc/meta/recipes-extended/procps/files/arm
+    /home/matt/src/openbmc/meta/recipes-extended/procps/procps-3.3.17/
+    /home/matt/src/openbmc/meta/recipes-extended/procps/procps/
+    /home/matt/src/openbmc/meta/recipes-extended/procps/files/
+DEBUG: Python function base_do_fetch finished
+DEBUG: Python function do_fetch finished

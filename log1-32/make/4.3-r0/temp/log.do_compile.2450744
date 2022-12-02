@@ -1,0 +1,1180 @@
+DEBUG: Executing python function autotools_aclocals
+DEBUG: SITE files ['endian-little', 'bit-32', 'arm-common', 'arm-32', 'common-linux', 'common-glibc', 'arm-linux', 'arm-linux-gnueabi', 'common']
+DEBUG: Python function autotools_aclocals finished
+DEBUG: Executing shell function do_compile
+NOTE: make -j 1
+Making all in lib
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build/lib'
+rm -f alloca.h-t alloca.h && \
+{ echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */'; \
+  sed -e 's|@''HAVE_ALLOCA_H''@|1|g' < ../../make-4.3/lib/alloca.in.h; \
+} > alloca.h-t && \
+mv -f alloca.h-t alloca.h
+rm -f fcntl.h-t fcntl.h && \
+{ echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */'; \
+  sed -e 's|@''GUARD_PREFIX''@|GL|g' \
+      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_FCNTL_H''@|<fcntl.h>|g' \
+      -e 's/@''GNULIB_CREAT''@/0/g' \
+      -e 's/@''GNULIB_FCNTL''@/1/g' \
+      -e 's/@''GNULIB_NONBLOCKING''@/0/g' \
+      -e 's/@''GNULIB_OPEN''@/0/g' \
+      -e 's/@''GNULIB_OPENAT''@/0/g' \
+      -e 's|@''HAVE_FCNTL''@|1|g' \
+      -e 's|@''HAVE_OPENAT''@|1|g' \
+      -e 's|@''REPLACE_CREAT''@|0|g' \
+      -e 's|@''REPLACE_FCNTL''@|1|g' \
+      -e 's|@''REPLACE_OPEN''@|0|g' \
+      -e 's|@''REPLACE_OPENAT''@|0|g' \
+      -e '/definitions of _GL_FUNCDECL_RPL/r ../../make-4.3/lib/c++defs.h' \
+      -e '/definition of _GL_ARG_NONNULL/r ../../make-4.3/lib/arg-nonnull.h' \
+      -e '/definition of _GL_WARN_ON_USE/r ../../make-4.3/lib/warn-on-use.h' \
+      < ../../make-4.3/lib/fcntl.in.h; \
+} > fcntl.h-t && \
+mv fcntl.h-t fcntl.h
+rm -f limits.h-t limits.h && \
+{ echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */' && \
+  sed -e 's|@''GUARD_PREFIX''@|GL|g' \
+      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_LIMITS_H''@|<limits.h>|g' \
+      < ../../make-4.3/lib/limits.in.h; \
+} > limits.h-t && \
+mv limits.h-t limits.h
+rm -f stdio.h-t stdio.h && \
+{ echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */' && \
+  sed -e 's|@''GUARD_PREFIX''@|GL|g' \
+      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_STDIO_H''@|<stdio.h>|g' \
+      -e 's/@''GNULIB_DPRINTF''@/0/g' \
+      -e 's/@''GNULIB_FCLOSE''@/0/g' \
+      -e 's/@''GNULIB_FDOPEN''@/0/g' \
+      -e 's/@''GNULIB_FFLUSH''@/0/g' \
+      -e 's/@''GNULIB_FGETC''@/1/g' \
+      -e 's/@''GNULIB_FGETS''@/1/g' \
+      -e 's/@''GNULIB_FOPEN''@/0/g' \
+      -e 's/@''GNULIB_FPRINTF''@/1/g' \
+      -e 's/@''GNULIB_FPRINTF_POSIX''@/0/g' \
+      -e 's/@''GNULIB_FPURGE''@/0/g' \
+      -e 's/@''GNULIB_FPUTC''@/1/g' \
+      -e 's/@''GNULIB_FPUTS''@/1/g' \
+      -e 's/@''GNULIB_FREAD''@/1/g' \
+      -e 's/@''GNULIB_FREOPEN''@/0/g' \
+      -e 's/@''GNULIB_FSCANF''@/1/g' \
+      -e 's/@''GNULIB_FSEEK''@/0/g' \
+      -e 's/@''GNULIB_FSEEKO''@/0/g' \
+      -e 's/@''GNULIB_FTELL''@/0/g' \
+      -e 's/@''GNULIB_FTELLO''@/0/g' \
+      -e 's/@''GNULIB_FWRITE''@/1/g' \
+      -e 's/@''GNULIB_GETC''@/1/g' \
+      -e 's/@''GNULIB_GETCHAR''@/1/g' \
+      -e 's/@''GNULIB_GETDELIM''@/0/g' \
+      -e 's/@''GNULIB_GETLINE''@/0/g' \
+      -e 's/@''GNULIB_OBSTACK_PRINTF''@/0/g' \
+      -e 's/@''GNULIB_OBSTACK_PRINTF_POSIX''@/0/g' \
+      -e 's/@''GNULIB_PCLOSE''@/0/g' \
+      -e 's/@''GNULIB_PERROR''@/0/g' \
+      -e 's/@''GNULIB_POPEN''@/0/g' \
+      -e 's/@''GNULIB_PRINTF''@/1/g' \
+      -e 's/@''GNULIB_PRINTF_POSIX''@/0/g' \
+      -e 's/@''GNULIB_PUTC''@/1/g' \
+      -e 's/@''GNULIB_PUTCHAR''@/1/g' \
+      -e 's/@''GNULIB_PUTS''@/1/g' \
+      -e 's/@''GNULIB_REMOVE''@/0/g' \
+      -e 's/@''GNULIB_RENAME''@/0/g' \
+      -e 's/@''GNULIB_RENAMEAT''@/0/g' \
+      -e 's/@''GNULIB_SCANF''@/1/g' \
+      -e 's/@''GNULIB_SNPRINTF''@/0/g' \
+      -e 's/@''GNULIB_SPRINTF_POSIX''@/0/g' \
+      -e 's/@''GNULIB_STDIO_H_NONBLOCKING''@/0/g' \
+      -e 's/@''GNULIB_STDIO_H_SIGPIPE''@/0/g' \
+      -e 's/@''GNULIB_TMPFILE''@/0/g' \
+      -e 's/@''GNULIB_VASPRINTF''@/0/g' \
+      -e 's/@''GNULIB_VDPRINTF''@/0/g' \
+      -e 's/@''GNULIB_VFPRINTF''@/1/g' \
+      -e 's/@''GNULIB_VFPRINTF_POSIX''@/0/g' \
+      -e 's/@''GNULIB_VFSCANF''@/0/g' \
+      -e 's/@''GNULIB_VSCANF''@/0/g' \
+      -e 's/@''GNULIB_VPRINTF''@/1/g' \
+      -e 's/@''GNULIB_VPRINTF_POSIX''@/0/g' \
+      -e 's/@''GNULIB_VSNPRINTF''@/0/g' \
+      -e 's/@''GNULIB_VSPRINTF_POSIX''@/0/g' \
+      < ../../make-4.3/lib/stdio.in.h | \
+  sed -e 's|@''HAVE_DECL_FPURGE''@|1|g' \
+      -e 's|@''HAVE_DECL_FSEEKO''@|1|g' \
+      -e 's|@''HAVE_DECL_FTELLO''@|1|g' \
+      -e 's|@''HAVE_DECL_GETDELIM''@|1|g' \
+      -e 's|@''HAVE_DECL_GETLINE''@|1|g' \
+      -e 's|@''HAVE_DECL_OBSTACK_PRINTF''@|1|g' \
+      -e 's|@''HAVE_DECL_SNPRINTF''@|1|g' \
+      -e 's|@''HAVE_DECL_VSNPRINTF''@|1|g' \
+      -e 's|@''HAVE_DPRINTF''@|1|g' \
+      -e 's|@''HAVE_FSEEKO''@|1|g' \
+      -e 's|@''HAVE_FTELLO''@|1|g' \
+      -e 's|@''HAVE_PCLOSE''@|1|g' \
+      -e 's|@''HAVE_POPEN''@|1|g' \
+      -e 's|@''HAVE_RENAMEAT''@|1|g' \
+      -e 's|@''HAVE_VASPRINTF''@|1|g' \
+      -e 's|@''HAVE_VDPRINTF''@|1|g' \
+      -e 's|@''REPLACE_DPRINTF''@|0|g' \
+      -e 's|@''REPLACE_FCLOSE''@|0|g' \
+      -e 's|@''REPLACE_FDOPEN''@|0|g' \
+      -e 's|@''REPLACE_FFLUSH''@|0|g' \
+      -e 's|@''REPLACE_FOPEN''@|0|g' \
+      -e 's|@''REPLACE_FPRINTF''@|0|g' \
+      -e 's|@''REPLACE_FPURGE''@|0|g' \
+      -e 's|@''REPLACE_FREOPEN''@|0|g' \
+      -e 's|@''REPLACE_FSEEK''@|0|g' \
+      -e 's|@''REPLACE_FSEEKO''@|0|g' \
+      -e 's|@''REPLACE_FTELL''@|0|g' \
+      -e 's|@''REPLACE_FTELLO''@|0|g' \
+      -e 's|@''REPLACE_GETDELIM''@|0|g' \
+      -e 's|@''REPLACE_GETLINE''@|0|g' \
+      -e 's|@''REPLACE_OBSTACK_PRINTF''@|0|g' \
+      -e 's|@''REPLACE_PERROR''@|0|g' \
+      -e 's|@''REPLACE_POPEN''@|0|g' \
+      -e 's|@''REPLACE_PRINTF''@|0|g' \
+      -e 's|@''REPLACE_REMOVE''@|0|g' \
+      -e 's|@''REPLACE_RENAME''@|0|g' \
+      -e 's|@''REPLACE_RENAMEAT''@|0|g' \
+      -e 's|@''REPLACE_SNPRINTF''@|0|g' \
+      -e 's|@''REPLACE_SPRINTF''@|0|g' \
+      -e 's|@''REPLACE_STDIO_READ_FUNCS''@|0|g' \
+      -e 's|@''REPLACE_STDIO_WRITE_FUNCS''@|0|g' \
+      -e 's|@''REPLACE_TMPFILE''@|0|g' \
+      -e 's|@''REPLACE_VASPRINTF''@|0|g' \
+      -e 's|@''REPLACE_VDPRINTF''@|0|g' \
+      -e 's|@''REPLACE_VFPRINTF''@|0|g' \
+      -e 's|@''REPLACE_VPRINTF''@|0|g' \
+      -e 's|@''REPLACE_VSNPRINTF''@|0|g' \
+      -e 's|@''REPLACE_VSPRINTF''@|0|g' \
+      -e 's|@''ASM_SYMBOL_PREFIX''@||g' \
+      -e '/definitions of _GL_FUNCDECL_RPL/r ../../make-4.3/lib/c++defs.h' \
+      -e '/definition of _GL_ARG_NONNULL/r ../../make-4.3/lib/arg-nonnull.h' \
+      -e '/definition of _GL_WARN_ON_USE/r ../../make-4.3/lib/warn-on-use.h'; \
+} > stdio.h-t && \
+mv stdio.h-t stdio.h
+rm -f stdlib.h-t stdlib.h && \
+{ echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */' && \
+  sed -e 's|@''GUARD_PREFIX''@|GL|g' \
+      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_STDLIB_H''@|<stdlib.h>|g' \
+      -e 's/@''GNULIB__EXIT''@/0/g' \
+      -e 's/@''GNULIB_ATOLL''@/0/g' \
+      -e 's/@''GNULIB_CALLOC_POSIX''@/0/g' \
+      -e 's/@''GNULIB_CANONICALIZE_FILE_NAME''@/0/g' \
+      -e 's/@''GNULIB_GETLOADAVG''@/1/g' \
+      -e 's/@''GNULIB_GETSUBOPT''@/0/g' \
+      -e 's/@''GNULIB_GRANTPT''@/0/g' \
+      -e 's/@''GNULIB_MALLOC_POSIX''@/1/g' \
+      -e 's/@''GNULIB_MBTOWC''@/0/g' \
+      -e 's/@''GNULIB_MKDTEMP''@/0/g' \
+      -e 's/@''GNULIB_MKOSTEMP''@/0/g' \
+      -e 's/@''GNULIB_MKOSTEMPS''@/0/g' \
+      -e 's/@''GNULIB_MKSTEMP''@/0/g' \
+      -e 's/@''GNULIB_MKSTEMPS''@/0/g' \
+      -e 's/@''GNULIB_POSIX_OPENPT''@/0/g' \
+      -e 's/@''GNULIB_PTSNAME''@/0/g' \
+      -e 's/@''GNULIB_PTSNAME_R''@/0/g' \
+      -e 's/@''GNULIB_PUTENV''@/0/g' \
+      -e 's/@''GNULIB_QSORT_R''@/0/g' \
+      -e 's/@''GNULIB_RANDOM''@/0/g' \
+      -e 's/@''GNULIB_RANDOM_R''@/0/g' \
+      -e 's/@''GNULIB_REALLOC_POSIX''@/0/g' \
+      -e 's/@''GNULIB_REALLOCARRAY''@/0/g' \
+      -e 's/@''GNULIB_REALPATH''@/0/g' \
+      -e 's/@''GNULIB_RPMATCH''@/0/g' \
+      -e 's/@''GNULIB_SECURE_GETENV''@/0/g' \
+      -e 's/@''GNULIB_SETENV''@/0/g' \
+      -e 's/@''GNULIB_STRTOD''@/0/g' \
+      -e 's/@''GNULIB_STRTOLD''@/0/g' \
+      -e 's/@''GNULIB_STRTOLL''@/0/g' \
+      -e 's/@''GNULIB_STRTOULL''@/0/g' \
+      -e 's/@''GNULIB_SYSTEM_POSIX''@/0/g' \
+      -e 's/@''GNULIB_UNLOCKPT''@/0/g' \
+      -e 's/@''GNULIB_UNSETENV''@/0/g' \
+      -e 's/@''GNULIB_WCTOMB''@/0/g' \
+      < ../../make-4.3/lib/stdlib.in.h | \
+  sed -e 's|@''HAVE__EXIT''@|1|g' \
+      -e 's|@''HAVE_ATOLL''@|1|g' \
+      -e 's|@''HAVE_CANONICALIZE_FILE_NAME''@|1|g' \
+      -e 's|@''HAVE_DECL_GETLOADAVG''@|1|g' \
+      -e 's|@''HAVE_GETSUBOPT''@|1|g' \
+      -e 's|@''HAVE_GRANTPT''@|1|g' \
+      -e 's|@''HAVE_INITSTATE''@|1|g' \
+      -e 's|@''HAVE_DECL_INITSTATE''@|1|g' \
+      -e 's|@''HAVE_MBTOWC''@|1|g' \
+      -e 's|@''HAVE_MKDTEMP''@|1|g' \
+      -e 's|@''HAVE_MKOSTEMP''@|1|g' \
+      -e 's|@''HAVE_MKOSTEMPS''@|1|g' \
+      -e 's|@''HAVE_MKSTEMP''@|1|g' \
+      -e 's|@''HAVE_MKSTEMPS''@|1|g' \
+      -e 's|@''HAVE_POSIX_OPENPT''@|1|g' \
+      -e 's|@''HAVE_PTSNAME''@|1|g' \
+      -e 's|@''HAVE_PTSNAME_R''@|1|g' \
+      -e 's|@''HAVE_QSORT_R''@|1|g' \
+      -e 's|@''HAVE_RANDOM''@|1|g' \
+      -e 's|@''HAVE_RANDOM_H''@|1|g' \
+      -e 's|@''HAVE_RANDOM_R''@|1|g' \
+      -e 's|@''HAVE_REALLOCARRAY''@|1|g' \
+      -e 's|@''HAVE_REALPATH''@|1|g' \
+      -e 's|@''HAVE_RPMATCH''@|1|g' \
+      -e 's|@''HAVE_SECURE_GETENV''@|1|g' \
+      -e 's|@''HAVE_DECL_SETENV''@|1|g' \
+      -e 's|@''HAVE_SETSTATE''@|1|g' \
+      -e 's|@''HAVE_DECL_SETSTATE''@|1|g' \
+      -e 's|@''HAVE_STRTOD''@|1|g' \
+      -e 's|@''HAVE_STRTOLD''@|1|g' \
+      -e 's|@''HAVE_STRTOLL''@|1|g' \
+      -e 's|@''HAVE_STRTOULL''@|1|g' \
+      -e 's|@''HAVE_STRUCT_RANDOM_DATA''@|1|g' \
+      -e 's|@''HAVE_SYS_LOADAVG_H''@|0|g' \
+      -e 's|@''HAVE_UNLOCKPT''@|1|g' \
+      -e 's|@''HAVE_DECL_UNSETENV''@|1|g' \
+      -e 's|@''REPLACE_CALLOC''@|0|g' \
+      -e 's|@''REPLACE_CANONICALIZE_FILE_NAME''@|0|g' \
+      -e 's|@''REPLACE_INITSTATE''@|0|g' \
+      -e 's|@''REPLACE_MALLOC''@|0|g' \
+      -e 's|@''REPLACE_MBTOWC''@|0|g' \
+      -e 's|@''REPLACE_MKSTEMP''@|0|g' \
+      -e 's|@''REPLACE_PTSNAME''@|0|g' \
+      -e 's|@''REPLACE_PTSNAME_R''@|0|g' \
+      -e 's|@''REPLACE_PUTENV''@|0|g' \
+      -e 's|@''REPLACE_QSORT_R''@|0|g' \
+      -e 's|@''REPLACE_RANDOM''@|0|g' \
+      -e 's|@''REPLACE_RANDOM_R''@|0|g' \
+      -e 's|@''REPLACE_REALLOC''@|0|g' \
+      -e 's|@''REPLACE_REALPATH''@|0|g' \
+      -e 's|@''REPLACE_SETENV''@|0|g' \
+      -e 's|@''REPLACE_SETSTATE''@|0|g' \
+      -e 's|@''REPLACE_STRTOD''@|0|g' \
+      -e 's|@''REPLACE_STRTOLD''@|0|g' \
+      -e 's|@''REPLACE_UNSETENV''@|0|g' \
+      -e 's|@''REPLACE_WCTOMB''@|0|g' \
+      -e '/definitions of _GL_FUNCDECL_RPL/r ../../make-4.3/lib/c++defs.h' \
+      -e '/definition of _Noreturn/r ../../make-4.3/lib/_Noreturn.h' \
+      -e '/definition of _GL_ARG_NONNULL/r ../../make-4.3/lib/arg-nonnull.h' \
+      -e '/definition of _GL_WARN_ON_USE/r ../../make-4.3/lib/warn-on-use.h'; \
+} > stdlib.h-t && \
+mv stdlib.h-t stdlib.h
+rm -f string.h-t string.h && \
+{ echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */' && \
+  sed -e 's|@''GUARD_PREFIX''@|GL|g' \
+      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_STRING_H''@|<string.h>|g' \
+      -e 's/@''GNULIB_EXPLICIT_BZERO''@/0/g' \
+      -e 's/@''GNULIB_FFSL''@/0/g' \
+      -e 's/@''GNULIB_FFSLL''@/0/g' \
+      -e 's/@''GNULIB_MBSLEN''@/0/g' \
+      -e 's/@''GNULIB_MBSNLEN''@/0/g' \
+      -e 's/@''GNULIB_MBSCHR''@/0/g' \
+      -e 's/@''GNULIB_MBSRCHR''@/0/g' \
+      -e 's/@''GNULIB_MBSSTR''@/0/g' \
+      -e 's/@''GNULIB_MBSCASECMP''@/0/g' \
+      -e 's/@''GNULIB_MBSNCASECMP''@/0/g' \
+      -e 's/@''GNULIB_MBSPCASECMP''@/0/g' \
+      -e 's/@''GNULIB_MBSCASESTR''@/0/g' \
+      -e 's/@''GNULIB_MBSCSPN''@/0/g' \
+      -e 's/@''GNULIB_MBSPBRK''@/0/g' \
+      -e 's/@''GNULIB_MBSSPN''@/0/g' \
+      -e 's/@''GNULIB_MBSSEP''@/0/g' \
+      -e 's/@''GNULIB_MBSTOK_R''@/0/g' \
+      -e 's/@''GNULIB_MEMCHR''@/0/g' \
+      -e 's/@''GNULIB_MEMMEM''@/0/g' \
+      -e 's/@''GNULIB_MEMPCPY''@/0/g' \
+      -e 's/@''GNULIB_MEMRCHR''@/0/g' \
+      -e 's/@''GNULIB_RAWMEMCHR''@/0/g' \
+      -e 's/@''GNULIB_STPCPY''@/1/g' \
+      -e 's/@''GNULIB_STPNCPY''@/0/g' \
+      -e 's/@''GNULIB_STRCHRNUL''@/0/g' \
+      -e 's/@''GNULIB_STRDUP''@/0/g' \
+      -e 's/@''GNULIB_STRNCAT''@/0/g' \
+      -e 's/@''GNULIB_STRNDUP''@/0/g' \
+      -e 's/@''GNULIB_STRNLEN''@/0/g' \
+      -e 's/@''GNULIB_STRPBRK''@/0/g' \
+      -e 's/@''GNULIB_STRSEP''@/0/g' \
+      -e 's/@''GNULIB_STRSTR''@/0/g' \
+      -e 's/@''GNULIB_STRCASESTR''@/0/g' \
+      -e 's/@''GNULIB_STRTOK_R''@/0/g' \
+      -e 's/@''GNULIB_STRERROR''@/1/g' \
+      -e 's/@''GNULIB_STRERROR_R''@/0/g' \
+      -e 's/@''GNULIB_STRSIGNAL''@/0/g' \
+      -e 's/@''GNULIB_STRVERSCMP''@/0/g' \
+      < ../../make-4.3/lib/string.in.h | \
+  sed -e 's|@''HAVE_EXPLICIT_BZERO''@|1|g' \
+      -e 's|@''HAVE_FFSL''@|1|g' \
+      -e 's|@''HAVE_FFSLL''@|1|g' \
+      -e 's|@''HAVE_MBSLEN''@|0|g' \
+      -e 's|@''HAVE_MEMCHR''@|1|g' \
+      -e 's|@''HAVE_DECL_MEMMEM''@|1|g' \
+      -e 's|@''HAVE_MEMPCPY''@|1|g' \
+      -e 's|@''HAVE_DECL_MEMRCHR''@|1|g' \
+      -e 's|@''HAVE_RAWMEMCHR''@|1|g' \
+      -e 's|@''HAVE_STPCPY''@|1|g' \
+      -e 's|@''HAVE_STPNCPY''@|1|g' \
+      -e 's|@''HAVE_STRCHRNUL''@|1|g' \
+      -e 's|@''HAVE_DECL_STRDUP''@|1|g' \
+      -e 's|@''HAVE_DECL_STRNDUP''@|1|g' \
+      -e 's|@''HAVE_DECL_STRNLEN''@|1|g' \
+      -e 's|@''HAVE_STRPBRK''@|1|g' \
+      -e 's|@''HAVE_STRSEP''@|1|g' \
+      -e 's|@''HAVE_STRCASESTR''@|1|g' \
+      -e 's|@''HAVE_DECL_STRTOK_R''@|1|g' \
+      -e 's|@''HAVE_DECL_STRERROR_R''@|1|g' \
+      -e 's|@''HAVE_DECL_STRSIGNAL''@|1|g' \
+      -e 's|@''HAVE_STRVERSCMP''@|1|g' \
+      -e 's|@''REPLACE_MEMCHR''@|0|g' \
+      -e 's|@''REPLACE_MEMMEM''@|0|g' \
+      -e 's|@''REPLACE_STPNCPY''@|0|g' \
+      -e 's|@''REPLACE_STRCHRNUL''@|0|g' \
+      -e 's|@''REPLACE_STRDUP''@|0|g' \
+      -e 's|@''REPLACE_STRNCAT''@|0|g' \
+      -e 's|@''REPLACE_STRNDUP''@|0|g' \
+      -e 's|@''REPLACE_STRNLEN''@|0|g' \
+      -e 's|@''REPLACE_STRSTR''@|0|g' \
+      -e 's|@''REPLACE_STRCASESTR''@|0|g' \
+      -e 's|@''REPLACE_STRTOK_R''@|0|g' \
+      -e 's|@''REPLACE_STRERROR''@|0|g' \
+      -e 's|@''REPLACE_STRERROR_R''@|0|g' \
+      -e 's|@''REPLACE_STRSIGNAL''@|0|g' \
+      -e 's|@''UNDEFINE_STRTOK_R''@|0|g' \
+      -e '/definitions of _GL_FUNCDECL_RPL/r ../../make-4.3/lib/c++defs.h' \
+      -e '/definition of _GL_ARG_NONNULL/r ../../make-4.3/lib/arg-nonnull.h' \
+      -e '/definition of _GL_WARN_ON_USE/r ../../make-4.3/lib/warn-on-use.h'; \
+      < ../../make-4.3/lib/string.in.h; \
+} > string.h-t && \
+mv string.h-t string.h
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/mkdir -p sys
+rm -f sys/types.h-t sys/types.h && \
+{ echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */'; \
+  sed -e 's|@''GUARD_PREFIX''@|GL|g' \
+      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_SYS_TYPES_H''@|<sys/types.h>|g' \
+      -e 's|@''WINDOWS_64_BIT_OFF_T''@|0|g' \
+      -e 's|@''WINDOWS_STAT_INODES''@|0|g' \
+      < ../../make-4.3/lib/sys_types.in.h; \
+} > sys/types.h-t && \
+mv sys/types.h-t sys/types.h
+rm -f unistd.h-t unistd.h && \
+{ echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */'; \
+  sed -e 's|@''GUARD_PREFIX''@|GL|g' \
+      -e 's|@''HAVE_UNISTD_H''@|1|g' \
+      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_UNISTD_H''@|<unistd.h>|g' \
+      -e 's|@''WINDOWS_64_BIT_OFF_T''@|0|g' \
+      -e 's/@''GNULIB_ACCESS''@/1/g' \
+      -e 's/@''GNULIB_CHDIR''@/0/g' \
+      -e 's/@''GNULIB_CHOWN''@/0/g' \
+      -e 's/@''GNULIB_CLOSE''@/1/g' \
+      -e 's/@''GNULIB_COPY_FILE_RANGE''@/0/g' \
+      -e 's/@''GNULIB_DUP''@/0/g' \
+      -e 's/@''GNULIB_DUP2''@/1/g' \
+      -e 's/@''GNULIB_DUP3''@/0/g' \
+      -e 's/@''GNULIB_ENVIRON''@/0/g' \
+      -e 's/@''GNULIB_EUIDACCESS''@/0/g' \
+      -e 's/@''GNULIB_FACCESSAT''@/0/g' \
+      -e 's/@''GNULIB_FCHDIR''@/0/g' \
+      -e 's/@''GNULIB_FCHOWNAT''@/0/g' \
+      -e 's/@''GNULIB_FDATASYNC''@/0/g' \
+      -e 's/@''GNULIB_FSYNC''@/0/g' \
+      -e 's/@''GNULIB_FTRUNCATE''@/0/g' \
+      -e 's/@''GNULIB_GETCWD''@/0/g' \
+      -e 's/@''GNULIB_GETDOMAINNAME''@/0/g' \
+      -e 's/@''GNULIB_GETDTABLESIZE''@/1/g' \
+      -e 's/@''GNULIB_GETGROUPS''@/0/g' \
+      -e 's/@''GNULIB_GETHOSTNAME''@/0/g' \
+      -e 's/@''GNULIB_GETLOGIN''@/0/g' \
+      -e 's/@''GNULIB_GETLOGIN_R''@/0/g' \
+      -e 's/@''GNULIB_GETPAGESIZE''@/0/g' \
+      -e 's/@''GNULIB_GETPASS''@/0/g' \
+      -e 's/@''GNULIB_GETUSERSHELL''@/0/g' \
+      -e 's/@''GNULIB_GROUP_MEMBER''@/0/g' \
+      -e 's/@''GNULIB_ISATTY''@/0/g' \
+      -e 's/@''GNULIB_LCHOWN''@/0/g' \
+      -e 's/@''GNULIB_LINK''@/0/g' \
+      -e 's/@''GNULIB_LINKAT''@/0/g' \
+      -e 's/@''GNULIB_LSEEK''@/0/g' \
+      -e 's/@''GNULIB_PIPE''@/0/g' \
+      -e 's/@''GNULIB_PIPE2''@/0/g' \
+      -e 's/@''GNULIB_PREAD''@/0/g' \
+      -e 's/@''GNULIB_PWRITE''@/0/g' \
+      -e 's/@''GNULIB_READ''@/0/g' \
+      -e 's/@''GNULIB_READLINK''@/0/g' \
+      -e 's/@''GNULIB_READLINKAT''@/0/g' \
+      -e 's/@''GNULIB_RMDIR''@/0/g' \
+      -e 's/@''GNULIB_SETHOSTNAME''@/0/g' \
+      -e 's/@''GNULIB_SLEEP''@/0/g' \
+      -e 's/@''GNULIB_SYMLINK''@/0/g' \
+      -e 's/@''GNULIB_SYMLINKAT''@/0/g' \
+      -e 's/@''GNULIB_TRUNCATE''@/0/g' \
+      -e 's/@''GNULIB_TTYNAME_R''@/0/g' \
+      -e 's/@''GNULIB_UNISTD_H_GETOPT''@/0/g' \
+      -e 's/@''GNULIB_UNISTD_H_NONBLOCKING''@/0/g' \
+      -e 's/@''GNULIB_UNISTD_H_SIGPIPE''@/0/g' \
+      -e 's/@''GNULIB_UNLINK''@/0/g' \
+      -e 's/@''GNULIB_UNLINKAT''@/0/g' \
+      -e 's/@''GNULIB_USLEEP''@/0/g' \
+      -e 's/@''GNULIB_WRITE''@/0/g' \
+      < ../../make-4.3/lib/unistd.in.h | \
+  sed -e 's|@''HAVE_CHOWN''@|1|g' \
+      -e 's|@''HAVE_COPY_FILE_RANGE''@|1|g' \
+      -e 's|@''HAVE_DUP2''@|1|g' \
+      -e 's|@''HAVE_DUP3''@|1|g' \
+      -e 's|@''HAVE_EUIDACCESS''@|1|g' \
+      -e 's|@''HAVE_FACCESSAT''@|1|g' \
+      -e 's|@''HAVE_FCHDIR''@|1|g' \
+      -e 's|@''HAVE_FCHOWNAT''@|1|g' \
+      -e 's|@''HAVE_FDATASYNC''@|1|g' \
+      -e 's|@''HAVE_FSYNC''@|1|g' \
+      -e 's|@''HAVE_FTRUNCATE''@|1|g' \
+      -e 's|@''HAVE_GETDTABLESIZE''@|1|g' \
+      -e 's|@''HAVE_GETGROUPS''@|1|g' \
+      -e 's|@''HAVE_GETHOSTNAME''@|1|g' \
+      -e 's|@''HAVE_GETPAGESIZE''@|1|g' \
+      -e 's|@''HAVE_GETPASS''@|1|g' \
+      -e 's|@''HAVE_GROUP_MEMBER''@|1|g' \
+      -e 's|@''HAVE_LCHOWN''@|1|g' \
+      -e 's|@''HAVE_LINK''@|1|g' \
+      -e 's|@''HAVE_LINKAT''@|1|g' \
+      -e 's|@''HAVE_PIPE''@|1|g' \
+      -e 's|@''HAVE_PIPE2''@|1|g' \
+      -e 's|@''HAVE_PREAD''@|1|g' \
+      -e 's|@''HAVE_PWRITE''@|1|g' \
+      -e 's|@''HAVE_READLINK''@|1|g' \
+      -e 's|@''HAVE_READLINKAT''@|1|g' \
+      -e 's|@''HAVE_SETHOSTNAME''@|1|g' \
+      -e 's|@''HAVE_SLEEP''@|1|g' \
+      -e 's|@''HAVE_SYMLINK''@|1|g' \
+      -e 's|@''HAVE_SYMLINKAT''@|1|g' \
+      -e 's|@''HAVE_UNLINKAT''@|1|g' \
+      -e 's|@''HAVE_USLEEP''@|1|g' \
+      -e 's|@''HAVE_DECL_ENVIRON''@|1|g' \
+      -e 's|@''HAVE_DECL_FCHDIR''@|1|g' \
+      -e 's|@''HAVE_DECL_FDATASYNC''@|1|g' \
+      -e 's|@''HAVE_DECL_GETDOMAINNAME''@|1|g' \
+      -e 's|@''HAVE_DECL_GETLOGIN''@|1|g' \
+      -e 's|@''HAVE_DECL_GETLOGIN_R''@|1|g' \
+      -e 's|@''HAVE_DECL_GETPAGESIZE''@|1|g' \
+      -e 's|@''HAVE_DECL_GETUSERSHELL''@|1|g' \
+      -e 's|@''HAVE_DECL_SETHOSTNAME''@|1|g' \
+      -e 's|@''HAVE_DECL_TRUNCATE''@|1|g' \
+      -e 's|@''HAVE_DECL_TTYNAME_R''@|1|g' \
+      -e 's|@''HAVE_OS_H''@|0|g' \
+      -e 's|@''HAVE_SYS_PARAM_H''@|0|g' \
+  | \
+  sed -e 's|@''REPLACE_ACCESS''@|0|g' \
+      -e 's|@''REPLACE_CHOWN''@|0|g' \
+      -e 's|@''REPLACE_CLOSE''@|0|g' \
+      -e 's|@''REPLACE_DUP''@|0|g' \
+      -e 's|@''REPLACE_DUP2''@|0|g' \
+      -e 's|@''REPLACE_FACCESSAT''@|0|g' \
+      -e 's|@''REPLACE_FCHOWNAT''@|0|g' \
+      -e 's|@''REPLACE_FTRUNCATE''@|0|g' \
+      -e 's|@''REPLACE_GETCWD''@|0|g' \
+      -e 's|@''REPLACE_GETDOMAINNAME''@|0|g' \
+      -e 's|@''REPLACE_GETDTABLESIZE''@|0|g' \
+      -e 's|@''REPLACE_GETLOGIN_R''@|0|g' \
+      -e 's|@''REPLACE_GETGROUPS''@|0|g' \
+      -e 's|@''REPLACE_GETPAGESIZE''@|0|g' \
+      -e 's|@''REPLACE_GETPASS''@|0|g' \
+      -e 's|@''REPLACE_ISATTY''@|0|g' \
+      -e 's|@''REPLACE_LCHOWN''@|0|g' \
+      -e 's|@''REPLACE_LINK''@|0|g' \
+      -e 's|@''REPLACE_LINKAT''@|0|g' \
+      -e 's|@''REPLACE_LSEEK''@|0|g' \
+      -e 's|@''REPLACE_PREAD''@|0|g' \
+      -e 's|@''REPLACE_PWRITE''@|0|g' \
+      -e 's|@''REPLACE_READ''@|0|g' \
+      -e 's|@''REPLACE_READLINK''@|0|g' \
+      -e 's|@''REPLACE_READLINKAT''@|0|g' \
+      -e 's|@''REPLACE_RMDIR''@|0|g' \
+      -e 's|@''REPLACE_SLEEP''@|0|g' \
+      -e 's|@''REPLACE_SYMLINK''@|0|g' \
+      -e 's|@''REPLACE_SYMLINKAT''@|0|g' \
+      -e 's|@''REPLACE_TRUNCATE''@|0|g' \
+      -e 's|@''REPLACE_TTYNAME_R''@|0|g' \
+      -e 's|@''REPLACE_UNLINK''@|0|g' \
+      -e 's|@''REPLACE_UNLINKAT''@|0|g' \
+      -e 's|@''REPLACE_USLEEP''@|0|g' \
+      -e 's|@''REPLACE_WRITE''@|0|g' \
+      -e 's|@''UNISTD_H_HAVE_WINSOCK2_H''@|0|g' \
+      -e 's|@''UNISTD_H_HAVE_WINSOCK2_H_AND_USE_SOCKETS''@|0|g' \
+      -e '/definitions of _GL_FUNCDECL_RPL/r ../../make-4.3/lib/c++defs.h' \
+      -e '/definition of _GL_ARG_NONNULL/r ../../make-4.3/lib/arg-nonnull.h' \
+      -e '/definition of _GL_WARN_ON_USE/r ../../make-4.3/lib/warn-on-use.h'; \
+} > unistd.h-t && \
+mv unistd.h-t unistd.h
+make  all-recursive
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build/lib'
+make[3]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build/lib'
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../../make-4.3/lib -I../src     -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o concat-filename.o ../../make-4.3/lib/concat-filename.c
+../../make-4.3/lib/concat-filename.c: In function 'concatenated_filename':
+../../make-4.3/lib/concat-filename.c:58:47: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+   58 |       result = (char *) malloc (directory_len + need_slash
+      |                                               ^
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../../make-4.3/lib -I../src     -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o dirname-lgpl.o ../../make-4.3/lib/dirname-lgpl.c
+../../make-4.3/lib/dirname-lgpl.c: In function 'dir_len':
+../../make-4.3/lib/dirname-lgpl.c:48:17: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+   48 |   for (length = last_component (file) - file;
+      |                 ^~~~~~~~~~~~~~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../../make-4.3/lib -I../src     -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o basename-lgpl.o ../../make-4.3/lib/basename-lgpl.c
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../../make-4.3/lib -I../src     -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o stripslash.o ../../make-4.3/lib/stripslash.c
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../../make-4.3/lib -I../src     -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o exitfail.o ../../make-4.3/lib/exitfail.c
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../../make-4.3/lib -I../src     -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o fd-hook.o ../../make-4.3/lib/fd-hook.c
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../../make-4.3/lib -I../src     -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o findprog-in.o ../../make-4.3/lib/findprog-in.c
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../../make-4.3/lib -I../src     -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o getprogname.o ../../make-4.3/lib/getprogname.c
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../../make-4.3/lib -I../src     -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o unistd.o ../../make-4.3/lib/unistd.c
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../../make-4.3/lib -I../src     -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o xmalloc.o ../../make-4.3/lib/xmalloc.c
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../../make-4.3/lib -I../src     -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o xalloc-die.o ../../make-4.3/lib/xalloc-die.c
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../../make-4.3/lib -I../src     -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o xconcat-filename.o ../../make-4.3/lib/xconcat-filename.c
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot -DHAVE_CONFIG_H -I. -I../../make-4.3/lib -I../src     -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o fcntl.o ../../make-4.3/lib/fcntl.c
+rm -f libgnu.a
+arm-openbmc-linux-gnueabi-gcc-ar cr libgnu.a concat-filename.o dirname-lgpl.o basename-lgpl.o stripslash.o exitfail.o fd-hook.o findprog-in.o getprogname.o  unistd.o xmalloc.o xalloc-die.o xconcat-filename.o fcntl.o 
+arm-openbmc-linux-gnueabi-gcc-ranlib libgnu.a
+make[3]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build/lib'
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build/lib'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build/lib'
+Making all in po
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build/po'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build/po'
+Making all in doc
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build/doc'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build/doc'
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build'
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot -DHAVE_CONFIG_H   -Isrc -I../make-4.3/src -Ilib -I../make-4.3/lib -DLIBDIR=\"/usr/lib\" -DINCLUDEDIR=\"/usr/include\" -DLOCALEDIR=\"/usr/share/locale\"    -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o src/ar.o ../make-4.3/src/ar.c
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot -DHAVE_CONFIG_H   -Isrc -I../make-4.3/src -Ilib -I../make-4.3/lib -DLIBDIR=\"/usr/lib\" -DINCLUDEDIR=\"/usr/include\" -DLOCALEDIR=\"/usr/share/locale\"    -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o src/arscan.o ../make-4.3/src/arscan.c
+../make-4.3/src/arscan.c: In function 'ar_scan':
+../make-4.3/src/arscan.c:679:26: warning: conversion to 'int' from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  679 |               name_len = strlen (name);
+      |                          ^~~~~~
+../make-4.3/src/arscan.c:693:39: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  693 |               name = alloca (name_len + 1);
+      |                              ~~~~~~~~~^~~
+../make-4.3/src/arscan.c:694:44: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  694 |               nread = readbuf (desc, name, name_len);
+      |                                            ^~~~~~~~
+../make-4.3/src/arscan.c:715:38: warning: conversion to 'long unsigned int' from 'long int' may change the sign of the result [-Wsign-conversion]
+  715 |                        member_offset + AR_HDR_SIZE, eltsize,
+      |                                      ^
+../make-4.3/src/arscan.c:715:38: warning: conversion to 'long int' from 'long unsigned int' may change the sign of the result [-Wsign-conversion]
+  715 |                        member_offset + AR_HDR_SIZE, eltsize,
+      |                                      ^
+../make-4.3/src/arscan.c:761:39: warning: conversion to 'unsigned int' from 'long int' may change the sign of the result [-Wsign-conversion]
+  761 |             namemap = alloca (eltsize + 1);
+      |                               ~~~~~~~~^~~
+../make-4.3/src/arscan.c:762:45: warning: conversion to 'size_t' {aka 'unsigned int'} from 'long int' may change the sign of the result [-Wsign-conversion]
+  762 |             nread = readbuf (desc, namemap, eltsize);
+      |                                             ^~~~~~~
+../make-4.3/src/arscan.c:785:38: warning: conversion to 'long unsigned int' from 'long int' may change the sign of the result [-Wsign-conversion]
+  785 |         member_offset += AR_HDR_SIZE + eltsize;
+      |                                      ^
+../make-4.3/src/arscan.c:785:23: warning: conversion to 'long unsigned int' from 'long int' may change the sign of the result [-Wsign-conversion]
+  785 |         member_offset += AR_HDR_SIZE + eltsize;
+      |                       ^~
+../make-4.3/src/arscan.c:376:25: warning: conversion to 'long int' from 'long unsigned int' may change the sign of the result [-Wsign-conversion]
+  376 | # define   AR_HDR_SIZE  (sizeof (struct ar_hdr))
+      |                         ^
+../make-4.3/src/arscan.c:785:26: note: in expansion of macro 'AR_HDR_SIZE'
+  785 |         member_offset += AR_HDR_SIZE + eltsize;
+      |                          ^~~~~~~~~~~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot -DHAVE_CONFIG_H   -Isrc -I../make-4.3/src -Ilib -I../make-4.3/lib -DLIBDIR=\"/usr/lib\" -DINCLUDEDIR=\"/usr/include\" -DLOCALEDIR=\"/usr/share/locale\"    -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o src/commands.o ../make-4.3/src/commands.c
+../make-4.3/src/commands.c: In function 'set_file_variables':
+../make-4.3/src/commands.c:80:35: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+   80 |       p = alloca (cp - file->name + 1);
+      |                   ~~~~~~~~~~~~~~~~^~~
+../make-4.3/src/commands.c:81:33: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+   81 |       memcpy (p, file->name, cp - file->name);
+      |                              ~~~^~~~~~~~~~~~
+../make-4.3/src/commands.c: In function 'chop_commands':
+../make-4.3/src/commands.c:436:28: warning: conversion from 'int' to 'unsigned char:1' may change value [-Wconversion]
+  436 |       cmds->any_recurse |= flags & COMMANDS_RECURSE ? 1 : 0;
+      |                            ^~~~~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot -DHAVE_CONFIG_H   -Isrc -I../make-4.3/src -Ilib -I../make-4.3/lib -DLIBDIR=\"/usr/lib\" -DINCLUDEDIR=\"/usr/include\" -DLOCALEDIR=\"/usr/share/locale\"    -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o src/default.o ../make-4.3/src/default.c
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot -DHAVE_CONFIG_H   -Isrc -I../make-4.3/src -Ilib -I../make-4.3/lib -DLIBDIR=\"/usr/lib\" -DINCLUDEDIR=\"/usr/include\" -DLOCALEDIR=\"/usr/share/locale\"    -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o src/dir.o ../make-4.3/src/dir.c
+../make-4.3/src/dir.c: In function 'find_directory':
+../make-4.3/src/dir.c:473:45: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  473 |       dir->name = strcache_add_len (name, p - name);
+      |                                           ~~^~~~~~
+../make-4.3/src/dir.c: In function 'file_exists_p':
+../make-4.3/src/dir.c:840:33: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  840 |       p = alloca (dirend - name + 1);
+      |                   ~~~~~~~~~~~~~~^~~
+../make-4.3/src/dir.c:841:31: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  841 |       memcpy (p, name, dirend - name);
+      |                        ~~~~~~~^~~~~~
+../make-4.3/src/dir.c: In function 'file_impossible':
+../make-4.3/src/dir.c:916:35: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  916 |           cp = alloca (dirend - p + 1);
+      |                        ~~~~~~~~~~~^~~
+../make-4.3/src/dir.c:917:33: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  917 |           memcpy (cp, p, dirend - p);
+      |                          ~~~~~~~^~~
+../make-4.3/src/dir.c: In function 'file_impossible_p':
+../make-4.3/src/dir.c:1014:42: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 1014 |           cp = alloca (dirend - filename + 1);
+      |                        ~~~~~~~~~~~~~~~~~~^~~
+../make-4.3/src/dir.c:1015:40: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 1015 |           memcpy (cp, filename, dirend - filename);
+      |                                 ~~~~~~~^~~~~~~~~~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot -DHAVE_CONFIG_H   -Isrc -I../make-4.3/src -Ilib -I../make-4.3/lib -DLIBDIR=\"/usr/lib\" -DINCLUDEDIR=\"/usr/include\" -DLOCALEDIR=\"/usr/share/locale\"    -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o src/expand.o ../make-4.3/src/expand.c
+../make-4.3/src/expand.c: In function 'variable_buffer_output':
+../make-4.3/src/expand.c:58:26: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+   58 |   size_t newlen = length + (ptr - variable_buffer);
+      |                          ^
+../make-4.3/src/expand.c:62:23: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+   62 |       size_t offset = ptr - variable_buffer;
+      |                       ^~~
+../make-4.3/src/expand.c: In function 'variable_expand_string':
+../make-4.3/src/expand.c:205:17: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  205 |   line_offset = line - variable_buffer;
+      |                 ^~~~
+../make-4.3/src/expand.c:323:53: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  323 |                     v = lookup_variable (beg, colon - beg);
+      |                                               ~~~~~~^~~~~
+In file included from ../make-4.3/src/expand.c:24:
+../make-4.3/src/expand.c:325:50: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  325 |                       warn_undefined (beg, colon - beg);
+../make-4.3/src/variable.h:228:55: note: in definition of macro 'warn_undefined'
+  228 |                                 error (reading_file, (l),               \
+      |                                                       ^
+../make-4.3/src/expand.c:339:65: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  339 |                         pattern = alloca (subst_end - subst_beg + 2);
+      |                                           ~~~~~~~~~~~~~~~~~~~~~~^~~
+../make-4.3/src/expand.c:341:63: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  341 |                         memcpy (pattern, subst_beg, subst_end - subst_beg);
+      |                                                     ~~~~~~~~~~^~~~~~~~~~~
+../make-4.3/src/expand.c:344:69: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  344 |                         replace = alloca (replace_end - replace_beg + 2);
+      |                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+../make-4.3/src/expand.c:347:44: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  347 |                                replace_end - replace_beg);
+      |                                ~~~~~~~~~~~~^~~~~~~~~~~~~
+../make-4.3/src/expand.c:380:53: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  380 |                 o = reference_variable (o, beg, end - beg);
+      |                                                 ~~~~^~~~~
+../make-4.3/src/expand.c: In function 'expand_argument':
+../make-4.3/src/expand.c:439:38: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  439 |     tmp = alloc = xmalloc (end - str + 1);
+      |                            ~~~~~~~~~~^~~
+../make-4.3/src/expand.c:441:29: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  441 |     tmp = alloca (end - str + 1);
+      |                   ~~~~~~~~~~^~~
+../make-4.3/src/expand.c:443:25: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  443 |   memcpy (tmp, str, end - str);
+      |                     ~~~~^~~~~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot -DHAVE_CONFIG_H   -Isrc -I../make-4.3/src -Ilib -I../make-4.3/lib -DLIBDIR=\"/usr/lib\" -DINCLUDEDIR=\"/usr/include\" -DLOCALEDIR=\"/usr/share/locale\"    -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o src/file.o ../make-4.3/src/file.c
+../make-4.3/src/file.c: In function 'enter_prereqs':
+../make-4.3/src/file.c:528:54: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  528 |               dp->name = strcache_add_len (buffer, o - buffer);
+      |                                                    ~~^~~~~~~~
+../make-4.3/src/file.c: In function 'file_timestamp_cons':
+../make-4.3/src/file.c:864:22: warning: conversion to 'uintmax_t' {aka 'long long unsigned int'} from 'time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+  864 |   FILE_TIMESTAMP s = stamp;
+      |                      ^~~~~
+../make-4.3/src/file.c:866:31: warning: conversion to 'uintmax_t' {aka 'long long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  866 |   FILE_TIMESTAMP ts = product + offset;
+      |                               ^
+In file included from ../make-4.3/src/file.c:21:
+../make-4.3/src/file.c: In function 'file_timestamp_sprintf':
+../make-4.3/src/filedef.h:149:30: warning: conversion from 'uintmax_t' {aka 'long long unsigned int'} to 'time_t' {aka 'long int'} may change value [-Wconversion]
+  149 | #define FILE_TIMESTAMP_S(ts) (((ts) - ORDINARY_MTIME_MIN) \
+      |                              ^
+../make-4.3/src/file.c:937:14: note: in expansion of macro 'FILE_TIMESTAMP_S'
+  937 |   time_t t = FILE_TIMESTAMP_S (ts);
+      |              ^~~~~~~~~~~~~~~~
+../make-4.3/src/file.c: In function 'build_target_list':
+../make-4.3/src/file.c:1177:30: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 1177 |                 size_t off = p - value;
+      |                              ^
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot -DHAVE_CONFIG_H   -Isrc -I../make-4.3/src -Ilib -I../make-4.3/lib -DLIBDIR=\"/usr/lib\" -DINCLUDEDIR=\"/usr/include\" -DLOCALEDIR=\"/usr/share/locale\"    -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o src/function.o ../make-4.3/src/function.c
+../make-4.3/src/function.c: In function 'subst_expand':
+../make-4.3/src/function.c:114:45: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  114 |         o = variable_buffer_output (o, t, p - t);
+      |                                           ~~^~~
+../make-4.3/src/function.c: In function 'patsubst_expand_pat':
+../make-4.3/src/function.c:161:32: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  161 |       replace_prepercent_len = replace_percent - replace - 1;
+      |                                ^~~~~~~~~~~~~~~
+../make-4.3/src/function.c:177:28: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  177 |   pattern_prepercent_len = pattern_percent - pattern - 1;
+      |                            ^~~~~~~~~~~~~~~
+../make-4.3/src/function.c: In function 'pattern_matches':
+../make-4.3/src/function.c:310:39: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  310 |   if (strlength < (percent - pattern) + sfxlen
+      |                                       ^
+In file included from ../make-4.3/src/function.c:17:
+../make-4.3/src/function.c:311:41: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  311 |       || !strneq (pattern, str, percent - pattern))
+../make-4.3/src/makeint.h:331:46: note: in definition of macro 'strneq'
+  331 | #define strneq(a, b, l) (strncmp ((a), (b), (l)) == 0)
+      |                                              ^
+../make-4.3/src/function.c: In function 'func_notdir_suffix':
+../make-4.3/src/function.c:557:49: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  557 |           o = variable_buffer_output (o, p, len - (p - p2));
+      |                                                 ^
+../make-4.3/src/function.c: In function 'func_basename_dir':
+../make-4.3/src/function.c:623:48: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  623 |         o = variable_buffer_output (o, p2, ++p - p2);
+      |                                            ~~~~^~~~
+../make-4.3/src/function.c:625:46: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  625 |         o = variable_buffer_output (o, p2, p - p2);
+      |                                            ~~^~~~
+../make-4.3/src/function.c: In function 'func_word':
+../make-4.3/src/function.c:807:45: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  807 |     o = variable_buffer_output (o, p, end_p - p);
+      |                                       ~~~~~~^~~
+../make-4.3/src/function.c: In function 'func_wordlist':
+../make-4.3/src/function.c:846:51: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  846 |           o = variable_buffer_output (o, p, end_p - p);
+      |                                             ~~~~~~^~~
+../make-4.3/src/function.c: In function 'a_word_hash_cmp':
+../make-4.3/src/function.c:935:58: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  935 |   int result = (int) ((struct a_word const *) x)->length - ((struct a_word const *) y)->length;
+      |                                                          ^
+../make-4.3/src/function.c:935:16: warning: conversion to 'int' from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  935 |   int result = (int) ((struct a_word const *) x)->length - ((struct a_word const *) y)->length;
+      |                ^
+../make-4.3/src/function.c: In function 'func_filter_filterout':
+../make-4.3/src/function.c:1022:33: warning: conversion to 'long unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 1022 |       hash_init (&a_word_table, words, a_word_hash_1, a_word_hash_2,
+      |                                 ^~~~~
+../make-4.3/src/function.c: In function 'func_strip':
+../make-4.3/src/function.c:1098:50: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 1098 |       o = variable_buffer_output (o, word_start, i);
+      |                                                  ^
+../make-4.3/src/function.c: In function 'func_sort':
+../make-4.3/src/function.c:1182:45: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 1182 |   words = xmalloc ((wordi == 0 ? 1 : wordi) * sizeof (char *));
+      |                                             ^
+../make-4.3/src/function.c:1199:21: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 1199 |       qsort (words, wordi, sizeof (char *), alpha_compare);
+      |                     ^~~~~
+../make-4.3/src/function.c: In function 'fold_newlines':
+../make-4.3/src/function.c:1458:13: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 1458 |   *length = last_nonnl - buffer;
+      |             ^~~~~~~~~~
+../make-4.3/src/function.c: In function 'func_shell_base':
+../make-4.3/src/function.c:1825:21: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 1825 |     for (i = 0; ; i += cc)
+      |                     ^~
+../make-4.3/src/function.c: In function 'abspath':
+../make-4.3/src/function.c:2116:13: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 2116 |       len = end - start;
+      |             ^~~
+../make-4.3/src/function.c: In function 'expand_builtin_function':
+../make-4.3/src/function.c:2425:52: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 2425 |   p = entry_p->fptr.alloc_func_ptr (entry_p->name, argc, argv);
+      |                                                    ^~~~
+../make-4.3/src/function.c: In function 'handle_function':
+../make-4.3/src/function.c:2489:42: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 2489 |   argvp = argv = alloca (sizeof (char *) * (nargs + 2));
+      |                                          ^
+../make-4.3/src/function.c:2518:20: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 2518 |       size_t len = end - beg;
+      |                    ^~~
+../make-4.3/src/function.c: In function 'define_new_function':
+../make-4.3/src/function.c:2664:9: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 2664 |   len = e - name;
+      |         ^
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot -DHAVE_CONFIG_H   -Isrc -I../make-4.3/src -Ilib -I../make-4.3/lib -DLIBDIR=\"/usr/lib\" -DINCLUDEDIR=\"/usr/include\" -DLOCALEDIR=\"/usr/share/locale\"    -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o src/getopt.o ../make-4.3/src/getopt.c
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot -DHAVE_CONFIG_H   -Isrc -I../make-4.3/src -Ilib -I../make-4.3/lib -DLIBDIR=\"/usr/lib\" -DINCLUDEDIR=\"/usr/include\" -DLOCALEDIR=\"/usr/share/locale\"    -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o src/getopt1.o ../make-4.3/src/getopt1.c
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot -DHAVE_CONFIG_H   -Isrc -I../make-4.3/src -Ilib -I../make-4.3/lib -DLIBDIR=\"/usr/lib\" -DINCLUDEDIR=\"/usr/include\" -DLOCALEDIR=\"/usr/share/locale\"    -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o src/guile.o ../make-4.3/src/guile.c
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot -DHAVE_CONFIG_H   -Isrc -I../make-4.3/src -Ilib -I../make-4.3/lib -DLIBDIR=\"/usr/lib\" -DINCLUDEDIR=\"/usr/include\" -DLOCALEDIR=\"/usr/share/locale\"    -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o src/hash.o ../make-4.3/src/hash.c
+../make-4.3/src/hash.c: In function 'jhash':
+../make-4.3/src/hash.c:374:29: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  374 |   a = b = c = JHASH_INITVAL + length;
+      |                             ^
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot -DHAVE_CONFIG_H   -Isrc -I../make-4.3/src -Ilib -I../make-4.3/lib -DLIBDIR=\"/usr/lib\" -DINCLUDEDIR=\"/usr/include\" -DLOCALEDIR=\"/usr/share/locale\"    -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o src/implicit.o ../make-4.3/src/implicit.c
+../make-4.3/src/implicit.c: In function 'get_next_word':
+../make-4.3/src/implicit.c:139:15: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  139 |     *length = p - beg;
+      |               ^
+../make-4.3/src/implicit.c: In function 'pattern_search':
+../make-4.3/src/implicit.c:292:13: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  292 |   pathlen = lastslash ? lastslash - filename + 1 : 0;
+      |             ^~~~~~~~~
+In file included from ../make-4.3/src/implicit.c:17:
+../make-4.3/src/implicit.c:369:71: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  369 |                   && !strneq (target, lastslash + 1, stem - lastslash - 1))
+../make-4.3/src/makeint.h:331:46: note: in definition of macro 'strneq'
+  331 | #define strneq(a, b, l) (strncmp ((a), (b), (l)) == 0)
+      |                                              ^
+../make-4.3/src/implicit.c:373:55: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  373 |                    && !strneq (target, filename, stem - filename))
+../make-4.3/src/makeint.h:331:46: note: in definition of macro 'strneq'
+  331 | #define strneq(a, b, l) (strncmp ((a), (b), (l)) == 0)
+      |                                              ^
+../make-4.3/src/implicit.c:554:42: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  554 |                       memcpy (o, nptr, p - nptr);
+      |                                        ~~^~~~~~
+../make-4.3/src/implicit.c:621:34: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  621 |                       size_t i = p - nptr;
+      |                                  ^
+../make-4.3/src/implicit.c:695:30: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  695 |                   size_t l = pat - deplist;
+      |                              ^~~
+../make-4.3/src/implicit.c:989:58: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  989 |                   rule->suffixes[ri] - rule->targets[ri] - 1);
+      |                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+../make-4.3/src/implicit.c:994:34: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  994 |                   rule->lens[ri] - (rule->suffixes[ri] - rule->targets[ri])+1);
+      |                                  ^
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot -DHAVE_CONFIG_H   -Isrc -I../make-4.3/src -Ilib -I../make-4.3/lib -DLIBDIR=\"/usr/lib\" -DINCLUDEDIR=\"/usr/include\" -DLOCALEDIR=\"/usr/share/locale\"    -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o src/job.o ../make-4.3/src/job.c
+../make-4.3/src/job.c: In function 'reap_children':
+../make-4.3/src/job.c:1020:31: warning: conversion from 'int' to 'unsigned char:1' may change value [-Wconversion]
+ 1020 |                   c->remote = start_remote_job_p (0);
+      |                               ^~~~~~~~~~~~~~~~~~
+../make-4.3/src/job.c: In function 'start_job_command':
+../make-4.3/src/job.c:1435:27: warning: conversion from 'int' to 'unsigned char:1' may change value [-Wconversion]
+ 1435 |           child->remote = is_remote;
+      |                           ^~~~~~~~~
+../make-4.3/src/job.c: In function 'start_waiting_job':
+../make-4.3/src/job.c:1614:15: warning: conversion from 'int' to 'unsigned char:1' may change value [-Wconversion]
+ 1614 |   c->remote = start_remote_job_p (1);
+      |               ^~~~~~~~~~~~~~~~~~
+../make-4.3/src/job.c: In function 'new_job':
+../make-4.3/src/job.c:1735:35: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 1735 |             memmove (out, in, ref - in);
+      |                               ~~~~^~~~
+../make-4.3/src/job.c:1870:21: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+ 1870 |         got_token = jobserver_acquire (waiting_jobs != NULL);
+      |                     ^~~~~~~~~~~~~~~~~
+In file included from ../make-4.3/src/job.c:17:
+../make-4.3/src/job.c: In function 'load_too_high':
+../make-4.3/src/job.c:2054:21: warning: conversion from '__off64_t' {aka 'long long int'} to 'int' may change value [-Wconversion]
+ 2054 |       EINTRLOOP (r, lseek (proc_fd, 0, SEEK_SET));
+      |                     ^~~~~
+../make-4.3/src/makeint.h:798:41: note: in definition of macro 'EINTRLOOP'
+  798 | #define EINTRLOOP(_v,_c)   while (((_v)=_c)==-1 && errno==EINTR)
+      |                                         ^~
+../make-4.3/src/job.c: In function 'exec_command':
+../make-4.3/src/job.c:2590:43: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 2590 |         new_argv = alloca ((1 + argc + 1) * sizeof (char *));
+      |                                           ^
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot -DHAVE_CONFIG_H   -Isrc -I../make-4.3/src -Ilib -I../make-4.3/lib -DLIBDIR=\"/usr/lib\" -DINCLUDEDIR=\"/usr/include\" -DLOCALEDIR=\"/usr/share/locale\"    -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o src/load.o ../make-4.3/src/load.c
+../make-4.3/src/load.c: In function 'load_file':
+../make-4.3/src/load.c:145:22: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  145 |           size_t l = fp - *ldname;;
+      |                      ^~
+../make-4.3/src/load.c:159:35: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  159 |           memcpy (symname, fp, ep - fp);
+      |                                ~~~^~~~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot -DHAVE_CONFIG_H   -Isrc -I../make-4.3/src -Ilib -I../make-4.3/lib -DLIBDIR=\"/usr/lib\" -DINCLUDEDIR=\"/usr/include\" -DLOCALEDIR=\"/usr/share/locale\"    -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o src/loadapi.o ../make-4.3/src/loadapi.c
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot -DHAVE_CONFIG_H   -Isrc -I../make-4.3/src -Ilib -I../make-4.3/lib -DLIBDIR=\"/usr/lib\" -DINCLUDEDIR=\"/usr/include\" -DLOCALEDIR=\"/usr/share/locale\"    -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o src/main.o ../make-4.3/src/main.c
+../make-4.3/src/main.c: In function 'main':
+../make-4.3/src/main.c:1382:15: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 1382 |         len = ep++ - envp[i];
+      |               ^~
+../make-4.3/src/main.c:1511:23: warning: conversion from 'unsigned int' to 'unsigned char:1' may change value [-Wconversion]
+ 1511 |   make_sync.syncout = syncing;
+      |                       ^~~~~~~
+../make-4.3/src/main.c:2018:25: warning: conversion from 'unsigned int' to 'unsigned char:1' may change value [-Wconversion]
+ 2018 |     make_sync.syncout = syncing;
+      |                         ^~~~~~~
+../make-4.3/src/main.c:2058:17: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 2058 |     job_slots = arg_job_slots;
+      |                 ^~~~~~~~~~~~~
+../make-4.3/src/main.c:2082:51: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+ 2082 |   if (job_slots > 1 && jobserver_setup (job_slots - 1))
+      |                                         ~~~~~~~~~~^~~
+../make-4.3/src/main.c:2372:46: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 2372 |               void *m = xmalloc ((nargc + 2) * sizeof (char *));
+      |                                              ^
+../make-4.3/src/main.c:2374:41: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 2374 |               memcpy (aargv, argv, argc * sizeof (char *));
+      |                                         ^
+../make-4.3/src/main.c: In function 'decode_switches':
+../make-4.3/src/main.c:2970:59: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 2970 |                         *(unsigned int *) cs->value_ptr = i;
+      |                                                           ^
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot -DHAVE_CONFIG_H   -Isrc -I../make-4.3/src -Ilib -I../make-4.3/lib -DLIBDIR=\"/usr/lib\" -DINCLUDEDIR=\"/usr/include\" -DLOCALEDIR=\"/usr/share/locale\"    -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o src/misc.o ../make-4.3/src/misc.c
+../make-4.3/src/misc.c: In function 'collapse_continuations':
+../make-4.3/src/misc.c:85:25: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+   85 |       out_line_length = (p - in) + i - i/2;
+      |                         ^
+../make-4.3/src/misc.c: In function 'find_next_token':
+../make-4.3/src/misc.c:338:18: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  338 |     *lengthptr = *ptr - p;
+      |                  ^
+../make-4.3/src/misc.c: In function 'writebuf':
+../make-4.3/src/misc.c:358:9: warning: conversion to 'size_t' {aka 'unsigned int'} from 'ssize_t' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  358 |       l -= r;
+      |         ^~
+../make-4.3/src/misc.c: In function 'readbuf':
+../make-4.3/src/misc.c:382:11: warning: conversion to 'size_t' {aka 'unsigned int'} from 'ssize_t' {aka 'int'} may change the sign of the result [-Wsign-conversion]
+  382 |       len -= r;
+      |           ^~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot -DHAVE_CONFIG_H   -Isrc -I../make-4.3/src -Ilib -I../make-4.3/lib -DLIBDIR=\"/usr/lib\" -DINCLUDEDIR=\"/usr/include\" -DLOCALEDIR=\"/usr/share/locale\"    -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o src/output.o ../make-4.3/src/output.c
+In file included from ../make-4.3/src/output.c:17:
+../make-4.3/src/output.c: In function '_outputs':
+../make-4.3/src/output.c:71:21: warning: conversion from '__off64_t' {aka 'long long int'} to 'int' may change value [-Wconversion]
+   71 |       EINTRLOOP (r, lseek (fd, 0, SEEK_END));
+      |                     ^~~~~
+../make-4.3/src/makeint.h:798:41: note: in definition of macro 'EINTRLOOP'
+  798 | #define EINTRLOOP(_v,_c)   while (((_v)=_c)==-1 && errno==EINTR)
+      |                                         ^~
+../make-4.3/src/output.c: In function 'pump_from_tmp':
+../make-4.3/src/output.c:238:27: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  238 |       if (fwrite (buffer, len, 1, to) < 1)
+      |                           ^~~
+../make-4.3/src/output.c: In function 'output_start':
+../make-4.3/src/output.c:521:22: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  521 |       stdio_traced = log_working_directory (1);
+      |                      ^~~~~~~~~~~~~~~~~~~~~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot -DHAVE_CONFIG_H   -Isrc -I../make-4.3/src -Ilib -I../make-4.3/lib -DLIBDIR=\"/usr/lib\" -DINCLUDEDIR=\"/usr/include\" -DLOCALEDIR=\"/usr/share/locale\"    -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o src/read.o ../make-4.3/src/read.c
+../make-4.3/src/read.c: In function 'eval_makefile':
+../make-4.3/src/read.c:404:17: warning: conversion from 'short unsigned int' to 'unsigned char' may change value [-Wconversion]
+  404 |   deps->flags = flags;
+      |                 ^~~~~
+../make-4.3/src/read.c: In function 'parse_var_assignment':
+../make-4.3/src/read.c:525:14: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  525 |       wlen = p2 - p;
+      |              ^~
+../make-4.3/src/read.c: In function 'eval':
+../make-4.3/src/read.c:636:25: warning: conversion to 'long unsigned int' from 'long int' may change the sign of the result [-Wsign-conversion]
+  636 |       ebuf->floc.lineno += nlines;
+      |                         ^~
+../make-4.3/src/read.c:768:14: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  768 |       wlen = p2 - p;
+      |              ^~
+../make-4.3/src/read.c:1065:37: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 1065 |                     size_t p2_off = p2 - variable_buffer;
+      |                                     ^~
+../make-4.3/src/read.c:1066:38: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 1066 |                     size_t cmd_off = cmdleft - variable_buffer;
+      |                                      ^~~~~~~
+../make-4.3/src/read.c:1179:24: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 1179 |             size_t l = p2 - variable_buffer;
+      |                        ^~
+../make-4.3/src/read.c:1192:28: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 1192 |                 size_t l = p2 - variable_buffer;
+      |                            ^~
+../make-4.3/src/read.c:1219:24: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 1219 |             size_t l = p2 - variable_buffer;
+      |                        ^~
+../make-4.3/src/read.c:1302:45: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 1302 |           depstr = xstrndup (beg, end - beg + 1);
+      |                                   ~~~~~~~~~~^~~
+In file included from ../make-4.3/src/read.c:26:
+../make-4.3/src/read.c: In function 'do_undefine':
+../make-4.3/src/read.c:1449:44: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 1449 |   undefine_variable_global (name, p - name + 1, origin);
+../make-4.3/src/variable.h:222:41: note: in definition of macro 'undefine_variable_global'
+  222 |           undefine_variable_in_set((n),(l),(o),NULL)
+      |                                         ^
+../make-4.3/src/read.c: In function 'do_define':
+../make-4.3/src/read.c:1505:25: warning: conversion to 'long unsigned int' from 'long int' may change the sign of the result [-Wsign-conversion]
+ 1505 |       ebuf->floc.lineno += nlines;
+      |                         ^~
+../make-4.3/src/read.c: In function 'conditional_line':
+../make-4.3/src/read.c:1660:13: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 1660 |       len = p - line;
+      |             ^
+../make-4.3/src/read.c:1722:11: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 1722 |       l = p - var;
+      |           ^
+../make-4.3/src/read.c: In function 'record_files':
+../make-4.3/src/read.c:2203:49: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 2203 |           f->stem = strcache_add_len (buffer, o - buffer);
+      |                                               ~~^~~~~~~~
+../make-4.3/src/read.c: In function 'find_map_unquote':
+../make-4.3/src/read.c:2354:48: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 2354 |           memmove (&p[i], &p[i/2], (string_len - (p - string)) - (i/2) + 1);
+      |                                                ^
+../make-4.3/src/read.c:2354:64: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 2354 |           memmove (&p[i], &p[i/2], (string_len - (p - string)) - (i/2) + 1);
+      |                                                                ^
+../make-4.3/src/read.c: In function 'find_char_unquote':
+../make-4.3/src/read.c:2397:48: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 2397 |           memmove (&p[i], &p[i/2], (string_len - (p - string)) - (i/2) + 1);
+      |                                                ^
+../make-4.3/src/read.c:2397:64: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 2397 |           memmove (&p[i], &p[i/2], (string_len - (p - string)) - (i/2) + 1);
+      |                                                                ^
+../make-4.3/src/read.c: In function 'unescape_char':
+../make-4.3/src/read.c:2430:15: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 2430 |           l = e - s;
+      |               ^
+../make-4.3/src/read.c: In function 'find_percent_cached':
+../make-4.3/src/read.c:2523:42: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 2523 |         memmove (&pv[i], &pv[i/2], (slen - (pv - new)) - (i/2) + 1);
+      |                                          ^
+../make-4.3/src/read.c:2523:56: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 2523 |         memmove (&pv[i], &pv[i/2], (slen - (pv - new)) - (i/2) + 1);
+      |                                                        ^
+../make-4.3/src/read.c: In function 'readline':
+../make-4.3/src/read.c:2685:22: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 2685 |         size_t off = p - start;
+      |                      ^
+../make-4.3/src/read.c: In function 'get_next_mword':
+../make-4.3/src/read.c:2905:15: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 2905 |     *length = p - beg;
+      |               ^
+../make-4.3/src/read.c: In function 'parse_file_seq':
+../make-4.3/src/read.c:3268:18: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 3268 |           nlen = p - s;
+      |                  ^
+../make-4.3/src/read.c:3317:28: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 3317 |                       nlen -= (n + 1) - tp;
+      |                            ^~
+../make-4.3/src/read.c:3401:19: warning: conversion to 'int' from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+ 3401 |             tot = gl.gl_pathc;
+      |                   ^~
+In file included from ../make-4.3/src/makeint.h:31,
+                 from ../make-4.3/src/read.c:17:
+../make-4.3/src/read.c: In function 'eval_makefile':
+lib/alloca.h:46:18: warning: ignoring return value of '__builtin_alloca' declared with attribute 'warn_unused_result' [-Wunused-result]
+   46 | #  define alloca __builtin_alloca
+../make-4.3/src/read.c:443:3: note: in expansion of macro 'alloca'
+  443 |   alloca (0);
+      |   ^~~~~~
+../make-4.3/src/read.c: In function 'eval_buffer':
+lib/alloca.h:46:18: warning: ignoring return value of '__builtin_alloca' declared with attribute 'warn_unused_result' [-Wunused-result]
+   46 | #  define alloca __builtin_alloca
+../make-4.3/src/read.c:485:3: note: in expansion of macro 'alloca'
+  485 |   alloca (0);
+      |   ^~~~~~
+../make-4.3/src/read.c: In function 'find_percent_cached':
+../make-4.3/src/read.c:2542:1: warning: function may return address of local variable [-Wreturn-local-addr]
+ 2542 | }
+      | ^
+lib/alloca.h:46:18: note: declared here
+   46 | #  define alloca __builtin_alloca
+../make-4.3/src/read.c:2511:19: note: in expansion of macro 'alloca'
+ 2511 |             new = alloca (slen + 1);
+      |                   ^~~~~~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot -DHAVE_CONFIG_H   -Isrc -I../make-4.3/src -Ilib -I../make-4.3/lib -DLIBDIR=\"/usr/lib\" -DINCLUDEDIR=\"/usr/include\" -DLOCALEDIR=\"/usr/share/locale\"    -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o src/remake.o ../make-4.3/src/remake.c
+../make-4.3/src/remake.c: In function 'update_file_1':
+../make-4.3/src/remake.c:496:18: warning: conversion to 'uintmax_t' {aka 'long long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  496 |       this_mtime += FILE_TIMESTAMPS_PER_S - 1 - ns;
+      |                  ^~
+../make-4.3/src/remake.c:578:33: warning: conversion from 'int' to 'unsigned char:1' may change value [-Wconversion]
+  578 |             d->file->dontcare = dontcare;
+      |                                 ^~~~~~~~
+../make-4.3/src/remake.c:645:35: warning: conversion from 'int' to 'unsigned char:1' may change value [-Wconversion]
+  645 |               d->file->dontcare = dontcare;
+      |                                   ^~~~~~~~
+../make-4.3/src/remake.c:689:29: warning: conversion from 'unsigned int' to 'unsigned char:2' may change value [-Wconversion]
+  689 |       file->update_status = dep_status == us_none ? us_failed : dep_status;
+      |                             ^~~~~~~~~~
+../make-4.3/src/remake.c: In function 'f_mtime':
+../make-4.3/src/remake.c:1408:30: warning: conversion to 'uintmax_t' {aka 'long long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 1408 |           adjusted_now = now + (resolution - 1);
+      |                              ^
+../make-4.3/src/remake.c:1413:18: warning: conversion from 'uintmax_t' {aka 'long long unsigned int'} to 'double' may change value [-Wconversion]
+ 1413 |                  + ((FILE_TIMESTAMP_NS (mtime) - FILE_TIMESTAMP_NS (now))
+      |                  ^
+../make-4.3/src/remake.c: In function 'library_search':
+../make-4.3/src/remake.c:1666:51: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 1666 |         p4 = variable_buffer_output (libbuf, p, p3-p);
+      |                                                 ~~^~
+../make-4.3/src/remake.c:1668:52: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 1668 |         p4 = variable_buffer_output (p4, p3+1, len - (p3-p));
+      |                                                    ^
+In file included from ../make-4.3/src/makeint.h:31,
+                 from ../make-4.3/src/remake.c:17:
+../make-4.3/src/remake.c: In function 'update_file':
+lib/alloca.h:46:18: warning: ignoring return value of '__builtin_alloca' declared with attribute 'warn_unused_result' [-Wunused-result]
+   46 | #  define alloca __builtin_alloca
+../make-4.3/src/remake.c:340:7: note: in expansion of macro 'alloca'
+  340 |       alloca (0);
+      |       ^~~~~~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot -DHAVE_CONFIG_H   -Isrc -I../make-4.3/src -Ilib -I../make-4.3/lib -DLIBDIR=\"/usr/lib\" -DINCLUDEDIR=\"/usr/include\" -DLOCALEDIR=\"/usr/share/locale\"    -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o src/rule.o ../make-4.3/src/rule.c
+../make-4.3/src/rule.c: In function 'snap_implicit_rules':
+../make-4.3/src/rule.c:132:29: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  132 |                   namelen = p - dname;
+      |                             ^
+../make-4.3/src/rule.c:135:38: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  135 |               memcpy (name, dname, p - dname);
+      |                                    ~~^~~~~~~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot -DHAVE_CONFIG_H   -Isrc -I../make-4.3/src -Ilib -I../make-4.3/lib -DLIBDIR=\"/usr/lib\" -DINCLUDEDIR=\"/usr/include\" -DLOCALEDIR=\"/usr/share/locale\"    -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o src/signame.o ../make-4.3/src/signame.c
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot -DHAVE_CONFIG_H   -Isrc -I../make-4.3/src -Ilib -I../make-4.3/lib -DLIBDIR=\"/usr/lib\" -DINCLUDEDIR=\"/usr/include\" -DLOCALEDIR=\"/usr/share/locale\"    -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o src/strcache.o ../make-4.3/src/strcache.c
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot -DHAVE_CONFIG_H   -Isrc -I../make-4.3/src -Ilib -I../make-4.3/lib -DLIBDIR=\"/usr/lib\" -DINCLUDEDIR=\"/usr/include\" -DLOCALEDIR=\"/usr/share/locale\"    -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o src/variable.o ../make-4.3/src/variable.c
+In file included from ../make-4.3/src/variable.c:17:
+../make-4.3/src/variable.c: In function 'lookup_pattern_var':
+../make-4.3/src/variable.c:121:61: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  121 |       if (stem > target && !strneq (p->target, target, stem - target))
+../make-4.3/src/makeint.h:331:46: note: in definition of macro 'strneq'
+  331 | #define strneq(a, b, l) (strncmp ((a), (b), (l)) == 0)
+      |                                              ^
+In file included from ../make-4.3/src/filedef.h:22,
+                 from ../make-4.3/src/variable.c:21:
+../make-4.3/src/variable.c: In function 'variable_hash_1':
+../make-4.3/src/variable.c:143:41: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  143 |   return_STRING_N_HASH_1 (key->name, key->length);
+../make-4.3/src/hash.h:120:28: note: in definition of macro 'STRING_N_HASH_1'
+  120 |   (RESULT) += jhash(_key_, N); \
+      |                            ^
+../make-4.3/src/variable.c:143:3: note: in expansion of macro 'return_STRING_N_HASH_1'
+  143 |   return_STRING_N_HASH_1 (key->name, key->length);
+      |   ^~~~~~~~~~~~~~~~~~~~~~
+../make-4.3/src/variable.c: In function 'variable_hash_cmp':
+../make-4.3/src/variable.c:158:16: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  158 |   int result = x->length - y->length;
+      |                ^
+../make-4.3/src/variable.c: In function 'define_variable_in_set':
+../make-4.3/src/variable.c:263:26: warning: conversion from 'int' to 'unsigned char:1' may change value [-Wconversion]
+  263 |           v->recursive = recursive;
+      |                          ^~~~~~~~~
+../make-4.3/src/variable.c:281:18: warning: conversion from 'int' to 'unsigned char:1' may change value [-Wconversion]
+  281 |   v->recursive = recursive;
+      |                  ^~~~~~~~~
+../make-4.3/src/variable.c: In function 'lookup_special_var':
+../make-4.3/src/variable.c:423:21: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  423 |             int l = v->length;
+      |                     ^
+../make-4.3/src/variable.c:425:17: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  425 |             len += l + 1;
+      |                 ^~
+../make-4.3/src/variable.c:428:30: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  428 |                 size_t off = p - var->value;
+      |                              ^
+../make-4.3/src/variable.c:430:21: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  430 |                 max += EXPANSION_INCREMENT (l + 1);
+      |                     ^~
+../make-4.3/src/variable.c:435:33: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  435 |             memcpy (p, v->name, l);
+      |                                 ^
+../make-4.3/src/variable.c: In function 'merge_variable_sets':
+../make-4.3/src/variable.c:764:32: warning: conversion to 'long unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  764 |             variable_changenum += inc;
+      |                                ^~
+../make-4.3/src/variable.c: In function 'do_variable_definition':
+../make-4.3/src/variable.c:1429:15: warning: conversion from 'int' to 'unsigned char:1' may change value [-Wconversion]
+ 1429 |   v->append = append;
+      |               ^~~~~~
+../make-4.3/src/variable.c:1430:20: warning: conversion from 'int' to 'unsigned char:1' may change value [-Wconversion]
+ 1430 |   v->conditional = conditional;
+      |                    ^~~~~~~~~~~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot -DHAVE_CONFIG_H   -Isrc -I../make-4.3/src -Ilib -I../make-4.3/lib -DLIBDIR=\"/usr/lib\" -DINCLUDEDIR=\"/usr/include\" -DLOCALEDIR=\"/usr/share/locale\"    -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o src/version.o ../make-4.3/src/version.c
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot -DHAVE_CONFIG_H   -Isrc -I../make-4.3/src -Ilib -I../make-4.3/lib -DLIBDIR=\"/usr/lib\" -DINCLUDEDIR=\"/usr/include\" -DLOCALEDIR=\"/usr/share/locale\"    -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o src/vpath.o ../make-4.3/src/vpath.c
+../make-4.3/src/vpath.c: In function 'construct_vpath_list':
+../make-4.3/src/vpath.c:250:13: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  250 |       len = p - v;
+      |             ^
+../make-4.3/src/vpath.c: In function 'selective_vpath_search':
+../make-4.3/src/vpath.c:364:16: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  364 |   name_dplen = n != 0 ? n - file : 0;
+      |                ^
+../make-4.3/src/vpath.c:530:57: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  530 |           return strcache_add_len (name, (p + 1 - name) + flen);
+      |                                                         ^
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot -DHAVE_CONFIG_H   -Isrc -I../make-4.3/src -Ilib -I../make-4.3/lib -DLIBDIR=\"/usr/lib\" -DINCLUDEDIR=\"/usr/include\" -DLOCALEDIR=\"/usr/share/locale\"    -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o src/posixos.o ../make-4.3/src/posixos.c
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot -DHAVE_CONFIG_H   -Isrc -I../make-4.3/src -Ilib -I../make-4.3/lib -DLIBDIR=\"/usr/lib\" -DINCLUDEDIR=\"/usr/include\" -DLOCALEDIR=\"/usr/share/locale\"    -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot-native=   -Wconversion -Wno-error -c -o src/remote-stub.o ../make-4.3/src/remote-stub.c
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot  -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot-native=   -Wconversion -Wno-error -Wl,--export-dynamic -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/make-4.3=/usr/src/debug/make/4.3-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build=/usr/src/debug/make/4.3-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/recipe-sysroot-native=  -Wl,-z,relro,-z,now -o make src/ar.o src/arscan.o src/commands.o src/default.o src/dir.o src/expand.o src/file.o src/function.o src/getopt.o src/getopt1.o src/guile.o src/hash.o src/implicit.o src/job.o src/load.o src/loadapi.o src/main.o src/misc.o src/output.o src/read.o src/remake.o src/rule.o src/signame.o src/strcache.o src/variable.o src/version.o src/vpath.o  src/posixos.o  src/remote-stub.o   lib/libgnu.a   
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/make/4.3-r0/build'
+DEBUG: Shell function do_compile finished

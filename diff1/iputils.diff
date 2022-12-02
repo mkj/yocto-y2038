@@ -1,0 +1,108 @@
+8c8
+< ../git/iputils_common.c:95:45: warning: conversion to 'long unsigned int' from '__time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../git/iputils_common.c:95:57: warning: conversion from '__time64_t' {aka 'long long int'} to 'unsigned int' may change value [-Wconversion]
+10,14c10,11
+<       |                                             ^
+< ../git/iputils_common.c:95:57: warning: conversion to 'long unsigned int' from '__syscall_slong_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+<    95 |         return ((getpid() << 16) ^ getuid() ^ ts.tv_sec ^ ts.tv_nsec);
+<       |                                                         ^
+< [3/25] arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot -Ilibcommon.a.p -I. -I../git -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -Wpedantic -std=c99 -O0 -include config.h -include git-version.h -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/git=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/git=/usr/src/debug/iputils/20211215-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/build=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/build=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot-native= -Wconversion -Wno-error -fPIC -MD -MQ libcommon.a.p/md5.c.o -MF libcommon.a.p/md5.c.o.d -o libcommon.a.p/md5.c.o -c ../git/md5.c
+---
+>       |                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+> [3/25] arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot -Ilibcommon.a.p -I. -I../git -flto=auto -fdiagnostics-color=always -Wall -Winvalid-pch -Wextra -Wpedantic -std=c99 -O0 -include config.h -include git-version.h -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/git=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/git=/usr/src/debug/iputils/20211215-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/build=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/build=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot-native= -Wconversion -Wno-error -fPIC -MD -MQ libcommon.a.p/md5.c.o -MF libcommon.a.p/md5.c.o.d -o libcommon.a.p/md5.c.o -c ../git/md5.c
+171,176d167
+< ../git/ping/ping_common.c:268:30: warning: conversion to '__time_t' {aka 'long int'} from 'long unsigned int' may change the sign of the result [-Wsign-conversion]
+<   268 |         it.it_value.tv_sec = waittime / 1000000;
+<       |                              ^~~~~~~~
+< ../git/ping/ping_common.c:269:31: warning: conversion to '__suseconds_t' {aka 'long int'} from 'long unsigned int' may change the sign of the result [-Wsign-conversion]
+<   269 |         it.it_value.tv_usec = waittime % 1000000;
+<       |                               ^~~~~~~~
+177a169,171
+> ../git/ping/ping_common.c:323:27: warning: conversion from '__time64_t' {aka 'long long int'} to 'long int' may change value [-Wconversion]
+>   323 |                 ntokens = (tv.tv_sec - rts->cur_time.tv_sec) * 1000 +
+>       |                           ^
+188a183,187
+> ../git/ping/ping_common.c: In function 'gather_statistics':
+> ../git/ping/ping_common.c:737:28: warning: conversion from 'long long int' to 'long int' may change value [-Wconversion]
+>   737 |                 triptime = tv->tv_sec * 1000000 + tv->tv_usec;
+>       |                            ^~
+> In file included from ../git/ping/ping_common.c:32:
+189a189,200
+> ../git/ping/ping_common.c:886:26: warning: format '%ld' expects argument of type 'long int', but argument 2 has type '__time64_t' {aka 'long long int'} [-Wformat=]
+>   886 |                 printf(_(", time %ldms"), 1000 * tv.tv_sec + (tv.tv_nsec + 500000) / 1000000);
+>       |                          ^~~~~~~~~~~~~~
+> ../git/iputils_common.h:31:18: note: in definition of macro '_'
+>    31 | # define _(Text) Text
+>       |                  ^~~~
+> ../git/ping/ping_common.c:886:36: note: format string is defined here
+>   886 |                 printf(_(", time %ldms"), 1000 * tv.tv_sec + (tv.tv_nsec + 500000) / 1000000);
+>       |                                  ~~^
+>       |                                    |
+>       |                                    long int
+>       |                                  %lld
+322a334,346
+> In file included from ../git/tracepath.c:36:
+> ../git/tracepath.c:284:26: warning: format '%ld' expects argument of type 'long int', but argument 2 has type '__time64_t' {aka 'long long int'} [-Wformat=]
+>   284 |                 printf(_("%3ld.%03ldms "), res.tv_sec * 1000 + res.tv_nsec / 1000000,
+>       |                          ^~~~~~~~~~~~~~~
+> ../git/iputils_common.h:31:18: note: in definition of macro '_'
+>    31 | # define _(Text) Text
+>       |                  ^~~~
+> ../git/tracepath.c:284:30: note: format string is defined here
+>   284 |                 printf(_("%3ld.%03ldms "), res.tv_sec * 1000 + res.tv_nsec / 1000000,
+>       |                           ~~~^
+>       |                              |
+>       |                              long int
+>       |                           %3lld
+378a403,405
+> ../git/clockdiff.c:274:36: warning: conversion from '__time64_t' {aka 'long long int'} to 'long int' may change value [-Wconversion]
+>   274 |                         recvtime = (mv->ts1.tv_sec % (24 * 60 * 60)) * 1000 +
+>       |                                    ^
+391c418
+< ../git/clockdiff.c:405:67: warning: conversion to '__uint32_t' {aka 'unsigned int'} from 'long int' may change the sign of the result [-Wsign-conversion]
+---
+> ../git/clockdiff.c:405:67: warning: conversion from '__time64_t' {aka 'long long int'} to '__uint32_t' {aka 'unsigned int'} may change value [-Wconversion]
+412a440,445
+> ../git/clockdiff.c:623:35: warning: format '%ld' expects argument of type 'long int', but argument 2 has type 'time_t' {aka 'long long int'} [-Wformat=]
+>   623 |                         printf("%ld %d %d\n", now, ctl.measure_delta, ctl.measure_delta1);
+>       |                                 ~~^           ~~~
+>       |                                   |           |
+>       |                                   long int    time_t {aka long long int}
+>       |                                 %lld
+493a527,530
+> ../git/arping.c: In function 'recv_pack':
+> ../git/arping.c:430:38: warning: conversion from '__time64_t' {aka 'long long int'} to 'long int' may change value [-Wconversion]
+>   430 |                         long usecs = (ts.tv_sec - ctl->last.tv_sec) * 1000000 +
+>       |                                      ^
+520,526d556
+< ../git/arping.c: In function 'event_loop':
+< ../git/arping.c:711:39: warning: conversion to 'long int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+<   711 |                 .it_interval.tv_sec = ctl->interval,
+<       |                                       ^~~
+< ../git/arping.c:713:36: warning: conversion to 'long int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+<   713 |                 .it_value.tv_sec = ctl->interval,
+<       |                                    ^~~
+559c589
+< ../git/ninfod/ni_ifaddrs.c:113:24: warning: conversion to 'uint32_t' {aka 'unsigned int'} from 'time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../git/ninfod/ni_ifaddrs.c:113:24: warning: conversion from 'time_t' {aka 'long long int'} to 'uint32_t' {aka 'unsigned int'} may change value [-Wconversion]
+568c598
+< ../git/ninfod/ni_ifaddrs.c:121:30: warning: conversion to '__u32' {aka 'unsigned int'} from 'time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../git/ninfod/ni_ifaddrs.c:121:30: warning: conversion from 'time_t' {aka 'long long int'} to '__u32' {aka 'unsigned int'} may change value [-Wconversion]
+579,581d608
+< ../git/ninfod/ni_ifaddrs.c:236:49: warning: conversion to 'time_t' {aka 'long int'} from 'uint32_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+<   236 |                                 nlm_next->seq = seq;
+<       |                                                 ^~~
+599,601d625
+< ../git/ninfod/ni_ifaddrs.c:388:85: warning: comparison of integer expressions of different signedness: '__u32' {aka 'unsigned int'} and 'time_t' {aka 'long int'} [-Wsign-compare]
+<   388 |                                 if ((pid_t) nlh->nlmsg_pid != pid || nlh->nlmsg_seq != nlm->seq)
+<       |                                                                                     ^~
+635,638c659
+< ../git/ninfod/ninfod.c:330:31: warning: conversion to '__time_t' {aka 'long int'} from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+<   330 |                 rts.tv_sec  = p->delay / 1000000;
+<       |                               ^
+< [22/25] arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot -Ininfod/ninfod.p -Ininfod -I../git/ninfod -I. -I../git -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -Wpedantic -std=c99 -O0 -include config.h -include git-version.h -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/git=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/git=/usr/src/debug/iputils/20211215-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/build=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/build=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot-native= -Wconversion -Wno-error -pthread -MD -MQ ninfod/ninfod.p/ninfod_addrs.c.o -MF ninfod/ninfod.p/ninfod_addrs.c.o.d -o ninfod/ninfod.p/ninfod_addrs.c.o -c ../git/ninfod/ninfod_addrs.c
+---
+> [22/25] arm-openbmc-linux-gnueabi-gcc -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot -Ininfod/ninfod.p -Ininfod -I../git/ninfod -I. -I../git -flto=auto -fdiagnostics-color=always -Wall -Winvalid-pch -Wextra -Wpedantic -std=c99 -O0 -include config.h -include git-version.h -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/git=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/git=/usr/src/debug/iputils/20211215-r0 -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/build=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/build=/usr/src/debug/iputils/20211215-r0 -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot= -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot= -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/iputils/20211215-r0/recipe-sysroot-native= -Wconversion -Wno-error -pthread -MD -MQ ninfod/ninfod.p/ninfod_addrs.c.o -MF ninfod/ninfod.p/ninfod_addrs.c.o.d -o ninfod/ninfod.p/ninfod_addrs.c.o -c ../git/ninfod/ninfod_addrs.c

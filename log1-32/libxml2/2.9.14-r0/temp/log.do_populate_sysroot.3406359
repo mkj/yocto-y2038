@@ -1,0 +1,113 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/zlib/zlib_1.2.13.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/binutils/binutils-cross_2.39.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-cross_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-native_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/python/python3_3.11.0.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/autoconf/autoconf_2.71.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/automake/automake_1.16.5.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pkgconfig/pkgconfig_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/python/python3_3.11.0.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-extended/xz/xz_5.2.7.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: []
+NOTE: Skipping as already exists in sysroot: ['glibc', 'zlib', 'binutils-cross-arm', 'gcc-cross-arm', 'gcc-runtime', 'libtool-cross', 'libtool-native', 'python3', 'quilt-native', 'autoconf-native', 'automake-native', 'patch-native', 'pkgconfig-native', 'pseudo-native', 'python3-native', 'xz-native', 'libgcc', 'linux-libc-headers', 'gdbm-native', 'libnsl2-native', 'sqlite3-native', 'zlib-native', 'readline-native', 'libffi-native', 'bzip2-native', 'libtirpc-native', 'openssl-native', 'ncurses-native', 'util-linux-libuuid-native', 'texinfo-dummy-native', 'flex-native', 'gnu-config-native', 'gettext-minimal-native', 'mpfr-native', 'gmp-native', 'libmpc-native', 'zstd-native', 'm4-native', 'attr-native', 'openssl', 'libxcrypt', 'bzip2', 'libnsl2', 'sqlite3', 'opkg-utils', 'util-linux-libuuid', 'readline', 'libffi', 'ncurses', 'gdbm', 'libtirpc', 'xz', 'perl-native', 'make-native']
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function sstate_task_prefunc
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/libxml2/usr/bin/crossscripts/xml2-config
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/libxml2/usr/lib/libxml2.so
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/libxml2/usr/lib/xml2Conf.sh
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/libxml2/usr/lib/libxml2.so.2.9.14
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/libxml2/usr/lib/libxml2.so.2
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/libxml2/usr/lib/cmake/libxml2/libxml2-config.cmake
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/libxml2/usr/lib/pkgconfig/libxml-2.0.pc
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/libxml2/usr/share/aclocal/libxml.m4
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/libxml2/usr/include/libxml2/libxml/entities.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/libxml2/usr/include/libxml2/libxml/SAX2.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/libxml2/usr/include/libxml2/libxml/xmlversion.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/libxml2/usr/include/libxml2/libxml/c14n.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/libxml2/usr/include/libxml2/libxml/debugXML.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/libxml2/usr/include/libxml2/libxml/xmlautomata.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/libxml2/usr/include/libxml2/libxml/xpathInternals.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/libxml2/usr/include/libxml2/libxml/xmlstring.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/libxml2/usr/include/libxml2/libxml/dict.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/libxml2/usr/include/libxml2/libxml/xpointer.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/libxml2/usr/include/libxml2/libxml/xmlerror.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/libxml2/usr/include/libxml2/libxml/xmlsave.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/libxml2/usr/include/libxml2/libxml/nanoftp.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/libxml2/usr/include/libxml2/libxml/xmlunicode.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/libxml2/usr/include/libxml2/libxml/xlink.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/libxml2/usr/include/libxml2/libxml/list.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/libxml2/usr/include/libxml2/libxml/hash.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/libxml2/usr/include/libxml2/libxml/encoding.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/libxml2/usr/include/libxml2/libxml/uri.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/libxml2/usr/include/libxml2/libxml/valid.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/libxml2/usr/include/libxml2/libxml/pattern.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/libxml2/usr/include/libxml2/libxml/xmlIO.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/libxml2/usr/include/libxml2/libxml/xmlreader.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/libxml2/usr/include/libxml2/libxml/nanohttp.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/libxml2/usr/include/libxml2/libxml/catalog.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/libxml2/usr/include/libxml2/libxml/chvalid.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/libxml2/usr/include/libxml2/libxml/HTMLparser.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/libxml2/usr/include/libxml2/libxml/threads.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/libxml2/usr/include/libxml2/libxml/xinclude.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/libxml2/usr/include/libxml2/libxml/globals.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/libxml2/usr/include/libxml2/libxml/xmlmemory.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/libxml2/usr/include/libxml2/libxml/xmlregexp.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/libxml2/usr/include/libxml2/libxml/parser.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/libxml2/usr/include/libxml2/libxml/xpath.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/libxml2/usr/include/libxml2/libxml/HTMLtree.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/libxml2/usr/include/libxml2/libxml/SAX.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/libxml2/usr/include/libxml2/libxml/xmlexports.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/libxml2/usr/include/libxml2/libxml/xmlmodule.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/libxml2/usr/include/libxml2/libxml/tree.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/libxml2/usr/include/libxml2/libxml/xmlschemastypes.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/libxml2/usr/include/libxml2/libxml/schemasInternals.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/libxml2/usr/include/libxml2/libxml/schematron.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/libxml2/usr/include/libxml2/libxml/xmlschemas.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/libxml2/usr/include/libxml2/libxml/DOCBparser.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/libxml2/usr/include/libxml2/libxml/xmlwriter.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/libxml2/usr/include/libxml2/libxml/parserInternals.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/libxml2/usr/include/libxml2/libxml/relaxng.h
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/libxml2/sysroot-providers/libxml2
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/libxml2/usr/include/libxml2/libxml/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/libxml2/usr/lib/cmake/libxml2/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/libxml2/usr/bin/crossscripts/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/libxml2/usr/include/libxml2/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/libxml2/usr/share/gtk-doc/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/libxml2/usr/share/aclocal/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/libxml2/usr/lib/pkgconfig/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/libxml2/sysroot-providers/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/libxml2/usr/lib/cmake/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/libxml2/usr/include/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/libxml2/usr/share/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/libxml2/usr/lib/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/libxml2/usr/bin/
+DEBUG: Removing manifest: /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/libxml2/usr/
+DEBUG: Python function sstate_task_prefunc finished
+DEBUG: Executing python function do_populate_sysroot
+DEBUG: Executing shell function sysroot_stage_all
+0 blocks
+0 blocks
+0 blocks
+DEBUG: Shell function sysroot_stage_all finished
+DEBUG: Executing python function sysroot_strip
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libxml2/2.9.14-r0/sysroot-destdir/usr/lib/libxml2.so.2.9.14']
+DEBUG: Python function sysroot_strip finished
+DEBUG: Executing shell function binconfig_disabled_sysroot_preprocess
+DEBUG: Shell function binconfig_disabled_sysroot_preprocess finished
+DEBUG: Python function do_populate_sysroot finished
+DEBUG: Executing python function do_qa_sysroot
+NOTE: QA checking do_populate_sysroot
+DEBUG: Python function do_qa_sysroot finished
+DEBUG: Executing python function sstate_task_postfunc
+DEBUG: Executing python function do_siteconfig
+DEBUG: Executing python function siteconfig_do_siteconfig
+DEBUG: No site_config directory, skipping do_siteconfig
+DEBUG: Python function siteconfig_do_siteconfig finished
+DEBUG: Python function do_siteconfig finished
+NOTE: Using umask 0o002 (not 22) for sstate packaging
+DEBUG: Preparing tree /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libxml2/2.9.14-r0/sysroot-destdir for packaging at /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libxml2/2.9.14-r0/sstate-build-populate_sysroot/sysroot-destdir
+DEBUG: Executing python function target_add_sysroot_deps
+DEBUG: Python function target_add_sysroot_deps finished
+DEBUG: Executing python function sstate_hardcode_path
+NOTE: Removing hardcoded paths from sstate package: 'find /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libxml2/2.9.14-r0/sstate-build-populate_sysroot/ \( -name "*.la" -o -name "*-config" -o -name "*_config" -o -name "postinst-*" \) -type f | xargs grep -l -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libxml2/2.9.14-r0/recipe-sysroot' -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libxml2/2.9.14-r0/recipe-sysroot-native' -e '/home/matt/tmp/build/obmc-y2038/tmp/hosttools' | tee /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libxml2/2.9.14-r0/sstate-build-populate_sysroot/fixmepath | xargs --no-run-if-empty sed -i -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libxml2/2.9.14-r0/recipe-sysroot-native:FIXMESTAGINGDIRHOST:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libxml2/2.9.14-r0/recipe-sysroot:FIXMESTAGINGDIRTARGET:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:FIXME_HOSTTOOLS_DIR:g''
+DEBUG: Python function sstate_hardcode_path finished
+DEBUG: Executing python function sstate_report_unihash
+DEBUG: Python function sstate_report_unihash finished
+DEBUG: Executing shell function sstate_create_package
+DEBUG: Shell function sstate_create_package finished
+DEBUG: Executing python function sstate_hardcode_path_unpack
+DEBUG: Python function sstate_hardcode_path_unpack finished
+DEBUG: Staging files from /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libxml2/2.9.14-r0/sysroot-destdir to /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/armv7ahf-vfpv4d16/libxml2
+DEBUG: Python function sstate_task_postfunc finished

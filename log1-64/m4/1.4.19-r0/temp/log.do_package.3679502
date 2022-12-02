@@ -1,0 +1,189 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-cross_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-native_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-extended/texinfo-dummy-native/texinfo-dummy-native.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-core/gettext/gettext_0.21.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/autoconf/autoconf_2.71.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/automake/automake_1.16.5.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/dwarfsrcfiles/dwarfsrcfiles.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/rpm/rpm_4.18.0.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: ['dwarfsrcfiles-native', 'rpm-native', 'elfutils-native', 'file-native', 'libgcrypt-native', 'popt-native', 'lua-native', 'bzip2-native', 'sqlite3-native', 'python3-native', 'libgpg-error-native', 'libcap-native', 'readline-native', 'util-linux-libuuid-native', 'libtirpc-native', 'gdbm-native', 'libnsl2-native', 'libffi-native', 'openssl-native', 'ncurses-native', 'perl-native', 'make-native']
+NOTE: Skipping as already exists in sysroot: ['glibc', 'gcc-cross-arm', 'gcc-runtime', 'libtool-cross', 'libtool-native', 'quilt-native', 'texinfo-dummy-native', 'gettext-native', 'autoconf-native', 'automake-native', 'patch-native', 'pseudo-native', 'linux-libc-headers', 'libgcc', 'attr-native', 'gnu-config-native', 'm4-native', 'gettext-minimal-native', 'flex-native', 'xz-native', 'zlib-native', 'zstd-native', 'binutils-cross-arm', 'mpfr-native', 'libmpc-native', 'gmp-native']
+DEBUG: sed -e 's:^[^/]*/:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/m4/1.4.19-r0/recipe-sysroot-native/:g' /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/rpm-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/elfutils-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/libgcrypt-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/lua-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/python3-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/libgpg-error-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/openssl-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/ncurses-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/perl-native/fixmepath | xargs sed -i -e 's:FIXMESTAGINGDIRTARGET:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/m4/1.4.19-r0/recipe-sysroot:g; s:FIXMESTAGINGDIRHOST:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/m4/1.4.19-r0/recipe-sysroot-native:g' -e 's:FIXME_PSEUDO_SYSROOT:/home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/pseudo-native:g' -e 's:FIXME_HOSTTOOLS_DIR:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:g' -e 's:FIXME_PKGDATA_DIR:/home/matt/tmp/build/obmc-y2038/tmp/pkgdata/evb-ast2600:g' -e 's:FIXME_PSEUDO_LOCALSTATEDIR:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/m4/1.4.19-r0/pseudo/:g' -e 's:FIXME_LOGFIFO:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/m4/1.4.19-r0/temp/fifo.3679502:g'
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function sstate_task_prefunc
+DEBUG: Python function sstate_task_prefunc finished
+DEBUG: Executing python function do_package
+DEBUG: Executing python function package_convert_pr_autoinc
+DEBUG: Python function package_convert_pr_autoinc finished
+DEBUG: Executing python function package_prepare_pkgdata
+NOTE: Installed into pkgdata-sysroot: ['glibc', 'gcc-runtime', 'linux-libc-headers', 'libgcc']
+DEBUG: Python function package_prepare_pkgdata finished
+DEBUG: Executing python function perform_packagecopy
+DEBUG: Python function perform_packagecopy finished
+DEBUG: Executing python function split_and_strip_files
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/m4/1.4.19-r0/package/usr/bin/m4']
+DEBUG: Python function split_and_strip_files finished
+DEBUG: Executing python function fixup_perms
+DEBUG: Python function fixup_perms finished
+DEBUG: Executing python function package_do_split_locales
+DEBUG: Python function package_do_split_locales finished
+DEBUG: Executing python function populate_packages
+DEBUG: Python function populate_packages finished
+DEBUG: Executing python function package_fixsymlinks
+DEBUG: Python function package_fixsymlinks finished
+DEBUG: Executing python function package_name_hook
+DEBUG: Executing python function debian_package_name_hook
+DEBUG: LIBNAMES: pkg m4-staticdev libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg m4-src libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg m4-locale-zh-tw libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg m4-locale-zh-cn libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg m4-locale-vi libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg m4-locale-uk libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg m4-locale-sv libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg m4-locale-sr libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg m4-locale-ru libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg m4-locale-ro libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg m4-locale-pt-br libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg m4-locale-pl libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg m4-locale-nl libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg m4-locale-ko libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg m4-locale-ja libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg m4-locale-id libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg m4-locale-hr libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg m4-locale-gl libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg m4-locale-ga libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg m4-locale-fr libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg m4-locale-fi libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg m4-locale-es libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg m4-locale-eo libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg m4-locale-el libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg m4-locale-de libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg m4-locale-da libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg m4-locale-cs libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg m4-locale-bg libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg m4-doc libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg m4-dev libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg m4-dbg libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg m4 libs 0 bins 1 sonames []
+DEBUG: Python function debian_package_name_hook finished
+DEBUG: Python function package_name_hook finished
+DEBUG: Executing python function package_do_filedeps
+DEBUG: Python function package_do_filedeps finished
+DEBUG: Executing python function package_do_shlibs
+DEBUG: Reading shlib providers in /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/m4/1.4.19-r0/pkgdata-sysroot/shlibs2
+DEBUG: calculating shlib provides for m4-src
+DEBUG: LIBNAMES: pkg m4-src sonames set()
+DEBUG: calculating shlib provides for m4-dbg
+DEBUG: LIBNAMES: pkg m4-dbg sonames set()
+DEBUG: calculating shlib provides for m4-staticdev
+DEBUG: LIBNAMES: pkg m4-staticdev sonames set()
+DEBUG: calculating shlib provides for m4-dev
+DEBUG: LIBNAMES: pkg m4-dev sonames set()
+DEBUG: calculating shlib provides for m4-doc
+DEBUG: LIBNAMES: pkg m4-doc sonames set()
+DEBUG: calculating shlib provides for m4
+DEBUG: LIBNAMES: pkg m4 sonames set()
+DEBUG: calculating shlib provides for m4-locale-bg
+DEBUG: LIBNAMES: pkg m4-locale-bg sonames set()
+DEBUG: calculating shlib provides for m4-locale-cs
+DEBUG: LIBNAMES: pkg m4-locale-cs sonames set()
+DEBUG: calculating shlib provides for m4-locale-da
+DEBUG: LIBNAMES: pkg m4-locale-da sonames set()
+DEBUG: calculating shlib provides for m4-locale-de
+DEBUG: LIBNAMES: pkg m4-locale-de sonames set()
+DEBUG: calculating shlib provides for m4-locale-el
+DEBUG: LIBNAMES: pkg m4-locale-el sonames set()
+DEBUG: calculating shlib provides for m4-locale-eo
+DEBUG: LIBNAMES: pkg m4-locale-eo sonames set()
+DEBUG: calculating shlib provides for m4-locale-es
+DEBUG: LIBNAMES: pkg m4-locale-es sonames set()
+DEBUG: calculating shlib provides for m4-locale-fi
+DEBUG: LIBNAMES: pkg m4-locale-fi sonames set()
+DEBUG: calculating shlib provides for m4-locale-fr
+DEBUG: LIBNAMES: pkg m4-locale-fr sonames set()
+DEBUG: calculating shlib provides for m4-locale-ga
+DEBUG: LIBNAMES: pkg m4-locale-ga sonames set()
+DEBUG: calculating shlib provides for m4-locale-gl
+DEBUG: LIBNAMES: pkg m4-locale-gl sonames set()
+DEBUG: calculating shlib provides for m4-locale-hr
+DEBUG: LIBNAMES: pkg m4-locale-hr sonames set()
+DEBUG: calculating shlib provides for m4-locale-id
+DEBUG: LIBNAMES: pkg m4-locale-id sonames set()
+DEBUG: calculating shlib provides for m4-locale-ja
+DEBUG: LIBNAMES: pkg m4-locale-ja sonames set()
+DEBUG: calculating shlib provides for m4-locale-ko
+DEBUG: LIBNAMES: pkg m4-locale-ko sonames set()
+DEBUG: calculating shlib provides for m4-locale-nl
+DEBUG: LIBNAMES: pkg m4-locale-nl sonames set()
+DEBUG: calculating shlib provides for m4-locale-pl
+DEBUG: LIBNAMES: pkg m4-locale-pl sonames set()
+DEBUG: calculating shlib provides for m4-locale-pt-br
+DEBUG: LIBNAMES: pkg m4-locale-pt-br sonames set()
+DEBUG: calculating shlib provides for m4-locale-ro
+DEBUG: LIBNAMES: pkg m4-locale-ro sonames set()
+DEBUG: calculating shlib provides for m4-locale-ru
+DEBUG: LIBNAMES: pkg m4-locale-ru sonames set()
+DEBUG: calculating shlib provides for m4-locale-sr
+DEBUG: LIBNAMES: pkg m4-locale-sr sonames set()
+DEBUG: calculating shlib provides for m4-locale-sv
+DEBUG: LIBNAMES: pkg m4-locale-sv sonames set()
+DEBUG: calculating shlib provides for m4-locale-uk
+DEBUG: LIBNAMES: pkg m4-locale-uk sonames set()
+DEBUG: calculating shlib provides for m4-locale-vi
+DEBUG: LIBNAMES: pkg m4-locale-vi sonames set()
+DEBUG: calculating shlib provides for m4-locale-zh-cn
+DEBUG: LIBNAMES: pkg m4-locale-zh-cn sonames set()
+DEBUG: calculating shlib provides for m4-locale-zh-tw
+DEBUG: LIBNAMES: pkg m4-locale-zh-tw sonames set()
+DEBUG: calculating shlib requirements for m4-src
+DEBUG: calculating shlib requirements for m4-dbg
+DEBUG: calculating shlib requirements for m4-staticdev
+DEBUG: calculating shlib requirements for m4-dev
+DEBUG: calculating shlib requirements for m4-doc
+DEBUG: calculating shlib requirements for m4
+DEBUG: m4: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/m4/1.4.19-r0/packages-split/m4/usr/bin/m4)
+DEBUG: m4: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/m4/1.4.19-r0/packages-split/m4/usr/bin/m4)
+DEBUG: calculating shlib requirements for m4-locale-bg
+DEBUG: calculating shlib requirements for m4-locale-cs
+DEBUG: calculating shlib requirements for m4-locale-da
+DEBUG: calculating shlib requirements for m4-locale-de
+DEBUG: calculating shlib requirements for m4-locale-el
+DEBUG: calculating shlib requirements for m4-locale-eo
+DEBUG: calculating shlib requirements for m4-locale-es
+DEBUG: calculating shlib requirements for m4-locale-fi
+DEBUG: calculating shlib requirements for m4-locale-fr
+DEBUG: calculating shlib requirements for m4-locale-ga
+DEBUG: calculating shlib requirements for m4-locale-gl
+DEBUG: calculating shlib requirements for m4-locale-hr
+DEBUG: calculating shlib requirements for m4-locale-id
+DEBUG: calculating shlib requirements for m4-locale-ja
+DEBUG: calculating shlib requirements for m4-locale-ko
+DEBUG: calculating shlib requirements for m4-locale-nl
+DEBUG: calculating shlib requirements for m4-locale-pl
+DEBUG: calculating shlib requirements for m4-locale-pt-br
+DEBUG: calculating shlib requirements for m4-locale-ro
+DEBUG: calculating shlib requirements for m4-locale-ru
+DEBUG: calculating shlib requirements for m4-locale-sr
+DEBUG: calculating shlib requirements for m4-locale-sv
+DEBUG: calculating shlib requirements for m4-locale-uk
+DEBUG: calculating shlib requirements for m4-locale-vi
+DEBUG: calculating shlib requirements for m4-locale-zh-cn
+DEBUG: calculating shlib requirements for m4-locale-zh-tw
+DEBUG: Python function package_do_shlibs finished
+DEBUG: Executing python function package_do_pkgconfig
+DEBUG: Python function package_do_pkgconfig finished
+DEBUG: Executing python function read_shlibdeps
+DEBUG: Python function read_shlibdeps finished
+DEBUG: Executing python function package_depchains
+DEBUG: Python function package_depchains finished
+DEBUG: Executing python function emit_pkgdata
+DEBUG: Python function emit_pkgdata finished
+DEBUG: Python function do_package finished
+DEBUG: Executing python function sstate_task_postfunc
+NOTE: Using umask 0o002 (not 22) for sstate packaging
+DEBUG: Executing python function target_add_sysroot_deps
+DEBUG: Python function target_add_sysroot_deps finished
+DEBUG: Executing python function sstate_hardcode_path
+NOTE: Removing hardcoded paths from sstate package: 'find /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/m4/1.4.19-r0/sstate-build-package/ \( -name "*.la" -o -name "*-config" -o -name "*_config" -o -name "postinst-*" \) -type f | xargs grep -l -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/m4/1.4.19-r0/recipe-sysroot' -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/m4/1.4.19-r0/recipe-sysroot-native' -e '/home/matt/tmp/build/obmc-y2038/tmp/hosttools' | tee /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/m4/1.4.19-r0/sstate-build-package/fixmepath | xargs --no-run-if-empty sed -i -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/m4/1.4.19-r0/recipe-sysroot-native:FIXMESTAGINGDIRHOST:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/m4/1.4.19-r0/recipe-sysroot:FIXMESTAGINGDIRTARGET:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:FIXME_HOSTTOOLS_DIR:g''
+DEBUG: Python function sstate_hardcode_path finished
+DEBUG: Executing python function sstate_report_unihash
+DEBUG: Python function sstate_report_unihash finished
+DEBUG: Executing shell function sstate_create_package
+DEBUG: Shell function sstate_create_package finished
+DEBUG: Executing python function sstate_hardcode_path_unpack
+DEBUG: Python function sstate_hardcode_path_unpack finished
+DEBUG: Python function sstate_task_postfunc finished

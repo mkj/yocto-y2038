@@ -1,0 +1,28 @@
+DEBUG: Executing python function sstate_task_prefunc
+DEBUG: Python function sstate_task_prefunc finished
+DEBUG: Executing python function do_populate_lic
+DEBUG: Python function do_populate_lic finished
+DEBUG: Executing python function populate_lic_qa_checksum
+NOTE: bzip2: md5 checksum matched for file://LICENSE;beginline=4;endline=37;md5=600af43c50f1fcb82e32f19b32df4664
+NOTE: bzip2: md5 checksum matched for file:///home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/git/commons-compress/LICENSE.txt;md5=86d3f3a95c324c9479bd8986968f4327
+NOTE: bzip2: md5 checksum matched for file:///home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/git/dotnetzip/License.txt;md5=9cb56871eed4e748c3bc7e8ff352a54f
+NOTE: bzip2: md5 checksum matched for file:///home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/git/dotnetzip/License.zlib.txt;md5=cc421ccd22eeb2e5db6b79e6de0a029f
+NOTE: bzip2: md5 checksum matched for file:///home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/git/go/LICENSE;md5=5d4950ecb7b26d2c5e4e7b4e0dd74707
+NOTE: bzip2: md5 checksum matched for file:///home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/git/lbzip2/COPYING;md5=d32239bcb673463ab874e80d47fae504
+DEBUG: Python function populate_lic_qa_checksum finished
+DEBUG: Executing python function sstate_task_postfunc
+NOTE: Using umask 0o002 (not 22) for sstate packaging
+DEBUG: Preparing tree /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/license-destdir for packaging at /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/sstate-build-populate_lic/license-destdir
+DEBUG: Executing python function target_add_sysroot_deps
+DEBUG: Python function target_add_sysroot_deps finished
+DEBUG: Executing python function sstate_hardcode_path
+NOTE: Removing hardcoded paths from sstate package: 'find /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/sstate-build-populate_lic/ \( -name "*.la" -o -name "*-config" -o -name "*_config" -o -name "postinst-*" \) -type f | xargs grep -l -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot' -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot-native' -e '/home/matt/tmp/build/obmc-y2038/tmp/hosttools' | tee /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/sstate-build-populate_lic/fixmepath | xargs --no-run-if-empty sed -i -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot-native:FIXMESTAGINGDIRHOST:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/recipe-sysroot:FIXMESTAGINGDIRTARGET:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:FIXME_HOSTTOOLS_DIR:g''
+DEBUG: Python function sstate_hardcode_path finished
+DEBUG: Executing python function sstate_report_unihash
+DEBUG: Python function sstate_report_unihash finished
+DEBUG: Executing shell function sstate_create_package
+DEBUG: Shell function sstate_create_package finished
+DEBUG: Executing python function sstate_hardcode_path_unpack
+DEBUG: Python function sstate_hardcode_path_unpack finished
+DEBUG: Staging files from /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/bzip2/1.0.8-r0/license-destdir to /home/matt/tmp/build/obmc-y2038/tmp/deploy/licenses
+DEBUG: Python function sstate_task_postfunc finished

@@ -1,0 +1,186 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-connectivity/openssl/openssl_3.0.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/base-files/base-files_3.0.14.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/base-passwd/base-passwd_3.6.1.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/libxcrypt/libxcrypt_4.4.28.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/systemd/systemd-systemctl-native.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/zlib/zlib_1.2.13.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-cross_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-native_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/opkg-utils/opkg-utils_0.5.0.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-extended/pam/libpam_1.3.1.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-extended/shadow/shadow-sysroot_4.6.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-extended/shadow/shadow_4.12.3.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/autoconf/autoconf_2.71.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/automake/automake_1.16.5.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/dwarfsrcfiles/dwarfsrcfiles.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/rpm/rpm_4.18.0.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-extended/shadow/shadow_4.12.3.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: ['dwarfsrcfiles-native', 'rpm-native', 'elfutils-native', 'libgcrypt-native', 'bzip2-native', 'lua-native', 'python3-native', 'popt-native', 'sqlite3-native', 'file-native', 'libgpg-error-native', 'libcap-native', 'readline-native', 'ncurses-native', 'gdbm-native', 'libnsl2-native', 'libffi-native', 'util-linux-libuuid-native', 'openssl-native', 'libtirpc-native', 'perl-native', 'make-native']
+NOTE: Skipping as already exists in sysroot: ['openssl', 'base-files', 'base-passwd', 'glibc', 'libxcrypt', 'systemd-systemctl-native', 'zlib', 'gcc-cross-arm', 'gcc-runtime', 'libtool-cross', 'libtool-native', 'opkg-utils', 'quilt-native', 'libpam', 'shadow-sysroot', 'shadow', 'autoconf-native', 'automake-native', 'patch-native', 'pseudo-native', 'shadow-native', 'attr-native', 'texinfo-dummy-native', 'binutils-cross-arm', 'linux-libc-headers', 'libgcc', 'flex', 'cracklib', 'gnu-config-native', 'm4-native', 'xz-native', 'gettext-minimal-native', 'zstd-native', 'gmp-native', 'flex-native', 'libmpc-native', 'mpfr-native', 'zlib-native']
+DEBUG: sed -e 's:^[^/]*/:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/recipe-sysroot-native/:g' /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/rpm-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/elfutils-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/libgcrypt-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/lua-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/python3-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/libgpg-error-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/ncurses-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/openssl-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/perl-native/fixmepath | xargs sed -i -e 's:FIXMESTAGINGDIRTARGET:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/recipe-sysroot:g; s:FIXMESTAGINGDIRHOST:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/recipe-sysroot-native:g' -e 's:FIXME_PSEUDO_SYSROOT:/home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/pseudo-native:g' -e 's:FIXME_HOSTTOOLS_DIR:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:g' -e 's:FIXME_PKGDATA_DIR:/home/matt/tmp/build/obmc-y2038/tmp/pkgdata/evb-ast2600:g' -e 's:FIXME_PSEUDO_LOCALSTATEDIR:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/pseudo/:g' -e 's:FIXME_LOGFIFO:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/temp/fifo.382439:g'
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function sstate_task_prefunc
+DEBUG: Python function sstate_task_prefunc finished
+DEBUG: Executing python function do_package
+DEBUG: Executing python function package_convert_pr_autoinc
+DEBUG: Python function package_convert_pr_autoinc finished
+DEBUG: Executing python function package_prepare_pkgdata
+NOTE: Installed into pkgdata-sysroot: ['base-files', 'glibc', 'gcc-runtime', 'libpam', 'opkg-utils', 'base-passwd', 'libxcrypt', 'zlib', 'openssl', 'shadow', 'linux-libc-headers', 'flex', 'cracklib', 'libgcc']
+DEBUG: Python function package_prepare_pkgdata finished
+DEBUG: Executing python function perform_packagecopy
+DEBUG: Python function perform_packagecopy finished
+DEBUG: Executing python function apply_update_alternative_renames
+NOTE: openssh: Rename /usr/bin/scp -> /usr/bin/scp.openssh
+NOTE: openssh: Rename /usr/bin/ssh -> /usr/bin/ssh.openssh
+DEBUG: Python function apply_update_alternative_renames finished
+DEBUG: Executing python function split_and_strip_files
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/package/usr/sbin/sshd']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/package/usr/libexec/ssh-sk-helper']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/package/usr/libexec/ssh-pkcs11-helper']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/package/usr/libexec/ssh-keysign']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/package/usr/libexec/sftp-server']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/package/usr/bin/ssh.openssh']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/package/usr/bin/ssh-keyscan']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/package/usr/bin/ssh-keygen']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/package/usr/bin/ssh-agent']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/package/usr/bin/ssh-add']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/package/usr/bin/sftp']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/package/usr/bin/scp.openssh']
+DEBUG: Python function split_and_strip_files finished
+DEBUG: Executing python function fixup_perms
+DEBUG: Python function fixup_perms finished
+DEBUG: Executing python function systemd_populate_packages
+DEBUG: adding systemd calls to postinst/postrm for openssh-sshd
+DEBUG: Python function systemd_populate_packages finished
+DEBUG: Executing python function populate_packages_updatealternatives
+NOTE: adding update-alternatives calls to postinst/prerm for openssh-scp
+NOTE: 	update-alternatives --install /usr/bin/scp scp /usr/bin/scp.openssh 90
+
+NOTE: 	update-alternatives --remove  scp /usr/bin/scp.openssh
+
+NOTE: adding update-alternatives calls to postinst/prerm for openssh-ssh
+NOTE: 	update-alternatives --install /usr/bin/ssh ssh /usr/bin/ssh.openssh 90
+
+NOTE: 	update-alternatives --remove  ssh /usr/bin/ssh.openssh
+
+DEBUG: Python function populate_packages_updatealternatives finished
+DEBUG: Executing python function package_do_split_locales
+DEBUG: No locale files in this package
+DEBUG: Python function package_do_split_locales finished
+DEBUG: Executing python function populate_packages
+DEBUG: adding user/group calls to preinst for openssh-sshd
+DEBUG: Python function populate_packages finished
+DEBUG: Executing python function package_fixsymlinks
+DEBUG: Python function package_fixsymlinks finished
+DEBUG: Executing python function package_name_hook
+DEBUG: Executing python function debian_package_name_hook
+DEBUG: LIBNAMES: pkg openssh-staticdev libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg openssh-sshd libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg openssh-ssh libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg openssh-src libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg openssh-sftp-server libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg openssh-sftp libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg openssh-scp libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg openssh-misc libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg openssh-locale libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg openssh-keygen libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg openssh-doc libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg openssh-dev libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg openssh-dbg libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg openssh libs 0 bins 0 sonames []
+DEBUG: Python function debian_package_name_hook finished
+DEBUG: Python function package_name_hook finished
+DEBUG: Executing python function package_do_filedeps
+DEBUG: Python function package_do_filedeps finished
+DEBUG: Executing python function package_do_shlibs
+DEBUG: Reading shlib providers in /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/pkgdata-sysroot/shlibs2
+DEBUG: calculating shlib provides for openssh-src
+DEBUG: LIBNAMES: pkg openssh-src sonames set()
+DEBUG: calculating shlib provides for openssh-dbg
+DEBUG: LIBNAMES: pkg openssh-dbg sonames set()
+DEBUG: calculating shlib provides for openssh-keygen
+DEBUG: LIBNAMES: pkg openssh-keygen sonames set()
+DEBUG: calculating shlib provides for openssh-scp
+DEBUG: LIBNAMES: pkg openssh-scp sonames set()
+DEBUG: calculating shlib provides for openssh-ssh
+DEBUG: LIBNAMES: pkg openssh-ssh sonames set()
+DEBUG: calculating shlib provides for openssh-sshd
+DEBUG: LIBNAMES: pkg openssh-sshd sonames set()
+DEBUG: calculating shlib provides for openssh-sftp
+DEBUG: LIBNAMES: pkg openssh-sftp sonames set()
+DEBUG: calculating shlib provides for openssh-misc
+DEBUG: LIBNAMES: pkg openssh-misc sonames set()
+DEBUG: calculating shlib provides for openssh-sftp-server
+DEBUG: LIBNAMES: pkg openssh-sftp-server sonames set()
+DEBUG: calculating shlib provides for openssh-staticdev
+DEBUG: LIBNAMES: pkg openssh-staticdev sonames set()
+DEBUG: calculating shlib provides for openssh-dev
+DEBUG: LIBNAMES: pkg openssh-dev sonames set()
+DEBUG: calculating shlib provides for openssh-doc
+DEBUG: LIBNAMES: pkg openssh-doc sonames set()
+DEBUG: calculating shlib provides for openssh-locale
+DEBUG: LIBNAMES: pkg openssh-locale sonames set()
+DEBUG: calculating shlib provides for openssh
+DEBUG: LIBNAMES: pkg openssh sonames set()
+DEBUG: calculating shlib requirements for openssh-src
+DEBUG: calculating shlib requirements for openssh-dbg
+DEBUG: calculating shlib requirements for openssh-keygen
+DEBUG: openssh-keygen: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/packages-split/openssh-keygen/usr/bin/ssh-keygen)
+DEBUG: openssh-keygen: Dependency libcrypto.so.3 requires package libcrypto (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/packages-split/openssh-keygen/usr/bin/ssh-keygen)
+DEBUG: openssh-keygen: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/packages-split/openssh-keygen/usr/bin/ssh-keygen)
+DEBUG: calculating shlib requirements for openssh-scp
+DEBUG: openssh-scp: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/packages-split/openssh-scp/usr/bin/scp.openssh)
+DEBUG: openssh-scp: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/packages-split/openssh-scp/usr/bin/scp.openssh)
+DEBUG: calculating shlib requirements for openssh-ssh
+DEBUG: openssh-ssh: Dependency libcrypto.so.3 requires package libcrypto (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/packages-split/openssh-ssh/usr/bin/ssh.openssh)
+DEBUG: openssh-ssh: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/packages-split/openssh-ssh/usr/bin/ssh.openssh)
+DEBUG: openssh-ssh: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/packages-split/openssh-ssh/usr/bin/ssh.openssh)
+DEBUG: openssh-ssh: Dependency libz.so.1 requires package zlib (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/packages-split/openssh-ssh/usr/bin/ssh.openssh)
+DEBUG: calculating shlib requirements for openssh-sshd
+DEBUG: openssh-sshd: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/packages-split/openssh-sshd/usr/sbin/sshd)
+DEBUG: openssh-sshd: Dependency libcrypt.so.2 requires package libxcrypt (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/packages-split/openssh-sshd/usr/sbin/sshd)
+DEBUG: openssh-sshd: Dependency libz.so.1 requires package zlib (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/packages-split/openssh-sshd/usr/sbin/sshd)
+DEBUG: openssh-sshd: Dependency libpam.so.0 requires package libpam (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/packages-split/openssh-sshd/usr/sbin/sshd)
+DEBUG: openssh-sshd: Dependency libcrypto.so.3 requires package libcrypto (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/packages-split/openssh-sshd/usr/sbin/sshd)
+DEBUG: openssh-sshd: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/packages-split/openssh-sshd/usr/sbin/sshd)
+DEBUG: calculating shlib requirements for openssh-sftp
+DEBUG: openssh-sftp: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/packages-split/openssh-sftp/usr/bin/sftp)
+DEBUG: openssh-sftp: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/packages-split/openssh-sftp/usr/bin/sftp)
+DEBUG: calculating shlib requirements for openssh-misc
+DEBUG: openssh-misc: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/packages-split/openssh-misc/usr/libexec/ssh-pkcs11-helper)
+DEBUG: openssh-misc: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/packages-split/openssh-misc/usr/libexec/ssh-keysign)
+DEBUG: openssh-misc: Dependency libcrypto.so.3 requires package libcrypto (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/packages-split/openssh-misc/usr/libexec/ssh-sk-helper)
+DEBUG: openssh-misc: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/packages-split/openssh-misc/usr/bin/ssh-agent)
+DEBUG: openssh-misc: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/packages-split/openssh-misc/usr/libexec/ssh-pkcs11-helper)
+DEBUG: openssh-misc: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/packages-split/openssh-misc/usr/libexec/ssh-keysign)
+DEBUG: openssh-misc: Dependency libz.so.1 requires package zlib (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/packages-split/openssh-misc/usr/bin/ssh-keyscan)
+DEBUG: openssh-misc: Dependency libcrypto.so.3 requires package libcrypto (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/packages-split/openssh-misc/usr/libexec/ssh-pkcs11-helper)
+DEBUG: openssh-misc: Dependency libcrypto.so.3 requires package libcrypto (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/packages-split/openssh-misc/usr/bin/ssh-agent)
+DEBUG: openssh-misc: Dependency libcrypto.so.3 requires package libcrypto (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/packages-split/openssh-misc/usr/libexec/ssh-keysign)
+DEBUG: openssh-misc: Dependency libz.so.1 requires package zlib (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/packages-split/openssh-misc/usr/libexec/ssh-keysign)
+DEBUG: openssh-misc: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/packages-split/openssh-misc/usr/bin/ssh-keyscan)
+DEBUG: openssh-misc: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/packages-split/openssh-misc/usr/bin/ssh-keyscan)
+DEBUG: openssh-misc: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/packages-split/openssh-misc/usr/bin/ssh-add)
+DEBUG: openssh-misc: Dependency libcrypto.so.3 requires package libcrypto (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/packages-split/openssh-misc/usr/bin/ssh-keyscan)
+DEBUG: openssh-misc: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/packages-split/openssh-misc/usr/bin/ssh-add)
+DEBUG: openssh-misc: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/packages-split/openssh-misc/usr/bin/ssh-agent)
+DEBUG: openssh-misc: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/packages-split/openssh-misc/usr/libexec/ssh-sk-helper)
+DEBUG: openssh-misc: Dependency libcrypto.so.3 requires package libcrypto (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/packages-split/openssh-misc/usr/bin/ssh-add)
+DEBUG: openssh-misc: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/packages-split/openssh-misc/usr/libexec/ssh-sk-helper)
+DEBUG: calculating shlib requirements for openssh-sftp-server
+DEBUG: openssh-sftp-server: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/packages-split/openssh-sftp-server/usr/libexec/sftp-server)
+DEBUG: openssh-sftp-server: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/packages-split/openssh-sftp-server/usr/libexec/sftp-server)
+DEBUG: calculating shlib requirements for openssh-staticdev
+DEBUG: calculating shlib requirements for openssh-dev
+DEBUG: calculating shlib requirements for openssh-doc
+DEBUG: calculating shlib requirements for openssh-locale
+DEBUG: calculating shlib requirements for openssh
+DEBUG: Python function package_do_shlibs finished
+DEBUG: Executing python function package_do_pkgconfig
+DEBUG: Python function package_do_pkgconfig finished
+DEBUG: Executing python function read_shlibdeps
+DEBUG: Python function read_shlibdeps finished
+DEBUG: Executing python function package_depchains
+DEBUG: Python function package_depchains finished
+DEBUG: Executing python function emit_pkgdata
+DEBUG: Python function emit_pkgdata finished
+DEBUG: Python function do_package finished
+DEBUG: Executing python function sstate_task_postfunc
+NOTE: Using umask 0o002 (not 22) for sstate packaging
+DEBUG: Executing python function target_add_sysroot_deps
+DEBUG: Python function target_add_sysroot_deps finished
+DEBUG: Executing python function sstate_hardcode_path
+NOTE: Removing hardcoded paths from sstate package: 'find /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/sstate-build-package/ \( -name "*.la" -o -name "*-config" -o -name "*_config" -o -name "postinst-*" \) -type f | xargs grep -l -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/recipe-sysroot' -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/recipe-sysroot-native' -e '/home/matt/tmp/build/obmc-y2038/tmp/hosttools' -e '/home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/pseudo-native' -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/pseudo/' -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/temp/fifo.382439' | tee /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/sstate-build-package/fixmepath | xargs --no-run-if-empty sed -i -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/recipe-sysroot-native:FIXMESTAGINGDIRHOST:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/recipe-sysroot:FIXMESTAGINGDIRTARGET:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:FIXME_HOSTTOOLS_DIR:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/pseudo-native:FIXME_PSEUDO_SYSROOT:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/pseudo/:FIXME_PSEUDO_LOCALSTATEDIR:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/openssh/9.1p1-r0/temp/fifo.382439:FIXME_LOGFIFO:g''
+DEBUG: Python function sstate_hardcode_path finished
+DEBUG: Executing python function sstate_report_unihash
+DEBUG: Python function sstate_report_unihash finished
+DEBUG: Executing shell function sstate_create_package
+DEBUG: Shell function sstate_create_package finished
+DEBUG: Executing python function sstate_hardcode_path_unpack
+DEBUG: Python function sstate_hardcode_path_unpack finished
+DEBUG: Python function sstate_task_postfunc finished

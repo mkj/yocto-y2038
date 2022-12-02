@@ -1,0 +1,8 @@
+685c685
+< ../make-4.3/src/file.c:864:22: warning: conversion to 'uintmax_t' {aka 'long long unsigned int'} from 'time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../make-4.3/src/file.c:864:22: warning: conversion to 'uintmax_t' {aka 'long long unsigned int'} from 'time_t' {aka 'long long int'} may change the sign of the result [-Wsign-conversion]
+693c693
+< ../make-4.3/src/filedef.h:149:30: warning: conversion from 'uintmax_t' {aka 'long long unsigned int'} to 'time_t' {aka 'long int'} may change value [-Wconversion]
+---
+> ../make-4.3/src/filedef.h:149:30: warning: conversion to 'time_t' {aka 'long long int'} from 'uintmax_t' {aka 'long long unsigned int'} may change the sign of the result [-Wsign-conversion]

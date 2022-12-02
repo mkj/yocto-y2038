@@ -1,0 +1,497 @@
+DEBUG: Executing python function autotools_aclocals
+DEBUG: SITE files ['endian-little', 'bit-32', 'arm-common', 'arm-32', 'common-linux', 'common-glibc', 'arm-linux', 'arm-linux-gnueabi', 'common']
+DEBUG: Python function autotools_aclocals finished
+DEBUG: Executing shell function do_compile
+NOTE: make -j 1
+test ! -f stamp-h || CONFIG_FILES= CONFIG_HEADERS=defines.h ./config.status
+touch stamp-h
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot -I. -c -DBINDIR=\"/usr/bin\" -DSYSDIR=\"/etc\" -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot-native=   -Wconversion -Wno-error ../less-608/main.c
+../less-608/main.c: In function 'save':
+../less-608/main.c:321:39: warning: conversion to 'int' from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  321 |         p = (char *) ecalloc(strlen(s)+1, sizeof(char));
+      |                              ~~~~~~~~~^~
+../less-608/main.c: In function 'ecalloc':
+../less-608/main.c:337:35: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  337 |         p = (VOID_POINTER) calloc(count, size);
+      |                                   ^~~~~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot -I. -c -DBINDIR=\"/usr/bin\" -DSYSDIR=\"/etc\" -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot-native=   -Wconversion -Wno-error ../less-608/screen.c
+../less-608/screen.c: In function 'raw_mode':
+../less-608/screen.c:415:27: warning: unsigned conversion from 'int' to 'tcflag_t' {aka 'unsigned int'} changes value from '-123' to '4294967173' [-Wsign-conversion]
+  415 |                 s.c_lflag &= ~(0
+      |                           ^~
+../less-608/screen.c:453:27: warning: unsigned conversion from 'int' to 'tcflag_t' {aka 'unsigned int'} changes value from '-57' to '4294967239' [-Wsign-conversion]
+  453 |                 s.c_oflag &= ~(0
+      |                           ^~
+../less-608/screen.c: In function 'ltget_env':
+../less-608/screen.c:692:60: warning: conversion to 'int' from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  692 |                 p->value = (char *) ecalloc(strlen(capname)+3, sizeof(char));
+      |                                             ~~~~~~~~~~~~~~~^~
+../less-608/screen.c: In function 'ltputs':
+../less-608/screen.c:1660:51: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 1660 |                                 memcpy(str2, str, slen);
+      |                                                   ^~~~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot -I. -c -DBINDIR=\"/usr/bin\" -DSYSDIR=\"/etc\" -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot-native=   -Wconversion -Wno-error ../less-608/brac.c
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot -I. -c -DBINDIR=\"/usr/bin\" -DSYSDIR=\"/etc\" -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot-native=   -Wconversion -Wno-error ../less-608/ch.c
+../less-608/ch.c: In function 'ch_get':
+../less-608/ch.c:261:42: warning: conversion from 'int' to 'unsigned char' may change value [-Wconversion]
+  261 |                 bp->data[bp->datasize] = ch_ungotchar;
+      |                                          ^~~~~~~~~~~~
+../less-608/ch.c:293:66: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  293 |                 write(logfile, (char *) &bp->data[bp->datasize], n);
+      |                                                                  ^
+../less-608/ch.c:297:22: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  297 |         bp->datasize += n;
+      |                      ^~
+../less-608/ch.c: In function 'ch_seek':
+../less-608/ch.c:509:21: warning: conversion from 'POSITION' {aka 'long long int'} to 'unsigned int' may change value [-Wconversion]
+  509 |         ch_offset = pos % LBUFSIZE;
+      |                     ^~~
+../less-608/ch.c: In function 'ch_get':
+../less-608/ch.c:293:17: warning: ignoring return value of 'write' declared with attribute 'warn_unused_result' [-Wunused-result]
+  293 |                 write(logfile, (char *) &bp->data[bp->datasize], n);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../less-608/ch.c: In function 'sync_logfile':
+../less-608/ch.c:436:33: warning: ignoring return value of 'write' declared with attribute 'warn_unused_result' [-Wunused-result]
+  436 |                                 write(logfile, (char *) bp->data, bp->datasize);
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot -I. -c -DBINDIR=\"/usr/bin\" -DSYSDIR=\"/etc\" -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot-native=   -Wconversion -Wno-error ../less-608/charset.c
+../less-608/charset.c: In function 'is_utf8_well_formed':
+../less-608/charset.c:557:24: warning: conversion from 'int' to 'unsigned char' may change value [-Wconversion]
+  557 |                 mask = (~((1 << (8-len)) - 1)) & 0xFF;
+      |                        ^
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot -I. -c -DBINDIR=\"/usr/bin\" -DSYSDIR=\"/etc\" -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot-native=   -Wconversion -Wno-error ../less-608/cmdbuf.c
+../less-608/cmdbuf.c: In function 'cmd_step_common':
+../less-608/cmdbuf.c:208:29: warning: conversion to 'LWCHAR' {aka 'long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  208 |                 pr = prchar((int) ch);
+      |                             ^~~~~~~~
+../less-608/cmdbuf.c: In function 'cmd_ichar':
+../less-608/cmdbuf.c:473:28: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  473 |         if (strlen(cmdbuf) + clen >= sizeof(cmdbuf)-1)
+      |                            ^
+../less-608/cmdbuf.c: In function 'cmd_updown':
+../less-608/cmdbuf.c:704:49: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  704 |                 if (strncmp(cmdbuf, ml->string, updown_match) == 0)
+      |                                                 ^~~~~~~~~~~~
+../less-608/cmdbuf.c: In function 'delimit_word':
+../less-608/cmdbuf.c:1043:44: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 1043 |                            strncmp(p, esc, esclen) == 0)
+      |                                            ^~~~~~
+../less-608/cmdbuf.c: In function 'init_compl':
+../less-608/cmdbuf.c:1099:38: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 1099 |         strncpy(tk_original, word, cp-word);
+      |                                    ~~^~~~~
+../less-608/cmdbuf.c: In function 'cmd_char':
+../less-608/cmdbuf.c:1260:34: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+ 1260 |                 cmd_mbc_buf[0] = c;
+      |                                  ^
+../less-608/cmdbuf.c:1269:40: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+ 1269 |                         *cmd_mbc_buf = c;
+      |                                        ^
+../less-608/cmdbuf.c:1291:60: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+ 1291 |                         cmd_mbc_buf[cmd_mbc_buf_index++] = c;
+      |                                                            ^
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot -I. -c -DBINDIR=\"/usr/bin\" -DSYSDIR=\"/etc\" -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot-native=   -Wconversion -Wno-error ../less-608/command.c
+../less-608/command.c: In function 'getcc_end_command':
+../less-608/command.c:918:52: warning: conversion to 'LWCHAR' {aka 'long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  918 |                 return ((ungot == NULL) ? getchr() : 0);
+      |                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+../less-608/command.c: In function 'getccu':
+../less-608/command.c:938:29: warning: conversion to 'LWCHAR' {aka 'long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  938 |                         c = getchr();
+      |                             ^~~~~~
+../less-608/command.c: In function 'getcc_repl':
+../less-608/command.c:989:30: warning: conversion to 'int' from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  989 |                         ki = strlen(repl)-1;
+      |                              ^~~~~~
+../less-608/command.c: In function 'getcc':
+../less-608/command.c:1007:16: warning: conversion to 'int' from 'LWCHAR' {aka 'long unsigned int'} may change the sign of the result [-Wsign-conversion]
+ 1007 |         return getcc_repl(kent, "\n", getccu, ungetcc);
+      |                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../less-608/command.c: In function 'peekcc':
+../less-608/command.c:1065:20: warning: conversion to 'LWCHAR' {aka 'long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+ 1065 |         LWCHAR c = getcc();
+      |                    ^~~~~
+../less-608/command.c: In function 'commands':
+../less-608/command.c:1331:43: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+ 1331 |                                 tbuf[0] = c;
+      |                                           ^
+../less-608/command.c:2010:41: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+ 2010 |                                 pipec = c;
+      |                                         ^
+../less-608/command.c:2030:47: warning: conversion from 'LINENUM' {aka 'long long int'} to 'int' may change value [-Wconversion]
+ 2030 |                                 shift_count = number;
+      |                                               ^~~~~~
+../less-608/command.c:2036:35: warning: conversion from 'LINENUM' {aka 'long long int'} to 'int' may change value [-Wconversion]
+ 2036 |                         hshift -= number;
+      |                                   ^~~~~~
+../less-608/command.c:2045:47: warning: conversion from 'LINENUM' {aka 'long long int'} to 'int' may change value [-Wconversion]
+ 2045 |                                 shift_count = number;
+      |                                               ^~~~~~
+../less-608/command.c:2049:35: warning: conversion from 'LINENUM' {aka 'long long int'} to 'int' may change value [-Wconversion]
+ 2049 |                         hshift += number;
+      |                                   ^~~~~~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot -I. -c -DBINDIR=\"/usr/bin\" -DSYSDIR=\"/etc\" -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot-native=   -Wconversion -Wno-error ../less-608/cvt.c
+../less-608/cvt.c: In function 'cvt_alloc_chpos':
+../less-608/cvt.c:45:51: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+   45 |         int *chpos = (int *) ecalloc(sizeof(int), len);
+      |                                                   ^~~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot -I. -c -DBINDIR=\"/usr/bin\" -DSYSDIR=\"/etc\" -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot-native=   -Wconversion -Wno-error ../less-608/decode.c
+../less-608/decode.c: In function 'getcc_int':
+../less-608/decode.c:495:27: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  495 |                 char ch = getcc();
+      |                           ^~~~~
+../less-608/decode.c: In function 'lesskey':
+../less-608/decode.c:879:36: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  879 |         if ((buf = (char *) calloc((int)len, sizeof(char))) == NULL)
+      |                                    ^~~~~~~~
+../less-608/decode.c: In function 'editchar':
+../less-608/decode.c:1018:32: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+ 1018 |                 usercmd[nch] = c;
+      |                                ^
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot -I. -c -DBINDIR=\"/usr/bin\" -DSYSDIR=\"/etc\" -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot-native=   -Wconversion -Wno-error ../less-608/edit.c
+../less-608/edit.c: In function 'init_textlist':
+../less-608/edit.c:80:44: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+   80 |                            strncmp(s, esc, esclen) == 0)
+      |                                            ^~~~~~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot -I. -c -DBINDIR=\"/usr/bin\" -DSYSDIR=\"/etc\" -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot-native=   -Wconversion -Wno-error ../less-608/filename.c
+../less-608/filename.c: In function 'shell_unquote':
+../less-608/filename.c:68:48: warning: conversion to 'int' from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+   68 |         name = p = (char *) ecalloc(strlen(str)+1, sizeof(char));
+      |                                     ~~~~~~~~~~~^~
+../less-608/filename.c:88:61: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+   88 |                         if (esclen > 0 && strncmp(str, esc, esclen) == 0)
+      |                                                             ^~~~~~
+In file included from ../less-608/filename.c:16:
+../less-608/filename.c: In function 'shell_quote':
+../less-608/less.h:194:67: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  194 | #define SNPRINTF3(str, size, fmt, v1, v2, v3)     snprintf((str), (size), (fmt), (v1), (v2), (v3))
+      |                                                                   ^~~~~~
+../less-608/filename.c:195:17: note: in expansion of macro 'SNPRINTF3'
+  195 |                 SNPRINTF3(newstr, len, "%c%s%c", openquote, s, closequote);
+      |                 ^~~~~~~~~
+../less-608/filename.c: In function 'dirfile':
+../less-608/filename.c:235:36: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  235 |         pathname = (char *) calloc(len, sizeof(char));
+      |                                    ^~~
+../less-608/less.h:194:67: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  194 | #define SNPRINTF3(str, size, fmt, v1, v2, v3)     snprintf((str), (size), (fmt), (v1), (v2), (v3))
+      |                                                                   ^~~~~~
+../less-608/filename.c:238:9: note: in expansion of macro 'SNPRINTF3'
+  238 |         SNPRINTF3(pathname, len, "%s%s%s", dirname, PATHNAME_SEP, filename);
+      |         ^~~~~~~~~
+../less-608/filename.c: In function 'fcomplete':
+../less-608/less.h:192:67: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  192 | #define SNPRINTF1(str, size, fmt, v1)             snprintf((str), (size), (fmt), (v1))
+      |                                                                   ^~~~~~
+../less-608/filename.c:437:9: note: in expansion of macro 'SNPRINTF1'
+  437 |         SNPRINTF1(fpat, len, "%s*", s);
+      |         ^~~~~~~~~
+../less-608/filename.c: In function 'readfd':
+../less-608/filename.c:556:22: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  556 |                 *p = ch;
+      |                      ^~
+../less-608/filename.c: In function 'shellcmd':
+../less-608/less.h:194:67: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  194 | #define SNPRINTF3(str, size, fmt, v1, v2, v3)     snprintf((str), (size), (fmt), (v1), (v2), (v3))
+      |                                                                   ^~~~~~
+../less-608/filename.c:593:25: note: in expansion of macro 'SNPRINTF3'
+  593 |                         SNPRINTF3(scmd, len, "%s %s %s", shell, shell_coption(), esccmd);
+      |                         ^~~~~~~~~
+../less-608/filename.c: In function 'lglob':
+../less-608/less.h:195:67: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  195 | #define SNPRINTF4(str, size, fmt, v1, v2, v3, v4) snprintf((str), (size), (fmt), (v1), (v2), (v3), (v4))
+      |                                                                   ^~~~~~
+../less-608/filename.c:760:9: note: in expansion of macro 'SNPRINTF4'
+  760 |         SNPRINTF4(cmd, len, "%s -p0x%x -d0x%x -e%s ", lessecho,
+      |         ^~~~~~~~~
+../less-608/filename.c: In function 'open_altfile':
+../less-608/less.h:192:67: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  192 | #define SNPRINTF1(str, size, fmt, v1)             snprintf((str), (size), (fmt), (v1))
+      |                                                                   ^~~~~~
+../less-608/filename.c:900:9: note: in expansion of macro 'SNPRINTF1'
+  900 |         SNPRINTF1(cmd, len, lessopen, qfilename);
+      |         ^~~~~~~~~
+../less-608/filename.c: In function 'close_altfile':
+../less-608/less.h:193:67: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  193 | #define SNPRINTF2(str, size, fmt, v1, v2)         snprintf((str), (size), (fmt), (v1), (v2))
+      |                                                                   ^~~~~~
+../less-608/filename.c:995:9: note: in expansion of macro 'SNPRINTF2'
+  995 |         SNPRINTF2(cmd, len, lessclose, qfilename, qaltfilename);
+      |         ^~~~~~~~~
+../less-608/filename.c: In function 'bad_file':
+../less-608/filename.c:1052:55: warning: conversion to 'int' from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+ 1052 |                 m = (char *) ecalloc(strlen(filename) + sizeof(is_a_dir),
+      |                                      ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+../less-608/filename.c:1072:63: warning: conversion to 'int' from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+ 1072 |                         m = (char *) ecalloc(strlen(filename) + sizeof(not_reg),
+      |                                              ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot -I. -c -DBINDIR=\"/usr/bin\" -DSYSDIR=\"/etc\" -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot-native=   -Wconversion -Wno-error ../less-608/forwback.c
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot -I. -c -DBINDIR=\"/usr/bin\" -DSYSDIR=\"/etc\" -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot-native=   -Wconversion -Wno-error ../less-608/help.c
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot -I. -c -DBINDIR=\"/usr/bin\" -DSYSDIR=\"/etc\" -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot-native=   -Wconversion -Wno-error ../less-608/ifile.c
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot -I. -c -DBINDIR=\"/usr/bin\" -DSYSDIR=\"/etc\" -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot-native=   -Wconversion -Wno-error ../less-608/input.c
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot -I. -c -DBINDIR=\"/usr/bin\" -DSYSDIR=\"/etc\" -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot-native=   -Wconversion -Wno-error ../less-608/jump.c
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot -I. -c -DBINDIR=\"/usr/bin\" -DSYSDIR=\"/etc\" -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot-native=   -Wconversion -Wno-error ../less-608/line.c
+../less-608/line.c: In function 'expand_linebuf':
+../less-608/line.c:168:41: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  168 |         char *new_buf = (char *) calloc(new_size, sizeof(char));
+      |                                         ^~~~~~~~
+../less-608/line.c:169:40: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  169 |         int *new_attr = (int *) calloc(new_size, sizeof(int));
+      |                                        ^~~~~~~~
+../less-608/line.c:181:51: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  181 |         memcpy(new_buf, linebuf.buf, size_linebuf * sizeof(char));
+      |                                                   ^
+../less-608/line.c:182:53: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  182 |         memcpy(new_attr, linebuf.attr, size_linebuf * sizeof(int));
+      |                                                     ^
+../less-608/line.c: In function 'pwidth':
+../less-608/line.c:481:32: warning: conversion to 'int' from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  481 |                         return strlen(prchar('\b'));
+      |                                ^~~~~~~~~~~~~~~~~~~~
+../less-608/line.c: In function 'store_char':
+../less-608/line.c:811:49: warning: conversion to 'int' from 'LWCHAR' {aka 'long unsigned int'} may change the sign of the result [-Wsign-conversion]
+  811 |                         xbuf_add(&shifted_ansi, ch); /* Save ANSI attributes */
+      |                                                 ^~
+../less-608/line.c: In function 'pappend':
+../less-608/line.c:955:25: warning: conversion to 'LWCHAR' {aka 'long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  955 |                 pendc = c;
+      |                         ^
+../less-608/line.c:962:31: warning: conversion to 'LWCHAR' {aka 'long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  962 |                 r = do_append(c, NULL, pos);
+      |                               ^
+../less-608/line.c:970:36: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  970 |                         *mbc_buf = c;
+      |                                    ^
+../less-608/line.c:972:47: warning: conversion to 'LWCHAR' {aka 'long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  972 |                                 r = do_append(c, NULL, pos);
+      |                                               ^
+../less-608/line.c:983:52: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  983 |                         mbc_buf[mbc_buf_index++] = c;
+      |                                                    ^
+../less-608/line.c: In function 'store_ansi':
+../less-608/line.c:1041:38: warning: conversion to 'int' from 'LWCHAR' {aka 'long unsigned int'} may change the sign of the result [-Wsign-conversion]
+ 1041 |                 xbuf_add(&last_ansi, ch);
+      |                                      ^~
+../less-608/line.c:1047:38: warning: conversion to 'int' from 'LWCHAR' {aka 'long unsigned int'} may change the sign of the result [-Wsign-conversion]
+ 1047 |                 xbuf_add(&last_ansi, ch);
+      |                                      ^~
+../less-608/line.c: In function 'forw_raw_line':
+../less-608/line.c:1439:36: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+ 1439 |                 linebuf.buf[n++] = c;
+      |                                    ^
+../less-608/line.c: In function 'back_raw_line':
+../less-608/line.c:1515:36: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+ 1515 |                 linebuf.buf[--n] = c;
+      |                                    ^
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot -I. -c -DBINDIR=\"/usr/bin\" -DSYSDIR=\"/etc\" -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot-native=   -Wconversion -Wno-error ../less-608/linenum.c
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot -I. -c -DBINDIR=\"/usr/bin\" -DSYSDIR=\"/etc\" -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot-native=   -Wconversion -Wno-error ../less-608/lsystem.c
+In file included from ../less-608/lsystem.c:16:
+../less-608/lsystem.c: In function 'lsystem':
+../less-608/less.h:194:67: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  194 | #define SNPRINTF3(str, size, fmt, v1, v2, v3)     snprintf((str), (size), (fmt), (v1), (v2), (v3))
+      |                                                                   ^~~~~~
+../less-608/lsystem.c:144:33: note: in expansion of macro 'SNPRINTF3'
+  144 |                                 SNPRINTF3(p, len, "%s %s %s", shell, shell_coption(), esccmd);
+      |                                 ^~~~~~~~~
+../less-608/lsystem.c:122:17: warning: ignoring return value of 'dup' declared with attribute 'warn_unused_result' [-Wunused-result]
+  122 |                 dup(inp);
+      |                 ^~~~~~~~
+../less-608/lsystem.c:156:9: warning: ignoring return value of 'system' declared with attribute 'warn_unused_result' [-Wunused-result]
+  156 |         system(p);
+      |         ^~~~~~~~~
+../less-608/lsystem.c:181:9: warning: ignoring return value of 'dup' declared with attribute 'warn_unused_result' [-Wunused-result]
+  181 |         dup(inp);
+      |         ^~~~~~~~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot -I. -c -DBINDIR=\"/usr/bin\" -DSYSDIR=\"/etc\" -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot-native=   -Wconversion -Wno-error ../less-608/mark.c
+../less-608/mark.c: In function 'init_mark':
+../less-608/mark.c:82:35: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+   82 |                 default: letter = (i < 26) ? 'a'+i : 'A'+i-26; break;
+      |                                   ^
+../less-608/mark.c: In function 'posmark':
+../less-608/mark.c:350:48: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  350 |                         if (i < 26) return 'a' + i;
+      |                                            ~~~~^~~
+../less-608/mark.c:351:50: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  351 |                         if (i < 26*2) return 'A' + (i - 26);
+      |                                              ~~~~^~~~~~~~~~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot -I. -c -DBINDIR=\"/usr/bin\" -DSYSDIR=\"/etc\" -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot-native=   -Wconversion -Wno-error ../less-608/optfunc.c
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot -I. -c -DBINDIR=\"/usr/bin\" -DSYSDIR=\"/etc\" -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot-native=   -Wconversion -Wno-error ../less-608/option.c
+../less-608/option.c: In function 'propt':
+../less-608/option.c:60:36: warning: conversion to 'LWCHAR' {aka 'long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+   60 |         sprintf(buf, "-%s", prchar(c));
+      |                                    ^
+../less-608/option.c: In function 'optstring':
+../less-608/option.c:601:44: warning: conversion to 'int' from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  601 |         *p_str = (char *) ecalloc(strlen(s)+1, sizeof(char));
+      |                                   ~~~~~~~~~^~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot -I. -c -DBINDIR=\"/usr/bin\" -DSYSDIR=\"/etc\" -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot-native=   -Wconversion -Wno-error ../less-608/opttbl.c
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot -I. -c -DBINDIR=\"/usr/bin\" -DSYSDIR=\"/etc\" -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot-native=   -Wconversion -Wno-error ../less-608/os.c
+../less-608/os.c: In function 'poll_events':
+../less-608/os.c:84:38: warning: conversion from 'int' to 'short int' may change value [-Wconversion]
+   84 |         struct pollfd poller = { fd, events, 0 };
+      |                                      ^~~~~~
+In file included from ../less-608/os.c:23:
+../less-608/os.c: In function 'errno_message':
+../less-608/less.h:193:67: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  193 | #define SNPRINTF2(str, size, fmt, v1, v2)         snprintf((str), (size), (fmt), (v1), (v2))
+      |                                                                   ^~~~~~
+../less-608/os.c:303:9: note: in expansion of macro 'SNPRINTF2'
+  303 |         SNPRINTF2(m, len, "%s: %s", filename, p);
+      |         ^~~~~~~~~
+../less-608/os.c: In function 'muldiv':
+../less-608/os.c:314:36: warning: conversion from 'POSITION' {aka 'long long int'} to 'double' may change value [-Wconversion]
+  314 |         double v = (((double) val) * num) / den;
+      |                                    ^
+../less-608/os.c:314:43: warning: conversion from 'POSITION' {aka 'long long int'} to 'double' may change value [-Wconversion]
+  314 |         double v = (((double) val) * num) / den;
+      |                                           ^
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot -I. -c -DBINDIR=\"/usr/bin\" -DSYSDIR=\"/etc\" -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot-native=   -Wconversion -Wno-error ../less-608/output.c
+../less-608/output.c: In function 'flush':
+../less-608/output.c:393:32: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  393 |         if (write(outfd, obuf, n) != n)
+      |                                ^
+../less-608/output.c: In function 'putchr':
+../less-608/output.c:453:17: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  453 |         *ob++ = c;
+      |                 ^
+../less-608/output.c: In function 'postoa':
+../less-608/output.c:493:24: warning: conversion from 'POSITION' {aka 'long long int'} to 'char' may change value [-Wconversion]
+  493 |                 *--s = (num % 10) + '0'; \
+      |                        ^
+../less-608/output.c:499:1: note: in expansion of macro 'TYPE_TO_A_FUNC'
+  499 | TYPE_TO_A_FUNC(postoa, POSITION)
+      | ^~~~~~~~~~~~~~
+../less-608/output.c: In function 'linenumtoa':
+../less-608/output.c:493:24: warning: conversion from 'LINENUM' {aka 'long long int'} to 'char' may change value [-Wconversion]
+  493 |                 *--s = (num % 10) + '0'; \
+      |                        ^
+../less-608/output.c:500:1: note: in expansion of macro 'TYPE_TO_A_FUNC'
+  500 | TYPE_TO_A_FUNC(linenumtoa, LINENUM)
+      | ^~~~~~~~~~~~~~
+../less-608/output.c: In function 'inttoa':
+../less-608/output.c:493:24: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  493 |                 *--s = (num % 10) + '0'; \
+      |                        ^
+../less-608/output.c:501:1: note: in expansion of macro 'TYPE_TO_A_FUNC'
+  501 | TYPE_TO_A_FUNC(inttoa, int)
+      | ^~~~~~~~~~~~~~
+../less-608/output.c: In function 'get_return':
+../less-608/output.c:630:25: warning: conversion to 'LWCHAR' {aka 'long unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  630 |                 ungetcc(c);
+      |                         ^
+../less-608/output.c: In function 'error':
+../less-608/output.c:664:43: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  664 |         col += sizeof(return_to_continue) + so_e_width;
+      |                                           ^
+../less-608/output.c:664:13: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  664 |         col += sizeof(return_to_continue) + so_e_width;
+      |             ^~
+../less-608/output.c:664:16: warning: conversion to 'int' from 'unsigned int' may change the sign of the result [-Wsign-conversion]
+  664 |         col += sizeof(return_to_continue) + so_e_width;
+      |                ^~~~~~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot -I. -c -DBINDIR=\"/usr/bin\" -DSYSDIR=\"/etc\" -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot-native=   -Wconversion -Wno-error ../less-608/pattern.c
+../less-608/pattern.c: In function 'compile_pattern':
+../less-608/pattern.c:164:61: warning: conversion to 'int' from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  164 |                 cvt_pattern = (char*) ecalloc(1, cvt_length(strlen(pattern), CVT_TO_LC));
+      |                                                             ^~~~~~~~~~~~~~~
+../less-608/pattern.c:164:50: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  164 |                 cvt_pattern = (char*) ecalloc(1, cvt_length(strlen(pattern), CVT_TO_LC));
+      |                                                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot -I. -c -DBINDIR=\"/usr/bin\" -DSYSDIR=\"/etc\" -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot-native=   -Wconversion -Wno-error ../less-608/position.c
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot -I. -c -DBINDIR=\"/usr/bin\" -DSYSDIR=\"/etc\" -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot-native=   -Wconversion -Wno-error ../less-608/prompt.c
+../less-608/prompt.c: In function 'ap_str':
+../less-608/prompt.c:92:24: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+   92 |         strncpy(mp, s, len);
+      |                        ^~~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot -I. -c -DBINDIR=\"/usr/bin\" -DSYSDIR=\"/etc\" -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot-native=   -Wconversion -Wno-error ../less-608/search.c
+../less-608/search.c: In function 'search_range':
+../less-608/search.c:1389:45: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+ 1389 |                 cline = (char *) ecalloc(1, cvt_len);
+      |                                             ^~~~~~~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot -I. -c -DBINDIR=\"/usr/bin\" -DSYSDIR=\"/etc\" -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot-native=   -Wconversion -Wno-error ../less-608/signal.c
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot -I. -c -DBINDIR=\"/usr/bin\" -DSYSDIR=\"/etc\" -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot-native=   -Wconversion -Wno-error ../less-608/tags.c
+../less-608/tags.c: In function 'maketagent':
+../less-608/tags.c:126:54: warning: conversion to 'int' from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  126 |         tp->tag_file = (char *) ecalloc(strlen(file) + 1, sizeof(char));
+      |                                         ~~~~~~~~~~~~~^~~
+../less-608/tags.c:129:27: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  129 |         tp->tag_endline = endline;
+      |                           ^~~~~~~
+../less-608/tags.c:134:68: warning: conversion to 'int' from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  134 |                 tp->tag_pattern = (char *) ecalloc(strlen(pattern) + 1, sizeof(char));
+      |                                                    ~~~~~~~~~~~~~~~~^~~
+../less-608/tags.c: In function 'findctag':
+../less-608/tags.c:305:41: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  305 |                 if (strncmp(tag, tline, taglen) != 0 || !WHITESP(tline[taglen]))
+      |                                         ^~~~~~
+../less-608/tags.c: In function 'curtag_match':
+../less-608/tags.c:411:48: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  411 |         if (strncmp(curtag->tag_pattern, line, len) == 0 &&
+      |                                                ^~~
+../less-608/tags.c: In function 'ctagsearch':
+../less-608/tags.c:485:59: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  485 |                         char *cline = (char *) ecalloc(1, cvt_len);
+      |                                                           ^~~~~~~
+../less-608/tags.c: In function 'findgtag':
+../less-608/tags.c:568:46: warning: conversion to 'int' from 'size_t' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+  567 |                 command = (char *) ecalloc(strlen(cmd) + strlen(flag) +
+      |                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  568 |                                 strlen(qtag) + 5, sizeof(char));
+      |                                 ~~~~~~~~~~~~~^~~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot -I. -c -DBINDIR=\"/usr/bin\" -DSYSDIR=\"/etc\" -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot-native=   -Wconversion -Wno-error ../less-608/ttyin.c
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot -I. -c -DBINDIR=\"/usr/bin\" -DSYSDIR=\"/etc\" -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot-native=   -Wconversion -Wno-error ../less-608/version.c
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot -I. -c -DBINDIR=\"/usr/bin\" -DSYSDIR=\"/etc\" -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot-native=   -Wconversion -Wno-error ../less-608/xbuf.c
+../less-608/xbuf.c: In function 'xbuf_add':
+../less-608/xbuf.c:46:54: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+   46 |                         memcpy(data, xbuf->data, xbuf->end);
+      |                                                  ~~~~^~~~~
+../less-608/xbuf.c:51:35: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+   51 |         xbuf->data[xbuf->end++] = ch;
+      |                                   ^~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot -I. -c -DBINDIR=\"/usr/bin\" -DSYSDIR=\"/etc\" -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot-native=   -Wconversion -Wno-error ../less-608/lesskey_parse.c
+../less-608/lesskey_parse.c: In function 'parse_error':
+../less-608/lesskey_parse.c:137:44: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  137 |                 snprintf(buf+n, sizeof(buf)-n, fmt, arg1);
+      |                                            ^
+../less-608/lesskey_parse.c: In function 'char_string':
+../less-608/lesskey_parse.c:174:26: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  174 |                 buf[0] = ch;
+      |                          ^~
+../less-608/lesskey_parse.c: In function 'tstr':
+../less-608/lesskey_parse.c:225:38: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  225 |                                 ch = 8*ch + (*p - '0');
+      |                                      ^
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot-native=  -Wl,-z,relro,-z,now -o less main.o screen.o brac.o ch.o charset.o cmdbuf.o command.o cvt.o decode.o edit.o filename.o forwback.o help.o ifile.o input.o jump.o line.o linenum.o lsystem.o mark.o optfunc.o option.o opttbl.o os.o output.o pattern.o position.o prompt.o search.o signal.o tags.o ttyin.o version.o xbuf.o   lesskey_parse.o -ltinfo
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot -I. -c -DBINDIR=\"/usr/bin\" -DSYSDIR=\"/etc\" -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot-native=   -Wconversion -Wno-error ../less-608/lesskey.c
+../less-608/lesskey.c: In function 'ecalloc':
+../less-608/lesskey.c:140:20: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  140 |         p = calloc(count, size);
+      |                    ^~~~~
+../less-608/lesskey.c:143:79: warning: conversion to 'unsigned int' from 'int' may change the sign of the result [-Wsign-conversion]
+  143 |         fprintf(stderr, "lesskey: cannot allocate %d bytes of memory\n", count*size);
+      |                                                                               ^
+../less-608/lesskey.c: In function 'fputint':
+../less-608/lesskey.c:292:13: warning: conversion from 'unsigned int' to 'char' may change value [-Wconversion]
+  292 |         c = val / KRADIX;
+      |             ^~~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot-native=  -Wl,-z,relro,-z,now -o lesskey lesskey.o lesskey_parse.o xbuf.o version.o
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot -I. -c -DBINDIR=\"/usr/bin\" -DSYSDIR=\"/etc\" -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot-native=   -Wconversion -Wno-error ../less-608/lessecho.c
+../less-608/lessecho.c: In function 'add_metachar':
+../less-608/lessecho.c:152:37: warning: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Wsign-conversion]
+  152 |                 p = (char *) malloc(size_metachars);
+      |                                     ^~~~~~~~~~~~~~
+../less-608/lessecho.c:163:38: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  163 |         metachars[num_metachars++] = ch;
+      |                                      ^~
+../less-608/lessecho.c: In function 'main':
+../less-608/lessecho.c:213:38: warning: conversion from 'long int' to 'char' may change value [-Wconversion]
+  213 |                         closequote = lstrtol(++arg, 0, &s);
+      |                                      ^~~~~~~
+../less-608/lessecho.c:224:46: warning: conversion from 'long int' to 'char' may change value [-Wconversion]
+  224 |                         meta_escape_buf[0] = lstrtol(++arg, 0, &s);
+      |                                              ^~~~~~~
+../less-608/lessecho.c:234:37: warning: conversion from 'long int' to 'char' may change value [-Wconversion]
+  234 |                         openquote = lstrtol(++arg, 0, &s);
+      |                                     ^~~~~~~
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/less-608=/usr/src/debug/less/608-r0  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/build=/usr/src/debug/less/608-r0  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/less/608-r0/recipe-sysroot-native=  -Wl,-z,relro,-z,now -o lessecho lessecho.o version.o
+DEBUG: Shell function do_compile finished

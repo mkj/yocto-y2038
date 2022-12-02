@@ -1,0 +1,11 @@
+338,343d337
+< atd.c:754:26: warning: conversion to 'long unsigned int' from 'time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+<   754 |         next_batch = now + batch_interval;
+<       |                          ^
+< atd.c:754:22: warning: conversion to 'time_t' {aka 'long int'} from 'long unsigned int' may change the sign of the result [-Wsign-conversion]
+<   754 |         next_batch = now + batch_interval;
+<       |                      ^~~
+348c342
+< atd.c:807:16: warning: conversion to 'unsigned int' from 'time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> atd.c:807:16: warning: conversion from 'time_t' {aka 'long long int'} to 'unsigned int' may change value [-Wconversion]

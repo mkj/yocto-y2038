@@ -1,0 +1,46 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['virtual:native:/home/matt/src/openbmc/meta/recipes-extended/xz/xz_5.2.7.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: ['xz-native', 'libtool-native', 'gettext-minimal-native', 'texinfo-dummy-native']
+NOTE: Skipping as already exists in sysroot: []
+DEBUG: sed -e 's:^[^/]*/:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libgpiod/1.6.3-r0/recipe-sysroot-native/:g' /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/libtool-native/fixmepath | xargs sed -i -e 's:FIXMESTAGINGDIRTARGET:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libgpiod/1.6.3-r0/recipe-sysroot:g; s:FIXMESTAGINGDIRHOST:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libgpiod/1.6.3-r0/recipe-sysroot-native:g' -e 's:FIXME_PSEUDO_SYSROOT:/home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/pseudo-native:g' -e 's:FIXME_HOSTTOOLS_DIR:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:g' -e 's:FIXME_PKGDATA_DIR:/home/matt/tmp/build/obmc-y2038/tmp/pkgdata/evb-ast2600:g' -e 's:FIXME_PSEUDO_LOCALSTATEDIR:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libgpiod/1.6.3-r0/pseudo/:g' -e 's:FIXME_LOGFIFO:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libgpiod/1.6.3-r0/temp/fifo.1869871:g'
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function do_unpack
+DEBUG: Executing python function base_do_unpack
+NOTE: Unpacking /home/matt/tmp/build/obmc-y2038/downloads/libgpiod-1.6.3.tar.xz to /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libgpiod/1.6.3-r0/
+DEBUG: Searching for run-ptest in paths:
+    /home/matt/src/openbmc/meta-openembedded/meta-oe/recipes-support/libgpiod/libgpiod-1.6.3/openbmc-phosphor
+    /home/matt/src/openbmc/meta-openembedded/meta-oe/recipes-support/libgpiod/libgpiod/openbmc-phosphor
+    /home/matt/src/openbmc/meta-openembedded/meta-oe/recipes-support/libgpiod/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta-openembedded/meta-oe/recipes-support/libgpiod/libgpiod-1.6.3/openbmc-phosphor
+    /home/matt/src/openbmc/meta-openembedded/meta-oe/recipes-support/libgpiod/libgpiod/openbmc-phosphor
+    /home/matt/src/openbmc/meta-openembedded/meta-oe/recipes-support/libgpiod/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta-openembedded/meta-oe/recipes-support/libgpiod/libgpiod-1.6.3/evb-ast2600
+    /home/matt/src/openbmc/meta-openembedded/meta-oe/recipes-support/libgpiod/libgpiod/evb-ast2600
+    /home/matt/src/openbmc/meta-openembedded/meta-oe/recipes-support/libgpiod/files/evb-ast2600
+    /home/matt/src/openbmc/meta-openembedded/meta-oe/recipes-support/libgpiod/libgpiod-1.6.3/aspeed-g6
+    /home/matt/src/openbmc/meta-openembedded/meta-oe/recipes-support/libgpiod/libgpiod/aspeed-g6
+    /home/matt/src/openbmc/meta-openembedded/meta-oe/recipes-support/libgpiod/files/aspeed-g6
+    /home/matt/src/openbmc/meta-openembedded/meta-oe/recipes-support/libgpiod/libgpiod-1.6.3/aspeed
+    /home/matt/src/openbmc/meta-openembedded/meta-oe/recipes-support/libgpiod/libgpiod/aspeed
+    /home/matt/src/openbmc/meta-openembedded/meta-oe/recipes-support/libgpiod/files/aspeed
+    /home/matt/src/openbmc/meta-openembedded/meta-oe/recipes-support/libgpiod/libgpiod-1.6.3/armv7a
+    /home/matt/src/openbmc/meta-openembedded/meta-oe/recipes-support/libgpiod/libgpiod/armv7a
+    /home/matt/src/openbmc/meta-openembedded/meta-oe/recipes-support/libgpiod/files/armv7a
+    /home/matt/src/openbmc/meta-openembedded/meta-oe/recipes-support/libgpiod/libgpiod-1.6.3/phosphor-evb
+    /home/matt/src/openbmc/meta-openembedded/meta-oe/recipes-support/libgpiod/libgpiod/phosphor-evb
+    /home/matt/src/openbmc/meta-openembedded/meta-oe/recipes-support/libgpiod/files/phosphor-evb
+    /home/matt/src/openbmc/meta-openembedded/meta-oe/recipes-support/libgpiod/libgpiod-1.6.3/arm
+    /home/matt/src/openbmc/meta-openembedded/meta-oe/recipes-support/libgpiod/libgpiod/arm
+    /home/matt/src/openbmc/meta-openembedded/meta-oe/recipes-support/libgpiod/files/arm
+    /home/matt/src/openbmc/meta-openembedded/meta-oe/recipes-support/libgpiod/libgpiod-1.6.3/
+    /home/matt/src/openbmc/meta-openembedded/meta-oe/recipes-support/libgpiod/libgpiod/
+    /home/matt/src/openbmc/meta-openembedded/meta-oe/recipes-support/libgpiod/files/
+NOTE: Unpacking /home/matt/src/openbmc/meta-openembedded/meta-oe/recipes-support/libgpiod/files/run-ptest to /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libgpiod/1.6.3-r0/
+DEBUG: Python function base_do_unpack finished
+DEBUG: Python function do_unpack finished
+DEBUG: Executing python function create_source_date_epoch_stamp
+DEBUG: Newest file found: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libgpiod/1.6.3-r0/libgpiod-1.6.3/man/gpiomon.man
+DEBUG: SOURCE_DATE_EPOCH: 1616416167
+DEBUG: Python function create_source_date_epoch_stamp finished
+DEBUG: Executing python function do_qa_unpack
+DEBUG: Python function do_qa_unpack finished

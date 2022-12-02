@@ -1,0 +1,46 @@
+DEBUG: Executing python function autotools_aclocals
+DEBUG: SITE files ['endian-little', 'bit-32', 'arm-common', 'arm-32', 'common-linux', 'common-glibc', 'arm-linux', 'arm-linux-gnueabi', 'common']
+DEBUG: Python function autotools_aclocals finished
+DEBUG: Executing shell function do_compile
+NOTE: make -j 1
+make  all-recursive
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/obmc-console/1.0+gitAUTOINC+bbc95526c6-r1/build'
+Making all in test
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/obmc-console/1.0+gitAUTOINC+bbc95526c6-r1/build/test'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/obmc-console/1.0+gitAUTOINC+bbc95526c6-r1/build/test'
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/obmc-console/1.0+gitAUTOINC+bbc95526c6-r1/build'
+arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/obmc-console/1.0+gitAUTOINC+bbc95526c6-r1/recipe-sysroot -DHAVE_CONFIG_H -I. -I../git  -DSYSCONFDIR=\"/etc\" -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64  -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 -O2 -pipe -g -feliminate-unused-debug-types -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/obmc-console/1.0+gitAUTOINC+bbc95526c6-r1/git=/usr/src/debug/obmc-console/1.0+gitAUTOINC+bbc95526c6-r1  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/obmc-console/1.0+gitAUTOINC+bbc95526c6-r1/git=/usr/src/debug/obmc-console/1.0+gitAUTOINC+bbc95526c6-r1  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/obmc-console/1.0+gitAUTOINC+bbc95526c6-r1/build=/usr/src/debug/obmc-console/1.0+gitAUTOINC+bbc95526c6-r1  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/obmc-console/1.0+gitAUTOINC+bbc95526c6-r1/build=/usr/src/debug/obmc-console/1.0+gitAUTOINC+bbc95526c6-r1  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/obmc-console/1.0+gitAUTOINC+bbc95526c6-r1/recipe-sysroot=  -fmacro-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/obmc-console/1.0+gitAUTOINC+bbc95526c6-r1/recipe-sysroot=  -fdebug-prefix-map=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/obmc-console/1.0+gitAUTOINC+bbc95526c6-r1/recipe-sysroot-native=   -Wconversion -Wno-error -fpic -O2 -Wall -Werror -c -o obmc_console_client-console-client.o `test -f 'console-client.c' || echo '../git/'`console-client.c
+../git/console-client.c: In function 'process_ssh_tty':
+../git/console-client.c:93:63: error: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Werror=sign-conversion]
+   93 |                                 client->console_sd, out_buf, i-(out_buf-buf));
+      |                                                               ^
+../git/console-client.c:106:62: error: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Werror=sign-conversion]
+  106 |         rc = write_buf_to_fd(client->console_sd, out_buf, len-(out_buf-buf));
+      |                                                              ^
+../git/console-client.c: In function 'process_tty':
+../git/console-client.c:149:53: error: conversion to 'size_t' {aka 'unsigned int'} from 'ssize_t' {aka 'int'} may change the sign of the result [-Werror=sign-conversion]
+  149 |                 return process_ssh_tty(client, buf, len);
+      |                                                     ^~~
+../git/console-client.c:151:53: error: conversion to 'size_t' {aka 'unsigned int'} from 'ssize_t' {aka 'int'} may change the sign of the result [-Werror=sign-conversion]
+  151 |                 return process_str_tty(client, buf, len);
+      |                                                     ^~~
+../git/console-client.c: In function 'process_console':
+../git/console-client.c:173:51: error: conversion to 'size_t' {aka 'unsigned int'} from 'int' may change the sign of the result [-Werror=sign-conversion]
+  173 |         rc = write_buf_to_fd(client->fd_out, buf, len);
+      |                                                   ^~~
+../git/console-client.c: In function 'client_init':
+../git/console-client.c:235:62: error: conversion to 'unsigned int' from 'ssize_t' {aka 'int'} may change the sign of the result [-Werror=sign-conversion]
+  235 |                         sizeof(addr) - sizeof(addr.sun_path) + len);
+      |                                                              ^
+../git/console-client.c:239:45: error: conversion to 'size_t' {aka 'unsigned int'} from 'ssize_t' {aka 'int'} may change the sign of the result [-Werror=sign-conversion]
+  239 |         console_socket_path_readable(&addr, len, path);
+      |                                             ^~~
+cc1: all warnings being treated as errors
+make[2]: *** [Makefile:718: obmc_console_client-console-client.o] Error 1
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/obmc-console/1.0+gitAUTOINC+bbc95526c6-r1/build'
+make[1]: *** [Makefile:981: all-recursive] Error 1
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/obmc-console/1.0+gitAUTOINC+bbc95526c6-r1/build'
+make: *** [Makefile:491: all] Error 2
+ERROR: oe_runmake failed
+WARNING: exit code 1 from a shell command.

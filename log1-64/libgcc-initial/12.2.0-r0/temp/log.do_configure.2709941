@@ -1,0 +1,83 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-devtools/binutils/binutils-cross_2.39.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-native_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-extended/texinfo-dummy-native/texinfo-dummy-native.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-kernel/linux-libc-headers/linux-libc-headers_5.19.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-core/zlib/zlib_1.2.13.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/autoconf/autoconf_2.71.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/automake/automake_1.16.5.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/flex/flex_2.6.4.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/gnu-config/gnu-config_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-extended/xz/xz_5.2.7.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-extended/zstd/zstd_1.5.2.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-support/gmp/gmp_6.2.1.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-support/libmpc/libmpc_1.2.1.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-support/mpfr/mpfr_4.1.0.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: ['quilt-native', 'patch-native', 'attr-native']
+NOTE: Skipping as already exists in sysroot: ['binutils-cross-arm', 'gcc-cross-arm', 'libtool-native', 'texinfo-dummy-native', 'linux-libc-headers', 'zlib-native', 'autoconf-native', 'automake-native', 'flex-native', 'gnu-config-native', 'pseudo-native', 'xz-native', 'zstd-native', 'gmp-native', 'libmpc-native', 'mpfr-native', 'm4-native', 'gettext-minimal-native']
+DEBUG: sed -e 's:^[^/]*/:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libgcc-initial/12.2.0-r0/recipe-sysroot-native/:g' /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/quilt-native/fixmepath | xargs sed -i -e 's:FIXMESTAGINGDIRTARGET:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libgcc-initial/12.2.0-r0/recipe-sysroot:g; s:FIXMESTAGINGDIRHOST:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libgcc-initial/12.2.0-r0/recipe-sysroot-native:g' -e 's:FIXME_PSEUDO_SYSROOT:/home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/pseudo-native:g' -e 's:FIXME_HOSTTOOLS_DIR:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:g' -e 's:FIXME_PKGDATA_DIR:/home/matt/tmp/build/obmc-y2038/tmp/pkgdata/evb-ast2600:g' -e 's:FIXME_PSEUDO_LOCALSTATEDIR:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libgcc-initial/12.2.0-r0/pseudo/:g' -e 's:FIXME_LOGFIFO:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libgcc-initial/12.2.0-r0/temp/fifo.2709941:g'
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing shell function autotools_preconfigure
+DEBUG: Shell function autotools_preconfigure finished
+DEBUG: Executing python function autotools_aclocals
+DEBUG: SITE files ['endian-little', 'bit-32', 'arm-common', 'arm-32', 'common-linux', 'common-glibc', 'arm-linux', 'arm-linux-gnueabi', 'common']
+DEBUG: Python function autotools_aclocals finished
+DEBUG: Executing python function gcc_multilib_setup
+DEBUG: Python function gcc_multilib_setup finished
+DEBUG: Executing python function extract_stashed_builddir
+DEBUG: sed -e 's:^[^/]*/:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libgcc-initial/12.2.0-r0/gcc-12.2.0/build.arm-openbmc-linux-gnueabi.arm-openbmc-linux-gnueabi/:g' /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/gcc-stashed-builddir-arm-openbmc-linux-gnueabi/fixmepath | xargs sed -i -e 's:FIXMESTAGINGDIRTARGET:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libgcc-initial/12.2.0-r0/recipe-sysroot:g; s:FIXMESTAGINGDIRHOST:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libgcc-initial/12.2.0-r0/recipe-sysroot-native:g' -e 's:FIXME_PSEUDO_SYSROOT:/home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/pseudo-native:g' -e 's:FIXME_HOSTTOOLS_DIR:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:g' -e 's:FIXME_PKGDATA_DIR:/home/matt/tmp/build/obmc-y2038/tmp/pkgdata/evb-ast2600:g' -e 's:FIXME_PSEUDO_LOCALSTATEDIR:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libgcc-initial/12.2.0-r0/pseudo/:g' -e 's:FIXME_LOGFIFO:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libgcc-initial/12.2.0-r0/temp/fifo.2709941:g'
+DEBUG: Python function extract_stashed_builddir finished
+DEBUG: Executing shell function do_configure
+configure: WARNING: unrecognized options: --disable-silent-rules, --disable-dependency-tracking, --with-libtool-sysroot, --with-gnu-ld, --enable-languages, --enable-threads, --disable-multilib, --enable-default-pie, --enable-c99, --enable-long-long, --enable-symvers, --enable-libstdcxx-pch, --without-local-prefix, --disable-install-libiberty, --disable-libssp, --enable-libitm, --enable-lto, --disable-bootstrap, --with-system-zlib, --with-linker-hash-style, --enable-linker-build-id, --with-ppl, --with-cloog, --enable-checking, --enable-cheaders, --without-isl, --with-gxx-include-dir, --with-sysroot, --with-build-sysroot, --enable-standard-branch-protection, --disable-static, --disable-nls, --enable-initfini-array
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... arm-openbmc-linux-gnueabi
+checking for --enable-version-specific-runtime-libs... no
+checking for a BSD-compatible install... /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c
+checking for gawk... gawk
+checking for arm-openbmc-linux-gnueabi-ar... arm-openbmc-linux-gnueabi-gcc-ar
+checking for arm-openbmc-linux-gnueabi-lipo... no
+checking for lipo... no
+checking for arm-openbmc-linux-gnueabi-nm... arm-openbmc-linux-gnueabi-gcc-nm
+checking for arm-openbmc-linux-gnueabi-ranlib... arm-openbmc-linux-gnueabi-gcc-ranlib
+checking for arm-openbmc-linux-gnueabi-strip... arm-openbmc-linux-gnueabi-strip
+checking whether ln -s works... yes
+checking for arm-openbmc-linux-gnueabi-gcc... arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libgcc-initial/12.2.0-r0/recipe-sysroot
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libgcc-initial/12.2.0-r0/recipe-sysroot accepts -g... yes
+checking for arm-openbmc-linux-gnueabi-gcc  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libgcc-initial/12.2.0-r0/recipe-sysroot option to accept ISO C89... unsupported
+checking how to run the C preprocessor... arm-openbmc-linux-gnueabi-gcc -E --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libgcc-initial/12.2.0-r0/recipe-sysroot  -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... unknown
+checking for _LARGE_FILES value needed for large files... unknown
+checking size of double... 8
+checking size of long double... 8
+checking for inttypes.h... no
+checking for stdint.h... no
+checking for stdlib.h... no
+checking for ftw.h... no
+checking for unistd.h... no
+checking for sys/stat.h... no
+checking for sys/types.h... no
+checking for string.h... no
+checking for strings.h... no
+checking for memory.h... no
+checking for sys/auxv.h... no
+checking for sys/mman.h... no
+checking for grep that handles long lines and -e... /home/matt/tmp/build/obmc-y2038/tmp/hosttools/grep
+checking for egrep... /home/matt/tmp/build/obmc-y2038/tmp/hosttools/grep -E
+checking for ANSI C header files... no
+checking whether decimal floating point is supported... no
+configure: WARNING: decimal float is not supported for this target, ignored
+checking whether fixed-point is supported... yes
+checking whether the compiler is configured for setjmp/longjmp exceptions... no
+checking for CET support... no
+checking if the linker (arm-openbmc-linux-gnueabi-ld --sysroot=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/libgcc-initial/12.2.0-r0/recipe-sysroot ) is GNU ld... yes
+checking for thread model used by GCC... posix
+checking whether assembler supports CFI directives... yes
+checking for target glibc version... 2.28
+2.28
+checking for __attribute__((visibility("hidden")))... yes
+checking for .cfi_sections .debug_frame... yes
+checking whether the target assembler supports thread-local storage... yes
+checking whether the thread-local storage support is from emutls... no
+checking for init priority support... yes
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating auto-target.h
+config.status: executing default commands
+configure: WARNING: unrecognized options: --disable-silent-rules, --disable-dependency-tracking, --with-libtool-sysroot, --with-gnu-ld, --enable-languages, --enable-threads, --disable-multilib, --enable-default-pie, --enable-c99, --enable-long-long, --enable-symvers, --enable-libstdcxx-pch, --without-local-prefix, --disable-install-libiberty, --disable-libssp, --enable-libitm, --enable-lto, --disable-bootstrap, --with-system-zlib, --with-linker-hash-style, --enable-linker-build-id, --with-ppl, --with-cloog, --enable-checking, --enable-cheaders, --without-isl, --with-gxx-include-dir, --with-sysroot, --with-build-sysroot, --enable-standard-branch-protection, --disable-static, --disable-nls, --enable-initfini-array
+DEBUG: Shell function do_configure finished
+DEBUG: Executing python function do_qa_configure
+NOTE: Checking autotools environment for common misconfiguration
+NOTE: Checking configure output for unrecognised options
+DEBUG: Python function do_qa_configure finished
+DEBUG: Executing shell function autotools_postconfigure
+DEBUG: Shell function autotools_postconfigure finished

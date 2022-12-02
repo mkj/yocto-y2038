@@ -1,0 +1,110 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-devtools/binutils/binutils-cross_2.39.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: []
+NOTE: Skipping as already exists in sysroot: ['binutils-cross-arm', 'pseudo-native', 'texinfo-dummy-native', 'flex-native', 'gnu-config-native', 'zlib-native', 'gettext-minimal-native', 'm4-native', 'libtool-native']
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function sstate_task_prefunc
+DEBUG: Python function sstate_task_prefunc finished
+DEBUG: Executing python function do_package_qa
+NOTE: DO PACKAGE QA
+DEBUG: Executing python function read_subpackage_metadata
+DEBUG: Python function read_subpackage_metadata finished
+NOTE: Checking Package: shared-mime-info-locale-nl
+NOTE: Checking Package: shared-mime-info-locale-fo
+NOTE: Checking Package: shared-mime-info-locale-ast
+NOTE: Checking Package: shared-mime-info-src
+NOTE: Checking Package: shared-mime-info-locale-ru
+NOTE: Checking Package: shared-mime-info-locale-ga
+NOTE: Checking Package: shared-mime-info-locale-sk
+NOTE: Checking Package: shared-mime-info-locale-lv
+NOTE: Checking Package: shared-mime-info-locale-he
+NOTE: Checking Package: shared-mime-info-locale-ca
+NOTE: Checking Package: shared-mime-info-locale-de
+NOTE: Checking Package: shared-mime-info-locale-el
+NOTE: Checking Package: shared-mime-info-locale-ro
+NOTE: Checking Package: shared-mime-info-locale-fi
+NOTE: Checking Package: shared-mime-info-locale-cy
+NOTE: Checking Package: shared-mime-info-locale-pa
+NOTE: Checking Package: shared-mime-info-locale-fr
+NOTE: Checking Package: shared-mime-info-locale-hi
+NOTE: Checking Package: shared-mime-info-locale-ca+valencia
+NOTE: Checking Package: shared-mime-info-locale-nn
+NOTE: Checking Package: shared-mime-info-locale-be
+NOTE: Checking Package: shared-mime-info-locale-uk
+NOTE: Checking Package: shared-mime-info
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shared-mime-info/2.2-r0/packages-split/shared-mime-info/usr/bin/update-mime-database
+NOTE: Checking Package: shared-mime-info-staticdev
+NOTE: Checking Package: shared-mime-info-locale-ky
+NOTE: Checking Package: shared-mime-info-locale-vi
+NOTE: Checking Package: shared-mime-info-locale-sv
+NOTE: Checking Package: shared-mime-info-locale-af
+NOTE: Checking Package: shared-mime-info-locale-kk
+NOTE: Checking Package: shared-mime-info-locale-th
+NOTE: Checking Package: shared-mime-info-locale-as
+NOTE: Checking Package: shared-mime-info-locale-pt-br
+NOTE: Checking Package: shared-mime-info-locale-id
+NOTE: Checking Package: shared-mime-info-locale-eu
+NOTE: Checking Package: shared-mime-info-data
+NOTE: Checking Package: shared-mime-info-dev
+NOTE: Checking Package: shared-mime-info-locale-zh-cn
+NOTE: Checking Package: shared-mime-info-dbg
+NOTE: arm-openbmc-linux-gnueabi-objdump -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shared-mime-info/2.2-r0/packages-split/shared-mime-info-dbg/usr/bin/.debug/update-mime-database
+NOTE: Checking Package: shared-mime-info-locale-ms
+NOTE: Checking Package: shared-mime-info-locale-az
+NOTE: Checking Package: shared-mime-info-locale-kn
+NOTE: Checking Package: shared-mime-info-locale-mr
+NOTE: Checking Package: shared-mime-info-locale-lt
+NOTE: Checking Package: shared-mime-info-locale-oc
+NOTE: Checking Package: shared-mime-info-locale-ka
+NOTE: Checking Package: shared-mime-info-locale-it
+NOTE: Checking Package: shared-mime-info-locale-bn-in
+NOTE: Checking Package: shared-mime-info-locale-zh-tw
+NOTE: Checking Package: shared-mime-info-locale-or
+NOTE: Checking Package: shared-mime-info-locale-be+latin
+NOTE: Checking Package: shared-mime-info-locale-sr
+NOTE: Checking Package: shared-mime-info-locale-eo
+NOTE: Checking Package: shared-mime-info-locale-sr+latin
+NOTE: Checking Package: shared-mime-info-locale-gu
+NOTE: Checking Package: shared-mime-info-locale-da
+NOTE: Checking Package: shared-mime-info-locale-rw
+NOTE: Checking Package: shared-mime-info-locale-ta
+NOTE: Checking Package: shared-mime-info-locale-pt
+NOTE: Checking Package: shared-mime-info-locale-nb
+NOTE: Checking Package: shared-mime-info-doc
+NOTE: Checking Package: shared-mime-info-locale-hu
+NOTE: Checking Package: shared-mime-info-locale-wa
+NOTE: Checking Package: shared-mime-info-locale-et
+NOTE: Checking Package: shared-mime-info-locale-ko
+NOTE: Checking Package: shared-mime-info-locale-zh-hk
+NOTE: Checking Package: shared-mime-info-locale-ml
+NOTE: Checking Package: shared-mime-info-locale-ja
+NOTE: Checking Package: shared-mime-info-locale-ar
+NOTE: Checking Package: shared-mime-info-locale-pl
+NOTE: Checking Package: shared-mime-info-locale-sq
+NOTE: Checking Package: shared-mime-info-locale-cs
+NOTE: Checking Package: shared-mime-info-locale-gl
+NOTE: Checking Package: shared-mime-info-locale-en-gb
+NOTE: Checking Package: shared-mime-info-locale-fa
+NOTE: Checking Package: shared-mime-info-locale-es
+NOTE: Checking Package: shared-mime-info-locale-sl
+NOTE: Checking Package: shared-mime-info-locale-fur
+NOTE: Checking Package: shared-mime-info-locale-tr
+NOTE: Checking Package: shared-mime-info-locale-bg
+NOTE: Checking Package: shared-mime-info-locale-ia
+NOTE: Checking Package: shared-mime-info-locale-te
+NOTE: Checking Package: shared-mime-info-locale-hr
+DEBUG: Python function do_package_qa finished
+DEBUG: Executing python function sstate_task_postfunc
+NOTE: Using umask 0o002 (not 22) for sstate packaging
+DEBUG: Executing python function target_add_sysroot_deps
+DEBUG: Python function target_add_sysroot_deps finished
+DEBUG: Executing python function sstate_hardcode_path
+NOTE: Removing hardcoded paths from sstate package: 'find /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shared-mime-info/2.2-r0/sstate-build-package_qa/ \( -name "*.la" -o -name "*-config" -o -name "*_config" -o -name "postinst-*" \) -type f | xargs grep -l -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shared-mime-info/2.2-r0/recipe-sysroot' -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shared-mime-info/2.2-r0/recipe-sysroot-native' -e '/home/matt/tmp/build/obmc-y2038/tmp/hosttools' | tee /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shared-mime-info/2.2-r0/sstate-build-package_qa/fixmepath | xargs --no-run-if-empty sed -i -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shared-mime-info/2.2-r0/recipe-sysroot-native:FIXMESTAGINGDIRHOST:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/shared-mime-info/2.2-r0/recipe-sysroot:FIXMESTAGINGDIRTARGET:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:FIXME_HOSTTOOLS_DIR:g''
+DEBUG: Python function sstate_hardcode_path finished
+DEBUG: Executing python function sstate_report_unihash
+DEBUG: Python function sstate_report_unihash finished
+DEBUG: Executing shell function sstate_create_package
+DEBUG: Shell function sstate_create_package finished
+DEBUG: Executing python function sstate_hardcode_path_unpack
+DEBUG: Python function sstate_hardcode_path_unpack finished
+DEBUG: Python function sstate_task_postfunc finished

@@ -1,0 +1,691 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux_2.38.1.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/zlib/zlib_1.2.13.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/qemu/qemu-native_7.1.0.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-support/bash-completion/bash-completion_2.11.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-support/libffi/libffi_3.4.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-support/libpcre/libpcre_8.45.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-core/gettext/gettext_0.21.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-core/glib-2.0/glib-2.0_2.72.3.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/dwarfsrcfiles/dwarfsrcfiles.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/meson/meson_0.63.3.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/ninja/ninja_1.11.1.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pkgconfig/pkgconfig_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/python/python3_3.11.0.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/rpm/rpm_4.18.0.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-extended/xz/xz_5.2.7.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-gnome/gtk-doc/gtk-doc_1.33.2.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: ['dwarfsrcfiles-native', 'rpm-native', 'libgcrypt-native', 'elfutils-native', 'lua-native', 'popt-native', 'file-native', 'libgpg-error-native', 'libcap-native']
+NOTE: Skipping as already exists in sysroot: ['glibc', 'util-linux', 'zlib', 'gcc-cross-arm', 'gcc-runtime', 'qemu-native', 'quilt-native', 'bash-completion', 'libffi', 'libpcre', 'gettext-native', 'glib-2.0-native', 'meson-native', 'ninja-native', 'patch-native', 'pkgconfig-native', 'pseudo-native', 'python3-native', 'xz-native', 'gtk-doc-native', 'libtool-native', 'gettext-minimal-native', 'util-linux-native', 'libpcre-native', 'libffi-native', 'zlib-native', 'linux-libc-headers', 'bzip2', 'texinfo-dummy-native', 'gmp-native', 'flex-native', 'libmpc-native', 'zstd-native', 'binutils-cross-arm', 'gnu-config-native', 'mpfr-native', 're2c-native', 'attr-native', 'bzip2-native', 'readline-native', 'ncurses-native', 'gdbm-native', 'libnsl2-native', 'sqlite3-native', 'util-linux-libuuid-native', 'openssl-native', 'libtirpc-native', 'python3-picobuild-native', 'python3-installer-native', 'python3-wheel-native', 'python3-setuptools-native', 'libgcc', 'libxcrypt', 'util-linux-libuuid', 'ncurses', 'libcap-ng', 'libpam', 'opkg-utils', 'libpcre2-native', 'libcap-ng-native', 'm4-native', 'perl-native', 'python3-flit-core-native', 'flex', 'cracklib', 'make-native', 'unzip-native']
+DEBUG: sed -e 's:^[^/]*/:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/recipe-sysroot-native/:g' /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/rpm-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/libgcrypt-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/elfutils-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/lua-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/libgpg-error-native/fixmepath | xargs sed -i -e 's:FIXMESTAGINGDIRTARGET:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/recipe-sysroot:g; s:FIXMESTAGINGDIRHOST:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/recipe-sysroot-native:g' -e 's:FIXME_PSEUDO_SYSROOT:/home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/pseudo-native:g' -e 's:FIXME_HOSTTOOLS_DIR:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:g' -e 's:FIXME_PKGDATA_DIR:/home/matt/tmp/build/obmc-y2038/tmp/pkgdata/evb-ast2600:g' -e 's:FIXME_PSEUDO_LOCALSTATEDIR:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/pseudo/:g' -e 's:FIXME_LOGFIFO:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/temp/fifo.519309:g'
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function sstate_task_prefunc
+DEBUG: Python function sstate_task_prefunc finished
+DEBUG: Executing python function do_package
+DEBUG: Executing python function package_convert_pr_autoinc
+DEBUG: Python function package_convert_pr_autoinc finished
+DEBUG: Executing python function package_prepare_pkgdata
+NOTE: Installed into pkgdata-sysroot: ['libpcre', 'glibc', 'util-linux', 'libffi', 'gcc-runtime', 'bash-completion', 'zlib', 'linux-libc-headers', 'util-linux-libuuid', 'libpam', 'opkg-utils', 'libcap-ng', 'libxcrypt', 'ncurses', 'bzip2', 'libgcc', 'flex', 'cracklib']
+DEBUG: Python function package_prepare_pkgdata finished
+DEBUG: Executing python function perform_packagecopy
+DEBUG: Python function perform_packagecopy finished
+DEBUG: Executing python function split_and_strip_files
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/package/usr/libexec/gio-querymodules']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/package/usr/lib/libgthread-2.0.so.0.7200.3']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/package/usr/lib/libgobject-2.0.so.0.7200.3']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/package/usr/lib/libgmodule-2.0.so.0.7200.3']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/package/usr/lib/libglib-2.0.so.0.7200.3']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/package/usr/lib/libgio-2.0.so.0.7200.3']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/package/usr/bin/gtester']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/package/usr/bin/gsettings']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/package/usr/bin/gresource']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/package/usr/bin/gobject-query']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/package/usr/bin/glib-compile-schemas']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/package/usr/bin/glib-compile-resources']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/package/usr/bin/gio']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/package/usr/bin/gdbus']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/package/usr/bin/gapplication']
+DEBUG: Python function split_and_strip_files finished
+DEBUG: Executing python function fixup_perms
+DEBUG: Python function fixup_perms finished
+DEBUG: Executing python function package_do_split_locales
+DEBUG: Python function package_do_split_locales finished
+DEBUG: Executing python function populate_packages
+DEBUG: Python function populate_packages finished
+DEBUG: Executing python function package_fixsymlinks
+DEBUG: glib-2.0-dev contains dangling link /usr/lib/libgmodule-2.0.so.0
+DEBUG: target found in glib-2.0
+DEBUG: glib-2.0-dev contains dangling link /usr/lib/libgobject-2.0.so.0
+DEBUG: target found in glib-2.0
+DEBUG: glib-2.0-dev contains dangling link /usr/lib/libgio-2.0.so.0
+DEBUG: target found in glib-2.0
+DEBUG: glib-2.0-dev contains dangling link /usr/lib/libglib-2.0.so.0
+DEBUG: target found in glib-2.0
+DEBUG: glib-2.0-dev contains dangling link /usr/lib/libgthread-2.0.so.0
+DEBUG: target found in glib-2.0
+DEBUG: Python function package_fixsymlinks finished
+DEBUG: Executing python function package_name_hook
+DEBUG: Executing python function debian_package_name_hook
+DEBUG: LIBNAMES: pkg glib-2.0-utils libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-staticdev libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-src libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-zh-tw libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-zh-hk libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-zh-cn libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-yi libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-xh libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-wa libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-vi libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-uk libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-ug libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-tt libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-tr libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-tl libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-th libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-tg libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-te libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-ta libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-sv libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-sr+latin libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-sr+ije libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-sr libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-sq libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-sl libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-sk libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-si libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-rw libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-ru libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-ro libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-pt-br libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-pt libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-ps libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-pl libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-pa libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-or libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-oc libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-nn libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-nl libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-ne libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-nds libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-nb libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-ms libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-mr libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-mn libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-ml libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-mk libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-mg libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-mai libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-lv libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-lt libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-ku libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-ko libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-kn libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-kk libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-ka libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-ja libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-it libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-is libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-id libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-hy libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-hu libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-hr libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-hi libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-he libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-gu libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-gl libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-gd libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-ga libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-fur libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-fr libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-fi libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-fa libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-eu libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-et libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-es libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-eo libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-en-gb libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-en-ca libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-en+shaw libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-el libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-dz libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-de libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-da libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-cy libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-cs libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-ca+valencia libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-ca libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-bs libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-bn-in libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-bn libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-bg libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-be+latin libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-be libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-az libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-ast libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-as libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-ar libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-an libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-am libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-locale-af libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-doc libs 0 bins 0 sonames []
+arm-openbmc-linux-gnueabi-objdump: '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/packages-split/glib-2.0-dev/usr/lib/libgmodule-2.0.so': No such file
+arm-openbmc-linux-gnueabi-objdump: '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/packages-split/glib-2.0-dev/usr/lib/libgobject-2.0.so': No such file
+arm-openbmc-linux-gnueabi-objdump: '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/packages-split/glib-2.0-dev/usr/lib/libgio-2.0.so': No such file
+arm-openbmc-linux-gnueabi-objdump: '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/packages-split/glib-2.0-dev/usr/lib/libglib-2.0.so': No such file
+arm-openbmc-linux-gnueabi-objdump: '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/packages-split/glib-2.0-dev/usr/lib/libgthread-2.0.so': No such file
+DEBUG: LIBNAMES: pkg glib-2.0-dev libs 1 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-dbg libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-codegen libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0-bash-completion libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg glib-2.0 libs 1 bins 0 sonames ['libgobject-2.0.so.0', 'libgthread-2.0.so.0', 'libgmodule-2.0.so.0', 'libglib-2.0.so.0', 'libgio-2.0.so.0']
+NOTE: debian: renaming glib-2.0-src to libglib-2.0-src
+NOTE: debian: renaming glib-2.0-dbg to libglib-2.0-dbg
+NOTE: debian: renaming glib-2.0-staticdev to libglib-2.0-staticdev
+NOTE: debian: renaming glib-2.0-dev to libglib-2.0-dev
+NOTE: debian: renaming glib-2.0-doc to libglib-2.0-doc
+NOTE: debian: renaming glib-2.0 to libglib-2.0-0
+NOTE: debian: renaming glib-2.0-codegen to libglib-2.0-codegen
+NOTE: debian: renaming glib-2.0-utils to libglib-2.0-utils
+NOTE: debian: renaming glib-2.0-bash-completion to libglib-2.0-bash-completion
+NOTE: debian: renaming glib-2.0-locale-af to libglib-2.0-locale-af
+NOTE: debian: renaming glib-2.0-locale-am to libglib-2.0-locale-am
+NOTE: debian: renaming glib-2.0-locale-an to libglib-2.0-locale-an
+NOTE: debian: renaming glib-2.0-locale-ar to libglib-2.0-locale-ar
+NOTE: debian: renaming glib-2.0-locale-as to libglib-2.0-locale-as
+NOTE: debian: renaming glib-2.0-locale-ast to libglib-2.0-locale-ast
+NOTE: debian: renaming glib-2.0-locale-az to libglib-2.0-locale-az
+NOTE: debian: renaming glib-2.0-locale-be to libglib-2.0-locale-be
+NOTE: debian: renaming glib-2.0-locale-be+latin to libglib-2.0-locale-be+latin
+NOTE: debian: renaming glib-2.0-locale-bg to libglib-2.0-locale-bg
+NOTE: debian: renaming glib-2.0-locale-bn to libglib-2.0-locale-bn
+NOTE: debian: renaming glib-2.0-locale-bn-in to libglib-2.0-locale-bn-in
+NOTE: debian: renaming glib-2.0-locale-bs to libglib-2.0-locale-bs
+NOTE: debian: renaming glib-2.0-locale-ca to libglib-2.0-locale-ca
+NOTE: debian: renaming glib-2.0-locale-ca+valencia to libglib-2.0-locale-ca+valencia
+NOTE: debian: renaming glib-2.0-locale-cs to libglib-2.0-locale-cs
+NOTE: debian: renaming glib-2.0-locale-cy to libglib-2.0-locale-cy
+NOTE: debian: renaming glib-2.0-locale-da to libglib-2.0-locale-da
+NOTE: debian: renaming glib-2.0-locale-de to libglib-2.0-locale-de
+NOTE: debian: renaming glib-2.0-locale-dz to libglib-2.0-locale-dz
+NOTE: debian: renaming glib-2.0-locale-el to libglib-2.0-locale-el
+NOTE: debian: renaming glib-2.0-locale-en+shaw to libglib-2.0-locale-en+shaw
+NOTE: debian: renaming glib-2.0-locale-en-ca to libglib-2.0-locale-en-ca
+NOTE: debian: renaming glib-2.0-locale-en-gb to libglib-2.0-locale-en-gb
+NOTE: debian: renaming glib-2.0-locale-eo to libglib-2.0-locale-eo
+NOTE: debian: renaming glib-2.0-locale-es to libglib-2.0-locale-es
+NOTE: debian: renaming glib-2.0-locale-et to libglib-2.0-locale-et
+NOTE: debian: renaming glib-2.0-locale-eu to libglib-2.0-locale-eu
+NOTE: debian: renaming glib-2.0-locale-fa to libglib-2.0-locale-fa
+NOTE: debian: renaming glib-2.0-locale-fi to libglib-2.0-locale-fi
+NOTE: debian: renaming glib-2.0-locale-fr to libglib-2.0-locale-fr
+NOTE: debian: renaming glib-2.0-locale-fur to libglib-2.0-locale-fur
+NOTE: debian: renaming glib-2.0-locale-ga to libglib-2.0-locale-ga
+NOTE: debian: renaming glib-2.0-locale-gd to libglib-2.0-locale-gd
+NOTE: debian: renaming glib-2.0-locale-gl to libglib-2.0-locale-gl
+NOTE: debian: renaming glib-2.0-locale-gu to libglib-2.0-locale-gu
+NOTE: debian: renaming glib-2.0-locale-he to libglib-2.0-locale-he
+NOTE: debian: renaming glib-2.0-locale-hi to libglib-2.0-locale-hi
+NOTE: debian: renaming glib-2.0-locale-hr to libglib-2.0-locale-hr
+NOTE: debian: renaming glib-2.0-locale-hu to libglib-2.0-locale-hu
+NOTE: debian: renaming glib-2.0-locale-hy to libglib-2.0-locale-hy
+NOTE: debian: renaming glib-2.0-locale-id to libglib-2.0-locale-id
+NOTE: debian: renaming glib-2.0-locale-is to libglib-2.0-locale-is
+NOTE: debian: renaming glib-2.0-locale-it to libglib-2.0-locale-it
+NOTE: debian: renaming glib-2.0-locale-ja to libglib-2.0-locale-ja
+NOTE: debian: renaming glib-2.0-locale-ka to libglib-2.0-locale-ka
+NOTE: debian: renaming glib-2.0-locale-kk to libglib-2.0-locale-kk
+NOTE: debian: renaming glib-2.0-locale-kn to libglib-2.0-locale-kn
+NOTE: debian: renaming glib-2.0-locale-ko to libglib-2.0-locale-ko
+NOTE: debian: renaming glib-2.0-locale-ku to libglib-2.0-locale-ku
+NOTE: debian: renaming glib-2.0-locale-lt to libglib-2.0-locale-lt
+NOTE: debian: renaming glib-2.0-locale-lv to libglib-2.0-locale-lv
+NOTE: debian: renaming glib-2.0-locale-mai to libglib-2.0-locale-mai
+NOTE: debian: renaming glib-2.0-locale-mg to libglib-2.0-locale-mg
+NOTE: debian: renaming glib-2.0-locale-mk to libglib-2.0-locale-mk
+NOTE: debian: renaming glib-2.0-locale-ml to libglib-2.0-locale-ml
+NOTE: debian: renaming glib-2.0-locale-mn to libglib-2.0-locale-mn
+NOTE: debian: renaming glib-2.0-locale-mr to libglib-2.0-locale-mr
+NOTE: debian: renaming glib-2.0-locale-ms to libglib-2.0-locale-ms
+NOTE: debian: renaming glib-2.0-locale-nb to libglib-2.0-locale-nb
+NOTE: debian: renaming glib-2.0-locale-nds to libglib-2.0-locale-nds
+NOTE: debian: renaming glib-2.0-locale-ne to libglib-2.0-locale-ne
+NOTE: debian: renaming glib-2.0-locale-nl to libglib-2.0-locale-nl
+NOTE: debian: renaming glib-2.0-locale-nn to libglib-2.0-locale-nn
+NOTE: debian: renaming glib-2.0-locale-oc to libglib-2.0-locale-oc
+NOTE: debian: renaming glib-2.0-locale-or to libglib-2.0-locale-or
+NOTE: debian: renaming glib-2.0-locale-pa to libglib-2.0-locale-pa
+NOTE: debian: renaming glib-2.0-locale-pl to libglib-2.0-locale-pl
+NOTE: debian: renaming glib-2.0-locale-ps to libglib-2.0-locale-ps
+NOTE: debian: renaming glib-2.0-locale-pt to libglib-2.0-locale-pt
+NOTE: debian: renaming glib-2.0-locale-pt-br to libglib-2.0-locale-pt-br
+NOTE: debian: renaming glib-2.0-locale-ro to libglib-2.0-locale-ro
+NOTE: debian: renaming glib-2.0-locale-ru to libglib-2.0-locale-ru
+NOTE: debian: renaming glib-2.0-locale-rw to libglib-2.0-locale-rw
+NOTE: debian: renaming glib-2.0-locale-si to libglib-2.0-locale-si
+NOTE: debian: renaming glib-2.0-locale-sk to libglib-2.0-locale-sk
+NOTE: debian: renaming glib-2.0-locale-sl to libglib-2.0-locale-sl
+NOTE: debian: renaming glib-2.0-locale-sq to libglib-2.0-locale-sq
+NOTE: debian: renaming glib-2.0-locale-sr to libglib-2.0-locale-sr
+NOTE: debian: renaming glib-2.0-locale-sr+ije to libglib-2.0-locale-sr+ije
+NOTE: debian: renaming glib-2.0-locale-sr+latin to libglib-2.0-locale-sr+latin
+NOTE: debian: renaming glib-2.0-locale-sv to libglib-2.0-locale-sv
+NOTE: debian: renaming glib-2.0-locale-ta to libglib-2.0-locale-ta
+NOTE: debian: renaming glib-2.0-locale-te to libglib-2.0-locale-te
+NOTE: debian: renaming glib-2.0-locale-tg to libglib-2.0-locale-tg
+NOTE: debian: renaming glib-2.0-locale-th to libglib-2.0-locale-th
+NOTE: debian: renaming glib-2.0-locale-tl to libglib-2.0-locale-tl
+NOTE: debian: renaming glib-2.0-locale-tr to libglib-2.0-locale-tr
+NOTE: debian: renaming glib-2.0-locale-tt to libglib-2.0-locale-tt
+NOTE: debian: renaming glib-2.0-locale-ug to libglib-2.0-locale-ug
+NOTE: debian: renaming glib-2.0-locale-uk to libglib-2.0-locale-uk
+NOTE: debian: renaming glib-2.0-locale-vi to libglib-2.0-locale-vi
+NOTE: debian: renaming glib-2.0-locale-wa to libglib-2.0-locale-wa
+NOTE: debian: renaming glib-2.0-locale-xh to libglib-2.0-locale-xh
+NOTE: debian: renaming glib-2.0-locale-yi to libglib-2.0-locale-yi
+NOTE: debian: renaming glib-2.0-locale-zh-cn to libglib-2.0-locale-zh-cn
+NOTE: debian: renaming glib-2.0-locale-zh-hk to libglib-2.0-locale-zh-hk
+NOTE: debian: renaming glib-2.0-locale-zh-tw to libglib-2.0-locale-zh-tw
+DEBUG: Python function debian_package_name_hook finished
+DEBUG: Python function package_name_hook finished
+DEBUG: Executing python function package_do_filedeps
+DEBUG: Python function package_do_filedeps finished
+DEBUG: Executing python function package_do_shlibs
+DEBUG: Reading shlib providers in /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/pkgdata-sysroot/shlibs2
+DEBUG: calculating shlib provides for glib-2.0-src
+DEBUG: LIBNAMES: pkg glib-2.0-src sonames set()
+DEBUG: calculating shlib provides for glib-2.0-dbg
+DEBUG: LIBNAMES: pkg glib-2.0-dbg sonames set()
+DEBUG: calculating shlib provides for glib-2.0-staticdev
+DEBUG: LIBNAMES: pkg glib-2.0-staticdev sonames set()
+DEBUG: calculating shlib provides for glib-2.0-dev
+DEBUG: LIBNAMES: pkg glib-2.0-dev sonames set()
+DEBUG: calculating shlib provides for glib-2.0-doc
+DEBUG: LIBNAMES: pkg glib-2.0-doc sonames set()
+DEBUG: calculating shlib provides for glib-2.0
+DEBUG: registering glib-2.0-2.72.3 as shlib provider for libgio-2.0.so.0
+DEBUG: registering glib-2.0-2.72.3 as shlib provider for libglib-2.0.so.0
+DEBUG: registering glib-2.0-2.72.3 as shlib provider for libgmodule-2.0.so.0
+DEBUG: registering glib-2.0-2.72.3 as shlib provider for libgobject-2.0.so.0
+DEBUG: registering glib-2.0-2.72.3 as shlib provider for libgthread-2.0.so.0
+DEBUG: adding ldconfig call to postinst for glib-2.0
+DEBUG: LIBNAMES: pkg glib-2.0 sonames {('libgio-2.0.so.0', '/usr/lib', '2.72.3'), ('libglib-2.0.so.0', '/usr/lib', '2.72.3'), ('libgobject-2.0.so.0', '/usr/lib', '2.72.3'), ('libgmodule-2.0.so.0', '/usr/lib', '2.72.3'), ('libgthread-2.0.so.0', '/usr/lib', '2.72.3')}
+DEBUG: calculating shlib provides for glib-2.0-codegen
+DEBUG: LIBNAMES: pkg glib-2.0-codegen sonames set()
+DEBUG: calculating shlib provides for glib-2.0-utils
+DEBUG: LIBNAMES: pkg glib-2.0-utils sonames set()
+DEBUG: calculating shlib provides for glib-2.0-bash-completion
+DEBUG: LIBNAMES: pkg glib-2.0-bash-completion sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-af
+DEBUG: LIBNAMES: pkg glib-2.0-locale-af sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-am
+DEBUG: LIBNAMES: pkg glib-2.0-locale-am sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-an
+DEBUG: LIBNAMES: pkg glib-2.0-locale-an sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-ar
+DEBUG: LIBNAMES: pkg glib-2.0-locale-ar sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-as
+DEBUG: LIBNAMES: pkg glib-2.0-locale-as sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-ast
+DEBUG: LIBNAMES: pkg glib-2.0-locale-ast sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-az
+DEBUG: LIBNAMES: pkg glib-2.0-locale-az sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-be
+DEBUG: LIBNAMES: pkg glib-2.0-locale-be sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-be+latin
+DEBUG: LIBNAMES: pkg glib-2.0-locale-be+latin sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-bg
+DEBUG: LIBNAMES: pkg glib-2.0-locale-bg sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-bn
+DEBUG: LIBNAMES: pkg glib-2.0-locale-bn sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-bn-in
+DEBUG: LIBNAMES: pkg glib-2.0-locale-bn-in sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-bs
+DEBUG: LIBNAMES: pkg glib-2.0-locale-bs sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-ca
+DEBUG: LIBNAMES: pkg glib-2.0-locale-ca sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-ca+valencia
+DEBUG: LIBNAMES: pkg glib-2.0-locale-ca+valencia sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-cs
+DEBUG: LIBNAMES: pkg glib-2.0-locale-cs sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-cy
+DEBUG: LIBNAMES: pkg glib-2.0-locale-cy sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-da
+DEBUG: LIBNAMES: pkg glib-2.0-locale-da sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-de
+DEBUG: LIBNAMES: pkg glib-2.0-locale-de sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-dz
+DEBUG: LIBNAMES: pkg glib-2.0-locale-dz sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-el
+DEBUG: LIBNAMES: pkg glib-2.0-locale-el sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-en+shaw
+DEBUG: LIBNAMES: pkg glib-2.0-locale-en+shaw sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-en-ca
+DEBUG: LIBNAMES: pkg glib-2.0-locale-en-ca sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-en-gb
+DEBUG: LIBNAMES: pkg glib-2.0-locale-en-gb sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-eo
+DEBUG: LIBNAMES: pkg glib-2.0-locale-eo sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-es
+DEBUG: LIBNAMES: pkg glib-2.0-locale-es sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-et
+DEBUG: LIBNAMES: pkg glib-2.0-locale-et sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-eu
+DEBUG: LIBNAMES: pkg glib-2.0-locale-eu sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-fa
+DEBUG: LIBNAMES: pkg glib-2.0-locale-fa sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-fi
+DEBUG: LIBNAMES: pkg glib-2.0-locale-fi sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-fr
+DEBUG: LIBNAMES: pkg glib-2.0-locale-fr sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-fur
+DEBUG: LIBNAMES: pkg glib-2.0-locale-fur sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-ga
+DEBUG: LIBNAMES: pkg glib-2.0-locale-ga sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-gd
+DEBUG: LIBNAMES: pkg glib-2.0-locale-gd sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-gl
+DEBUG: LIBNAMES: pkg glib-2.0-locale-gl sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-gu
+DEBUG: LIBNAMES: pkg glib-2.0-locale-gu sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-he
+DEBUG: LIBNAMES: pkg glib-2.0-locale-he sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-hi
+DEBUG: LIBNAMES: pkg glib-2.0-locale-hi sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-hr
+DEBUG: LIBNAMES: pkg glib-2.0-locale-hr sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-hu
+DEBUG: LIBNAMES: pkg glib-2.0-locale-hu sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-hy
+DEBUG: LIBNAMES: pkg glib-2.0-locale-hy sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-id
+DEBUG: LIBNAMES: pkg glib-2.0-locale-id sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-is
+DEBUG: LIBNAMES: pkg glib-2.0-locale-is sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-it
+DEBUG: LIBNAMES: pkg glib-2.0-locale-it sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-ja
+DEBUG: LIBNAMES: pkg glib-2.0-locale-ja sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-ka
+DEBUG: LIBNAMES: pkg glib-2.0-locale-ka sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-kk
+DEBUG: LIBNAMES: pkg glib-2.0-locale-kk sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-kn
+DEBUG: LIBNAMES: pkg glib-2.0-locale-kn sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-ko
+DEBUG: LIBNAMES: pkg glib-2.0-locale-ko sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-ku
+DEBUG: LIBNAMES: pkg glib-2.0-locale-ku sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-lt
+DEBUG: LIBNAMES: pkg glib-2.0-locale-lt sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-lv
+DEBUG: LIBNAMES: pkg glib-2.0-locale-lv sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-mai
+DEBUG: LIBNAMES: pkg glib-2.0-locale-mai sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-mg
+DEBUG: LIBNAMES: pkg glib-2.0-locale-mg sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-mk
+DEBUG: LIBNAMES: pkg glib-2.0-locale-mk sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-ml
+DEBUG: LIBNAMES: pkg glib-2.0-locale-ml sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-mn
+DEBUG: LIBNAMES: pkg glib-2.0-locale-mn sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-mr
+DEBUG: LIBNAMES: pkg glib-2.0-locale-mr sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-ms
+DEBUG: LIBNAMES: pkg glib-2.0-locale-ms sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-nb
+DEBUG: LIBNAMES: pkg glib-2.0-locale-nb sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-nds
+DEBUG: LIBNAMES: pkg glib-2.0-locale-nds sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-ne
+DEBUG: LIBNAMES: pkg glib-2.0-locale-ne sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-nl
+DEBUG: LIBNAMES: pkg glib-2.0-locale-nl sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-nn
+DEBUG: LIBNAMES: pkg glib-2.0-locale-nn sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-oc
+DEBUG: LIBNAMES: pkg glib-2.0-locale-oc sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-or
+DEBUG: LIBNAMES: pkg glib-2.0-locale-or sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-pa
+DEBUG: LIBNAMES: pkg glib-2.0-locale-pa sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-pl
+DEBUG: LIBNAMES: pkg glib-2.0-locale-pl sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-ps
+DEBUG: LIBNAMES: pkg glib-2.0-locale-ps sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-pt
+DEBUG: LIBNAMES: pkg glib-2.0-locale-pt sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-pt-br
+DEBUG: LIBNAMES: pkg glib-2.0-locale-pt-br sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-ro
+DEBUG: LIBNAMES: pkg glib-2.0-locale-ro sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-ru
+DEBUG: LIBNAMES: pkg glib-2.0-locale-ru sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-rw
+DEBUG: LIBNAMES: pkg glib-2.0-locale-rw sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-si
+DEBUG: LIBNAMES: pkg glib-2.0-locale-si sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-sk
+DEBUG: LIBNAMES: pkg glib-2.0-locale-sk sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-sl
+DEBUG: LIBNAMES: pkg glib-2.0-locale-sl sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-sq
+DEBUG: LIBNAMES: pkg glib-2.0-locale-sq sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-sr
+DEBUG: LIBNAMES: pkg glib-2.0-locale-sr sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-sr+ije
+DEBUG: LIBNAMES: pkg glib-2.0-locale-sr+ije sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-sr+latin
+DEBUG: LIBNAMES: pkg glib-2.0-locale-sr+latin sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-sv
+DEBUG: LIBNAMES: pkg glib-2.0-locale-sv sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-ta
+DEBUG: LIBNAMES: pkg glib-2.0-locale-ta sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-te
+DEBUG: LIBNAMES: pkg glib-2.0-locale-te sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-tg
+DEBUG: LIBNAMES: pkg glib-2.0-locale-tg sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-th
+DEBUG: LIBNAMES: pkg glib-2.0-locale-th sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-tl
+DEBUG: LIBNAMES: pkg glib-2.0-locale-tl sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-tr
+DEBUG: LIBNAMES: pkg glib-2.0-locale-tr sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-tt
+DEBUG: LIBNAMES: pkg glib-2.0-locale-tt sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-ug
+DEBUG: LIBNAMES: pkg glib-2.0-locale-ug sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-uk
+DEBUG: LIBNAMES: pkg glib-2.0-locale-uk sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-vi
+DEBUG: LIBNAMES: pkg glib-2.0-locale-vi sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-wa
+DEBUG: LIBNAMES: pkg glib-2.0-locale-wa sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-xh
+DEBUG: LIBNAMES: pkg glib-2.0-locale-xh sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-yi
+DEBUG: LIBNAMES: pkg glib-2.0-locale-yi sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-zh-cn
+DEBUG: LIBNAMES: pkg glib-2.0-locale-zh-cn sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-zh-hk
+DEBUG: LIBNAMES: pkg glib-2.0-locale-zh-hk sonames set()
+DEBUG: calculating shlib provides for glib-2.0-locale-zh-tw
+DEBUG: LIBNAMES: pkg glib-2.0-locale-zh-tw sonames set()
+DEBUG: calculating shlib requirements for glib-2.0-src
+DEBUG: calculating shlib requirements for glib-2.0-dbg
+DEBUG: calculating shlib requirements for glib-2.0-staticdev
+DEBUG: calculating shlib requirements for glib-2.0-dev
+DEBUG: calculating shlib requirements for glib-2.0-doc
+DEBUG: calculating shlib requirements for glib-2.0
+DEBUG: glib-2.0: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/packages-split/glib-2.0/usr/libexec/gio-querymodules)
+DEBUG: glib-2.0: Dependency libz.so.1 requires package zlib (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/packages-split/glib-2.0/usr/lib/libgio-2.0.so.0.7200.3)
+DEBUG: glib-2.0: Dependency libmount.so.1 requires package util-linux-libmount (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/packages-split/glib-2.0/usr/lib/libgio-2.0.so.0.7200.3)
+DEBUG: glib-2.0: Dependency libffi.so.8 requires package libffi (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/packages-split/glib-2.0/usr/lib/libgobject-2.0.so.0.7200.3)
+DEBUG: glib-2.0: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/packages-split/glib-2.0/usr/libexec/gio-querymodules)
+DEBUG: glib-2.0: Dependency libgmodule-2.0.so.0 requires package glib-2.0 (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/packages-split/glib-2.0/usr/libexec/gio-querymodules)
+DEBUG: glib-2.0: Dependency libglib-2.0.so.0 requires package glib-2.0 (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/packages-split/glib-2.0/usr/libexec/gio-querymodules)
+DEBUG: glib-2.0: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/packages-split/glib-2.0/usr/lib/libgio-2.0.so.0.7200.3)
+DEBUG: glib-2.0: Dependency libgobject-2.0.so.0 requires package glib-2.0 (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/packages-split/glib-2.0/usr/libexec/gio-querymodules)
+DEBUG: glib-2.0: Dependency libglib-2.0.so.0 requires package glib-2.0 (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/packages-split/glib-2.0/usr/lib/libgio-2.0.so.0.7200.3)
+DEBUG: glib-2.0: Dependency libglib-2.0.so.0 requires package glib-2.0 (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/packages-split/glib-2.0/usr/lib/libgthread-2.0.so.0.7200.3)
+DEBUG: glib-2.0: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/packages-split/glib-2.0/usr/lib/libgio-2.0.so.0.7200.3)
+DEBUG: glib-2.0: Dependency libgobject-2.0.so.0 requires package glib-2.0 (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/packages-split/glib-2.0/usr/lib/libgio-2.0.so.0.7200.3)
+DEBUG: glib-2.0: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/packages-split/glib-2.0/usr/lib/libgmodule-2.0.so.0.7200.3)
+DEBUG: glib-2.0: Dependency libgmodule-2.0.so.0 requires package glib-2.0 (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/packages-split/glib-2.0/usr/lib/libgio-2.0.so.0.7200.3)
+DEBUG: glib-2.0: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/packages-split/glib-2.0/usr/lib/libgobject-2.0.so.0.7200.3)
+DEBUG: glib-2.0: Dependency libpcre.so.1 requires package libpcre (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/packages-split/glib-2.0/usr/lib/libglib-2.0.so.0.7200.3)
+DEBUG: glib-2.0: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/packages-split/glib-2.0/usr/lib/libglib-2.0.so.0.7200.3)
+DEBUG: glib-2.0: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/packages-split/glib-2.0/usr/lib/libgmodule-2.0.so.0.7200.3)
+DEBUG: glib-2.0: Dependency libglib-2.0.so.0 requires package glib-2.0 (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/packages-split/glib-2.0/usr/lib/libgobject-2.0.so.0.7200.3)
+DEBUG: glib-2.0: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/packages-split/glib-2.0/usr/lib/libgobject-2.0.so.0.7200.3)
+DEBUG: glib-2.0: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/packages-split/glib-2.0/usr/lib/libglib-2.0.so.0.7200.3)
+DEBUG: glib-2.0: Dependency libglib-2.0.so.0 requires package glib-2.0 (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/packages-split/glib-2.0/usr/lib/libgmodule-2.0.so.0.7200.3)
+DEBUG: calculating shlib requirements for glib-2.0-codegen
+DEBUG: calculating shlib requirements for glib-2.0-utils
+DEBUG: glib-2.0-utils: Dependency libgobject-2.0.so.0 requires package glib-2.0 (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/packages-split/glib-2.0-utils/usr/bin/gsettings)
+DEBUG: glib-2.0-utils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/packages-split/glib-2.0-utils/usr/bin/gresource)
+DEBUG: glib-2.0-utils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/packages-split/glib-2.0-utils/usr/bin/gresource)
+DEBUG: glib-2.0-utils: Dependency libgobject-2.0.so.0 requires package glib-2.0 (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/packages-split/glib-2.0-utils/usr/bin/gio)
+DEBUG: glib-2.0-utils: Dependency libglib-2.0.so.0 requires package glib-2.0 (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/packages-split/glib-2.0-utils/usr/bin/glib-compile-resources)
+DEBUG: glib-2.0-utils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/packages-split/glib-2.0-utils/usr/bin/gapplication)
+DEBUG: glib-2.0-utils: Dependency libgio-2.0.so.0 requires package glib-2.0 (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/packages-split/glib-2.0-utils/usr/bin/glib-compile-schemas)
+DEBUG: glib-2.0-utils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/packages-split/glib-2.0-utils/usr/bin/gobject-query)
+DEBUG: glib-2.0-utils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/packages-split/glib-2.0-utils/usr/bin/gdbus)
+DEBUG: glib-2.0-utils: Dependency libglib-2.0.so.0 requires package glib-2.0 (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/packages-split/glib-2.0-utils/usr/bin/gio)
+DEBUG: glib-2.0-utils: Dependency libglib-2.0.so.0 requires package glib-2.0 (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/packages-split/glib-2.0-utils/usr/bin/glib-compile-schemas)
+DEBUG: glib-2.0-utils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/packages-split/glib-2.0-utils/usr/bin/gdbus)
+DEBUG: glib-2.0-utils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/packages-split/glib-2.0-utils/usr/bin/glib-compile-resources)
+DEBUG: glib-2.0-utils: Dependency libgio-2.0.so.0 requires package glib-2.0 (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/packages-split/glib-2.0-utils/usr/bin/gapplication)
+DEBUG: glib-2.0-utils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/packages-split/glib-2.0-utils/usr/bin/gsettings)
+DEBUG: glib-2.0-utils: Dependency libgio-2.0.so.0 requires package glib-2.0 (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/packages-split/glib-2.0-utils/usr/bin/gresource)
+DEBUG: glib-2.0-utils: Dependency libglib-2.0.so.0 requires package glib-2.0 (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/packages-split/glib-2.0-utils/usr/bin/gtester)
+DEBUG: glib-2.0-utils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/packages-split/glib-2.0-utils/usr/bin/glib-compile-resources)
+DEBUG: glib-2.0-utils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/packages-split/glib-2.0-utils/usr/bin/gsettings)
+DEBUG: glib-2.0-utils: Dependency libgio-2.0.so.0 requires package glib-2.0 (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/packages-split/glib-2.0-utils/usr/bin/gdbus)
+DEBUG: glib-2.0-utils: Dependency libgobject-2.0.so.0 requires package glib-2.0 (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/packages-split/glib-2.0-utils/usr/bin/gobject-query)
+DEBUG: glib-2.0-utils: Dependency libgobject-2.0.so.0 requires package glib-2.0 (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/packages-split/glib-2.0-utils/usr/bin/gapplication)
+DEBUG: glib-2.0-utils: Dependency libglib-2.0.so.0 requires package glib-2.0 (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/packages-split/glib-2.0-utils/usr/bin/gresource)
+DEBUG: glib-2.0-utils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/packages-split/glib-2.0-utils/usr/bin/gio)
+DEBUG: glib-2.0-utils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/packages-split/glib-2.0-utils/usr/bin/glib-compile-schemas)
+DEBUG: glib-2.0-utils: Dependency libglib-2.0.so.0 requires package glib-2.0 (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/packages-split/glib-2.0-utils/usr/bin/gapplication)
+DEBUG: glib-2.0-utils: Dependency libglib-2.0.so.0 requires package glib-2.0 (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/packages-split/glib-2.0-utils/usr/bin/gdbus)
+DEBUG: glib-2.0-utils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/packages-split/glib-2.0-utils/usr/bin/glib-compile-schemas)
+DEBUG: glib-2.0-utils: Dependency libglib-2.0.so.0 requires package glib-2.0 (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/packages-split/glib-2.0-utils/usr/bin/gobject-query)
+DEBUG: glib-2.0-utils: Dependency libgobject-2.0.so.0 requires package glib-2.0 (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/packages-split/glib-2.0-utils/usr/bin/gdbus)
+DEBUG: glib-2.0-utils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/packages-split/glib-2.0-utils/usr/bin/gio)
+DEBUG: glib-2.0-utils: Dependency libgio-2.0.so.0 requires package glib-2.0 (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/packages-split/glib-2.0-utils/usr/bin/gsettings)
+DEBUG: glib-2.0-utils: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/packages-split/glib-2.0-utils/usr/bin/gtester)
+DEBUG: glib-2.0-utils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/packages-split/glib-2.0-utils/usr/bin/gtester)
+DEBUG: glib-2.0-utils: Dependency libgio-2.0.so.0 requires package glib-2.0 (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/packages-split/glib-2.0-utils/usr/bin/glib-compile-resources)
+DEBUG: glib-2.0-utils: Dependency libgio-2.0.so.0 requires package glib-2.0 (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/packages-split/glib-2.0-utils/usr/bin/gio)
+DEBUG: glib-2.0-utils: Dependency libgobject-2.0.so.0 requires package glib-2.0 (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/packages-split/glib-2.0-utils/usr/bin/glib-compile-resources)
+DEBUG: glib-2.0-utils: Dependency libglib-2.0.so.0 requires package glib-2.0 (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/packages-split/glib-2.0-utils/usr/bin/gsettings)
+DEBUG: glib-2.0-utils: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/packages-split/glib-2.0-utils/usr/bin/gapplication)
+DEBUG: calculating shlib requirements for glib-2.0-bash-completion
+DEBUG: calculating shlib requirements for glib-2.0-locale-af
+DEBUG: calculating shlib requirements for glib-2.0-locale-am
+DEBUG: calculating shlib requirements for glib-2.0-locale-an
+DEBUG: calculating shlib requirements for glib-2.0-locale-ar
+DEBUG: calculating shlib requirements for glib-2.0-locale-as
+DEBUG: calculating shlib requirements for glib-2.0-locale-ast
+DEBUG: calculating shlib requirements for glib-2.0-locale-az
+DEBUG: calculating shlib requirements for glib-2.0-locale-be
+DEBUG: calculating shlib requirements for glib-2.0-locale-be+latin
+DEBUG: calculating shlib requirements for glib-2.0-locale-bg
+DEBUG: calculating shlib requirements for glib-2.0-locale-bn
+DEBUG: calculating shlib requirements for glib-2.0-locale-bn-in
+DEBUG: calculating shlib requirements for glib-2.0-locale-bs
+DEBUG: calculating shlib requirements for glib-2.0-locale-ca
+DEBUG: calculating shlib requirements for glib-2.0-locale-ca+valencia
+DEBUG: calculating shlib requirements for glib-2.0-locale-cs
+DEBUG: calculating shlib requirements for glib-2.0-locale-cy
+DEBUG: calculating shlib requirements for glib-2.0-locale-da
+DEBUG: calculating shlib requirements for glib-2.0-locale-de
+DEBUG: calculating shlib requirements for glib-2.0-locale-dz
+DEBUG: calculating shlib requirements for glib-2.0-locale-el
+DEBUG: calculating shlib requirements for glib-2.0-locale-en+shaw
+DEBUG: calculating shlib requirements for glib-2.0-locale-en-ca
+DEBUG: calculating shlib requirements for glib-2.0-locale-en-gb
+DEBUG: calculating shlib requirements for glib-2.0-locale-eo
+DEBUG: calculating shlib requirements for glib-2.0-locale-es
+DEBUG: calculating shlib requirements for glib-2.0-locale-et
+DEBUG: calculating shlib requirements for glib-2.0-locale-eu
+DEBUG: calculating shlib requirements for glib-2.0-locale-fa
+DEBUG: calculating shlib requirements for glib-2.0-locale-fi
+DEBUG: calculating shlib requirements for glib-2.0-locale-fr
+DEBUG: calculating shlib requirements for glib-2.0-locale-fur
+DEBUG: calculating shlib requirements for glib-2.0-locale-ga
+DEBUG: calculating shlib requirements for glib-2.0-locale-gd
+DEBUG: calculating shlib requirements for glib-2.0-locale-gl
+DEBUG: calculating shlib requirements for glib-2.0-locale-gu
+DEBUG: calculating shlib requirements for glib-2.0-locale-he
+DEBUG: calculating shlib requirements for glib-2.0-locale-hi
+DEBUG: calculating shlib requirements for glib-2.0-locale-hr
+DEBUG: calculating shlib requirements for glib-2.0-locale-hu
+DEBUG: calculating shlib requirements for glib-2.0-locale-hy
+DEBUG: calculating shlib requirements for glib-2.0-locale-id
+DEBUG: calculating shlib requirements for glib-2.0-locale-is
+DEBUG: calculating shlib requirements for glib-2.0-locale-it
+DEBUG: calculating shlib requirements for glib-2.0-locale-ja
+DEBUG: calculating shlib requirements for glib-2.0-locale-ka
+DEBUG: calculating shlib requirements for glib-2.0-locale-kk
+DEBUG: calculating shlib requirements for glib-2.0-locale-kn
+DEBUG: calculating shlib requirements for glib-2.0-locale-ko
+DEBUG: calculating shlib requirements for glib-2.0-locale-ku
+DEBUG: calculating shlib requirements for glib-2.0-locale-lt
+DEBUG: calculating shlib requirements for glib-2.0-locale-lv
+DEBUG: calculating shlib requirements for glib-2.0-locale-mai
+DEBUG: calculating shlib requirements for glib-2.0-locale-mg
+DEBUG: calculating shlib requirements for glib-2.0-locale-mk
+DEBUG: calculating shlib requirements for glib-2.0-locale-ml
+DEBUG: calculating shlib requirements for glib-2.0-locale-mn
+DEBUG: calculating shlib requirements for glib-2.0-locale-mr
+DEBUG: calculating shlib requirements for glib-2.0-locale-ms
+DEBUG: calculating shlib requirements for glib-2.0-locale-nb
+DEBUG: calculating shlib requirements for glib-2.0-locale-nds
+DEBUG: calculating shlib requirements for glib-2.0-locale-ne
+DEBUG: calculating shlib requirements for glib-2.0-locale-nl
+DEBUG: calculating shlib requirements for glib-2.0-locale-nn
+DEBUG: calculating shlib requirements for glib-2.0-locale-oc
+DEBUG: calculating shlib requirements for glib-2.0-locale-or
+DEBUG: calculating shlib requirements for glib-2.0-locale-pa
+DEBUG: calculating shlib requirements for glib-2.0-locale-pl
+DEBUG: calculating shlib requirements for glib-2.0-locale-ps
+DEBUG: calculating shlib requirements for glib-2.0-locale-pt
+DEBUG: calculating shlib requirements for glib-2.0-locale-pt-br
+DEBUG: calculating shlib requirements for glib-2.0-locale-ro
+DEBUG: calculating shlib requirements for glib-2.0-locale-ru
+DEBUG: calculating shlib requirements for glib-2.0-locale-rw
+DEBUG: calculating shlib requirements for glib-2.0-locale-si
+DEBUG: calculating shlib requirements for glib-2.0-locale-sk
+DEBUG: calculating shlib requirements for glib-2.0-locale-sl
+DEBUG: calculating shlib requirements for glib-2.0-locale-sq
+DEBUG: calculating shlib requirements for glib-2.0-locale-sr
+DEBUG: calculating shlib requirements for glib-2.0-locale-sr+ije
+DEBUG: calculating shlib requirements for glib-2.0-locale-sr+latin
+DEBUG: calculating shlib requirements for glib-2.0-locale-sv
+DEBUG: calculating shlib requirements for glib-2.0-locale-ta
+DEBUG: calculating shlib requirements for glib-2.0-locale-te
+DEBUG: calculating shlib requirements for glib-2.0-locale-tg
+DEBUG: calculating shlib requirements for glib-2.0-locale-th
+DEBUG: calculating shlib requirements for glib-2.0-locale-tl
+DEBUG: calculating shlib requirements for glib-2.0-locale-tr
+DEBUG: calculating shlib requirements for glib-2.0-locale-tt
+DEBUG: calculating shlib requirements for glib-2.0-locale-ug
+DEBUG: calculating shlib requirements for glib-2.0-locale-uk
+DEBUG: calculating shlib requirements for glib-2.0-locale-vi
+DEBUG: calculating shlib requirements for glib-2.0-locale-wa
+DEBUG: calculating shlib requirements for glib-2.0-locale-xh
+DEBUG: calculating shlib requirements for glib-2.0-locale-yi
+DEBUG: calculating shlib requirements for glib-2.0-locale-zh-cn
+DEBUG: calculating shlib requirements for glib-2.0-locale-zh-hk
+DEBUG: calculating shlib requirements for glib-2.0-locale-zh-tw
+DEBUG: Python function package_do_shlibs finished
+DEBUG: Executing python function package_do_pkgconfig
+DEBUG: Python function package_do_pkgconfig finished
+DEBUG: Executing python function read_shlibdeps
+DEBUG: Python function read_shlibdeps finished
+DEBUG: Executing python function package_depchains
+DEBUG: Python function package_depchains finished
+DEBUG: Executing python function emit_pkgdata
+DEBUG: Python function emit_pkgdata finished
+DEBUG: Python function do_package finished
+DEBUG: Executing python function sstate_task_postfunc
+NOTE: Using umask 0o002 (not 22) for sstate packaging
+DEBUG: Executing python function target_add_sysroot_deps
+DEBUG: Python function target_add_sysroot_deps finished
+DEBUG: Executing python function sstate_hardcode_path
+NOTE: Removing hardcoded paths from sstate package: 'find /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/sstate-build-package/ \( -name "*.la" -o -name "*-config" -o -name "*_config" -o -name "postinst-*" \) -type f | xargs grep -l -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/recipe-sysroot' -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/recipe-sysroot-native' -e '/home/matt/tmp/build/obmc-y2038/tmp/hosttools' | tee /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/sstate-build-package/fixmepath | xargs --no-run-if-empty sed -i -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/recipe-sysroot-native:FIXMESTAGINGDIRHOST:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/glib-2.0/1_2.72.3-r0/recipe-sysroot:FIXMESTAGINGDIRTARGET:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:FIXME_HOSTTOOLS_DIR:g''
+DEBUG: Python function sstate_hardcode_path finished
+DEBUG: Executing python function sstate_report_unihash
+DEBUG: Python function sstate_report_unihash finished
+DEBUG: Executing shell function sstate_create_package
+DEBUG: Shell function sstate_create_package finished
+DEBUG: Executing python function sstate_hardcode_path_unpack
+DEBUG: Python function sstate_hardcode_path_unpack finished
+DEBUG: Python function sstate_task_postfunc finished

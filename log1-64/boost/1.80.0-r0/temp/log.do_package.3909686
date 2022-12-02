@@ -1,0 +1,150 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/zlib/zlib_1.2.13.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-extended/bzip2/bzip2_1.0.8.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-support/boost/boost-build-native_1.80.0.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/dwarfsrcfiles/dwarfsrcfiles.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/rpm/rpm_4.18.0.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: []
+NOTE: Skipping as already exists in sysroot: ['glibc', 'zlib', 'gcc-cross-arm', 'gcc-runtime', 'quilt-native', 'bzip2', 'boost-build-native', 'dwarfsrcfiles-native', 'patch-native', 'pseudo-native', 'rpm-native', 'elfutils-native', 'libgcc', 'linux-libc-headers', 'attr-native', 'libtool-native', 'zstd-native', 'mpfr-native', 'libmpc-native', 'gnu-config-native', 'xz-native', 'binutils-cross-arm', 'flex-native', 'texinfo-dummy-native', 'zlib-native', 'gmp-native', 'opkg-utils', 'lua-native', 'file-native', 'gettext-minimal-native', 'sqlite3-native', 'popt-native', 'bzip2-native', 'python3-native', 'libgcrypt-native', 'm4-native', 'readline-native', 'libnsl2-native', 'util-linux-libuuid-native', 'libffi-native', 'ncurses-native', 'openssl-native', 'gdbm-native', 'libtirpc-native', 'libcap-native', 'libgpg-error-native', 'perl-native', 'make-native']
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function sstate_task_prefunc
+DEBUG: Python function sstate_task_prefunc finished
+DEBUG: Executing python function do_package
+DEBUG: Executing python function package_convert_pr_autoinc
+DEBUG: Python function package_convert_pr_autoinc finished
+DEBUG: Executing python function package_prepare_pkgdata
+NOTE: Installed into pkgdata-sysroot: ['zlib', 'glibc', 'bzip2', 'gcc-runtime', 'linux-libc-headers', 'opkg-utils', 'libgcc']
+DEBUG: Python function package_prepare_pkgdata finished
+DEBUG: Executing python function perform_packagecopy
+DEBUG: Python function perform_packagecopy finished
+DEBUG: Executing python function split_and_strip_files
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/boost/1.80.0-r0/package/usr/lib/libboost_thread.so.1.80.0']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/boost/1.80.0-r0/package/usr/lib/libboost_coroutine.so.1.80.0']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/boost/1.80.0-r0/package/usr/lib/libboost_context.so.1.80.0']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '--strip-unneeded', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/boost/1.80.0-r0/package/usr/lib/libboost_chrono.so.1.80.0']
+DEBUG: Python function split_and_strip_files finished
+DEBUG: Executing python function fixup_perms
+DEBUG: Python function fixup_perms finished
+DEBUG: Executing python function package_do_split_locales
+DEBUG: No locale files in this package
+DEBUG: Python function package_do_split_locales finished
+DEBUG: Executing python function populate_packages
+DEBUG: Python function populate_packages finished
+DEBUG: Executing python function package_fixsymlinks
+DEBUG: boost-dev contains dangling link /usr/lib/libboost_context.so.1.80.0
+DEBUG: target found in boost-context
+DEBUG: boost-dev contains dangling link /usr/lib/libboost_thread.so.1.80.0
+DEBUG: target found in boost-thread
+DEBUG: boost-dev contains dangling link /usr/lib/libboost_context.so.1.80.0
+DEBUG: target found in boost-context
+DEBUG: boost-dev contains dangling link /usr/lib/libboost_coroutine.so.1.80.0
+DEBUG: target found in boost-coroutine
+DEBUG: boost-dev contains dangling link /usr/lib/libboost_thread.so.1.80.0
+DEBUG: target found in boost-thread
+DEBUG: boost-dev contains dangling link /usr/lib/libboost_chrono.so.1.80.0
+DEBUG: target found in boost-chrono
+DEBUG: boost-dev contains dangling link /usr/lib/libboost_chrono.so.1.80.0
+DEBUG: target found in boost-chrono
+DEBUG: boost-dev contains dangling link /usr/lib/libboost_coroutine.so.1.80.0
+DEBUG: target found in boost-coroutine
+DEBUG: Python function package_fixsymlinks finished
+DEBUG: Executing python function package_name_hook
+DEBUG: Executing python function debian_package_name_hook
+DEBUG: LIBNAMES: pkg boost-thread libs 1 bins 0 sonames ['libboost_thread.so.1.80.0']
+NOTE: debian: renaming boost-thread to libboost-thread1.80.0
+DEBUG: LIBNAMES: pkg boost-staticdev libs 1 bins 0 sonames []
+DEBUG: LIBNAMES: pkg boost-src libs 0 bins 0 sonames []
+arm-openbmc-linux-gnueabi-objdump: '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/boost/1.80.0-r0/packages-split/boost-dev/usr/lib/libboost_context.so': No such file
+arm-openbmc-linux-gnueabi-objdump: '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/boost/1.80.0-r0/packages-split/boost-dev/usr/lib/libboost_thread.so': No such file
+arm-openbmc-linux-gnueabi-objdump: '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/boost/1.80.0-r0/packages-split/boost-dev/usr/lib/libboost_context-mt.so': No such file
+arm-openbmc-linux-gnueabi-objdump: '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/boost/1.80.0-r0/packages-split/boost-dev/usr/lib/libboost_coroutine.so': No such file
+arm-openbmc-linux-gnueabi-objdump: '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/boost/1.80.0-r0/packages-split/boost-dev/usr/lib/libboost_thread-mt.so': No such file
+arm-openbmc-linux-gnueabi-objdump: '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/boost/1.80.0-r0/packages-split/boost-dev/usr/lib/libboost_chrono.so': No such file
+arm-openbmc-linux-gnueabi-objdump: '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/boost/1.80.0-r0/packages-split/boost-dev/usr/lib/libboost_chrono-mt.so': No such file
+arm-openbmc-linux-gnueabi-objdump: '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/boost/1.80.0-r0/packages-split/boost-dev/usr/lib/libboost_coroutine-mt.so': No such file
+DEBUG: LIBNAMES: pkg boost-dev libs 1 bins 0 sonames []
+DEBUG: LIBNAMES: pkg boost-dbg libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg boost-coroutine libs 1 bins 0 sonames ['libboost_coroutine.so.1.80.0']
+NOTE: debian: renaming boost-coroutine to libboost-coroutine1.80.0
+DEBUG: LIBNAMES: pkg boost-context libs 1 bins 0 sonames ['libboost_context.so.1.80.0']
+NOTE: debian: renaming boost-context to libboost-context1.80.0
+DEBUG: LIBNAMES: pkg boost-chrono libs 1 bins 0 sonames ['libboost_chrono.so.1.80.0']
+NOTE: debian: renaming boost-chrono to libboost-chrono1.80.0
+DEBUG: LIBNAMES: pkg boost libs 0 bins 0 sonames []
+DEBUG: Python function debian_package_name_hook finished
+DEBUG: Python function package_name_hook finished
+DEBUG: Executing python function package_do_filedeps
+DEBUG: Python function package_do_filedeps finished
+DEBUG: Executing python function package_do_shlibs
+DEBUG: Reading shlib providers in /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/boost/1.80.0-r0/pkgdata-sysroot/shlibs2
+DEBUG: calculating shlib provides for boost-src
+DEBUG: LIBNAMES: pkg boost-src sonames set()
+DEBUG: calculating shlib provides for boost-dbg
+DEBUG: LIBNAMES: pkg boost-dbg sonames set()
+DEBUG: calculating shlib provides for boost-chrono
+DEBUG: registering boost-chrono-1.80.0 as shlib provider for libboost_chrono.so.1.80.0
+DEBUG: adding ldconfig call to postinst for boost-chrono
+DEBUG: LIBNAMES: pkg boost-chrono sonames {('libboost_chrono.so.1.80.0', '/usr/lib', '1.80.0')}
+DEBUG: calculating shlib provides for boost-thread
+DEBUG: registering boost-thread-1.80.0 as shlib provider for libboost_thread.so.1.80.0
+DEBUG: adding ldconfig call to postinst for boost-thread
+DEBUG: LIBNAMES: pkg boost-thread sonames {('libboost_thread.so.1.80.0', '/usr/lib', '1.80.0')}
+DEBUG: calculating shlib provides for boost-context
+DEBUG: registering boost-context-1.80.0 as shlib provider for libboost_context.so.1.80.0
+DEBUG: adding ldconfig call to postinst for boost-context
+DEBUG: LIBNAMES: pkg boost-context sonames {('libboost_context.so.1.80.0', '/usr/lib', '1.80.0')}
+DEBUG: calculating shlib provides for boost-coroutine
+DEBUG: registering boost-coroutine-1.80.0 as shlib provider for libboost_coroutine.so.1.80.0
+DEBUG: adding ldconfig call to postinst for boost-coroutine
+DEBUG: LIBNAMES: pkg boost-coroutine sonames {('libboost_coroutine.so.1.80.0', '/usr/lib', '1.80.0')}
+DEBUG: calculating shlib provides for boost-dev
+DEBUG: LIBNAMES: pkg boost-dev sonames set()
+DEBUG: calculating shlib provides for boost-staticdev
+DEBUG: LIBNAMES: pkg boost-staticdev sonames set()
+DEBUG: calculating shlib provides for boost
+DEBUG: LIBNAMES: pkg boost sonames set()
+DEBUG: calculating shlib requirements for boost-src
+DEBUG: calculating shlib requirements for boost-dbg
+DEBUG: calculating shlib requirements for boost-chrono
+DEBUG: boost-chrono: Dependency libgcc_s.so.1 requires package libgcc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/boost/1.80.0-r0/packages-split/boost-chrono/usr/lib/libboost_chrono.so.1.80.0)
+DEBUG: boost-chrono: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/boost/1.80.0-r0/packages-split/boost-chrono/usr/lib/libboost_chrono.so.1.80.0)
+DEBUG: boost-chrono: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/boost/1.80.0-r0/packages-split/boost-chrono/usr/lib/libboost_chrono.so.1.80.0)
+DEBUG: boost-chrono: Dependency libstdc++.so.6 requires package libstdc++ (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/boost/1.80.0-r0/packages-split/boost-chrono/usr/lib/libboost_chrono.so.1.80.0)
+DEBUG: calculating shlib requirements for boost-thread
+DEBUG: boost-thread: Dependency libstdc++.so.6 requires package libstdc++ (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/boost/1.80.0-r0/packages-split/boost-thread/usr/lib/libboost_thread.so.1.80.0)
+DEBUG: boost-thread: Dependency libgcc_s.so.1 requires package libgcc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/boost/1.80.0-r0/packages-split/boost-thread/usr/lib/libboost_thread.so.1.80.0)
+DEBUG: boost-thread: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/boost/1.80.0-r0/packages-split/boost-thread/usr/lib/libboost_thread.so.1.80.0)
+DEBUG: boost-thread: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/boost/1.80.0-r0/packages-split/boost-thread/usr/lib/libboost_thread.so.1.80.0)
+DEBUG: calculating shlib requirements for boost-context
+DEBUG: boost-context: Dependency libstdc++.so.6 requires package libstdc++ (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/boost/1.80.0-r0/packages-split/boost-context/usr/lib/libboost_context.so.1.80.0)
+DEBUG: boost-context: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/boost/1.80.0-r0/packages-split/boost-context/usr/lib/libboost_context.so.1.80.0)
+DEBUG: boost-context: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/boost/1.80.0-r0/packages-split/boost-context/usr/lib/libboost_context.so.1.80.0)
+DEBUG: calculating shlib requirements for boost-coroutine
+DEBUG: boost-coroutine: Dependency libgcc_s.so.1 requires package libgcc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/boost/1.80.0-r0/packages-split/boost-coroutine/usr/lib/libboost_coroutine.so.1.80.0)
+DEBUG: boost-coroutine: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/boost/1.80.0-r0/packages-split/boost-coroutine/usr/lib/libboost_coroutine.so.1.80.0)
+DEBUG: boost-coroutine: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/boost/1.80.0-r0/packages-split/boost-coroutine/usr/lib/libboost_coroutine.so.1.80.0)
+DEBUG: boost-coroutine: Dependency libstdc++.so.6 requires package libstdc++ (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/boost/1.80.0-r0/packages-split/boost-coroutine/usr/lib/libboost_coroutine.so.1.80.0)
+DEBUG: boost-coroutine: Dependency libboost_context.so.1.80.0 requires package boost-context (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/boost/1.80.0-r0/packages-split/boost-coroutine/usr/lib/libboost_coroutine.so.1.80.0)
+DEBUG: calculating shlib requirements for boost-dev
+DEBUG: calculating shlib requirements for boost-staticdev
+DEBUG: calculating shlib requirements for boost
+DEBUG: Python function package_do_shlibs finished
+DEBUG: Executing python function package_do_pkgconfig
+DEBUG: Python function package_do_pkgconfig finished
+DEBUG: Executing python function read_shlibdeps
+DEBUG: Python function read_shlibdeps finished
+DEBUG: Executing python function package_depchains
+DEBUG: Python function package_depchains finished
+DEBUG: Executing python function emit_pkgdata
+DEBUG: Python function emit_pkgdata finished
+DEBUG: Python function do_package finished
+DEBUG: Executing python function sstate_task_postfunc
+NOTE: Using umask 0o002 (not 22) for sstate packaging
+DEBUG: Executing python function target_add_sysroot_deps
+DEBUG: Python function target_add_sysroot_deps finished
+DEBUG: Executing python function sstate_hardcode_path
+NOTE: Removing hardcoded paths from sstate package: 'find /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/boost/1.80.0-r0/sstate-build-package/ \( -name "*.la" -o -name "*-config" -o -name "*_config" -o -name "postinst-*" \) -type f | xargs grep -l -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/boost/1.80.0-r0/recipe-sysroot' -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/boost/1.80.0-r0/recipe-sysroot-native' -e '/home/matt/tmp/build/obmc-y2038/tmp/hosttools' | tee /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/boost/1.80.0-r0/sstate-build-package/fixmepath | xargs --no-run-if-empty sed -i -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/boost/1.80.0-r0/recipe-sysroot-native:FIXMESTAGINGDIRHOST:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/boost/1.80.0-r0/recipe-sysroot:FIXMESTAGINGDIRTARGET:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:FIXME_HOSTTOOLS_DIR:g''
+DEBUG: Python function sstate_hardcode_path finished
+DEBUG: Executing python function sstate_report_unihash
+DEBUG: Python function sstate_report_unihash finished
+DEBUG: Executing shell function sstate_create_package
+DEBUG: Shell function sstate_create_package finished
+DEBUG: Executing python function sstate_hardcode_path_unpack
+DEBUG: Python function sstate_hardcode_path_unpack finished
+DEBUG: Python function sstate_task_postfunc finished

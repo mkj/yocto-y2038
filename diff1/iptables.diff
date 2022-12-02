@@ -1,0 +1,23 @@
+1105c1105
+< ../../iptables-1.8.8/extensions/libxt_time.c:278:36: warning: conversion to '__u32' {aka 'unsigned int'} from 'time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../../iptables-1.8.8/extensions/libxt_time.c:278:36: warning: conversion from 'time_t' {aka 'long long int'} to '__u32' {aka 'unsigned int'} may change value [-Wconversion]
+1108c1108
+< ../../iptables-1.8.8/extensions/libxt_time.c:281:35: warning: conversion to '__u32' {aka 'unsigned int'} from 'time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../../iptables-1.8.8/extensions/libxt_time.c:281:35: warning: conversion from 'time_t' {aka 'long long int'} to '__u32' {aka 'unsigned int'} may change value [-Wconversion]
+1114,1127d1113
+< ../../iptables-1.8.8/extensions/libxt_time.c: In function 'time_print':
+< ../../iptables-1.8.8/extensions/libxt_time.c:414:37: warning: conversion to 'time_t' {aka 'long int'} from '__u32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+<   414 |                 time_print_date(info->date_start, NULL);
+<       |                                 ~~~~^~~~~~~~~~~~
+< ../../iptables-1.8.8/extensions/libxt_time.c:418:37: warning: conversion to 'time_t' {aka 'long int'} from '__u32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+<   418 |                 time_print_date(info->date_stop, NULL);
+<       |                                 ~~~~^~~~~~~~~~~
+< ../../iptables-1.8.8/extensions/libxt_time.c: In function 'time_save':
+< ../../iptables-1.8.8/extensions/libxt_time.c:446:29: warning: conversion to 'time_t' {aka 'long int'} from '__u32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+<   446 |         time_print_date(info->date_start, "--datestart");
+<       |                         ~~~~^~~~~~~~~~~~
+< ../../iptables-1.8.8/extensions/libxt_time.c:447:29: warning: conversion to 'time_t' {aka 'long int'} from '__u32' {aka 'unsigned int'} may change the sign of the result [-Wsign-conversion]
+<   447 |         time_print_date(info->date_stop, "--datestop");
+<       |                         ~~~~^~~~~~~~~~~

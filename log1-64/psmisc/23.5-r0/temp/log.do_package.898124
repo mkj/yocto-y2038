@@ -1,0 +1,263 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses_6.3+20220423.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-cross_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-native_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/opkg-utils/opkg-utils_0.5.0.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-core/gettext/gettext_0.21.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/autoconf/autoconf_2.71.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/automake/automake_1.16.5.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/dwarfsrcfiles/dwarfsrcfiles.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/rpm/rpm_4.18.0.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: ['dwarfsrcfiles-native', 'rpm-native', 'file-native', 'python3-native', 'elfutils-native', 'lua-native', 'libgcrypt-native', 'popt-native', 'bzip2-native', 'sqlite3-native', 'libtirpc-native', 'gdbm-native', 'openssl-native', 'util-linux-libuuid-native', 'ncurses-native', 'libffi-native', 'libnsl2-native', 'readline-native', 'libcap-native', 'libgpg-error-native', 'perl-native', 'make-native']
+NOTE: Skipping as already exists in sysroot: ['glibc', 'ncurses', 'gcc-cross-arm', 'gcc-runtime', 'libtool-cross', 'libtool-native', 'opkg-utils', 'quilt-native', 'gettext-native', 'autoconf-native', 'automake-native', 'patch-native', 'pseudo-native', 'gnu-config-native', 'm4-native', 'texinfo-dummy-native', 'mpfr-native', 'xz-native', 'gmp-native', 'zstd-native', 'binutils-cross-arm', 'linux-libc-headers', 'libmpc-native', 'zlib-native', 'flex-native', 'gettext-minimal-native', 'attr-native', 'libgcc']
+DEBUG: sed -e 's:^[^/]*/:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native/:g' /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/rpm-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/python3-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/elfutils-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/lua-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/libgcrypt-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/openssl-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/ncurses-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/libgpg-error-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/perl-native/fixmepath | xargs sed -i -e 's:FIXMESTAGINGDIRTARGET:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot:g; s:FIXMESTAGINGDIRHOST:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native:g' -e 's:FIXME_PSEUDO_SYSROOT:/home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/pseudo-native:g' -e 's:FIXME_HOSTTOOLS_DIR:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:g' -e 's:FIXME_PKGDATA_DIR:/home/matt/tmp/build/obmc-y2038/tmp/pkgdata/evb-ast2600:g' -e 's:FIXME_PSEUDO_LOCALSTATEDIR:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/pseudo/:g' -e 's:FIXME_LOGFIFO:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/temp/fifo.898124:g'
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function sstate_task_prefunc
+DEBUG: Python function sstate_task_prefunc finished
+DEBUG: Executing python function do_package
+DEBUG: Executing python function package_convert_pr_autoinc
+DEBUG: Python function package_convert_pr_autoinc finished
+DEBUG: Executing python function package_prepare_pkgdata
+NOTE: Installed into pkgdata-sysroot: ['opkg-utils', 'glibc', 'gcc-runtime', 'ncurses', 'linux-libc-headers', 'libgcc']
+DEBUG: Python function package_prepare_pkgdata finished
+DEBUG: Executing python function perform_packagecopy
+DEBUG: Python function perform_packagecopy finished
+DEBUG: Executing python function apply_update_alternative_renames
+NOTE: psmisc: Rename /usr/bin/fuser -> /usr/bin/fuser.psmisc
+NOTE: psmisc: Rename /usr/bin/killall -> /usr/bin/killall.psmisc
+DEBUG: Python function apply_update_alternative_renames finished
+DEBUG: Executing python function split_and_strip_files
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/package/usr/bin/pstree']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/package/usr/bin/pslog']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/package/usr/bin/prtstat']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/package/usr/bin/peekfd']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/package/usr/bin/killall.psmisc']
+DEBUG: runstrip: ['arm-openbmc-linux-gnueabi-strip', '--remove-section=.comment', '--remove-section=.note', '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/package/usr/bin/fuser.psmisc']
+DEBUG: Python function split_and_strip_files finished
+DEBUG: Executing python function fixup_perms
+DEBUG: Python function fixup_perms finished
+DEBUG: Executing python function populate_packages_updatealternatives
+NOTE: adding update-alternatives calls to postinst/prerm for fuser
+NOTE: 	update-alternatives --install /usr/bin/fuser fuser /usr/bin/fuser.psmisc 90
+
+NOTE: 	update-alternatives --remove  fuser /usr/bin/fuser.psmisc
+
+NOTE: adding update-alternatives calls to postinst/prerm for killall
+NOTE: 	update-alternatives --install /usr/bin/killall killall /usr/bin/killall.psmisc 90
+
+NOTE: 	update-alternatives --remove  killall /usr/bin/killall.psmisc
+
+DEBUG: Python function populate_packages_updatealternatives finished
+DEBUG: Executing python function package_do_split_locales
+DEBUG: Python function package_do_split_locales finished
+DEBUG: Executing python function populate_packages
+DEBUG: Python function populate_packages finished
+DEBUG: Executing python function package_fixsymlinks
+DEBUG: psmisc-extras contains dangling link /usr/bin/pstree
+DEBUG: target found in pstree
+DEBUG: Python function package_fixsymlinks finished
+DEBUG: Executing python function package_name_hook
+DEBUG: Executing python function debian_package_name_hook
+DEBUG: LIBNAMES: pkg pstree-doc libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg pstree libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg psmisc-staticdev libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg psmisc-src libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg psmisc-locale-zh-tw libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg psmisc-locale-zh-cn libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg psmisc-locale-vi libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg psmisc-locale-uk libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg psmisc-locale-sv libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg psmisc-locale-sr libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg psmisc-locale-ru libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg psmisc-locale-ro libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg psmisc-locale-pt-br libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg psmisc-locale-pt libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg psmisc-locale-pl libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg psmisc-locale-nl libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg psmisc-locale-nb libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg psmisc-locale-ja libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg psmisc-locale-it libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg psmisc-locale-id libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg psmisc-locale-hu libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg psmisc-locale-hr libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg psmisc-locale-fr libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg psmisc-locale-fi libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg psmisc-locale-eu libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg psmisc-locale-es libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg psmisc-locale-eo libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg psmisc-locale-el libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg psmisc-locale-de libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg psmisc-locale-da libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg psmisc-locale-cs libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg psmisc-locale-ca libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg psmisc-locale-bg libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg psmisc-extras libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg psmisc-doc libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg psmisc-dev libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg psmisc-dbg libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg psmisc libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg killall-doc libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg killall libs 0 bins 1 sonames []
+DEBUG: LIBNAMES: pkg fuser-doc libs 0 bins 0 sonames []
+DEBUG: LIBNAMES: pkg fuser libs 0 bins 1 sonames []
+DEBUG: Python function debian_package_name_hook finished
+DEBUG: Python function package_name_hook finished
+DEBUG: Executing python function package_do_filedeps
+DEBUG: Python function package_do_filedeps finished
+DEBUG: Executing python function package_do_shlibs
+DEBUG: Reading shlib providers in /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/pkgdata-sysroot/shlibs2
+DEBUG: calculating shlib provides for psmisc-src
+DEBUG: LIBNAMES: pkg psmisc-src sonames set()
+DEBUG: calculating shlib provides for psmisc-dbg
+DEBUG: LIBNAMES: pkg psmisc-dbg sonames set()
+DEBUG: calculating shlib provides for fuser
+DEBUG: LIBNAMES: pkg fuser sonames set()
+DEBUG: calculating shlib provides for fuser-doc
+DEBUG: LIBNAMES: pkg fuser-doc sonames set()
+DEBUG: calculating shlib provides for killall
+DEBUG: LIBNAMES: pkg killall sonames set()
+DEBUG: calculating shlib provides for killall-doc
+DEBUG: LIBNAMES: pkg killall-doc sonames set()
+DEBUG: calculating shlib provides for pstree
+DEBUG: LIBNAMES: pkg pstree sonames set()
+DEBUG: calculating shlib provides for pstree-doc
+DEBUG: LIBNAMES: pkg pstree-doc sonames set()
+DEBUG: calculating shlib provides for psmisc-staticdev
+DEBUG: LIBNAMES: pkg psmisc-staticdev sonames set()
+DEBUG: calculating shlib provides for psmisc-dev
+DEBUG: LIBNAMES: pkg psmisc-dev sonames set()
+DEBUG: calculating shlib provides for psmisc-doc
+DEBUG: LIBNAMES: pkg psmisc-doc sonames set()
+DEBUG: calculating shlib provides for psmisc
+DEBUG: LIBNAMES: pkg psmisc sonames set()
+DEBUG: calculating shlib provides for psmisc-extras
+DEBUG: LIBNAMES: pkg psmisc-extras sonames set()
+DEBUG: calculating shlib provides for psmisc-locale-bg
+DEBUG: LIBNAMES: pkg psmisc-locale-bg sonames set()
+DEBUG: calculating shlib provides for psmisc-locale-ca
+DEBUG: LIBNAMES: pkg psmisc-locale-ca sonames set()
+DEBUG: calculating shlib provides for psmisc-locale-cs
+DEBUG: LIBNAMES: pkg psmisc-locale-cs sonames set()
+DEBUG: calculating shlib provides for psmisc-locale-da
+DEBUG: LIBNAMES: pkg psmisc-locale-da sonames set()
+DEBUG: calculating shlib provides for psmisc-locale-de
+DEBUG: LIBNAMES: pkg psmisc-locale-de sonames set()
+DEBUG: calculating shlib provides for psmisc-locale-el
+DEBUG: LIBNAMES: pkg psmisc-locale-el sonames set()
+DEBUG: calculating shlib provides for psmisc-locale-eo
+DEBUG: LIBNAMES: pkg psmisc-locale-eo sonames set()
+DEBUG: calculating shlib provides for psmisc-locale-es
+DEBUG: LIBNAMES: pkg psmisc-locale-es sonames set()
+DEBUG: calculating shlib provides for psmisc-locale-eu
+DEBUG: LIBNAMES: pkg psmisc-locale-eu sonames set()
+DEBUG: calculating shlib provides for psmisc-locale-fi
+DEBUG: LIBNAMES: pkg psmisc-locale-fi sonames set()
+DEBUG: calculating shlib provides for psmisc-locale-fr
+DEBUG: LIBNAMES: pkg psmisc-locale-fr sonames set()
+DEBUG: calculating shlib provides for psmisc-locale-hr
+DEBUG: LIBNAMES: pkg psmisc-locale-hr sonames set()
+DEBUG: calculating shlib provides for psmisc-locale-hu
+DEBUG: LIBNAMES: pkg psmisc-locale-hu sonames set()
+DEBUG: calculating shlib provides for psmisc-locale-id
+DEBUG: LIBNAMES: pkg psmisc-locale-id sonames set()
+DEBUG: calculating shlib provides for psmisc-locale-it
+DEBUG: LIBNAMES: pkg psmisc-locale-it sonames set()
+DEBUG: calculating shlib provides for psmisc-locale-ja
+DEBUG: LIBNAMES: pkg psmisc-locale-ja sonames set()
+DEBUG: calculating shlib provides for psmisc-locale-nb
+DEBUG: LIBNAMES: pkg psmisc-locale-nb sonames set()
+DEBUG: calculating shlib provides for psmisc-locale-nl
+DEBUG: LIBNAMES: pkg psmisc-locale-nl sonames set()
+DEBUG: calculating shlib provides for psmisc-locale-pl
+DEBUG: LIBNAMES: pkg psmisc-locale-pl sonames set()
+DEBUG: calculating shlib provides for psmisc-locale-pt
+DEBUG: LIBNAMES: pkg psmisc-locale-pt sonames set()
+DEBUG: calculating shlib provides for psmisc-locale-pt-br
+DEBUG: LIBNAMES: pkg psmisc-locale-pt-br sonames set()
+DEBUG: calculating shlib provides for psmisc-locale-ro
+DEBUG: LIBNAMES: pkg psmisc-locale-ro sonames set()
+DEBUG: calculating shlib provides for psmisc-locale-ru
+DEBUG: LIBNAMES: pkg psmisc-locale-ru sonames set()
+DEBUG: calculating shlib provides for psmisc-locale-sr
+DEBUG: LIBNAMES: pkg psmisc-locale-sr sonames set()
+DEBUG: calculating shlib provides for psmisc-locale-sv
+DEBUG: LIBNAMES: pkg psmisc-locale-sv sonames set()
+DEBUG: calculating shlib provides for psmisc-locale-uk
+DEBUG: LIBNAMES: pkg psmisc-locale-uk sonames set()
+DEBUG: calculating shlib provides for psmisc-locale-vi
+DEBUG: LIBNAMES: pkg psmisc-locale-vi sonames set()
+DEBUG: calculating shlib provides for psmisc-locale-zh-cn
+DEBUG: LIBNAMES: pkg psmisc-locale-zh-cn sonames set()
+DEBUG: calculating shlib provides for psmisc-locale-zh-tw
+DEBUG: LIBNAMES: pkg psmisc-locale-zh-tw sonames set()
+DEBUG: calculating shlib requirements for psmisc-src
+DEBUG: calculating shlib requirements for psmisc-dbg
+DEBUG: calculating shlib requirements for fuser
+DEBUG: fuser: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/packages-split/fuser/usr/bin/fuser.psmisc)
+DEBUG: fuser: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/packages-split/fuser/usr/bin/fuser.psmisc)
+DEBUG: calculating shlib requirements for fuser-doc
+DEBUG: calculating shlib requirements for killall
+DEBUG: killall: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/packages-split/killall/usr/bin/killall.psmisc)
+DEBUG: killall: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/packages-split/killall/usr/bin/killall.psmisc)
+DEBUG: calculating shlib requirements for killall-doc
+DEBUG: calculating shlib requirements for pstree
+DEBUG: pstree: Dependency libtinfo.so.5 requires package ncurses-libtinfo (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/packages-split/pstree/usr/bin/pstree)
+DEBUG: pstree: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/packages-split/pstree/usr/bin/pstree)
+DEBUG: pstree: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/packages-split/pstree/usr/bin/pstree)
+DEBUG: calculating shlib requirements for pstree-doc
+DEBUG: calculating shlib requirements for psmisc-staticdev
+DEBUG: calculating shlib requirements for psmisc-dev
+DEBUG: calculating shlib requirements for psmisc-doc
+DEBUG: calculating shlib requirements for psmisc
+DEBUG: calculating shlib requirements for psmisc-extras
+DEBUG: psmisc-extras: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/packages-split/psmisc-extras/usr/bin/prtstat)
+DEBUG: psmisc-extras: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/packages-split/psmisc-extras/usr/bin/pslog)
+DEBUG: psmisc-extras: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/packages-split/psmisc-extras/usr/bin/pslog)
+DEBUG: psmisc-extras: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/packages-split/psmisc-extras/usr/bin/peekfd)
+DEBUG: psmisc-extras: Dependency libc.so.6 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/packages-split/psmisc-extras/usr/bin/prtstat)
+DEBUG: psmisc-extras: Dependency ld-linux-armhf.so.3 requires package glibc (used by files: /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/packages-split/psmisc-extras/usr/bin/peekfd)
+DEBUG: calculating shlib requirements for psmisc-locale-bg
+DEBUG: calculating shlib requirements for psmisc-locale-ca
+DEBUG: calculating shlib requirements for psmisc-locale-cs
+DEBUG: calculating shlib requirements for psmisc-locale-da
+DEBUG: calculating shlib requirements for psmisc-locale-de
+DEBUG: calculating shlib requirements for psmisc-locale-el
+DEBUG: calculating shlib requirements for psmisc-locale-eo
+DEBUG: calculating shlib requirements for psmisc-locale-es
+DEBUG: calculating shlib requirements for psmisc-locale-eu
+DEBUG: calculating shlib requirements for psmisc-locale-fi
+DEBUG: calculating shlib requirements for psmisc-locale-fr
+DEBUG: calculating shlib requirements for psmisc-locale-hr
+DEBUG: calculating shlib requirements for psmisc-locale-hu
+DEBUG: calculating shlib requirements for psmisc-locale-id
+DEBUG: calculating shlib requirements for psmisc-locale-it
+DEBUG: calculating shlib requirements for psmisc-locale-ja
+DEBUG: calculating shlib requirements for psmisc-locale-nb
+DEBUG: calculating shlib requirements for psmisc-locale-nl
+DEBUG: calculating shlib requirements for psmisc-locale-pl
+DEBUG: calculating shlib requirements for psmisc-locale-pt
+DEBUG: calculating shlib requirements for psmisc-locale-pt-br
+DEBUG: calculating shlib requirements for psmisc-locale-ro
+DEBUG: calculating shlib requirements for psmisc-locale-ru
+DEBUG: calculating shlib requirements for psmisc-locale-sr
+DEBUG: calculating shlib requirements for psmisc-locale-sv
+DEBUG: calculating shlib requirements for psmisc-locale-uk
+DEBUG: calculating shlib requirements for psmisc-locale-vi
+DEBUG: calculating shlib requirements for psmisc-locale-zh-cn
+DEBUG: calculating shlib requirements for psmisc-locale-zh-tw
+DEBUG: Python function package_do_shlibs finished
+DEBUG: Executing python function package_do_pkgconfig
+DEBUG: Python function package_do_pkgconfig finished
+DEBUG: Executing python function read_shlibdeps
+DEBUG: Python function read_shlibdeps finished
+DEBUG: Executing python function package_depchains
+DEBUG: Python function package_depchains finished
+DEBUG: Executing python function emit_pkgdata
+DEBUG: Python function emit_pkgdata finished
+DEBUG: Python function do_package finished
+DEBUG: Executing python function sstate_task_postfunc
+NOTE: Using umask 0o002 (not 22) for sstate packaging
+DEBUG: Executing python function target_add_sysroot_deps
+DEBUG: Python function target_add_sysroot_deps finished
+DEBUG: Executing python function sstate_hardcode_path
+NOTE: Removing hardcoded paths from sstate package: 'find /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/sstate-build-package/ \( -name "*.la" -o -name "*-config" -o -name "*_config" -o -name "postinst-*" \) -type f | xargs grep -l -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot' -e '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native' -e '/home/matt/tmp/build/obmc-y2038/tmp/hosttools' | tee /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/sstate-build-package/fixmepath | xargs --no-run-if-empty sed -i -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot-native:FIXMESTAGINGDIRHOST:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/psmisc/23.5-r0/recipe-sysroot:FIXMESTAGINGDIRTARGET:g' -e 's:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:FIXME_HOSTTOOLS_DIR:g''
+DEBUG: Python function sstate_hardcode_path finished
+DEBUG: Executing python function sstate_report_unihash
+DEBUG: Python function sstate_report_unihash finished
+DEBUG: Executing shell function sstate_create_package
+DEBUG: Shell function sstate_create_package finished
+DEBUG: Executing python function sstate_hardcode_path_unpack
+DEBUG: Python function sstate_hardcode_path_unpack finished
+DEBUG: Python function sstate_task_postfunc finished

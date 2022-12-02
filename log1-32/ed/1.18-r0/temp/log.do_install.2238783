@@ -1,0 +1,24 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-extended/texinfo-dummy-native/texinfo-dummy-native.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-extended/lzip/lzip_1.23.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: []
+NOTE: Skipping as already exists in sysroot: ['glibc', 'gcc-cross-arm', 'gcc-runtime', 'quilt-native', 'texinfo-dummy-native', 'patch-native', 'pseudo-native', 'lzip-native', 'attr-native', 'libtool-native', 'libgcc', 'linux-libc-headers', 'gnu-config-native', 'mpfr-native', 'libmpc-native', 'xz-native', 'binutils-cross-arm', 'flex-native', 'zstd-native', 'zlib-native', 'gmp-native', 'gettext-minimal-native', 'm4-native']
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing shell function do_install
+NOTE: make -j 1 -e MAKEFLAGS= DESTDIR=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/image install
+if [ ! -d "/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/image/bin" ] ; then install -d -m 755 "/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/image/bin" ; fi
+install -m 755 ./ed "/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/image/bin/ed"
+install -m 755 ./red "/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/image/bin/red"
+if [ ! -d "/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/image/usr/share/info" ] ; then install -d -m 755 "/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/image/usr/share/info" ; fi
+rm -f "/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/image/usr/share/info/ed.info"*
+install -m 644 ./doc/ed.info "/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/image/usr/share/info/ed.info"
+if /bin/sh -c "install-info --version" > /dev/null 2>&1 ; then \
+  install-info --info-dir="/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/image/usr/share/info" "/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/image/usr/share/info/ed.info" ; \
+fi
+if [ ! -d "/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/image/usr/share/man/man1" ] ; then install -d -m 755 "/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/image/usr/share/man/man1" ; fi
+rm -f "/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/image/usr/share/man/man1/ed.1"*
+rm -f "/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/image/usr/share/man/man1/red.1"*
+install -m 644 ./doc/ed.1 "/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/image/usr/share/man/man1/ed.1"
+cd "/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/ed/1.18-r0/image/usr/share/man/man1" && ln -s "ed.1" "red.1"
+DEBUG: Shell function do_install finished
+DEBUG: Executing shell function remove_libtool_la
+DEBUG: Shell function remove_libtool_la finished

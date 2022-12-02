@@ -1,0 +1,643 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-connectivity/openssl/openssl_3.0.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/ncurses/ncurses_6.3+20220423.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/systemd/systemd-systemctl-native.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/util-linux/util-linux_2.38.1.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs_1.46.5.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-cross_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-native_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/autoconf/autoconf_2.71.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/automake/automake_1.16.5.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/bison/bison_3.8.2.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/e2fsprogs/e2fsprogs_1.46.5.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/perl/perl_5.36.0.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: []
+NOTE: Skipping as already exists in sysroot: ['openssl', 'glibc', 'ncurses', 'systemd-systemctl-native', 'util-linux', 'e2fsprogs', 'gcc-cross-arm', 'gcc-runtime', 'libtool-cross', 'libtool-native', 'quilt-native', 'autoconf-native', 'automake-native', 'bison-native', 'e2fsprogs-native', 'patch-native', 'perl-native', 'pseudo-native', 'texinfo-dummy-native', 'gnu-config-native', 'm4-native', 'attr-native', 'opkg-utils', 'binutils-cross-arm', 'linux-libc-headers', 'libgcc', 'xz-native', 'gettext-minimal-native', 'flex-native', 'gdbm-native', 'make-native', 'zlib-native', 'util-linux-native', 'libxcrypt', 'bash-completion', 'util-linux-libuuid', 'zlib', 'libcap-ng', 'libpam', 'gmp-native', 'libmpc-native', 'zstd-native', 'mpfr-native', 'attr', 'autoconf-archive', 'libpcre2-native', 'libcap-ng-native', 'util-linux-libuuid-native', 'ncurses-native', 'flex', 'cracklib']
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function autotools_aclocals
+DEBUG: SITE files ['endian-little', 'bit-32', 'arm-common', 'arm-32', 'common-linux', 'common-glibc', 'arm-linux', 'arm-linux-gnueabi', 'common']
+DEBUG: Python function autotools_aclocals finished
+DEBUG: Executing shell function do_install
+NOTE: make -j 1 DESTDIR=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image install
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/share
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/share/man
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/sbin
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/bin
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/share/man/man8
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/share/man/man1
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/share/man/man5
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/share/man/man7
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/share/man/cat8
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/share/man/cat1
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/share/man/cat5
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/share/man/cat7
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/include
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib/krb5
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib/krb5/plugins
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib/krb5/plugins/kdb
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib/krb5/plugins/preauth
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib/krb5/plugins/authdata
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib/krb5/plugins/libkrb5
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib/krb5/plugins/tls
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/var
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/var/krb5kdc
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/var/run
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/var/run/krb5kdc
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/include/kadm5
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/include/krb5
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/include/gssapi
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/include/gssrpc
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/share/examples
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/share/examples/krb5
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib/pkgconfig
+making install in util...
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/util'
+making install in util/support...
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/util/support'
+rm -f /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib/libkrb5support.so.0.1
+rm -f /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib/libkrb5support.so
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 libkrb5support.so.0.1 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib
+(cd /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib && ln -s libkrb5support.so.0.1 \
+	libkrb5support.so)
+rm -f /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib/libkrb5support.so.0
+(cd /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib && ln -s libkrb5support.so.0.1 \
+	libkrb5support.so.0)
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/util/support'
+making install in util/ss...
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/util/ss'
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/util/ss'
+making install in util/profile...
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/util/profile'
+making install in util/profile/testmod...
+make[3]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/util/profile/testmod'
+make[3]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/util/profile/testmod'
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/util/profile'
+making install in util/verto...
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/util/verto'
+rm -f /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib/libverto.so.0.0
+rm -f /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib/libverto.so
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 libverto.so.0.0 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib
+(cd /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib && ln -s libverto.so.0.0 \
+	libverto.so)
+rm -f /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib/libverto.so.0
+(cd /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib && ln -s libverto.so.0.0 \
+	libverto.so.0)
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ./verto.h /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/include/verto.h
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ./verto-module.h \
+	/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/include/verto-module.h
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/util/verto'
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c ./krb5-send-pr.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/sbin/krb5-send-pr
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/util'
+making install in include...
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/include'
+(cd ../lib/krb5/error_tables && make includes)
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/lib/krb5/error_tables'
+make[2]: Nothing to be done for 'includes'.
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/lib/krb5/error_tables'
+: ../lib/krb5/error_tables/krb5_err.h
+: ../lib/krb5/error_tables/k5e1_err.h
+: ../lib/krb5/error_tables/kdb5_err.h
+: ../lib/krb5/error_tables/kv5m_err.h
+: ../lib/krb5/error_tables/krb524_err.h
+: ../lib/krb5/error_tables/asn1_err.h
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ./krb5.h /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/include/krb5.h
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ./kdb.h /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/include/kdb.h
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 krb5/krb5.h /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/include/krb5/krb5.h
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ./krb5/certauth_plugin.h /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/include/krb5/certauth_plugin.h
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ./krb5/ccselect_plugin.h /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/include/krb5/ccselect_plugin.h
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ./krb5/clpreauth_plugin.h /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/include/krb5/clpreauth_plugin.h
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ./krb5/hostrealm_plugin.h /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/include/krb5/hostrealm_plugin.h
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ./krb5/kdcpolicy_plugin.h /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/include/krb5/kdcpolicy_plugin.h
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ./krb5/kdcpreauth_plugin.h /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/include/krb5/kdcpreauth_plugin.h
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ./krb5/localauth_plugin.h /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/include/krb5/localauth_plugin.h
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ./krb5/locate_plugin.h /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/include/krb5/locate_plugin.h
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ./krb5/plugin.h /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/include/krb5/plugin.h
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ./krb5/preauth_plugin.h /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/include/krb5/preauth_plugin.h
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ./krb5/pwqual_plugin.h /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/include/krb5/pwqual_plugin.h
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ./krb5/kadm5_auth_plugin.h /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/include/krb5/kadm5_auth_plugin.h
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ./krb5/kadm5_hook_plugin.h /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/include/krb5/kadm5_hook_plugin.h
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 profile.h /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/include/profile.h
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ./gssapi.h /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/include/gssapi.h
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ./krad.h /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/include/krad.h
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/include'
+making install in lib...
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/lib'
+making install in lib/crypto...
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/lib/crypto'
+making install in lib/crypto/krb...
+make[3]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/lib/crypto/krb'
+make[3]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/lib/crypto/krb'
+making install in lib/crypto/builtin...
+make[3]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/lib/crypto/builtin'
+making install in lib/crypto/builtin/camellia...
+make[4]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/lib/crypto/builtin/camellia'
+make[4]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/lib/crypto/builtin/camellia'
+making install in lib/crypto/builtin/des...
+make[4]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/lib/crypto/builtin/des'
+make[4]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/lib/crypto/builtin/des'
+making install in lib/crypto/builtin/aes...
+make[4]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/lib/crypto/builtin/aes'
+make[4]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/lib/crypto/builtin/aes'
+making install in lib/crypto/builtin/md4...
+make[4]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/lib/crypto/builtin/md4'
+make[4]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/lib/crypto/builtin/md4'
+making install in lib/crypto/builtin/md5...
+make[4]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/lib/crypto/builtin/md5'
+make[4]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/lib/crypto/builtin/md5'
+making install in lib/crypto/builtin/sha1...
+make[4]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/lib/crypto/builtin/sha1'
+make[4]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/lib/crypto/builtin/sha1'
+making install in lib/crypto/builtin/sha2...
+make[4]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/lib/crypto/builtin/sha2'
+make[4]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/lib/crypto/builtin/sha2'
+making install in lib/crypto/builtin/enc_provider...
+make[4]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/lib/crypto/builtin/enc_provider'
+make[4]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/lib/crypto/builtin/enc_provider'
+making install in lib/crypto/builtin/hash_provider...
+make[4]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/lib/crypto/builtin/hash_provider'
+make[4]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/lib/crypto/builtin/hash_provider'
+make[3]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/lib/crypto/builtin'
+making install in lib/crypto/crypto_tests...
+make[3]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/lib/crypto/crypto_tests'
+make[3]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/lib/crypto/crypto_tests'
+rm -f /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib/libk5crypto.so.3.1
+rm -f /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib/libk5crypto.so
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 libk5crypto.so.3.1 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib
+(cd /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib && ln -s libk5crypto.so.3.1 \
+	libk5crypto.so)
+rm -f /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib/libk5crypto.so.3
+(cd /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib && ln -s libk5crypto.so.3.1 \
+	libk5crypto.so.3)
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/lib/crypto'
+making install in lib/krb5...
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/lib/krb5'
+making install in lib/krb5/error_tables...
+make[3]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/lib/krb5/error_tables'
+make[3]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/lib/krb5/error_tables'
+making install in lib/krb5/asn.1...
+make[3]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/lib/krb5/asn.1'
+make[3]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/lib/krb5/asn.1'
+making install in lib/krb5/ccache...
+make[3]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/lib/krb5/ccache'
+make[3]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/lib/krb5/ccache'
+making install in lib/krb5/keytab...
+make[3]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/lib/krb5/keytab'
+make[3]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/lib/krb5/keytab'
+making install in lib/krb5/krb...
+make[3]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/lib/krb5/krb'
+make[3]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/lib/krb5/krb'
+making install in lib/krb5/os...
+make[3]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/lib/krb5/os'
+make[3]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/lib/krb5/os'
+making install in lib/krb5/rcache...
+make[3]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/lib/krb5/rcache'
+make[3]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/lib/krb5/rcache'
+making install in lib/krb5/unicode...
+make[3]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/lib/krb5/unicode'
+make[3]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/lib/krb5/unicode'
+rm -f /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib/libkrb5.so.3.3
+rm -f /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib/libkrb5.so
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 libkrb5.so.3.3 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib
+(cd /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib && ln -s libkrb5.so.3.3 \
+	libkrb5.so)
+rm -f /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib/libkrb5.so.3
+(cd /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib && ln -s libkrb5.so.3.3 \
+	libkrb5.so.3)
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/lib/krb5'
+making install in lib/gssapi...
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/lib/gssapi'
+making install in lib/gssapi/generic...
+make[3]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/lib/gssapi/generic'
++ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ./gssapi_generic.h /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/include/gssapi/gssapi_generic.h
++ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ./gssapi_ext.h /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/include/gssapi/gssapi_ext.h
++ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 gssapi.h /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/include/gssapi/gssapi.h
+make[3]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/lib/gssapi/generic'
+making install in lib/gssapi/krb5...
+make[3]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/lib/gssapi/krb5'
++ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ./gssapi_krb5.h /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/include/gssapi/gssapi_krb5.h
+make[3]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/lib/gssapi/krb5'
+making install in lib/gssapi/spnego...
+make[3]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/lib/gssapi/spnego'
+make[3]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/lib/gssapi/spnego'
+making install in lib/gssapi/mechglue...
+make[3]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/lib/gssapi/mechglue'
++ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ./mechglue.h /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/include/gssapi/mechglue.h
+make[3]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/lib/gssapi/mechglue'
+rm -f /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib/libgssapi_krb5.so.2.2
+rm -f /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib/libgssapi_krb5.so
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 libgssapi_krb5.so.2.2 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib
+(cd /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib && ln -s libgssapi_krb5.so.2.2 \
+	libgssapi_krb5.so)
+rm -f /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib/libgssapi_krb5.so.2
+(cd /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib && ln -s libgssapi_krb5.so.2.2 \
+	libgssapi_krb5.so.2)
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/lib/gssapi'
+making install in lib/rpc...
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/lib/rpc'
+making install in lib/rpc/unit-test...
+make[3]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/lib/rpc/unit-test'
+make[3]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/lib/rpc/unit-test'
+rm -f /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib/libgssrpc.so.4.2
+rm -f /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib/libgssrpc.so
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 libgssrpc.so.4.2 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib
+(cd /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib && ln -s libgssrpc.so.4.2 \
+	libgssrpc.so)
+rm -f /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib/libgssrpc.so.4
+(cd /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib && ln -s libgssrpc.so.4.2 \
+	libgssrpc.so.4)
+for i in auth.h auth_gss.h auth_gssapi.h auth_unix.h clnt.h netdb.h pmap_clnt.h pmap_prot.h pmap_rmt.h rename.h rpc.h rpc_msg.h svc.h svc_auth.h xdr.h; do \
+	(set -x; /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ./../../include/gssrpc/$i /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/include/gssrpc/$i) ; \
+done
++ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ./../../include/gssrpc/auth.h /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/include/gssrpc/auth.h
++ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ./../../include/gssrpc/auth_gss.h /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/include/gssrpc/auth_gss.h
++ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ./../../include/gssrpc/auth_gssapi.h /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/include/gssrpc/auth_gssapi.h
++ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ./../../include/gssrpc/auth_unix.h /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/include/gssrpc/auth_unix.h
++ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ./../../include/gssrpc/clnt.h /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/include/gssrpc/clnt.h
++ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ./../../include/gssrpc/netdb.h /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/include/gssrpc/netdb.h
++ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ./../../include/gssrpc/pmap_clnt.h /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/include/gssrpc/pmap_clnt.h
++ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ./../../include/gssrpc/pmap_prot.h /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/include/gssrpc/pmap_prot.h
++ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ./../../include/gssrpc/pmap_rmt.h /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/include/gssrpc/pmap_rmt.h
++ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ./../../include/gssrpc/rename.h /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/include/gssrpc/rename.h
++ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ./../../include/gssrpc/rpc.h /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/include/gssrpc/rpc.h
++ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ./../../include/gssrpc/rpc_msg.h /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/include/gssrpc/rpc_msg.h
++ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ./../../include/gssrpc/svc.h /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/include/gssrpc/svc.h
++ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ./../../include/gssrpc/svc_auth.h /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/include/gssrpc/svc_auth.h
++ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ./../../include/gssrpc/xdr.h /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/include/gssrpc/xdr.h
+for i in types.h; do \
+	(set -x; /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../../include/gssrpc/$i /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/include/gssrpc/$i) ; \
+done
++ /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ../../include/gssrpc/types.h /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/include/gssrpc/types.h
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/lib/rpc'
+making install in lib/kdb...
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/lib/kdb'
+rm -f /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib/libkdb5.so.9.0
+rm -f /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib/libkdb5.so
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 libkdb5.so.9.0 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib
+(cd /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib && ln -s libkdb5.so.9.0 \
+	libkdb5.so)
+rm -f /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib/libkdb5.so.9
+(cd /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib && ln -s libkdb5.so.9.0 \
+	libkdb5.so.9)
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/lib/kdb'
+making install in lib/kadm5...
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/lib/kadm5'
+making install in lib/kadm5/clnt...
+make[3]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/lib/kadm5/clnt'
+rm -f /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib/libkadm5clnt.so
+(cd /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib && ln -s libkadm5clnt_mit.so \
+	libkadm5clnt.so)
+rm -f /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib/libkadm5clnt_mit.so.11.0
+rm -f /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib/libkadm5clnt_mit.so
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 libkadm5clnt_mit.so.11.0 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib
+(cd /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib && ln -s libkadm5clnt_mit.so.11.0 \
+	libkadm5clnt_mit.so)
+rm -f /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib/libkadm5clnt_mit.so.11
+(cd /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib && ln -s libkadm5clnt_mit.so.11.0 \
+	libkadm5clnt_mit.so.11)
+make[3]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/lib/kadm5/clnt'
+making install in lib/kadm5/srv...
+make[3]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/lib/kadm5/srv'
+rm -f /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib/libkadm5srv.so
+(cd /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib && ln -s libkadm5srv_mit.so \
+	libkadm5srv.so)
+rm -f /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib/libkadm5srv_mit.so.11.0
+rm -f /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib/libkadm5srv_mit.so
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 libkadm5srv_mit.so.11.0 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib
+(cd /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib && ln -s libkadm5srv_mit.so.11.0 \
+	libkadm5srv_mit.so)
+rm -f /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib/libkadm5srv_mit.so.11
+(cd /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib && ln -s libkadm5srv_mit.so.11.0 \
+	libkadm5srv_mit.so.11)
+make[3]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/lib/kadm5/srv'
+making install in lib/kadm5/unit-test...
+make[3]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/lib/kadm5/unit-test'
+make[3]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/lib/kadm5/unit-test'
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ./admin.h /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/include/kadm5/admin.h
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 chpass_util_strings.h /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/include/kadm5/chpass_util_strings.h
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 kadm_err.h /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/include/kadm5/kadm_err.h
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/lib/kadm5'
+making install in lib/apputils...
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/lib/apputils'
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/lib/apputils'
+making install in lib/krad...
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/lib/krad'
+rm -f /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib/libkrad.so.0.0
+rm -f /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib/libkrad.so
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 libkrad.so.0.0 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib
+(cd /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib && ln -s libkrad.so.0.0 \
+	libkrad.so)
+rm -f /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib/libkrad.so.0
+(cd /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib && ln -s libkrad.so.0.0 \
+	libkrad.so.0)
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/lib/krad'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/lib'
+making install in plugins/audit...
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/plugins/audit'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/plugins/audit'
+making install in plugins/audit/test...
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/plugins/audit/test'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/plugins/audit/test'
+making install in plugins/kadm5_hook/test...
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/plugins/kadm5_hook/test'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/plugins/kadm5_hook/test'
+making install in plugins/kadm5_auth/test...
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/plugins/kadm5_auth/test'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/plugins/kadm5_auth/test'
+making install in plugins/hostrealm/test...
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/plugins/hostrealm/test'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/plugins/hostrealm/test'
+making install in plugins/localauth/test...
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/plugins/localauth/test'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/plugins/localauth/test'
+making install in plugins/pwqual/test...
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/plugins/pwqual/test'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/plugins/pwqual/test'
+making install in plugins/authdata/greet_server...
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/plugins/authdata/greet_server'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/plugins/authdata/greet_server'
+making install in plugins/authdata/greet_client...
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/plugins/authdata/greet_client'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/plugins/authdata/greet_client'
+making install in plugins/certauth/test...
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/plugins/certauth/test'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/plugins/certauth/test'
+making install in plugins/kdb/db2...
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/plugins/kdb/db2'
+making install in plugins/kdb/db2/libdb2...
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/plugins/kdb/db2/libdb2'
+making install in plugins/kdb/db2/libdb2/hash...
+make[3]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/plugins/kdb/db2/libdb2/hash'
+make[3]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/plugins/kdb/db2/libdb2/hash'
+making install in plugins/kdb/db2/libdb2/btree...
+make[3]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/plugins/kdb/db2/libdb2/btree'
+make[3]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/plugins/kdb/db2/libdb2/btree'
+making install in plugins/kdb/db2/libdb2/db...
+make[3]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/plugins/kdb/db2/libdb2/db'
+make[3]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/plugins/kdb/db2/libdb2/db'
+making install in plugins/kdb/db2/libdb2/mpool...
+make[3]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/plugins/kdb/db2/libdb2/mpool'
+make[3]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/plugins/kdb/db2/libdb2/mpool'
+making install in plugins/kdb/db2/libdb2/recno...
+make[3]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/plugins/kdb/db2/libdb2/recno'
+make[3]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/plugins/kdb/db2/libdb2/recno'
+making install in plugins/kdb/db2/libdb2/test...
+make[3]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/plugins/kdb/db2/libdb2/test'
+make[3]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/plugins/kdb/db2/libdb2/test'
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/plugins/kdb/db2/libdb2'
+rm -f /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib/krb5/plugins/kdb/db2.so
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 db2.so /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib/krb5/plugins/kdb
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/plugins/kdb/db2'
+making install in plugins/kdb/test...
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/plugins/kdb/test'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/plugins/kdb/test'
+making install in plugins/kdcpolicy/test...
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/plugins/kdcpolicy/test'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/plugins/kdcpolicy/test'
+making install in plugins/preauth/otp...
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/plugins/preauth/otp'
+rm -f /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib/krb5/plugins/preauth/otp.so
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 otp.so /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib/krb5/plugins/preauth
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/plugins/preauth/otp'
+making install in plugins/preauth/pkinit...
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/plugins/preauth/pkinit'
+rm -f /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib/krb5/plugins/preauth/pkinit.so
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 pkinit.so /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib/krb5/plugins/preauth
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/plugins/preauth/pkinit'
+making install in plugins/preauth/spake...
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/plugins/preauth/spake'
+rm -f /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib/krb5/plugins/preauth/spake.so
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 spake.so /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib/krb5/plugins/preauth
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/plugins/preauth/spake'
+making install in plugins/preauth/test...
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/plugins/preauth/test'
+rm -f /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib/krb5/plugins/preauth/test.so
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 test.so /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib/krb5/plugins/preauth
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/plugins/preauth/test'
+making install in plugins/tls/k5tls...
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/plugins/tls/k5tls'
+rm -f /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib/krb5/plugins/tls/k5tls.so
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 k5tls.so /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib/krb5/plugins/tls
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/plugins/tls/k5tls'
+making install in kdc...
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/kdc'
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c  krb5kdc /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/sbin/krb5kdc
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/kdc'
+making install in kadmin...
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/kadmin'
+making install in kadmin/cli...
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/kadmin/cli'
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c  kadmin.local /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/sbin/kadmin.local
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c  kadmin /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/bin/kadmin
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c ./k5srvutil.sh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/bin/k5srvutil
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/kadmin/cli'
+making install in kadmin/dbutil...
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/kadmin/dbutil'
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c  kdb5_util /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/sbin/kdb5_util
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/kadmin/dbutil'
+making install in kadmin/ktutil...
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/kadmin/ktutil'
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c  ktutil /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/bin/ktutil
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/kadmin/ktutil'
+making install in kadmin/server...
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/kadmin/server'
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c  kadmind /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/sbin/kadmind
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/kadmin/server'
+making install in kadmin/testing...
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/kadmin/testing'
+making install in kadmin/testing/scripts...
+make[3]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/kadmin/testing/scripts'
+make[3]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/kadmin/testing/scripts'
+making install in kadmin/testing/util...
+make[3]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/kadmin/testing/util'
+make[3]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/kadmin/testing/util'
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/kadmin/testing'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/kadmin'
+making install in kprop...
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/kprop'
+for f in kprop kpropd kproplog; do \
+  /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c  $f \
+	/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/sbin/`echo $f|sed 's,x,x,'`; \
+done
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/kprop'
+making install in clients...
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/clients'
+making install in clients/klist...
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/clients/klist'
+for f in klist; do \
+  /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c  $f \
+	/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/bin/`echo $f|sed 's,x,x,'`; \
+done
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/clients/klist'
+making install in clients/kinit...
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/clients/kinit'
+for f in kinit; do \
+  /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c  $f \
+	/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/bin/`echo $f|sed 's,x,x,'`; \
+done
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/clients/kinit'
+making install in clients/kdestroy...
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/clients/kdestroy'
+for f in kdestroy; do \
+  /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c  $f \
+	/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/bin/`echo $f|sed 's,x,x,'`; \
+done
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/clients/kdestroy'
+making install in clients/kpasswd...
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/clients/kpasswd'
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c  kpasswd /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/bin/`echo kpasswd|sed 's,x,x,'`
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/clients/kpasswd'
+making install in clients/ksu...
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/clients/ksu'
+for f in ksu; do \
+  /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c  -m 4755 -o root $f \
+	/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/bin/`echo $f|sed 's,x,x,'`; \
+done
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/clients/ksu'
+making install in clients/kvno...
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/clients/kvno'
+for f in kvno; do \
+  /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c  $f \
+	/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/bin/`echo $f|sed 's,x,x,'`; \
+done
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/clients/kvno'
+Skipping missing directory clients/kcpytkt
+Skipping missing directory clients/kdeltkt
+making install in clients/kswitch...
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/clients/kswitch'
+for f in kswitch; do \
+  /home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c  $f \
+	/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/bin/`echo $f|sed 's,x,x,'`; \
+done
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/clients/kswitch'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/clients'
+making install in appl...
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/appl'
+making install in appl/sample...
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/appl/sample'
+making install in appl/sample/sclient...
+make[3]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/appl/sample/sclient'
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c  sclient /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/bin/sclient
+make[3]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/appl/sample/sclient'
+making install in appl/sample/sserver...
+make[3]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/appl/sample/sserver'
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c  sserver /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/sbin/sserver
+make[3]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/appl/sample/sserver'
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/appl/sample'
+making install in appl/simple...
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/appl/simple'
+making install in appl/simple/client...
+make[3]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/appl/simple/client'
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c  sim_client /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/bin/sim_client
+make[3]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/appl/simple/client'
+making install in appl/simple/server...
+make[3]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/appl/simple/server'
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c  sim_server /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/sbin/sim_server
+make[3]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/appl/simple/server'
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/appl/simple'
+making install in appl/user_user...
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/appl/user_user'
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c  uuclient /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/bin/uuclient
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c  uuserver /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/sbin/uuserver
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/appl/user_user'
+making install in appl/gss-sample...
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/appl/gss-sample'
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c  gss-client /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/bin/gss-client
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c  gss-server /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/sbin/gss-server
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/appl/gss-sample'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/appl'
+making install in tests...
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/tests'
+making install in tests/resolve...
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/tests/resolve'
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/tests/resolve'
+making install in tests/asn.1...
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/tests/asn.1'
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/tests/asn.1'
+making install in tests/create...
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/tests/create'
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/tests/create'
+making install in tests/hammer...
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/tests/hammer'
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/tests/hammer'
+making install in tests/verify...
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/tests/verify'
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/tests/verify'
+making install in tests/gssapi...
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/tests/gssapi'
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/tests/gssapi'
+making install in tests/dejagnu...
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/tests/dejagnu'
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/tests/dejagnu'
+making install in tests/shlib...
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/tests/shlib'
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/tests/shlib'
+making install in tests/gss-threads...
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/tests/gss-threads'
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/tests/gss-threads'
+making install in tests/misc...
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/tests/misc'
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/tests/misc'
+making install in tests/threads...
+make[2]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/tests/threads'
+make[2]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/tests/threads'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/tests'
+making install in config-files...
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/config-files'
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ./kdc.conf /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/share/examples/krb5/kdc.conf
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ./krb5.conf /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/share/examples/krb5/krb5.conf
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ./services.append /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/share/examples/krb5/services.append
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/config-files'
+making install in build-tools...
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/build-tools'
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c krb5-config /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/bin/krb5-config
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 kadm-client.pc \
+	/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib/pkgconfig/kadm-client.pc
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 kadm-server.pc \
+	/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib/pkgconfig/kadm-server.pc
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 kdb.pc /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib/pkgconfig/kdb.pc
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 mit-krb5.pc /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib/pkgconfig/mit-krb5.pc
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 krb5.pc /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib/pkgconfig/krb5.pc
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 mit-krb5-gssapi.pc \
+	/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib/pkgconfig/mit-krb5-gssapi.pc
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 krb5-gssapi.pc \
+	/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib/pkgconfig/krb5-gssapi.pc
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 gssrpc.pc \
+	/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/lib/pkgconfig/gssrpc.pc
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/build-tools'
+making install in man...
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/man'
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 k5srvutil.sub /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/share/man/man1/k5srvutil.1
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 kadmin.sub /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/share/man/man1/kadmin.1
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 kdestroy.sub /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/share/man/man1/kdestroy.1
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 kinit.sub /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/share/man/man1/kinit.1
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 klist.sub /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/share/man/man1/klist.1
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 kpasswd.sub /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/share/man/man1/kpasswd.1
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 krb5-config.sub /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/share/man/man1/krb5-config.1
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ksu.sub /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/share/man/man1/ksu.1
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 kswitch.sub /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/share/man/man1/kswitch.1
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ktutil.sub /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/share/man/man1/ktutil.1
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 kvno.sub /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/share/man/man1/kvno.1
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 sclient.sub /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/share/man/man1/sclient.1
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ./dot.k5identity.5 \
+	/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/share/man/man5/.k5identity.5
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 k5identity.sub /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/share/man/man5/k5identity.5
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ./dot.k5login.5 \
+	/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/share/man/man5/.k5login.5
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 k5login.sub /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/share/man/man5/k5login.5
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 kadm5.acl.sub /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/share/man/man5/kadm5.acl.5
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 kdc.conf.sub /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/share/man/man5/kdc.conf.5
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 krb5.conf.sub /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/share/man/man5/krb5.conf.5
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 ./kadmin.local.8 \
+	/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/share/man/man8/kadmin.local.8
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 kdb5_ldap_util.sub \
+	/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/share/man/man8/kdb5_ldap_util.8
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 kdb5_util.sub /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/share/man/man8/kdb5_util.8
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 kprop.sub /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/share/man/man8/kprop.8
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 kproplog.sub /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/share/man/man8/kproplog.8
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 kerberos.sub /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/share/man/man7/kerberos.7
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 kadmind.sub /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/share/man/man8/kadmind.8
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 kpropd.sub /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/share/man/man8/kpropd.8
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 krb5kdc.sub /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/share/man/man8/krb5kdc.8
+/home/matt/tmp/build/obmc-y2038/tmp/hosttools/install -c -m 644 sserver.sub /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/image/usr/share/man/man8/sserver.8
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/man'
+making install in doc...
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/doc'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/krb5/1.17.2-r0/krb5-1.17.2/src/doc'
+DEBUG: Shell function do_install finished
+DEBUG: Executing shell function remove_libtool_la
+DEBUG: Shell function remove_libtool_la finished
+DEBUG: Executing python function rm_sysvinit_initddir
+DEBUG: Python function rm_sysvinit_initddir finished
+DEBUG: Executing python function rm_systemd_unitdir
+DEBUG: Python function rm_systemd_unitdir finished

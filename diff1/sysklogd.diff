@@ -1,0 +1,30 @@
+38a39,42
+> ../../git/src/syslogd.c: In function 'parsemsg_rfc3164':
+> ../../git/src/syslogd.c:1201:49: warning: conversion from '__suseconds64_t' {aka 'long long int'} to 'suseconds_t' {aka 'long int'} may change value [-Wconversion]
+>  1201 |                         buffer.timestamp.usec = tv.tv_usec;
+>       |                                                 ^~
+40c44
+< ../../git/src/syslogd.c:1377:49: warning: conversion to 'uint64_t' {aka 'long long unsigned int'} from 'time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../../git/src/syslogd.c:1377:49: warning: conversion to 'long long unsigned int' from 'time_t' {aka 'long long int'} may change the sign of the result [-Wsign-conversion]
+43c47
+< ../../git/src/syslogd.c:1377:39: warning: conversion from 'uint64_t' {aka 'long long unsigned int'} to 'time_t' {aka 'long int'} may change value [-Wconversion]
+---
+> ../../git/src/syslogd.c:1377:39: warning: conversion to 'time_t' {aka 'long long int'} from 'long long unsigned int' may change the sign of the result [-Wsign-conversion]
+46c50
+< ../../git/src/syslogd.c:1387:42: warning: conversion to 'uint64_t' {aka 'long long unsigned int'} from 'long int' may change the sign of the result [-Wsign-conversion]
+---
+> ../../git/src/syslogd.c:1387:42: warning: conversion to 'uint64_t' {aka 'long long unsigned int'} from '__suseconds64_t' {aka 'long long int'} may change the sign of the result [-Wsign-conversion]
+54a59,62
+> ../../git/src/syslogd.c: In function 'check_timestamp':
+> ../../git/src/syslogd.c:1478:20: warning: conversion from '__suseconds64_t' {aka 'long long int'} to 'suseconds_t' {aka 'long int'} may change value [-Wconversion]
+>  1478 |         now.usec = tv.tv_usec;
+>       |                    ^~
+149a158,160
+> ../../git/src/syslogd.c:3029:41: warning: conversion from 'off_t' {aka 'long long int'} to 'int' may change value [-Wconversion]
+>  3029 |                         f->f_rotatesz = RotateSz;
+>       |                                         ^~~~~~~~
+190c201
+< ../../git/src/timer.c:109:22: warning: conversion to 'unsigned int' from 'time_t' {aka 'long int'} may change the sign of the result [-Wsign-conversion]
+---
+> ../../git/src/timer.c:109:22: warning: conversion from 'time_t' {aka 'long long int'} to 'unsigned int' may change value [-Wconversion]

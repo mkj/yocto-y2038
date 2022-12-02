@@ -1,0 +1,269 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: ['quilt-native', 'patch-native', 'libtool-native', 'attr-native', 'texinfo-dummy-native', 'gettext-minimal-native']
+NOTE: Skipping as already exists in sysroot: []
+DEBUG: sed -e 's:^[^/]*/:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/recipe-sysroot-native/:g' /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/quilt-native/fixmepath /home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/libtool-native/fixmepath | xargs sed -i -e 's:FIXMESTAGINGDIRTARGET:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/recipe-sysroot:g; s:FIXMESTAGINGDIRHOST:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/recipe-sysroot-native:g' -e 's:FIXME_PSEUDO_SYSROOT:/home/matt/tmp/build/obmc-y2038/tmp/sysroots-components/x86_64/pseudo-native:g' -e 's:FIXME_HOSTTOOLS_DIR:/home/matt/tmp/build/obmc-y2038/tmp/hosttools:g' -e 's:FIXME_PKGDATA_DIR:/home/matt/tmp/build/obmc-y2038/tmp/pkgdata/evb-ast2600:g' -e 's:FIXME_PSEUDO_LOCALSTATEDIR:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/pseudo/:g' -e 's:FIXME_LOGFIFO:/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/at/3.2.5-r0/temp/fifo.1808469:g'
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function do_patch
+DEBUG: Executing python function patch_do_patch
+DEBUG: Searching for posixtm.c in paths:
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/arm
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/arm
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/arm
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/
+DEBUG: Searching for posixtm.h in paths:
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/arm
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/arm
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/arm
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/
+DEBUG: Searching for file_replacement_with_gplv2.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/arm
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/arm
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/arm
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/
+DEBUG: Searching for atd.init in paths:
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/arm
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/arm
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/arm
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/
+DEBUG: Searching for atd.service in paths:
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/arm
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/arm
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/arm
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/
+DEBUG: Searching for pam.conf.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/arm
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/arm
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/arm
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/
+DEBUG: Searching for configure-add-enable-pam.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/arm
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/arm
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/arm
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/
+DEBUG: Searching for makefile-fix-parallel.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/arm
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/arm
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/arm
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/
+DEBUG: Searching for 0001-remove-glibc-assumption.patch in paths:
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/openbmc-phosphor
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/evb-ast2600
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/aspeed-g6
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/aspeed
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/armv7a
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/phosphor-evb
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/arm
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/arm
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/arm
+    /home/matt/src/openbmc/meta/recipes-extended/at/at-3.2.5/
+    /home/matt/src/openbmc/meta/recipes-extended/at/at/
+    /home/matt/src/openbmc/meta/recipes-extended/at/files/
+NOTE: Applying patch 'file_replacement_with_gplv2.patch' (../../../src/openbmc/meta/recipes-extended/at/at/file_replacement_with_gplv2.patch)
+NOTE: Applying patch 'pam.conf.patch' (../../../src/openbmc/meta/recipes-extended/at/at/pam.conf.patch)
+NOTE: Applying patch 'configure-add-enable-pam.patch' (../../../src/openbmc/meta/recipes-extended/at/at/configure-add-enable-pam.patch)
+NOTE: Applying patch 'makefile-fix-parallel.patch' (../../../src/openbmc/meta/recipes-extended/at/at/makefile-fix-parallel.patch)
+NOTE: Applying patch '0001-remove-glibc-assumption.patch' (../../../src/openbmc/meta/recipes-extended/at/at/0001-remove-glibc-assumption.patch)
+DEBUG: Python function patch_do_patch finished
+DEBUG: Python function do_patch finished
+DEBUG: Executing python function do_qa_patch
+DEBUG: Python function do_qa_patch finished

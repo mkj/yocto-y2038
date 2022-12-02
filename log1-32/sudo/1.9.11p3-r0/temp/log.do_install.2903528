@@ -1,0 +1,356 @@
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['/home/matt/src/openbmc/meta/recipes-core/glibc/glibc_2.36.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-core/libxcrypt/libxcrypt_4.4.28.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-cross_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/gcc/gcc-runtime_12.2.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-cross_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/libtool/libtool-native_2.4.7.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-devtools/quilt/quilt-native_0.67.bb:do_populate_sysroot', '/home/matt/src/openbmc/meta/recipes-extended/pam/libpam_1.3.1.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/autoconf/autoconf_2.71.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/automake/automake_1.16.5.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/matt/src/openbmc/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: []
+NOTE: Skipping as already exists in sysroot: ['glibc', 'libxcrypt', 'gcc-cross-arm', 'gcc-runtime', 'libtool-cross', 'libtool-native', 'quilt-native', 'libpam', 'autoconf-native', 'automake-native', 'patch-native', 'pseudo-native', 'texinfo-dummy-native', 'binutils-cross-arm', 'attr-native', 'libgcc', 'linux-libc-headers', 'gnu-config-native', 'mpfr-native', 'libmpc-native', 'xz-native', 'flex-native', 'zstd-native', 'zlib-native', 'gmp-native', 'm4-native', 'cracklib', 'flex', 'gettext-minimal-native', 'zlib']
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function autotools_aclocals
+DEBUG: SITE files ['endian-little', 'bit-32', 'arm-common', 'arm-32', 'common-linux', 'common-glibc', 'arm-linux', 'arm-linux-gnueabi', 'common']
+DEBUG: Python function autotools_aclocals finished
+DEBUG: Executing shell function do_install
+NOTE: make -j 1 DESTDIR=/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image install
+if test -d ../sudo-1.9.11p3/.hg; then \
+    if hg log -R ../sudo-1.9.11p3 --style=changelog -r "sort(branch(.) or follow(), -date)" > ChangeLog.tmp; then \
+	mv -f ChangeLog.tmp ../sudo-1.9.11p3/ChangeLog; \
+    else \
+	rm -f ChangeLog.tmp; \
+    fi; \
+elif test -d ../sudo-1.9.11p3/.git; then \
+    ../sudo-1.9.11p3/scripts/log2cl.pl -R ../sudo-1.9.11p3/.git > ../sudo-1.9.11p3/ChangeLog; \
+elif test ! -f ../sudo-1.9.11p3/ChangeLog; then \
+    echo "ChangeLog data not available" > ../sudo-1.9.11p3/ChangeLog; \
+fi
+for d in lib/util  lib/eventlog lib/fuzzstub lib/iolog lib/protobuf-c lib/logsrv logsrvd plugins/audit_json plugins/group_file plugins/sample_approval plugins/sudoers plugins/system_group  src include docs examples; do \
+    (cd $d && exec make pre-install) && continue; \
+    exit $?; \
+done
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/build/lib/util'
+make[1]: Nothing to be done for 'pre-install'.
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/build/lib/util'
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/build/lib/eventlog'
+make[1]: Nothing to be done for 'pre-install'.
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/build/lib/eventlog'
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/build/lib/fuzzstub'
+make[1]: Nothing to be done for 'pre-install'.
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/build/lib/fuzzstub'
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/build/lib/iolog'
+make[1]: Nothing to be done for 'pre-install'.
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/build/lib/iolog'
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/build/lib/protobuf-c'
+make[1]: Nothing to be done for 'pre-install'.
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/build/lib/protobuf-c'
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/build/lib/logsrv'
+make[1]: Nothing to be done for 'pre-install'.
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/build/lib/logsrv'
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/build/logsrvd'
+make[1]: Nothing to be done for 'pre-install'.
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/build/logsrvd'
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/build/plugins/audit_json'
+make[1]: Nothing to be done for 'pre-install'.
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/build/plugins/audit_json'
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/build/plugins/group_file'
+make[1]: Nothing to be done for 'pre-install'.
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/build/plugins/group_file'
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/build/plugins/sample_approval'
+make[1]: Nothing to be done for 'pre-install'.
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/build/plugins/sample_approval'
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/build/plugins/sudoers'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/build/plugins/sudoers'
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/build/plugins/system_group'
+make[1]: Nothing to be done for 'pre-install'.
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/build/plugins/system_group'
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/build/src'
+make[1]: Nothing to be done for 'pre-install'.
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/build/src'
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/build/include'
+make[1]: Nothing to be done for 'pre-install'.
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/build/include'
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/build/docs'
+make[1]: Nothing to be done for 'pre-install'.
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/build/docs'
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/build/examples'
+make[1]: Nothing to be done for 'pre-install'.
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/build/examples'
+Installing sudo message catalogs: astmkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/locale
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/locale/ast
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/locale/ast/LC_MESSAGES
+ camkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/locale/ca
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/locale/ca/LC_MESSAGES
+ csmkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/locale/cs
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/locale/cs/LC_MESSAGES
+ damkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/locale/da
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/locale/da/LC_MESSAGES
+ demkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/locale/de
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/locale/de/LC_MESSAGES
+ eomkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/locale/eo
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/locale/eo/LC_MESSAGES
+ esmkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/locale/es
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/locale/es/LC_MESSAGES
+ eumkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/locale/eu
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/locale/eu/LC_MESSAGES
+ famkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/locale/fa
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/locale/fa/LC_MESSAGES
+ fimkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/locale/fi
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/locale/fi/LC_MESSAGES
+ frmkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/locale/fr
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/locale/fr/LC_MESSAGES
+ furmkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/locale/fur
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/locale/fur/LC_MESSAGES
+ glmkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/locale/gl
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/locale/gl/LC_MESSAGES
+ hrmkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/locale/hr
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/locale/hr/LC_MESSAGES
+ humkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/locale/hu
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/locale/hu/LC_MESSAGES
+ itmkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/locale/it
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/locale/it/LC_MESSAGES
+ jamkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/locale/ja
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/locale/ja/LC_MESSAGES
+ kamkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/locale/ka
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/locale/ka/LC_MESSAGES
+ komkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/locale/ko
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/locale/ko/LC_MESSAGES
+ nbmkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/locale/nb
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/locale/nb/LC_MESSAGES
+ nlmkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/locale/nl
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/locale/nl/LC_MESSAGES
+ nnmkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/locale/nn
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/locale/nn/LC_MESSAGES
+ plmkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/locale/pl
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/locale/pl/LC_MESSAGES
+ pt_BRmkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/locale/pt_BR
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/locale/pt_BR/LC_MESSAGES
+ ptmkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/locale/pt
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/locale/pt/LC_MESSAGES
+ romkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/locale/ro
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/locale/ro/LC_MESSAGES
+ rumkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/locale/ru
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/locale/ru/LC_MESSAGES
+ skmkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/locale/sk
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/locale/sk/LC_MESSAGES
+ slmkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/locale/sl
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/locale/sl/LC_MESSAGES
+ srmkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/locale/sr
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/locale/sr/LC_MESSAGES
+ svmkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/locale/sv
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/locale/sv/LC_MESSAGES
+ trmkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/locale/tr
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/locale/tr/LC_MESSAGES
+ ukmkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/locale/uk
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/locale/uk/LC_MESSAGES
+ vimkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/locale/vi
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/locale/vi/LC_MESSAGES
+ zh_CNmkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/locale/zh_CN
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/locale/zh_CN/LC_MESSAGES
+ zh_TWmkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/locale/zh_TW
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/locale/zh_TW/LC_MESSAGES
+
+Installing sudoers message catalogs: ast ca cs da de elmkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/locale/el
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/locale/el/LC_MESSAGES
+ eo es eu fi fr fur hr hu it ja ko ltmkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/locale/lt
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/locale/lt/LC_MESSAGES
+ nb nl pl pt_BR pt ro ru sk sl sr sv tr uk vi zh_CN zh_TW
+for d in lib/util  lib/eventlog lib/fuzzstub lib/iolog lib/protobuf-c lib/logsrv logsrvd plugins/audit_json plugins/group_file plugins/sample_approval plugins/sudoers plugins/system_group  src include docs examples; do \
+    (cd $d && exec make "INSTALL_OWNER=-o 0 -g 0" install) && continue; \
+    exit $?; \
+done
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/build/lib/util'
+/bin/bash ../../../sudo-1.9.11p3/scripts/mkinstalldirs /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/lib/sudo
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/lib
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/lib/sudo
+case "-Wl,--version-script,util.map" in \
+*-no-install*) ;; \
+*)  if [ X"yes" = X"yes" ]; then \
+	INSTALL_BACKUP='' /bin/bash ../../libtool --tag=disable-static --quiet --mode=install /bin/bash ../../../sudo-1.9.11p3/scripts/install-sh -c -o 0 -g 0 libsudo_util.la /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/lib/sudo; \
+    fi;; \
+esac
+libtool: warning: remember to run 'libtool --finish /usr/lib/sudo'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/build/lib/util'
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/build/lib/eventlog'
+make[1]: Nothing to be done for 'install'.
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/build/lib/eventlog'
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/build/lib/fuzzstub'
+make[1]: Nothing to be done for 'install'.
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/build/lib/fuzzstub'
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/build/lib/iolog'
+make[1]: Nothing to be done for 'install'.
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/build/lib/iolog'
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/build/lib/protobuf-c'
+make[1]: Nothing to be done for 'install'.
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/build/lib/protobuf-c'
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/build/lib/logsrv'
+make[1]: Nothing to be done for 'install'.
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/build/lib/logsrv'
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/build/logsrvd'
+/bin/bash ../../sudo-1.9.11p3/scripts/mkinstalldirs /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/sbin
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/sbin
+INSTALL_BACKUP='' /bin/bash ../libtool --tag=disable-static --mode=install /bin/bash ../../sudo-1.9.11p3/scripts/install-sh -c -o 0 -g 0 -m 0755 sudo_logsrvd /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/sbin/sudo_logsrvd
+libtool: warning: '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/build/lib/util/libsudo_util.la' has not been installed in '/usr/lib/sudo'
+libtool: install: /bin/bash ../../sudo-1.9.11p3/scripts/install-sh -c -o 0 -g 0 -m 0755 .libs/sudo_logsrvd /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/sbin/sudo_logsrvd
+INSTALL_BACKUP='' /bin/bash ../libtool --tag=disable-static --mode=install /bin/bash ../../sudo-1.9.11p3/scripts/install-sh -c -o 0 -g 0 -m 0755 sudo_sendlog /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/sbin/sudo_sendlog
+libtool: warning: '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/build/lib/util/libsudo_util.la' has not been installed in '/usr/lib/sudo'
+libtool: install: /bin/bash ../../sudo-1.9.11p3/scripts/install-sh -c -o 0 -g 0 -m 0755 .libs/sudo_sendlog /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/sbin/sudo_sendlog
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/build/logsrvd'
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/build/plugins/audit_json'
+/bin/bash ../../../sudo-1.9.11p3/scripts/mkinstalldirs /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/lib/sudo
+if [ X"yes" = X"yes" ]; then \
+    INSTALL_BACKUP='' /bin/bash ../../libtool --tag=disable-static --mode=install /bin/bash ../../../sudo-1.9.11p3/scripts/install-sh -c -o 0 -g 0 -m 0644 audit_json.la /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/lib/sudo; \
+fi
+libtool: install: /bin/bash ../../../sudo-1.9.11p3/scripts/install-sh -c -o 0 -g 0 -m 0644 .libs/audit_json.so /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/lib/sudo/audit_json.so
+libtool: install: /bin/bash ../../../sudo-1.9.11p3/scripts/install-sh -c -o 0 -g 0 -m 0644 .libs/audit_json.lai /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/lib/sudo/audit_json.la
+libtool: warning: remember to run 'libtool --finish /usr/lib/sudo'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/build/plugins/audit_json'
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/build/plugins/group_file'
+/bin/bash ../../../sudo-1.9.11p3/scripts/mkinstalldirs /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/lib/sudo
+if [ X"yes" = X"yes" ]; then \
+    INSTALL_BACKUP='' /bin/bash ../../libtool --tag=disable-static --mode=install /bin/bash ../../../sudo-1.9.11p3/scripts/install-sh -c -o 0 -g 0 -m 0644 group_file.la /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/lib/sudo; \
+fi
+libtool: install: /bin/bash ../../../sudo-1.9.11p3/scripts/install-sh -c -o 0 -g 0 -m 0644 .libs/group_file.so /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/lib/sudo/group_file.so
+libtool: install: /bin/bash ../../../sudo-1.9.11p3/scripts/install-sh -c -o 0 -g 0 -m 0644 .libs/group_file.lai /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/lib/sudo/group_file.la
+libtool: warning: remember to run 'libtool --finish /usr/lib/sudo'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/build/plugins/group_file'
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/build/plugins/sample_approval'
+/bin/bash ../../../sudo-1.9.11p3/scripts/mkinstalldirs /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/lib/sudo
+if [ X"yes" = X"yes" ]; then \
+    INSTALL_BACKUP='' /bin/bash ../../libtool --tag=disable-static --mode=install /bin/bash ../../../sudo-1.9.11p3/scripts/install-sh -c -o 0 -g 0 -m 0644 sample_approval.la /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/lib/sudo; \
+fi
+libtool: install: /bin/bash ../../../sudo-1.9.11p3/scripts/install-sh -c -o 0 -g 0 -m 0644 .libs/sample_approval.so /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/lib/sudo/sample_approval.so
+libtool: install: /bin/bash ../../../sudo-1.9.11p3/scripts/install-sh -c -o 0 -g 0 -m 0644 .libs/sample_approval.lai /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/lib/sudo/sample_approval.la
+libtool: warning: remember to run 'libtool --finish /usr/lib/sudo'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/build/plugins/sample_approval'
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/build/plugins/sudoers'
+/bin/bash ../../../sudo-1.9.11p3/scripts/mkinstalldirs /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/lib/sudo \
+    /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/sbin /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/bin \
+    /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/etc /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/doc/sudo \
+    `echo /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/run/sudo|sed 's,/[^/]*$,,'` \
+    `echo /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/var/lib/sudo|sed 's,/[^/]*$,,'`
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/bin
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/etc
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/doc
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/doc/sudo
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/run
+/bin/bash ../../../sudo-1.9.11p3/scripts/install-sh -c -d -o 0 -g 0 -m 0711 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/run/sudo
+/bin/bash ../../../sudo-1.9.11p3/scripts/install-sh -c -d -o 0 -g 0 -m 0711 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/var/lib/sudo
+/bin/bash ../../../sudo-1.9.11p3/scripts/install-sh -c -d -o 0 -g 0 -m 0700 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/var/lib/sudo/lectured
+case "-Wl,--version-script,sudoers.map" in \
+*-no-install*) ;; \
+*)  if [ X"yes" = X"yes" ]; then \
+	INSTALL_BACKUP='' /bin/bash ../../libtool  --mode=install /bin/bash ../../../sudo-1.9.11p3/scripts/install-sh -c -o 0 -g 0 -m 0644 sudoers.la /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/lib/sudo; \
+    fi;; \
+esac
+libtool: install: /bin/bash ../../../sudo-1.9.11p3/scripts/install-sh -c -o 0 -g 0 -m 0644 .libs/sudoers.so /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/lib/sudo/sudoers.so
+libtool: install: /bin/bash ../../../sudo-1.9.11p3/scripts/install-sh -c -o 0 -g 0 -m 0644 .libs/sudoers.lai /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/lib/sudo/sudoers.la
+libtool: warning: remember to run 'libtool --finish /usr/lib/sudo'
+INSTALL_BACKUP='' /bin/bash ../../libtool  --mode=install /bin/bash ../../../sudo-1.9.11p3/scripts/install-sh -c -o 0 -g 0 -m 0755 cvtsudoers /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/bin/cvtsudoers
+libtool: warning: '../../lib/util/libsudo_util.la' has not been installed in '/usr/lib/sudo'
+libtool: install: /bin/bash ../../../sudo-1.9.11p3/scripts/install-sh -c -o 0 -g 0 -m 0755 .libs/cvtsudoers /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/bin/cvtsudoers
+INSTALL_BACKUP='' /bin/bash ../../libtool  --mode=install /bin/bash ../../../sudo-1.9.11p3/scripts/install-sh -c -o 0 -g 0 -m 0755 sudoreplay /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/bin/sudoreplay
+libtool: warning: '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/build/lib/util/libsudo_util.la' has not been installed in '/usr/lib/sudo'
+libtool: install: /bin/bash ../../../sudo-1.9.11p3/scripts/install-sh -c -o 0 -g 0 -m 0755 .libs/sudoreplay /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/bin/sudoreplay
+INSTALL_BACKUP='' /bin/bash ../../libtool  --mode=install /bin/bash ../../../sudo-1.9.11p3/scripts/install-sh -c -o 0 -g 0 -m 0755 visudo /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/sbin/visudo
+libtool: warning: '../../lib/util/libsudo_util.la' has not been installed in '/usr/lib/sudo'
+libtool: install: /bin/bash ../../../sudo-1.9.11p3/scripts/install-sh -c -o 0 -g 0 -m 0755 .libs/visudo /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/sbin/visudo
+/bin/bash ../../../sudo-1.9.11p3/scripts/install-sh -c -d -o 0 -g 0 -m 0750 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/etc/sudoers.d
+/bin/bash ../../../sudo-1.9.11p3/scripts/install-sh -c -o 0 -g 0 -m 0440 sudoers /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/etc/sudoers.dist
+test -r /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/etc/sudoers || \
+    cp -p /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/etc/sudoers.dist /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/etc/sudoers
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/build/plugins/sudoers'
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/build/plugins/system_group'
+/bin/bash ../../../sudo-1.9.11p3/scripts/mkinstalldirs /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/lib/sudo
+if [ X"yes" = X"yes" ]; then \
+    INSTALL_BACKUP='' /bin/bash ../../libtool --tag=disable-static --mode=install /bin/bash ../../../sudo-1.9.11p3/scripts/install-sh -c -o 0 -g 0 -m 0644 system_group.la /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/lib/sudo; \
+fi
+libtool: install: /bin/bash ../../../sudo-1.9.11p3/scripts/install-sh -c -o 0 -g 0 -m 0644 .libs/system_group.so /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/lib/sudo/system_group.so
+libtool: install: /bin/bash ../../../sudo-1.9.11p3/scripts/install-sh -c -o 0 -g 0 -m 0644 .libs/system_group.lai /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/lib/sudo/system_group.la
+libtool: warning: remember to run 'libtool --finish /usr/lib/sudo'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/build/plugins/system_group'
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/build/src'
+# We only create the rc.d dir when installing to the actual system dir
+/bin/bash ../../sudo-1.9.11p3/scripts/mkinstalldirs /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/bin \
+    /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/lib/sudo /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/lib/sudo \
+    /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/lib/sudo
+if test -n ""; then \
+    /bin/bash ../../sudo-1.9.11p3/scripts/mkinstalldirs /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image; \
+    if test -z "/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image"; then \
+	/bin/bash ../../sudo-1.9.11p3/scripts/mkinstalldirs \
+	    `echo  | sed 's,/[^/]*$,,'`; \
+    fi; \
+elif test -n "/usr/lib/tmpfiles.d"; then \
+    /bin/bash ../../sudo-1.9.11p3/scripts/mkinstalldirs /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/lib/tmpfiles.d; \
+fi
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/lib/tmpfiles.d
+INSTALL_BACKUP='' /bin/bash ../libtool --tag=disable-static --mode=install /bin/bash ../../sudo-1.9.11p3/scripts/install-sh -c -o 0 -g 0 -m 04755 sudo /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/bin/sudo
+libtool: warning: '../lib/util/libsudo_util.la' has not been installed in '/usr/lib/sudo'
+libtool: install: /bin/bash ../../sudo-1.9.11p3/scripts/install-sh -c -o 0 -g 0 -m 04755 .libs/sudo /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/bin/sudo
+rm -f /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/bin/sudoedit
+ln -s sudo /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/bin/sudoedit
+if [ -f sesh ]; then \
+    INSTALL_BACKUP='' /bin/bash ../libtool --tag=disable-static --mode=install /bin/bash ../../sudo-1.9.11p3/scripts/install-sh -c -o 0 -g 0 -m 0755 sesh /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/lib/sudo/sesh; \
+fi
+# We only create the rc.d link when installing to the actual system dir
+if [ -n "" ]; then \
+    /bin/bash ../../sudo-1.9.11p3/scripts/install-sh -c -o 0 -g 0 -m 0755 ../etc/init.d/ /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/sudo; \
+    if test -z "/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image"; then \
+	rm -f ; \
+	ln -s /sudo ; \
+    fi; \
+elif test -n "/usr/lib/tmpfiles.d"; then \
+    /bin/bash ../../sudo-1.9.11p3/scripts/install-sh -c -o 0 -g 0 -m 0644 ../etc/init.d/sudo.conf /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/lib/tmpfiles.d/sudo.conf; \
+fi
+if [ X"yes" = X"yes" ]; then \
+    INSTALL_BACKUP='' /bin/bash ../libtool --tag=disable-static --mode=install /bin/bash ../../sudo-1.9.11p3/scripts/install-sh -c -o 0 -g 0 -m 0644 sudo_intercept.la /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/lib/sudo; \
+fi
+libtool: install: /bin/bash ../../sudo-1.9.11p3/scripts/install-sh -c -o 0 -g 0 -m 0644 .libs/sudo_intercept.so /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/lib/sudo/sudo_intercept.so
+libtool: install: /bin/bash ../../sudo-1.9.11p3/scripts/install-sh -c -o 0 -g 0 -m 0644 .libs/sudo_intercept.lai /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/lib/sudo/sudo_intercept.la
+libtool: warning: remember to run 'libtool --finish /usr/lib/sudo'
+if [ X"yes" = X"yes" ]; then \
+    INSTALL_BACKUP='' /bin/bash ../libtool --tag=disable-static --mode=install /bin/bash ../../sudo-1.9.11p3/scripts/install-sh -c -o 0 -g 0 -m 0644 sudo_noexec.la /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/lib/sudo; \
+fi
+libtool: install: /bin/bash ../../sudo-1.9.11p3/scripts/install-sh -c -o 0 -g 0 -m 0644 .libs/sudo_noexec.so /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/lib/sudo/sudo_noexec.so
+libtool: install: /bin/bash ../../sudo-1.9.11p3/scripts/install-sh -c -o 0 -g 0 -m 0644 .libs/sudo_noexec.lai /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/lib/sudo/sudo_noexec.la
+libtool: warning: remember to run 'libtool --finish /usr/lib/sudo'
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/build/src'
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/build/include'
+/bin/bash ../../sudo-1.9.11p3/scripts/mkinstalldirs /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/include
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/include
+/bin/bash ../../sudo-1.9.11p3/scripts/install-sh -c -o 0 -g 0 -m 0644 ../../sudo-1.9.11p3/include/sudo_plugin.h /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/include
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/build/include'
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/build/docs'
+/bin/bash ../../sudo-1.9.11p3/scripts/mkinstalldirs /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/doc/sudo \
+    /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/man/man1 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/man/man5 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/man/man8
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/man
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/man/man1
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/man/man5
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/man/man8
+for f in ../../sudo-1.9.11p3/ChangeLog ../../sudo-1.9.11p3/NEWS ../../sudo-1.9.11p3/README.md ../../sudo-1.9.11p3/docs/CONTRIBUTING.md ../../sudo-1.9.11p3/LICENSE.md ../../sudo-1.9.11p3/docs/CONTRIBUTORS.md ../../sudo-1.9.11p3/docs/HISTORY.md ../../sudo-1.9.11p3/docs/SECURITY.md ../../sudo-1.9.11p3/docs/TROUBLESHOOTING.md ../../sudo-1.9.11p3/docs/UPGRADE.md; do /bin/bash ../../sudo-1.9.11p3/scripts/install-sh -c -o 0 -g 0 -m 0644 $f /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/doc/sudo; done
+#for f in ../../sudo-1.9.11p3/README.LDAP.md ../../sudo-1.9.11p3/docs/schema.*; do /bin/bash ../../sudo-1.9.11p3/scripts/install-sh -c -o 0 -g 0 -m 0644 $f /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/doc/sudo; done
+/bin/bash ../../sudo-1.9.11p3/scripts/install-sh -c -o 0 -g 0 -m 0644 ./cvtsudoers.mdoc /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/man/man1/cvtsudoers.1
+/bin/bash ../../sudo-1.9.11p3/scripts/install-sh -c -o 0 -g 0 -m 0644 ./sudo.mdoc /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/man/man8/sudo.8
+/bin/bash ../../sudo-1.9.11p3/scripts/install-sh -c -o 0 -g 0 -m 0644 ./sudo_logsrvd.mdoc /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/man/man8/sudo_logsrvd.8
+/bin/bash ../../sudo-1.9.11p3/scripts/install-sh -c -o 0 -g 0 -m 0644 ./sudo_plugin.mdoc /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/man/man5/sudo_plugin.5
+#/bin/bash ../../sudo-1.9.11p3/scripts/install-sh -c -o 0 -g 0 -m 0644 ./sudo_plugin_python.mdoc /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/man/man5/sudo_plugin_python.5
+/bin/bash ../../sudo-1.9.11p3/scripts/install-sh -c -o 0 -g 0 -m 0644 ./sudo_sendlog.mdoc /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/man/man8/sudo_sendlog.8
+/bin/bash ../../sudo-1.9.11p3/scripts/install-sh -c -o 0 -g 0 -m 0644 ./sudoreplay.mdoc /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/man/man8/sudoreplay.8
+/bin/bash ../../sudo-1.9.11p3/scripts/install-sh -c -o 0 -g 0 -m 0644 ./visudo.mdoc /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/man/man8/visudo.8
+/bin/bash ../../sudo-1.9.11p3/scripts/install-sh -c -o 0 -g 0 -m 0644 ./sudo.conf.mdoc /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/man/man5/sudo.conf.5
+/bin/bash ../../sudo-1.9.11p3/scripts/install-sh -c -o 0 -g 0 -m 0644 ./sudo_logsrv.proto.mdoc /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/man/man5/sudo_logsrv.proto.5
+/bin/bash ../../sudo-1.9.11p3/scripts/install-sh -c -o 0 -g 0 -m 0644 ./sudo_logsrvd.conf.mdoc /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/man/man5/sudo_logsrvd.conf.5
+/bin/bash ../../sudo-1.9.11p3/scripts/install-sh -c -o 0 -g 0 -m 0644 ./sudoers.mdoc /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/man/man5/sudoers.5
+/bin/bash ../../sudo-1.9.11p3/scripts/install-sh -c -o 0 -g 0 -m 0644 ./sudoers_timestamp.mdoc /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/man/man5/sudoers_timestamp.5
+#/bin/bash ../../sudo-1.9.11p3/scripts/install-sh -c -o 0 -g 0 -m 0644 ./sudoers.ldap.mdoc /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/man/man5/sudoers.ldap.5
+ln -s sudo.8 /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/man/man8/sudoedit.8
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/build/docs'
+make[1]: Entering directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/build/examples'
+/bin/bash ../../sudo-1.9.11p3/scripts/mkinstalldirs /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/doc/sudo/examples
+mkdir /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/doc/sudo/examples
+for f in ../../sudo-1.9.11p3/examples/cvtsudoers.conf ../../sudo-1.9.11p3/examples/pam.conf sudo.conf sudo_logsrvd.conf sudoers syslog.conf; do /bin/bash ../../sudo-1.9.11p3/scripts/install-sh -c -o 0 -g 0 -m 0644 $f /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/usr/share/doc/sudo/examples; done
+test -r /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/etc/sudo.conf || \
+    /bin/bash ../../sudo-1.9.11p3/scripts/install-sh -c -o 0 -g 0 -m 0644 sudo.conf /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/etc
+if test -n "sudo_logsrvd.conf" -a ! -r /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/etc/sudo_logsrvd.conf; then \
+    /bin/bash ../../sudo-1.9.11p3/scripts/install-sh -c -o 0 -g 0 -m 0644 sudo_logsrvd.conf /home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/image/etc; \
+fi
+make[1]: Leaving directory '/home/matt/tmp/build/obmc-y2038/tmp/work/armv7ahf-vfpv4d16-openbmc-linux-gnueabi/sudo/1.9.11p3-r0/build/examples'
+DEBUG: Shell function do_install finished
+DEBUG: Executing shell function remove_libtool_la
+DEBUG: Shell function remove_libtool_la finished
